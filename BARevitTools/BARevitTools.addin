@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Application BARevitTools</Name>
+    <Assembly>BARevitTools.dll</Assembly>
+    <FullClassName>BARevitTools.Application</FullClassName>    
+    <ClientId>67ac02c0-48fa-45b7-9a85-9e7cba3b7f37</ClientId>
+    <VendorId>BLDR</VendorId>
+    <VendorDescription>Boulder Associates Architects</VendorDescription>
+  </AddIn> 
+</RevitAddIns>

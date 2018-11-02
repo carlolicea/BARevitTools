@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BARevitTools.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SqlServerName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">tableau\\sqlexpress,1433</Value>
+    </Setting>
+    <Setting Name="SqlBARevitToolsDbName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">db_BARevitTools</Value>
+    </Setting>
+    <Setting Name="SqlServerUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="SqlServerPwd" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Boulder4747</Value>
+    </Setting>
+    <Setting Name="BARTBAAdminUsers" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">clicea,mzabritski,administrator</Value>
+    </Setting>
+    <Setting Name="BARTDevelopmentUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://trello.com/b/AwuKWC3E/bart-development</Value>
+    </Setting>
+    <Setting Name="UrlBARTLearning" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://bimhaus.boulderassociates.com/bart</Value>
+    </Setting>
+    <Setting Name="ExcelWorksheetPwd" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">T3kZ!lla</Value>
+    </Setting>
+    <Setting Name="SqlAppUseTableName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BARevitTools_AppUse</Value>
+    </Setting>
+    <Setting Name="SqlBABimDbName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">babim</Value>
+    </Setting>
+    <Setting Name="UrlRoomsSRRN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.youtube.com/watch?v=FKj5kopYC4w&amp;feature=youtu.be</Value>
+    </Setting>
+    <Setting Name="UrlViewsCEPR" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.youtube.com/watch?v=O4tEqu9wHLk</Value>
+    </Setting>
+    <Setting Name="RevitFamilyMaterialsCMSSymbIdMaterialSchedule" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Families\BA 2018\Annotations\Symbols\SYMB ID Material Schedule.rfa</Value>
+    </Setting>
+    <Setting Name="BARTRevitFamilyCurrentYear" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2018</Value>
+    </Setting>
+    <Setting Name="SqlBARevitFamiliesDataTable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BARevitFamilies2018</Value>
+    </Setting>
+    <Setting Name="SqlBADetailsDataTable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BADetailsViews</Value>
+    </Setting>
+    <Setting Name="SqlBAPackagesDataTable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BARevitPackages</Value>
+    </Setting>
+    <Setting Name="RevitProjectBADetails" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Details\BA Details A18.rvt</Value>
+    </Setting>
+    <Setting Name="BARTBARevitFamilyLibraryPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Families\BA 2018</Value>
+    </Setting>
+    <Setting Name="RevitRoomTagSymbol" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Families\BA 2018\Annotations\Symbols\SYMB Room Name and Number.rfa</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
