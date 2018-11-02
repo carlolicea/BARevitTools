@@ -1029,9 +1029,11 @@ namespace BARevitTools
                     FamilySymbol symbol = null;
                     try
                     {
+                        MessageBox.Show("Before Family Load");
                         IFamilyLoadOptions loadOptions = new RVTFamilyLoadOptions();
                         string roomTagSymbolPath = RVTOperations.GetVersionedFamilyFilePath(uiApp, BARevitTools.Properties.Settings.Default.RevitRoomTagSymbol);
                         doc.LoadFamily(roomTagSymbolPath, loadOptions, out Family symbolFamily);
+                        MessageBox.Show("After Family Load");
                         var symbolTypeIds = symbolFamily.GetFamilySymbolIds();
                         foreach (ElementId elemId in symbolTypeIds)
                         {
@@ -1074,7 +1076,7 @@ namespace BARevitTools
                     }
                     catch (Exception f)
                     {
-                        MessageBox.Show(line.ToString());
+                        MessageBox.Show(f.ToString());
                         t.RollBack();
                     }
                     
