@@ -1720,9 +1720,9 @@ namespace BARevitTools
             // 
             // adminFamiliesToolsPanel
             // 
-            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesDFBLayoutPanel);
-            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBRPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBAPLayoutPanel);
+            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBRPLayoutPanel);
+            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesDFBLayoutPanel);
             this.adminFamiliesToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adminFamiliesToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.adminFamiliesToolsPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -2204,7 +2204,7 @@ namespace BARevitTools
             // 
             // adminFamiliesBAPSelectNoneButton
             // 
-            this.adminFamiliesBAPSelectNoneButton.Location = new System.Drawing.Point(84, 1);
+            this.adminFamiliesBAPSelectNoneButton.Location = new System.Drawing.Point(84, 4);
             this.adminFamiliesBAPSelectNoneButton.Name = "adminFamiliesBAPSelectNoneButton";
             this.adminFamiliesBAPSelectNoneButton.Size = new System.Drawing.Size(75, 23);
             this.adminFamiliesBAPSelectNoneButton.TabIndex = 0;
@@ -2214,7 +2214,7 @@ namespace BARevitTools
             // 
             // adminFamiliesBAPSelectAllButton
             // 
-            this.adminFamiliesBAPSelectAllButton.Location = new System.Drawing.Point(3, 1);
+            this.adminFamiliesBAPSelectAllButton.Location = new System.Drawing.Point(3, 4);
             this.adminFamiliesBAPSelectAllButton.Name = "adminFamiliesBAPSelectAllButton";
             this.adminFamiliesBAPSelectAllButton.Size = new System.Drawing.Size(75, 23);
             this.adminFamiliesBAPSelectAllButton.TabIndex = 0;
@@ -2250,7 +2250,7 @@ namespace BARevitTools
             // 
             // adminFamiliesBAPDirectorySelectButton
             // 
-            this.adminFamiliesBAPDirectorySelectButton.Location = new System.Drawing.Point(3, 10);
+            this.adminFamiliesBAPDirectorySelectButton.Location = new System.Drawing.Point(3, 4);
             this.adminFamiliesBAPDirectorySelectButton.Name = "adminFamiliesBAPDirectorySelectButton";
             this.adminFamiliesBAPDirectorySelectButton.Size = new System.Drawing.Size(124, 23);
             this.adminFamiliesBAPDirectorySelectButton.TabIndex = 0;
@@ -3794,8 +3794,8 @@ namespace BARevitTools
             this.roomsCDRTLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.roomsCDRTLayoutPanel.Name = "roomsCDRTLayoutPanel";
             this.roomsCDRTLayoutPanel.RowCount = 2;
-            this.roomsCDRTLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.71006F));
-            this.roomsCDRTLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.28994F));
+            this.roomsCDRTLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.57396F));
+            this.roomsCDRTLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.42604F));
             this.roomsCDRTLayoutPanel.Size = new System.Drawing.Size(711, 338);
             this.roomsCDRTLayoutPanel.TabIndex = 16;
             this.roomsCDRTLayoutPanel.Visible = false;
@@ -3808,17 +3808,19 @@ namespace BARevitTools
             this.roomsCDRTInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.roomsCDRTInstructionsTextBox.Multiline = true;
             this.roomsCDRTInstructionsTextBox.Name = "roomsCDRTInstructionsTextBox";
-            this.roomsCDRTInstructionsTextBox.Size = new System.Drawing.Size(711, 70);
+            this.roomsCDRTInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.roomsCDRTInstructionsTextBox.Size = new System.Drawing.Size(711, 126);
             this.roomsCDRTInstructionsTextBox.TabIndex = 0;
+            this.roomsCDRTInstructionsTextBox.Text = resources.GetString("roomsCDRTInstructionsTextBox.Text");
             // 
             // roomsCDRTControlsPanel
             // 
             this.roomsCDRTControlsPanel.Controls.Add(this.roomsCDRTRunButton);
             this.roomsCDRTControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roomsCDRTControlsPanel.Location = new System.Drawing.Point(0, 70);
+            this.roomsCDRTControlsPanel.Location = new System.Drawing.Point(0, 126);
             this.roomsCDRTControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.roomsCDRTControlsPanel.Name = "roomsCDRTControlsPanel";
-            this.roomsCDRTControlsPanel.Size = new System.Drawing.Size(711, 268);
+            this.roomsCDRTControlsPanel.Size = new System.Drawing.Size(711, 212);
             this.roomsCDRTControlsPanel.TabIndex = 1;
             // 
             // roomsCDRTRunButton

@@ -2172,11 +2172,13 @@ namespace BARevitTools
         public string qaqcRFSPFamilyFile = String.Empty;
         private void QaqcRFSPButton_Click(object sender, EventArgs e)
         {
+            BARevitTools.Application.thisApp.newMainUi.qaqcRFSPParametersListBox.Items.Clear();
             SwitchActivePanel(ReferencedSwitchCaseIds.qaqcRFSP);
         }
         private void QaqcRFSPSelectFamilyButton_Click(object sender, EventArgs e)
         {
             qaqcRFSPFamilyFile = RVTOperations.GetFamilyFile();
+            BARevitTools.Application.thisApp.newMainUi.qaqcRFSPParametersListBox.Items.Clear();
             BARevitTools.Application.thisApp.newMainUi.qaqcRFSPSFamilyLabel.Text = Path.GetFileNameWithoutExtension(qaqcRFSPFamilyFile);
         }
         private void QaqcRFSPRunButton_Click(object sender, EventArgs e)
@@ -3204,56 +3206,64 @@ namespace BARevitTools
                 existingTables.Add(tableName);
             }
 
-            //If the table for the packages already exists, get it
-            if (existingTables.Contains(BARevitTools.Properties.Settings.Default.SqlBAPackagesDataTable))
+            try
             {
-                //Get everything from the SQL table and fill a DataTable
-                using (SqlCommand command = new SqlCommand("SELECT * FROM " + BARevitTools.Properties.Settings.Default.SqlBAPackagesDataTable, sqlConnection))
+                //If the table for the packages already exists, get it
+                if (existingTables.Contains(BARevitTools.Properties.Settings.Default.SqlBAPackagesDataTable))
                 {
-                    SqlDataAdapter da = new SqlDataAdapter(command);
-                    da.Fill(dt);
-                    da.Dispose();
-                }
-
-                //Find the unique package names from the DataTable's Packages column
-                var uniquePackagesQuery =
-                    from row in dt.AsEnumerable()
-                    group row["Packages"] by row["Packages"] into packageGroup
-                    select packageGroup;
-
-                //Make a list of the packages
-                List<string> allNames = new List<string>();
-                foreach (var name in uniquePackagesQuery)
-                {
-                    allNames.Add(Convert.ToString(name));
-                }
-
-                //Find unique package names to add to the list
-                List<string> packageNames = allNames.Distinct().ToList();
-
-                //Assuming there were package names...
-                if (packageNames.Count > 0)
-                {
-                    //Add the package names to the combo box dropdown
-                    foreach (string packageName in packageNames)
+                    //Get everything from the SQL table and fill a DataTable
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM " + BARevitTools.Properties.Settings.Default.SqlBAPackagesDataTable, sqlConnection))
                     {
-                        BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Items.Add(packageName);
-                        BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Enabled = true;
+                        SqlDataAdapter da = new SqlDataAdapter(command);
+                        da.Fill(dt);
+                        da.Dispose();
+                    }
+
+                    //Find the unique package names from the DataTable's Packages column
+                    var uniquePackagesQuery =
+                        from row in dt.AsEnumerable()
+                        group row["Packages"] by row["Packages"] into packageGroup
+                        select packageGroup;
+
+                    //Make a list of the packages
+                    List<string> allNames = new List<string>();
+                    foreach (var name in uniquePackagesQuery)
+                    {
+                        allNames.Add(Convert.ToString(name));
+                    }
+
+                    //Find unique package names to add to the list
+                    List<string> packageNames = allNames.Distinct().ToList();
+
+                    //Assuming there were package names...
+                    if (packageNames.Count > 0)
+                    {
+                        //Add the package names to the combo box dropdown
+                        foreach (string packageName in packageNames)
+                        {
+                            BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Items.Add(packageName);
+                            BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Enabled = true;
+                        }
                     }
                 }
+
+                //If the table for packages does not exist, go forward with filling out the tree view
+                else
+                {
+                    BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Enabled = false;
+                    //Get both tables by calling the adminTemplateGetFamiliesAndDetails method
+                    List<DataTable> treeViewData = this.AdminTemplateGetFamiliesAndDetails(sqlConnection);
+                    DataTable familiesTable = treeViewData[0]; //Index 0 is the families table
+                    DataTable detailsTable = treeViewData[1]; //Index 1 is the details table
+
+                    //Fill the tree view with the two tables
+                    this.AdminTemplateFillTreeView(familiesTable, detailsTable);
+                }
             }
-
-            //If the table for packages does not exist, go forward with filling out the tree view
-            else
+            catch (Exception f)
             {
-                BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Enabled = false;
-                //Get both tables by calling the adminTemplateGetFamiliesAndDetails method
-                List<DataTable> treeViewData = this.AdminTemplateGetFamiliesAndDetails(sqlConnection);
-                DataTable familiesTable = treeViewData[0]; //Index 0 is the families table
-                DataTable detailsTable = treeViewData[1]; //Index 1 is the details table
-
-                //Fill the tree view with the two tables
-                this.AdminTemplateFillTreeView(familiesTable, detailsTable);
+                MessageBox.Show(f.ToString(), "SQL Connection Error");
+                sqlConnection.Close();
             }
 
             sqlConnection.Close();
@@ -3264,7 +3274,10 @@ namespace BARevitTools
             List<DataTable> output = new List<DataTable>();
             DataTable familyTable = new DataTable();
             DataTable detailsTable = new DataTable();
-            using (SqlCommand sqlCommand = new SqlCommand("SELECT * FROM " + BARevitTools.Properties.Settings.Default.SqlBARevitFamiliesDataTable, sqlConnection))
+            using (SqlCommand sqlCommand = new SqlCommand(
+                "SELECT DISTINCT FamilyName, FamilyCategory " +
+                "FROM " + BARevitTools.Properties.Settings.Default.SqlBARevitFamiliesDataTable+" " +
+                "ORDER BY FamilyName", sqlConnection))
             {
                 SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
                 da.Fill(familyTable);
@@ -3276,7 +3289,8 @@ namespace BARevitTools
                 da.Fill(detailsTable);
                 da.Dispose();
             }
-
+            CsvOperations.CreateCSVFromDataTable(familyTable, "FamilyFiles", @"C:\Users\clicea\Desktop");
+            CsvOperations.CreateCSVFromDataTable(detailsTable, "DetailFiles", @"C:\Users\clicea\Desktop");
             //Return the list containing both tables
             return output;
         }

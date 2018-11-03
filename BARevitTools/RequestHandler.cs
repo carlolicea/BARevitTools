@@ -1021,7 +1021,7 @@ namespace BARevitTools
                     }
                     catch (Exception e)
                     {
-                        MessageBox.Show(e.ToString());
+                        MessageBox.Show(e.ToString(), "Getting Demo Rooms Error");
                     }
 
                     Transaction t = new Transaction(doc, "Create Demo Room Tags");
@@ -1029,25 +1029,14 @@ namespace BARevitTools
                     FamilySymbol symbol = null;
                     try
                     {
-                        MessageBox.Show("Before Family Load");
                         IFamilyLoadOptions loadOptions = new RVTFamilyLoadOptions();
                         string roomTagSymbolPath = RVTOperations.GetVersionedFamilyFilePath(uiApp, BARevitTools.Properties.Settings.Default.RevitRoomTagSymbol);
-                        doc.LoadFamily(roomTagSymbolPath, loadOptions, out Family symbolFamily);
-                        MessageBox.Show("After Family Load");
-                        var symbolTypeIds = symbolFamily.GetFamilySymbolIds();
-                        foreach (ElementId elemId in symbolTypeIds)
-                        {
-                            FamilySymbol symb = doc.GetElement(elemId) as FamilySymbol;
-                            if (symb.get_Parameter(BuiltInParameter.ALL_MODEL_TYPE_NAME).AsString() == "Name and Number")
-                            {
-                                symbol = doc.GetElement(elemId) as FamilySymbol;
-                                break;
-                            }
-                        }                        
+                        doc.LoadFamilySymbol(roomTagSymbolPath, "Name and Number", loadOptions, out FamilySymbol symb);
+                        symbol = symb;
                     }
                     catch(Exception g)
                     {
-                        MessageBox.Show(g.ToString());
+                        MessageBox.Show(g.ToString(), "Loading Symbol Error");
                     }                   
 
                     try
@@ -1064,22 +1053,24 @@ namespace BARevitTools
                                 }
                                 else
                                 {
-                                    //Revise this portion for placement of the symbol.
                                     placementPoint = roomLocationPoint.Point;
                                 }
                                 FamilyInstance newSymbol = doc.Create.NewFamilyInstance(placementPoint, symbol, activeView);
-                                newSymbol.GetParameters("Name").First().Set(demoRoom.Name);
-                                newSymbol.GetParameters("Number").First().Set(demoRoom.Number);
+                                newSymbol.GetParameters("Name").First().Set(demoRoom.get_Parameter(BuiltInParameter.ROOM_NAME).AsString());
+                                newSymbol.GetParameters("Number").First().Set(demoRoom.get_Parameter(BuiltInParameter.ROOM_NUMBER).AsString());
                             }
                         }
                         t.Commit();
                     }
                     catch (Exception f)
                     {
-                        MessageBox.Show(f.ToString());
+                        MessageBox.Show(f.ToString(),"Placement Error");
                         t.RollBack();
-                    }
-                    
+                    }                    
+                }
+                else
+                {
+                    MessageBox.Show("The currently viewed phase is the earliest phase in the project. Please verify you are viewing a new construction phase, but showing previous and demoed elements.");
                 }
             }
         }
