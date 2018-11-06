@@ -3102,19 +3102,20 @@ namespace BARevitTools
                 string currentEvaluation = "";
                 if (familiesInUpgradedLibrary.Count > 0)
                 {
-                    try
+                    foreach (string upgradedFamilyPath in familiesInUpgradedLibrary)
                     {
-                        foreach (string upgradedFamilyPath in familiesInUpgradedLibrary)
+                        try
                         {
                             currentEvaluation = Path.GetFileNameWithoutExtension(upgradedFamilyPath);
                             upgradedLibraryDict.Add(Path.GetFileNameWithoutExtension(upgradedFamilyPath), upgradedFamilyPath);
                         }
+                        catch
+                        {
+                            MessageBox.Show(currentEvaluation + " is a duplicate name");
+                        }
                     }
-                    catch
-                    {
-                        MessageBox.Show(currentEvaluation + " is a duplicate name");
-                    }
-                }
+                }            
+                    
                 foreach (string currentFamilyPath in familiesInCurrentLibrary)
                 {
                     if (!currentFamilyPath.Contains("Archive") && !currentFamilyPath.Contains("Backup"))
@@ -3175,7 +3176,6 @@ namespace BARevitTools
                     {
                         if (RVTOperations.RevitVersionUpgradeCheck(uiApp, familyToUpgrade, true))
                         {
-                            MessageBox.Show(familyToUpgrade.Replace(currentVersion, upgradedVersion));
                             bool result = RVTOperations.UpgradeRevitFile(uiApp, familyToUpgrade, familyToUpgrade.Replace(currentVersion, upgradedVersion));
                             if (result == true)
                             {

@@ -1708,6 +1708,7 @@ namespace BARevitTools
             this.adminFamiliesUFButton.Text = "Upgrade Families";
             this.adminFamiliesUFButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.adminFamiliesUFButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.adminFamiliesUFButton.Visible = false;
             this.adminFamiliesUFButton.Click += new System.EventHandler(this.AdminFamiliesUFButton_Click);
             // 
             // toolStripSeparator3
