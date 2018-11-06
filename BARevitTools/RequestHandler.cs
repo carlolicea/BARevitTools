@@ -38,14 +38,15 @@ namespace BARevitTools
                 switch (Request.Take())
                 {
                     case RequestId.None:
-                        {
-                            return;
-                        }
+                        {return;}
                     case RequestId.multiCatCFFE1:
                         AllCatCFFE1(uiApp, "Get Parameters");
                         break;
                     case RequestId.multiCatCFFE2:
                         AllCatCFFE2(uiApp, "Make Families");
+                        break;
+                    case RequestId.electricalCEOE:
+                        ElectricalCEOERun(uiApp, "Correct Electrical Outlet Elevation");
                         break;
                     case RequestId.floorsCFBR:
                         FloorsCFBRRun(uiApp, "Create Floors by Room");
@@ -376,6 +377,64 @@ namespace BARevitTools
                 File.Delete(path);
             }
 
+        }
+        public void ElectricalCEOERun(UIApplication uiApp, String text)
+        {
+            RVTDocument doc = uiApp.ActiveUIDocument.Document;
+            var elecFixturesCollection = new FilteredElementCollector(doc).OfCategory(BuiltInCategory.OST_ElectricalFixtures).WhereElementIsNotElementType().ToElements();
+            Transaction t = new Transaction(doc, "CorrectElectricalOutletElevations");
+            t.Start();
+            try
+            {
+                foreach (Element elem in elecFixturesCollection)
+                {
+                    try
+                    {
+                        Parameter mountingHeightParameter = null;
+                        List<Parameter> parameters = elem.Parameters.Cast<Parameter>().ToList();
+                        for (int i = 0; i < parameters.Count; i++)
+                        {
+                            Parameter currentParam = parameters[i];
+                            if (currentParam.Definition.Name.ToUpper() == "MOUNTING HEIGHT")
+                            {
+                                mountingHeightParameter = currentParam;
+                                break;
+                            }
+                        }
+                        if (mountingHeightParameter != null)
+                        {
+                            double originalMountingHeight = mountingHeightParameter.AsDouble();
+                            if (originalMountingHeight != 0)
+                            {
+                                double savedOffset = 0;
+                                try
+                                {
+                                    Parameter offset = elem.GetParameters("Offset").First();
+                                    savedOffset = offset.AsDouble();
+                                    mountingHeightParameter.Set(savedOffset + originalMountingHeight);
+                                    offset.Set(0);
+                                }
+                                catch
+                                {
+                                    Parameter elevation = elem.GetParameters("Elevation").First();
+                                    savedOffset = elevation.AsDouble();
+                                    mountingHeightParameter.Set(savedOffset + originalMountingHeight);
+                                    elevation.Set(0);
+                                }                                
+                            }
+                        }                        
+                    }
+                    catch
+                    {continue; }
+                }
+                t.Commit();
+            }
+            catch(Exception f)
+            {
+                t.RollBack();
+                MessageBox.Show(f.ToString());
+            }
+            
         }
         public void FloorsCFBRRun(UIApplication uiApp, String text)
         {

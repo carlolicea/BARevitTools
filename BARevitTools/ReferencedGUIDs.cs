@@ -12,6 +12,7 @@ namespace BARevitTools
         #region guids
         public static Guid multiCatCFFguid = new Guid("3DE14BFC-3102-4BFD-824A-9B61E0260CCE");
         public static Guid multiCatREguid = new Guid("85C1C2A1-2365-49A4-B91B-A604C5F7892F");
+        public static Guid electricalCEOEguid = new Guid("A76B7D41-870E-406C-8CFB-BD5DE219A046");
         public static Guid floorsCFBRguid = new Guid("E62DDA1F-557C-4B1D-8B45-3AF6BDCBAAF5");
         public static Guid roomsSRNNguid = new Guid("871191FA-B935-455D-A199-8005DCB073F2");
         public static Guid roomsCDRTguid = new Guid("D8D589E5-B33D-4665-8960-6D33C56891E0");

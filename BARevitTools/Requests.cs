@@ -25,7 +25,7 @@ namespace BARevitTools
 
         multiCatCFFE1 = ReferencedSwitchCaseIds.multiCatCFFE1,
         multiCatCFFE2 = ReferencedSwitchCaseIds.multiCatCFFE2,
-
+        electricalCEOE = ReferencedSwitchCaseIds.electricalCEOE,
         floorsCFBR = ReferencedSwitchCaseIds.floorsCFBR,
         materialsCMS = ReferencedSwitchCaseIds.materialsCMS,
         materialsAML = ReferencedSwitchCaseIds.materialsAML,

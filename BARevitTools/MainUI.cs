@@ -99,6 +99,10 @@ namespace BARevitTools
                     this.multiCatCFFSplitContainer.Visible = true;
                     this.multiCatCFFEButton.Checked = true;
                     break;
+                case ReferencedSwitchCaseIds.electricalCEOE:
+                    this.electricalCEOELayoutPanel.Visible = true;
+                    this.electricalCEOEButton.Checked = true;
+                    break;
                 case ReferencedSwitchCaseIds.floorsCFBR:
                     this.floorsCFBRLayoutPanel.Visible = true;
                     this.floorsCFBRButton.Checked = true;
@@ -648,6 +652,18 @@ namespace BARevitTools
             MakeRequest(RequestId.multiCatCFFE2);
         }
         #endregion multiCatCFFE
+
+        #region electricalCEOE
+        private void electricalCEOEButton_Click(object sender, EventArgs e)
+        {
+            this.SwitchActivePanel(ReferencedSwitchCaseIds.electricalCEOE);
+        }
+        private void electricalCEOERunButton_Click(object sender, EventArgs e)
+        {
+            m_ExEvent.Raise();
+            MakeRequest(RequestId.electricalCEOE);
+        }
+        #endregion electricalCEOE
 
         #region floorsCFBR
         public List<Room> floorsCFBRRoomsList = null;

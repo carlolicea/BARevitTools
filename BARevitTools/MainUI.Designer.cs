@@ -111,30 +111,6 @@ namespace BARevitTools
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesDFBButton = new System.Windows.Forms.ToolStripButton();
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesDFBLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.adminFamiliesDFBSelectPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesDBFSelectNoneButton = new System.Windows.Forms.Button();
-            this.adminFamiliesDBFSelectAllButton = new System.Windows.Forms.Button();
-            this.adminFamiliesDFBSelectDirectoryButton = new System.Windows.Forms.Button();
-            this.adminFamiliesDFBFamiliesDGV = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.adminFamiliesDFBRunButton = new System.Windows.Forms.Button();
-            this.adminFamiliesBRPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.adminFamiliesBRPRunPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesBRPProgressBar = new System.Windows.Forms.ProgressBar();
-            this.adminFamiliesBRPRunButton = new System.Windows.Forms.Button();
-            this.adminFamiliesBRPSplitPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesBRPSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.adminFamiliesBRPParametersLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.adminFamiliesBRPParametersDGV = new System.Windows.Forms.DataGridView();
-            this.adminFamiliesBRPParametersPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesBPRSFamiliesLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.adminFamiliesBRPFamiliesDGV = new System.Windows.Forms.DataGridView();
-            this.adminFamiliesBRPSelectPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesBRPSelectNoneButton = new System.Windows.Forms.Button();
-            this.adminFamiliesBRPSelectAllButton = new System.Windows.Forms.Button();
-            this.adminFamiliesBRPCsvDirectoryPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesBRPDirectorySelectButton = new System.Windows.Forms.Button();
             this.adminFamiliesBAPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesBAPRunPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBAPProgressBar = new System.Windows.Forms.ProgressBar();
@@ -152,6 +128,30 @@ namespace BARevitTools
             this.adminFamiliesBAPFamiliesDGV = new System.Windows.Forms.DataGridView();
             this.adminFamiliesBAPFamiliesDirectoryPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBAPDirectorySelectButton = new System.Windows.Forms.Button();
+            this.adminFamiliesBRPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesBRPRunPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesBRPProgressBar = new System.Windows.Forms.ProgressBar();
+            this.adminFamiliesBRPRunButton = new System.Windows.Forms.Button();
+            this.adminFamiliesBRPSplitPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesBRPSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.adminFamiliesBRPParametersLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesBRPParametersDGV = new System.Windows.Forms.DataGridView();
+            this.adminFamiliesBRPParametersPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesBPRSFamiliesLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesBRPFamiliesDGV = new System.Windows.Forms.DataGridView();
+            this.adminFamiliesBRPSelectPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesBRPSelectNoneButton = new System.Windows.Forms.Button();
+            this.adminFamiliesBRPSelectAllButton = new System.Windows.Forms.Button();
+            this.adminFamiliesBRPCsvDirectoryPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesBRPDirectorySelectButton = new System.Windows.Forms.Button();
+            this.adminFamiliesDFBLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesDFBSelectPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesDBFSelectNoneButton = new System.Windows.Forms.Button();
+            this.adminFamiliesDBFSelectAllButton = new System.Windows.Forms.Button();
+            this.adminFamiliesDFBSelectDirectoryButton = new System.Windows.Forms.Button();
+            this.adminFamiliesDFBFamiliesDGV = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.adminFamiliesDFBRunButton = new System.Windows.Forms.Button();
             this.adminTemplateTab = new System.Windows.Forms.TabPage();
             this.adminTemplateLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminTemplateToolStrip = new System.Windows.Forms.ToolStrip();
@@ -219,7 +219,7 @@ namespace BARevitTools
             this.electricalTab = new System.Windows.Forms.TabPage();
             this.electricalLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.electricalToolStrip = new System.Windows.Forms.ToolStrip();
-            this.electricalCorrectElevations = new System.Windows.Forms.ToolStripButton();
+            this.electricalCEOEButton = new System.Windows.Forms.ToolStripButton();
             this.electricalToolsPanel = new System.Windows.Forms.Panel();
             this.floorsTab = new System.Windows.Forms.TabPage();
             this.floorsTabLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -566,6 +566,10 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.electricalCEOELayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.electricalCEOETextBox = new System.Windows.Forms.TextBox();
+            this.electricalCEOEControlsPanel = new System.Windows.Forms.Panel();
+            this.electricalCEOERunButton = new System.Windows.Forms.Button();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -597,23 +601,6 @@ namespace BARevitTools
             this.adminFamiliesLayoutPanel.SuspendLayout();
             this.adminFamiliesToolStrip.SuspendLayout();
             this.adminFamiliesToolsPanel.SuspendLayout();
-            this.adminFamiliesDFBLayoutPanel.SuspendLayout();
-            this.adminFamiliesDFBSelectPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesDFBFamiliesDGV)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.adminFamiliesBRPLayoutPanel.SuspendLayout();
-            this.adminFamiliesBRPRunPanel.SuspendLayout();
-            this.adminFamiliesBRPSplitPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPSplitContainer)).BeginInit();
-            this.adminFamiliesBRPSplitContainer.Panel1.SuspendLayout();
-            this.adminFamiliesBRPSplitContainer.Panel2.SuspendLayout();
-            this.adminFamiliesBRPSplitContainer.SuspendLayout();
-            this.adminFamiliesBRPParametersLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPParametersDGV)).BeginInit();
-            this.adminFamiliesBPRSFamiliesLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPFamiliesDGV)).BeginInit();
-            this.adminFamiliesBRPSelectPanel.SuspendLayout();
-            this.adminFamiliesBRPCsvDirectoryPanel.SuspendLayout();
             this.adminFamiliesBAPLayoutPanel.SuspendLayout();
             this.adminFamiliesBAPRunPanel.SuspendLayout();
             this.adminFamiliesBAPSplitPanel.SuspendLayout();
@@ -628,6 +615,23 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBAPFamiliesDGV)).BeginInit();
             this.adminFamiliesBAPFamiliesDirectoryPanel.SuspendLayout();
+            this.adminFamiliesBRPLayoutPanel.SuspendLayout();
+            this.adminFamiliesBRPRunPanel.SuspendLayout();
+            this.adminFamiliesBRPSplitPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPSplitContainer)).BeginInit();
+            this.adminFamiliesBRPSplitContainer.Panel1.SuspendLayout();
+            this.adminFamiliesBRPSplitContainer.Panel2.SuspendLayout();
+            this.adminFamiliesBRPSplitContainer.SuspendLayout();
+            this.adminFamiliesBRPParametersLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPParametersDGV)).BeginInit();
+            this.adminFamiliesBPRSFamiliesLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPFamiliesDGV)).BeginInit();
+            this.adminFamiliesBRPSelectPanel.SuspendLayout();
+            this.adminFamiliesBRPCsvDirectoryPanel.SuspendLayout();
+            this.adminFamiliesDFBLayoutPanel.SuspendLayout();
+            this.adminFamiliesDFBSelectPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesDFBFamiliesDGV)).BeginInit();
+            this.panel1.SuspendLayout();
             this.adminTemplateTab.SuspendLayout();
             this.adminTemplateLayoutPanel.SuspendLayout();
             this.adminTemplateToolStrip.SuspendLayout();
@@ -671,6 +675,7 @@ namespace BARevitTools
             this.electricalTab.SuspendLayout();
             this.electricalLayoutPanel.SuspendLayout();
             this.electricalToolStrip.SuspendLayout();
+            this.electricalToolsPanel.SuspendLayout();
             this.floorsTab.SuspendLayout();
             this.floorsTabLayoutPanel.SuspendLayout();
             this.floorsToolsPanel.SuspendLayout();
@@ -817,6 +822,8 @@ namespace BARevitTools
             this.UIFormMenuStrip.SuspendLayout();
             this.dataFamiliesBAPParametersContextMenu.SuspendLayout();
             this.dataFamiliesBRPParametersContextMenu.SuspendLayout();
+            this.electricalCEOELayoutPanel.SuspendLayout();
+            this.electricalCEOEControlsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // adminTab
@@ -1730,315 +1737,6 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(711, 338);
             this.adminFamiliesToolsPanel.TabIndex = 1;
             // 
-            // adminFamiliesDFBLayoutPanel
-            // 
-            this.adminFamiliesDFBLayoutPanel.ColumnCount = 1;
-            this.adminFamiliesDFBLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesDFBLayoutPanel.Controls.Add(this.adminFamiliesDFBSelectPanel, 0, 0);
-            this.adminFamiliesDFBLayoutPanel.Controls.Add(this.adminFamiliesDFBFamiliesDGV, 0, 1);
-            this.adminFamiliesDFBLayoutPanel.Controls.Add(this.panel1, 0, 2);
-            this.adminFamiliesDFBLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesDFBLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesDFBLayoutPanel.Name = "adminFamiliesDFBLayoutPanel";
-            this.adminFamiliesDFBLayoutPanel.RowCount = 3;
-            this.adminFamiliesDFBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.adminFamiliesDFBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesDFBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.adminFamiliesDFBLayoutPanel.Size = new System.Drawing.Size(711, 338);
-            this.adminFamiliesDFBLayoutPanel.TabIndex = 5;
-            this.adminFamiliesDFBLayoutPanel.Visible = false;
-            // 
-            // adminFamiliesDFBSelectPanel
-            // 
-            this.adminFamiliesDFBSelectPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.adminFamiliesDFBSelectPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminFamiliesDFBSelectPanel.Controls.Add(this.adminFamiliesDBFSelectNoneButton);
-            this.adminFamiliesDFBSelectPanel.Controls.Add(this.adminFamiliesDBFSelectAllButton);
-            this.adminFamiliesDFBSelectPanel.Controls.Add(this.adminFamiliesDFBSelectDirectoryButton);
-            this.adminFamiliesDFBSelectPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesDFBSelectPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesDFBSelectPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesDFBSelectPanel.Name = "adminFamiliesDFBSelectPanel";
-            this.adminFamiliesDFBSelectPanel.Size = new System.Drawing.Size(711, 35);
-            this.adminFamiliesDFBSelectPanel.TabIndex = 0;
-            // 
-            // adminFamiliesDBFSelectNoneButton
-            // 
-            this.adminFamiliesDBFSelectNoneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesDBFSelectNoneButton.BackColor = System.Drawing.SystemColors.Control;
-            this.adminFamiliesDBFSelectNoneButton.Location = new System.Drawing.Point(629, 4);
-            this.adminFamiliesDBFSelectNoneButton.Name = "adminFamiliesDBFSelectNoneButton";
-            this.adminFamiliesDBFSelectNoneButton.Size = new System.Drawing.Size(75, 23);
-            this.adminFamiliesDBFSelectNoneButton.TabIndex = 1;
-            this.adminFamiliesDBFSelectNoneButton.Text = "Select None";
-            this.adminFamiliesDBFSelectNoneButton.UseVisualStyleBackColor = false;
-            this.adminFamiliesDBFSelectNoneButton.Click += new System.EventHandler(this.AdminFamiliesDBFSelectNoneButton_Click);
-            // 
-            // adminFamiliesDBFSelectAllButton
-            // 
-            this.adminFamiliesDBFSelectAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesDBFSelectAllButton.BackColor = System.Drawing.SystemColors.Control;
-            this.adminFamiliesDBFSelectAllButton.Location = new System.Drawing.Point(545, 4);
-            this.adminFamiliesDBFSelectAllButton.Name = "adminFamiliesDBFSelectAllButton";
-            this.adminFamiliesDBFSelectAllButton.Size = new System.Drawing.Size(75, 23);
-            this.adminFamiliesDBFSelectAllButton.TabIndex = 1;
-            this.adminFamiliesDBFSelectAllButton.Text = "Select All";
-            this.adminFamiliesDBFSelectAllButton.UseVisualStyleBackColor = false;
-            this.adminFamiliesDBFSelectAllButton.Click += new System.EventHandler(this.AdminFamiliesDBFSelectAllButton_Click);
-            // 
-            // adminFamiliesDFBSelectDirectoryButton
-            // 
-            this.adminFamiliesDFBSelectDirectoryButton.Location = new System.Drawing.Point(5, 4);
-            this.adminFamiliesDFBSelectDirectoryButton.Name = "adminFamiliesDFBSelectDirectoryButton";
-            this.adminFamiliesDFBSelectDirectoryButton.Size = new System.Drawing.Size(124, 23);
-            this.adminFamiliesDFBSelectDirectoryButton.TabIndex = 0;
-            this.adminFamiliesDFBSelectDirectoryButton.Text = "Select Directory";
-            this.adminFamiliesDFBSelectDirectoryButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesDFBSelectDirectoryButton.Click += new System.EventHandler(this.AdminFamiliesDFBSelectDirectoryButton_Click);
-            // 
-            // adminFamiliesDFBFamiliesDGV
-            // 
-            this.adminFamiliesDFBFamiliesDGV.AllowUserToAddRows = false;
-            this.adminFamiliesDFBFamiliesDGV.AllowUserToDeleteRows = false;
-            this.adminFamiliesDFBFamiliesDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.adminFamiliesDFBFamiliesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.adminFamiliesDFBFamiliesDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesDFBFamiliesDGV.Location = new System.Drawing.Point(0, 35);
-            this.adminFamiliesDFBFamiliesDGV.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesDFBFamiliesDGV.Name = "adminFamiliesDFBFamiliesDGV";
-            this.adminFamiliesDFBFamiliesDGV.RowHeadersVisible = false;
-            this.adminFamiliesDFBFamiliesDGV.Size = new System.Drawing.Size(711, 268);
-            this.adminFamiliesDFBFamiliesDGV.TabIndex = 1;
-            this.adminFamiliesDFBFamiliesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminFamiliesDFBFamiliesDGV_CellContentClick);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.adminFamiliesDFBRunButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 303);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(711, 35);
-            this.panel1.TabIndex = 2;
-            // 
-            // adminFamiliesDFBRunButton
-            // 
-            this.adminFamiliesDFBRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesDFBRunButton.Location = new System.Drawing.Point(634, 6);
-            this.adminFamiliesDFBRunButton.Name = "adminFamiliesDFBRunButton";
-            this.adminFamiliesDFBRunButton.Size = new System.Drawing.Size(75, 23);
-            this.adminFamiliesDFBRunButton.TabIndex = 1;
-            this.adminFamiliesDFBRunButton.Text = "RUN";
-            this.adminFamiliesDFBRunButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesDFBRunButton.Click += new System.EventHandler(this.AdminFamiliesDFBRunButton_Click);
-            // 
-            // adminFamiliesBRPLayoutPanel
-            // 
-            this.adminFamiliesBRPLayoutPanel.ColumnCount = 2;
-            this.adminFamiliesBRPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesBRPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 249F));
-            this.adminFamiliesBRPLayoutPanel.Controls.Add(this.adminFamiliesBRPRunPanel, 0, 2);
-            this.adminFamiliesBRPLayoutPanel.Controls.Add(this.adminFamiliesBRPSplitPanel, 0, 1);
-            this.adminFamiliesBRPLayoutPanel.Controls.Add(this.adminFamiliesBRPCsvDirectoryPanel, 0, 0);
-            this.adminFamiliesBRPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesBRPLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesBRPLayoutPanel.Name = "adminFamiliesBRPLayoutPanel";
-            this.adminFamiliesBRPLayoutPanel.RowCount = 3;
-            this.adminFamiliesBRPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.adminFamiliesBRPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesBRPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.adminFamiliesBRPLayoutPanel.Size = new System.Drawing.Size(711, 338);
-            this.adminFamiliesBRPLayoutPanel.TabIndex = 3;
-            this.adminFamiliesBRPLayoutPanel.Visible = false;
-            // 
-            // adminFamiliesBRPRunPanel
-            // 
-            this.adminFamiliesBRPLayoutPanel.SetColumnSpan(this.adminFamiliesBRPRunPanel, 2);
-            this.adminFamiliesBRPRunPanel.Controls.Add(this.adminFamiliesBRPProgressBar);
-            this.adminFamiliesBRPRunPanel.Controls.Add(this.adminFamiliesBRPRunButton);
-            this.adminFamiliesBRPRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPRunPanel.Location = new System.Drawing.Point(0, 303);
-            this.adminFamiliesBRPRunPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesBRPRunPanel.Name = "adminFamiliesBRPRunPanel";
-            this.adminFamiliesBRPRunPanel.Size = new System.Drawing.Size(711, 35);
-            this.adminFamiliesBRPRunPanel.TabIndex = 5;
-            // 
-            // adminFamiliesBRPProgressBar
-            // 
-            this.adminFamiliesBRPProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesBRPProgressBar.ForeColor = System.Drawing.Color.GreenYellow;
-            this.adminFamiliesBRPProgressBar.Location = new System.Drawing.Point(7, 6);
-            this.adminFamiliesBRPProgressBar.Name = "adminFamiliesBRPProgressBar";
-            this.adminFamiliesBRPProgressBar.Size = new System.Drawing.Size(620, 23);
-            this.adminFamiliesBRPProgressBar.TabIndex = 1;
-            this.adminFamiliesBRPProgressBar.Visible = false;
-            // 
-            // adminFamiliesBRPRunButton
-            // 
-            this.adminFamiliesBRPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesBRPRunButton.Location = new System.Drawing.Point(634, 6);
-            this.adminFamiliesBRPRunButton.Name = "adminFamiliesBRPRunButton";
-            this.adminFamiliesBRPRunButton.Size = new System.Drawing.Size(75, 23);
-            this.adminFamiliesBRPRunButton.TabIndex = 0;
-            this.adminFamiliesBRPRunButton.Text = "RUN";
-            this.adminFamiliesBRPRunButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBRPRunButton.Click += new System.EventHandler(this.AdminFamiliesBRPRunButton_Click);
-            // 
-            // adminFamiliesBRPSplitPanel
-            // 
-            this.adminFamiliesBRPLayoutPanel.SetColumnSpan(this.adminFamiliesBRPSplitPanel, 2);
-            this.adminFamiliesBRPSplitPanel.Controls.Add(this.adminFamiliesBRPSplitContainer);
-            this.adminFamiliesBRPSplitPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPSplitPanel.Location = new System.Drawing.Point(3, 38);
-            this.adminFamiliesBRPSplitPanel.Name = "adminFamiliesBRPSplitPanel";
-            this.adminFamiliesBRPSplitPanel.Size = new System.Drawing.Size(705, 262);
-            this.adminFamiliesBRPSplitPanel.TabIndex = 6;
-            // 
-            // adminFamiliesBRPSplitContainer
-            // 
-            this.adminFamiliesBRPSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPSplitContainer.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesBRPSplitContainer.Name = "adminFamiliesBRPSplitContainer";
-            // 
-            // adminFamiliesBRPSplitContainer.Panel1
-            // 
-            this.adminFamiliesBRPSplitContainer.Panel1.Controls.Add(this.adminFamiliesBRPParametersLayoutPanel);
-            // 
-            // adminFamiliesBRPSplitContainer.Panel2
-            // 
-            this.adminFamiliesBRPSplitContainer.Panel2.Controls.Add(this.adminFamiliesBPRSFamiliesLayoutPanel);
-            this.adminFamiliesBRPSplitContainer.Size = new System.Drawing.Size(705, 262);
-            this.adminFamiliesBRPSplitContainer.SplitterDistance = 338;
-            this.adminFamiliesBRPSplitContainer.TabIndex = 0;
-            // 
-            // adminFamiliesBRPParametersLayoutPanel
-            // 
-            this.adminFamiliesBRPParametersLayoutPanel.ColumnCount = 1;
-            this.adminFamiliesBRPParametersLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesBRPParametersLayoutPanel.Controls.Add(this.adminFamiliesBRPParametersDGV, 0, 1);
-            this.adminFamiliesBRPParametersLayoutPanel.Controls.Add(this.adminFamiliesBRPParametersPanel, 0, 0);
-            this.adminFamiliesBRPParametersLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPParametersLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesBRPParametersLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesBRPParametersLayoutPanel.Name = "adminFamiliesBRPParametersLayoutPanel";
-            this.adminFamiliesBRPParametersLayoutPanel.RowCount = 2;
-            this.adminFamiliesBRPParametersLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.adminFamiliesBRPParametersLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesBRPParametersLayoutPanel.Size = new System.Drawing.Size(338, 262);
-            this.adminFamiliesBRPParametersLayoutPanel.TabIndex = 4;
-            // 
-            // adminFamiliesBRPParametersDGV
-            // 
-            this.adminFamiliesBRPParametersDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.adminFamiliesBRPParametersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.adminFamiliesBRPParametersDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPParametersDGV.Location = new System.Drawing.Point(0, 35);
-            this.adminFamiliesBRPParametersDGV.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesBRPParametersDGV.Name = "adminFamiliesBRPParametersDGV";
-            this.adminFamiliesBRPParametersDGV.RowHeadersWidth = 15;
-            this.adminFamiliesBRPParametersDGV.Size = new System.Drawing.Size(338, 227);
-            this.adminFamiliesBRPParametersDGV.TabIndex = 0;
-            this.adminFamiliesBRPParametersDGV.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AdminFamiliesBRPParametersDGV_CellMouseUp);
-            // 
-            // adminFamiliesBRPParametersPanel
-            // 
-            this.adminFamiliesBRPParametersPanel.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.adminFamiliesBRPParametersPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminFamiliesBRPParametersPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPParametersPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesBRPParametersPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesBRPParametersPanel.Name = "adminFamiliesBRPParametersPanel";
-            this.adminFamiliesBRPParametersPanel.Size = new System.Drawing.Size(338, 35);
-            this.adminFamiliesBRPParametersPanel.TabIndex = 3;
-            // 
-            // adminFamiliesBPRSFamiliesLayoutPanel
-            // 
-            this.adminFamiliesBPRSFamiliesLayoutPanel.ColumnCount = 1;
-            this.adminFamiliesBPRSFamiliesLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesBPRSFamiliesLayoutPanel.Controls.Add(this.adminFamiliesBRPFamiliesDGV, 0, 1);
-            this.adminFamiliesBPRSFamiliesLayoutPanel.Controls.Add(this.adminFamiliesBRPSelectPanel, 0, 0);
-            this.adminFamiliesBPRSFamiliesLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBPRSFamiliesLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesBPRSFamiliesLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesBPRSFamiliesLayoutPanel.Name = "adminFamiliesBPRSFamiliesLayoutPanel";
-            this.adminFamiliesBPRSFamiliesLayoutPanel.RowCount = 2;
-            this.adminFamiliesBPRSFamiliesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.adminFamiliesBPRSFamiliesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesBPRSFamiliesLayoutPanel.Size = new System.Drawing.Size(363, 262);
-            this.adminFamiliesBPRSFamiliesLayoutPanel.TabIndex = 4;
-            // 
-            // adminFamiliesBRPFamiliesDGV
-            // 
-            this.adminFamiliesBRPFamiliesDGV.AllowUserToAddRows = false;
-            this.adminFamiliesBRPFamiliesDGV.AllowUserToDeleteRows = false;
-            this.adminFamiliesBRPFamiliesDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.adminFamiliesBRPFamiliesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.adminFamiliesBRPFamiliesDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPFamiliesDGV.Location = new System.Drawing.Point(0, 35);
-            this.adminFamiliesBRPFamiliesDGV.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesBRPFamiliesDGV.Name = "adminFamiliesBRPFamiliesDGV";
-            this.adminFamiliesBRPFamiliesDGV.RowHeadersVisible = false;
-            this.adminFamiliesBRPFamiliesDGV.Size = new System.Drawing.Size(363, 227);
-            this.adminFamiliesBRPFamiliesDGV.TabIndex = 1;
-            this.adminFamiliesBRPFamiliesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminFamiliesBRPFamiliesDGV_CellContentClick);
-            // 
-            // adminFamiliesBRPSelectPanel
-            // 
-            this.adminFamiliesBRPSelectPanel.BackColor = System.Drawing.Color.YellowGreen;
-            this.adminFamiliesBRPSelectPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminFamiliesBRPSelectPanel.Controls.Add(this.adminFamiliesBRPSelectNoneButton);
-            this.adminFamiliesBRPSelectPanel.Controls.Add(this.adminFamiliesBRPSelectAllButton);
-            this.adminFamiliesBRPSelectPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPSelectPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesBRPSelectPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesBRPSelectPanel.Name = "adminFamiliesBRPSelectPanel";
-            this.adminFamiliesBRPSelectPanel.Size = new System.Drawing.Size(363, 35);
-            this.adminFamiliesBRPSelectPanel.TabIndex = 4;
-            // 
-            // adminFamiliesBRPSelectNoneButton
-            // 
-            this.adminFamiliesBRPSelectNoneButton.Location = new System.Drawing.Point(84, 3);
-            this.adminFamiliesBRPSelectNoneButton.Name = "adminFamiliesBRPSelectNoneButton";
-            this.adminFamiliesBRPSelectNoneButton.Size = new System.Drawing.Size(75, 23);
-            this.adminFamiliesBRPSelectNoneButton.TabIndex = 0;
-            this.adminFamiliesBRPSelectNoneButton.Text = "Select None";
-            this.adminFamiliesBRPSelectNoneButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBRPSelectNoneButton.Click += new System.EventHandler(this.AdminFamiliesBRPSelectNoneButton_Click);
-            // 
-            // adminFamiliesBRPSelectAllButton
-            // 
-            this.adminFamiliesBRPSelectAllButton.Location = new System.Drawing.Point(3, 3);
-            this.adminFamiliesBRPSelectAllButton.Name = "adminFamiliesBRPSelectAllButton";
-            this.adminFamiliesBRPSelectAllButton.Size = new System.Drawing.Size(75, 23);
-            this.adminFamiliesBRPSelectAllButton.TabIndex = 0;
-            this.adminFamiliesBRPSelectAllButton.Text = "Select All";
-            this.adminFamiliesBRPSelectAllButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBRPSelectAllButton.Click += new System.EventHandler(this.AdminFamiliesBRPSelectAllButton_Click);
-            // 
-            // adminFamiliesBRPCsvDirectoryPanel
-            // 
-            this.adminFamiliesBRPCsvDirectoryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminFamiliesBRPLayoutPanel.SetColumnSpan(this.adminFamiliesBRPCsvDirectoryPanel, 2);
-            this.adminFamiliesBRPCsvDirectoryPanel.Controls.Add(this.adminFamiliesBRPDirectorySelectButton);
-            this.adminFamiliesBRPCsvDirectoryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPCsvDirectoryPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesBRPCsvDirectoryPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesBRPCsvDirectoryPanel.Name = "adminFamiliesBRPCsvDirectoryPanel";
-            this.adminFamiliesBRPCsvDirectoryPanel.Size = new System.Drawing.Size(711, 35);
-            this.adminFamiliesBRPCsvDirectoryPanel.TabIndex = 7;
-            // 
-            // adminFamiliesBRPDirectorySelectButton
-            // 
-            this.adminFamiliesBRPDirectorySelectButton.Location = new System.Drawing.Point(3, 6);
-            this.adminFamiliesBRPDirectorySelectButton.Name = "adminFamiliesBRPDirectorySelectButton";
-            this.adminFamiliesBRPDirectorySelectButton.Size = new System.Drawing.Size(124, 23);
-            this.adminFamiliesBRPDirectorySelectButton.TabIndex = 0;
-            this.adminFamiliesBRPDirectorySelectButton.Text = "Select Directory";
-            this.adminFamiliesBRPDirectorySelectButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBRPDirectorySelectButton.Click += new System.EventHandler(this.AdminFamiliesBRPDirectorySelectButton_Click);
-            // 
             // adminFamiliesBAPLayoutPanel
             // 
             this.adminFamiliesBAPLayoutPanel.ColumnCount = 2;
@@ -2257,6 +1955,315 @@ namespace BARevitTools
             this.adminFamiliesBAPDirectorySelectButton.Text = "Select Directory";
             this.adminFamiliesBAPDirectorySelectButton.UseVisualStyleBackColor = true;
             this.adminFamiliesBAPDirectorySelectButton.Click += new System.EventHandler(this.AdminFamiliesBAPSelectDirectoryButton_Click);
+            // 
+            // adminFamiliesBRPLayoutPanel
+            // 
+            this.adminFamiliesBRPLayoutPanel.ColumnCount = 2;
+            this.adminFamiliesBRPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesBRPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 249F));
+            this.adminFamiliesBRPLayoutPanel.Controls.Add(this.adminFamiliesBRPRunPanel, 0, 2);
+            this.adminFamiliesBRPLayoutPanel.Controls.Add(this.adminFamiliesBRPSplitPanel, 0, 1);
+            this.adminFamiliesBRPLayoutPanel.Controls.Add(this.adminFamiliesBRPCsvDirectoryPanel, 0, 0);
+            this.adminFamiliesBRPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBRPLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesBRPLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesBRPLayoutPanel.Name = "adminFamiliesBRPLayoutPanel";
+            this.adminFamiliesBRPLayoutPanel.RowCount = 3;
+            this.adminFamiliesBRPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.adminFamiliesBRPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesBRPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.adminFamiliesBRPLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminFamiliesBRPLayoutPanel.TabIndex = 3;
+            this.adminFamiliesBRPLayoutPanel.Visible = false;
+            // 
+            // adminFamiliesBRPRunPanel
+            // 
+            this.adminFamiliesBRPLayoutPanel.SetColumnSpan(this.adminFamiliesBRPRunPanel, 2);
+            this.adminFamiliesBRPRunPanel.Controls.Add(this.adminFamiliesBRPProgressBar);
+            this.adminFamiliesBRPRunPanel.Controls.Add(this.adminFamiliesBRPRunButton);
+            this.adminFamiliesBRPRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBRPRunPanel.Location = new System.Drawing.Point(0, 303);
+            this.adminFamiliesBRPRunPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesBRPRunPanel.Name = "adminFamiliesBRPRunPanel";
+            this.adminFamiliesBRPRunPanel.Size = new System.Drawing.Size(711, 35);
+            this.adminFamiliesBRPRunPanel.TabIndex = 5;
+            // 
+            // adminFamiliesBRPProgressBar
+            // 
+            this.adminFamiliesBRPProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesBRPProgressBar.ForeColor = System.Drawing.Color.GreenYellow;
+            this.adminFamiliesBRPProgressBar.Location = new System.Drawing.Point(7, 6);
+            this.adminFamiliesBRPProgressBar.Name = "adminFamiliesBRPProgressBar";
+            this.adminFamiliesBRPProgressBar.Size = new System.Drawing.Size(620, 23);
+            this.adminFamiliesBRPProgressBar.TabIndex = 1;
+            this.adminFamiliesBRPProgressBar.Visible = false;
+            // 
+            // adminFamiliesBRPRunButton
+            // 
+            this.adminFamiliesBRPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesBRPRunButton.Location = new System.Drawing.Point(634, 6);
+            this.adminFamiliesBRPRunButton.Name = "adminFamiliesBRPRunButton";
+            this.adminFamiliesBRPRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesBRPRunButton.TabIndex = 0;
+            this.adminFamiliesBRPRunButton.Text = "RUN";
+            this.adminFamiliesBRPRunButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesBRPRunButton.Click += new System.EventHandler(this.AdminFamiliesBRPRunButton_Click);
+            // 
+            // adminFamiliesBRPSplitPanel
+            // 
+            this.adminFamiliesBRPLayoutPanel.SetColumnSpan(this.adminFamiliesBRPSplitPanel, 2);
+            this.adminFamiliesBRPSplitPanel.Controls.Add(this.adminFamiliesBRPSplitContainer);
+            this.adminFamiliesBRPSplitPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBRPSplitPanel.Location = new System.Drawing.Point(3, 38);
+            this.adminFamiliesBRPSplitPanel.Name = "adminFamiliesBRPSplitPanel";
+            this.adminFamiliesBRPSplitPanel.Size = new System.Drawing.Size(705, 262);
+            this.adminFamiliesBRPSplitPanel.TabIndex = 6;
+            // 
+            // adminFamiliesBRPSplitContainer
+            // 
+            this.adminFamiliesBRPSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBRPSplitContainer.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesBRPSplitContainer.Name = "adminFamiliesBRPSplitContainer";
+            // 
+            // adminFamiliesBRPSplitContainer.Panel1
+            // 
+            this.adminFamiliesBRPSplitContainer.Panel1.Controls.Add(this.adminFamiliesBRPParametersLayoutPanel);
+            // 
+            // adminFamiliesBRPSplitContainer.Panel2
+            // 
+            this.adminFamiliesBRPSplitContainer.Panel2.Controls.Add(this.adminFamiliesBPRSFamiliesLayoutPanel);
+            this.adminFamiliesBRPSplitContainer.Size = new System.Drawing.Size(705, 262);
+            this.adminFamiliesBRPSplitContainer.SplitterDistance = 338;
+            this.adminFamiliesBRPSplitContainer.TabIndex = 0;
+            // 
+            // adminFamiliesBRPParametersLayoutPanel
+            // 
+            this.adminFamiliesBRPParametersLayoutPanel.ColumnCount = 1;
+            this.adminFamiliesBRPParametersLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesBRPParametersLayoutPanel.Controls.Add(this.adminFamiliesBRPParametersDGV, 0, 1);
+            this.adminFamiliesBRPParametersLayoutPanel.Controls.Add(this.adminFamiliesBRPParametersPanel, 0, 0);
+            this.adminFamiliesBRPParametersLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBRPParametersLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesBRPParametersLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesBRPParametersLayoutPanel.Name = "adminFamiliesBRPParametersLayoutPanel";
+            this.adminFamiliesBRPParametersLayoutPanel.RowCount = 2;
+            this.adminFamiliesBRPParametersLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.adminFamiliesBRPParametersLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesBRPParametersLayoutPanel.Size = new System.Drawing.Size(338, 262);
+            this.adminFamiliesBRPParametersLayoutPanel.TabIndex = 4;
+            // 
+            // adminFamiliesBRPParametersDGV
+            // 
+            this.adminFamiliesBRPParametersDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.adminFamiliesBRPParametersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.adminFamiliesBRPParametersDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBRPParametersDGV.Location = new System.Drawing.Point(0, 35);
+            this.adminFamiliesBRPParametersDGV.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesBRPParametersDGV.Name = "adminFamiliesBRPParametersDGV";
+            this.adminFamiliesBRPParametersDGV.RowHeadersWidth = 15;
+            this.adminFamiliesBRPParametersDGV.Size = new System.Drawing.Size(338, 227);
+            this.adminFamiliesBRPParametersDGV.TabIndex = 0;
+            this.adminFamiliesBRPParametersDGV.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AdminFamiliesBRPParametersDGV_CellMouseUp);
+            // 
+            // adminFamiliesBRPParametersPanel
+            // 
+            this.adminFamiliesBRPParametersPanel.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.adminFamiliesBRPParametersPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesBRPParametersPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBRPParametersPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesBRPParametersPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesBRPParametersPanel.Name = "adminFamiliesBRPParametersPanel";
+            this.adminFamiliesBRPParametersPanel.Size = new System.Drawing.Size(338, 35);
+            this.adminFamiliesBRPParametersPanel.TabIndex = 3;
+            // 
+            // adminFamiliesBPRSFamiliesLayoutPanel
+            // 
+            this.adminFamiliesBPRSFamiliesLayoutPanel.ColumnCount = 1;
+            this.adminFamiliesBPRSFamiliesLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesBPRSFamiliesLayoutPanel.Controls.Add(this.adminFamiliesBRPFamiliesDGV, 0, 1);
+            this.adminFamiliesBPRSFamiliesLayoutPanel.Controls.Add(this.adminFamiliesBRPSelectPanel, 0, 0);
+            this.adminFamiliesBPRSFamiliesLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBPRSFamiliesLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesBPRSFamiliesLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesBPRSFamiliesLayoutPanel.Name = "adminFamiliesBPRSFamiliesLayoutPanel";
+            this.adminFamiliesBPRSFamiliesLayoutPanel.RowCount = 2;
+            this.adminFamiliesBPRSFamiliesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.adminFamiliesBPRSFamiliesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesBPRSFamiliesLayoutPanel.Size = new System.Drawing.Size(363, 262);
+            this.adminFamiliesBPRSFamiliesLayoutPanel.TabIndex = 4;
+            // 
+            // adminFamiliesBRPFamiliesDGV
+            // 
+            this.adminFamiliesBRPFamiliesDGV.AllowUserToAddRows = false;
+            this.adminFamiliesBRPFamiliesDGV.AllowUserToDeleteRows = false;
+            this.adminFamiliesBRPFamiliesDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.adminFamiliesBRPFamiliesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.adminFamiliesBRPFamiliesDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBRPFamiliesDGV.Location = new System.Drawing.Point(0, 35);
+            this.adminFamiliesBRPFamiliesDGV.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesBRPFamiliesDGV.Name = "adminFamiliesBRPFamiliesDGV";
+            this.adminFamiliesBRPFamiliesDGV.RowHeadersVisible = false;
+            this.adminFamiliesBRPFamiliesDGV.Size = new System.Drawing.Size(363, 227);
+            this.adminFamiliesBRPFamiliesDGV.TabIndex = 1;
+            this.adminFamiliesBRPFamiliesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminFamiliesBRPFamiliesDGV_CellContentClick);
+            // 
+            // adminFamiliesBRPSelectPanel
+            // 
+            this.adminFamiliesBRPSelectPanel.BackColor = System.Drawing.Color.YellowGreen;
+            this.adminFamiliesBRPSelectPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesBRPSelectPanel.Controls.Add(this.adminFamiliesBRPSelectNoneButton);
+            this.adminFamiliesBRPSelectPanel.Controls.Add(this.adminFamiliesBRPSelectAllButton);
+            this.adminFamiliesBRPSelectPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBRPSelectPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesBRPSelectPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesBRPSelectPanel.Name = "adminFamiliesBRPSelectPanel";
+            this.adminFamiliesBRPSelectPanel.Size = new System.Drawing.Size(363, 35);
+            this.adminFamiliesBRPSelectPanel.TabIndex = 4;
+            // 
+            // adminFamiliesBRPSelectNoneButton
+            // 
+            this.adminFamiliesBRPSelectNoneButton.Location = new System.Drawing.Point(84, 3);
+            this.adminFamiliesBRPSelectNoneButton.Name = "adminFamiliesBRPSelectNoneButton";
+            this.adminFamiliesBRPSelectNoneButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesBRPSelectNoneButton.TabIndex = 0;
+            this.adminFamiliesBRPSelectNoneButton.Text = "Select None";
+            this.adminFamiliesBRPSelectNoneButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesBRPSelectNoneButton.Click += new System.EventHandler(this.AdminFamiliesBRPSelectNoneButton_Click);
+            // 
+            // adminFamiliesBRPSelectAllButton
+            // 
+            this.adminFamiliesBRPSelectAllButton.Location = new System.Drawing.Point(3, 3);
+            this.adminFamiliesBRPSelectAllButton.Name = "adminFamiliesBRPSelectAllButton";
+            this.adminFamiliesBRPSelectAllButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesBRPSelectAllButton.TabIndex = 0;
+            this.adminFamiliesBRPSelectAllButton.Text = "Select All";
+            this.adminFamiliesBRPSelectAllButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesBRPSelectAllButton.Click += new System.EventHandler(this.AdminFamiliesBRPSelectAllButton_Click);
+            // 
+            // adminFamiliesBRPCsvDirectoryPanel
+            // 
+            this.adminFamiliesBRPCsvDirectoryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesBRPLayoutPanel.SetColumnSpan(this.adminFamiliesBRPCsvDirectoryPanel, 2);
+            this.adminFamiliesBRPCsvDirectoryPanel.Controls.Add(this.adminFamiliesBRPDirectorySelectButton);
+            this.adminFamiliesBRPCsvDirectoryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesBRPCsvDirectoryPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesBRPCsvDirectoryPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesBRPCsvDirectoryPanel.Name = "adminFamiliesBRPCsvDirectoryPanel";
+            this.adminFamiliesBRPCsvDirectoryPanel.Size = new System.Drawing.Size(711, 35);
+            this.adminFamiliesBRPCsvDirectoryPanel.TabIndex = 7;
+            // 
+            // adminFamiliesBRPDirectorySelectButton
+            // 
+            this.adminFamiliesBRPDirectorySelectButton.Location = new System.Drawing.Point(3, 6);
+            this.adminFamiliesBRPDirectorySelectButton.Name = "adminFamiliesBRPDirectorySelectButton";
+            this.adminFamiliesBRPDirectorySelectButton.Size = new System.Drawing.Size(124, 23);
+            this.adminFamiliesBRPDirectorySelectButton.TabIndex = 0;
+            this.adminFamiliesBRPDirectorySelectButton.Text = "Select Directory";
+            this.adminFamiliesBRPDirectorySelectButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesBRPDirectorySelectButton.Click += new System.EventHandler(this.AdminFamiliesBRPDirectorySelectButton_Click);
+            // 
+            // adminFamiliesDFBLayoutPanel
+            // 
+            this.adminFamiliesDFBLayoutPanel.ColumnCount = 1;
+            this.adminFamiliesDFBLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesDFBLayoutPanel.Controls.Add(this.adminFamiliesDFBSelectPanel, 0, 0);
+            this.adminFamiliesDFBLayoutPanel.Controls.Add(this.adminFamiliesDFBFamiliesDGV, 0, 1);
+            this.adminFamiliesDFBLayoutPanel.Controls.Add(this.panel1, 0, 2);
+            this.adminFamiliesDFBLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesDFBLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesDFBLayoutPanel.Name = "adminFamiliesDFBLayoutPanel";
+            this.adminFamiliesDFBLayoutPanel.RowCount = 3;
+            this.adminFamiliesDFBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.adminFamiliesDFBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesDFBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.adminFamiliesDFBLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminFamiliesDFBLayoutPanel.TabIndex = 5;
+            this.adminFamiliesDFBLayoutPanel.Visible = false;
+            // 
+            // adminFamiliesDFBSelectPanel
+            // 
+            this.adminFamiliesDFBSelectPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesDFBSelectPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesDFBSelectPanel.Controls.Add(this.adminFamiliesDBFSelectNoneButton);
+            this.adminFamiliesDFBSelectPanel.Controls.Add(this.adminFamiliesDBFSelectAllButton);
+            this.adminFamiliesDFBSelectPanel.Controls.Add(this.adminFamiliesDFBSelectDirectoryButton);
+            this.adminFamiliesDFBSelectPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesDFBSelectPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesDFBSelectPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesDFBSelectPanel.Name = "adminFamiliesDFBSelectPanel";
+            this.adminFamiliesDFBSelectPanel.Size = new System.Drawing.Size(711, 35);
+            this.adminFamiliesDFBSelectPanel.TabIndex = 0;
+            // 
+            // adminFamiliesDBFSelectNoneButton
+            // 
+            this.adminFamiliesDBFSelectNoneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesDBFSelectNoneButton.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesDBFSelectNoneButton.Location = new System.Drawing.Point(629, 4);
+            this.adminFamiliesDBFSelectNoneButton.Name = "adminFamiliesDBFSelectNoneButton";
+            this.adminFamiliesDBFSelectNoneButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesDBFSelectNoneButton.TabIndex = 1;
+            this.adminFamiliesDBFSelectNoneButton.Text = "Select None";
+            this.adminFamiliesDBFSelectNoneButton.UseVisualStyleBackColor = false;
+            this.adminFamiliesDBFSelectNoneButton.Click += new System.EventHandler(this.AdminFamiliesDBFSelectNoneButton_Click);
+            // 
+            // adminFamiliesDBFSelectAllButton
+            // 
+            this.adminFamiliesDBFSelectAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesDBFSelectAllButton.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesDBFSelectAllButton.Location = new System.Drawing.Point(545, 4);
+            this.adminFamiliesDBFSelectAllButton.Name = "adminFamiliesDBFSelectAllButton";
+            this.adminFamiliesDBFSelectAllButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesDBFSelectAllButton.TabIndex = 1;
+            this.adminFamiliesDBFSelectAllButton.Text = "Select All";
+            this.adminFamiliesDBFSelectAllButton.UseVisualStyleBackColor = false;
+            this.adminFamiliesDBFSelectAllButton.Click += new System.EventHandler(this.AdminFamiliesDBFSelectAllButton_Click);
+            // 
+            // adminFamiliesDFBSelectDirectoryButton
+            // 
+            this.adminFamiliesDFBSelectDirectoryButton.Location = new System.Drawing.Point(5, 4);
+            this.adminFamiliesDFBSelectDirectoryButton.Name = "adminFamiliesDFBSelectDirectoryButton";
+            this.adminFamiliesDFBSelectDirectoryButton.Size = new System.Drawing.Size(124, 23);
+            this.adminFamiliesDFBSelectDirectoryButton.TabIndex = 0;
+            this.adminFamiliesDFBSelectDirectoryButton.Text = "Select Directory";
+            this.adminFamiliesDFBSelectDirectoryButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesDFBSelectDirectoryButton.Click += new System.EventHandler(this.AdminFamiliesDFBSelectDirectoryButton_Click);
+            // 
+            // adminFamiliesDFBFamiliesDGV
+            // 
+            this.adminFamiliesDFBFamiliesDGV.AllowUserToAddRows = false;
+            this.adminFamiliesDFBFamiliesDGV.AllowUserToDeleteRows = false;
+            this.adminFamiliesDFBFamiliesDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.adminFamiliesDFBFamiliesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.adminFamiliesDFBFamiliesDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesDFBFamiliesDGV.Location = new System.Drawing.Point(0, 35);
+            this.adminFamiliesDFBFamiliesDGV.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesDFBFamiliesDGV.Name = "adminFamiliesDFBFamiliesDGV";
+            this.adminFamiliesDFBFamiliesDGV.RowHeadersVisible = false;
+            this.adminFamiliesDFBFamiliesDGV.Size = new System.Drawing.Size(711, 268);
+            this.adminFamiliesDFBFamiliesDGV.TabIndex = 1;
+            this.adminFamiliesDFBFamiliesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminFamiliesDFBFamiliesDGV_CellContentClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.adminFamiliesDFBRunButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 303);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(711, 35);
+            this.panel1.TabIndex = 2;
+            // 
+            // adminFamiliesDFBRunButton
+            // 
+            this.adminFamiliesDFBRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesDFBRunButton.Location = new System.Drawing.Point(634, 6);
+            this.adminFamiliesDFBRunButton.Name = "adminFamiliesDFBRunButton";
+            this.adminFamiliesDFBRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesDFBRunButton.TabIndex = 1;
+            this.adminFamiliesDFBRunButton.Text = "RUN";
+            this.adminFamiliesDFBRunButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesDFBRunButton.Click += new System.EventHandler(this.AdminFamiliesDFBRunButton_Click);
             // 
             // adminTemplateTab
             // 
@@ -3146,29 +3153,30 @@ namespace BARevitTools
             this.electricalToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.electricalToolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.electricalToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.electricalCorrectElevations});
+            this.electricalCEOEButton});
             this.electricalToolStrip.Location = new System.Drawing.Point(0, 0);
             this.electricalToolStrip.Name = "electricalToolStrip";
             this.electricalToolStrip.Size = new System.Drawing.Size(717, 53);
             this.electricalToolStrip.TabIndex = 0;
             this.electricalToolStrip.Text = "toolStrip1";
             // 
-            // electricalCorrectElevations
+            // electricalCEOEButton
             // 
-            this.electricalCorrectElevations.Image = ((System.Drawing.Image)(resources.GetObject("electricalCorrectElevations.Image")));
-            this.electricalCorrectElevations.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.electricalCorrectElevations.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.electricalCorrectElevations.Name = "electricalCorrectElevations";
-            this.electricalCorrectElevations.Size = new System.Drawing.Size(134, 50);
-            this.electricalCorrectElevations.Text = "Correct Elec Outlet Elev";
-            this.electricalCorrectElevations.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.electricalCorrectElevations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.electricalCorrectElevations.ToolTipText = "Correct Elec Outlet Elev: Fixes outlet elevations that were moved up instead of u" +
+            this.electricalCEOEButton.Image = ((System.Drawing.Image)(resources.GetObject("electricalCEOEButton.Image")));
+            this.electricalCEOEButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.electricalCEOEButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.electricalCEOEButton.Name = "electricalCEOEButton";
+            this.electricalCEOEButton.Size = new System.Drawing.Size(134, 50);
+            this.electricalCEOEButton.Text = "Correct Elec Outlet Elev";
+            this.electricalCEOEButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.electricalCEOEButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.electricalCEOEButton.ToolTipText = "Correct Elec Outlet Elev: Fixes outlet elevations that were moved up instead of u" +
     "sing the Mounting Height parameter";
-            this.electricalCorrectElevations.Visible = false;
+            this.electricalCEOEButton.Click += new System.EventHandler(this.electricalCEOEButton_Click);
             // 
             // electricalToolsPanel
             // 
+            this.electricalToolsPanel.Controls.Add(this.electricalCEOELayoutPanel);
             this.electricalToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.electricalToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.electricalToolsPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -7386,6 +7394,55 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
             // 
+            // electricalCEOELayoutPanel
+            // 
+            this.electricalCEOELayoutPanel.ColumnCount = 1;
+            this.electricalCEOELayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.electricalCEOELayoutPanel.Controls.Add(this.electricalCEOETextBox, 0, 0);
+            this.electricalCEOELayoutPanel.Controls.Add(this.electricalCEOEControlsPanel, 0, 1);
+            this.electricalCEOELayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.electricalCEOELayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.electricalCEOELayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.electricalCEOELayoutPanel.Name = "electricalCEOELayoutPanel";
+            this.electricalCEOELayoutPanel.RowCount = 2;
+            this.electricalCEOELayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.4186F));
+            this.electricalCEOELayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.5814F));
+            this.electricalCEOELayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.electricalCEOELayoutPanel.TabIndex = 0;
+            this.electricalCEOELayoutPanel.Visible = false;
+            // 
+            // electricalCEOETextBox
+            // 
+            this.electricalCEOETextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.electricalCEOETextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.electricalCEOETextBox.Location = new System.Drawing.Point(0, 0);
+            this.electricalCEOETextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.electricalCEOETextBox.Multiline = true;
+            this.electricalCEOETextBox.Name = "electricalCEOETextBox";
+            this.electricalCEOETextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.electricalCEOETextBox.Size = new System.Drawing.Size(717, 83);
+            this.electricalCEOETextBox.TabIndex = 0;
+            // 
+            // electricalCEOEControlsPanel
+            // 
+            this.electricalCEOEControlsPanel.Controls.Add(this.electricalCEOERunButton);
+            this.electricalCEOEControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.electricalCEOEControlsPanel.Location = new System.Drawing.Point(0, 83);
+            this.electricalCEOEControlsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.electricalCEOEControlsPanel.Name = "electricalCEOEControlsPanel";
+            this.electricalCEOEControlsPanel.Size = new System.Drawing.Size(717, 261);
+            this.electricalCEOEControlsPanel.TabIndex = 1;
+            // 
+            // electricalCEOERunButton
+            // 
+            this.electricalCEOERunButton.Location = new System.Drawing.Point(3, 3);
+            this.electricalCEOERunButton.Name = "electricalCEOERunButton";
+            this.electricalCEOERunButton.Size = new System.Drawing.Size(75, 23);
+            this.electricalCEOERunButton.TabIndex = 0;
+            this.electricalCEOERunButton.Text = "RUN";
+            this.electricalCEOERunButton.UseVisualStyleBackColor = true;
+            this.electricalCEOERunButton.Click += new System.EventHandler(this.electricalCEOERunButton_Click);
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7440,23 +7497,6 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.ResumeLayout(false);
             this.adminFamiliesToolStrip.PerformLayout();
             this.adminFamiliesToolsPanel.ResumeLayout(false);
-            this.adminFamiliesDFBLayoutPanel.ResumeLayout(false);
-            this.adminFamiliesDFBSelectPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesDFBFamiliesDGV)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.adminFamiliesBRPLayoutPanel.ResumeLayout(false);
-            this.adminFamiliesBRPRunPanel.ResumeLayout(false);
-            this.adminFamiliesBRPSplitPanel.ResumeLayout(false);
-            this.adminFamiliesBRPSplitContainer.Panel1.ResumeLayout(false);
-            this.adminFamiliesBRPSplitContainer.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPSplitContainer)).EndInit();
-            this.adminFamiliesBRPSplitContainer.ResumeLayout(false);
-            this.adminFamiliesBRPParametersLayoutPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPParametersDGV)).EndInit();
-            this.adminFamiliesBPRSFamiliesLayoutPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPFamiliesDGV)).EndInit();
-            this.adminFamiliesBRPSelectPanel.ResumeLayout(false);
-            this.adminFamiliesBRPCsvDirectoryPanel.ResumeLayout(false);
             this.adminFamiliesBAPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.ResumeLayout(false);
             this.adminFamiliesBAPSplitPanel.ResumeLayout(false);
@@ -7472,6 +7512,23 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBAPFamiliesDGV)).EndInit();
             this.adminFamiliesBAPFamiliesDirectoryPanel.ResumeLayout(false);
+            this.adminFamiliesBRPLayoutPanel.ResumeLayout(false);
+            this.adminFamiliesBRPRunPanel.ResumeLayout(false);
+            this.adminFamiliesBRPSplitPanel.ResumeLayout(false);
+            this.adminFamiliesBRPSplitContainer.Panel1.ResumeLayout(false);
+            this.adminFamiliesBRPSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPSplitContainer)).EndInit();
+            this.adminFamiliesBRPSplitContainer.ResumeLayout(false);
+            this.adminFamiliesBRPParametersLayoutPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPParametersDGV)).EndInit();
+            this.adminFamiliesBPRSFamiliesLayoutPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBRPFamiliesDGV)).EndInit();
+            this.adminFamiliesBRPSelectPanel.ResumeLayout(false);
+            this.adminFamiliesBRPCsvDirectoryPanel.ResumeLayout(false);
+            this.adminFamiliesDFBLayoutPanel.ResumeLayout(false);
+            this.adminFamiliesDFBSelectPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesDFBFamiliesDGV)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.adminTemplateTab.ResumeLayout(false);
             this.adminTemplateLayoutPanel.ResumeLayout(false);
             this.adminTemplateLayoutPanel.PerformLayout();
@@ -7531,6 +7588,7 @@ namespace BARevitTools
             this.electricalLayoutPanel.ResumeLayout(false);
             this.electricalToolStrip.ResumeLayout(false);
             this.electricalToolStrip.PerformLayout();
+            this.electricalToolsPanel.ResumeLayout(false);
             this.floorsTab.ResumeLayout(false);
             this.floorsTabLayoutPanel.ResumeLayout(false);
             this.floorsToolsPanel.ResumeLayout(false);
@@ -7729,6 +7787,9 @@ namespace BARevitTools
             this.UIFormMenuStrip.PerformLayout();
             this.dataFamiliesBAPParametersContextMenu.ResumeLayout(false);
             this.dataFamiliesBRPParametersContextMenu.ResumeLayout(false);
+            this.electricalCEOELayoutPanel.ResumeLayout(false);
+            this.electricalCEOELayoutPanel.PerformLayout();
+            this.electricalCEOEControlsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -7972,7 +8033,7 @@ namespace BARevitTools
         private TabPage electricalTab;
         private TableLayoutPanel electricalLayoutPanel;
         private ToolStrip electricalToolStrip;
-        private ToolStripButton electricalCorrectElevations;
+        private ToolStripButton electricalCEOEButton;
         private Panel electricalToolsPanel;
         private TabPage massesTab;
         private TabPage materialsTab;
@@ -8261,6 +8322,10 @@ namespace BARevitTools
         private TextBox roomsCDRTInstructionsTextBox;
         private Panel roomsCDRTControlsPanel;
         private Button roomsCDRTRunButton;
+        private TableLayoutPanel electricalCEOELayoutPanel;
+        private TextBox electricalCEOETextBox;
+        private Panel electricalCEOEControlsPanel;
+        private Button electricalCEOERunButton;
     }
 }
 

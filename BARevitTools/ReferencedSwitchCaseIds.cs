@@ -8,11 +8,13 @@ namespace BARevitTools
 {
     class ReferencedSwitchCaseIds
     {
-        private const int currentnumber = 034;
+        private const int currentnumber = 035;
 
         //Multicategory Create Family From Excel
         public const int multiCatCFFE1 = 001;
         public const int multiCatCFFE2 = 002;
+        //Electrical Correct Electrical Outlet Elevation
+        public const int electricalCEOE = 035;
         //Floors Create From Room Boundary
         public const int floorsCFBR = 003;
         //Materials Create Material Symbols
