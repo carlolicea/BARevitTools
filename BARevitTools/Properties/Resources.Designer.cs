@@ -153,6 +153,16 @@ namespace BARevitTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap electricalCEFEIcon {
+            get {
+                object obj = ResourceManager.GetObject("electricalCEFEIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap elemFloorsCFRBIcon {
             get {
                 object obj = ResourceManager.GetObject("elemFloorsCFRBIcon", resourceCulture);

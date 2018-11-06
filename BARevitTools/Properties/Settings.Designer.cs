@@ -188,7 +188,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\corp\\cad\\Revit\\BA Families\\BA 2018")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\clicea\\Desktop\\BA 2018")]
         public string BARTBARevitFamilyLibraryPath {
             get {
                 return ((string)(this["BARTBARevitFamilyLibraryPath"]));

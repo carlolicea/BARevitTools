@@ -282,9 +282,21 @@ namespace BARevitTools
                     this.adminDataGFFLayoutPanel.Visible = false;
                     this.adminDataGFFButton.Checked = false;
                     break;
+                case ReferencedSwitchCaseIds.adminFamiliesUF:
+                    this.adminFamiliesUFLayoutPanel.Visible = true;
+                    this.adminFamiliesUFButton.Checked = true;
+                    this.adminFamiliesBAPLayoutPanel.Visible = false;
+                    this.adminFamiliesBAPButton.Checked = false;
+                    this.adminFamiliesBRPLayoutPanel.Visible = false;
+                    this.adminFamiliesBRPButton.Checked = false;
+                    this.adminFamiliesDFBLayoutPanel.Visible = false;
+                    this.adminFamiliesDFBButton.Checked = false;
+                    break;
                 case ReferencedSwitchCaseIds.adminFamiliesBAP:
                     this.adminFamiliesBAPLayoutPanel.Visible = true;
                     this.adminFamiliesBAPButton.Checked = true;
+                    this.adminFamiliesUFLayoutPanel.Visible = false;
+                    this.adminFamiliesUFButton.Checked = false;
                     this.adminFamiliesBRPLayoutPanel.Visible = false;
                     this.adminFamiliesBRPButton.Checked = false;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
@@ -293,6 +305,8 @@ namespace BARevitTools
                 case ReferencedSwitchCaseIds.adminFamiliesBRP:
                     this.adminFamiliesBRPLayoutPanel.Visible = true;
                     this.adminFamiliesBRPButton.Checked = true;
+                    this.adminFamiliesUFLayoutPanel.Visible = false;
+                    this.adminFamiliesUFButton.Checked = false;
                     this.adminFamiliesBAPLayoutPanel.Visible = false;
                     this.adminFamiliesBAPButton.Checked = false;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
@@ -301,6 +315,8 @@ namespace BARevitTools
                 case ReferencedSwitchCaseIds.adminFamiliesDFB:
                     this.adminFamiliesDFBLayoutPanel.Visible = true;
                     this.adminFamiliesDFBButton.Checked = true;
+                    this.adminFamiliesUFLayoutPanel.Visible = false;
+                    this.adminFamiliesUFButton.Checked = false;
                     this.adminFamiliesBAPLayoutPanel.Visible = false;
                     this.adminFamiliesBAPButton.Checked = false;
                     this.adminFamiliesBRPLayoutPanel.Visible = false;
@@ -654,11 +670,12 @@ namespace BARevitTools
         #endregion multiCatCFFE
 
         #region electricalCEOE
-        private void electricalCEOEButton_Click(object sender, EventArgs e)
+        private void ElectricalCEOEButton_Click(object sender, EventArgs e)
         {
             this.SwitchActivePanel(ReferencedSwitchCaseIds.electricalCEOE);
+            DatabaseOperations.CollectUserInputData(BARevitTools.ReferencedGuids.electricalCEOEguid, electricalCEOEButton.Text, Environment.UserName.ToString(), DateTime.Now);
         }
-        private void electricalCEOERunButton_Click(object sender, EventArgs e)
+        private void ElectricalCEOERunButton_Click(object sender, EventArgs e)
         {
             m_ExEvent.Raise();
             MakeRequest(RequestId.electricalCEOE);
@@ -2726,6 +2743,18 @@ namespace BARevitTools
         }
         #endregion adminDataGABD
 
+        #region adminFamiliesUF
+        private void AdminFamiliesUFButton_Click(object sender, EventArgs e)
+        {
+            this.SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesUF);
+        }
+        private void AdminFamiliesUFRunButton_Click(object sender, EventArgs e)
+        {
+            m_ExEvent.Raise();
+            MakeRequest(RequestId.adminFamiliesUF);
+        }
+        #endregion adminFamiliesUF
+
         #region adminFamiliesBAP
         public string adminFamiliesBAPFamiliesDirectory = null;
         private void AdminFamiliesBAPButton_Click(object sender, EventArgs e)
@@ -3204,7 +3233,7 @@ namespace BARevitTools
         }
         #endregion adminFamiliesDFB
 
-
+        
         //In Development
         #region adminTemplatesPM
         private void AdminTemplatePMButton_Click(object sender, EventArgs e)
@@ -3331,6 +3360,7 @@ namespace BARevitTools
 
         }
         #endregion adminTemplatesPM
+        //In Development
 
         #region sandBoxTools
         public System.Windows.Forms.Integration.ElementHost PreviewHost

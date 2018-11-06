@@ -660,44 +660,6 @@ namespace BARevitTools
             }
             return doc;
         }
-        //public static void PlaceSymbolsInView(UIApplication uiApp, string familyFile, string groupingParameter, string subgroupingParameter, Autodesk.Revit.DB.View placementView)
-        //{
-        //    RVTDocument doc = uiApp.ActiveUIDocument.Document;
-        //    IFamilyLoadOptions loadOptions = new RVTFamilyLoadOptions();
-        //    Transaction t = new Transaction(doc, "LoadMaterialSymbolsFamily");
-        //    t.Start();
-        //    placementView.Scale = 1;
-        //    doc.LoadFamily(familyFile, loadOptions, out Family refFamily);
-        //    Dictionary<Element,string> familyTypesDict = new Dictionary<Element,string>();
-        //    List<Element> familyTypesList = new List<Element>();
-        //    foreach (ElementId symbId in refFamily.GetFamilySymbolIds())
-        //    {
-        //        FamilySymbol familySymbol = doc.GetElement(symbId) as FamilySymbol;
-        //        string paramValue = familySymbol.GetParameters(groupingParameter).First().AsString();
-        //        familyTypesList.Add(familySymbol);
-        //        familyTypesDict.Add(familySymbol, paramValue);
-        //    }
-        //   var familyTypesGroupedQuery =
-        //        from elemSymbol in familyTypesList
-        //        orderby elemSymbol.GetParameters(subgroupingParameter).First().AsString() ascending
-        //        group elemSymbol by elemSymbol.GetParameters(groupingParameter).First().AsString() into mainGroup
-        //        orderby mainGroup.First().GetParameters(groupingParameter).First().AsString() descending
-        //        select mainGroup;
-
-        //    double spacing = 0.08333;
-        //    int rowNum = 0;
-        //    foreach (var mainGroup in familyTypesGroupedQuery)
-        //    {
-        //        int columnNum = 0;
-        //        foreach(FamilySymbol symbol in mainGroup)
-        //        {
-        //            doc.Create.NewFamilyInstance(new XYZ(Convert.ToDouble(columnNum)*spacing, Convert.ToDouble(rowNum) * spacing, 0), symbol, placementView);
-        //            columnNum++;
-        //        }
-        //        rowNum++;
-        //    }
-        //    t.Commit();
-        //}
         public static void PlaceSymbolsInView(UIApplication uiApp, RVTDocument famDoc, string groupingParameter, string subgroupingParameter, Autodesk.Revit.DB.View placementView)
         {            
             try
@@ -753,6 +715,20 @@ namespace BARevitTools
             bool result = false;
             int projectRevitNumber = RVTOperations.GetRevitNumber(filePath);
             if (projectRevitNumber < Convert.ToInt32(uiApp.Application.VersionNumber))
+            {
+                result = true;
+            }
+            else
+            {
+                result = false;
+            }
+            return result;
+        }
+        public static bool RevitVersionUpgradeCheck(UIApplication uiApp, string filePath, bool equalVersion)
+        {
+            bool result = false;
+            int projectRevitNumber = RVTOperations.GetRevitNumber(filePath);
+            if (projectRevitNumber <= Convert.ToInt32(uiApp.Application.VersionNumber))
             {
                 result = true;
             }
@@ -1079,10 +1055,10 @@ namespace BARevitTools
                 saveAsOptions.Compact = true;
                 saveAsOptions.OverwriteExistingFile = true;
                 saveAsOptions.SetWorksharingOptions(worksharingSaveOptions);
+
+                
                 try
                 {
-                    TransmissionData transmissionData = UnloadLinks(filePath);
-
                     RVTDocument doc = OpenRevitFile(uiApp, filePath);
                     if (doc.IsFamilyDocument)
                     {
@@ -1096,6 +1072,7 @@ namespace BARevitTools
 
                     else
                     {
+                        TransmissionData transmissionData = UnloadLinks(filePath);
                         try
                         {                            
                             RVTOperations.SetLinksToOverlay(doc);
@@ -1115,16 +1092,16 @@ namespace BARevitTools
                             result = true;
                         }
                         catch (Exception e) { MessageBox.Show(e.Message); doc.Close(); }
-                    }
-                    //Write Upgraded File TransmissionData
-                    ModelPath modelPath = ModelPathUtils.ConvertUserVisiblePathToModelPath(upgradePath);
-                    TransmissionData upgradedTransmissionData = TransmissionData.ReadTransmissionData(modelPath);
-                    upgradedTransmissionData.IsTransmitted = false;
-                    TransmissionData.WriteTransmissionData(modelPath,upgradedTransmissionData);
+                        //Write Upgraded File TransmissionData
+                        ModelPath modelPath = ModelPathUtils.ConvertUserVisiblePathToModelPath(upgradePath);
+                        TransmissionData upgradedTransmissionData = TransmissionData.ReadTransmissionData(modelPath);
+                        upgradedTransmissionData.IsTransmitted = false;
+                        TransmissionData.WriteTransmissionData(modelPath, upgradedTransmissionData);
 
-                    //Write Original File TransmissionData
-                    transmissionData.IsTransmitted = false;
-                    TransmissionData.WriteTransmissionData(ModelPathUtils.ConvertUserVisiblePathToModelPath(filePath), transmissionData);                    
+                        //Write Original File TransmissionData
+                        transmissionData.IsTransmitted = false;
+                        TransmissionData.WriteTransmissionData(ModelPathUtils.ConvertUserVisiblePathToModelPath(filePath), transmissionData);
+                    }                                       
                 }
                 catch(Exception e) { MessageBox.Show(e.Message); }                             
             }        

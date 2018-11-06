@@ -129,6 +129,9 @@ namespace BARevitTools
                     case RequestId.adminDataGFF:
                         AdminDataGFFRun(uiApp, "Get Family Data");
                         break;
+                    case RequestId.adminFamiliesUF:
+                        AdminFamiliesUFRun(uiApp, "Upgrade Families");
+                        break;
                     case RequestId.adminFamiliesBAP:
                         AdminFamiliesBAPRun(uiApp, "Bulk Add Parameters");
                         break;
@@ -3069,6 +3072,133 @@ namespace BARevitTools
             uiForm.adminDataGFFCollectDataWaitLabel.Text = "Done!";
             uiForm.adminDataGFFDataProgressBar.Visible = false;
             uiForm.adminDataGFFItemsToCollect.Clear();
+        }
+        public void AdminFamiliesUFRun(UIApplication uiApp, String text)
+        {
+            try
+            {
+                MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
+                RVTDocument doc = uiApp.ActiveUIDocument.Document;
+
+                bool fullSync = uiForm.adminFamiliesUFFullSyncCheckbox.Checked;
+                string currentVersion = Properties.Settings.Default.BARTRevitFamilyCurrentYear;
+                string upgradedVersion = uiApp.Application.VersionNumber;
+                string currentLibraryPath = Properties.Settings.Default.BARTBARevitFamilyLibraryPath;
+                string upgradedLibraryPath = currentLibraryPath.Replace(currentVersion, upgradedVersion);
+                if (!Directory.Exists(upgradedLibraryPath)) { Directory.CreateDirectory(upgradedLibraryPath); }
+
+                GeneralOperations.CleanRfaBackups(currentLibraryPath);
+                GeneralOperations.CleanRfaBackups(upgradedLibraryPath);
+
+                List<string> familiesInCurrentLibrary = GeneralOperations.GetAllRvtFamilies(currentLibraryPath);
+                Dictionary<string, string> currentLibraryDict = new Dictionary<string, string>();
+                List<string> familiesInUpgradedLibrary = GeneralOperations.GetAllRvtBackupFamilies(upgradedLibraryPath);
+                Dictionary<string, string> upgradedLibraryDict = new Dictionary<string, string>();
+                List<string> familiesToUpgrade = new List<string>();
+                List<string> familiesToDelete = new List<string>();
+                List<string> upgradedFamilies = new List<string>();
+                List<string> deletedFamilies = new List<string>();
+
+                string currentEvaluation = "";
+                if (familiesInUpgradedLibrary.Count > 0)
+                {
+                    try
+                    {
+                        foreach (string upgradedFamilyPath in familiesInUpgradedLibrary)
+                        {
+                            currentEvaluation = Path.GetFileNameWithoutExtension(upgradedFamilyPath);
+                            upgradedLibraryDict.Add(Path.GetFileNameWithoutExtension(upgradedFamilyPath), upgradedFamilyPath);
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show(currentEvaluation + " is a duplicate name");
+                    }
+                }
+                foreach (string currentFamilyPath in familiesInCurrentLibrary)
+                {
+                    if (!currentFamilyPath.Contains("Archive") && !currentFamilyPath.Contains("Backup"))
+                    {
+                        try
+                        {
+                            currentEvaluation = Path.GetFileNameWithoutExtension(currentFamilyPath);
+                            currentLibraryDict.Add(Path.GetFileNameWithoutExtension(currentFamilyPath), currentFamilyPath);
+                        }
+                        catch
+                        {
+                            MessageBox.Show(currentEvaluation + " is a duplicate name");
+                        }
+                    }
+                }
+
+                if (familiesInUpgradedLibrary.Count > 0)
+                {
+                    foreach (string upgradedFamily in upgradedLibraryDict.Keys)
+                    {
+                        if (currentLibraryDict.Keys.Contains(upgradedFamily))
+                        {
+                            DateTime currentFamilyWriteTime = File.GetLastWriteTime(currentLibraryDict[upgradedFamily]);
+                            DateTime upgradedFamilyWriteTime = File.GetLastWriteTime(upgradedLibraryDict[upgradedFamily]);
+                            if (currentFamilyWriteTime > upgradedFamilyWriteTime)
+                            {
+                                familiesToUpgrade.Add(currentLibraryDict[upgradedFamily]);
+                            }
+                        }
+                        else
+                        {
+                            familiesToDelete.Add(upgradedLibraryDict[upgradedFamily]);
+                        }
+                    }
+                }
+                else
+                {
+                    familiesToUpgrade = familiesInCurrentLibrary;
+                }
+
+                if (fullSync)
+                {
+                    foreach (string familyToDelete in familiesToDelete)
+                    {
+                        try
+                        {
+                            File.Delete(familyToDelete);
+                            deletedFamilies.Add(Path.GetFileNameWithoutExtension(familyToDelete));
+                        }
+                        catch (Exception e)
+                        { MessageBox.Show(e.ToString()); }
+                    }
+                }
+
+                foreach (string familyToUpgrade in familiesToUpgrade)
+                {
+                    try
+                    {
+                        if (RVTOperations.RevitVersionUpgradeCheck(uiApp, familyToUpgrade, true))
+                        {
+                            MessageBox.Show(familyToUpgrade.Replace(currentVersion, upgradedVersion));
+                            bool result = RVTOperations.UpgradeRevitFile(uiApp, familyToUpgrade, familyToUpgrade.Replace(currentVersion, upgradedVersion));
+                            if (result == true)
+                            {
+                                upgradedFamilies.Add(Path.GetFileNameWithoutExtension(familyToUpgrade));
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(String.Format("{0} was saved in a new version of Revit", Path.GetFileNameWithoutExtension(familyToUpgrade)));
+                        }
+                    }
+                    catch (Exception f)
+                    { MessageBox.Show(f.ToString()); }
+                }
+
+                uiForm.adminFamiliesUFUpgradedFamiliesListBox.DataSource = upgradedFamilies;
+                uiForm.adminFamiliesUFDeletedFamiliesListBox.DataSource = deletedFamilies;
+            }
+            catch (Exception g)
+            {
+                MessageBox.Show(g.ToString());
+            }
+            
         }
         public void AdminFamiliesBAPRun(UIApplication uiApp, String text)
         {

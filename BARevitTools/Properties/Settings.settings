@@ -57,7 +57,7 @@
       <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Details\BA Details A18.rvt</Value>
     </Setting>
     <Setting Name="BARTBARevitFamilyLibraryPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Families\BA 2018</Value>
+      <Value Profile="(Default)">C:\Users\clicea\Desktop\BA 2018</Value>
     </Setting>
     <Setting Name="RevitRoomTagSymbol" Type="System.String" Scope="Application">
       <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Families\BA 2018\Annotations\Symbols\SYMB Room Name and Number.rfa</Value>

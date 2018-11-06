@@ -105,12 +105,26 @@ namespace BARevitTools
             this.adminFamiliesTab = new System.Windows.Forms.TabPage();
             this.adminFamiliesLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesToolStrip = new System.Windows.Forms.ToolStrip();
+            this.adminFamiliesUFButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesBAPButton = new System.Windows.Forms.ToolStripButton();
             this.adminFamiliesSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesBRPButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesDFBButton = new System.Windows.Forms.ToolStripButton();
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesUFFullSyncPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFFullSyncCheckbox = new System.Windows.Forms.CheckBox();
+            this.adminFamiliesUFUpgradedFamiliesListBox = new System.Windows.Forms.ListBox();
+            this.adminFamiliesUFDeletedFamiliesListBox = new System.Windows.Forms.ListBox();
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFUpgradedFamiliesTextBox = new System.Windows.Forms.TextBox();
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFDeletedFamiliesTextBox = new System.Windows.Forms.TextBox();
+            this.adminFamiliesUFRunPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFProgressBar = new System.Windows.Forms.ProgressBar();
+            this.adminFamiliesUFRunButton = new System.Windows.Forms.Button();
             this.adminFamiliesBAPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesBAPRunPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBAPProgressBar = new System.Windows.Forms.ProgressBar();
@@ -175,6 +189,28 @@ namespace BARevitTools
             this.roomsSRNNButton = new System.Windows.Forms.ToolStripButton();
             this.roomsSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.roomsCDRTButton = new System.Windows.Forms.ToolStripButton();
+            this.mgmtSetupCWSUserContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.setupCWSRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.UIFormTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.mainTabControl = new System.Windows.Forms.TabControl();
+            this.aboutTab = new System.Windows.Forms.TabPage();
+            this.aboutTabLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.aboutTabHeaderPanel = new System.Windows.Forms.Panel();
+            this.aboutTabDevelopmentLinkURLLabel = new System.Windows.Forms.LinkLabel();
+            this.aboutTabDevelopmentLinkLabel = new System.Windows.Forms.Label();
+            this.aboutTabLearningLinkURLLabel = new System.Windows.Forms.LinkLabel();
+            this.aboutTabLearningLinkLabel = new System.Windows.Forms.Label();
+            this.aboutTabLogo = new System.Windows.Forms.PictureBox();
+            this.aboutPublishLabel = new System.Windows.Forms.Label();
+            this.aboutTabVersionLabel = new System.Windows.Forms.Label();
+            this.aboutTabTitleLabel = new System.Windows.Forms.Label();
+            this.aboutTabFooterPanel = new System.Windows.Forms.Panel();
+            this.aboutCreditLabel = new System.Windows.Forms.Label();
+            this.aboutTabUpdatesTextBox = new System.Windows.Forms.RichTextBox();
+            this.analysisTab = new System.Windows.Forms.TabPage();
+            this.analysisTabControl = new System.Windows.Forms.TabControl();
+            this.sightTab = new System.Windows.Forms.TabPage();
+            this.modelingTab = new System.Windows.Forms.TabPage();
             this.modelingTabControl = new System.Windows.Forms.TabControl();
             this.multiCatTab = new System.Windows.Forms.TabPage();
             this.multiCatLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -221,6 +257,10 @@ namespace BARevitTools
             this.electricalToolStrip = new System.Windows.Forms.ToolStrip();
             this.electricalCEOEButton = new System.Windows.Forms.ToolStripButton();
             this.electricalToolsPanel = new System.Windows.Forms.Panel();
+            this.electricalCEOELayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.electricalCEOETextBox = new System.Windows.Forms.TextBox();
+            this.electricalCEOEControlsPanel = new System.Windows.Forms.Panel();
+            this.electricalCEOERunButton = new System.Windows.Forms.Button();
             this.floorsTab = new System.Windows.Forms.TabPage();
             this.floorsTabLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.floorsToolsPanel = new System.Windows.Forms.Panel();
@@ -304,6 +344,9 @@ namespace BARevitTools
             this.wallsMPWComboBoxWall = new System.Windows.Forms.ComboBox();
             this.wallsMPWInstructionsPanel = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.documentationTab = new System.Windows.Forms.TabPage();
+            this.documentationTabControl = new System.Windows.Forms.TabControl();
+            this.sheetsTab = new System.Windows.Forms.TabPage();
             this.sheetsTabLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.sheetsToolStrip = new System.Windows.Forms.ToolStrip();
             this.sheetsCSLButton = new System.Windows.Forms.ToolStripButton();
@@ -363,6 +406,7 @@ namespace BARevitTools
             this.sheetsCSSFSSetNameTextBox = new System.Windows.Forms.TextBox();
             this.sheetsCSSFSScheduleComboBox = new System.Windows.Forms.ComboBox();
             this.sheetsCSSFSRunButton = new System.Windows.Forms.Button();
+            this.viewsTab = new System.Windows.Forms.TabPage();
             this.viewsTabLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.viewsToolStrip = new System.Windows.Forms.ToolStrip();
             this.viewsCEPRButton = new System.Windows.Forms.ToolStripButton();
@@ -392,6 +436,14 @@ namespace BARevitTools
             this.viewsOICBInstructionsLabel = new System.Windows.Forms.Label();
             this.viewsOICBControlsPanel = new System.Windows.Forms.Panel();
             this.elemViewsOCIBRunButton = new System.Windows.Forms.Button();
+            this.managementTab = new System.Windows.Forms.TabPage();
+            this.managmentTabControl = new System.Windows.Forms.TabControl();
+            this.dataTab = new System.Windows.Forms.TabPage();
+            this.dataTabLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.dataToolStrip = new System.Windows.Forms.ToolStrip();
+            this.dataEPIButton = new System.Windows.Forms.ToolStripButton();
+            this.dataSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.dataToolsPanel = new System.Windows.Forms.Panel();
             this.dataEPILayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.dataEPIInstructionsPanel = new System.Windows.Forms.Panel();
             this.dataEPIInstructionsLabel = new System.Windows.Forms.Label();
@@ -404,37 +456,6 @@ namespace BARevitTools
             this.dataEPIDPILabel = new System.Windows.Forms.Label();
             this.dataEPIDirectoryLabel = new System.Windows.Forms.Label();
             this.dataEPINameLabel = new System.Windows.Forms.Label();
-            this.mainTabControl = new System.Windows.Forms.TabControl();
-            this.aboutTab = new System.Windows.Forms.TabPage();
-            this.aboutTabLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.aboutTabHeaderPanel = new System.Windows.Forms.Panel();
-            this.aboutTabDevelopmentLinkURLLabel = new System.Windows.Forms.LinkLabel();
-            this.aboutTabDevelopmentLinkLabel = new System.Windows.Forms.Label();
-            this.aboutTabLearningLinkURLLabel = new System.Windows.Forms.LinkLabel();
-            this.aboutTabLearningLinkLabel = new System.Windows.Forms.Label();
-            this.aboutTabLogo = new System.Windows.Forms.PictureBox();
-            this.aboutPublishLabel = new System.Windows.Forms.Label();
-            this.aboutTabVersionLabel = new System.Windows.Forms.Label();
-            this.aboutTabTitleLabel = new System.Windows.Forms.Label();
-            this.aboutTabFooterPanel = new System.Windows.Forms.Panel();
-            this.aboutCreditLabel = new System.Windows.Forms.Label();
-            this.aboutTabUpdatesTextBox = new System.Windows.Forms.RichTextBox();
-            this.analysisTab = new System.Windows.Forms.TabPage();
-            this.analysisTabControl = new System.Windows.Forms.TabControl();
-            this.sightTab = new System.Windows.Forms.TabPage();
-            this.modelingTab = new System.Windows.Forms.TabPage();
-            this.documentationTab = new System.Windows.Forms.TabPage();
-            this.documentationTabControl = new System.Windows.Forms.TabControl();
-            this.sheetsTab = new System.Windows.Forms.TabPage();
-            this.viewsTab = new System.Windows.Forms.TabPage();
-            this.managementTab = new System.Windows.Forms.TabPage();
-            this.managmentTabControl = new System.Windows.Forms.TabControl();
-            this.dataTab = new System.Windows.Forms.TabPage();
-            this.dataTabLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.dataToolStrip = new System.Windows.Forms.ToolStrip();
-            this.dataEPIButton = new System.Windows.Forms.ToolStripButton();
-            this.dataSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataToolsPanel = new System.Windows.Forms.Panel();
             this.documentsTab = new System.Windows.Forms.TabPage();
             this.documentsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.documentsToolStrip = new System.Windows.Forms.ToolStrip();
@@ -554,11 +575,8 @@ namespace BARevitTools
             this.setupCWSDefaultListBox = new System.Windows.Forms.ListBox();
             this.setupCWSUserDataGridView = new System.Windows.Forms.DataGridView();
             this.WorksetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mgmtSetupCWSUserContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.setupCWSRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.setupCWSRunPanel = new System.Windows.Forms.Panel();
             this.setupCWSRunButton = new System.Windows.Forms.Button();
-            this.UIFormTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.UIFormMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -566,10 +584,6 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.electricalCEOELayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.electricalCEOETextBox = new System.Windows.Forms.TextBox();
-            this.electricalCEOEControlsPanel = new System.Windows.Forms.Panel();
-            this.electricalCEOERunButton = new System.Windows.Forms.Button();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -601,6 +615,11 @@ namespace BARevitTools
             this.adminFamiliesLayoutPanel.SuspendLayout();
             this.adminFamiliesToolStrip.SuspendLayout();
             this.adminFamiliesToolsPanel.SuspendLayout();
+            this.adminFamiliesUFLayoutPanel.SuspendLayout();
+            this.adminFamiliesUFFullSyncPanel.SuspendLayout();
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.SuspendLayout();
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.SuspendLayout();
+            this.adminFamiliesUFRunPanel.SuspendLayout();
             this.adminFamiliesBAPLayoutPanel.SuspendLayout();
             this.adminFamiliesBAPRunPanel.SuspendLayout();
             this.adminFamiliesBAPSplitPanel.SuspendLayout();
@@ -643,6 +662,17 @@ namespace BARevitTools
             this.sandBoxLayoutPanel.SuspendLayout();
             this.sandBoxToolStrip.SuspendLayout();
             roomsToolStrip.SuspendLayout();
+            this.mgmtSetupCWSUserContextMenu.SuspendLayout();
+            this.UIFormTableLayoutPanel.SuspendLayout();
+            this.mainTabControl.SuspendLayout();
+            this.aboutTab.SuspendLayout();
+            this.aboutTabLayoutPanel.SuspendLayout();
+            this.aboutTabHeaderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aboutTabLogo)).BeginInit();
+            this.aboutTabFooterPanel.SuspendLayout();
+            this.analysisTab.SuspendLayout();
+            this.analysisTabControl.SuspendLayout();
+            this.modelingTab.SuspendLayout();
             this.modelingTabControl.SuspendLayout();
             this.multiCatTab.SuspendLayout();
             this.multiCatLayoutPanel.SuspendLayout();
@@ -676,6 +706,8 @@ namespace BARevitTools
             this.electricalLayoutPanel.SuspendLayout();
             this.electricalToolStrip.SuspendLayout();
             this.electricalToolsPanel.SuspendLayout();
+            this.electricalCEOELayoutPanel.SuspendLayout();
+            this.electricalCEOEControlsPanel.SuspendLayout();
             this.floorsTab.SuspendLayout();
             this.floorsTabLayoutPanel.SuspendLayout();
             this.floorsToolsPanel.SuspendLayout();
@@ -715,6 +747,9 @@ namespace BARevitTools
             ((System.ComponentModel.ISupportInitialize)(this.wallsMPWNumericUpDownWallHeightIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wallsMPWNumericUpDownWallHeightFt)).BeginInit();
             this.wallsMPWInstructionsPanel.SuspendLayout();
+            this.documentationTab.SuspendLayout();
+            this.documentationTabControl.SuspendLayout();
+            this.sheetsTab.SuspendLayout();
             this.sheetsTabLayoutPanel.SuspendLayout();
             this.sheetsToolStrip.SuspendLayout();
             this.sheetsToolsPanel.SuspendLayout();
@@ -736,6 +771,7 @@ namespace BARevitTools
             this.sheetsCSSFSLayoutPanel.SuspendLayout();
             this.sheetsCSSFSInstructionsPanel.SuspendLayout();
             this.sheetsCSSFSControlsPanel.SuspendLayout();
+            this.viewsTab.SuspendLayout();
             this.viewsTabLayoutPanel.SuspendLayout();
             this.viewsToolStrip.SuspendLayout();
             this.viewsToolsPanel.SuspendLayout();
@@ -749,28 +785,15 @@ namespace BARevitTools
             this.viewsOICBLayoutPanel.SuspendLayout();
             this.viewsOICBInstructionsPanel.SuspendLayout();
             this.viewsOICBControlsPanel.SuspendLayout();
-            this.dataEPILayoutPanel.SuspendLayout();
-            this.dataEPIInstructionsPanel.SuspendLayout();
-            this.dataEPIControlsPanel.SuspendLayout();
-            this.mainTabControl.SuspendLayout();
-            this.aboutTab.SuspendLayout();
-            this.aboutTabLayoutPanel.SuspendLayout();
-            this.aboutTabHeaderPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aboutTabLogo)).BeginInit();
-            this.aboutTabFooterPanel.SuspendLayout();
-            this.analysisTab.SuspendLayout();
-            this.analysisTabControl.SuspendLayout();
-            this.modelingTab.SuspendLayout();
-            this.documentationTab.SuspendLayout();
-            this.documentationTabControl.SuspendLayout();
-            this.sheetsTab.SuspendLayout();
-            this.viewsTab.SuspendLayout();
             this.managementTab.SuspendLayout();
             this.managmentTabControl.SuspendLayout();
             this.dataTab.SuspendLayout();
             this.dataTabLayoutPanel.SuspendLayout();
             this.dataToolStrip.SuspendLayout();
             this.dataToolsPanel.SuspendLayout();
+            this.dataEPILayoutPanel.SuspendLayout();
+            this.dataEPIInstructionsPanel.SuspendLayout();
+            this.dataEPIControlsPanel.SuspendLayout();
             this.documentsTab.SuspendLayout();
             this.documentsLayoutPanel.SuspendLayout();
             this.documentsToolStrip.SuspendLayout();
@@ -816,14 +839,10 @@ namespace BARevitTools
             this.setupCWSLayoutPanel.SuspendLayout();
             this.setupCWSInstructionsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.setupCWSUserDataGridView)).BeginInit();
-            this.mgmtSetupCWSUserContextMenu.SuspendLayout();
             this.setupCWSRunPanel.SuspendLayout();
-            this.UIFormTableLayoutPanel.SuspendLayout();
             this.UIFormMenuStrip.SuspendLayout();
             this.dataFamiliesBAPParametersContextMenu.SuspendLayout();
             this.dataFamiliesBRPParametersContextMenu.SuspendLayout();
-            this.electricalCEOELayoutPanel.SuspendLayout();
-            this.electricalCEOEControlsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // adminTab
@@ -1666,6 +1685,8 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.adminFamiliesToolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.adminFamiliesToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adminFamiliesUFButton,
+            this.toolStripSeparator3,
             this.adminFamiliesBAPButton,
             this.adminFamiliesSeparator1,
             this.adminFamiliesBRPButton,
@@ -1676,6 +1697,23 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.Size = new System.Drawing.Size(711, 53);
             this.adminFamiliesToolStrip.TabIndex = 0;
             this.adminFamiliesToolStrip.Text = "BIMFamiliesToolStrip";
+            // 
+            // adminFamiliesUFButton
+            // 
+            this.adminFamiliesUFButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesUFButton.Image")));
+            this.adminFamiliesUFButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.adminFamiliesUFButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.adminFamiliesUFButton.Name = "adminFamiliesUFButton";
+            this.adminFamiliesUFButton.Size = new System.Drawing.Size(102, 50);
+            this.adminFamiliesUFButton.Text = "Upgrade Families";
+            this.adminFamiliesUFButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.adminFamiliesUFButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.adminFamiliesUFButton.Click += new System.EventHandler(this.AdminFamiliesUFButton_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 53);
             // 
             // adminFamiliesBAPButton
             // 
@@ -1727,6 +1765,7 @@ namespace BARevitTools
             // 
             // adminFamiliesToolsPanel
             // 
+            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesUFLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBAPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBRPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesDFBLayoutPanel);
@@ -1736,6 +1775,158 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel.Name = "adminFamiliesToolsPanel";
             this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(711, 338);
             this.adminFamiliesToolsPanel.TabIndex = 1;
+            // 
+            // adminFamiliesUFLayoutPanel
+            // 
+            this.adminFamiliesUFLayoutPanel.ColumnCount = 2;
+            this.adminFamiliesUFLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.adminFamiliesUFLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFFullSyncPanel, 0, 0);
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFUpgradedFamiliesListBox, 0, 2);
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFDeletedFamiliesListBox, 1, 2);
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFUpgradedFamiliesTextBoxPanel, 0, 1);
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFDeletedFamiliesTextBoxPanel, 1, 1);
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFRunPanel, 0, 3);
+            this.adminFamiliesUFLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesUFLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFLayoutPanel.Name = "adminFamiliesUFLayoutPanel";
+            this.adminFamiliesUFLayoutPanel.RowCount = 4;
+            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.adminFamiliesUFLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminFamiliesUFLayoutPanel.TabIndex = 1;
+            this.adminFamiliesUFLayoutPanel.Visible = false;
+            // 
+            // adminFamiliesUFFullSyncPanel
+            // 
+            this.adminFamiliesUFLayoutPanel.SetColumnSpan(this.adminFamiliesUFFullSyncPanel, 2);
+            this.adminFamiliesUFFullSyncPanel.Controls.Add(this.adminFamiliesUFFullSyncCheckbox);
+            this.adminFamiliesUFFullSyncPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFFullSyncPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesUFFullSyncPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFFullSyncPanel.Name = "adminFamiliesUFFullSyncPanel";
+            this.adminFamiliesUFFullSyncPanel.Size = new System.Drawing.Size(711, 30);
+            this.adminFamiliesUFFullSyncPanel.TabIndex = 0;
+            // 
+            // adminFamiliesUFFullSyncCheckbox
+            // 
+            this.adminFamiliesUFFullSyncCheckbox.AutoSize = true;
+            this.adminFamiliesUFFullSyncCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesUFFullSyncCheckbox.Location = new System.Drawing.Point(3, 7);
+            this.adminFamiliesUFFullSyncCheckbox.Name = "adminFamiliesUFFullSyncCheckbox";
+            this.adminFamiliesUFFullSyncCheckbox.Size = new System.Drawing.Size(109, 17);
+            this.adminFamiliesUFFullSyncCheckbox.TabIndex = 0;
+            this.adminFamiliesUFFullSyncCheckbox.Text = "Full Library Sync?";
+            this.adminFamiliesUFFullSyncCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // adminFamiliesUFUpgradedFamiliesListBox
+            // 
+            this.adminFamiliesUFUpgradedFamiliesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFUpgradedFamiliesListBox.FormattingEnabled = true;
+            this.adminFamiliesUFUpgradedFamiliesListBox.Location = new System.Drawing.Point(0, 65);
+            this.adminFamiliesUFUpgradedFamiliesListBox.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.adminFamiliesUFUpgradedFamiliesListBox.Name = "adminFamiliesUFUpgradedFamiliesListBox";
+            this.adminFamiliesUFUpgradedFamiliesListBox.Size = new System.Drawing.Size(352, 243);
+            this.adminFamiliesUFUpgradedFamiliesListBox.TabIndex = 1;
+            // 
+            // adminFamiliesUFDeletedFamiliesListBox
+            // 
+            this.adminFamiliesUFDeletedFamiliesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFDeletedFamiliesListBox.FormattingEnabled = true;
+            this.adminFamiliesUFDeletedFamiliesListBox.Location = new System.Drawing.Point(358, 65);
+            this.adminFamiliesUFDeletedFamiliesListBox.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.adminFamiliesUFDeletedFamiliesListBox.Name = "adminFamiliesUFDeletedFamiliesListBox";
+            this.adminFamiliesUFDeletedFamiliesListBox.Size = new System.Drawing.Size(353, 243);
+            this.adminFamiliesUFDeletedFamiliesListBox.TabIndex = 2;
+            // 
+            // adminFamiliesUFUpgradedFamiliesTextBoxPanel
+            // 
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Controls.Add(this.adminFamiliesUFUpgradedFamiliesTextBox);
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Location = new System.Drawing.Point(0, 30);
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Name = "adminFamiliesUFUpgradedFamiliesTextBoxPanel";
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Size = new System.Drawing.Size(352, 35);
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.TabIndex = 3;
+            // 
+            // adminFamiliesUFUpgradedFamiliesTextBox
+            // 
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesUFUpgradedFamiliesTextBox.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.adminFamiliesUFUpgradedFamiliesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Location = new System.Drawing.Point(-1, 9);
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Multiline = true;
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Name = "adminFamiliesUFUpgradedFamiliesTextBox";
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Size = new System.Drawing.Size(352, 20);
+            this.adminFamiliesUFUpgradedFamiliesTextBox.TabIndex = 0;
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Text = "FAMILIES UPGRADED";
+            this.adminFamiliesUFUpgradedFamiliesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // adminFamiliesUFDeletedFamiliesTextBoxPanel
+            // 
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.BackColor = System.Drawing.Color.GreenYellow;
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Controls.Add(this.adminFamiliesUFDeletedFamiliesTextBox);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Location = new System.Drawing.Point(358, 30);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Name = "adminFamiliesUFDeletedFamiliesTextBoxPanel";
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Size = new System.Drawing.Size(353, 35);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.TabIndex = 4;
+            // 
+            // adminFamiliesUFDeletedFamiliesTextBox
+            // 
+            this.adminFamiliesUFDeletedFamiliesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesUFDeletedFamiliesTextBox.BackColor = System.Drawing.Color.GreenYellow;
+            this.adminFamiliesUFDeletedFamiliesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminFamiliesUFDeletedFamiliesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesUFDeletedFamiliesTextBox.Location = new System.Drawing.Point(0, 10);
+            this.adminFamiliesUFDeletedFamiliesTextBox.Multiline = true;
+            this.adminFamiliesUFDeletedFamiliesTextBox.Name = "adminFamiliesUFDeletedFamiliesTextBox";
+            this.adminFamiliesUFDeletedFamiliesTextBox.Size = new System.Drawing.Size(352, 22);
+            this.adminFamiliesUFDeletedFamiliesTextBox.TabIndex = 0;
+            this.adminFamiliesUFDeletedFamiliesTextBox.Text = "FAMILIES DELETED";
+            this.adminFamiliesUFDeletedFamiliesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // adminFamiliesUFRunPanel
+            // 
+            this.adminFamiliesUFLayoutPanel.SetColumnSpan(this.adminFamiliesUFRunPanel, 2);
+            this.adminFamiliesUFRunPanel.Controls.Add(this.adminFamiliesUFProgressBar);
+            this.adminFamiliesUFRunPanel.Controls.Add(this.adminFamiliesUFRunButton);
+            this.adminFamiliesUFRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFRunPanel.Location = new System.Drawing.Point(0, 308);
+            this.adminFamiliesUFRunPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFRunPanel.Name = "adminFamiliesUFRunPanel";
+            this.adminFamiliesUFRunPanel.Size = new System.Drawing.Size(711, 30);
+            this.adminFamiliesUFRunPanel.TabIndex = 5;
+            // 
+            // adminFamiliesUFProgressBar
+            // 
+            this.adminFamiliesUFProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesUFProgressBar.Location = new System.Drawing.Point(84, 4);
+            this.adminFamiliesUFProgressBar.Name = "adminFamiliesUFProgressBar";
+            this.adminFamiliesUFProgressBar.Size = new System.Drawing.Size(621, 23);
+            this.adminFamiliesUFProgressBar.TabIndex = 1;
+            this.adminFamiliesUFProgressBar.Visible = false;
+            // 
+            // adminFamiliesUFRunButton
+            // 
+            this.adminFamiliesUFRunButton.Location = new System.Drawing.Point(3, 4);
+            this.adminFamiliesUFRunButton.Name = "adminFamiliesUFRunButton";
+            this.adminFamiliesUFRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesUFRunButton.TabIndex = 0;
+            this.adminFamiliesUFRunButton.Text = "RUN";
+            this.adminFamiliesUFRunButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesUFRunButton.Click += new System.EventHandler(this.AdminFamiliesUFRunButton_Click);
             // 
             // adminFamiliesBAPLayoutPanel
             // 
@@ -2551,6 +2742,272 @@ namespace BARevitTools
     "ase, but do not exist in the current phase. This is intended for Demo Plans";
             this.roomsCDRTButton.Click += new System.EventHandler(this.RoomsCDRTButton_Click);
             // 
+            // mgmtSetupCWSUserContextMenu
+            // 
+            this.mgmtSetupCWSUserContextMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mgmtSetupCWSUserContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setupCWSRowDeleteTool});
+            this.mgmtSetupCWSUserContextMenu.Name = "mgmtSetupCWSUserContextMenu";
+            this.mgmtSetupCWSUserContextMenu.Size = new System.Drawing.Size(108, 26);
+            // 
+            // setupCWSRowDeleteTool
+            // 
+            this.setupCWSRowDeleteTool.Name = "setupCWSRowDeleteTool";
+            this.setupCWSRowDeleteTool.Size = new System.Drawing.Size(107, 22);
+            this.setupCWSRowDeleteTool.Text = "Delete";
+            this.setupCWSRowDeleteTool.Click += new System.EventHandler(this.SetupCWSRowDeleteTool_Click);
+            // 
+            // UIFormTableLayoutPanel
+            // 
+            this.UIFormTableLayoutPanel.ColumnCount = 1;
+            this.UIFormTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.UIFormTableLayoutPanel.Controls.Add(this.mainTabControl, 0, 1);
+            this.UIFormTableLayoutPanel.Controls.Add(this.UIFormMenuStrip, 0, 0);
+            this.UIFormTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UIFormTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.UIFormTableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.UIFormTableLayoutPanel.Name = "UIFormTableLayoutPanel";
+            this.UIFormTableLayoutPanel.RowCount = 2;
+            this.UIFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0F));
+            this.UIFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.UIFormTableLayoutPanel.Size = new System.Drawing.Size(770, 450);
+            this.UIFormTableLayoutPanel.TabIndex = 2;
+            // 
+            // mainTabControl
+            // 
+            this.mainTabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.mainTabControl.Controls.Add(this.aboutTab);
+            this.mainTabControl.Controls.Add(this.analysisTab);
+            this.mainTabControl.Controls.Add(this.modelingTab);
+            this.mainTabControl.Controls.Add(this.documentationTab);
+            this.mainTabControl.Controls.Add(this.managementTab);
+            this.mainTabControl.Controls.Add(adminTab);
+            this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTabControl.ItemSize = new System.Drawing.Size(42, 21);
+            this.mainTabControl.Location = new System.Drawing.Point(3, 3);
+            this.mainTabControl.Multiline = true;
+            this.mainTabControl.Name = "mainTabControl";
+            this.mainTabControl.SelectedIndex = 0;
+            this.mainTabControl.Size = new System.Drawing.Size(764, 444);
+            this.mainTabControl.TabIndex = 1;
+            this.mainTabControl.Click += new System.EventHandler(this.AllowBIMManagementTab);
+            // 
+            // aboutTab
+            // 
+            this.aboutTab.BackColor = System.Drawing.SystemColors.Control;
+            this.aboutTab.Controls.Add(this.aboutTabLayoutPanel);
+            this.aboutTab.Location = new System.Drawing.Point(25, 4);
+            this.aboutTab.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutTab.Name = "aboutTab";
+            this.aboutTab.Size = new System.Drawing.Size(735, 436);
+            this.aboutTab.TabIndex = 4;
+            // 
+            // aboutTabLayoutPanel
+            // 
+            this.aboutTabLayoutPanel.ColumnCount = 1;
+            this.aboutTabLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.aboutTabLayoutPanel.Controls.Add(this.aboutTabHeaderPanel, 0, 0);
+            this.aboutTabLayoutPanel.Controls.Add(this.aboutTabFooterPanel, 0, 2);
+            this.aboutTabLayoutPanel.Controls.Add(this.aboutTabUpdatesTextBox, 0, 1);
+            this.aboutTabLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aboutTabLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.aboutTabLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.aboutTabLayoutPanel.Name = "aboutTabLayoutPanel";
+            this.aboutTabLayoutPanel.RowCount = 3;
+            this.aboutTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.aboutTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.aboutTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.aboutTabLayoutPanel.Size = new System.Drawing.Size(735, 436);
+            this.aboutTabLayoutPanel.TabIndex = 6;
+            // 
+            // aboutTabHeaderPanel
+            // 
+            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabDevelopmentLinkURLLabel);
+            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabDevelopmentLinkLabel);
+            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabLearningLinkURLLabel);
+            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabLearningLinkLabel);
+            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabLogo);
+            this.aboutTabHeaderPanel.Controls.Add(this.aboutPublishLabel);
+            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabVersionLabel);
+            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabTitleLabel);
+            this.aboutTabHeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aboutTabHeaderPanel.Location = new System.Drawing.Point(0, 0);
+            this.aboutTabHeaderPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutTabHeaderPanel.Name = "aboutTabHeaderPanel";
+            this.aboutTabHeaderPanel.Size = new System.Drawing.Size(735, 120);
+            this.aboutTabHeaderPanel.TabIndex = 0;
+            // 
+            // aboutTabDevelopmentLinkURLLabel
+            // 
+            this.aboutTabDevelopmentLinkURLLabel.AutoSize = true;
+            this.aboutTabDevelopmentLinkURLLabel.Location = new System.Drawing.Point(370, 84);
+            this.aboutTabDevelopmentLinkURLLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutTabDevelopmentLinkURLLabel.Name = "aboutTabDevelopmentLinkURLLabel";
+            this.aboutTabDevelopmentLinkURLLabel.Size = new System.Drawing.Size(101, 13);
+            this.aboutTabDevelopmentLinkURLLabel.TabIndex = 6;
+            this.aboutTabDevelopmentLinkURLLabel.TabStop = true;
+            this.aboutTabDevelopmentLinkURLLabel.Text = "Development Board\r\n";
+            this.aboutTabDevelopmentLinkURLLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AboutTabDevelopmentLinkURLLabel_LinkClicked);
+            // 
+            // aboutTabDevelopmentLinkLabel
+            // 
+            this.aboutTabDevelopmentLinkLabel.AutoSize = true;
+            this.aboutTabDevelopmentLinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.aboutTabDevelopmentLinkLabel.Location = new System.Drawing.Point(130, 84);
+            this.aboutTabDevelopmentLinkLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutTabDevelopmentLinkLabel.Name = "aboutTabDevelopmentLinkLabel";
+            this.aboutTabDevelopmentLinkLabel.Size = new System.Drawing.Size(231, 13);
+            this.aboutTabDevelopmentLinkLabel.TabIndex = 7;
+            this.aboutTabDevelopmentLinkLabel.Text = "Track development and make tool suggestions:";
+            // 
+            // aboutTabLearningLinkURLLabel
+            // 
+            this.aboutTabLearningLinkURLLabel.AutoSize = true;
+            this.aboutTabLearningLinkURLLabel.Location = new System.Drawing.Point(310, 103);
+            this.aboutTabLearningLinkURLLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutTabLearningLinkURLLabel.Name = "aboutTabLearningLinkURLLabel";
+            this.aboutTabLearningLinkURLLabel.Size = new System.Drawing.Size(49, 13);
+            this.aboutTabLearningLinkURLLabel.TabIndex = 6;
+            this.aboutTabLearningLinkURLLabel.TabStop = true;
+            this.aboutTabLearningLinkURLLabel.Text = "BIMhaus\r\n";
+            this.aboutTabLearningLinkURLLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AboutTabLearningLinkURLLabel_LinkClicked);
+            // 
+            // aboutTabLearningLinkLabel
+            // 
+            this.aboutTabLearningLinkLabel.AutoSize = true;
+            this.aboutTabLearningLinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.aboutTabLearningLinkLabel.Location = new System.Drawing.Point(130, 103);
+            this.aboutTabLearningLinkLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutTabLearningLinkLabel.Name = "aboutTabLearningLinkLabel";
+            this.aboutTabLearningLinkLabel.Size = new System.Drawing.Size(168, 13);
+            this.aboutTabLearningLinkLabel.TabIndex = 7;
+            this.aboutTabLearningLinkLabel.Text = "Learn more about the BART tools:";
+            // 
+            // aboutTabLogo
+            // 
+            this.aboutTabLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.aboutTabLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.aboutTabLogo.Image = ((System.Drawing.Image)(resources.GetObject("aboutTabLogo.Image")));
+            this.aboutTabLogo.Location = new System.Drawing.Point(3, 3);
+            this.aboutTabLogo.Name = "aboutTabLogo";
+            this.aboutTabLogo.Size = new System.Drawing.Size(119, 114);
+            this.aboutTabLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.aboutTabLogo.TabIndex = 1;
+            this.aboutTabLogo.TabStop = false;
+            // 
+            // aboutPublishLabel
+            // 
+            this.aboutPublishLabel.AutoSize = true;
+            this.aboutPublishLabel.BackColor = System.Drawing.Color.Transparent;
+            this.aboutPublishLabel.Location = new System.Drawing.Point(130, 60);
+            this.aboutPublishLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutPublishLabel.Name = "aboutPublishLabel";
+            this.aboutPublishLabel.Size = new System.Drawing.Size(65, 13);
+            this.aboutPublishLabel.TabIndex = 5;
+            this.aboutPublishLabel.Text = "11/09/2018";
+            // 
+            // aboutTabVersionLabel
+            // 
+            this.aboutTabVersionLabel.AutoSize = true;
+            this.aboutTabVersionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.aboutTabVersionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutTabVersionLabel.Location = new System.Drawing.Point(128, 40);
+            this.aboutTabVersionLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutTabVersionLabel.Name = "aboutTabVersionLabel";
+            this.aboutTabVersionLabel.Size = new System.Drawing.Size(102, 20);
+            this.aboutTabVersionLabel.TabIndex = 0;
+            this.aboutTabVersionLabel.Text = "Version 1.0.3";
+            // 
+            // aboutTabTitleLabel
+            // 
+            this.aboutTabTitleLabel.AutoSize = true;
+            this.aboutTabTitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.aboutTabTitleLabel.Font = new System.Drawing.Font("Calibri", 22F);
+            this.aboutTabTitleLabel.Location = new System.Drawing.Point(127, 3);
+            this.aboutTabTitleLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutTabTitleLabel.Name = "aboutTabTitleLabel";
+            this.aboutTabTitleLabel.Size = new System.Drawing.Size(277, 37);
+            this.aboutTabTitleLabel.TabIndex = 0;
+            this.aboutTabTitleLabel.Text = "BA Revit Tools (BART)";
+            // 
+            // aboutTabFooterPanel
+            // 
+            this.aboutTabFooterPanel.Controls.Add(this.aboutCreditLabel);
+            this.aboutTabFooterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aboutTabFooterPanel.Location = new System.Drawing.Point(0, 413);
+            this.aboutTabFooterPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.aboutTabFooterPanel.Name = "aboutTabFooterPanel";
+            this.aboutTabFooterPanel.Size = new System.Drawing.Size(735, 23);
+            this.aboutTabFooterPanel.TabIndex = 1;
+            // 
+            // aboutCreditLabel
+            // 
+            this.aboutCreditLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.aboutCreditLabel.Location = new System.Drawing.Point(2, 6);
+            this.aboutCreditLabel.Name = "aboutCreditLabel";
+            this.aboutCreditLabel.Size = new System.Drawing.Size(216, 15);
+            this.aboutCreditLabel.TabIndex = 4;
+            this.aboutCreditLabel.Text = "Created By: Carlo Licea and Lots of Coffee";
+            // 
+            // aboutTabUpdatesTextBox
+            // 
+            this.aboutTabUpdatesTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.aboutTabUpdatesTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aboutTabUpdatesTextBox.Location = new System.Drawing.Point(2, 121);
+            this.aboutTabUpdatesTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.aboutTabUpdatesTextBox.Name = "aboutTabUpdatesTextBox";
+            this.aboutTabUpdatesTextBox.ReadOnly = true;
+            this.aboutTabUpdatesTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.aboutTabUpdatesTextBox.Size = new System.Drawing.Size(731, 291);
+            this.aboutTabUpdatesTextBox.TabIndex = 2;
+            this.aboutTabUpdatesTextBox.Text = resources.GetString("aboutTabUpdatesTextBox.Text");
+            // 
+            // analysisTab
+            // 
+            this.analysisTab.BackColor = System.Drawing.SystemColors.Control;
+            this.analysisTab.Controls.Add(this.analysisTabControl);
+            this.analysisTab.Location = new System.Drawing.Point(25, 4);
+            this.analysisTab.Margin = new System.Windows.Forms.Padding(0);
+            this.analysisTab.Name = "analysisTab";
+            this.analysisTab.Padding = new System.Windows.Forms.Padding(3);
+            this.analysisTab.Size = new System.Drawing.Size(735, 436);
+            this.analysisTab.TabIndex = 1;
+            this.analysisTab.Text = "Analysis";
+            // 
+            // analysisTabControl
+            // 
+            this.analysisTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.analysisTabControl.Controls.Add(this.sightTab);
+            this.analysisTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.analysisTabControl.Location = new System.Drawing.Point(3, 3);
+            this.analysisTabControl.Margin = new System.Windows.Forms.Padding(0);
+            this.analysisTabControl.Name = "analysisTabControl";
+            this.analysisTabControl.SelectedIndex = 0;
+            this.analysisTabControl.Size = new System.Drawing.Size(729, 430);
+            this.analysisTabControl.TabIndex = 0;
+            // 
+            // sightTab
+            // 
+            this.sightTab.Location = new System.Drawing.Point(4, 25);
+            this.sightTab.Name = "sightTab";
+            this.sightTab.Padding = new System.Windows.Forms.Padding(3);
+            this.sightTab.Size = new System.Drawing.Size(721, 401);
+            this.sightTab.TabIndex = 0;
+            this.sightTab.Text = "Sight";
+            this.sightTab.UseVisualStyleBackColor = true;
+            // 
+            // modelingTab
+            // 
+            this.modelingTab.BackColor = System.Drawing.SystemColors.Control;
+            this.modelingTab.Controls.Add(this.modelingTabControl);
+            this.modelingTab.Location = new System.Drawing.Point(25, 4);
+            this.modelingTab.Margin = new System.Windows.Forms.Padding(0);
+            this.modelingTab.Name = "modelingTab";
+            this.modelingTab.Padding = new System.Windows.Forms.Padding(3);
+            this.modelingTab.Size = new System.Drawing.Size(735, 436);
+            this.modelingTab.TabIndex = 0;
+            this.modelingTab.Text = "Modeling";
+            // 
             // modelingTabControl
             // 
             this.modelingTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
@@ -3172,7 +3629,7 @@ namespace BARevitTools
             this.electricalCEOEButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.electricalCEOEButton.ToolTipText = "Correct Elec Outlet Elev: Fixes outlet elevations that were moved up instead of u" +
     "sing the Mounting Height parameter";
-            this.electricalCEOEButton.Click += new System.EventHandler(this.electricalCEOEButton_Click);
+            this.electricalCEOEButton.Click += new System.EventHandler(this.ElectricalCEOEButton_Click);
             // 
             // electricalToolsPanel
             // 
@@ -3183,6 +3640,56 @@ namespace BARevitTools
             this.electricalToolsPanel.Name = "electricalToolsPanel";
             this.electricalToolsPanel.Size = new System.Drawing.Size(717, 344);
             this.electricalToolsPanel.TabIndex = 1;
+            // 
+            // electricalCEOELayoutPanel
+            // 
+            this.electricalCEOELayoutPanel.ColumnCount = 1;
+            this.electricalCEOELayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.electricalCEOELayoutPanel.Controls.Add(this.electricalCEOETextBox, 0, 0);
+            this.electricalCEOELayoutPanel.Controls.Add(this.electricalCEOEControlsPanel, 0, 1);
+            this.electricalCEOELayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.electricalCEOELayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.electricalCEOELayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.electricalCEOELayoutPanel.Name = "electricalCEOELayoutPanel";
+            this.electricalCEOELayoutPanel.RowCount = 2;
+            this.electricalCEOELayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.electricalCEOELayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.electricalCEOELayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.electricalCEOELayoutPanel.TabIndex = 0;
+            this.electricalCEOELayoutPanel.Visible = false;
+            // 
+            // electricalCEOETextBox
+            // 
+            this.electricalCEOETextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.electricalCEOETextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.electricalCEOETextBox.Location = new System.Drawing.Point(0, 0);
+            this.electricalCEOETextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.electricalCEOETextBox.Multiline = true;
+            this.electricalCEOETextBox.Name = "electricalCEOETextBox";
+            this.electricalCEOETextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.electricalCEOETextBox.Size = new System.Drawing.Size(717, 45);
+            this.electricalCEOETextBox.TabIndex = 0;
+            this.electricalCEOETextBox.Text = resources.GetString("electricalCEOETextBox.Text");
+            // 
+            // electricalCEOEControlsPanel
+            // 
+            this.electricalCEOEControlsPanel.Controls.Add(this.electricalCEOERunButton);
+            this.electricalCEOEControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.electricalCEOEControlsPanel.Location = new System.Drawing.Point(0, 45);
+            this.electricalCEOEControlsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.electricalCEOEControlsPanel.Name = "electricalCEOEControlsPanel";
+            this.electricalCEOEControlsPanel.Size = new System.Drawing.Size(717, 299);
+            this.electricalCEOEControlsPanel.TabIndex = 1;
+            // 
+            // electricalCEOERunButton
+            // 
+            this.electricalCEOERunButton.Location = new System.Drawing.Point(3, 3);
+            this.electricalCEOERunButton.Name = "electricalCEOERunButton";
+            this.electricalCEOERunButton.Size = new System.Drawing.Size(75, 23);
+            this.electricalCEOERunButton.TabIndex = 0;
+            this.electricalCEOERunButton.Text = "RUN";
+            this.electricalCEOERunButton.UseVisualStyleBackColor = true;
+            this.electricalCEOERunButton.Click += new System.EventHandler(this.ElectricalCEOERunButton_Click);
             // 
             // floorsTab
             // 
@@ -4199,6 +4706,44 @@ namespace BARevitTools
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
+            // documentationTab
+            // 
+            this.documentationTab.BackColor = System.Drawing.SystemColors.Control;
+            this.documentationTab.Controls.Add(this.documentationTabControl);
+            this.documentationTab.Location = new System.Drawing.Point(25, 4);
+            this.documentationTab.Margin = new System.Windows.Forms.Padding(0);
+            this.documentationTab.Name = "documentationTab";
+            this.documentationTab.Padding = new System.Windows.Forms.Padding(3);
+            this.documentationTab.Size = new System.Drawing.Size(735, 436);
+            this.documentationTab.TabIndex = 5;
+            this.documentationTab.Text = "Documentation";
+            // 
+            // documentationTabControl
+            // 
+            this.documentationTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.documentationTabControl.Controls.Add(this.sheetsTab);
+            this.documentationTabControl.Controls.Add(this.viewsTab);
+            this.documentationTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.documentationTabControl.Location = new System.Drawing.Point(3, 3);
+            this.documentationTabControl.Margin = new System.Windows.Forms.Padding(0);
+            this.documentationTabControl.Name = "documentationTabControl";
+            this.documentationTabControl.SelectedIndex = 0;
+            this.documentationTabControl.Size = new System.Drawing.Size(729, 430);
+            this.documentationTabControl.TabIndex = 0;
+            // 
+            // sheetsTab
+            // 
+            this.sheetsTab.BackColor = System.Drawing.Color.Transparent;
+            this.sheetsTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.sheetsTab.Controls.Add(this.sheetsTabLayoutPanel);
+            this.sheetsTab.Location = new System.Drawing.Point(4, 25);
+            this.sheetsTab.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsTab.Name = "sheetsTab";
+            this.sheetsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.sheetsTab.Size = new System.Drawing.Size(721, 401);
+            this.sheetsTab.TabIndex = 0;
+            this.sheetsTab.Text = "Sheets";
+            // 
             // sheetsTabLayoutPanel
             // 
             this.sheetsTabLayoutPanel.BackColor = System.Drawing.SystemColors.Control;
@@ -4912,6 +5457,19 @@ namespace BARevitTools
             this.sheetsCSSFSRunButton.UseVisualStyleBackColor = true;
             this.sheetsCSSFSRunButton.Click += new System.EventHandler(this.SheetsCSSFSRunButton_Click);
             // 
+            // viewsTab
+            // 
+            this.viewsTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.viewsTab.Controls.Add(this.viewsTabLayoutPanel);
+            this.viewsTab.Location = new System.Drawing.Point(4, 25);
+            this.viewsTab.Margin = new System.Windows.Forms.Padding(0);
+            this.viewsTab.Name = "viewsTab";
+            this.viewsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.viewsTab.Size = new System.Drawing.Size(721, 401);
+            this.viewsTab.TabIndex = 1;
+            this.viewsTab.Text = "Views";
+            this.viewsTab.UseVisualStyleBackColor = true;
+            // 
             // viewsTabLayoutPanel
             // 
             this.viewsTabLayoutPanel.BackColor = System.Drawing.SystemColors.Control;
@@ -5266,6 +5824,107 @@ namespace BARevitTools
             this.elemViewsOCIBRunButton.UseVisualStyleBackColor = true;
             this.elemViewsOCIBRunButton.Click += new System.EventHandler(this.ViewsOCIBRunButton_Click);
             // 
+            // managementTab
+            // 
+            this.managementTab.BackColor = System.Drawing.SystemColors.Control;
+            this.managementTab.Controls.Add(this.managmentTabControl);
+            this.managementTab.Location = new System.Drawing.Point(25, 4);
+            this.managementTab.Margin = new System.Windows.Forms.Padding(0);
+            this.managementTab.Name = "managementTab";
+            this.managementTab.Padding = new System.Windows.Forms.Padding(3);
+            this.managementTab.Size = new System.Drawing.Size(735, 436);
+            this.managementTab.TabIndex = 2;
+            this.managementTab.Text = "Management";
+            // 
+            // managmentTabControl
+            // 
+            this.managmentTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.managmentTabControl.Controls.Add(this.dataTab);
+            this.managmentTabControl.Controls.Add(this.documentsTab);
+            this.managmentTabControl.Controls.Add(this.graphicsTab);
+            this.managmentTabControl.Controls.Add(this.miscTab);
+            this.managmentTabControl.Controls.Add(this.qaqcTab);
+            this.managmentTabControl.Controls.Add(this.setupTab);
+            this.managmentTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managmentTabControl.Location = new System.Drawing.Point(3, 3);
+            this.managmentTabControl.Margin = new System.Windows.Forms.Padding(0);
+            this.managmentTabControl.Name = "managmentTabControl";
+            this.managmentTabControl.SelectedIndex = 0;
+            this.managmentTabControl.Size = new System.Drawing.Size(729, 430);
+            this.managmentTabControl.TabIndex = 0;
+            // 
+            // dataTab
+            // 
+            this.dataTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataTab.Controls.Add(this.dataTabLayoutPanel);
+            this.dataTab.Location = new System.Drawing.Point(4, 25);
+            this.dataTab.Margin = new System.Windows.Forms.Padding(0);
+            this.dataTab.Name = "dataTab";
+            this.dataTab.Padding = new System.Windows.Forms.Padding(3);
+            this.dataTab.Size = new System.Drawing.Size(721, 401);
+            this.dataTab.TabIndex = 0;
+            this.dataTab.Text = "Data";
+            this.dataTab.UseVisualStyleBackColor = true;
+            // 
+            // dataTabLayoutPanel
+            // 
+            this.dataTabLayoutPanel.ColumnCount = 1;
+            this.dataTabLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dataTabLayoutPanel.Controls.Add(this.dataToolStrip, 0, 0);
+            this.dataTabLayoutPanel.Controls.Add(this.dataToolsPanel, 0, 1);
+            this.dataTabLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataTabLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.dataTabLayoutPanel.Name = "dataTabLayoutPanel";
+            this.dataTabLayoutPanel.RowCount = 2;
+            this.dataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.dataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dataTabLayoutPanel.Size = new System.Drawing.Size(711, 391);
+            this.dataTabLayoutPanel.TabIndex = 0;
+            // 
+            // dataToolStrip
+            // 
+            this.dataToolStrip.AutoSize = false;
+            this.dataToolStrip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.dataToolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.dataToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dataEPIButton,
+            this.dataSeparator1});
+            this.dataToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.dataToolStrip.Name = "dataToolStrip";
+            this.dataToolStrip.Size = new System.Drawing.Size(711, 53);
+            this.dataToolStrip.TabIndex = 0;
+            this.dataToolStrip.Text = "toolStrip1";
+            // 
+            // dataEPIButton
+            // 
+            this.dataEPIButton.Image = ((System.Drawing.Image)(resources.GetObject("dataEPIButton.Image")));
+            this.dataEPIButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.dataEPIButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dataEPIButton.Name = "dataEPIButton";
+            this.dataEPIButton.Size = new System.Drawing.Size(106, 50);
+            this.dataEPIButton.Text = "Export Plan Image";
+            this.dataEPIButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.dataEPIButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.dataEPIButton.ToolTipText = "Export Plan Image: Exports a plan as a JPG with minimum (X,Y) and maximum (X,Y) c" +
+    "oordinates in image name.";
+            this.dataEPIButton.Click += new System.EventHandler(this.DataEPIButton_Click);
+            // 
+            // dataSeparator1
+            // 
+            this.dataSeparator1.Name = "dataSeparator1";
+            this.dataSeparator1.Size = new System.Drawing.Size(6, 53);
+            // 
+            // dataToolsPanel
+            // 
+            this.dataToolsPanel.Controls.Add(this.dataEPILayoutPanel);
+            this.dataToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataToolsPanel.Location = new System.Drawing.Point(0, 53);
+            this.dataToolsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.dataToolsPanel.Name = "dataToolsPanel";
+            this.dataToolsPanel.Size = new System.Drawing.Size(711, 338);
+            this.dataToolsPanel.TabIndex = 1;
+            // 
             // dataEPILayoutPanel
             // 
             this.dataEPILayoutPanel.ColumnCount = 1;
@@ -5397,393 +6056,6 @@ namespace BARevitTools
             this.dataEPINameLabel.Size = new System.Drawing.Size(130, 13);
             this.dataEPINameLabel.TabIndex = 0;
             this.dataEPINameLabel.Text = "Set the image save name:";
-            // 
-            // mainTabControl
-            // 
-            this.mainTabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.mainTabControl.Controls.Add(this.aboutTab);
-            this.mainTabControl.Controls.Add(this.analysisTab);
-            this.mainTabControl.Controls.Add(this.modelingTab);
-            this.mainTabControl.Controls.Add(this.documentationTab);
-            this.mainTabControl.Controls.Add(this.managementTab);
-            this.mainTabControl.Controls.Add(adminTab);
-            this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainTabControl.ItemSize = new System.Drawing.Size(42, 21);
-            this.mainTabControl.Location = new System.Drawing.Point(3, 3);
-            this.mainTabControl.Multiline = true;
-            this.mainTabControl.Name = "mainTabControl";
-            this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.Size = new System.Drawing.Size(764, 444);
-            this.mainTabControl.TabIndex = 1;
-            this.mainTabControl.Click += new System.EventHandler(this.AllowBIMManagementTab);
-            // 
-            // aboutTab
-            // 
-            this.aboutTab.BackColor = System.Drawing.SystemColors.Control;
-            this.aboutTab.Controls.Add(this.aboutTabLayoutPanel);
-            this.aboutTab.Location = new System.Drawing.Point(25, 4);
-            this.aboutTab.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTab.Name = "aboutTab";
-            this.aboutTab.Size = new System.Drawing.Size(735, 436);
-            this.aboutTab.TabIndex = 4;
-            // 
-            // aboutTabLayoutPanel
-            // 
-            this.aboutTabLayoutPanel.ColumnCount = 1;
-            this.aboutTabLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.aboutTabLayoutPanel.Controls.Add(this.aboutTabHeaderPanel, 0, 0);
-            this.aboutTabLayoutPanel.Controls.Add(this.aboutTabFooterPanel, 0, 2);
-            this.aboutTabLayoutPanel.Controls.Add(this.aboutTabUpdatesTextBox, 0, 1);
-            this.aboutTabLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aboutTabLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.aboutTabLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.aboutTabLayoutPanel.Name = "aboutTabLayoutPanel";
-            this.aboutTabLayoutPanel.RowCount = 3;
-            this.aboutTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.aboutTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.aboutTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.aboutTabLayoutPanel.Size = new System.Drawing.Size(735, 436);
-            this.aboutTabLayoutPanel.TabIndex = 6;
-            // 
-            // aboutTabHeaderPanel
-            // 
-            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabDevelopmentLinkURLLabel);
-            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabDevelopmentLinkLabel);
-            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabLearningLinkURLLabel);
-            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabLearningLinkLabel);
-            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabLogo);
-            this.aboutTabHeaderPanel.Controls.Add(this.aboutPublishLabel);
-            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabVersionLabel);
-            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabTitleLabel);
-            this.aboutTabHeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aboutTabHeaderPanel.Location = new System.Drawing.Point(0, 0);
-            this.aboutTabHeaderPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTabHeaderPanel.Name = "aboutTabHeaderPanel";
-            this.aboutTabHeaderPanel.Size = new System.Drawing.Size(735, 120);
-            this.aboutTabHeaderPanel.TabIndex = 0;
-            // 
-            // aboutTabDevelopmentLinkURLLabel
-            // 
-            this.aboutTabDevelopmentLinkURLLabel.AutoSize = true;
-            this.aboutTabDevelopmentLinkURLLabel.Location = new System.Drawing.Point(370, 84);
-            this.aboutTabDevelopmentLinkURLLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTabDevelopmentLinkURLLabel.Name = "aboutTabDevelopmentLinkURLLabel";
-            this.aboutTabDevelopmentLinkURLLabel.Size = new System.Drawing.Size(101, 13);
-            this.aboutTabDevelopmentLinkURLLabel.TabIndex = 6;
-            this.aboutTabDevelopmentLinkURLLabel.TabStop = true;
-            this.aboutTabDevelopmentLinkURLLabel.Text = "Development Board\r\n";
-            this.aboutTabDevelopmentLinkURLLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AboutTabDevelopmentLinkURLLabel_LinkClicked);
-            // 
-            // aboutTabDevelopmentLinkLabel
-            // 
-            this.aboutTabDevelopmentLinkLabel.AutoSize = true;
-            this.aboutTabDevelopmentLinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.aboutTabDevelopmentLinkLabel.Location = new System.Drawing.Point(130, 84);
-            this.aboutTabDevelopmentLinkLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTabDevelopmentLinkLabel.Name = "aboutTabDevelopmentLinkLabel";
-            this.aboutTabDevelopmentLinkLabel.Size = new System.Drawing.Size(231, 13);
-            this.aboutTabDevelopmentLinkLabel.TabIndex = 7;
-            this.aboutTabDevelopmentLinkLabel.Text = "Track development and make tool suggestions:";
-            // 
-            // aboutTabLearningLinkURLLabel
-            // 
-            this.aboutTabLearningLinkURLLabel.AutoSize = true;
-            this.aboutTabLearningLinkURLLabel.Location = new System.Drawing.Point(310, 103);
-            this.aboutTabLearningLinkURLLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTabLearningLinkURLLabel.Name = "aboutTabLearningLinkURLLabel";
-            this.aboutTabLearningLinkURLLabel.Size = new System.Drawing.Size(49, 13);
-            this.aboutTabLearningLinkURLLabel.TabIndex = 6;
-            this.aboutTabLearningLinkURLLabel.TabStop = true;
-            this.aboutTabLearningLinkURLLabel.Text = "BIMhaus\r\n";
-            this.aboutTabLearningLinkURLLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AboutTabLearningLinkURLLabel_LinkClicked);
-            // 
-            // aboutTabLearningLinkLabel
-            // 
-            this.aboutTabLearningLinkLabel.AutoSize = true;
-            this.aboutTabLearningLinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.aboutTabLearningLinkLabel.Location = new System.Drawing.Point(130, 103);
-            this.aboutTabLearningLinkLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTabLearningLinkLabel.Name = "aboutTabLearningLinkLabel";
-            this.aboutTabLearningLinkLabel.Size = new System.Drawing.Size(168, 13);
-            this.aboutTabLearningLinkLabel.TabIndex = 7;
-            this.aboutTabLearningLinkLabel.Text = "Learn more about the BART tools:";
-            // 
-            // aboutTabLogo
-            // 
-            this.aboutTabLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.aboutTabLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.aboutTabLogo.Image = ((System.Drawing.Image)(resources.GetObject("aboutTabLogo.Image")));
-            this.aboutTabLogo.Location = new System.Drawing.Point(3, 3);
-            this.aboutTabLogo.Name = "aboutTabLogo";
-            this.aboutTabLogo.Size = new System.Drawing.Size(119, 114);
-            this.aboutTabLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.aboutTabLogo.TabIndex = 1;
-            this.aboutTabLogo.TabStop = false;
-            // 
-            // aboutPublishLabel
-            // 
-            this.aboutPublishLabel.AutoSize = true;
-            this.aboutPublishLabel.BackColor = System.Drawing.Color.Transparent;
-            this.aboutPublishLabel.Location = new System.Drawing.Point(130, 60);
-            this.aboutPublishLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutPublishLabel.Name = "aboutPublishLabel";
-            this.aboutPublishLabel.Size = new System.Drawing.Size(65, 13);
-            this.aboutPublishLabel.TabIndex = 5;
-            this.aboutPublishLabel.Text = "10/04/2018";
-            // 
-            // aboutTabVersionLabel
-            // 
-            this.aboutTabVersionLabel.AutoSize = true;
-            this.aboutTabVersionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.aboutTabVersionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutTabVersionLabel.Location = new System.Drawing.Point(128, 40);
-            this.aboutTabVersionLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTabVersionLabel.Name = "aboutTabVersionLabel";
-            this.aboutTabVersionLabel.Size = new System.Drawing.Size(102, 20);
-            this.aboutTabVersionLabel.TabIndex = 0;
-            this.aboutTabVersionLabel.Text = "Version 1.0.3";
-            // 
-            // aboutTabTitleLabel
-            // 
-            this.aboutTabTitleLabel.AutoSize = true;
-            this.aboutTabTitleLabel.BackColor = System.Drawing.Color.Transparent;
-            this.aboutTabTitleLabel.Font = new System.Drawing.Font("Calibri", 22F);
-            this.aboutTabTitleLabel.Location = new System.Drawing.Point(127, 3);
-            this.aboutTabTitleLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTabTitleLabel.Name = "aboutTabTitleLabel";
-            this.aboutTabTitleLabel.Size = new System.Drawing.Size(277, 37);
-            this.aboutTabTitleLabel.TabIndex = 0;
-            this.aboutTabTitleLabel.Text = "BA Revit Tools (BART)";
-            // 
-            // aboutTabFooterPanel
-            // 
-            this.aboutTabFooterPanel.Controls.Add(this.aboutCreditLabel);
-            this.aboutTabFooterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aboutTabFooterPanel.Location = new System.Drawing.Point(0, 413);
-            this.aboutTabFooterPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTabFooterPanel.Name = "aboutTabFooterPanel";
-            this.aboutTabFooterPanel.Size = new System.Drawing.Size(735, 23);
-            this.aboutTabFooterPanel.TabIndex = 1;
-            // 
-            // aboutCreditLabel
-            // 
-            this.aboutCreditLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.aboutCreditLabel.Location = new System.Drawing.Point(2, 6);
-            this.aboutCreditLabel.Name = "aboutCreditLabel";
-            this.aboutCreditLabel.Size = new System.Drawing.Size(216, 15);
-            this.aboutCreditLabel.TabIndex = 4;
-            this.aboutCreditLabel.Text = "Created By: Carlo Licea and Lots of Coffee";
-            // 
-            // aboutTabUpdatesTextBox
-            // 
-            this.aboutTabUpdatesTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.aboutTabUpdatesTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aboutTabUpdatesTextBox.Location = new System.Drawing.Point(2, 121);
-            this.aboutTabUpdatesTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.aboutTabUpdatesTextBox.Name = "aboutTabUpdatesTextBox";
-            this.aboutTabUpdatesTextBox.ReadOnly = true;
-            this.aboutTabUpdatesTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.aboutTabUpdatesTextBox.Size = new System.Drawing.Size(731, 291);
-            this.aboutTabUpdatesTextBox.TabIndex = 2;
-            this.aboutTabUpdatesTextBox.Text = resources.GetString("aboutTabUpdatesTextBox.Text");
-            // 
-            // analysisTab
-            // 
-            this.analysisTab.BackColor = System.Drawing.SystemColors.Control;
-            this.analysisTab.Controls.Add(this.analysisTabControl);
-            this.analysisTab.Location = new System.Drawing.Point(25, 4);
-            this.analysisTab.Margin = new System.Windows.Forms.Padding(0);
-            this.analysisTab.Name = "analysisTab";
-            this.analysisTab.Padding = new System.Windows.Forms.Padding(3);
-            this.analysisTab.Size = new System.Drawing.Size(735, 436);
-            this.analysisTab.TabIndex = 1;
-            this.analysisTab.Text = "Analysis";
-            // 
-            // analysisTabControl
-            // 
-            this.analysisTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.analysisTabControl.Controls.Add(this.sightTab);
-            this.analysisTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.analysisTabControl.Location = new System.Drawing.Point(3, 3);
-            this.analysisTabControl.Margin = new System.Windows.Forms.Padding(0);
-            this.analysisTabControl.Name = "analysisTabControl";
-            this.analysisTabControl.SelectedIndex = 0;
-            this.analysisTabControl.Size = new System.Drawing.Size(729, 430);
-            this.analysisTabControl.TabIndex = 0;
-            // 
-            // sightTab
-            // 
-            this.sightTab.Location = new System.Drawing.Point(4, 25);
-            this.sightTab.Name = "sightTab";
-            this.sightTab.Padding = new System.Windows.Forms.Padding(3);
-            this.sightTab.Size = new System.Drawing.Size(721, 401);
-            this.sightTab.TabIndex = 0;
-            this.sightTab.Text = "Sight";
-            this.sightTab.UseVisualStyleBackColor = true;
-            // 
-            // modelingTab
-            // 
-            this.modelingTab.BackColor = System.Drawing.SystemColors.Control;
-            this.modelingTab.Controls.Add(this.modelingTabControl);
-            this.modelingTab.Location = new System.Drawing.Point(25, 4);
-            this.modelingTab.Margin = new System.Windows.Forms.Padding(0);
-            this.modelingTab.Name = "modelingTab";
-            this.modelingTab.Padding = new System.Windows.Forms.Padding(3);
-            this.modelingTab.Size = new System.Drawing.Size(735, 436);
-            this.modelingTab.TabIndex = 0;
-            this.modelingTab.Text = "Modeling";
-            // 
-            // documentationTab
-            // 
-            this.documentationTab.BackColor = System.Drawing.SystemColors.Control;
-            this.documentationTab.Controls.Add(this.documentationTabControl);
-            this.documentationTab.Location = new System.Drawing.Point(25, 4);
-            this.documentationTab.Margin = new System.Windows.Forms.Padding(0);
-            this.documentationTab.Name = "documentationTab";
-            this.documentationTab.Padding = new System.Windows.Forms.Padding(3);
-            this.documentationTab.Size = new System.Drawing.Size(735, 436);
-            this.documentationTab.TabIndex = 5;
-            this.documentationTab.Text = "Documentation";
-            // 
-            // documentationTabControl
-            // 
-            this.documentationTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.documentationTabControl.Controls.Add(this.sheetsTab);
-            this.documentationTabControl.Controls.Add(this.viewsTab);
-            this.documentationTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.documentationTabControl.Location = new System.Drawing.Point(3, 3);
-            this.documentationTabControl.Margin = new System.Windows.Forms.Padding(0);
-            this.documentationTabControl.Name = "documentationTabControl";
-            this.documentationTabControl.SelectedIndex = 0;
-            this.documentationTabControl.Size = new System.Drawing.Size(729, 430);
-            this.documentationTabControl.TabIndex = 0;
-            // 
-            // sheetsTab
-            // 
-            this.sheetsTab.BackColor = System.Drawing.Color.Transparent;
-            this.sheetsTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.sheetsTab.Controls.Add(this.sheetsTabLayoutPanel);
-            this.sheetsTab.Location = new System.Drawing.Point(4, 25);
-            this.sheetsTab.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsTab.Name = "sheetsTab";
-            this.sheetsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.sheetsTab.Size = new System.Drawing.Size(721, 401);
-            this.sheetsTab.TabIndex = 0;
-            this.sheetsTab.Text = "Sheets";
-            // 
-            // viewsTab
-            // 
-            this.viewsTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.viewsTab.Controls.Add(this.viewsTabLayoutPanel);
-            this.viewsTab.Location = new System.Drawing.Point(4, 25);
-            this.viewsTab.Margin = new System.Windows.Forms.Padding(0);
-            this.viewsTab.Name = "viewsTab";
-            this.viewsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.viewsTab.Size = new System.Drawing.Size(721, 401);
-            this.viewsTab.TabIndex = 1;
-            this.viewsTab.Text = "Views";
-            this.viewsTab.UseVisualStyleBackColor = true;
-            // 
-            // managementTab
-            // 
-            this.managementTab.BackColor = System.Drawing.SystemColors.Control;
-            this.managementTab.Controls.Add(this.managmentTabControl);
-            this.managementTab.Location = new System.Drawing.Point(25, 4);
-            this.managementTab.Margin = new System.Windows.Forms.Padding(0);
-            this.managementTab.Name = "managementTab";
-            this.managementTab.Padding = new System.Windows.Forms.Padding(3);
-            this.managementTab.Size = new System.Drawing.Size(735, 436);
-            this.managementTab.TabIndex = 2;
-            this.managementTab.Text = "Management";
-            // 
-            // managmentTabControl
-            // 
-            this.managmentTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.managmentTabControl.Controls.Add(this.dataTab);
-            this.managmentTabControl.Controls.Add(this.documentsTab);
-            this.managmentTabControl.Controls.Add(this.graphicsTab);
-            this.managmentTabControl.Controls.Add(this.miscTab);
-            this.managmentTabControl.Controls.Add(this.qaqcTab);
-            this.managmentTabControl.Controls.Add(this.setupTab);
-            this.managmentTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.managmentTabControl.Location = new System.Drawing.Point(3, 3);
-            this.managmentTabControl.Margin = new System.Windows.Forms.Padding(0);
-            this.managmentTabControl.Name = "managmentTabControl";
-            this.managmentTabControl.SelectedIndex = 0;
-            this.managmentTabControl.Size = new System.Drawing.Size(729, 430);
-            this.managmentTabControl.TabIndex = 0;
-            // 
-            // dataTab
-            // 
-            this.dataTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataTab.Controls.Add(this.dataTabLayoutPanel);
-            this.dataTab.Location = new System.Drawing.Point(4, 25);
-            this.dataTab.Margin = new System.Windows.Forms.Padding(0);
-            this.dataTab.Name = "dataTab";
-            this.dataTab.Padding = new System.Windows.Forms.Padding(3);
-            this.dataTab.Size = new System.Drawing.Size(721, 401);
-            this.dataTab.TabIndex = 0;
-            this.dataTab.Text = "Data";
-            this.dataTab.UseVisualStyleBackColor = true;
-            // 
-            // dataTabLayoutPanel
-            // 
-            this.dataTabLayoutPanel.ColumnCount = 1;
-            this.dataTabLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dataTabLayoutPanel.Controls.Add(this.dataToolStrip, 0, 0);
-            this.dataTabLayoutPanel.Controls.Add(this.dataToolsPanel, 0, 1);
-            this.dataTabLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataTabLayoutPanel.Location = new System.Drawing.Point(3, 3);
-            this.dataTabLayoutPanel.Name = "dataTabLayoutPanel";
-            this.dataTabLayoutPanel.RowCount = 2;
-            this.dataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.dataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dataTabLayoutPanel.Size = new System.Drawing.Size(711, 391);
-            this.dataTabLayoutPanel.TabIndex = 0;
-            // 
-            // dataToolStrip
-            // 
-            this.dataToolStrip.AutoSize = false;
-            this.dataToolStrip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.dataToolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.dataToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataEPIButton,
-            this.dataSeparator1});
-            this.dataToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.dataToolStrip.Name = "dataToolStrip";
-            this.dataToolStrip.Size = new System.Drawing.Size(711, 53);
-            this.dataToolStrip.TabIndex = 0;
-            this.dataToolStrip.Text = "toolStrip1";
-            // 
-            // dataEPIButton
-            // 
-            this.dataEPIButton.Image = ((System.Drawing.Image)(resources.GetObject("dataEPIButton.Image")));
-            this.dataEPIButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.dataEPIButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.dataEPIButton.Name = "dataEPIButton";
-            this.dataEPIButton.Size = new System.Drawing.Size(106, 50);
-            this.dataEPIButton.Text = "Export Plan Image";
-            this.dataEPIButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.dataEPIButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.dataEPIButton.ToolTipText = "Export Plan Image: Exports a plan as a JPG with minimum (X,Y) and maximum (X,Y) c" +
-    "oordinates in image name.";
-            this.dataEPIButton.Click += new System.EventHandler(this.DataEPIButton_Click);
-            // 
-            // dataSeparator1
-            // 
-            this.dataSeparator1.Name = "dataSeparator1";
-            this.dataSeparator1.Size = new System.Drawing.Size(6, 53);
-            // 
-            // dataToolsPanel
-            // 
-            this.dataToolsPanel.Controls.Add(this.dataEPILayoutPanel);
-            this.dataToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataToolsPanel.Location = new System.Drawing.Point(0, 53);
-            this.dataToolsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.dataToolsPanel.Name = "dataToolsPanel";
-            this.dataToolsPanel.Size = new System.Drawing.Size(711, 338);
-            this.dataToolsPanel.TabIndex = 1;
             // 
             // documentsTab
             // 
@@ -7279,21 +7551,6 @@ namespace BARevitTools
             this.WorksetName.Name = "WorksetName";
             this.WorksetName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // mgmtSetupCWSUserContextMenu
-            // 
-            this.mgmtSetupCWSUserContextMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.mgmtSetupCWSUserContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setupCWSRowDeleteTool});
-            this.mgmtSetupCWSUserContextMenu.Name = "mgmtSetupCWSUserContextMenu";
-            this.mgmtSetupCWSUserContextMenu.Size = new System.Drawing.Size(108, 26);
-            // 
-            // setupCWSRowDeleteTool
-            // 
-            this.setupCWSRowDeleteTool.Name = "setupCWSRowDeleteTool";
-            this.setupCWSRowDeleteTool.Size = new System.Drawing.Size(107, 22);
-            this.setupCWSRowDeleteTool.Text = "Delete";
-            this.setupCWSRowDeleteTool.Click += new System.EventHandler(this.SetupCWSRowDeleteTool_Click);
-            // 
             // setupCWSRunPanel
             // 
             this.setupCWSLayoutPanel.SetColumnSpan(this.setupCWSRunPanel, 3);
@@ -7315,22 +7572,6 @@ namespace BARevitTools
             this.setupCWSRunButton.Text = "RUN";
             this.setupCWSRunButton.UseVisualStyleBackColor = true;
             this.setupCWSRunButton.Click += new System.EventHandler(this.SetupCWSRunButton_Click);
-            // 
-            // UIFormTableLayoutPanel
-            // 
-            this.UIFormTableLayoutPanel.ColumnCount = 1;
-            this.UIFormTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.UIFormTableLayoutPanel.Controls.Add(this.mainTabControl, 0, 1);
-            this.UIFormTableLayoutPanel.Controls.Add(this.UIFormMenuStrip, 0, 0);
-            this.UIFormTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UIFormTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.UIFormTableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.UIFormTableLayoutPanel.Name = "UIFormTableLayoutPanel";
-            this.UIFormTableLayoutPanel.RowCount = 2;
-            this.UIFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0F));
-            this.UIFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.UIFormTableLayoutPanel.Size = new System.Drawing.Size(770, 450);
-            this.UIFormTableLayoutPanel.TabIndex = 2;
             // 
             // UIFormMenuStrip
             // 
@@ -7394,55 +7635,6 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
             // 
-            // electricalCEOELayoutPanel
-            // 
-            this.electricalCEOELayoutPanel.ColumnCount = 1;
-            this.electricalCEOELayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.electricalCEOELayoutPanel.Controls.Add(this.electricalCEOETextBox, 0, 0);
-            this.electricalCEOELayoutPanel.Controls.Add(this.electricalCEOEControlsPanel, 0, 1);
-            this.electricalCEOELayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.electricalCEOELayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.electricalCEOELayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.electricalCEOELayoutPanel.Name = "electricalCEOELayoutPanel";
-            this.electricalCEOELayoutPanel.RowCount = 2;
-            this.electricalCEOELayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.4186F));
-            this.electricalCEOELayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.5814F));
-            this.electricalCEOELayoutPanel.Size = new System.Drawing.Size(717, 344);
-            this.electricalCEOELayoutPanel.TabIndex = 0;
-            this.electricalCEOELayoutPanel.Visible = false;
-            // 
-            // electricalCEOETextBox
-            // 
-            this.electricalCEOETextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.electricalCEOETextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.electricalCEOETextBox.Location = new System.Drawing.Point(0, 0);
-            this.electricalCEOETextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.electricalCEOETextBox.Multiline = true;
-            this.electricalCEOETextBox.Name = "electricalCEOETextBox";
-            this.electricalCEOETextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.electricalCEOETextBox.Size = new System.Drawing.Size(717, 83);
-            this.electricalCEOETextBox.TabIndex = 0;
-            // 
-            // electricalCEOEControlsPanel
-            // 
-            this.electricalCEOEControlsPanel.Controls.Add(this.electricalCEOERunButton);
-            this.electricalCEOEControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.electricalCEOEControlsPanel.Location = new System.Drawing.Point(0, 83);
-            this.electricalCEOEControlsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.electricalCEOEControlsPanel.Name = "electricalCEOEControlsPanel";
-            this.electricalCEOEControlsPanel.Size = new System.Drawing.Size(717, 261);
-            this.electricalCEOEControlsPanel.TabIndex = 1;
-            // 
-            // electricalCEOERunButton
-            // 
-            this.electricalCEOERunButton.Location = new System.Drawing.Point(3, 3);
-            this.electricalCEOERunButton.Name = "electricalCEOERunButton";
-            this.electricalCEOERunButton.Size = new System.Drawing.Size(75, 23);
-            this.electricalCEOERunButton.TabIndex = 0;
-            this.electricalCEOERunButton.Text = "RUN";
-            this.electricalCEOERunButton.UseVisualStyleBackColor = true;
-            this.electricalCEOERunButton.Click += new System.EventHandler(this.electricalCEOERunButton_Click);
-            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7497,6 +7689,14 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.ResumeLayout(false);
             this.adminFamiliesToolStrip.PerformLayout();
             this.adminFamiliesToolsPanel.ResumeLayout(false);
+            this.adminFamiliesUFLayoutPanel.ResumeLayout(false);
+            this.adminFamiliesUFFullSyncPanel.ResumeLayout(false);
+            this.adminFamiliesUFFullSyncPanel.PerformLayout();
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.ResumeLayout(false);
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.PerformLayout();
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.ResumeLayout(false);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.PerformLayout();
+            this.adminFamiliesUFRunPanel.ResumeLayout(false);
             this.adminFamiliesBAPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.ResumeLayout(false);
             this.adminFamiliesBAPSplitPanel.ResumeLayout(false);
@@ -7547,6 +7747,18 @@ namespace BARevitTools
             this.sandBoxToolStrip.PerformLayout();
             roomsToolStrip.ResumeLayout(false);
             roomsToolStrip.PerformLayout();
+            this.mgmtSetupCWSUserContextMenu.ResumeLayout(false);
+            this.UIFormTableLayoutPanel.ResumeLayout(false);
+            this.mainTabControl.ResumeLayout(false);
+            this.aboutTab.ResumeLayout(false);
+            this.aboutTabLayoutPanel.ResumeLayout(false);
+            this.aboutTabHeaderPanel.ResumeLayout(false);
+            this.aboutTabHeaderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aboutTabLogo)).EndInit();
+            this.aboutTabFooterPanel.ResumeLayout(false);
+            this.analysisTab.ResumeLayout(false);
+            this.analysisTabControl.ResumeLayout(false);
+            this.modelingTab.ResumeLayout(false);
             this.modelingTabControl.ResumeLayout(false);
             this.multiCatTab.ResumeLayout(false);
             this.multiCatLayoutPanel.ResumeLayout(false);
@@ -7589,6 +7801,9 @@ namespace BARevitTools
             this.electricalToolStrip.ResumeLayout(false);
             this.electricalToolStrip.PerformLayout();
             this.electricalToolsPanel.ResumeLayout(false);
+            this.electricalCEOELayoutPanel.ResumeLayout(false);
+            this.electricalCEOELayoutPanel.PerformLayout();
+            this.electricalCEOEControlsPanel.ResumeLayout(false);
             this.floorsTab.ResumeLayout(false);
             this.floorsTabLayoutPanel.ResumeLayout(false);
             this.floorsToolsPanel.ResumeLayout(false);
@@ -7644,6 +7859,9 @@ namespace BARevitTools
             ((System.ComponentModel.ISupportInitialize)(this.wallsMPWNumericUpDownWallHeightFt)).EndInit();
             this.wallsMPWInstructionsPanel.ResumeLayout(false);
             this.wallsMPWInstructionsPanel.PerformLayout();
+            this.documentationTab.ResumeLayout(false);
+            this.documentationTabControl.ResumeLayout(false);
+            this.sheetsTab.ResumeLayout(false);
             this.sheetsTabLayoutPanel.ResumeLayout(false);
             this.sheetsToolStrip.ResumeLayout(false);
             this.sheetsToolStrip.PerformLayout();
@@ -7675,6 +7893,7 @@ namespace BARevitTools
             this.sheetsCSSFSInstructionsPanel.PerformLayout();
             this.sheetsCSSFSControlsPanel.ResumeLayout(false);
             this.sheetsCSSFSControlsPanel.PerformLayout();
+            this.viewsTab.ResumeLayout(false);
             this.viewsTabLayoutPanel.ResumeLayout(false);
             this.viewsToolStrip.ResumeLayout(false);
             this.viewsToolStrip.PerformLayout();
@@ -7692,24 +7911,6 @@ namespace BARevitTools
             this.viewsOICBLayoutPanel.ResumeLayout(false);
             this.viewsOICBInstructionsPanel.ResumeLayout(false);
             this.viewsOICBControlsPanel.ResumeLayout(false);
-            this.dataEPILayoutPanel.ResumeLayout(false);
-            this.dataEPIInstructionsPanel.ResumeLayout(false);
-            this.dataEPIControlsPanel.ResumeLayout(false);
-            this.dataEPIControlsPanel.PerformLayout();
-            this.mainTabControl.ResumeLayout(false);
-            this.aboutTab.ResumeLayout(false);
-            this.aboutTabLayoutPanel.ResumeLayout(false);
-            this.aboutTabHeaderPanel.ResumeLayout(false);
-            this.aboutTabHeaderPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aboutTabLogo)).EndInit();
-            this.aboutTabFooterPanel.ResumeLayout(false);
-            this.analysisTab.ResumeLayout(false);
-            this.analysisTabControl.ResumeLayout(false);
-            this.modelingTab.ResumeLayout(false);
-            this.documentationTab.ResumeLayout(false);
-            this.documentationTabControl.ResumeLayout(false);
-            this.sheetsTab.ResumeLayout(false);
-            this.viewsTab.ResumeLayout(false);
             this.managementTab.ResumeLayout(false);
             this.managmentTabControl.ResumeLayout(false);
             this.dataTab.ResumeLayout(false);
@@ -7717,6 +7918,10 @@ namespace BARevitTools
             this.dataToolStrip.ResumeLayout(false);
             this.dataToolStrip.PerformLayout();
             this.dataToolsPanel.ResumeLayout(false);
+            this.dataEPILayoutPanel.ResumeLayout(false);
+            this.dataEPIInstructionsPanel.ResumeLayout(false);
+            this.dataEPIControlsPanel.ResumeLayout(false);
+            this.dataEPIControlsPanel.PerformLayout();
             this.documentsTab.ResumeLayout(false);
             this.documentsLayoutPanel.ResumeLayout(false);
             this.documentsToolStrip.ResumeLayout(false);
@@ -7780,149 +7985,240 @@ namespace BARevitTools
             this.setupCWSInstructionsPanel.ResumeLayout(false);
             this.setupCWSInstructionsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.setupCWSUserDataGridView)).EndInit();
-            this.mgmtSetupCWSUserContextMenu.ResumeLayout(false);
             this.setupCWSRunPanel.ResumeLayout(false);
-            this.UIFormTableLayoutPanel.ResumeLayout(false);
             this.UIFormMenuStrip.ResumeLayout(false);
             this.UIFormMenuStrip.PerformLayout();
             this.dataFamiliesBAPParametersContextMenu.ResumeLayout(false);
             this.dataFamiliesBRPParametersContextMenu.ResumeLayout(false);
-            this.electricalCEOELayoutPanel.ResumeLayout(false);
-            this.electricalCEOELayoutPanel.PerformLayout();
-            this.electricalCEOEControlsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
         #endregion       
-
-        private System.Windows.Forms.TabControl modelingTabControl;
-        private System.Windows.Forms.TabPage wallsTab;
-        private System.Windows.Forms.ToolStrip wallsToolStrip;
-        private System.Windows.Forms.ToolStripButton wallsMPWButton;
-        private System.Windows.Forms.TabPage floorsTab;
-        private System.Windows.Forms.ToolStripSeparator wallsToolStripSeparator1;
-        private System.Windows.Forms.Label wallsMPWLabelWallHtInTxt;
-        private System.Windows.Forms.Label wallsMPWLabelWallHtFtTxt;
-        private System.Windows.Forms.Label wallsMPWLabelSetWall;
-        private System.Windows.Forms.Label wallsMPWLabelSelectWall;
-        private System.Windows.Forms.TabControl mainTabControl;
-        private System.Windows.Forms.TabPage modelingTab;
-        private System.Windows.Forms.TabPage analysisTab;
-        private System.Windows.Forms.TabPage managementTab;
-        private System.Windows.Forms.TabControl analysisTabControl;
-        private System.Windows.Forms.TabPage sightTab;
-        private System.Windows.Forms.TabControl managmentTabControl;
-        private System.Windows.Forms.TabPage dataTab;
-        private System.Windows.Forms.TabPage documentsTab;
-        private System.Windows.Forms.TabPage graphicsTab;
-        private System.Windows.Forms.TabPage miscTab;
-        private System.Windows.Forms.TabPage qaqcTab;
-        private System.Windows.Forms.TabPage setupTab;
-        private System.Windows.Forms.TabPage aboutTab;
-        private System.Windows.Forms.PictureBox aboutTabLogo;
-        private System.Windows.Forms.Label aboutTabVersionLabel;
-        private System.Windows.Forms.Label aboutTabTitleLabel;
-        private System.Windows.Forms.Label aboutCreditLabel;
-        private System.Windows.Forms.Label aboutPublishLabel;
-        public System.Windows.Forms.Button wallsMPWButtonRun;
-        public System.Windows.Forms.ComboBox wallsMPWComboBoxWall;
-        public System.Windows.Forms.NumericUpDown wallsMPWNumericUpDownWallHeightIn;
-        public System.Windows.Forms.NumericUpDown wallsMPWNumericUpDownWallHeightFt;
-        private System.Windows.Forms.ToolStrip qaqcToolStrip;
-        private System.Windows.Forms.ToolStripSeparator qaqcToolStripSeparator1;
-        private System.Windows.Forms.Panel qaqcCSVNPanel;
-        public System.Windows.Forms.Button qaqcCSVNRun;
-        private System.Windows.Forms.Label qaqcCTVNInstructions;
-        private System.Windows.Forms.Panel qaqcDRNPPanel;
-        public System.Windows.Forms.Button qaqcDRNPRun;
-        private System.Windows.Forms.ToolStripButton qaqcDRNPButtton;
-        private System.Windows.Forms.Label qaqcDRNPInstructions;
-        private System.Windows.Forms.ToolStripSeparator qaqcToolStripSeparator2;
-        private System.Windows.Forms.TabPage roomsTab;
-        private System.Windows.Forms.ToolStrip sheetsToolStrip;
-        private System.Windows.Forms.ToolStripButton sheetsCSLButton;
-        private System.Windows.Forms.ToolStripSeparator sheetsSeparator1;
-        private System.Windows.Forms.TableLayoutPanel sheetsCSLLayoutPanel;
-        private System.Windows.Forms.Label sheetsCSLCopyFromLabel;
-        private System.Windows.Forms.Button sheetsCLSRunButton;
-        public System.Windows.Forms.DataGridView sheetsCSLDataGridView;
-        public System.Windows.Forms.ComboBox sheetsCSLComboBox;
-        private System.Windows.Forms.ToolStripButton roomsSRNNButton;
-        private System.Windows.Forms.ToolStripSeparator roomsSeparator1;
-        private System.Windows.Forms.Panel roomsSRNNPanel;
-        private System.Windows.Forms.Label roomsSRNNInstructions;
-        private System.Windows.Forms.Button roomsSRNNRunButton;
-        public System.Windows.Forms.ComboBox sheetsISFLComboBox;
-        private System.Windows.Forms.Label sheetsISFLLabel2;
-        private System.Windows.Forms.Label sheetsISFLLabel1;
-        private System.Windows.Forms.Button sheetsISFLRunButton;
-        public System.Windows.Forms.DataGridView sheetsISFLDataGridView;
-        private System.Windows.Forms.ToolStripButton sheetsISFLButton;
-        public System.Windows.Forms.TableLayoutPanel sheetsISFLLayoutPanel;
-        private System.Windows.Forms.Panel sheetsIFSLDisciplinePanel;
-        private System.Windows.Forms.Button sheetsISFLDisciplineUpdateButton;
-        private System.Windows.Forms.ComboBox sheetsISFLDisciplineComboBox;
-        private System.Windows.Forms.Label sheetsISFLDisciplineLabel;
-        private System.Windows.Forms.ToolStripSeparator sheetsSeparator2;
-        private System.Windows.Forms.Panel sheetsISFLControlsPanel;
-        private System.Windows.Forms.Panel sheetsCSLControlsPanel;
-        private System.Windows.Forms.Label sheetsCSLCopyToLabel;
-        private System.Windows.Forms.Panel sheetsCSLInstructionsPanel;
-        private System.Windows.Forms.Label sheetsCSLInstructionsLabel;
         private TableLayoutPanel UIFormTableLayoutPanel;
-        private MenuStrip UIFormMenuStrip;
-        private ToolStripMenuItem fileToolStripMenuItem;
-        private ToolStripMenuItem optionsToolStripMenuItem;
+        private ContextMenuStrip dataFamiliesBAPParametersContextMenu;
+        private ToolStripMenuItem familiesBAPParametersRowDeleteTool;
+        private ContextMenuStrip dataFamiliesBRPParametersContextMenu;
+        private ToolStripMenuItem dataFamiliesBRPParametersRowDeleteTool;
+        private ContextMenuStrip mgmtSetupCWSUserContextMenu;
+        private ToolStripMenuItem setupCWSRowDeleteTool;
+        private TabControl mainTabControl;
+        private TabPage aboutTab;
+        private TableLayoutPanel aboutTabLayoutPanel;
+        private Panel aboutTabHeaderPanel;
+        private LinkLabel aboutTabDevelopmentLinkURLLabel;
+        private Label aboutTabDevelopmentLinkLabel;
+        private LinkLabel aboutTabLearningLinkURLLabel;
+        private Label aboutTabLearningLinkLabel;
+        private PictureBox aboutTabLogo;
+        private Label aboutPublishLabel;
+        private Label aboutTabVersionLabel;
+        private Label aboutTabTitleLabel;
+        private Panel aboutTabFooterPanel;
+        private Label aboutCreditLabel;
+        private RichTextBox aboutTabUpdatesTextBox;
+        private TabPage analysisTab;
+        private TabControl analysisTabControl;
+        private TabPage sightTab;
+        private TabPage modelingTab;
+        private TabControl modelingTabControl;
+        private TabPage multiCatTab;
+        private TableLayoutPanel multiCatLayoutPanel;
+        private ToolStrip multiCatToolStrip;
+        public ToolStripButton multiCatCFFEButton;
+        private ToolStripSeparator multiCatSeparator1;
+        private ToolStripButton multiCatRE;
+        private Panel multiCatToolsPanel;
+        private SplitContainer multiCatCFFSplitContainer;
+        private SplitContainer multiCatCFFEExcelSplitContainer;
+        private TableLayoutPanel multiCatCFFECreateExcelLayoutPanel1;
+        private Label multiCatCFFECreateExcelLabel;
+        private TextBox multiCatCFFECreateExcelInstructions;
+        private TableLayoutPanel multiCatCFFECreateExcelLayoutPanel2;
+        public DataGridView multiCatCFFEExcelDGV;
+        private Panel multiCatCFFEExcelRunPanel;
+        public Label multiCatCFFEExcelStatusLabel;
+        private Button multiCatCFFEExcelRunButton;
+        private Panel multiCatCFFEDirectoryPanel;
+        private Button multiCatCFFEDirectorySelectButton;
+        public TextBox multiCatCFFEDirectoryTextBox;
+        private Panel multiCatCFFESelectFamilyPanel;
+        private Button multiCatCFFESelectFamilyButton;
+        public TextBox multiCatCFFESelectFamilyTextBox;
+        private SplitContainer multiCatCFFEFamiliesSplitContainer;
+        private TableLayoutPanel multiCatCFFECreateFamiliesLayoutPanel1;
+        private Label multiCatCFFECreateFamiliesLabel;
+        private TextBox multiCatCFFECreateFamiliesInstructions;
+        private TableLayoutPanel multiCatCFFECreateFamiliesLayoutPanel2;
+        public DataGridView multiCatCFFEFamiliesDGV;
+        private Panel multiCatCFFEFamiliesExcelPanel;
+        public TextBox allCATCFFEFamiliesSaveDirectoryTextBox;
+        private Button multiCatCFFEFamiliesSaveDirectoryButton;
+        private Button multiCatCFFEExcelSelectButton;
+        private Panel multiCatCFFEFamiliesRunPanel;
+        public ProgressBar multiCatCFFEFamiliesProgressBar;
+        private Button multiCatCFFEFamiliesRunButton;
+        private Panel multiCatCFFEFamilyCreationPanel;
+        private Label multiCatCFFEFamilyCreationLabel;
+        public ComboBox multiCatCFFEFamilyCreationComboBox;
+        private TabPage doorsTab;
+        private TabPage electricalTab;
+        private TableLayoutPanel electricalLayoutPanel;
+        private ToolStrip electricalToolStrip;
+        private ToolStripButton electricalCEOEButton;
+        private Panel electricalToolsPanel;
+        private TableLayoutPanel electricalCEOELayoutPanel;
+        private TextBox electricalCEOETextBox;
+        private Panel electricalCEOEControlsPanel;
+        private Button electricalCEOERunButton;
+        private TabPage floorsTab;
         private TableLayoutPanel floorsTabLayoutPanel;
-        private ToolStrip floorsToolStrip;
-        private ToolStripButton floorsCFBRButton;
+        private Panel floorsToolsPanel;
         private TableLayoutPanel floorsCFBRLayoutPanel;
         private Panel floorsCFBRInstructionsPanel;
+        private TextBox floorsCFBRInstructionsTextBox;
         private Panel floorsCFBRControlsPanel;
+        public CheckBox floorsCFBROffsetFinishFloorCheckBox;
         private Label floorsCFBRSelectFloorTypeLabel;
         private Label floorsCFBRSelectRoomsLabel;
-        private Button floorsCFBRSelectRoomsButton;
-        private Button floorsCFBRRunButton;
         public ComboBox floorsCFBRSelectFloorTypeComboBox;
-        public CheckBox floorsCFBROffsetFinishFloorCheckBox;
-        private TextBox floorsCFBRInstructionsTextBox;
-        private TableLayoutPanel setupLayoutPanel;
-        private ToolStrip setupToolStrip;
-        private TableLayoutPanel setupCWSLayoutPanel;
+        private Button floorsCFBRRunButton;
+        private Button floorsCFBRSelectRoomsButton;
+        private ToolStrip floorsToolStrip;
+        private ToolStripButton floorsCFBRButton;
+        private TabPage massesTab;
+        private TabPage materialsTab;
+        private TableLayoutPanel materialsLayoutPanel;
+        private ToolStrip materialsToolStrip;
+        private ToolStripButton materialsCMSButton;
+        private ToolStripSeparator materialsToolStripSeparator1;
+        private ToolStripButton materialsAMLButton;
+        private Panel materialsToolsPanel;
+        public TableLayoutPanel materialsAMLLayoutPanel;
+        private Panel materialsAMLHeaderPanel;
+        private Label materialsAMLHeaderLabel;
+        private TextBox materialsAMLInstructionsTextBox;
+        public DataGridView materialsAMLDataGridView;
+        private Panel materialsAMLLaunchPanel;
+        private Button materialsAMLLaunchPaletteButton;
+        private TableLayoutPanel materialsCMSExcelLayoutPanel;
+        private Panel materialsCMSExcelExportPanel;
+        private Button materialsCMSExcelCreateSpreadsheetButton;
+        public TextBox materialsCMSExcelSpreadsheetNameTextBox;
+        private Button materialsCMSExcelSelectSaveDirectoryButton;
+        private Label materialsCMSExcelExportLabel;
+        private Panel materialsCMSExcelRunPanel;
+        public ProgressBar materialsCMSExcelCreateSymbolsProgressBar;
+        private Button materialsCMSExcelCreateSymbolsButton;
+        private Panel materialsCMSExcelImportPanel;
+        public TextBox materialsCMSSetViewNameTextBox;
+        private Label materialsCMSSetViewNameLabel;
+        private Label materialsCMSExcelImportLabel;
+        private Button materialsCMSExcelSelectImportFileButton;
+        public DataGridView materialsCMSExcelDataGridView;
+        private TextBox materialsCMSExcelInstructionsTextBox;
+        private TabPage roomsTab;
+        private TableLayoutPanel roomsTabLayoutPanel;
+        private ToolStripButton roomsSRNNButton;
+        private ToolStripSeparator roomsSeparator1;
+        private ToolStripButton roomsCDRTButton;
+        private Panel roomsToolsPanel;
+        public TableLayoutPanel roomsCDRTLayoutPanel;
+        private TextBox roomsCDRTInstructionsTextBox;
+        private Panel roomsCDRTControlsPanel;
+        private Button roomsCDRTRunButton;
+        private TableLayoutPanel roomsSRNNLayoutPanel;
+        private Label roomsSRNNInstructions;
+        private Panel roomsSRNNPanel;
+        private Button roomsSRNNRunButton;
+        private Panel roomsSRRNUrlPanel;
+        private Label roomsSRRNUrlLabel;
+        private LinkLabel roomsSRRNUrlLinkLabel;
+        private TabPage wallsTab;
+        private TableLayoutPanel wallsTabLayoutPanel;
+        private ToolStrip wallsToolStrip;
+        private ToolStripButton wallsMPWButton;
+        private ToolStripSeparator wallsToolStripSeparator1;
+        private ToolStripButton wallsDPButton;
+        private Panel wallsToolsPanel;
+        private TableLayoutPanel wallsDPLayoutPanel;
+        private TextBox wallsDPInstructionsTextBox;
+        private Panel panel2;
+        private Button wallsDPRunButton;
+        private TableLayoutPanel wallsMPWLayoutPanel;
+        private Panel wallsMPWControlsPanel;
+        private Label wallsMPWLabelSelectWall;
+        public NumericUpDown wallsMPWNumericUpDownWallHeightIn;
+        private Label wallsMPWLabelSetWall;
+        public NumericUpDown wallsMPWNumericUpDownWallHeightFt;
+        private Label wallsMPWLabelWallHtFtTxt;
+        public Button wallsMPWButtonRun;
+        private Label wallsMPWLabelWallHtInTxt;
+        public ComboBox wallsMPWComboBoxWall;
+        private Panel wallsMPWInstructionsPanel;
+        private TextBox textBox1;
+        private TabPage documentationTab;
+        private TabControl documentationTabControl;
+        private TabPage sheetsTab;
+        private TableLayoutPanel sheetsTabLayoutPanel;
+        private ToolStrip sheetsToolStrip;
+        private ToolStripButton sheetsCSLButton;
+        private ToolStripSeparator sheetsSeparator1;
+        private ToolStripButton sheetsISFLButton;
+        private ToolStripSeparator sheetsSeparator2;
+        private ToolStripSplitButton sheetsSheetSetsButton;
+        private ToolStripMenuItem sheetsCSSFSButton;
+        private ToolStripMenuItem sheetsOSSButton;
+        private Panel sheetsToolsPanel;
+        private TableLayoutPanel sheetsCSLLayoutPanel;
+        private Button sheetsCLSRunButton;
+        public DataGridView sheetsCSLDataGridView;
+        private Panel sheetsCSLControlsPanel;
+        public ComboBox sheetsCSLFilterConditionComboBox;
+        public TextBox sheetsCSLFilterTextBox;
+        private Label sheetsCSLCopyFromLabel;
+        private Label sheetsCSLCopyToLabel;
+        public ComboBox sheetsCSLComboBox;
+        private Panel sheetsCSLInstructionsPanel;
+        private Label sheetsCSLInstructionsLabel;
         private TableLayoutPanel sheetsOSSLayoutPanel;
-        private Panel sheetsOSSInstructionsPanel;
-        private Panel sheetsOSSControlsPanel;
-        private Button sheetsOSSRunButton;
-        private Label sheetsOSSRunLabel;
-        private TextBox sheetsOSSInstructionsTextBox;
         public DataGridView sheetsOSSDataGridView;
+        private Panel sheetsOSSInstructionsPanel;
+        private TextBox sheetsOSSInstructionsTextBox;
+        private Panel sheetsOSSFilterPanel;
+        public ComboBox sheetsOSSFilterFieldComboBox;
+        public TextBox sheetsOSSFilterTextBox;
+        public ComboBox sheetsOSSFilterConditionComboBox;
+        private Label sheetsOSSFilterLabel;
         private Panel sheetsOSSNewSetPanel;
         private Button sheetsOSSNewSetButton;
         private Label sheetsOSSNewSetLabel;
         public TextBox sheetsOSSNewSetTextBox;
-        private ToolStripSplitButton sheetsSheetSetsButton;
-        private ToolStripMenuItem sheetsOSSButton;
-        private ToolStripMenuItem sheetsCSSFSButton;
+        private Panel sheetsOSSControlsPanel;
+        private Button sheetsOSSRunButton;
+        private Label sheetsOSSRunLabel;
+        public TableLayoutPanel sheetsISFLLayoutPanel;
+        private Panel sheetsISFLInstructionsPanel;
+        private Label sheetsISFLInstructionsLabel;
+        private Button sheetsISFLRunButton;
+        public DataGridView sheetsISFLDataGridView;
+        private Panel sheetsISFLControlsPanel;
+        public ComboBox sheetsISFLComboBox;
+        private Label sheetsISFLLabel1;
+        private Label sheetsISFLLabel2;
+        private Panel sheetsIFSLDisciplinePanel;
+        private Button sheetsISFLDisciplineUpdateButton;
+        private ComboBox sheetsISFLDisciplineComboBox;
+        private Label sheetsISFLDisciplineLabel;
         private TableLayoutPanel sheetsCSSFSLayoutPanel;
         private Panel sheetsCSSFSInstructionsPanel;
+        private TextBox sheetsCSSFSInstructionsTextBox;
         private Panel sheetsCSSFSControlsPanel;
-        private Button sheetsCSSFSRunButton;
         private Label sheetsCSSFSSScheduleLabel;
         private Label sheetsCSSFSSetNameLabel;
-        public ComboBox sheetsCSSFSScheduleComboBox;
         public TextBox sheetsCSSFSSetNameTextBox;
-        private TextBox sheetsCSSFSInstructionsTextBox;
-        private TableLayoutPanel qaqcCSVLayoutPanel;
-        private Panel qaqcCSVControlsPanel;
-        private Button qaqcCSVRunButton;
-        private Panel qaqcCSVInstructionsPanel;
-        private ContextMenuStrip dataFamiliesBAPParametersContextMenu;
-        private ToolStripMenuItem familiesBAPParametersRowDeleteTool;
-        private TabPage documentationTab;
-        private TableLayoutPanel roomsTabLayoutPanel;
-        private TableLayoutPanel roomsSRNNLayoutPanel;
-        private TableLayoutPanel sheetsTabLayoutPanel;
-        private Panel sheetsToolsPanel;
+        public ComboBox sheetsCSSFSScheduleComboBox;
+        private Button sheetsCSSFSRunButton;
+        private TabPage viewsTab;
         private TableLayoutPanel viewsTabLayoutPanel;
         private ToolStrip viewsToolStrip;
         private ToolStripButton viewsCEPRButton;
@@ -7931,11 +8227,6 @@ namespace BARevitTools
         private ToolStripMenuItem viewsOICBButton;
         private ToolStripMenuItem viewsHNIECButton;
         private Panel viewsToolsPanel;
-        private TableLayoutPanel viewsHNIECLayoutPanel;
-        private Panel viewsHNIECInstructionsPanel;
-        private Label viewsHNIECBInstructions;
-        private Panel viewsHNIECControlsPanel;
-        private Button viewsHNIECBRunButton;
         private TableLayoutPanel viewsCEPRLayoutPanel;
         private Panel viewsCEPRControlsPanel;
         private Button viewsCEPRRunButton;
@@ -7944,11 +8235,27 @@ namespace BARevitTools
         public ComboBox viewsCEPRElevationComboBox;
         private Panel viewsCEPRInstructionsPanel;
         private TextBox viewsCEPRInstructionsTextBox;
+        private Panel viewsCEPRUrlPanel;
+        private Label viewsCEPRUrlLabel;
+        private LinkLabel viewsCEPRUrlLinkLabel;
+        private TableLayoutPanel viewsHNIECLayoutPanel;
+        private Panel viewsHNIECInstructionsPanel;
+        private Label viewsHNIECBInstructions;
+        private Panel viewsHNIECControlsPanel;
+        private Button viewsHNIECBRunButton;
         private TableLayoutPanel viewsOICBLayoutPanel;
         private Panel viewsOICBInstructionsPanel;
         private Label viewsOICBInstructionsLabel;
         private Panel viewsOICBControlsPanel;
         private Button elemViewsOCIBRunButton;
+        private TabPage managementTab;
+        private TabControl managmentTabControl;
+        private TabPage dataTab;
+        private TableLayoutPanel dataTabLayoutPanel;
+        private ToolStrip dataToolStrip;
+        private ToolStripButton dataEPIButton;
+        private ToolStripSeparator dataSeparator1;
+        private Panel dataToolsPanel;
         public TableLayoutPanel dataEPILayoutPanel;
         private Panel dataEPIInstructionsPanel;
         private Label dataEPIInstructionsLabel;
@@ -7961,53 +8268,33 @@ namespace BARevitTools
         private Label dataEPIDPILabel;
         private Label dataEPIDirectoryLabel;
         private Label dataEPINameLabel;
-        private TableLayoutPanel wallsTabLayoutPanel;
-        private Panel wallsToolsPanel;
-        private TableLayoutPanel wallsMPWLayoutPanel;
-        private Panel wallsMPWControlsPanel;
-        private Panel wallsMPWInstructionsPanel;
-        private Panel floorsToolsPanel;
-        private Panel roomsToolsPanel;
-        private TabControl documentationTabControl;
-        private TabPage sheetsTab;
-        private TabPage viewsTab;
-        private TableLayoutPanel dataTabLayoutPanel;
-        private ToolStrip dataToolStrip;
-        private ToolStripButton dataEPIButton;
-        private Panel dataToolsPanel;
-        private Label qaqcCSVInstructionsLabel;
-        private ContextMenuStrip dataFamiliesBRPParametersContextMenu;
-        private ToolStripMenuItem dataFamiliesBRPParametersRowDeleteTool;
-        private TableLayoutPanel miscToolsLayoutPanel;
-        private ToolStrip miscToolStrip;
-        private ToolStripButton miscEEVButton;
-        private ToolStripSeparator miscSeparator1;
-        private ToolStripSeparator setupSeparator1;
-        private ToolStripButton setupCWSButton;
+        private TabPage documentsTab;
         private TableLayoutPanel documentsLayoutPanel;
         private ToolStrip documentsToolStrip;
         private ToolStripButton documentsCTSButton;
         private ToolStripSeparator documentsToolStripSeparator1;
+        private ToolStripButton documentsPRP;
         private Panel documentsToolsPanel;
         private Panel documentsCTSPanel;
         public Button documentsCTSRun;
         private Label documentsCTSInstructions;
+        private TabPage graphicsTab;
+        private TabPage miscTab;
+        private TableLayoutPanel miscToolsLayoutPanel;
+        private ToolStrip miscToolStrip;
+        private ToolStripButton miscEDVButton;
+        private ToolStripSeparator miscSeparator1;
+        private ToolStripButton miscEEVButton;
         private Panel miscToolsPanel;
-        private ToolStripSeparator dataSeparator1;
-        private ToolStripButton qaqcRLSButton;
-        private Panel sheetsOSSFilterPanel;
-        private Label sheetsOSSFilterLabel;
-        public TextBox sheetsOSSFilterTextBox;
-        public ComboBox sheetsOSSFilterConditionComboBox;
-        public ComboBox sheetsOSSFilterFieldComboBox;
         private TableLayoutPanel miscEDVLayoutPanel;
         private Panel miscEDVInstructionsPanel;
-        private Panel miscEDVRunPanel;
-        private Panel miscEDVDirectoryPanel;
-        private Button miscEDVSelectDirectoryButton;
-        private Button miscEDVRunButton;
-        public TextBox miscEDVSelectDirectoryTextBox;
         private TextBox miscEDVInstructionsTextBox;
+        private Panel miscEDVRunPanel;
+        public ProgressBar miscEDVProgressBar;
+        private Button miscEDVRunButton;
+        private Panel miscEDVDirectoryPanel;
+        public TextBox miscEDVSelectDirectoryTextBox;
+        private Button miscEDVSelectDirectoryButton;
         public DataGridView miscEDVDataGridView;
         private Panel miscEDVControlsPanel;
         private Label miscEDVFilterLabel;
@@ -8015,44 +8302,93 @@ namespace BARevitTools
         public ComboBox miscEDVFilterConditionComboBox;
         private Button miscEDVSelectNoneButton;
         private Button miscEDVSelectAllButton;
-        public ProgressBar miscEDVProgressBar;
-        private ToolStripButton miscEDVButton;
-        private Panel setupCWSInstructionsPanel;
-        private DataGridViewTextBoxColumn WorksetName;
-        private Label setupCWSExtendedLabel;
+        private TabPage qaqcTab;
+        private TableLayoutPanel qaqcLayoutPanel;
+        private ToolStrip qaqcToolStrip;
+        private ToolStripSplitButton qaqcCapitalizeValuesButton;
+        private ToolStripMenuItem capitalizeSheetViewNamesButton;
+        private ToolStripMenuItem capitalizeScheduleValuesButton;
+        private ToolStripSeparator qaqcToolStripSeparator1;
+        private ToolStripButton qaqcDRNPButtton;
+        private ToolStripSeparator qaqcToolStripSeparator2;
+        private ToolStripButton qaqcRLSButton;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripButton qaqcRFSPButton;
+        private Panel qaqcToolsPanel;
+        private TableLayoutPanel qaqcRFSPLayoutPanel;
+        private TextBox qaqcRFSPInstructionsTextBox;
+        public ListBox qaqcRFSPParametersListBox;
+        private Panel qaqcRFSPToolsPanel;
+        public Label qaqcRFSPSFamilyLabel;
+        private Button qaqcRFSPRunButton;
+        private Button qaqcRFSPSelectFamilyButton;
+        private Panel panel5;
+        private Label label4;
+        public TableLayoutPanel qaqcRLSLayoutPanel;
+        private Panel qaqcRLSRunPanel;
+        private Button qaqcRLSRunButton;
+        private TextBox qaqcRLSInstructionsTextBox;
+        public DataGridView qaqcRLSDataGridView;
+        private Panel qaqcRLSControlsPanel;
+        private Label qaqcRLSReplaceWithLabel;
+        private Label qaqcRLSReplaceLabel;
+        public ComboBox qaqcRLSReplaceWithComboBox;
+        public CheckBox qaqcRLSDeleteCheckBox;
+        public ComboBox qaqcRLSReplaceComboBox;
+        private Panel qaqcRLSUnswitchablePanel;
+        private Label label1;
+        private Panel qaqcCSVNPanel;
+        public Button qaqcCSVNRun;
+        private Label qaqcCTVNInstructions;
+        private TableLayoutPanel qaqcCSVLayoutPanel;
+        private Panel qaqcCSVControlsPanel;
+        private Button qaqcCSVRunButton;
+        private Panel qaqcCSVInstructionsPanel;
+        private Label qaqcCSVInstructionsLabel;
+        private Panel qaqcDRNPPanel;
+        private Label qaqcDRNPInstructions;
+        public Button qaqcDRNPRun;
+        private TabPage setupTab;
+        private TableLayoutPanel setupLayoutPanel;
+        private ToolStrip setupToolStrip;
+        private ToolStripButton setupCWSButton;
+        private ToolStripSeparator setupSeparator1;
+        private ToolStripButton setupUPButton;
+        private Panel setupToolsPanel;
+        private TableLayoutPanel setupUPLayoutPanel;
+        private TextBox setupUPInstructionsTextBox;
+        public DataGridView setupUPDataGridView;
+        private Label setupUPLinkedModelsLabel;
+        private Panel setupUPControlsPanel1;
+        private Button setupUPOriginalPathSelectButton;
+        public TextBox setupUPOriginalFilePathTextBox;
+        private Label setupUPOriginalFilePathLabel;
+        private Panel setupUPRunPanel;
+        private Button setupUPRunButton;
+        private Panel setupUPControlsPanel2;
+        private Button setupUPUpgradePathSelectButton;
+        private Button setupUPOriginalDirectoryButton;
+        private Label setupUPUpgradedFilePathLabel;
+        private Label setupUPSlashLabel;
+        public TextBox setupUPUpgradedFilePathUserTextBox;
+        public TextBox setupUPUpgradedFilePathSetTextBox;
+        private Panel setupUPControlsPanel3;
+        private Label setupUPUpgradingToLabel;
+        public Label setupUPUpgradingToRevitLabel;
+        public Label setupUPUpgradingFromRevitLabel;
+        private Label setupUPUpgradingFromLabel;
+        private TableLayoutPanel setupCWSLayoutPanel;
         private Label setupCWSDefinedLabel;
-        private Panel setupCWSRunPanel;
-        private Button setupCWSRunButton;
-        private Label setupCWSDefaultLabel;
         public CheckedListBox setupCWSExtendedListBox;
+        private Label setupCWSExtendedLabel;
+        private Panel setupCWSInstructionsPanel;
+        private TextBox setupCWSInstructionsTextBox;
+        private Label setupCWSDefaultLabel;
         public ListBox setupCWSDefaultListBox;
         public DataGridView setupCWSUserDataGridView;
-        private ContextMenuStrip mgmtSetupCWSUserContextMenu;
-        private ToolStripMenuItem setupCWSRowDeleteTool;
-        private TabPage doorsTab;
-        private TabPage electricalTab;
-        private TableLayoutPanel electricalLayoutPanel;
-        private ToolStrip electricalToolStrip;
-        private ToolStripButton electricalCEOEButton;
-        private Panel electricalToolsPanel;
-        private TabPage massesTab;
-        private TabPage materialsTab;
-        private TableLayoutPanel materialsLayoutPanel;
-        private ToolStrip materialsToolStrip;
-        private ToolStripButton materialsCMSButton;
-        private Panel materialsToolsPanel;
-        private TextBox textBox1;
-        private TextBox setupCWSInstructionsTextBox;
-        private Panel sheetsISFLInstructionsPanel;
-        private Label sheetsISFLInstructionsLabel;
-        private TableLayoutPanel aboutTabLayoutPanel;
-        private Panel aboutTabHeaderPanel;
-        private Label aboutTabLearningLinkLabel;
-        private LinkLabel aboutTabLearningLinkURLLabel;
-        private Panel aboutTabFooterPanel;
-        private RichTextBox aboutTabUpdatesTextBox;
-        private Label aboutTabDevelopmentLinkLabel;
-        private LinkLabel aboutTabDevelopmentLinkURLLabel;
+        private DataGridViewTextBoxColumn WorksetName;
+        private Panel setupCWSRunPanel;
+        private Button setupCWSRunButton;
         private TabControl adminManagementTabControl;
         private TabPage adminAboutTab;
         private Label adminAboutReservedLabel;
@@ -8064,6 +8400,7 @@ namespace BARevitTools
         private ToolStripSeparator adminDataSeparator1;
         private ToolStripButton adminDataGPFButton;
         private ToolStripSeparator adminDataSeparator2;
+        private ToolStripButton adminDataGBDVButton;
         private Panel adminDataToolsPanel;
         private TableLayoutPanel adminDataGFFLayoutPanel;
         private Panel adminDataGFFCollectDataPanel;
@@ -8102,31 +8439,38 @@ namespace BARevitTools
         private Panel adminDataGFFDatePanel;
         public DateTimePicker adminDataGFFDatePicker;
         public CheckBox adminDataGFFDateCheckBox;
+        private TableLayoutPanel adminDataGBDVLayoutPanel;
+        private Panel adminDataGBDVCollectPanel;
+        public Label adminDataGBDVWaitLabel;
+        private Button adminDataGBDVCollectButton;
+        private Panel adminDataGBDVExportDbPanel;
+        private Button adminDataGBDVExportDbRunButton;
+        private Label adminDataGBDVExportDbLabel;
+        private Panel adminDataGBDVExportCsvPanel;
+        public TextBox adminDataGBDVExportCsvDirectoryTextBox;
+        private Button adminDataGBDVExportCsvSelectDirectoryButton;
+        private Button adminDataGBDVExportCsvRunButton;
+        public TextBox adminDataGBDVExportCsvTextBox;
+        private Label adminDataGBDVExportCsvLabel;
         private TabPage adminFamiliesTab;
         private TableLayoutPanel adminFamiliesLayoutPanel;
         private ToolStrip adminFamiliesToolStrip;
+        private ToolStripButton adminFamiliesUFButton;
+        private ToolStripSeparator toolStripSeparator3;
         private ToolStripButton adminFamiliesBAPButton;
         private ToolStripSeparator adminFamiliesSeparator1;
         private ToolStripButton adminFamiliesBRPButton;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton adminFamiliesDFBButton;
         private Panel adminFamiliesToolsPanel;
-        private TableLayoutPanel adminFamiliesBRPLayoutPanel;
-        private Panel adminFamiliesBRPRunPanel;
-        public ProgressBar adminFamiliesBRPProgressBar;
-        private Button adminFamiliesBRPRunButton;
-        private Panel adminFamiliesBRPSplitPanel;
-        private SplitContainer adminFamiliesBRPSplitContainer;
-        private TableLayoutPanel adminFamiliesBRPParametersLayoutPanel;
-        public DataGridView adminFamiliesBRPParametersDGV;
-        private Panel adminFamiliesBRPParametersPanel;
-        private TableLayoutPanel adminFamiliesBPRSFamiliesLayoutPanel;
-        public DataGridView adminFamiliesBRPFamiliesDGV;
-        private Panel adminFamiliesBRPSelectPanel;
-        private Button adminFamiliesBRPSelectNoneButton;
-        private Button adminFamiliesBRPSelectAllButton;
-        private Panel adminFamiliesBRPCsvDirectoryPanel;
-        private Button adminFamiliesBRPDirectorySelectButton;
+        private TableLayoutPanel adminFamiliesUFLayoutPanel;
+        private Panel adminFamiliesUFFullSyncPanel;
+        private Panel adminFamiliesUFUpgradedFamiliesTextBoxPanel;
+        private TextBox adminFamiliesUFUpgradedFamiliesTextBox;
+        private Panel adminFamiliesUFDeletedFamiliesTextBoxPanel;
+        private TextBox adminFamiliesUFDeletedFamiliesTextBox;
+        private Panel adminFamiliesUFRunPanel;
+        private Button adminFamiliesUFRunButton;
         private TableLayoutPanel adminFamiliesBAPLayoutPanel;
         private Panel adminFamiliesBAPRunPanel;
         public ProgressBar adminFamiliesBAPProgressBar;
@@ -8144,6 +8488,22 @@ namespace BARevitTools
         public DataGridView adminFamiliesBAPFamiliesDGV;
         private Panel adminFamiliesBAPFamiliesDirectoryPanel;
         private Button adminFamiliesBAPDirectorySelectButton;
+        private TableLayoutPanel adminFamiliesBRPLayoutPanel;
+        private Panel adminFamiliesBRPRunPanel;
+        public ProgressBar adminFamiliesBRPProgressBar;
+        private Button adminFamiliesBRPRunButton;
+        private Panel adminFamiliesBRPSplitPanel;
+        private SplitContainer adminFamiliesBRPSplitContainer;
+        private TableLayoutPanel adminFamiliesBRPParametersLayoutPanel;
+        public DataGridView adminFamiliesBRPParametersDGV;
+        private Panel adminFamiliesBRPParametersPanel;
+        private TableLayoutPanel adminFamiliesBPRSFamiliesLayoutPanel;
+        public DataGridView adminFamiliesBRPFamiliesDGV;
+        private Panel adminFamiliesBRPSelectPanel;
+        private Button adminFamiliesBRPSelectNoneButton;
+        private Button adminFamiliesBRPSelectAllButton;
+        private Panel adminFamiliesBRPCsvDirectoryPanel;
+        private Button adminFamiliesBRPDirectorySelectButton;
         private TableLayoutPanel adminFamiliesDFBLayoutPanel;
         private Panel adminFamiliesDFBSelectPanel;
         private Button adminFamiliesDBFSelectNoneButton;
@@ -8153,179 +8513,32 @@ namespace BARevitTools
         private Panel panel1;
         private Button adminFamiliesDFBRunButton;
         private TabPage adminTemplateTab;
-        private TabPage multiCatTab;
-        private TableLayoutPanel multiCatLayoutPanel;
-        private ToolStrip multiCatToolStrip;
-        private ToolStripSeparator multiCatSeparator1;
-        private Panel multiCatToolsPanel;
-        private SplitContainer multiCatCFFSplitContainer;
-        private SplitContainer multiCatCFFEExcelSplitContainer;
-        private TableLayoutPanel multiCatCFFECreateExcelLayoutPanel1;
-        private Label multiCatCFFECreateExcelLabel;
-        private TextBox multiCatCFFECreateExcelInstructions;
-        private TableLayoutPanel multiCatCFFECreateExcelLayoutPanel2;
-        public DataGridView multiCatCFFEExcelDGV;
-        private Panel multiCatCFFEExcelRunPanel;
-        public Label multiCatCFFEExcelStatusLabel;
-        private Button multiCatCFFEExcelRunButton;
-        private Panel multiCatCFFEDirectoryPanel;
-        private Button multiCatCFFEDirectorySelectButton;
-        public TextBox multiCatCFFEDirectoryTextBox;
-        private Panel multiCatCFFESelectFamilyPanel;
-        private Button multiCatCFFESelectFamilyButton;
-        public TextBox multiCatCFFESelectFamilyTextBox;
-        private SplitContainer multiCatCFFEFamiliesSplitContainer;
-        private TableLayoutPanel multiCatCFFECreateFamiliesLayoutPanel1;
-        private Label multiCatCFFECreateFamiliesLabel;
-        private TextBox multiCatCFFECreateFamiliesInstructions;
-        private TableLayoutPanel multiCatCFFECreateFamiliesLayoutPanel2;
-        public DataGridView multiCatCFFEFamiliesDGV;
-        private Panel multiCatCFFEFamiliesExcelPanel;
-        private Button multiCatCFFEFamiliesSaveDirectoryButton;
-        private Button multiCatCFFEExcelSelectButton;
-        private Panel multiCatCFFEFamiliesRunPanel;
-        public ProgressBar multiCatCFFEFamiliesProgressBar;
-        private Button multiCatCFFEFamiliesRunButton;
-        private Panel multiCatCFFEFamilyCreationPanel;
-        private Label multiCatCFFEFamilyCreationLabel;
-        public ComboBox multiCatCFFEFamilyCreationComboBox;
-        private TabPage sandBoxTab;
-        private TableLayoutPanel sandBoxLayoutPanel;
-        private ToolStrip sandBoxToolStrip;
-        private ToolStripButton sandBoxTestButton1;
-        public System.Windows.Forms.Integration.ElementHost sandBoxElementHost;
-        public TextBox allCATCFFEFamiliesSaveDirectoryTextBox;
-        private ToolStripSplitButton qaqcCapitalizeValuesButton;
-        private ToolStripMenuItem capitalizeSheetViewNamesButton;
-        private ToolStripMenuItem capitalizeScheduleValuesButton;
-        private TableLayoutPanel qaqcLayoutPanel;
-        private Panel qaqcToolsPanel;
-        public TableLayoutPanel qaqcRLSLayoutPanel;
-        private Panel qaqcRLSControlsPanel;
-        private Label qaqcRLSReplaceWithLabel;
-        private Label qaqcRLSReplaceLabel;
-        private Panel qaqcRLSRunPanel;
-        private Button qaqcRLSRunButton;
-        private TextBox qaqcRLSInstructionsTextBox;
-        public ComboBox qaqcRLSReplaceWithComboBox;
-        public CheckBox qaqcRLSDeleteCheckBox;
-        public ComboBox qaqcRLSReplaceComboBox;
-        public DataGridView qaqcRLSDataGridView;
-        private ToolStripButton setupUPButton;
-        private Panel setupToolsPanel;
-        private TableLayoutPanel setupUPLayoutPanel;
-        private Label setupUPLinkedModelsLabel;
-        private Panel setupUPControlsPanel1;
-        private TextBox setupUPInstructionsTextBox;
-        private Button setupUPOriginalDirectoryButton;
-        private Button setupUPUpgradePathSelectButton;
-        private Button setupUPOriginalPathSelectButton;
-        private Label setupUPSlashLabel;
-        private Label setupUPUpgradingToLabel;
-        private Label setupUPUpgradingFromLabel;
-        private Label setupUPUpgradedFilePathLabel;
-        private Label setupUPOriginalFilePathLabel;
-        private Panel setupUPRunPanel;
-        private Button setupUPRunButton;
-        private Panel roomsSRRNUrlPanel;
-        private Label roomsSRRNUrlLabel;
-        private LinkLabel roomsSRRNUrlLinkLabel;
-        private Panel viewsCEPRUrlPanel;
-        private Label viewsCEPRUrlLabel;
-        private LinkLabel viewsCEPRUrlLinkLabel;
-        private Panel materialsCMSExcelRunPanel;
-        private Button materialsCMSExcelCreateSpreadsheetButton;
-        private TableLayoutPanel materialsCMSExcelLayoutPanel;
-        private Panel materialsCMSExcelExportPanel;
-        public TextBox materialsCMSExcelSpreadsheetNameTextBox;
-        private Button materialsCMSExcelSelectSaveDirectoryButton;
-        private Label materialsCMSExcelExportLabel;
-        private Button materialsCMSExcelCreateSymbolsButton;
-        private Panel materialsCMSExcelImportPanel;
-        private Label materialsCMSExcelImportLabel;
-        private Button materialsCMSExcelSelectImportFileButton;
-        private TextBox materialsCMSExcelInstructionsTextBox;
-        public ProgressBar materialsCMSExcelCreateSymbolsProgressBar;
-        public DataGridView materialsCMSExcelDataGridView;
-        public DataGridView setupUPDataGridView;
-        public TextBox setupUPUpgradedFilePathUserTextBox;
-        public TextBox setupUPUpgradedFilePathSetTextBox;
-        public TextBox setupUPOriginalFilePathTextBox;
-        public Label setupUPUpgradingToRevitLabel;
-        public Label setupUPUpgradingFromRevitLabel;
-        private Panel setupUPControlsPanel3;
-        private Panel setupUPControlsPanel2;
-        private ToolStripButton wallsDPButton;
-        private TableLayoutPanel wallsDPLayoutPanel;
-        private TextBox wallsDPInstructionsTextBox;
-        private Panel panel2;
-        private Button wallsDPRunButton;
-        public ToolStripButton multiCatCFFEButton;
-        private ToolStripButton multiCatRE;
-        private ToolStripButton documentsPRP;
-        private Panel qaqcRLSUnswitchablePanel;
-        private Label label1;
-        public TextBox materialsCMSSetViewNameTextBox;
-        private Label materialsCMSSetViewNameLabel;
-        public ComboBox sheetsCSLFilterConditionComboBox;
-        public TextBox sheetsCSLFilterTextBox;
-        private ToolStripSeparator materialsToolStripSeparator1;
-        private ToolStripButton materialsAMLButton;
-        public TableLayoutPanel materialsAMLLayoutPanel;
-        private Panel materialsAMLHeaderPanel;
-        private Label materialsAMLHeaderLabel;
-        private TextBox materialsAMLInstructionsTextBox;
-        private Button materialsAMLLaunchPaletteButton;
-        private Panel materialsAMLLaunchPanel;
-        public DataGridView materialsAMLDataGridView;
-        private ToolStripSeparator toolStripSeparator2;
-        private ToolStripButton qaqcRFSPButton;
-        private TableLayoutPanel qaqcRFSPLayoutPanel;
         private TableLayoutPanel adminTemplateLayoutPanel;
         private ToolStrip adminTemplateToolStrip;
         private ToolStripButton adminTemplatePMButton;
         private Panel adminTemplateToolsPanel;
         private TableLayoutPanel adminTemplatePMLayoutPanel;
-        private Button adminTemplateSavePackagePublishButton;
         private Panel adminTemplatePMPickPackagePanel;
+        private Button adminTemplatePMDeletePackateButton;
+        private Label adminTemplatePMPickPackageLabel;
+        public ComboBox adminTemplatePMPickPackageComboBox;
+        private Panel adminTemplateSavePackagePanel;
+        private Button adminTemplateSavePackagePublishButton;
         private ComboBox adminTemplateSavePackageComboBox;
         private Label adminTemplateSavePackageLabel;
-        private Panel adminTemplateSavePackagePanel;
-        private Label adminTemplatePMPickPackageLabel;
         private TreeView adminTemplatePMTreeView;
-        private Button adminTemplatePMDeletePackateButton;
-        private ToolStripButton adminDataGBDVButton;
-        private Panel qaqcRFSPToolsPanel;
-        private TextBox qaqcRFSPInstructionsTextBox;
-        private Button qaqcRFSPRunButton;
-        private Button qaqcRFSPSelectFamilyButton;
-        public Label qaqcRFSPSFamilyLabel;
-        public ListBox qaqcRFSPParametersListBox;
-        private Panel panel5;
-        private Label label4;
-        private TableLayoutPanel adminDataGBDVLayoutPanel;
-        private Panel adminDataGBDVCollectPanel;
-        private Button adminDataGBDVCollectButton;
-        private Panel adminDataGBDVExportDbPanel;
-        private Panel adminDataGBDVExportCsvPanel;
-        private Label adminDataGBDVExportDbLabel;
-        private Label adminDataGBDVExportCsvLabel;
-        private Button adminDataGBDVExportDbRunButton;
-        private Button adminDataGBDVExportCsvRunButton;
-        public Label adminDataGBDVWaitLabel;
-        private Button adminDataGBDVExportCsvSelectDirectoryButton;
-        public TextBox adminDataGBDVExportCsvTextBox;
-        public TextBox adminDataGBDVExportCsvDirectoryTextBox;
-        public ComboBox adminTemplatePMPickPackageComboBox;
-        private ToolStripButton roomsCDRTButton;
-        public TableLayoutPanel roomsCDRTLayoutPanel;
-        private TextBox roomsCDRTInstructionsTextBox;
-        private Panel roomsCDRTControlsPanel;
-        private Button roomsCDRTRunButton;
-        private TableLayoutPanel electricalCEOELayoutPanel;
-        private TextBox electricalCEOETextBox;
-        private Panel electricalCEOEControlsPanel;
-        private Button electricalCEOERunButton;
+        private TabPage sandBoxTab;
+        private TableLayoutPanel sandBoxLayoutPanel;
+        public System.Windows.Forms.Integration.ElementHost sandBoxElementHost;
+        private ToolStrip sandBoxToolStrip;
+        private ToolStripButton sandBoxTestButton1;
+        private MenuStrip UIFormMenuStrip;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem optionsToolStripMenuItem;
+        public CheckBox adminFamiliesUFFullSyncCheckbox;
+        public ListBox adminFamiliesUFUpgradedFamiliesListBox;
+        public ListBox adminFamiliesUFDeletedFamiliesListBox;
+        public ProgressBar adminFamiliesUFProgressBar;
     }
 }
 

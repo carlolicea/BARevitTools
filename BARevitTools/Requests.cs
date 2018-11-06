@@ -54,9 +54,10 @@ namespace BARevitTools
         qaqcRLS = ReferencedSwitchCaseIds.qaqcRLS,
         qaqcRFSP = ReferencedSwitchCaseIds.qaqcRFSP,
         setupCWS = ReferencedSwitchCaseIds.setupCWS,
-        setupUP = ReferencedSwitchCaseIds.setupUP,
+        setupUP = ReferencedSwitchCaseIds.setupUP,        
         
         adminDataGFF = ReferencedSwitchCaseIds.adminDataGFF,
+        adminFamiliesUF = ReferencedSwitchCaseIds.adminFamiliesUF,
         adminFamiliesBAP = ReferencedSwitchCaseIds.adminFamiliesBAP,
         adminFamiliesBRP = ReferencedSwitchCaseIds.adminFamiliesBRP,
 
