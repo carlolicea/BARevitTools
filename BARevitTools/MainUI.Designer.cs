@@ -123,7 +123,6 @@ namespace BARevitTools
             this.adminFamiliesUFDeletedFamiliesTextBoxPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesUFDeletedFamiliesTextBox = new System.Windows.Forms.TextBox();
             this.adminFamiliesUFRunPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesUFProgressBar = new System.Windows.Forms.ProgressBar();
             this.adminFamiliesUFRunButton = new System.Windows.Forms.Button();
             this.adminFamiliesBAPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesBAPRunPanel = new System.Windows.Forms.Panel();
@@ -852,7 +851,7 @@ namespace BARevitTools
             adminTab.Margin = new System.Windows.Forms.Padding(0);
             adminTab.Name = "adminTab";
             adminTab.Padding = new System.Windows.Forms.Padding(3);
-            adminTab.Size = new System.Drawing.Size(735, 436);
+            adminTab.Size = new System.Drawing.Size(734, 437);
             adminTab.TabIndex = 3;
             adminTab.Text = "Admin";
             adminTab.UseVisualStyleBackColor = true;
@@ -870,7 +869,7 @@ namespace BARevitTools
             this.adminManagementTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.adminManagementTabControl.Name = "adminManagementTabControl";
             this.adminManagementTabControl.SelectedIndex = 0;
-            this.adminManagementTabControl.Size = new System.Drawing.Size(729, 430);
+            this.adminManagementTabControl.Size = new System.Drawing.Size(728, 431);
             this.adminManagementTabControl.TabIndex = 0;
             this.adminManagementTabControl.Click += new System.EventHandler(this.AllowBIMManagementTab);
             // 
@@ -883,7 +882,7 @@ namespace BARevitTools
             this.adminAboutTab.Location = new System.Drawing.Point(4, 25);
             this.adminAboutTab.Margin = new System.Windows.Forms.Padding(0);
             this.adminAboutTab.Name = "adminAboutTab";
-            this.adminAboutTab.Size = new System.Drawing.Size(721, 401);
+            this.adminAboutTab.Size = new System.Drawing.Size(720, 402);
             this.adminAboutTab.TabIndex = 3;
             this.adminAboutTab.Text = "About";
             this.adminAboutTab.Click += new System.EventHandler(this.AllowBIMManagementTab);
@@ -918,7 +917,7 @@ namespace BARevitTools
             this.adminDataTab.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataTab.Name = "adminDataTab";
             this.adminDataTab.Padding = new System.Windows.Forms.Padding(3);
-            this.adminDataTab.Size = new System.Drawing.Size(721, 401);
+            this.adminDataTab.Size = new System.Drawing.Size(720, 402);
             this.adminDataTab.TabIndex = 0;
             this.adminDataTab.Text = "Data";
             // 
@@ -936,7 +935,7 @@ namespace BARevitTools
             this.adminDataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.adminDataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminDataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.adminDataTabLayoutPanel.Size = new System.Drawing.Size(711, 391);
+            this.adminDataTabLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.adminDataTabLayoutPanel.TabIndex = 0;
             // 
             // adminDataToolStrip
@@ -953,7 +952,7 @@ namespace BARevitTools
             this.adminDataGBDVButton});
             this.adminDataToolStrip.Location = new System.Drawing.Point(0, 0);
             this.adminDataToolStrip.Name = "adminDataToolStrip";
-            this.adminDataToolStrip.Size = new System.Drawing.Size(711, 53);
+            this.adminDataToolStrip.Size = new System.Drawing.Size(710, 53);
             this.adminDataToolStrip.TabIndex = 0;
             this.adminDataToolStrip.Text = "BIMMgmtDataToolStrip";
             // 
@@ -1013,7 +1012,7 @@ namespace BARevitTools
             this.adminDataToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.adminDataToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataToolsPanel.Name = "adminDataToolsPanel";
-            this.adminDataToolsPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminDataToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminDataToolsPanel.TabIndex = 2;
             // 
             // adminDataGFFLayoutPanel
@@ -1037,7 +1036,7 @@ namespace BARevitTools
             this.adminDataGFFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminDataGFFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.adminDataGFFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.adminDataGFFLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminDataGFFLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminDataGFFLayoutPanel.TabIndex = 4;
             // 
             // adminDataGFFCollectDataPanel
@@ -1048,10 +1047,10 @@ namespace BARevitTools
             this.adminDataGFFCollectDataPanel.Controls.Add(this.adminDataGFFDataProgressBar);
             this.adminDataGFFCollectDataPanel.Controls.Add(this.adminDataGFFCollectDataButton);
             this.adminDataGFFCollectDataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminDataGFFCollectDataPanel.Location = new System.Drawing.Point(0, 153);
+            this.adminDataGFFCollectDataPanel.Location = new System.Drawing.Point(0, 154);
             this.adminDataGFFCollectDataPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFCollectDataPanel.Name = "adminDataGFFCollectDataPanel";
-            this.adminDataGFFCollectDataPanel.Size = new System.Drawing.Size(711, 35);
+            this.adminDataGFFCollectDataPanel.Size = new System.Drawing.Size(710, 35);
             this.adminDataGFFCollectDataPanel.TabIndex = 4;
             // 
             // adminDataGFFCollectDataWaitLabel
@@ -1062,7 +1061,7 @@ namespace BARevitTools
             this.adminDataGFFCollectDataWaitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminDataGFFCollectDataWaitLabel.Location = new System.Drawing.Point(140, 7);
             this.adminDataGFFCollectDataWaitLabel.Name = "adminDataGFFCollectDataWaitLabel";
-            this.adminDataGFFCollectDataWaitLabel.Size = new System.Drawing.Size(89, 19);
+            this.adminDataGFFCollectDataWaitLabel.Size = new System.Drawing.Size(88, 19);
             this.adminDataGFFCollectDataWaitLabel.TabIndex = 5;
             this.adminDataGFFCollectDataWaitLabel.Text = "Please Wait...";
             this.adminDataGFFCollectDataWaitLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1076,7 +1075,7 @@ namespace BARevitTools
             this.adminDataGFFDataProgressBar.ForeColor = System.Drawing.Color.Lime;
             this.adminDataGFFDataProgressBar.Location = new System.Drawing.Point(251, 5);
             this.adminDataGFFDataProgressBar.Name = "adminDataGFFDataProgressBar";
-            this.adminDataGFFDataProgressBar.Size = new System.Drawing.Size(453, 22);
+            this.adminDataGFFDataProgressBar.Size = new System.Drawing.Size(452, 22);
             this.adminDataGFFDataProgressBar.TabIndex = 5;
             this.adminDataGFFDataProgressBar.Visible = false;
             // 
@@ -1096,7 +1095,7 @@ namespace BARevitTools
             this.adminDataGFFSqlExportPanel.Controls.Add(this.adminDataGFFSqlExportRunButton);
             this.adminDataGFFSqlExportPanel.Controls.Add(this.adminDataGFFSqlExportLabel);
             this.adminDataGFFSqlExportPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminDataGFFSqlExportPanel.Location = new System.Drawing.Point(0, 188);
+            this.adminDataGFFSqlExportPanel.Location = new System.Drawing.Point(0, 189);
             this.adminDataGFFSqlExportPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFSqlExportPanel.Name = "adminDataGFFSqlExportPanel";
             this.adminDataGFFSqlExportPanel.Size = new System.Drawing.Size(355, 150);
@@ -1136,10 +1135,10 @@ namespace BARevitTools
             this.adminDataGFFCsvExportPanel.Controls.Add(this.adminDataGFFCsvExportLabel);
             this.adminDataGFFCsvExportPanel.Controls.Add(this.adminDataGFFCsvExportDirectoryButton);
             this.adminDataGFFCsvExportPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminDataGFFCsvExportPanel.Location = new System.Drawing.Point(355, 188);
+            this.adminDataGFFCsvExportPanel.Location = new System.Drawing.Point(355, 189);
             this.adminDataGFFCsvExportPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFCsvExportPanel.Name = "adminDataGFFCsvExportPanel";
-            this.adminDataGFFCsvExportPanel.Size = new System.Drawing.Size(356, 150);
+            this.adminDataGFFCsvExportPanel.Size = new System.Drawing.Size(355, 150);
             this.adminDataGFFCsvExportPanel.TabIndex = 6;
             // 
             // adminDataGFFCsvExportDirectoryTextBox
@@ -1149,14 +1148,14 @@ namespace BARevitTools
             this.adminDataGFFCsvExportDirectoryTextBox.Location = new System.Drawing.Point(143, 56);
             this.adminDataGFFCsvExportDirectoryTextBox.Name = "adminDataGFFCsvExportDirectoryTextBox";
             this.adminDataGFFCsvExportDirectoryTextBox.ReadOnly = true;
-            this.adminDataGFFCsvExportDirectoryTextBox.Size = new System.Drawing.Size(208, 20);
+            this.adminDataGFFCsvExportDirectoryTextBox.Size = new System.Drawing.Size(207, 20);
             this.adminDataGFFCsvExportDirectoryTextBox.TabIndex = 1;
             this.adminDataGFFCsvExportDirectoryTextBox.Text = "<Save Directory>";
             // 
             // adminDataGFFCsvExportRunButton
             // 
             this.adminDataGFFCsvExportRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminDataGFFCsvExportRunButton.Location = new System.Drawing.Point(294, 120);
+            this.adminDataGFFCsvExportRunButton.Location = new System.Drawing.Point(293, 120);
             this.adminDataGFFCsvExportRunButton.Name = "adminDataGFFCsvExportRunButton";
             this.adminDataGFFCsvExportRunButton.Size = new System.Drawing.Size(60, 25);
             this.adminDataGFFCsvExportRunButton.TabIndex = 3;
@@ -1170,7 +1169,7 @@ namespace BARevitTools
             | System.Windows.Forms.AnchorStyles.Right)));
             this.adminDataGFFCsvExportNameTextBox.Location = new System.Drawing.Point(3, 29);
             this.adminDataGFFCsvExportNameTextBox.Name = "adminDataGFFCsvExportNameTextBox";
-            this.adminDataGFFCsvExportNameTextBox.Size = new System.Drawing.Size(348, 20);
+            this.adminDataGFFCsvExportNameTextBox.Size = new System.Drawing.Size(347, 20);
             this.adminDataGFFCsvExportNameTextBox.TabIndex = 6;
             this.adminDataGFFCsvExportNameTextBox.Text = "<File Export Name>";
             // 
@@ -1183,7 +1182,7 @@ namespace BARevitTools
             this.adminDataGFFCsvExportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminDataGFFCsvExportLabel.Location = new System.Drawing.Point(3, 6);
             this.adminDataGFFCsvExportLabel.Name = "adminDataGFFCsvExportLabel";
-            this.adminDataGFFCsvExportLabel.Size = new System.Drawing.Size(348, 21);
+            this.adminDataGFFCsvExportLabel.Size = new System.Drawing.Size(347, 21);
             this.adminDataGFFCsvExportLabel.TabIndex = 5;
             this.adminDataGFFCsvExportLabel.Text = "EXPORT TO CSV";
             this.adminDataGFFCsvExportLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1209,7 +1208,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionPanel.Location = new System.Drawing.Point(0, 0);
             this.adminDataGFFCollectionPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFCollectionPanel.Name = "adminDataGFFCollectionPanel";
-            this.adminDataGFFCollectionPanel.Size = new System.Drawing.Size(711, 118);
+            this.adminDataGFFCollectionPanel.Size = new System.Drawing.Size(710, 119);
             this.adminDataGFFCollectionPanel.TabIndex = 3;
             // 
             // adminDataGFFCollectionLayoutPanel
@@ -1231,7 +1230,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionLayoutPanel.RowCount = 2;
             this.adminDataGFFCollectionLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.adminDataGFFCollectionLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminDataGFFCollectionLayoutPanel.Size = new System.Drawing.Size(709, 116);
+            this.adminDataGFFCollectionLayoutPanel.Size = new System.Drawing.Size(708, 117);
             this.adminDataGFFCollectionLayoutPanel.TabIndex = 5;
             // 
             // adminDataGFFCollectionFastLabelPanel
@@ -1312,7 +1311,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowestLabelPanel.Location = new System.Drawing.Point(353, 0);
             this.adminDataGFFCollectionSlowestLabelPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFCollectionSlowestLabelPanel.Name = "adminDataGFFCollectionSlowestLabelPanel";
-            this.adminDataGFFCollectionSlowestLabelPanel.Size = new System.Drawing.Size(356, 25);
+            this.adminDataGFFCollectionSlowestLabelPanel.Size = new System.Drawing.Size(355, 25);
             this.adminDataGFFCollectionSlowestLabelPanel.TabIndex = 2;
             // 
             // adminDataGFFCollectionSlowestLabel
@@ -1343,7 +1342,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionsFastCheckedListPanel.Location = new System.Drawing.Point(0, 25);
             this.adminDataGFFCollectionsFastCheckedListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFCollectionsFastCheckedListPanel.Name = "adminDataGFFCollectionsFastCheckedListPanel";
-            this.adminDataGFFCollectionsFastCheckedListPanel.Size = new System.Drawing.Size(175, 91);
+            this.adminDataGFFCollectionsFastCheckedListPanel.Size = new System.Drawing.Size(175, 92);
             this.adminDataGFFCollectionsFastCheckedListPanel.TabIndex = 3;
             // 
             // adminDataGFFCollectionFastCheckedListBox
@@ -1357,7 +1356,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionFastCheckedListBox.Location = new System.Drawing.Point(0, 0);
             this.adminDataGFFCollectionFastCheckedListBox.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFCollectionFastCheckedListBox.Name = "adminDataGFFCollectionFastCheckedListBox";
-            this.adminDataGFFCollectionFastCheckedListBox.Size = new System.Drawing.Size(175, 91);
+            this.adminDataGFFCollectionFastCheckedListBox.Size = new System.Drawing.Size(175, 92);
             this.adminDataGFFCollectionFastCheckedListBox.TabIndex = 1;
             this.adminDataGFFCollectionFastCheckedListBox.ThreeDCheckBoxes = true;
             this.adminDataGFFCollectionFastCheckedListBox.UseTabStops = false;
@@ -1369,7 +1368,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionsSlowCheckedListPanel.Location = new System.Drawing.Point(175, 25);
             this.adminDataGFFCollectionsSlowCheckedListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFCollectionsSlowCheckedListPanel.Name = "adminDataGFFCollectionsSlowCheckedListPanel";
-            this.adminDataGFFCollectionsSlowCheckedListPanel.Size = new System.Drawing.Size(178, 91);
+            this.adminDataGFFCollectionsSlowCheckedListPanel.Size = new System.Drawing.Size(178, 92);
             this.adminDataGFFCollectionsSlowCheckedListPanel.TabIndex = 4;
             // 
             // adminDataGFFCollectionSlowCheckedListBox
@@ -1383,7 +1382,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowCheckedListBox.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFCollectionSlowCheckedListBox.MultiColumn = true;
             this.adminDataGFFCollectionSlowCheckedListBox.Name = "adminDataGFFCollectionSlowCheckedListBox";
-            this.adminDataGFFCollectionSlowCheckedListBox.Size = new System.Drawing.Size(178, 91);
+            this.adminDataGFFCollectionSlowCheckedListBox.Size = new System.Drawing.Size(178, 92);
             this.adminDataGFFCollectionSlowCheckedListBox.TabIndex = 2;
             this.adminDataGFFCollectionSlowCheckedListBox.ThreeDCheckBoxes = true;
             this.adminDataGFFCollectionSlowCheckedListBox.UseTabStops = false;
@@ -1395,7 +1394,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionsSlowestCheckedListPanel.Location = new System.Drawing.Point(353, 25);
             this.adminDataGFFCollectionsSlowestCheckedListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFCollectionsSlowestCheckedListPanel.Name = "adminDataGFFCollectionsSlowestCheckedListPanel";
-            this.adminDataGFFCollectionsSlowestCheckedListPanel.Size = new System.Drawing.Size(356, 91);
+            this.adminDataGFFCollectionsSlowestCheckedListPanel.Size = new System.Drawing.Size(355, 92);
             this.adminDataGFFCollectionsSlowestCheckedListPanel.TabIndex = 5;
             // 
             // adminDataGFFCollectionSlowestCheckedListBox
@@ -1416,7 +1415,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowestCheckedListBox.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFCollectionSlowestCheckedListBox.MultiColumn = true;
             this.adminDataGFFCollectionSlowestCheckedListBox.Name = "adminDataGFFCollectionSlowestCheckedListBox";
-            this.adminDataGFFCollectionSlowestCheckedListBox.Size = new System.Drawing.Size(356, 91);
+            this.adminDataGFFCollectionSlowestCheckedListBox.Size = new System.Drawing.Size(355, 92);
             this.adminDataGFFCollectionSlowestCheckedListBox.TabIndex = 2;
             this.adminDataGFFCollectionSlowestCheckedListBox.ThreeDCheckBoxes = true;
             this.adminDataGFFCollectionSlowestCheckedListBox.UseTabStops = false;
@@ -1428,7 +1427,7 @@ namespace BARevitTools
             this.adminDataGFFSearchDirectoryPanel.Controls.Add(this.adminDataGFFSearchDirectoryTextBox);
             this.adminDataGFFSearchDirectoryPanel.Controls.Add(this.adminDataGFFSearchDirectorySelectButton);
             this.adminDataGFFSearchDirectoryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminDataGFFSearchDirectoryPanel.Location = new System.Drawing.Point(0, 118);
+            this.adminDataGFFSearchDirectoryPanel.Location = new System.Drawing.Point(0, 119);
             this.adminDataGFFSearchDirectoryPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFSearchDirectoryPanel.Name = "adminDataGFFSearchDirectoryPanel";
             this.adminDataGFFSearchDirectoryPanel.Size = new System.Drawing.Size(355, 35);
@@ -1461,10 +1460,10 @@ namespace BARevitTools
             this.adminDataGFFDatePanel.Controls.Add(this.adminDataGFFDatePicker);
             this.adminDataGFFDatePanel.Controls.Add(this.adminDataGFFDateCheckBox);
             this.adminDataGFFDatePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminDataGFFDatePanel.Location = new System.Drawing.Point(355, 118);
+            this.adminDataGFFDatePanel.Location = new System.Drawing.Point(355, 119);
             this.adminDataGFFDatePanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminDataGFFDatePanel.Name = "adminDataGFFDatePanel";
-            this.adminDataGFFDatePanel.Size = new System.Drawing.Size(356, 35);
+            this.adminDataGFFDatePanel.Size = new System.Drawing.Size(355, 35);
             this.adminDataGFFDatePanel.TabIndex = 8;
             // 
             // adminDataGFFDatePicker
@@ -1503,7 +1502,7 @@ namespace BARevitTools
             this.adminDataGBDVLayoutPanel.RowCount = 2;
             this.adminDataGBDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.adminDataGBDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminDataGBDVLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminDataGBDVLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminDataGBDVLayoutPanel.TabIndex = 7;
             this.adminDataGBDVLayoutPanel.Visible = false;
             // 
@@ -1517,7 +1516,7 @@ namespace BARevitTools
             this.adminDataGBDVCollectPanel.Location = new System.Drawing.Point(2, 2);
             this.adminDataGBDVCollectPanel.Margin = new System.Windows.Forms.Padding(2);
             this.adminDataGBDVCollectPanel.Name = "adminDataGBDVCollectPanel";
-            this.adminDataGBDVCollectPanel.Size = new System.Drawing.Size(707, 32);
+            this.adminDataGBDVCollectPanel.Size = new System.Drawing.Size(706, 32);
             this.adminDataGBDVCollectPanel.TabIndex = 0;
             // 
             // adminDataGBDVWaitLabel
@@ -1553,7 +1552,7 @@ namespace BARevitTools
             this.adminDataGBDVExportDbPanel.Location = new System.Drawing.Point(2, 38);
             this.adminDataGBDVExportDbPanel.Margin = new System.Windows.Forms.Padding(2);
             this.adminDataGBDVExportDbPanel.Name = "adminDataGBDVExportDbPanel";
-            this.adminDataGBDVExportDbPanel.Size = new System.Drawing.Size(351, 298);
+            this.adminDataGBDVExportDbPanel.Size = new System.Drawing.Size(351, 299);
             this.adminDataGBDVExportDbPanel.TabIndex = 1;
             // 
             // adminDataGBDVExportDbRunButton
@@ -1592,7 +1591,7 @@ namespace BARevitTools
             this.adminDataGBDVExportCsvPanel.Location = new System.Drawing.Point(357, 38);
             this.adminDataGBDVExportCsvPanel.Margin = new System.Windows.Forms.Padding(2);
             this.adminDataGBDVExportCsvPanel.Name = "adminDataGBDVExportCsvPanel";
-            this.adminDataGBDVExportCsvPanel.Size = new System.Drawing.Size(352, 298);
+            this.adminDataGBDVExportCsvPanel.Size = new System.Drawing.Size(351, 299);
             this.adminDataGBDVExportCsvPanel.TabIndex = 2;
             // 
             // adminDataGBDVExportCsvDirectoryTextBox
@@ -1631,7 +1630,7 @@ namespace BARevitTools
             this.adminDataGBDVExportCsvTextBox.Location = new System.Drawing.Point(3, 22);
             this.adminDataGBDVExportCsvTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.adminDataGBDVExportCsvTextBox.Name = "adminDataGBDVExportCsvTextBox";
-            this.adminDataGBDVExportCsvTextBox.Size = new System.Drawing.Size(343, 20);
+            this.adminDataGBDVExportCsvTextBox.Size = new System.Drawing.Size(342, 20);
             this.adminDataGBDVExportCsvTextBox.TabIndex = 1;
             this.adminDataGBDVExportCsvTextBox.Text = "<File Export Name>";
             // 
@@ -1644,7 +1643,7 @@ namespace BARevitTools
             this.adminDataGBDVExportCsvLabel.Location = new System.Drawing.Point(3, 0);
             this.adminDataGBDVExportCsvLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.adminDataGBDVExportCsvLabel.Name = "adminDataGBDVExportCsvLabel";
-            this.adminDataGBDVExportCsvLabel.Size = new System.Drawing.Size(343, 20);
+            this.adminDataGBDVExportCsvLabel.Size = new System.Drawing.Size(342, 20);
             this.adminDataGBDVExportCsvLabel.TabIndex = 0;
             this.adminDataGBDVExportCsvLabel.Text = "EXPORT TO CSV";
             this.adminDataGBDVExportCsvLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1658,7 +1657,7 @@ namespace BARevitTools
             this.adminFamiliesTab.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesTab.Name = "adminFamiliesTab";
             this.adminFamiliesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.adminFamiliesTab.Size = new System.Drawing.Size(721, 401);
+            this.adminFamiliesTab.Size = new System.Drawing.Size(720, 402);
             this.adminFamiliesTab.TabIndex = 1;
             this.adminFamiliesTab.Text = "Families";
             // 
@@ -1675,7 +1674,7 @@ namespace BARevitTools
             this.adminFamiliesLayoutPanel.RowCount = 2;
             this.adminFamiliesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.adminFamiliesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesLayoutPanel.Size = new System.Drawing.Size(711, 391);
+            this.adminFamiliesLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.adminFamiliesLayoutPanel.TabIndex = 0;
             // 
             // adminFamiliesToolStrip
@@ -1694,21 +1693,20 @@ namespace BARevitTools
             this.adminFamiliesDFBButton});
             this.adminFamiliesToolStrip.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesToolStrip.Name = "adminFamiliesToolStrip";
-            this.adminFamiliesToolStrip.Size = new System.Drawing.Size(711, 53);
+            this.adminFamiliesToolStrip.Size = new System.Drawing.Size(710, 53);
             this.adminFamiliesToolStrip.TabIndex = 0;
             this.adminFamiliesToolStrip.Text = "BIMFamiliesToolStrip";
             // 
             // adminFamiliesUFButton
             // 
             this.adminFamiliesUFButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesUFButton.Image")));
-            this.adminFamiliesUFButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.adminFamiliesUFButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.adminFamiliesUFButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.adminFamiliesUFButton.Name = "adminFamiliesUFButton";
             this.adminFamiliesUFButton.Size = new System.Drawing.Size(102, 50);
             this.adminFamiliesUFButton.Text = "Upgrade Families";
             this.adminFamiliesUFButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.adminFamiliesUFButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.adminFamiliesUFButton.Visible = false;
             this.adminFamiliesUFButton.Click += new System.EventHandler(this.AdminFamiliesUFButton_Click);
             // 
             // toolStripSeparator3
@@ -1774,7 +1772,7 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.adminFamiliesToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesToolsPanel.Name = "adminFamiliesToolsPanel";
-            this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesToolsPanel.TabIndex = 1;
             // 
             // adminFamiliesUFLayoutPanel
@@ -1797,7 +1795,7 @@ namespace BARevitTools
             this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.adminFamiliesUFLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminFamiliesUFLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesUFLayoutPanel.TabIndex = 1;
             this.adminFamiliesUFLayoutPanel.Visible = false;
             // 
@@ -1809,7 +1807,7 @@ namespace BARevitTools
             this.adminFamiliesUFFullSyncPanel.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesUFFullSyncPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesUFFullSyncPanel.Name = "adminFamiliesUFFullSyncPanel";
-            this.adminFamiliesUFFullSyncPanel.Size = new System.Drawing.Size(711, 30);
+            this.adminFamiliesUFFullSyncPanel.Size = new System.Drawing.Size(710, 30);
             this.adminFamiliesUFFullSyncPanel.TabIndex = 0;
             // 
             // adminFamiliesUFFullSyncCheckbox
@@ -1830,7 +1828,7 @@ namespace BARevitTools
             this.adminFamiliesUFUpgradedFamiliesListBox.Location = new System.Drawing.Point(0, 65);
             this.adminFamiliesUFUpgradedFamiliesListBox.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.adminFamiliesUFUpgradedFamiliesListBox.Name = "adminFamiliesUFUpgradedFamiliesListBox";
-            this.adminFamiliesUFUpgradedFamiliesListBox.Size = new System.Drawing.Size(352, 243);
+            this.adminFamiliesUFUpgradedFamiliesListBox.Size = new System.Drawing.Size(352, 244);
             this.adminFamiliesUFUpgradedFamiliesListBox.TabIndex = 1;
             // 
             // adminFamiliesUFDeletedFamiliesListBox
@@ -1840,7 +1838,7 @@ namespace BARevitTools
             this.adminFamiliesUFDeletedFamiliesListBox.Location = new System.Drawing.Point(358, 65);
             this.adminFamiliesUFDeletedFamiliesListBox.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.adminFamiliesUFDeletedFamiliesListBox.Name = "adminFamiliesUFDeletedFamiliesListBox";
-            this.adminFamiliesUFDeletedFamiliesListBox.Size = new System.Drawing.Size(353, 243);
+            this.adminFamiliesUFDeletedFamiliesListBox.Size = new System.Drawing.Size(352, 244);
             this.adminFamiliesUFDeletedFamiliesListBox.TabIndex = 2;
             // 
             // adminFamiliesUFUpgradedFamiliesTextBoxPanel
@@ -1879,7 +1877,7 @@ namespace BARevitTools
             this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Location = new System.Drawing.Point(358, 30);
             this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Name = "adminFamiliesUFDeletedFamiliesTextBoxPanel";
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Size = new System.Drawing.Size(353, 35);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Size = new System.Drawing.Size(352, 35);
             this.adminFamiliesUFDeletedFamiliesTextBoxPanel.TabIndex = 4;
             // 
             // adminFamiliesUFDeletedFamiliesTextBox
@@ -1892,7 +1890,7 @@ namespace BARevitTools
             this.adminFamiliesUFDeletedFamiliesTextBox.Location = new System.Drawing.Point(0, 10);
             this.adminFamiliesUFDeletedFamiliesTextBox.Multiline = true;
             this.adminFamiliesUFDeletedFamiliesTextBox.Name = "adminFamiliesUFDeletedFamiliesTextBox";
-            this.adminFamiliesUFDeletedFamiliesTextBox.Size = new System.Drawing.Size(352, 22);
+            this.adminFamiliesUFDeletedFamiliesTextBox.Size = new System.Drawing.Size(351, 22);
             this.adminFamiliesUFDeletedFamiliesTextBox.TabIndex = 0;
             this.adminFamiliesUFDeletedFamiliesTextBox.Text = "FAMILIES DELETED";
             this.adminFamiliesUFDeletedFamiliesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1900,24 +1898,13 @@ namespace BARevitTools
             // adminFamiliesUFRunPanel
             // 
             this.adminFamiliesUFLayoutPanel.SetColumnSpan(this.adminFamiliesUFRunPanel, 2);
-            this.adminFamiliesUFRunPanel.Controls.Add(this.adminFamiliesUFProgressBar);
             this.adminFamiliesUFRunPanel.Controls.Add(this.adminFamiliesUFRunButton);
             this.adminFamiliesUFRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFRunPanel.Location = new System.Drawing.Point(0, 308);
+            this.adminFamiliesUFRunPanel.Location = new System.Drawing.Point(0, 309);
             this.adminFamiliesUFRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesUFRunPanel.Name = "adminFamiliesUFRunPanel";
-            this.adminFamiliesUFRunPanel.Size = new System.Drawing.Size(711, 30);
+            this.adminFamiliesUFRunPanel.Size = new System.Drawing.Size(710, 30);
             this.adminFamiliesUFRunPanel.TabIndex = 5;
-            // 
-            // adminFamiliesUFProgressBar
-            // 
-            this.adminFamiliesUFProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesUFProgressBar.Location = new System.Drawing.Point(84, 4);
-            this.adminFamiliesUFProgressBar.Name = "adminFamiliesUFProgressBar";
-            this.adminFamiliesUFProgressBar.Size = new System.Drawing.Size(621, 23);
-            this.adminFamiliesUFProgressBar.TabIndex = 1;
-            this.adminFamiliesUFProgressBar.Visible = false;
             // 
             // adminFamiliesUFRunButton
             // 
@@ -1946,7 +1933,7 @@ namespace BARevitTools
             this.adminFamiliesBAPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesBAPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminFamiliesBAPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.adminFamiliesBAPLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminFamiliesBAPLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesBAPLayoutPanel.TabIndex = 2;
             this.adminFamiliesBAPLayoutPanel.Visible = false;
             // 
@@ -1956,10 +1943,10 @@ namespace BARevitTools
             this.adminFamiliesBAPRunPanel.Controls.Add(this.adminFamiliesBAPProgressBar);
             this.adminFamiliesBAPRunPanel.Controls.Add(this.adminFamiliesBAPRunButton);
             this.adminFamiliesBAPRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBAPRunPanel.Location = new System.Drawing.Point(0, 303);
+            this.adminFamiliesBAPRunPanel.Location = new System.Drawing.Point(0, 304);
             this.adminFamiliesBAPRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBAPRunPanel.Name = "adminFamiliesBAPRunPanel";
-            this.adminFamiliesBAPRunPanel.Size = new System.Drawing.Size(711, 35);
+            this.adminFamiliesBAPRunPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesBAPRunPanel.TabIndex = 5;
             // 
             // adminFamiliesBAPProgressBar
@@ -1969,14 +1956,14 @@ namespace BARevitTools
             this.adminFamiliesBAPProgressBar.ForeColor = System.Drawing.Color.GreenYellow;
             this.adminFamiliesBAPProgressBar.Location = new System.Drawing.Point(7, 6);
             this.adminFamiliesBAPProgressBar.Name = "adminFamiliesBAPProgressBar";
-            this.adminFamiliesBAPProgressBar.Size = new System.Drawing.Size(620, 23);
+            this.adminFamiliesBAPProgressBar.Size = new System.Drawing.Size(619, 23);
             this.adminFamiliesBAPProgressBar.TabIndex = 1;
             this.adminFamiliesBAPProgressBar.Visible = false;
             // 
             // adminFamiliesBAPRunButton
             // 
             this.adminFamiliesBAPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesBAPRunButton.Location = new System.Drawing.Point(634, 6);
+            this.adminFamiliesBAPRunButton.Location = new System.Drawing.Point(633, 6);
             this.adminFamiliesBAPRunButton.Name = "adminFamiliesBAPRunButton";
             this.adminFamiliesBAPRunButton.Size = new System.Drawing.Size(75, 23);
             this.adminFamiliesBAPRunButton.TabIndex = 0;
@@ -1991,7 +1978,7 @@ namespace BARevitTools
             this.adminFamiliesBAPSplitPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adminFamiliesBAPSplitPanel.Location = new System.Drawing.Point(3, 38);
             this.adminFamiliesBAPSplitPanel.Name = "adminFamiliesBAPSplitPanel";
-            this.adminFamiliesBAPSplitPanel.Size = new System.Drawing.Size(705, 262);
+            this.adminFamiliesBAPSplitPanel.Size = new System.Drawing.Size(704, 263);
             this.adminFamiliesBAPSplitPanel.TabIndex = 6;
             // 
             // adminFamiliesBAPSplitContainer
@@ -2007,8 +1994,8 @@ namespace BARevitTools
             // adminFamiliesBAPSplitContainer.Panel2
             // 
             this.adminFamiliesBAPSplitContainer.Panel2.Controls.Add(this.adminFamiliesBAPSelectLayoutPanel);
-            this.adminFamiliesBAPSplitContainer.Size = new System.Drawing.Size(705, 262);
-            this.adminFamiliesBAPSplitContainer.SplitterDistance = 365;
+            this.adminFamiliesBAPSplitContainer.Size = new System.Drawing.Size(704, 263);
+            this.adminFamiliesBAPSplitContainer.SplitterDistance = 364;
             this.adminFamiliesBAPSplitContainer.TabIndex = 0;
             // 
             // adminFamiliesBAPParametersLayoutPanel
@@ -2024,7 +2011,7 @@ namespace BARevitTools
             this.adminFamiliesBAPParametersLayoutPanel.RowCount = 2;
             this.adminFamiliesBAPParametersLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminFamiliesBAPParametersLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesBAPParametersLayoutPanel.Size = new System.Drawing.Size(365, 262);
+            this.adminFamiliesBAPParametersLayoutPanel.Size = new System.Drawing.Size(364, 263);
             this.adminFamiliesBAPParametersLayoutPanel.TabIndex = 4;
             // 
             // adminFamiliesBAPParametersDGV
@@ -2036,7 +2023,7 @@ namespace BARevitTools
             this.adminFamiliesBAPParametersDGV.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBAPParametersDGV.Name = "adminFamiliesBAPParametersDGV";
             this.adminFamiliesBAPParametersDGV.RowHeadersWidth = 15;
-            this.adminFamiliesBAPParametersDGV.Size = new System.Drawing.Size(365, 227);
+            this.adminFamiliesBAPParametersDGV.Size = new System.Drawing.Size(364, 228);
             this.adminFamiliesBAPParametersDGV.TabIndex = 0;
             // 
             // adminFamiliesBAPSharedParametersPanel
@@ -2048,7 +2035,7 @@ namespace BARevitTools
             this.adminFamiliesBAPSharedParametersPanel.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesBAPSharedParametersPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBAPSharedParametersPanel.Name = "adminFamiliesBAPSharedParametersPanel";
-            this.adminFamiliesBAPSharedParametersPanel.Size = new System.Drawing.Size(365, 35);
+            this.adminFamiliesBAPSharedParametersPanel.Size = new System.Drawing.Size(364, 35);
             this.adminFamiliesBAPSharedParametersPanel.TabIndex = 3;
             // 
             // BIMFamiliesBAPSharedParametersButton
@@ -2076,7 +2063,7 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectLayoutPanel.RowCount = 2;
             this.adminFamiliesBAPSelectLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminFamiliesBAPSelectLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesBAPSelectLayoutPanel.Size = new System.Drawing.Size(336, 262);
+            this.adminFamiliesBAPSelectLayoutPanel.Size = new System.Drawing.Size(336, 263);
             this.adminFamiliesBAPSelectLayoutPanel.TabIndex = 5;
             // 
             // adminFamiliesBAPSelectPanel
@@ -2123,7 +2110,7 @@ namespace BARevitTools
             this.adminFamiliesBAPFamiliesDGV.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBAPFamiliesDGV.Name = "adminFamiliesBAPFamiliesDGV";
             this.adminFamiliesBAPFamiliesDGV.RowHeadersVisible = false;
-            this.adminFamiliesBAPFamiliesDGV.Size = new System.Drawing.Size(336, 227);
+            this.adminFamiliesBAPFamiliesDGV.Size = new System.Drawing.Size(336, 228);
             this.adminFamiliesBAPFamiliesDGV.TabIndex = 1;
             // 
             // adminFamiliesBAPFamiliesDirectoryPanel
@@ -2135,7 +2122,7 @@ namespace BARevitTools
             this.adminFamiliesBAPFamiliesDirectoryPanel.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesBAPFamiliesDirectoryPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBAPFamiliesDirectoryPanel.Name = "adminFamiliesBAPFamiliesDirectoryPanel";
-            this.adminFamiliesBAPFamiliesDirectoryPanel.Size = new System.Drawing.Size(711, 35);
+            this.adminFamiliesBAPFamiliesDirectoryPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesBAPFamiliesDirectoryPanel.TabIndex = 7;
             // 
             // adminFamiliesBAPDirectorySelectButton
@@ -2164,7 +2151,7 @@ namespace BARevitTools
             this.adminFamiliesBRPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminFamiliesBRPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesBRPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.adminFamiliesBRPLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminFamiliesBRPLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesBRPLayoutPanel.TabIndex = 3;
             this.adminFamiliesBRPLayoutPanel.Visible = false;
             // 
@@ -2174,10 +2161,10 @@ namespace BARevitTools
             this.adminFamiliesBRPRunPanel.Controls.Add(this.adminFamiliesBRPProgressBar);
             this.adminFamiliesBRPRunPanel.Controls.Add(this.adminFamiliesBRPRunButton);
             this.adminFamiliesBRPRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesBRPRunPanel.Location = new System.Drawing.Point(0, 303);
+            this.adminFamiliesBRPRunPanel.Location = new System.Drawing.Point(0, 304);
             this.adminFamiliesBRPRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBRPRunPanel.Name = "adminFamiliesBRPRunPanel";
-            this.adminFamiliesBRPRunPanel.Size = new System.Drawing.Size(711, 35);
+            this.adminFamiliesBRPRunPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesBRPRunPanel.TabIndex = 5;
             // 
             // adminFamiliesBRPProgressBar
@@ -2187,14 +2174,14 @@ namespace BARevitTools
             this.adminFamiliesBRPProgressBar.ForeColor = System.Drawing.Color.GreenYellow;
             this.adminFamiliesBRPProgressBar.Location = new System.Drawing.Point(7, 6);
             this.adminFamiliesBRPProgressBar.Name = "adminFamiliesBRPProgressBar";
-            this.adminFamiliesBRPProgressBar.Size = new System.Drawing.Size(620, 23);
+            this.adminFamiliesBRPProgressBar.Size = new System.Drawing.Size(619, 23);
             this.adminFamiliesBRPProgressBar.TabIndex = 1;
             this.adminFamiliesBRPProgressBar.Visible = false;
             // 
             // adminFamiliesBRPRunButton
             // 
             this.adminFamiliesBRPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesBRPRunButton.Location = new System.Drawing.Point(634, 6);
+            this.adminFamiliesBRPRunButton.Location = new System.Drawing.Point(633, 6);
             this.adminFamiliesBRPRunButton.Name = "adminFamiliesBRPRunButton";
             this.adminFamiliesBRPRunButton.Size = new System.Drawing.Size(75, 23);
             this.adminFamiliesBRPRunButton.TabIndex = 0;
@@ -2209,7 +2196,7 @@ namespace BARevitTools
             this.adminFamiliesBRPSplitPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adminFamiliesBRPSplitPanel.Location = new System.Drawing.Point(3, 38);
             this.adminFamiliesBRPSplitPanel.Name = "adminFamiliesBRPSplitPanel";
-            this.adminFamiliesBRPSplitPanel.Size = new System.Drawing.Size(705, 262);
+            this.adminFamiliesBRPSplitPanel.Size = new System.Drawing.Size(704, 263);
             this.adminFamiliesBRPSplitPanel.TabIndex = 6;
             // 
             // adminFamiliesBRPSplitContainer
@@ -2225,8 +2212,8 @@ namespace BARevitTools
             // adminFamiliesBRPSplitContainer.Panel2
             // 
             this.adminFamiliesBRPSplitContainer.Panel2.Controls.Add(this.adminFamiliesBPRSFamiliesLayoutPanel);
-            this.adminFamiliesBRPSplitContainer.Size = new System.Drawing.Size(705, 262);
-            this.adminFamiliesBRPSplitContainer.SplitterDistance = 338;
+            this.adminFamiliesBRPSplitContainer.Size = new System.Drawing.Size(704, 263);
+            this.adminFamiliesBRPSplitContainer.SplitterDistance = 336;
             this.adminFamiliesBRPSplitContainer.TabIndex = 0;
             // 
             // adminFamiliesBRPParametersLayoutPanel
@@ -2242,7 +2229,7 @@ namespace BARevitTools
             this.adminFamiliesBRPParametersLayoutPanel.RowCount = 2;
             this.adminFamiliesBRPParametersLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminFamiliesBRPParametersLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesBRPParametersLayoutPanel.Size = new System.Drawing.Size(338, 262);
+            this.adminFamiliesBRPParametersLayoutPanel.Size = new System.Drawing.Size(336, 263);
             this.adminFamiliesBRPParametersLayoutPanel.TabIndex = 4;
             // 
             // adminFamiliesBRPParametersDGV
@@ -2254,7 +2241,7 @@ namespace BARevitTools
             this.adminFamiliesBRPParametersDGV.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBRPParametersDGV.Name = "adminFamiliesBRPParametersDGV";
             this.adminFamiliesBRPParametersDGV.RowHeadersWidth = 15;
-            this.adminFamiliesBRPParametersDGV.Size = new System.Drawing.Size(338, 227);
+            this.adminFamiliesBRPParametersDGV.Size = new System.Drawing.Size(336, 228);
             this.adminFamiliesBRPParametersDGV.TabIndex = 0;
             this.adminFamiliesBRPParametersDGV.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AdminFamiliesBRPParametersDGV_CellMouseUp);
             // 
@@ -2266,7 +2253,7 @@ namespace BARevitTools
             this.adminFamiliesBRPParametersPanel.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesBRPParametersPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBRPParametersPanel.Name = "adminFamiliesBRPParametersPanel";
-            this.adminFamiliesBRPParametersPanel.Size = new System.Drawing.Size(338, 35);
+            this.adminFamiliesBRPParametersPanel.Size = new System.Drawing.Size(336, 35);
             this.adminFamiliesBRPParametersPanel.TabIndex = 3;
             // 
             // adminFamiliesBPRSFamiliesLayoutPanel
@@ -2282,7 +2269,7 @@ namespace BARevitTools
             this.adminFamiliesBPRSFamiliesLayoutPanel.RowCount = 2;
             this.adminFamiliesBPRSFamiliesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminFamiliesBPRSFamiliesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesBPRSFamiliesLayoutPanel.Size = new System.Drawing.Size(363, 262);
+            this.adminFamiliesBPRSFamiliesLayoutPanel.Size = new System.Drawing.Size(364, 263);
             this.adminFamiliesBPRSFamiliesLayoutPanel.TabIndex = 4;
             // 
             // adminFamiliesBRPFamiliesDGV
@@ -2296,7 +2283,7 @@ namespace BARevitTools
             this.adminFamiliesBRPFamiliesDGV.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBRPFamiliesDGV.Name = "adminFamiliesBRPFamiliesDGV";
             this.adminFamiliesBRPFamiliesDGV.RowHeadersVisible = false;
-            this.adminFamiliesBRPFamiliesDGV.Size = new System.Drawing.Size(363, 227);
+            this.adminFamiliesBRPFamiliesDGV.Size = new System.Drawing.Size(364, 228);
             this.adminFamiliesBRPFamiliesDGV.TabIndex = 1;
             this.adminFamiliesBRPFamiliesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminFamiliesBRPFamiliesDGV_CellContentClick);
             // 
@@ -2310,7 +2297,7 @@ namespace BARevitTools
             this.adminFamiliesBRPSelectPanel.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesBRPSelectPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBRPSelectPanel.Name = "adminFamiliesBRPSelectPanel";
-            this.adminFamiliesBRPSelectPanel.Size = new System.Drawing.Size(363, 35);
+            this.adminFamiliesBRPSelectPanel.Size = new System.Drawing.Size(364, 35);
             this.adminFamiliesBRPSelectPanel.TabIndex = 4;
             // 
             // adminFamiliesBRPSelectNoneButton
@@ -2342,7 +2329,7 @@ namespace BARevitTools
             this.adminFamiliesBRPCsvDirectoryPanel.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesBRPCsvDirectoryPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesBRPCsvDirectoryPanel.Name = "adminFamiliesBRPCsvDirectoryPanel";
-            this.adminFamiliesBRPCsvDirectoryPanel.Size = new System.Drawing.Size(711, 35);
+            this.adminFamiliesBRPCsvDirectoryPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesBRPCsvDirectoryPanel.TabIndex = 7;
             // 
             // adminFamiliesBRPDirectorySelectButton
@@ -2369,7 +2356,7 @@ namespace BARevitTools
             this.adminFamiliesDFBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminFamiliesDFBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesDFBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.adminFamiliesDFBLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminFamiliesDFBLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesDFBLayoutPanel.TabIndex = 5;
             this.adminFamiliesDFBLayoutPanel.Visible = false;
             // 
@@ -2384,14 +2371,14 @@ namespace BARevitTools
             this.adminFamiliesDFBSelectPanel.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesDFBSelectPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesDFBSelectPanel.Name = "adminFamiliesDFBSelectPanel";
-            this.adminFamiliesDFBSelectPanel.Size = new System.Drawing.Size(711, 35);
+            this.adminFamiliesDFBSelectPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesDFBSelectPanel.TabIndex = 0;
             // 
             // adminFamiliesDBFSelectNoneButton
             // 
             this.adminFamiliesDBFSelectNoneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.adminFamiliesDBFSelectNoneButton.BackColor = System.Drawing.SystemColors.Control;
-            this.adminFamiliesDBFSelectNoneButton.Location = new System.Drawing.Point(629, 4);
+            this.adminFamiliesDBFSelectNoneButton.Location = new System.Drawing.Point(628, 4);
             this.adminFamiliesDBFSelectNoneButton.Name = "adminFamiliesDBFSelectNoneButton";
             this.adminFamiliesDBFSelectNoneButton.Size = new System.Drawing.Size(75, 23);
             this.adminFamiliesDBFSelectNoneButton.TabIndex = 1;
@@ -2403,7 +2390,7 @@ namespace BARevitTools
             // 
             this.adminFamiliesDBFSelectAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.adminFamiliesDBFSelectAllButton.BackColor = System.Drawing.SystemColors.Control;
-            this.adminFamiliesDBFSelectAllButton.Location = new System.Drawing.Point(545, 4);
+            this.adminFamiliesDBFSelectAllButton.Location = new System.Drawing.Point(544, 4);
             this.adminFamiliesDBFSelectAllButton.Name = "adminFamiliesDBFSelectAllButton";
             this.adminFamiliesDBFSelectAllButton.Size = new System.Drawing.Size(75, 23);
             this.adminFamiliesDBFSelectAllButton.TabIndex = 1;
@@ -2432,7 +2419,7 @@ namespace BARevitTools
             this.adminFamiliesDFBFamiliesDGV.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesDFBFamiliesDGV.Name = "adminFamiliesDFBFamiliesDGV";
             this.adminFamiliesDFBFamiliesDGV.RowHeadersVisible = false;
-            this.adminFamiliesDFBFamiliesDGV.Size = new System.Drawing.Size(711, 268);
+            this.adminFamiliesDFBFamiliesDGV.Size = new System.Drawing.Size(710, 269);
             this.adminFamiliesDFBFamiliesDGV.TabIndex = 1;
             this.adminFamiliesDFBFamiliesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminFamiliesDFBFamiliesDGV_CellContentClick);
             // 
@@ -2440,16 +2427,16 @@ namespace BARevitTools
             // 
             this.panel1.Controls.Add(this.adminFamiliesDFBRunButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 303);
+            this.panel1.Location = new System.Drawing.Point(0, 304);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(711, 35);
+            this.panel1.Size = new System.Drawing.Size(710, 35);
             this.panel1.TabIndex = 2;
             // 
             // adminFamiliesDFBRunButton
             // 
             this.adminFamiliesDFBRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesDFBRunButton.Location = new System.Drawing.Point(634, 6);
+            this.adminFamiliesDFBRunButton.Location = new System.Drawing.Point(633, 6);
             this.adminFamiliesDFBRunButton.Name = "adminFamiliesDFBRunButton";
             this.adminFamiliesDFBRunButton.Size = new System.Drawing.Size(75, 23);
             this.adminFamiliesDFBRunButton.TabIndex = 1;
@@ -2464,7 +2451,7 @@ namespace BARevitTools
             this.adminTemplateTab.Location = new System.Drawing.Point(4, 25);
             this.adminTemplateTab.Margin = new System.Windows.Forms.Padding(0);
             this.adminTemplateTab.Name = "adminTemplateTab";
-            this.adminTemplateTab.Size = new System.Drawing.Size(721, 401);
+            this.adminTemplateTab.Size = new System.Drawing.Size(720, 402);
             this.adminTemplateTab.TabIndex = 2;
             this.adminTemplateTab.Text = "Templates";
             // 
@@ -2480,7 +2467,7 @@ namespace BARevitTools
             this.adminTemplateLayoutPanel.RowCount = 2;
             this.adminTemplateLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.adminTemplateLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminTemplateLayoutPanel.Size = new System.Drawing.Size(717, 397);
+            this.adminTemplateLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.adminTemplateLayoutPanel.TabIndex = 0;
             // 
             // adminTemplateToolStrip
@@ -2492,7 +2479,7 @@ namespace BARevitTools
             this.adminTemplatePMButton});
             this.adminTemplateToolStrip.Location = new System.Drawing.Point(0, 0);
             this.adminTemplateToolStrip.Name = "adminTemplateToolStrip";
-            this.adminTemplateToolStrip.Size = new System.Drawing.Size(717, 53);
+            this.adminTemplateToolStrip.Size = new System.Drawing.Size(716, 53);
             this.adminTemplateToolStrip.TabIndex = 0;
             this.adminTemplateToolStrip.Text = "toolStrip1";
             // 
@@ -2515,7 +2502,7 @@ namespace BARevitTools
             this.adminTemplateToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adminTemplateToolsPanel.Location = new System.Drawing.Point(3, 56);
             this.adminTemplateToolsPanel.Name = "adminTemplateToolsPanel";
-            this.adminTemplateToolsPanel.Size = new System.Drawing.Size(711, 338);
+            this.adminTemplateToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminTemplateToolsPanel.TabIndex = 1;
             // 
             // adminTemplatePMLayoutPanel
@@ -2635,7 +2622,7 @@ namespace BARevitTools
             this.sandBoxTab.Location = new System.Drawing.Point(4, 25);
             this.sandBoxTab.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.sandBoxTab.Name = "sandBoxTab";
-            this.sandBoxTab.Size = new System.Drawing.Size(721, 401);
+            this.sandBoxTab.Size = new System.Drawing.Size(720, 402);
             this.sandBoxTab.TabIndex = 4;
             this.sandBoxTab.Text = "DevSandBox";
             this.sandBoxTab.UseVisualStyleBackColor = true;
@@ -2654,7 +2641,7 @@ namespace BARevitTools
             this.sandBoxLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.sandBoxLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.sandBoxLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.sandBoxLayoutPanel.Size = new System.Drawing.Size(721, 401);
+            this.sandBoxLayoutPanel.Size = new System.Drawing.Size(720, 402);
             this.sandBoxLayoutPanel.TabIndex = 0;
             // 
             // sandBoxElementHost
@@ -2663,7 +2650,7 @@ namespace BARevitTools
             this.sandBoxElementHost.Location = new System.Drawing.Point(2, 54);
             this.sandBoxElementHost.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.sandBoxElementHost.Name = "sandBoxElementHost";
-            this.sandBoxElementHost.Size = new System.Drawing.Size(717, 346);
+            this.sandBoxElementHost.Size = new System.Drawing.Size(716, 347);
             this.sandBoxElementHost.TabIndex = 0;
             this.sandBoxElementHost.Text = "elementHost1";
             this.sandBoxElementHost.Child = null;
@@ -2677,7 +2664,7 @@ namespace BARevitTools
             this.sandBoxTestButton1});
             this.sandBoxToolStrip.Location = new System.Drawing.Point(0, 0);
             this.sandBoxToolStrip.Name = "sandBoxToolStrip";
-            this.sandBoxToolStrip.Size = new System.Drawing.Size(721, 53);
+            this.sandBoxToolStrip.Size = new System.Drawing.Size(720, 53);
             this.sandBoxToolStrip.TabIndex = 1;
             this.sandBoxToolStrip.Text = "toolStrip1";
             // 
@@ -2705,7 +2692,7 @@ namespace BARevitTools
             this.roomsCDRTButton});
             roomsToolStrip.Location = new System.Drawing.Point(0, 0);
             roomsToolStrip.Name = "roomsToolStrip";
-            roomsToolStrip.Size = new System.Drawing.Size(717, 53);
+            roomsToolStrip.Size = new System.Drawing.Size(716, 53);
             roomsToolStrip.Stretch = true;
             roomsToolStrip.TabIndex = 0;
             roomsToolStrip.Text = "toolStrip1";
@@ -2771,7 +2758,7 @@ namespace BARevitTools
             this.UIFormTableLayoutPanel.RowCount = 2;
             this.UIFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0F));
             this.UIFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.UIFormTableLayoutPanel.Size = new System.Drawing.Size(770, 450);
+            this.UIFormTableLayoutPanel.Size = new System.Drawing.Size(769, 451);
             this.UIFormTableLayoutPanel.TabIndex = 2;
             // 
             // mainTabControl
@@ -2789,7 +2776,7 @@ namespace BARevitTools
             this.mainTabControl.Multiline = true;
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.Size = new System.Drawing.Size(764, 444);
+            this.mainTabControl.Size = new System.Drawing.Size(763, 445);
             this.mainTabControl.TabIndex = 1;
             this.mainTabControl.Click += new System.EventHandler(this.AllowBIMManagementTab);
             // 
@@ -2800,7 +2787,7 @@ namespace BARevitTools
             this.aboutTab.Location = new System.Drawing.Point(25, 4);
             this.aboutTab.Margin = new System.Windows.Forms.Padding(0);
             this.aboutTab.Name = "aboutTab";
-            this.aboutTab.Size = new System.Drawing.Size(735, 436);
+            this.aboutTab.Size = new System.Drawing.Size(734, 437);
             this.aboutTab.TabIndex = 4;
             // 
             // aboutTabLayoutPanel
@@ -2818,7 +2805,7 @@ namespace BARevitTools
             this.aboutTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.aboutTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.aboutTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.aboutTabLayoutPanel.Size = new System.Drawing.Size(735, 436);
+            this.aboutTabLayoutPanel.Size = new System.Drawing.Size(734, 437);
             this.aboutTabLayoutPanel.TabIndex = 6;
             // 
             // aboutTabHeaderPanel
@@ -2835,7 +2822,7 @@ namespace BARevitTools
             this.aboutTabHeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.aboutTabHeaderPanel.Margin = new System.Windows.Forms.Padding(0);
             this.aboutTabHeaderPanel.Name = "aboutTabHeaderPanel";
-            this.aboutTabHeaderPanel.Size = new System.Drawing.Size(735, 120);
+            this.aboutTabHeaderPanel.Size = new System.Drawing.Size(734, 120);
             this.aboutTabHeaderPanel.TabIndex = 0;
             // 
             // aboutTabDevelopmentLinkURLLabel
@@ -2935,10 +2922,10 @@ namespace BARevitTools
             // 
             this.aboutTabFooterPanel.Controls.Add(this.aboutCreditLabel);
             this.aboutTabFooterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aboutTabFooterPanel.Location = new System.Drawing.Point(0, 413);
+            this.aboutTabFooterPanel.Location = new System.Drawing.Point(0, 414);
             this.aboutTabFooterPanel.Margin = new System.Windows.Forms.Padding(0);
             this.aboutTabFooterPanel.Name = "aboutTabFooterPanel";
-            this.aboutTabFooterPanel.Size = new System.Drawing.Size(735, 23);
+            this.aboutTabFooterPanel.Size = new System.Drawing.Size(734, 23);
             this.aboutTabFooterPanel.TabIndex = 1;
             // 
             // aboutCreditLabel
@@ -2959,7 +2946,7 @@ namespace BARevitTools
             this.aboutTabUpdatesTextBox.Name = "aboutTabUpdatesTextBox";
             this.aboutTabUpdatesTextBox.ReadOnly = true;
             this.aboutTabUpdatesTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.aboutTabUpdatesTextBox.Size = new System.Drawing.Size(731, 291);
+            this.aboutTabUpdatesTextBox.Size = new System.Drawing.Size(730, 292);
             this.aboutTabUpdatesTextBox.TabIndex = 2;
             this.aboutTabUpdatesTextBox.Text = resources.GetString("aboutTabUpdatesTextBox.Text");
             // 
@@ -2971,7 +2958,7 @@ namespace BARevitTools
             this.analysisTab.Margin = new System.Windows.Forms.Padding(0);
             this.analysisTab.Name = "analysisTab";
             this.analysisTab.Padding = new System.Windows.Forms.Padding(3);
-            this.analysisTab.Size = new System.Drawing.Size(735, 436);
+            this.analysisTab.Size = new System.Drawing.Size(734, 437);
             this.analysisTab.TabIndex = 1;
             this.analysisTab.Text = "Analysis";
             // 
@@ -2984,7 +2971,7 @@ namespace BARevitTools
             this.analysisTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.analysisTabControl.Name = "analysisTabControl";
             this.analysisTabControl.SelectedIndex = 0;
-            this.analysisTabControl.Size = new System.Drawing.Size(729, 430);
+            this.analysisTabControl.Size = new System.Drawing.Size(728, 431);
             this.analysisTabControl.TabIndex = 0;
             // 
             // sightTab
@@ -2992,7 +2979,7 @@ namespace BARevitTools
             this.sightTab.Location = new System.Drawing.Point(4, 25);
             this.sightTab.Name = "sightTab";
             this.sightTab.Padding = new System.Windows.Forms.Padding(3);
-            this.sightTab.Size = new System.Drawing.Size(721, 401);
+            this.sightTab.Size = new System.Drawing.Size(720, 402);
             this.sightTab.TabIndex = 0;
             this.sightTab.Text = "Sight";
             this.sightTab.UseVisualStyleBackColor = true;
@@ -3005,7 +2992,7 @@ namespace BARevitTools
             this.modelingTab.Margin = new System.Windows.Forms.Padding(0);
             this.modelingTab.Name = "modelingTab";
             this.modelingTab.Padding = new System.Windows.Forms.Padding(3);
-            this.modelingTab.Size = new System.Drawing.Size(735, 436);
+            this.modelingTab.Size = new System.Drawing.Size(734, 437);
             this.modelingTab.TabIndex = 0;
             this.modelingTab.Text = "Modeling";
             // 
@@ -3027,7 +3014,7 @@ namespace BARevitTools
             this.modelingTabControl.Multiline = true;
             this.modelingTabControl.Name = "modelingTabControl";
             this.modelingTabControl.SelectedIndex = 0;
-            this.modelingTabControl.Size = new System.Drawing.Size(729, 430);
+            this.modelingTabControl.Size = new System.Drawing.Size(728, 431);
             this.modelingTabControl.TabIndex = 0;
             // 
             // multiCatTab
@@ -3036,7 +3023,7 @@ namespace BARevitTools
             this.multiCatTab.Location = new System.Drawing.Point(4, 25);
             this.multiCatTab.Margin = new System.Windows.Forms.Padding(0);
             this.multiCatTab.Name = "multiCatTab";
-            this.multiCatTab.Size = new System.Drawing.Size(721, 401);
+            this.multiCatTab.Size = new System.Drawing.Size(720, 402);
             this.multiCatTab.TabIndex = 9;
             this.multiCatTab.Text = "Multi-category";
             this.multiCatTab.UseVisualStyleBackColor = true;
@@ -3054,7 +3041,7 @@ namespace BARevitTools
             this.multiCatLayoutPanel.RowCount = 2;
             this.multiCatLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.multiCatLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.multiCatLayoutPanel.Size = new System.Drawing.Size(721, 401);
+            this.multiCatLayoutPanel.Size = new System.Drawing.Size(720, 402);
             this.multiCatLayoutPanel.TabIndex = 1;
             // 
             // multiCatToolStrip
@@ -3070,7 +3057,7 @@ namespace BARevitTools
             this.multiCatRE});
             this.multiCatToolStrip.Location = new System.Drawing.Point(0, 0);
             this.multiCatToolStrip.Name = "multiCatToolStrip";
-            this.multiCatToolStrip.Size = new System.Drawing.Size(721, 53);
+            this.multiCatToolStrip.Size = new System.Drawing.Size(720, 53);
             this.multiCatToolStrip.TabIndex = 0;
             this.multiCatToolStrip.Text = "toolStrip1";
             // 
@@ -3112,7 +3099,7 @@ namespace BARevitTools
             this.multiCatToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.multiCatToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.multiCatToolsPanel.Name = "multiCatToolsPanel";
-            this.multiCatToolsPanel.Size = new System.Drawing.Size(721, 348);
+            this.multiCatToolsPanel.Size = new System.Drawing.Size(720, 349);
             this.multiCatToolsPanel.TabIndex = 1;
             // 
             // multiCatCFFSplitContainer
@@ -3132,8 +3119,8 @@ namespace BARevitTools
             // 
             this.multiCatCFFSplitContainer.Panel2.Controls.Add(this.multiCatCFFEFamiliesSplitContainer);
             this.multiCatCFFSplitContainer.Panel2MinSize = 90;
-            this.multiCatCFFSplitContainer.Size = new System.Drawing.Size(721, 348);
-            this.multiCatCFFSplitContainer.SplitterDistance = 317;
+            this.multiCatCFFSplitContainer.Size = new System.Drawing.Size(720, 349);
+            this.multiCatCFFSplitContainer.SplitterDistance = 316;
             this.multiCatCFFSplitContainer.TabIndex = 0;
             this.multiCatCFFSplitContainer.Visible = false;
             // 
@@ -3155,7 +3142,7 @@ namespace BARevitTools
             // 
             this.multiCatCFFEExcelSplitContainer.Panel2.Controls.Add(this.multiCatCFFECreateExcelLayoutPanel2);
             this.multiCatCFFEExcelSplitContainer.Panel2MinSize = 45;
-            this.multiCatCFFEExcelSplitContainer.Size = new System.Drawing.Size(317, 348);
+            this.multiCatCFFEExcelSplitContainer.Size = new System.Drawing.Size(316, 349);
             this.multiCatCFFEExcelSplitContainer.SplitterDistance = 114;
             this.multiCatCFFEExcelSplitContainer.TabIndex = 2;
             // 
@@ -3177,7 +3164,7 @@ namespace BARevitTools
             this.multiCatCFFECreateExcelLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.multiCatCFFECreateExcelLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.multiCatCFFECreateExcelLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.multiCatCFFECreateExcelLayoutPanel1.Size = new System.Drawing.Size(317, 114);
+            this.multiCatCFFECreateExcelLayoutPanel1.Size = new System.Drawing.Size(316, 114);
             this.multiCatCFFECreateExcelLayoutPanel1.TabIndex = 1;
             // 
             // multiCatCFFECreateExcelLabel
@@ -3190,7 +3177,7 @@ namespace BARevitTools
             this.multiCatCFFECreateExcelLabel.Location = new System.Drawing.Point(1, 1);
             this.multiCatCFFECreateExcelLabel.Margin = new System.Windows.Forms.Padding(0);
             this.multiCatCFFECreateExcelLabel.Name = "multiCatCFFECreateExcelLabel";
-            this.multiCatCFFECreateExcelLabel.Size = new System.Drawing.Size(315, 35);
+            this.multiCatCFFECreateExcelLabel.Size = new System.Drawing.Size(314, 35);
             this.multiCatCFFECreateExcelLabel.TabIndex = 3;
             this.multiCatCFFECreateExcelLabel.Text = "Step 1 - Create Excel Template";
             this.multiCatCFFECreateExcelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3204,7 +3191,7 @@ namespace BARevitTools
             this.multiCatCFFECreateExcelInstructions.Multiline = true;
             this.multiCatCFFECreateExcelInstructions.Name = "multiCatCFFECreateExcelInstructions";
             this.multiCatCFFECreateExcelInstructions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.multiCatCFFECreateExcelInstructions.Size = new System.Drawing.Size(315, 76);
+            this.multiCatCFFECreateExcelInstructions.Size = new System.Drawing.Size(314, 76);
             this.multiCatCFFECreateExcelInstructions.TabIndex = 4;
             this.multiCatCFFECreateExcelInstructions.Text = resources.GetString("multiCatCFFECreateExcelInstructions.Text");
             // 
@@ -3228,7 +3215,7 @@ namespace BARevitTools
             this.multiCatCFFECreateExcelLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.multiCatCFFECreateExcelLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.multiCatCFFECreateExcelLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.multiCatCFFECreateExcelLayoutPanel2.Size = new System.Drawing.Size(317, 230);
+            this.multiCatCFFECreateExcelLayoutPanel2.Size = new System.Drawing.Size(316, 231);
             this.multiCatCFFECreateExcelLayoutPanel2.TabIndex = 1;
             // 
             // multiCatCFFEExcelDGV
@@ -3242,7 +3229,7 @@ namespace BARevitTools
             this.multiCatCFFEExcelDGV.Location = new System.Drawing.Point(1, 73);
             this.multiCatCFFEExcelDGV.Margin = new System.Windows.Forms.Padding(0);
             this.multiCatCFFEExcelDGV.Name = "multiCatCFFEExcelDGV";
-            this.multiCatCFFEExcelDGV.Size = new System.Drawing.Size(315, 120);
+            this.multiCatCFFEExcelDGV.Size = new System.Drawing.Size(314, 121);
             this.multiCatCFFEExcelDGV.TabIndex = 1;
             this.multiCatCFFEExcelDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllCatCFFEExcelDGV_CellContentClick);
             // 
@@ -3251,10 +3238,10 @@ namespace BARevitTools
             this.multiCatCFFEExcelRunPanel.Controls.Add(this.multiCatCFFEExcelStatusLabel);
             this.multiCatCFFEExcelRunPanel.Controls.Add(this.multiCatCFFEExcelRunButton);
             this.multiCatCFFEExcelRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.multiCatCFFEExcelRunPanel.Location = new System.Drawing.Point(1, 194);
+            this.multiCatCFFEExcelRunPanel.Location = new System.Drawing.Point(1, 195);
             this.multiCatCFFEExcelRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.multiCatCFFEExcelRunPanel.Name = "multiCatCFFEExcelRunPanel";
-            this.multiCatCFFEExcelRunPanel.Size = new System.Drawing.Size(315, 35);
+            this.multiCatCFFEExcelRunPanel.Size = new System.Drawing.Size(314, 35);
             this.multiCatCFFEExcelRunPanel.TabIndex = 2;
             // 
             // multiCatCFFEExcelStatusLabel
@@ -3262,7 +3249,7 @@ namespace BARevitTools
             this.multiCatCFFEExcelStatusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.multiCatCFFEExcelStatusLabel.AutoSize = true;
             this.multiCatCFFEExcelStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiCatCFFEExcelStatusLabel.Location = new System.Drawing.Point(143, 12);
+            this.multiCatCFFEExcelStatusLabel.Location = new System.Drawing.Point(142, 12);
             this.multiCatCFFEExcelStatusLabel.Name = "multiCatCFFEExcelStatusLabel";
             this.multiCatCFFEExcelStatusLabel.Size = new System.Drawing.Size(41, 13);
             this.multiCatCFFEExcelStatusLabel.TabIndex = 1;
@@ -3272,7 +3259,7 @@ namespace BARevitTools
             // multiCatCFFEExcelRunButton
             // 
             this.multiCatCFFEExcelRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.multiCatCFFEExcelRunButton.Location = new System.Drawing.Point(189, 6);
+            this.multiCatCFFEExcelRunButton.Location = new System.Drawing.Point(188, 6);
             this.multiCatCFFEExcelRunButton.Name = "multiCatCFFEExcelRunButton";
             this.multiCatCFFEExcelRunButton.Size = new System.Drawing.Size(123, 23);
             this.multiCatCFFEExcelRunButton.TabIndex = 0;
@@ -3288,7 +3275,7 @@ namespace BARevitTools
             this.multiCatCFFEDirectoryPanel.Location = new System.Drawing.Point(1, 1);
             this.multiCatCFFEDirectoryPanel.Margin = new System.Windows.Forms.Padding(0);
             this.multiCatCFFEDirectoryPanel.Name = "multiCatCFFEDirectoryPanel";
-            this.multiCatCFFEDirectoryPanel.Size = new System.Drawing.Size(315, 35);
+            this.multiCatCFFEDirectoryPanel.Size = new System.Drawing.Size(314, 35);
             this.multiCatCFFEDirectoryPanel.TabIndex = 1;
             // 
             // multiCatCFFEDirectorySelectButton
@@ -3310,7 +3297,7 @@ namespace BARevitTools
             this.multiCatCFFEDirectoryTextBox.Location = new System.Drawing.Point(136, 12);
             this.multiCatCFFEDirectoryTextBox.Name = "multiCatCFFEDirectoryTextBox";
             this.multiCatCFFEDirectoryTextBox.ReadOnly = true;
-            this.multiCatCFFEDirectoryTextBox.Size = new System.Drawing.Size(176, 13);
+            this.multiCatCFFEDirectoryTextBox.Size = new System.Drawing.Size(175, 13);
             this.multiCatCFFEDirectoryTextBox.TabIndex = 3;
             // 
             // multiCatCFFESelectFamilyPanel
@@ -3321,7 +3308,7 @@ namespace BARevitTools
             this.multiCatCFFESelectFamilyPanel.Location = new System.Drawing.Point(1, 37);
             this.multiCatCFFESelectFamilyPanel.Margin = new System.Windows.Forms.Padding(0);
             this.multiCatCFFESelectFamilyPanel.Name = "multiCatCFFESelectFamilyPanel";
-            this.multiCatCFFESelectFamilyPanel.Size = new System.Drawing.Size(315, 35);
+            this.multiCatCFFESelectFamilyPanel.Size = new System.Drawing.Size(314, 35);
             this.multiCatCFFESelectFamilyPanel.TabIndex = 5;
             // 
             // multiCatCFFESelectFamilyButton
@@ -3343,7 +3330,7 @@ namespace BARevitTools
             this.multiCatCFFESelectFamilyTextBox.Location = new System.Drawing.Point(136, 12);
             this.multiCatCFFESelectFamilyTextBox.Name = "multiCatCFFESelectFamilyTextBox";
             this.multiCatCFFESelectFamilyTextBox.ReadOnly = true;
-            this.multiCatCFFESelectFamilyTextBox.Size = new System.Drawing.Size(177, 13);
+            this.multiCatCFFESelectFamilyTextBox.Size = new System.Drawing.Size(176, 13);
             this.multiCatCFFESelectFamilyTextBox.TabIndex = 3;
             // 
             // multiCatCFFEFamiliesSplitContainer
@@ -3364,7 +3351,7 @@ namespace BARevitTools
             // 
             this.multiCatCFFEFamiliesSplitContainer.Panel2.Controls.Add(this.multiCatCFFECreateFamiliesLayoutPanel2);
             this.multiCatCFFEFamiliesSplitContainer.Panel2MinSize = 45;
-            this.multiCatCFFEFamiliesSplitContainer.Size = new System.Drawing.Size(400, 348);
+            this.multiCatCFFEFamiliesSplitContainer.Size = new System.Drawing.Size(400, 349);
             this.multiCatCFFEFamiliesSplitContainer.SplitterDistance = 114;
             this.multiCatCFFEFamiliesSplitContainer.TabIndex = 0;
             // 
@@ -3437,7 +3424,7 @@ namespace BARevitTools
             this.multiCatCFFECreateFamiliesLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.multiCatCFFECreateFamiliesLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.multiCatCFFECreateFamiliesLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.multiCatCFFECreateFamiliesLayoutPanel2.Size = new System.Drawing.Size(400, 230);
+            this.multiCatCFFECreateFamiliesLayoutPanel2.Size = new System.Drawing.Size(400, 231);
             this.multiCatCFFECreateFamiliesLayoutPanel2.TabIndex = 2;
             // 
             // multiCatCFFEFamiliesDGV
@@ -3452,7 +3439,7 @@ namespace BARevitTools
             this.multiCatCFFEFamiliesDGV.RowHeadersVisible = false;
             this.multiCatCFFEFamiliesDGV.RowHeadersWidth = 45;
             this.multiCatCFFEFamiliesDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.multiCatCFFEFamiliesDGV.Size = new System.Drawing.Size(398, 120);
+            this.multiCatCFFEFamiliesDGV.Size = new System.Drawing.Size(398, 121);
             this.multiCatCFFEFamiliesDGV.TabIndex = 1;
             // 
             // multiCatCFFEFamiliesExcelPanel
@@ -3504,7 +3491,7 @@ namespace BARevitTools
             this.multiCatCFFEFamiliesRunPanel.Controls.Add(this.multiCatCFFEFamiliesProgressBar);
             this.multiCatCFFEFamiliesRunPanel.Controls.Add(this.multiCatCFFEFamiliesRunButton);
             this.multiCatCFFEFamiliesRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.multiCatCFFEFamiliesRunPanel.Location = new System.Drawing.Point(1, 194);
+            this.multiCatCFFEFamiliesRunPanel.Location = new System.Drawing.Point(1, 195);
             this.multiCatCFFEFamiliesRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.multiCatCFFEFamiliesRunPanel.Name = "multiCatCFFEFamiliesRunPanel";
             this.multiCatCFFEFamiliesRunPanel.Size = new System.Drawing.Size(398, 35);
@@ -3572,7 +3559,7 @@ namespace BARevitTools
             this.doorsTab.Location = new System.Drawing.Point(4, 25);
             this.doorsTab.Margin = new System.Windows.Forms.Padding(0);
             this.doorsTab.Name = "doorsTab";
-            this.doorsTab.Size = new System.Drawing.Size(721, 401);
+            this.doorsTab.Size = new System.Drawing.Size(720, 402);
             this.doorsTab.TabIndex = 8;
             this.doorsTab.Text = "Doors";
             // 
@@ -3583,7 +3570,7 @@ namespace BARevitTools
             this.electricalTab.Location = new System.Drawing.Point(4, 25);
             this.electricalTab.Margin = new System.Windows.Forms.Padding(0);
             this.electricalTab.Name = "electricalTab";
-            this.electricalTab.Size = new System.Drawing.Size(721, 401);
+            this.electricalTab.Size = new System.Drawing.Size(720, 402);
             this.electricalTab.TabIndex = 5;
             this.electricalTab.Text = "Electrical";
             this.electricalTab.UseVisualStyleBackColor = true;
@@ -3601,7 +3588,7 @@ namespace BARevitTools
             this.electricalLayoutPanel.RowCount = 2;
             this.electricalLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.electricalLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.electricalLayoutPanel.Size = new System.Drawing.Size(717, 397);
+            this.electricalLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.electricalLayoutPanel.TabIndex = 0;
             // 
             // electricalToolStrip
@@ -3614,7 +3601,7 @@ namespace BARevitTools
             this.electricalCEOEButton});
             this.electricalToolStrip.Location = new System.Drawing.Point(0, 0);
             this.electricalToolStrip.Name = "electricalToolStrip";
-            this.electricalToolStrip.Size = new System.Drawing.Size(717, 53);
+            this.electricalToolStrip.Size = new System.Drawing.Size(716, 53);
             this.electricalToolStrip.TabIndex = 0;
             this.electricalToolStrip.Text = "toolStrip1";
             // 
@@ -3639,7 +3626,7 @@ namespace BARevitTools
             this.electricalToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.electricalToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.electricalToolsPanel.Name = "electricalToolsPanel";
-            this.electricalToolsPanel.Size = new System.Drawing.Size(717, 344);
+            this.electricalToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.electricalToolsPanel.TabIndex = 1;
             // 
             // electricalCEOELayoutPanel
@@ -3655,7 +3642,7 @@ namespace BARevitTools
             this.electricalCEOELayoutPanel.RowCount = 2;
             this.electricalCEOELayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.electricalCEOELayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.electricalCEOELayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.electricalCEOELayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.electricalCEOELayoutPanel.TabIndex = 0;
             this.electricalCEOELayoutPanel.Visible = false;
             // 
@@ -3668,7 +3655,7 @@ namespace BARevitTools
             this.electricalCEOETextBox.Multiline = true;
             this.electricalCEOETextBox.Name = "electricalCEOETextBox";
             this.electricalCEOETextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.electricalCEOETextBox.Size = new System.Drawing.Size(717, 45);
+            this.electricalCEOETextBox.Size = new System.Drawing.Size(716, 45);
             this.electricalCEOETextBox.TabIndex = 0;
             this.electricalCEOETextBox.Text = resources.GetString("electricalCEOETextBox.Text");
             // 
@@ -3679,7 +3666,7 @@ namespace BARevitTools
             this.electricalCEOEControlsPanel.Location = new System.Drawing.Point(0, 45);
             this.electricalCEOEControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.electricalCEOEControlsPanel.Name = "electricalCEOEControlsPanel";
-            this.electricalCEOEControlsPanel.Size = new System.Drawing.Size(717, 299);
+            this.electricalCEOEControlsPanel.Size = new System.Drawing.Size(716, 300);
             this.electricalCEOEControlsPanel.TabIndex = 1;
             // 
             // electricalCEOERunButton
@@ -3701,7 +3688,7 @@ namespace BARevitTools
             this.floorsTab.Margin = new System.Windows.Forms.Padding(0);
             this.floorsTab.Name = "floorsTab";
             this.floorsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.floorsTab.Size = new System.Drawing.Size(721, 401);
+            this.floorsTab.Size = new System.Drawing.Size(720, 402);
             this.floorsTab.TabIndex = 1;
             this.floorsTab.Text = "Floors";
             this.floorsTab.UseVisualStyleBackColor = true;
@@ -3720,7 +3707,7 @@ namespace BARevitTools
             this.floorsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.floorsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.floorsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.floorsTabLayoutPanel.Size = new System.Drawing.Size(711, 391);
+            this.floorsTabLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.floorsTabLayoutPanel.TabIndex = 0;
             // 
             // floorsToolsPanel
@@ -3730,7 +3717,7 @@ namespace BARevitTools
             this.floorsToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.floorsToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.floorsToolsPanel.Name = "floorsToolsPanel";
-            this.floorsToolsPanel.Size = new System.Drawing.Size(711, 338);
+            this.floorsToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.floorsToolsPanel.TabIndex = 4;
             // 
             // floorsCFBRLayoutPanel
@@ -3746,7 +3733,7 @@ namespace BARevitTools
             this.floorsCFBRLayoutPanel.RowCount = 2;
             this.floorsCFBRLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 175F));
             this.floorsCFBRLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.floorsCFBRLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.floorsCFBRLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.floorsCFBRLayoutPanel.TabIndex = 1;
             this.floorsCFBRLayoutPanel.Visible = false;
             // 
@@ -3757,7 +3744,7 @@ namespace BARevitTools
             this.floorsCFBRInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.floorsCFBRInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.floorsCFBRInstructionsPanel.Name = "floorsCFBRInstructionsPanel";
-            this.floorsCFBRInstructionsPanel.Size = new System.Drawing.Size(711, 175);
+            this.floorsCFBRInstructionsPanel.Size = new System.Drawing.Size(710, 175);
             this.floorsCFBRInstructionsPanel.TabIndex = 0;
             // 
             // floorsCFBRInstructionsTextBox
@@ -3769,7 +3756,7 @@ namespace BARevitTools
             this.floorsCFBRInstructionsTextBox.Name = "floorsCFBRInstructionsTextBox";
             this.floorsCFBRInstructionsTextBox.ReadOnly = true;
             this.floorsCFBRInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.floorsCFBRInstructionsTextBox.Size = new System.Drawing.Size(711, 175);
+            this.floorsCFBRInstructionsTextBox.Size = new System.Drawing.Size(710, 175);
             this.floorsCFBRInstructionsTextBox.TabIndex = 4;
             this.floorsCFBRInstructionsTextBox.Text = resources.GetString("floorsCFBRInstructionsTextBox.Text");
             // 
@@ -3785,7 +3772,7 @@ namespace BARevitTools
             this.floorsCFBRControlsPanel.Location = new System.Drawing.Point(0, 175);
             this.floorsCFBRControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.floorsCFBRControlsPanel.Name = "floorsCFBRControlsPanel";
-            this.floorsCFBRControlsPanel.Size = new System.Drawing.Size(711, 163);
+            this.floorsCFBRControlsPanel.Size = new System.Drawing.Size(710, 164);
             this.floorsCFBRControlsPanel.TabIndex = 1;
             // 
             // floorsCFBROffsetFinishFloorCheckBox
@@ -3855,7 +3842,7 @@ namespace BARevitTools
             this.floorsCFBRButton});
             this.floorsToolStrip.Location = new System.Drawing.Point(0, 0);
             this.floorsToolStrip.Name = "floorsToolStrip";
-            this.floorsToolStrip.Size = new System.Drawing.Size(711, 53);
+            this.floorsToolStrip.Size = new System.Drawing.Size(710, 53);
             this.floorsToolStrip.TabIndex = 0;
             // 
             // floorsCFBRButton
@@ -3878,7 +3865,7 @@ namespace BARevitTools
             this.massesTab.Location = new System.Drawing.Point(4, 25);
             this.massesTab.Margin = new System.Windows.Forms.Padding(0);
             this.massesTab.Name = "massesTab";
-            this.massesTab.Size = new System.Drawing.Size(721, 401);
+            this.massesTab.Size = new System.Drawing.Size(720, 402);
             this.massesTab.TabIndex = 7;
             this.massesTab.Text = "Masses";
             this.massesTab.UseVisualStyleBackColor = true;
@@ -3890,7 +3877,7 @@ namespace BARevitTools
             this.materialsTab.Location = new System.Drawing.Point(4, 25);
             this.materialsTab.Margin = new System.Windows.Forms.Padding(0);
             this.materialsTab.Name = "materialsTab";
-            this.materialsTab.Size = new System.Drawing.Size(721, 401);
+            this.materialsTab.Size = new System.Drawing.Size(720, 402);
             this.materialsTab.TabIndex = 6;
             this.materialsTab.Text = "Materials";
             this.materialsTab.UseVisualStyleBackColor = true;
@@ -3908,7 +3895,7 @@ namespace BARevitTools
             this.materialsLayoutPanel.RowCount = 2;
             this.materialsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.materialsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.materialsLayoutPanel.Size = new System.Drawing.Size(717, 397);
+            this.materialsLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.materialsLayoutPanel.TabIndex = 0;
             // 
             // materialsToolStrip
@@ -3923,7 +3910,7 @@ namespace BARevitTools
             this.materialsAMLButton});
             this.materialsToolStrip.Location = new System.Drawing.Point(0, 0);
             this.materialsToolStrip.Name = "materialsToolStrip";
-            this.materialsToolStrip.Size = new System.Drawing.Size(717, 53);
+            this.materialsToolStrip.Size = new System.Drawing.Size(716, 53);
             this.materialsToolStrip.TabIndex = 0;
             this.materialsToolStrip.Text = "toolStrip1";
             // 
@@ -3969,7 +3956,7 @@ namespace BARevitTools
             this.materialsToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.materialsToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.materialsToolsPanel.Name = "materialsToolsPanel";
-            this.materialsToolsPanel.Size = new System.Drawing.Size(717, 344);
+            this.materialsToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.materialsToolsPanel.TabIndex = 1;
             // 
             // materialsAMLLayoutPanel
@@ -3989,7 +3976,7 @@ namespace BARevitTools
             this.materialsAMLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.materialsAMLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.materialsAMLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.materialsAMLLayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.materialsAMLLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.materialsAMLLayoutPanel.TabIndex = 3;
             this.materialsAMLLayoutPanel.Visible = false;
             // 
@@ -4025,7 +4012,7 @@ namespace BARevitTools
             this.materialsAMLInstructionsTextBox.Name = "materialsAMLInstructionsTextBox";
             this.materialsAMLLayoutPanel.SetRowSpan(this.materialsAMLInstructionsTextBox, 3);
             this.materialsAMLInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.materialsAMLInstructionsTextBox.Size = new System.Drawing.Size(230, 344);
+            this.materialsAMLInstructionsTextBox.Size = new System.Drawing.Size(229, 345);
             this.materialsAMLInstructionsTextBox.TabIndex = 1;
             this.materialsAMLInstructionsTextBox.Text = resources.GetString("materialsAMLInstructionsTextBox.Text");
             // 
@@ -4037,7 +4024,7 @@ namespace BARevitTools
             this.materialsAMLDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialsAMLDataGridView.Location = new System.Drawing.Point(3, 33);
             this.materialsAMLDataGridView.Name = "materialsAMLDataGridView";
-            this.materialsAMLDataGridView.Size = new System.Drawing.Size(481, 275);
+            this.materialsAMLDataGridView.Size = new System.Drawing.Size(481, 276);
             this.materialsAMLDataGridView.TabIndex = 3;
             this.materialsAMLDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MaterialsAMLDataGridView_CellContentClick);
             // 
@@ -4045,7 +4032,7 @@ namespace BARevitTools
             // 
             this.materialsAMLLaunchPanel.Controls.Add(this.materialsAMLLaunchPaletteButton);
             this.materialsAMLLaunchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsAMLLaunchPanel.Location = new System.Drawing.Point(0, 311);
+            this.materialsAMLLaunchPanel.Location = new System.Drawing.Point(0, 312);
             this.materialsAMLLaunchPanel.Margin = new System.Windows.Forms.Padding(0);
             this.materialsAMLLaunchPanel.Name = "materialsAMLLaunchPanel";
             this.materialsAMLLaunchPanel.Size = new System.Drawing.Size(487, 33);
@@ -4081,7 +4068,7 @@ namespace BARevitTools
             this.materialsCMSExcelLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.materialsCMSExcelLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.materialsCMSExcelLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.materialsCMSExcelLayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.materialsCMSExcelLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.materialsCMSExcelLayoutPanel.TabIndex = 2;
             this.materialsCMSExcelLayoutPanel.Visible = false;
             // 
@@ -4097,13 +4084,13 @@ namespace BARevitTools
             this.materialsCMSExcelExportPanel.Location = new System.Drawing.Point(0, 0);
             this.materialsCMSExcelExportPanel.Margin = new System.Windows.Forms.Padding(0);
             this.materialsCMSExcelExportPanel.Name = "materialsCMSExcelExportPanel";
-            this.materialsCMSExcelExportPanel.Size = new System.Drawing.Size(550, 51);
+            this.materialsCMSExcelExportPanel.Size = new System.Drawing.Size(549, 51);
             this.materialsCMSExcelExportPanel.TabIndex = 0;
             // 
             // materialsCMSExcelCreateSpreadsheetButton
             // 
             this.materialsCMSExcelCreateSpreadsheetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialsCMSExcelCreateSpreadsheetButton.Location = new System.Drawing.Point(422, 21);
+            this.materialsCMSExcelCreateSpreadsheetButton.Location = new System.Drawing.Point(421, 21);
             this.materialsCMSExcelCreateSpreadsheetButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.materialsCMSExcelCreateSpreadsheetButton.Name = "materialsCMSExcelCreateSpreadsheetButton";
             this.materialsCMSExcelCreateSpreadsheetButton.Size = new System.Drawing.Size(124, 23);
@@ -4119,7 +4106,7 @@ namespace BARevitTools
             this.materialsCMSExcelSpreadsheetNameTextBox.Location = new System.Drawing.Point(162, 23);
             this.materialsCMSExcelSpreadsheetNameTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 10, 1);
             this.materialsCMSExcelSpreadsheetNameTextBox.Name = "materialsCMSExcelSpreadsheetNameTextBox";
-            this.materialsCMSExcelSpreadsheetNameTextBox.Size = new System.Drawing.Size(250, 20);
+            this.materialsCMSExcelSpreadsheetNameTextBox.Size = new System.Drawing.Size(249, 20);
             this.materialsCMSExcelSpreadsheetNameTextBox.TabIndex = 2;
             this.materialsCMSExcelSpreadsheetNameTextBox.Text = "<Excel Spreadsheet Name>";
             this.materialsCMSExcelSpreadsheetNameTextBox.WordWrap = false;
@@ -4152,10 +4139,10 @@ namespace BARevitTools
             this.materialsCMSExcelRunPanel.Controls.Add(this.materialsCMSExcelCreateSymbolsProgressBar);
             this.materialsCMSExcelRunPanel.Controls.Add(this.materialsCMSExcelCreateSymbolsButton);
             this.materialsCMSExcelRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsCMSExcelRunPanel.Location = new System.Drawing.Point(0, 314);
+            this.materialsCMSExcelRunPanel.Location = new System.Drawing.Point(0, 315);
             this.materialsCMSExcelRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.materialsCMSExcelRunPanel.Name = "materialsCMSExcelRunPanel";
-            this.materialsCMSExcelRunPanel.Size = new System.Drawing.Size(550, 30);
+            this.materialsCMSExcelRunPanel.Size = new System.Drawing.Size(549, 30);
             this.materialsCMSExcelRunPanel.TabIndex = 1;
             // 
             // materialsCMSExcelCreateSymbolsProgressBar
@@ -4166,7 +4153,7 @@ namespace BARevitTools
             this.materialsCMSExcelCreateSymbolsProgressBar.Location = new System.Drawing.Point(146, 5);
             this.materialsCMSExcelCreateSymbolsProgressBar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.materialsCMSExcelCreateSymbolsProgressBar.Name = "materialsCMSExcelCreateSymbolsProgressBar";
-            this.materialsCMSExcelCreateSymbolsProgressBar.Size = new System.Drawing.Size(400, 19);
+            this.materialsCMSExcelCreateSymbolsProgressBar.Size = new System.Drawing.Size(399, 19);
             this.materialsCMSExcelCreateSymbolsProgressBar.TabIndex = 1;
             // 
             // materialsCMSExcelCreateSymbolsButton
@@ -4193,7 +4180,7 @@ namespace BARevitTools
             this.materialsCMSExcelImportPanel.Location = new System.Drawing.Point(0, 51);
             this.materialsCMSExcelImportPanel.Margin = new System.Windows.Forms.Padding(0);
             this.materialsCMSExcelImportPanel.Name = "materialsCMSExcelImportPanel";
-            this.materialsCMSExcelImportPanel.Size = new System.Drawing.Size(550, 51);
+            this.materialsCMSExcelImportPanel.Size = new System.Drawing.Size(549, 51);
             this.materialsCMSExcelImportPanel.TabIndex = 2;
             // 
             // materialsCMSSetViewNameTextBox
@@ -4202,7 +4189,7 @@ namespace BARevitTools
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialsCMSSetViewNameTextBox.Location = new System.Drawing.Point(162, 26);
             this.materialsCMSSetViewNameTextBox.Name = "materialsCMSSetViewNameTextBox";
-            this.materialsCMSSetViewNameTextBox.Size = new System.Drawing.Size(250, 20);
+            this.materialsCMSSetViewNameTextBox.Size = new System.Drawing.Size(249, 20);
             this.materialsCMSSetViewNameTextBox.TabIndex = 2;
             // 
             // materialsCMSSetViewNameLabel
@@ -4245,20 +4232,20 @@ namespace BARevitTools
             this.materialsCMSExcelDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.materialsCMSExcelDataGridView.Name = "materialsCMSExcelDataGridView";
             this.materialsCMSExcelDataGridView.RowTemplate.Height = 28;
-            this.materialsCMSExcelDataGridView.Size = new System.Drawing.Size(550, 212);
+            this.materialsCMSExcelDataGridView.Size = new System.Drawing.Size(549, 213);
             this.materialsCMSExcelDataGridView.TabIndex = 3;
             // 
             // materialsCMSExcelInstructionsTextBox
             // 
             this.materialsCMSExcelInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsCMSExcelInstructionsTextBox.Location = new System.Drawing.Point(552, 1);
+            this.materialsCMSExcelInstructionsTextBox.Location = new System.Drawing.Point(551, 1);
             this.materialsCMSExcelInstructionsTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.materialsCMSExcelInstructionsTextBox.Multiline = true;
             this.materialsCMSExcelInstructionsTextBox.Name = "materialsCMSExcelInstructionsTextBox";
             this.materialsCMSExcelInstructionsTextBox.ReadOnly = true;
             this.materialsCMSExcelLayoutPanel.SetRowSpan(this.materialsCMSExcelInstructionsTextBox, 4);
             this.materialsCMSExcelInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.materialsCMSExcelInstructionsTextBox.Size = new System.Drawing.Size(163, 342);
+            this.materialsCMSExcelInstructionsTextBox.Size = new System.Drawing.Size(163, 343);
             this.materialsCMSExcelInstructionsTextBox.TabIndex = 4;
             this.materialsCMSExcelInstructionsTextBox.Text = resources.GetString("materialsCMSExcelInstructionsTextBox.Text");
             // 
@@ -4269,7 +4256,7 @@ namespace BARevitTools
             this.roomsTab.Location = new System.Drawing.Point(4, 25);
             this.roomsTab.Margin = new System.Windows.Forms.Padding(0);
             this.roomsTab.Name = "roomsTab";
-            this.roomsTab.Size = new System.Drawing.Size(721, 401);
+            this.roomsTab.Size = new System.Drawing.Size(720, 402);
             this.roomsTab.TabIndex = 2;
             this.roomsTab.Text = "Rooms";
             this.roomsTab.UseVisualStyleBackColor = true;
@@ -4287,7 +4274,7 @@ namespace BARevitTools
             this.roomsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.roomsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.roomsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.roomsTabLayoutPanel.Size = new System.Drawing.Size(717, 397);
+            this.roomsTabLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.roomsTabLayoutPanel.TabIndex = 2;
             // 
             // roomsToolsPanel
@@ -4297,7 +4284,7 @@ namespace BARevitTools
             this.roomsToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roomsToolsPanel.Location = new System.Drawing.Point(3, 56);
             this.roomsToolsPanel.Name = "roomsToolsPanel";
-            this.roomsToolsPanel.Size = new System.Drawing.Size(711, 338);
+            this.roomsToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.roomsToolsPanel.TabIndex = 1;
             // 
             // roomsCDRTLayoutPanel
@@ -4312,7 +4299,7 @@ namespace BARevitTools
             this.roomsCDRTLayoutPanel.RowCount = 2;
             this.roomsCDRTLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.57396F));
             this.roomsCDRTLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.42604F));
-            this.roomsCDRTLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.roomsCDRTLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.roomsCDRTLayoutPanel.TabIndex = 16;
             this.roomsCDRTLayoutPanel.Visible = false;
             // 
@@ -4325,7 +4312,7 @@ namespace BARevitTools
             this.roomsCDRTInstructionsTextBox.Multiline = true;
             this.roomsCDRTInstructionsTextBox.Name = "roomsCDRTInstructionsTextBox";
             this.roomsCDRTInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.roomsCDRTInstructionsTextBox.Size = new System.Drawing.Size(711, 126);
+            this.roomsCDRTInstructionsTextBox.Size = new System.Drawing.Size(710, 127);
             this.roomsCDRTInstructionsTextBox.TabIndex = 0;
             this.roomsCDRTInstructionsTextBox.Text = resources.GetString("roomsCDRTInstructionsTextBox.Text");
             // 
@@ -4333,10 +4320,10 @@ namespace BARevitTools
             // 
             this.roomsCDRTControlsPanel.Controls.Add(this.roomsCDRTRunButton);
             this.roomsCDRTControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roomsCDRTControlsPanel.Location = new System.Drawing.Point(0, 126);
+            this.roomsCDRTControlsPanel.Location = new System.Drawing.Point(0, 127);
             this.roomsCDRTControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.roomsCDRTControlsPanel.Name = "roomsCDRTControlsPanel";
-            this.roomsCDRTControlsPanel.Size = new System.Drawing.Size(711, 212);
+            this.roomsCDRTControlsPanel.Size = new System.Drawing.Size(710, 212);
             this.roomsCDRTControlsPanel.TabIndex = 1;
             // 
             // roomsCDRTRunButton
@@ -4363,7 +4350,7 @@ namespace BARevitTools
             this.roomsSRNNLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.roomsSRNNLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.roomsSRNNLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.roomsSRNNLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.roomsSRNNLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.roomsSRNNLayoutPanel.TabIndex = 2;
             this.roomsSRNNLayoutPanel.Visible = false;
             // 
@@ -4375,7 +4362,7 @@ namespace BARevitTools
             this.roomsSRNNInstructions.Margin = new System.Windows.Forms.Padding(0);
             this.roomsSRNNInstructions.Name = "roomsSRNNInstructions";
             this.roomsSRNNInstructions.Padding = new System.Windows.Forms.Padding(5);
-            this.roomsSRNNInstructions.Size = new System.Drawing.Size(711, 30);
+            this.roomsSRNNInstructions.Size = new System.Drawing.Size(710, 30);
             this.roomsSRNNInstructions.TabIndex = 14;
             this.roomsSRNNInstructions.Text = "This will swap the room name and numbers for better sorting with a Bluebeam PDF p" +
     "rint. Swap back after printing.";
@@ -4387,7 +4374,7 @@ namespace BARevitTools
             this.roomsSRNNPanel.Location = new System.Drawing.Point(0, 60);
             this.roomsSRNNPanel.Margin = new System.Windows.Forms.Padding(0);
             this.roomsSRNNPanel.Name = "roomsSRNNPanel";
-            this.roomsSRNNPanel.Size = new System.Drawing.Size(711, 278);
+            this.roomsSRNNPanel.Size = new System.Drawing.Size(710, 279);
             this.roomsSRNNPanel.TabIndex = 1;
             // 
             // roomsSRNNRunButton
@@ -4409,7 +4396,7 @@ namespace BARevitTools
             this.roomsSRRNUrlPanel.Location = new System.Drawing.Point(0, 30);
             this.roomsSRRNUrlPanel.Margin = new System.Windows.Forms.Padding(0);
             this.roomsSRRNUrlPanel.Name = "roomsSRRNUrlPanel";
-            this.roomsSRRNUrlPanel.Size = new System.Drawing.Size(711, 30);
+            this.roomsSRRNUrlPanel.Size = new System.Drawing.Size(710, 30);
             this.roomsSRRNUrlPanel.TabIndex = 15;
             // 
             // roomsSRRNUrlLabel
@@ -4443,7 +4430,7 @@ namespace BARevitTools
             this.wallsTab.Location = new System.Drawing.Point(4, 25);
             this.wallsTab.Margin = new System.Windows.Forms.Padding(0);
             this.wallsTab.Name = "wallsTab";
-            this.wallsTab.Size = new System.Drawing.Size(721, 401);
+            this.wallsTab.Size = new System.Drawing.Size(720, 402);
             this.wallsTab.TabIndex = 0;
             this.wallsTab.Text = "Walls";
             this.wallsTab.UseVisualStyleBackColor = true;
@@ -4461,7 +4448,7 @@ namespace BARevitTools
             this.wallsTabLayoutPanel.RowCount = 2;
             this.wallsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.wallsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.wallsTabLayoutPanel.Size = new System.Drawing.Size(717, 397);
+            this.wallsTabLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.wallsTabLayoutPanel.TabIndex = 8;
             // 
             // wallsToolStrip
@@ -4479,7 +4466,7 @@ namespace BARevitTools
             this.wallsToolStrip.Location = new System.Drawing.Point(0, 0);
             this.wallsToolStrip.Name = "wallsToolStrip";
             this.wallsToolStrip.Padding = new System.Windows.Forms.Padding(0);
-            this.wallsToolStrip.Size = new System.Drawing.Size(717, 53);
+            this.wallsToolStrip.Size = new System.Drawing.Size(716, 53);
             this.wallsToolStrip.Stretch = true;
             this.wallsToolStrip.TabIndex = 0;
             this.wallsToolStrip.Text = "toolStrip1";
@@ -4526,7 +4513,7 @@ namespace BARevitTools
             this.wallsToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.wallsToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.wallsToolsPanel.Name = "wallsToolsPanel";
-            this.wallsToolsPanel.Size = new System.Drawing.Size(717, 344);
+            this.wallsToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.wallsToolsPanel.TabIndex = 1;
             // 
             // wallsDPLayoutPanel
@@ -4541,7 +4528,7 @@ namespace BARevitTools
             this.wallsDPLayoutPanel.RowCount = 2;
             this.wallsDPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.wallsDPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.wallsDPLayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.wallsDPLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.wallsDPLayoutPanel.TabIndex = 8;
             this.wallsDPLayoutPanel.Visible = false;
             // 
@@ -4554,7 +4541,7 @@ namespace BARevitTools
             this.wallsDPInstructionsTextBox.Multiline = true;
             this.wallsDPInstructionsTextBox.Name = "wallsDPInstructionsTextBox";
             this.wallsDPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.wallsDPInstructionsTextBox.Size = new System.Drawing.Size(717, 100);
+            this.wallsDPInstructionsTextBox.Size = new System.Drawing.Size(716, 100);
             this.wallsDPInstructionsTextBox.TabIndex = 0;
             this.wallsDPInstructionsTextBox.Text = resources.GetString("wallsDPInstructionsTextBox.Text");
             // 
@@ -4565,7 +4552,7 @@ namespace BARevitTools
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(717, 244);
+            this.panel2.Size = new System.Drawing.Size(716, 245);
             this.panel2.TabIndex = 1;
             // 
             // wallsDPRunButton
@@ -4591,7 +4578,7 @@ namespace BARevitTools
             this.wallsMPWLayoutPanel.RowCount = 2;
             this.wallsMPWLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.wallsMPWLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.wallsMPWLayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.wallsMPWLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.wallsMPWLayoutPanel.TabIndex = 0;
             this.wallsMPWLayoutPanel.Visible = false;
             // 
@@ -4609,7 +4596,7 @@ namespace BARevitTools
             this.wallsMPWControlsPanel.Location = new System.Drawing.Point(0, 179);
             this.wallsMPWControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.wallsMPWControlsPanel.Name = "wallsMPWControlsPanel";
-            this.wallsMPWControlsPanel.Size = new System.Drawing.Size(717, 165);
+            this.wallsMPWControlsPanel.Size = new System.Drawing.Size(716, 166);
             this.wallsMPWControlsPanel.TabIndex = 0;
             // 
             // wallsMPWLabelSelectWall
@@ -4691,7 +4678,7 @@ namespace BARevitTools
             this.wallsMPWInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.wallsMPWInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.wallsMPWInstructionsPanel.Name = "wallsMPWInstructionsPanel";
-            this.wallsMPWInstructionsPanel.Size = new System.Drawing.Size(717, 179);
+            this.wallsMPWInstructionsPanel.Size = new System.Drawing.Size(716, 179);
             this.wallsMPWInstructionsPanel.TabIndex = 1;
             // 
             // textBox1
@@ -4703,7 +4690,7 @@ namespace BARevitTools
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(717, 179);
+            this.textBox1.Size = new System.Drawing.Size(716, 179);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
@@ -4715,7 +4702,7 @@ namespace BARevitTools
             this.documentationTab.Margin = new System.Windows.Forms.Padding(0);
             this.documentationTab.Name = "documentationTab";
             this.documentationTab.Padding = new System.Windows.Forms.Padding(3);
-            this.documentationTab.Size = new System.Drawing.Size(735, 436);
+            this.documentationTab.Size = new System.Drawing.Size(734, 437);
             this.documentationTab.TabIndex = 5;
             this.documentationTab.Text = "Documentation";
             // 
@@ -4729,7 +4716,7 @@ namespace BARevitTools
             this.documentationTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.documentationTabControl.Name = "documentationTabControl";
             this.documentationTabControl.SelectedIndex = 0;
-            this.documentationTabControl.Size = new System.Drawing.Size(729, 430);
+            this.documentationTabControl.Size = new System.Drawing.Size(728, 431);
             this.documentationTabControl.TabIndex = 0;
             // 
             // sheetsTab
@@ -4741,7 +4728,7 @@ namespace BARevitTools
             this.sheetsTab.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsTab.Name = "sheetsTab";
             this.sheetsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.sheetsTab.Size = new System.Drawing.Size(721, 401);
+            this.sheetsTab.Size = new System.Drawing.Size(720, 402);
             this.sheetsTab.TabIndex = 0;
             this.sheetsTab.Text = "Sheets";
             // 
@@ -4761,7 +4748,7 @@ namespace BARevitTools
             this.sheetsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.sheetsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.sheetsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.sheetsTabLayoutPanel.Size = new System.Drawing.Size(711, 391);
+            this.sheetsTabLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.sheetsTabLayoutPanel.TabIndex = 4;
             // 
             // sheetsToolStrip
@@ -4779,7 +4766,7 @@ namespace BARevitTools
             this.sheetsToolStrip.Location = new System.Drawing.Point(0, 0);
             this.sheetsToolStrip.Name = "sheetsToolStrip";
             this.sheetsToolStrip.Padding = new System.Windows.Forms.Padding(0);
-            this.sheetsToolStrip.Size = new System.Drawing.Size(711, 53);
+            this.sheetsToolStrip.Size = new System.Drawing.Size(710, 53);
             this.sheetsToolStrip.Stretch = true;
             this.sheetsToolStrip.TabIndex = 0;
             this.sheetsToolStrip.Text = "toolStrip1";
@@ -4867,7 +4854,7 @@ namespace BARevitTools
             this.sheetsToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.sheetsToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsToolsPanel.Name = "sheetsToolsPanel";
-            this.sheetsToolsPanel.Size = new System.Drawing.Size(711, 338);
+            this.sheetsToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsToolsPanel.TabIndex = 0;
             // 
             // sheetsCSLLayoutPanel
@@ -4891,14 +4878,14 @@ namespace BARevitTools
             this.sheetsCSLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.sheetsCSLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.sheetsCSLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.sheetsCSLLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.sheetsCSLLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsCSLLayoutPanel.TabIndex = 1;
             this.sheetsCSLLayoutPanel.Visible = false;
             // 
             // sheetsCLSRunButton
             // 
             this.sheetsCLSRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.sheetsCLSRunButton.Location = new System.Drawing.Point(3, 312);
+            this.sheetsCLSRunButton.Location = new System.Drawing.Point(3, 313);
             this.sheetsCLSRunButton.Name = "sheetsCLSRunButton";
             this.sheetsCLSRunButton.Size = new System.Drawing.Size(65, 23);
             this.sheetsCLSRunButton.TabIndex = 2;
@@ -4915,7 +4902,7 @@ namespace BARevitTools
             this.sheetsCSLDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sheetsCSLDataGridView.Location = new System.Drawing.Point(3, 98);
             this.sheetsCSLDataGridView.Name = "sheetsCSLDataGridView";
-            this.sheetsCSLDataGridView.Size = new System.Drawing.Size(705, 208);
+            this.sheetsCSLDataGridView.Size = new System.Drawing.Size(704, 209);
             this.sheetsCSLDataGridView.TabIndex = 1;
             this.sheetsCSLDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SheetsCSLDataGridView_CellContentClick);
             // 
@@ -4930,7 +4917,7 @@ namespace BARevitTools
             this.sheetsCSLControlsPanel.Location = new System.Drawing.Point(0, 42);
             this.sheetsCSLControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsCSLControlsPanel.Name = "sheetsCSLControlsPanel";
-            this.sheetsCSLControlsPanel.Size = new System.Drawing.Size(711, 53);
+            this.sheetsCSLControlsPanel.Size = new System.Drawing.Size(710, 53);
             this.sheetsCSLControlsPanel.TabIndex = 3;
             // 
             // sheetsCSLFilterConditionComboBox
@@ -4990,7 +4977,7 @@ namespace BARevitTools
             this.sheetsCSLInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.sheetsCSLInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsCSLInstructionsPanel.Name = "sheetsCSLInstructionsPanel";
-            this.sheetsCSLInstructionsPanel.Size = new System.Drawing.Size(711, 42);
+            this.sheetsCSLInstructionsPanel.Size = new System.Drawing.Size(710, 42);
             this.sheetsCSLInstructionsPanel.TabIndex = 4;
             // 
             // sheetsCSLInstructionsLabel
@@ -5000,7 +4987,7 @@ namespace BARevitTools
             this.sheetsCSLInstructionsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sheetsCSLInstructionsLabel.Location = new System.Drawing.Point(0, 0);
             this.sheetsCSLInstructionsLabel.Name = "sheetsCSLInstructionsLabel";
-            this.sheetsCSLInstructionsLabel.Size = new System.Drawing.Size(711, 42);
+            this.sheetsCSLInstructionsLabel.Size = new System.Drawing.Size(710, 42);
             this.sheetsCSLInstructionsLabel.TabIndex = 0;
             this.sheetsCSLInstructionsLabel.Text = "Instructions:\r\n1) Select the sheet to copy legends from; 2) Select the sheets to " +
     "copy legends to; 3) Click RUN to copy the legends.";
@@ -5025,7 +5012,7 @@ namespace BARevitTools
             this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.sheetsOSSLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.sheetsOSSLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsOSSLayoutPanel.TabIndex = 1;
             this.sheetsOSSLayoutPanel.Visible = false;
             // 
@@ -5039,7 +5026,7 @@ namespace BARevitTools
             this.sheetsOSSDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsOSSDataGridView.Name = "sheetsOSSDataGridView";
             this.sheetsOSSDataGridView.RowHeadersVisible = false;
-            this.sheetsOSSDataGridView.Size = new System.Drawing.Size(530, 194);
+            this.sheetsOSSDataGridView.Size = new System.Drawing.Size(529, 195);
             this.sheetsOSSDataGridView.TabIndex = 0;
             this.sheetsOSSDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SheetsOSSDataGridView_CellContentClick);
             // 
@@ -5051,7 +5038,7 @@ namespace BARevitTools
             this.sheetsOSSInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.sheetsOSSInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsOSSInstructionsPanel.Name = "sheetsOSSInstructionsPanel";
-            this.sheetsOSSInstructionsPanel.Size = new System.Drawing.Size(711, 79);
+            this.sheetsOSSInstructionsPanel.Size = new System.Drawing.Size(710, 79);
             this.sheetsOSSInstructionsPanel.TabIndex = 1;
             // 
             // sheetsOSSInstructionsTextBox
@@ -5062,7 +5049,7 @@ namespace BARevitTools
             this.sheetsOSSInstructionsTextBox.Multiline = true;
             this.sheetsOSSInstructionsTextBox.Name = "sheetsOSSInstructionsTextBox";
             this.sheetsOSSInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.sheetsOSSInstructionsTextBox.Size = new System.Drawing.Size(711, 79);
+            this.sheetsOSSInstructionsTextBox.Size = new System.Drawing.Size(710, 79);
             this.sheetsOSSInstructionsTextBox.TabIndex = 0;
             this.sheetsOSSInstructionsTextBox.Text = resources.GetString("sheetsOSSInstructionsTextBox.Text");
             // 
@@ -5076,7 +5063,7 @@ namespace BARevitTools
             this.sheetsOSSFilterPanel.Location = new System.Drawing.Point(0, 79);
             this.sheetsOSSFilterPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsOSSFilterPanel.Name = "sheetsOSSFilterPanel";
-            this.sheetsOSSFilterPanel.Size = new System.Drawing.Size(530, 35);
+            this.sheetsOSSFilterPanel.Size = new System.Drawing.Size(529, 35);
             this.sheetsOSSFilterPanel.TabIndex = 4;
             // 
             // sheetsOSSFilterFieldComboBox
@@ -5098,7 +5085,7 @@ namespace BARevitTools
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sheetsOSSFilterTextBox.Location = new System.Drawing.Point(265, 7);
             this.sheetsOSSFilterTextBox.Name = "sheetsOSSFilterTextBox";
-            this.sheetsOSSFilterTextBox.Size = new System.Drawing.Size(202, 20);
+            this.sheetsOSSFilterTextBox.Size = new System.Drawing.Size(201, 20);
             this.sheetsOSSFilterTextBox.TabIndex = 3;
             this.sheetsOSSFilterTextBox.Text = "<Search String>";
             this.sheetsOSSFilterTextBox.TextChanged += new System.EventHandler(this.SheetsOSSFilterTextBox_TextChanged);
@@ -5132,11 +5119,11 @@ namespace BARevitTools
             this.sheetsOSSNewSetPanel.Controls.Add(this.sheetsOSSNewSetLabel);
             this.sheetsOSSNewSetPanel.Controls.Add(this.sheetsOSSNewSetTextBox);
             this.sheetsOSSNewSetPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsOSSNewSetPanel.Location = new System.Drawing.Point(530, 79);
+            this.sheetsOSSNewSetPanel.Location = new System.Drawing.Point(529, 79);
             this.sheetsOSSNewSetPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsOSSNewSetPanel.Name = "sheetsOSSNewSetPanel";
             this.sheetsOSSLayoutPanel.SetRowSpan(this.sheetsOSSNewSetPanel, 2);
-            this.sheetsOSSNewSetPanel.Size = new System.Drawing.Size(181, 229);
+            this.sheetsOSSNewSetPanel.Size = new System.Drawing.Size(181, 230);
             this.sheetsOSSNewSetPanel.TabIndex = 3;
             // 
             // sheetsOSSNewSetButton
@@ -5173,16 +5160,16 @@ namespace BARevitTools
             this.sheetsOSSControlsPanel.Controls.Add(this.sheetsOSSRunButton);
             this.sheetsOSSControlsPanel.Controls.Add(this.sheetsOSSRunLabel);
             this.sheetsOSSControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsOSSControlsPanel.Location = new System.Drawing.Point(0, 308);
+            this.sheetsOSSControlsPanel.Location = new System.Drawing.Point(0, 309);
             this.sheetsOSSControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsOSSControlsPanel.Name = "sheetsOSSControlsPanel";
-            this.sheetsOSSControlsPanel.Size = new System.Drawing.Size(711, 30);
+            this.sheetsOSSControlsPanel.Size = new System.Drawing.Size(710, 30);
             this.sheetsOSSControlsPanel.TabIndex = 2;
             // 
             // sheetsOSSRunButton
             // 
             this.sheetsOSSRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sheetsOSSRunButton.Location = new System.Drawing.Point(632, 4);
+            this.sheetsOSSRunButton.Location = new System.Drawing.Point(631, 4);
             this.sheetsOSSRunButton.Name = "sheetsOSSRunButton";
             this.sheetsOSSRunButton.Size = new System.Drawing.Size(75, 23);
             this.sheetsOSSRunButton.TabIndex = 1;
@@ -5194,7 +5181,7 @@ namespace BARevitTools
             // 
             this.sheetsOSSRunLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sheetsOSSRunLabel.AutoSize = true;
-            this.sheetsOSSRunLabel.Location = new System.Drawing.Point(558, 9);
+            this.sheetsOSSRunLabel.Location = new System.Drawing.Point(557, 9);
             this.sheetsOSSRunLabel.Name = "sheetsOSSRunLabel";
             this.sheetsOSSRunLabel.Size = new System.Drawing.Size(69, 13);
             this.sheetsOSSRunLabel.TabIndex = 0;
@@ -5220,7 +5207,7 @@ namespace BARevitTools
             this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.sheetsISFLLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.sheetsISFLLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsISFLLayoutPanel.TabIndex = 3;
             this.sheetsISFLLayoutPanel.Visible = false;
             // 
@@ -5231,7 +5218,7 @@ namespace BARevitTools
             this.sheetsISFLInstructionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sheetsISFLInstructionsPanel.Location = new System.Drawing.Point(3, 3);
             this.sheetsISFLInstructionsPanel.Name = "sheetsISFLInstructionsPanel";
-            this.sheetsISFLInstructionsPanel.Size = new System.Drawing.Size(705, 55);
+            this.sheetsISFLInstructionsPanel.Size = new System.Drawing.Size(704, 55);
             this.sheetsISFLInstructionsPanel.TabIndex = 5;
             // 
             // sheetsISFLInstructionsLabel
@@ -5241,14 +5228,14 @@ namespace BARevitTools
             this.sheetsISFLInstructionsLabel.Location = new System.Drawing.Point(0, 0);
             this.sheetsISFLInstructionsLabel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsISFLInstructionsLabel.Name = "sheetsISFLInstructionsLabel";
-            this.sheetsISFLInstructionsLabel.Size = new System.Drawing.Size(705, 55);
+            this.sheetsISFLInstructionsLabel.Size = new System.Drawing.Size(704, 55);
             this.sheetsISFLInstructionsLabel.TabIndex = 0;
             this.sheetsISFLInstructionsLabel.Text = resources.GetString("sheetsISFLInstructionsLabel.Text");
             // 
             // sheetsISFLRunButton
             // 
             this.sheetsISFLRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.sheetsISFLRunButton.Location = new System.Drawing.Point(3, 312);
+            this.sheetsISFLRunButton.Location = new System.Drawing.Point(3, 313);
             this.sheetsISFLRunButton.Name = "sheetsISFLRunButton";
             this.sheetsISFLRunButton.Size = new System.Drawing.Size(65, 23);
             this.sheetsISFLRunButton.TabIndex = 2;
@@ -5266,7 +5253,7 @@ namespace BARevitTools
             this.sheetsISFLDataGridView.Location = new System.Drawing.Point(0, 119);
             this.sheetsISFLDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsISFLDataGridView.Name = "sheetsISFLDataGridView";
-            this.sheetsISFLDataGridView.Size = new System.Drawing.Size(487, 190);
+            this.sheetsISFLDataGridView.Size = new System.Drawing.Size(486, 191);
             this.sheetsISFLDataGridView.TabIndex = 1;
             this.sheetsISFLDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SheetsISFLDataGridView_CellContentClick);
             // 
@@ -5280,7 +5267,7 @@ namespace BARevitTools
             this.sheetsISFLControlsPanel.Location = new System.Drawing.Point(0, 61);
             this.sheetsISFLControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsISFLControlsPanel.Name = "sheetsISFLControlsPanel";
-            this.sheetsISFLControlsPanel.Size = new System.Drawing.Size(711, 58);
+            this.sheetsISFLControlsPanel.Size = new System.Drawing.Size(710, 58);
             this.sheetsISFLControlsPanel.TabIndex = 4;
             // 
             // sheetsISFLComboBox
@@ -5317,11 +5304,11 @@ namespace BARevitTools
             this.sheetsIFSLDisciplinePanel.Controls.Add(this.sheetsISFLDisciplineComboBox);
             this.sheetsIFSLDisciplinePanel.Controls.Add(this.sheetsISFLDisciplineLabel);
             this.sheetsIFSLDisciplinePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsIFSLDisciplinePanel.Location = new System.Drawing.Point(487, 119);
+            this.sheetsIFSLDisciplinePanel.Location = new System.Drawing.Point(486, 119);
             this.sheetsIFSLDisciplinePanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsIFSLDisciplinePanel.Name = "sheetsIFSLDisciplinePanel";
             this.sheetsISFLLayoutPanel.SetRowSpan(this.sheetsIFSLDisciplinePanel, 2);
-            this.sheetsIFSLDisciplinePanel.Size = new System.Drawing.Size(224, 219);
+            this.sheetsIFSLDisciplinePanel.Size = new System.Drawing.Size(224, 220);
             this.sheetsIFSLDisciplinePanel.TabIndex = 2;
             // 
             // sheetsISFLDisciplineUpdateButton
@@ -5367,7 +5354,7 @@ namespace BARevitTools
             this.sheetsCSSFSLayoutPanel.RowCount = 2;
             this.sheetsCSSFSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.91931F));
             this.sheetsCSSFSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.08069F));
-            this.sheetsCSSFSLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.sheetsCSSFSLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsCSSFSLayoutPanel.TabIndex = 1;
             this.sheetsCSSFSLayoutPanel.Visible = false;
             // 
@@ -5378,7 +5365,7 @@ namespace BARevitTools
             this.sheetsCSSFSInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.sheetsCSSFSInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsCSSFSInstructionsPanel.Name = "sheetsCSSFSInstructionsPanel";
-            this.sheetsCSSFSInstructionsPanel.Size = new System.Drawing.Size(711, 80);
+            this.sheetsCSSFSInstructionsPanel.Size = new System.Drawing.Size(710, 81);
             this.sheetsCSSFSInstructionsPanel.TabIndex = 0;
             // 
             // sheetsCSSFSInstructionsTextBox
@@ -5389,7 +5376,7 @@ namespace BARevitTools
             this.sheetsCSSFSInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsCSSFSInstructionsTextBox.Multiline = true;
             this.sheetsCSSFSInstructionsTextBox.Name = "sheetsCSSFSInstructionsTextBox";
-            this.sheetsCSSFSInstructionsTextBox.Size = new System.Drawing.Size(711, 80);
+            this.sheetsCSSFSInstructionsTextBox.Size = new System.Drawing.Size(710, 81);
             this.sheetsCSSFSInstructionsTextBox.TabIndex = 0;
             this.sheetsCSSFSInstructionsTextBox.Text = "Instructions:\r\n1) Set the sheet set name\r\n2) Select the sheet schedule to make th" +
     "e set from\r\n\r\nThis script will make new sheet sets using the visible sheets in a" +
@@ -5403,10 +5390,10 @@ namespace BARevitTools
             this.sheetsCSSFSControlsPanel.Controls.Add(this.sheetsCSSFSScheduleComboBox);
             this.sheetsCSSFSControlsPanel.Controls.Add(this.sheetsCSSFSRunButton);
             this.sheetsCSSFSControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsCSSFSControlsPanel.Location = new System.Drawing.Point(0, 80);
+            this.sheetsCSSFSControlsPanel.Location = new System.Drawing.Point(0, 81);
             this.sheetsCSSFSControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sheetsCSSFSControlsPanel.Name = "sheetsCSSFSControlsPanel";
-            this.sheetsCSSFSControlsPanel.Size = new System.Drawing.Size(711, 258);
+            this.sheetsCSSFSControlsPanel.Size = new System.Drawing.Size(710, 258);
             this.sheetsCSSFSControlsPanel.TabIndex = 1;
             // 
             // sheetsCSSFSSScheduleLabel
@@ -5433,7 +5420,7 @@ namespace BARevitTools
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sheetsCSSFSSetNameTextBox.Location = new System.Drawing.Point(102, 8);
             this.sheetsCSSFSSetNameTextBox.Name = "sheetsCSSFSSetNameTextBox";
-            this.sheetsCSSFSSetNameTextBox.Size = new System.Drawing.Size(480, 20);
+            this.sheetsCSSFSSetNameTextBox.Size = new System.Drawing.Size(479, 20);
             this.sheetsCSSFSSetNameTextBox.TabIndex = 3;
             this.sheetsCSSFSSetNameTextBox.Text = "<Sheet Set Name>";
             // 
@@ -5444,7 +5431,7 @@ namespace BARevitTools
             this.sheetsCSSFSScheduleComboBox.FormattingEnabled = true;
             this.sheetsCSSFSScheduleComboBox.Location = new System.Drawing.Point(102, 35);
             this.sheetsCSSFSScheduleComboBox.Name = "sheetsCSSFSScheduleComboBox";
-            this.sheetsCSSFSScheduleComboBox.Size = new System.Drawing.Size(480, 21);
+            this.sheetsCSSFSScheduleComboBox.Size = new System.Drawing.Size(479, 21);
             this.sheetsCSSFSScheduleComboBox.TabIndex = 2;
             this.sheetsCSSFSScheduleComboBox.Text = "<Schedule Name>";
             // 
@@ -5466,7 +5453,7 @@ namespace BARevitTools
             this.viewsTab.Margin = new System.Windows.Forms.Padding(0);
             this.viewsTab.Name = "viewsTab";
             this.viewsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.viewsTab.Size = new System.Drawing.Size(721, 401);
+            this.viewsTab.Size = new System.Drawing.Size(720, 402);
             this.viewsTab.TabIndex = 1;
             this.viewsTab.Text = "Views";
             this.viewsTab.UseVisualStyleBackColor = true;
@@ -5485,7 +5472,7 @@ namespace BARevitTools
             this.viewsTabLayoutPanel.RowCount = 2;
             this.viewsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.viewsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.viewsTabLayoutPanel.Size = new System.Drawing.Size(711, 391);
+            this.viewsTabLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.viewsTabLayoutPanel.TabIndex = 14;
             // 
             // viewsToolStrip
@@ -5500,7 +5487,7 @@ namespace BARevitTools
             this.viewsInteriorCropButton});
             this.viewsToolStrip.Location = new System.Drawing.Point(0, 0);
             this.viewsToolStrip.Name = "viewsToolStrip";
-            this.viewsToolStrip.Size = new System.Drawing.Size(711, 53);
+            this.viewsToolStrip.Size = new System.Drawing.Size(710, 53);
             this.viewsToolStrip.Stretch = true;
             this.viewsToolStrip.TabIndex = 1;
             this.viewsToolStrip.Text = "toolStrip1";
@@ -5569,7 +5556,7 @@ namespace BARevitTools
             this.viewsToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.viewsToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.viewsToolsPanel.Name = "viewsToolsPanel";
-            this.viewsToolsPanel.Size = new System.Drawing.Size(711, 338);
+            this.viewsToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.viewsToolsPanel.TabIndex = 2;
             // 
             // viewsCEPRLayoutPanel
@@ -5587,7 +5574,7 @@ namespace BARevitTools
             this.viewsCEPRLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.viewsCEPRLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.viewsCEPRLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.viewsCEPRLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.viewsCEPRLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.viewsCEPRLayoutPanel.TabIndex = 6;
             this.viewsCEPRLayoutPanel.Visible = false;
             // 
@@ -5598,10 +5585,10 @@ namespace BARevitTools
             this.viewsCEPRControlsPanel.Controls.Add(this.viewsCEPRCropCheckBox);
             this.viewsCEPRControlsPanel.Controls.Add(this.viewsCEPRElevationComboBox);
             this.viewsCEPRControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewsCEPRControlsPanel.Location = new System.Drawing.Point(0, 213);
+            this.viewsCEPRControlsPanel.Location = new System.Drawing.Point(0, 214);
             this.viewsCEPRControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.viewsCEPRControlsPanel.Name = "viewsCEPRControlsPanel";
-            this.viewsCEPRControlsPanel.Size = new System.Drawing.Size(711, 125);
+            this.viewsCEPRControlsPanel.Size = new System.Drawing.Size(710, 125);
             this.viewsCEPRControlsPanel.TabIndex = 2;
             // 
             // viewsCEPRRunButton
@@ -5643,7 +5630,7 @@ namespace BARevitTools
             this.viewsCEPRElevationComboBox.Location = new System.Drawing.Point(5, 5);
             this.viewsCEPRElevationComboBox.MinimumSize = new System.Drawing.Size(150, 0);
             this.viewsCEPRElevationComboBox.Name = "viewsCEPRElevationComboBox";
-            this.viewsCEPRElevationComboBox.Size = new System.Drawing.Size(154, 21);
+            this.viewsCEPRElevationComboBox.Size = new System.Drawing.Size(153, 21);
             this.viewsCEPRElevationComboBox.TabIndex = 10;
             this.viewsCEPRElevationComboBox.Text = "<Select Elevation Type>";
             // 
@@ -5654,7 +5641,7 @@ namespace BARevitTools
             this.viewsCEPRInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.viewsCEPRInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.viewsCEPRInstructionsPanel.Name = "viewsCEPRInstructionsPanel";
-            this.viewsCEPRInstructionsPanel.Size = new System.Drawing.Size(711, 183);
+            this.viewsCEPRInstructionsPanel.Size = new System.Drawing.Size(710, 184);
             this.viewsCEPRInstructionsPanel.TabIndex = 0;
             // 
             // viewsCEPRInstructionsTextBox
@@ -5666,7 +5653,7 @@ namespace BARevitTools
             this.viewsCEPRInstructionsTextBox.Name = "viewsCEPRInstructionsTextBox";
             this.viewsCEPRInstructionsTextBox.ReadOnly = true;
             this.viewsCEPRInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.viewsCEPRInstructionsTextBox.Size = new System.Drawing.Size(711, 183);
+            this.viewsCEPRInstructionsTextBox.Size = new System.Drawing.Size(710, 184);
             this.viewsCEPRInstructionsTextBox.TabIndex = 14;
             this.viewsCEPRInstructionsTextBox.Text = resources.GetString("viewsCEPRInstructionsTextBox.Text");
             // 
@@ -5675,10 +5662,10 @@ namespace BARevitTools
             this.viewsCEPRUrlPanel.Controls.Add(this.viewsCEPRUrlLabel);
             this.viewsCEPRUrlPanel.Controls.Add(this.viewsCEPRUrlLinkLabel);
             this.viewsCEPRUrlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewsCEPRUrlPanel.Location = new System.Drawing.Point(0, 183);
+            this.viewsCEPRUrlPanel.Location = new System.Drawing.Point(0, 184);
             this.viewsCEPRUrlPanel.Margin = new System.Windows.Forms.Padding(0);
             this.viewsCEPRUrlPanel.Name = "viewsCEPRUrlPanel";
-            this.viewsCEPRUrlPanel.Size = new System.Drawing.Size(711, 30);
+            this.viewsCEPRUrlPanel.Size = new System.Drawing.Size(710, 30);
             this.viewsCEPRUrlPanel.TabIndex = 3;
             // 
             // viewsCEPRUrlLabel
@@ -5716,7 +5703,7 @@ namespace BARevitTools
             this.viewsHNIECLayoutPanel.RowCount = 2;
             this.viewsHNIECLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.viewsHNIECLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.viewsHNIECLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.viewsHNIECLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.viewsHNIECLayoutPanel.TabIndex = 15;
             this.viewsHNIECLayoutPanel.Visible = false;
             // 
@@ -5727,7 +5714,7 @@ namespace BARevitTools
             this.viewsHNIECInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.viewsHNIECInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.viewsHNIECInstructionsPanel.Name = "viewsHNIECInstructionsPanel";
-            this.viewsHNIECInstructionsPanel.Size = new System.Drawing.Size(711, 40);
+            this.viewsHNIECInstructionsPanel.Size = new System.Drawing.Size(710, 40);
             this.viewsHNIECInstructionsPanel.TabIndex = 0;
             // 
             // viewsHNIECBInstructions
@@ -5738,7 +5725,7 @@ namespace BARevitTools
             this.viewsHNIECBInstructions.Margin = new System.Windows.Forms.Padding(5);
             this.viewsHNIECBInstructions.Name = "viewsHNIECBInstructions";
             this.viewsHNIECBInstructions.Padding = new System.Windows.Forms.Padding(5);
-            this.viewsHNIECBInstructions.Size = new System.Drawing.Size(711, 40);
+            this.viewsHNIECBInstructions.Size = new System.Drawing.Size(710, 40);
             this.viewsHNIECBInstructions.TabIndex = 8;
             this.viewsHNIECBInstructions.Text = "This script will turn off the crop boundaries of elevation views without \"Interio" +
     "r\" in their viewport type name.";
@@ -5750,7 +5737,7 @@ namespace BARevitTools
             this.viewsHNIECControlsPanel.Location = new System.Drawing.Point(0, 40);
             this.viewsHNIECControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.viewsHNIECControlsPanel.Name = "viewsHNIECControlsPanel";
-            this.viewsHNIECControlsPanel.Size = new System.Drawing.Size(711, 298);
+            this.viewsHNIECControlsPanel.Size = new System.Drawing.Size(710, 299);
             this.viewsHNIECControlsPanel.TabIndex = 1;
             // 
             // viewsHNIECBRunButton
@@ -5777,7 +5764,7 @@ namespace BARevitTools
             this.viewsOICBLayoutPanel.RowCount = 2;
             this.viewsOICBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.viewsOICBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.viewsOICBLayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.viewsOICBLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.viewsOICBLayoutPanel.TabIndex = 6;
             this.viewsOICBLayoutPanel.Visible = false;
             // 
@@ -5788,7 +5775,7 @@ namespace BARevitTools
             this.viewsOICBInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.viewsOICBInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.viewsOICBInstructionsPanel.Name = "viewsOICBInstructionsPanel";
-            this.viewsOICBInstructionsPanel.Size = new System.Drawing.Size(711, 40);
+            this.viewsOICBInstructionsPanel.Size = new System.Drawing.Size(710, 40);
             this.viewsOICBInstructionsPanel.TabIndex = 0;
             // 
             // viewsOICBInstructionsLabel
@@ -5799,7 +5786,7 @@ namespace BARevitTools
             this.viewsOICBInstructionsLabel.Margin = new System.Windows.Forms.Padding(5);
             this.viewsOICBInstructionsLabel.Name = "viewsOICBInstructionsLabel";
             this.viewsOICBInstructionsLabel.Padding = new System.Windows.Forms.Padding(5);
-            this.viewsOICBInstructionsLabel.Size = new System.Drawing.Size(711, 40);
+            this.viewsOICBInstructionsLabel.Size = new System.Drawing.Size(710, 40);
             this.viewsOICBInstructionsLabel.TabIndex = 8;
             this.viewsOICBInstructionsLabel.Text = "This script will override the crop boundary of Interior Elevation type viewports " +
     "to match the standard.";
@@ -5811,7 +5798,7 @@ namespace BARevitTools
             this.viewsOICBControlsPanel.Location = new System.Drawing.Point(0, 40);
             this.viewsOICBControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.viewsOICBControlsPanel.Name = "viewsOICBControlsPanel";
-            this.viewsOICBControlsPanel.Size = new System.Drawing.Size(711, 298);
+            this.viewsOICBControlsPanel.Size = new System.Drawing.Size(710, 299);
             this.viewsOICBControlsPanel.TabIndex = 1;
             // 
             // elemViewsOCIBRunButton
@@ -5833,7 +5820,7 @@ namespace BARevitTools
             this.managementTab.Margin = new System.Windows.Forms.Padding(0);
             this.managementTab.Name = "managementTab";
             this.managementTab.Padding = new System.Windows.Forms.Padding(3);
-            this.managementTab.Size = new System.Drawing.Size(735, 436);
+            this.managementTab.Size = new System.Drawing.Size(734, 437);
             this.managementTab.TabIndex = 2;
             this.managementTab.Text = "Management";
             // 
@@ -5851,7 +5838,7 @@ namespace BARevitTools
             this.managmentTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.managmentTabControl.Name = "managmentTabControl";
             this.managmentTabControl.SelectedIndex = 0;
-            this.managmentTabControl.Size = new System.Drawing.Size(729, 430);
+            this.managmentTabControl.Size = new System.Drawing.Size(728, 431);
             this.managmentTabControl.TabIndex = 0;
             // 
             // dataTab
@@ -5862,7 +5849,7 @@ namespace BARevitTools
             this.dataTab.Margin = new System.Windows.Forms.Padding(0);
             this.dataTab.Name = "dataTab";
             this.dataTab.Padding = new System.Windows.Forms.Padding(3);
-            this.dataTab.Size = new System.Drawing.Size(721, 401);
+            this.dataTab.Size = new System.Drawing.Size(720, 402);
             this.dataTab.TabIndex = 0;
             this.dataTab.Text = "Data";
             this.dataTab.UseVisualStyleBackColor = true;
@@ -5879,7 +5866,7 @@ namespace BARevitTools
             this.dataTabLayoutPanel.RowCount = 2;
             this.dataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.dataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dataTabLayoutPanel.Size = new System.Drawing.Size(711, 391);
+            this.dataTabLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.dataTabLayoutPanel.TabIndex = 0;
             // 
             // dataToolStrip
@@ -5893,7 +5880,7 @@ namespace BARevitTools
             this.dataSeparator1});
             this.dataToolStrip.Location = new System.Drawing.Point(0, 0);
             this.dataToolStrip.Name = "dataToolStrip";
-            this.dataToolStrip.Size = new System.Drawing.Size(711, 53);
+            this.dataToolStrip.Size = new System.Drawing.Size(710, 53);
             this.dataToolStrip.TabIndex = 0;
             this.dataToolStrip.Text = "toolStrip1";
             // 
@@ -5923,7 +5910,7 @@ namespace BARevitTools
             this.dataToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.dataToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.dataToolsPanel.Name = "dataToolsPanel";
-            this.dataToolsPanel.Size = new System.Drawing.Size(711, 338);
+            this.dataToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.dataToolsPanel.TabIndex = 1;
             // 
             // dataEPILayoutPanel
@@ -5941,7 +5928,7 @@ namespace BARevitTools
             this.dataEPILayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.49856F));
             this.dataEPILayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.50144F));
             this.dataEPILayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.dataEPILayoutPanel.Size = new System.Drawing.Size(711, 338);
+            this.dataEPILayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.dataEPILayoutPanel.TabIndex = 14;
             this.dataEPILayoutPanel.Visible = false;
             // 
@@ -5952,7 +5939,7 @@ namespace BARevitTools
             this.dataEPIInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.dataEPIInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.dataEPIInstructionsPanel.Name = "dataEPIInstructionsPanel";
-            this.dataEPIInstructionsPanel.Size = new System.Drawing.Size(711, 140);
+            this.dataEPIInstructionsPanel.Size = new System.Drawing.Size(710, 140);
             this.dataEPIInstructionsPanel.TabIndex = 0;
             // 
             // dataEPIInstructionsLabel
@@ -5961,7 +5948,7 @@ namespace BARevitTools
             this.dataEPIInstructionsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataEPIInstructionsLabel.Location = new System.Drawing.Point(0, 0);
             this.dataEPIInstructionsLabel.Name = "dataEPIInstructionsLabel";
-            this.dataEPIInstructionsLabel.Size = new System.Drawing.Size(711, 140);
+            this.dataEPIInstructionsLabel.Size = new System.Drawing.Size(710, 140);
             this.dataEPIInstructionsLabel.TabIndex = 0;
             this.dataEPIInstructionsLabel.Text = resources.GetString("dataEPIInstructionsLabel.Text");
             // 
@@ -5979,7 +5966,7 @@ namespace BARevitTools
             this.dataEPIControlsPanel.Location = new System.Drawing.Point(0, 140);
             this.dataEPIControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.dataEPIControlsPanel.Name = "dataEPIControlsPanel";
-            this.dataEPIControlsPanel.Size = new System.Drawing.Size(711, 198);
+            this.dataEPIControlsPanel.Size = new System.Drawing.Size(710, 199);
             this.dataEPIControlsPanel.TabIndex = 1;
             // 
             // dataEPIDPIComboBox
@@ -6065,7 +6052,7 @@ namespace BARevitTools
             this.documentsTab.Location = new System.Drawing.Point(4, 25);
             this.documentsTab.Margin = new System.Windows.Forms.Padding(0);
             this.documentsTab.Name = "documentsTab";
-            this.documentsTab.Size = new System.Drawing.Size(721, 401);
+            this.documentsTab.Size = new System.Drawing.Size(720, 402);
             this.documentsTab.TabIndex = 1;
             this.documentsTab.Text = "Documents";
             this.documentsTab.UseVisualStyleBackColor = true;
@@ -6082,7 +6069,7 @@ namespace BARevitTools
             this.documentsLayoutPanel.RowCount = 2;
             this.documentsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.documentsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.documentsLayoutPanel.Size = new System.Drawing.Size(717, 397);
+            this.documentsLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.documentsLayoutPanel.TabIndex = 0;
             // 
             // documentsToolStrip
@@ -6100,7 +6087,7 @@ namespace BARevitTools
             this.documentsToolStrip.Location = new System.Drawing.Point(0, 0);
             this.documentsToolStrip.Name = "documentsToolStrip";
             this.documentsToolStrip.Padding = new System.Windows.Forms.Padding(0);
-            this.documentsToolStrip.Size = new System.Drawing.Size(717, 53);
+            this.documentsToolStrip.Size = new System.Drawing.Size(716, 53);
             this.documentsToolStrip.Stretch = true;
             this.documentsToolStrip.TabIndex = 2;
             this.documentsToolStrip.Text = "mgmtGraphicsToolStrip";
@@ -6145,7 +6132,7 @@ namespace BARevitTools
             this.documentsToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.documentsToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.documentsToolsPanel.Name = "documentsToolsPanel";
-            this.documentsToolsPanel.Size = new System.Drawing.Size(717, 344);
+            this.documentsToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.documentsToolsPanel.TabIndex = 3;
             // 
             // documentsCTSPanel
@@ -6188,7 +6175,7 @@ namespace BARevitTools
             this.graphicsTab.Location = new System.Drawing.Point(4, 25);
             this.graphicsTab.Margin = new System.Windows.Forms.Padding(0);
             this.graphicsTab.Name = "graphicsTab";
-            this.graphicsTab.Size = new System.Drawing.Size(721, 401);
+            this.graphicsTab.Size = new System.Drawing.Size(720, 402);
             this.graphicsTab.TabIndex = 2;
             this.graphicsTab.Text = "Graphics";
             this.graphicsTab.UseVisualStyleBackColor = true;
@@ -6200,7 +6187,7 @@ namespace BARevitTools
             this.miscTab.Location = new System.Drawing.Point(4, 25);
             this.miscTab.Margin = new System.Windows.Forms.Padding(0);
             this.miscTab.Name = "miscTab";
-            this.miscTab.Size = new System.Drawing.Size(721, 401);
+            this.miscTab.Size = new System.Drawing.Size(720, 402);
             this.miscTab.TabIndex = 3;
             this.miscTab.Text = "Misc";
             this.miscTab.UseVisualStyleBackColor = true;
@@ -6218,7 +6205,7 @@ namespace BARevitTools
             this.miscToolsLayoutPanel.RowCount = 2;
             this.miscToolsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.miscToolsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.miscToolsLayoutPanel.Size = new System.Drawing.Size(717, 397);
+            this.miscToolsLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.miscToolsLayoutPanel.TabIndex = 0;
             // 
             // miscToolStrip
@@ -6233,7 +6220,7 @@ namespace BARevitTools
             this.miscEEVButton});
             this.miscToolStrip.Location = new System.Drawing.Point(0, 0);
             this.miscToolStrip.Name = "miscToolStrip";
-            this.miscToolStrip.Size = new System.Drawing.Size(717, 53);
+            this.miscToolStrip.Size = new System.Drawing.Size(716, 53);
             this.miscToolStrip.TabIndex = 0;
             this.miscToolStrip.Text = "toolStrip1";
             // 
@@ -6277,7 +6264,7 @@ namespace BARevitTools
             this.miscToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.miscToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscToolsPanel.Name = "miscToolsPanel";
-            this.miscToolsPanel.Size = new System.Drawing.Size(717, 344);
+            this.miscToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.miscToolsPanel.TabIndex = 1;
             // 
             // miscEDVLayoutPanel
@@ -6299,7 +6286,7 @@ namespace BARevitTools
             this.miscEDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.miscEDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.miscEDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.miscEDVLayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.miscEDVLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.miscEDVLayoutPanel.TabIndex = 6;
             this.miscEDVLayoutPanel.Visible = false;
             // 
@@ -6311,7 +6298,7 @@ namespace BARevitTools
             this.miscEDVInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.miscEDVInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscEDVInstructionsPanel.Name = "miscEDVInstructionsPanel";
-            this.miscEDVInstructionsPanel.Size = new System.Drawing.Size(717, 75);
+            this.miscEDVInstructionsPanel.Size = new System.Drawing.Size(716, 75);
             this.miscEDVInstructionsPanel.TabIndex = 0;
             // 
             // miscEDVInstructionsTextBox
@@ -6322,7 +6309,7 @@ namespace BARevitTools
             this.miscEDVInstructionsTextBox.Multiline = true;
             this.miscEDVInstructionsTextBox.Name = "miscEDVInstructionsTextBox";
             this.miscEDVInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.miscEDVInstructionsTextBox.Size = new System.Drawing.Size(717, 75);
+            this.miscEDVInstructionsTextBox.Size = new System.Drawing.Size(716, 75);
             this.miscEDVInstructionsTextBox.TabIndex = 0;
             this.miscEDVInstructionsTextBox.Text = resources.GetString("miscEDVInstructionsTextBox.Text");
             // 
@@ -6332,10 +6319,10 @@ namespace BARevitTools
             this.miscEDVRunPanel.Controls.Add(this.miscEDVProgressBar);
             this.miscEDVRunPanel.Controls.Add(this.miscEDVRunButton);
             this.miscEDVRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.miscEDVRunPanel.Location = new System.Drawing.Point(0, 309);
+            this.miscEDVRunPanel.Location = new System.Drawing.Point(0, 310);
             this.miscEDVRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscEDVRunPanel.Name = "miscEDVRunPanel";
-            this.miscEDVRunPanel.Size = new System.Drawing.Size(717, 35);
+            this.miscEDVRunPanel.Size = new System.Drawing.Size(716, 35);
             this.miscEDVRunPanel.TabIndex = 1;
             // 
             // miscEDVProgressBar
@@ -6345,14 +6332,14 @@ namespace BARevitTools
             this.miscEDVProgressBar.ForeColor = System.Drawing.Color.GreenYellow;
             this.miscEDVProgressBar.Location = new System.Drawing.Point(3, 6);
             this.miscEDVProgressBar.Name = "miscEDVProgressBar";
-            this.miscEDVProgressBar.Size = new System.Drawing.Size(630, 23);
+            this.miscEDVProgressBar.Size = new System.Drawing.Size(629, 23);
             this.miscEDVProgressBar.TabIndex = 1;
             this.miscEDVProgressBar.Visible = false;
             // 
             // miscEDVRunButton
             // 
             this.miscEDVRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.miscEDVRunButton.Location = new System.Drawing.Point(638, 6);
+            this.miscEDVRunButton.Location = new System.Drawing.Point(637, 6);
             this.miscEDVRunButton.Name = "miscEDVRunButton";
             this.miscEDVRunButton.Size = new System.Drawing.Size(75, 23);
             this.miscEDVRunButton.TabIndex = 0;
@@ -6369,7 +6356,7 @@ namespace BARevitTools
             this.miscEDVDirectoryPanel.Location = new System.Drawing.Point(0, 75);
             this.miscEDVDirectoryPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscEDVDirectoryPanel.Name = "miscEDVDirectoryPanel";
-            this.miscEDVDirectoryPanel.Size = new System.Drawing.Size(717, 35);
+            this.miscEDVDirectoryPanel.Size = new System.Drawing.Size(716, 35);
             this.miscEDVDirectoryPanel.TabIndex = 2;
             // 
             // miscEDVSelectDirectoryTextBox
@@ -6380,7 +6367,7 @@ namespace BARevitTools
             this.miscEDVSelectDirectoryTextBox.Location = new System.Drawing.Point(109, 9);
             this.miscEDVSelectDirectoryTextBox.Name = "miscEDVSelectDirectoryTextBox";
             this.miscEDVSelectDirectoryTextBox.ReadOnly = true;
-            this.miscEDVSelectDirectoryTextBox.Size = new System.Drawing.Size(604, 20);
+            this.miscEDVSelectDirectoryTextBox.Size = new System.Drawing.Size(603, 20);
             this.miscEDVSelectDirectoryTextBox.TabIndex = 1;
             // 
             // miscEDVSelectDirectoryButton
@@ -6404,7 +6391,7 @@ namespace BARevitTools
             this.miscEDVDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.miscEDVDataGridView.Name = "miscEDVDataGridView";
             this.miscEDVDataGridView.RowHeadersVisible = false;
-            this.miscEDVDataGridView.Size = new System.Drawing.Size(546, 199);
+            this.miscEDVDataGridView.Size = new System.Drawing.Size(545, 200);
             this.miscEDVDataGridView.TabIndex = 3;
             this.miscEDVDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MiscEDVDataGridView_CellContentClick);
             // 
@@ -6416,10 +6403,10 @@ namespace BARevitTools
             this.miscEDVControlsPanel.Controls.Add(this.miscEDVSelectNoneButton);
             this.miscEDVControlsPanel.Controls.Add(this.miscEDVSelectAllButton);
             this.miscEDVControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.miscEDVControlsPanel.Location = new System.Drawing.Point(546, 110);
+            this.miscEDVControlsPanel.Location = new System.Drawing.Point(545, 110);
             this.miscEDVControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscEDVControlsPanel.Name = "miscEDVControlsPanel";
-            this.miscEDVControlsPanel.Size = new System.Drawing.Size(171, 199);
+            this.miscEDVControlsPanel.Size = new System.Drawing.Size(171, 200);
             this.miscEDVControlsPanel.TabIndex = 4;
             // 
             // miscEDVFilterLabel
@@ -6482,7 +6469,7 @@ namespace BARevitTools
             this.qaqcTab.Location = new System.Drawing.Point(4, 25);
             this.qaqcTab.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcTab.Name = "qaqcTab";
-            this.qaqcTab.Size = new System.Drawing.Size(721, 401);
+            this.qaqcTab.Size = new System.Drawing.Size(720, 402);
             this.qaqcTab.TabIndex = 4;
             this.qaqcTab.Text = "QA/QC";
             this.qaqcTab.UseVisualStyleBackColor = true;
@@ -6501,7 +6488,7 @@ namespace BARevitTools
             this.qaqcLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.qaqcLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.qaqcLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.qaqcLayoutPanel.Size = new System.Drawing.Size(717, 397);
+            this.qaqcLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.qaqcLayoutPanel.TabIndex = 12;
             // 
             // qaqcToolStrip
@@ -6521,7 +6508,7 @@ namespace BARevitTools
             this.qaqcToolStrip.Location = new System.Drawing.Point(0, 0);
             this.qaqcToolStrip.Name = "qaqcToolStrip";
             this.qaqcToolStrip.Padding = new System.Windows.Forms.Padding(0);
-            this.qaqcToolStrip.Size = new System.Drawing.Size(717, 53);
+            this.qaqcToolStrip.Size = new System.Drawing.Size(716, 53);
             this.qaqcToolStrip.Stretch = true;
             this.qaqcToolStrip.TabIndex = 2;
             this.qaqcToolStrip.Text = "mgmtQAQCToolStrip";
@@ -6630,7 +6617,7 @@ namespace BARevitTools
             this.qaqcToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.qaqcToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcToolsPanel.Name = "qaqcToolsPanel";
-            this.qaqcToolsPanel.Size = new System.Drawing.Size(717, 344);
+            this.qaqcToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcToolsPanel.TabIndex = 3;
             // 
             // qaqcRFSPLayoutPanel
@@ -6650,7 +6637,7 @@ namespace BARevitTools
             this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.qaqcRFSPLayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.qaqcRFSPLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcRFSPLayoutPanel.TabIndex = 4;
             this.qaqcRFSPLayoutPanel.Visible = false;
             // 
@@ -6663,7 +6650,7 @@ namespace BARevitTools
             this.qaqcRFSPInstructionsTextBox.Multiline = true;
             this.qaqcRFSPInstructionsTextBox.Name = "qaqcRFSPInstructionsTextBox";
             this.qaqcRFSPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.qaqcRFSPInstructionsTextBox.Size = new System.Drawing.Size(711, 54);
+            this.qaqcRFSPInstructionsTextBox.Size = new System.Drawing.Size(710, 54);
             this.qaqcRFSPInstructionsTextBox.TabIndex = 1;
             this.qaqcRFSPInstructionsTextBox.Text = resources.GetString("qaqcRFSPInstructionsTextBox.Text");
             // 
@@ -6673,7 +6660,7 @@ namespace BARevitTools
             this.qaqcRFSPParametersListBox.FormattingEnabled = true;
             this.qaqcRFSPParametersListBox.Location = new System.Drawing.Point(361, 88);
             this.qaqcRFSPParametersListBox.Name = "qaqcRFSPParametersListBox";
-            this.qaqcRFSPParametersListBox.Size = new System.Drawing.Size(353, 253);
+            this.qaqcRFSPParametersListBox.Size = new System.Drawing.Size(352, 254);
             this.qaqcRFSPParametersListBox.TabIndex = 2;
             // 
             // qaqcRFSPToolsPanel
@@ -6686,7 +6673,7 @@ namespace BARevitTools
             this.qaqcRFSPToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRFSPToolsPanel.Name = "qaqcRFSPToolsPanel";
             this.qaqcRFSPLayoutPanel.SetRowSpan(this.qaqcRFSPToolsPanel, 2);
-            this.qaqcRFSPToolsPanel.Size = new System.Drawing.Size(358, 284);
+            this.qaqcRFSPToolsPanel.Size = new System.Drawing.Size(358, 285);
             this.qaqcRFSPToolsPanel.TabIndex = 0;
             // 
             // qaqcRFSPSFamilyLabel
@@ -6726,7 +6713,7 @@ namespace BARevitTools
             this.panel5.Location = new System.Drawing.Point(358, 60);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(359, 25);
+            this.panel5.Size = new System.Drawing.Size(358, 25);
             this.panel5.TabIndex = 3;
             // 
             // label4
@@ -6757,7 +6744,7 @@ namespace BARevitTools
             this.qaqcRLSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.qaqcRLSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.qaqcRLSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.qaqcRLSLayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.qaqcRLSLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcRLSLayoutPanel.TabIndex = 10;
             this.qaqcRLSLayoutPanel.Visible = false;
             // 
@@ -6767,7 +6754,7 @@ namespace BARevitTools
             this.qaqcRLSLayoutPanel.SetColumnSpan(this.qaqcRLSRunPanel, 2);
             this.qaqcRLSRunPanel.Controls.Add(this.qaqcRLSRunButton);
             this.qaqcRLSRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRLSRunPanel.Location = new System.Drawing.Point(0, 309);
+            this.qaqcRLSRunPanel.Location = new System.Drawing.Point(0, 310);
             this.qaqcRLSRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRLSRunPanel.Name = "qaqcRLSRunPanel";
             this.qaqcRLSRunPanel.Size = new System.Drawing.Size(732, 35);
@@ -6809,7 +6796,7 @@ namespace BARevitTools
             this.qaqcRLSDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRLSDataGridView.Name = "qaqcRLSDataGridView";
             this.qaqcRLSDataGridView.ReadOnly = true;
-            this.qaqcRLSDataGridView.Size = new System.Drawing.Size(482, 129);
+            this.qaqcRLSDataGridView.Size = new System.Drawing.Size(482, 130);
             this.qaqcRLSDataGridView.TabIndex = 3;
             this.qaqcRLSDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QaqcRLSDataGridView_CellContentClick);
             // 
@@ -6915,7 +6902,7 @@ namespace BARevitTools
             this.qaqcCSVNPanel.Location = new System.Drawing.Point(0, 0);
             this.qaqcCSVNPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcCSVNPanel.Name = "qaqcCSVNPanel";
-            this.qaqcCSVNPanel.Size = new System.Drawing.Size(717, 344);
+            this.qaqcCSVNPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcCSVNPanel.TabIndex = 3;
             this.qaqcCSVNPanel.Visible = false;
             // 
@@ -6937,7 +6924,7 @@ namespace BARevitTools
             this.qaqcCTVNInstructions.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcCTVNInstructions.Name = "qaqcCTVNInstructions";
             this.qaqcCTVNInstructions.Padding = new System.Windows.Forms.Padding(5);
-            this.qaqcCTVNInstructions.Size = new System.Drawing.Size(717, 53);
+            this.qaqcCTVNInstructions.Size = new System.Drawing.Size(716, 53);
             this.qaqcCTVNInstructions.TabIndex = 8;
             this.qaqcCTVNInstructions.Text = "This script will capitalize the names of sheets and views on sheets.";
             // 
@@ -6954,7 +6941,7 @@ namespace BARevitTools
             this.qaqcCSVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.28045F));
             this.qaqcCSVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.71954F));
             this.qaqcCSVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.qaqcCSVLayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.qaqcCSVLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcCSVLayoutPanel.TabIndex = 11;
             this.qaqcCSVLayoutPanel.Visible = false;
             // 
@@ -6965,7 +6952,7 @@ namespace BARevitTools
             this.qaqcCSVControlsPanel.Location = new System.Drawing.Point(0, 59);
             this.qaqcCSVControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcCSVControlsPanel.Name = "qaqcCSVControlsPanel";
-            this.qaqcCSVControlsPanel.Size = new System.Drawing.Size(717, 285);
+            this.qaqcCSVControlsPanel.Size = new System.Drawing.Size(716, 286);
             this.qaqcCSVControlsPanel.TabIndex = 0;
             // 
             // qaqcCSVRunButton
@@ -6985,7 +6972,7 @@ namespace BARevitTools
             this.qaqcCSVInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.qaqcCSVInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcCSVInstructionsPanel.Name = "qaqcCSVInstructionsPanel";
-            this.qaqcCSVInstructionsPanel.Size = new System.Drawing.Size(717, 59);
+            this.qaqcCSVInstructionsPanel.Size = new System.Drawing.Size(716, 59);
             this.qaqcCSVInstructionsPanel.TabIndex = 1;
             // 
             // qaqcCSVInstructionsLabel
@@ -6994,7 +6981,7 @@ namespace BARevitTools
             this.qaqcCSVInstructionsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.qaqcCSVInstructionsLabel.Location = new System.Drawing.Point(0, 0);
             this.qaqcCSVInstructionsLabel.Name = "qaqcCSVInstructionsLabel";
-            this.qaqcCSVInstructionsLabel.Size = new System.Drawing.Size(717, 59);
+            this.qaqcCSVInstructionsLabel.Size = new System.Drawing.Size(716, 59);
             this.qaqcCSVInstructionsLabel.TabIndex = 1;
             this.qaqcCSVInstructionsLabel.Text = resources.GetString("qaqcCSVInstructionsLabel.Text");
             // 
@@ -7006,7 +6993,7 @@ namespace BARevitTools
             this.qaqcDRNPPanel.Location = new System.Drawing.Point(0, 0);
             this.qaqcDRNPPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcDRNPPanel.Name = "qaqcDRNPPanel";
-            this.qaqcDRNPPanel.Size = new System.Drawing.Size(717, 344);
+            this.qaqcDRNPPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcDRNPPanel.TabIndex = 10;
             this.qaqcDRNPPanel.Visible = false;
             // 
@@ -7018,7 +7005,7 @@ namespace BARevitTools
             this.qaqcDRNPInstructions.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcDRNPInstructions.Name = "qaqcDRNPInstructions";
             this.qaqcDRNPInstructions.Padding = new System.Windows.Forms.Padding(5);
-            this.qaqcDRNPInstructions.Size = new System.Drawing.Size(717, 59);
+            this.qaqcDRNPInstructions.Size = new System.Drawing.Size(716, 59);
             this.qaqcDRNPInstructions.TabIndex = 10;
             this.qaqcDRNPInstructions.Text = resources.GetString("qaqcDRNPInstructions.Text");
             // 
@@ -7039,7 +7026,7 @@ namespace BARevitTools
             this.setupTab.Location = new System.Drawing.Point(4, 25);
             this.setupTab.Margin = new System.Windows.Forms.Padding(0);
             this.setupTab.Name = "setupTab";
-            this.setupTab.Size = new System.Drawing.Size(721, 401);
+            this.setupTab.Size = new System.Drawing.Size(720, 402);
             this.setupTab.TabIndex = 5;
             this.setupTab.Text = "Setup";
             this.setupTab.UseVisualStyleBackColor = true;
@@ -7059,7 +7046,7 @@ namespace BARevitTools
             this.setupLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.setupLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.setupLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.setupLayoutPanel.Size = new System.Drawing.Size(717, 397);
+            this.setupLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.setupLayoutPanel.TabIndex = 0;
             // 
             // setupToolStrip
@@ -7074,7 +7061,7 @@ namespace BARevitTools
             this.setupUPButton});
             this.setupToolStrip.Location = new System.Drawing.Point(0, 0);
             this.setupToolStrip.Name = "setupToolStrip";
-            this.setupToolStrip.Size = new System.Drawing.Size(717, 53);
+            this.setupToolStrip.Size = new System.Drawing.Size(716, 53);
             this.setupToolStrip.TabIndex = 0;
             this.setupToolStrip.Text = "toolStrip2";
             // 
@@ -7117,7 +7104,7 @@ namespace BARevitTools
             this.setupToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.setupToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.setupToolsPanel.Name = "setupToolsPanel";
-            this.setupToolsPanel.Size = new System.Drawing.Size(717, 344);
+            this.setupToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.setupToolsPanel.TabIndex = 1;
             // 
             // setupUPLayoutPanel
@@ -7143,14 +7130,14 @@ namespace BARevitTools
             this.setupUPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.setupUPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.setupUPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.setupUPLayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.setupUPLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.setupUPLayoutPanel.TabIndex = 2;
             this.setupUPLayoutPanel.Visible = false;
             // 
             // setupUPInstructionsTextBox
             // 
             this.setupUPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupUPInstructionsTextBox.Location = new System.Drawing.Point(467, 0);
+            this.setupUPInstructionsTextBox.Location = new System.Drawing.Point(466, 0);
             this.setupUPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.setupUPInstructionsTextBox.Multiline = true;
             this.setupUPInstructionsTextBox.Name = "setupUPInstructionsTextBox";
@@ -7172,7 +7159,7 @@ namespace BARevitTools
             this.setupUPDataGridView.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.setupUPDataGridView.Name = "setupUPDataGridView";
             this.setupUPDataGridView.RowTemplate.Height = 28;
-            this.setupUPDataGridView.Size = new System.Drawing.Size(713, 105);
+            this.setupUPDataGridView.Size = new System.Drawing.Size(712, 106);
             this.setupUPDataGridView.TabIndex = 0;
             this.setupUPDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellContentClick);
             this.setupUPDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellEndEdit);
@@ -7187,7 +7174,7 @@ namespace BARevitTools
             this.setupUPLinkedModelsLabel.Location = new System.Drawing.Point(0, 178);
             this.setupUPLinkedModelsLabel.Margin = new System.Windows.Forms.Padding(0);
             this.setupUPLinkedModelsLabel.Name = "setupUPLinkedModelsLabel";
-            this.setupUPLinkedModelsLabel.Size = new System.Drawing.Size(717, 30);
+            this.setupUPLinkedModelsLabel.Size = new System.Drawing.Size(716, 30);
             this.setupUPLinkedModelsLabel.TabIndex = 2;
             this.setupUPLinkedModelsLabel.Text = "LINKED MODELS";
             this.setupUPLinkedModelsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7201,14 +7188,14 @@ namespace BARevitTools
             this.setupUPControlsPanel1.Location = new System.Drawing.Point(0, 0);
             this.setupUPControlsPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.setupUPControlsPanel1.Name = "setupUPControlsPanel1";
-            this.setupUPControlsPanel1.Size = new System.Drawing.Size(467, 50);
+            this.setupUPControlsPanel1.Size = new System.Drawing.Size(466, 50);
             this.setupUPControlsPanel1.TabIndex = 3;
             // 
             // setupUPOriginalPathSelectButton
             // 
             this.setupUPOriginalPathSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.setupUPOriginalPathSelectButton.BackColor = System.Drawing.Color.GreenYellow;
-            this.setupUPOriginalPathSelectButton.Location = new System.Drawing.Point(434, 24);
+            this.setupUPOriginalPathSelectButton.Location = new System.Drawing.Point(433, 24);
             this.setupUPOriginalPathSelectButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.setupUPOriginalPathSelectButton.Name = "setupUPOriginalPathSelectButton";
             this.setupUPOriginalPathSelectButton.Size = new System.Drawing.Size(31, 20);
@@ -7225,7 +7212,7 @@ namespace BARevitTools
             this.setupUPOriginalFilePathTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.setupUPOriginalFilePathTextBox.Name = "setupUPOriginalFilePathTextBox";
             this.setupUPOriginalFilePathTextBox.ReadOnly = true;
-            this.setupUPOriginalFilePathTextBox.Size = new System.Drawing.Size(422, 20);
+            this.setupUPOriginalFilePathTextBox.Size = new System.Drawing.Size(421, 20);
             this.setupUPOriginalFilePathTextBox.TabIndex = 1;
             this.setupUPOriginalFilePathTextBox.Text = "<File to Upgrade>";
             // 
@@ -7244,10 +7231,10 @@ namespace BARevitTools
             this.setupUPLayoutPanel.SetColumnSpan(this.setupUPRunPanel, 2);
             this.setupUPRunPanel.Controls.Add(this.setupUPRunButton);
             this.setupUPRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupUPRunPanel.Location = new System.Drawing.Point(0, 315);
+            this.setupUPRunPanel.Location = new System.Drawing.Point(0, 316);
             this.setupUPRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.setupUPRunPanel.Name = "setupUPRunPanel";
-            this.setupUPRunPanel.Size = new System.Drawing.Size(717, 29);
+            this.setupUPRunPanel.Size = new System.Drawing.Size(716, 29);
             this.setupUPRunPanel.TabIndex = 4;
             // 
             // setupUPRunButton
@@ -7274,14 +7261,14 @@ namespace BARevitTools
             this.setupUPControlsPanel2.Location = new System.Drawing.Point(0, 55);
             this.setupUPControlsPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.setupUPControlsPanel2.Name = "setupUPControlsPanel2";
-            this.setupUPControlsPanel2.Size = new System.Drawing.Size(467, 73);
+            this.setupUPControlsPanel2.Size = new System.Drawing.Size(466, 73);
             this.setupUPControlsPanel2.TabIndex = 7;
             // 
             // setupUPUpgradePathSelectButton
             // 
             this.setupUPUpgradePathSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.setupUPUpgradePathSelectButton.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.setupUPUpgradePathSelectButton.Location = new System.Drawing.Point(434, 24);
+            this.setupUPUpgradePathSelectButton.Location = new System.Drawing.Point(433, 24);
             this.setupUPUpgradePathSelectButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.setupUPUpgradePathSelectButton.Name = "setupUPUpgradePathSelectButton";
             this.setupUPUpgradePathSelectButton.Size = new System.Drawing.Size(31, 20);
@@ -7329,7 +7316,7 @@ namespace BARevitTools
             this.setupUPUpgradedFilePathUserTextBox.Location = new System.Drawing.Point(183, 24);
             this.setupUPUpgradedFilePathUserTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.setupUPUpgradedFilePathUserTextBox.Name = "setupUPUpgradedFilePathUserTextBox";
-            this.setupUPUpgradedFilePathUserTextBox.Size = new System.Drawing.Size(243, 20);
+            this.setupUPUpgradedFilePathUserTextBox.Size = new System.Drawing.Size(242, 20);
             this.setupUPUpgradedFilePathUserTextBox.TabIndex = 2;
             // 
             // setupUPUpgradedFilePathSetTextBox
@@ -7352,7 +7339,7 @@ namespace BARevitTools
             this.setupUPControlsPanel3.Location = new System.Drawing.Point(0, 133);
             this.setupUPControlsPanel3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.setupUPControlsPanel3.Name = "setupUPControlsPanel3";
-            this.setupUPControlsPanel3.Size = new System.Drawing.Size(467, 40);
+            this.setupUPControlsPanel3.Size = new System.Drawing.Size(466, 40);
             this.setupUPControlsPanel3.TabIndex = 6;
             // 
             // setupUPUpgradingToLabel
@@ -7422,7 +7409,7 @@ namespace BARevitTools
             this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.setupCWSLayoutPanel.Size = new System.Drawing.Size(717, 344);
+            this.setupCWSLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.setupCWSLayoutPanel.TabIndex = 1;
             this.setupCWSLayoutPanel.Visible = false;
             // 
@@ -7435,7 +7422,7 @@ namespace BARevitTools
             this.setupCWSDefinedLabel.Location = new System.Drawing.Point(476, 110);
             this.setupCWSDefinedLabel.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSDefinedLabel.Name = "setupCWSDefinedLabel";
-            this.setupCWSDefinedLabel.Size = new System.Drawing.Size(241, 35);
+            this.setupCWSDefinedLabel.Size = new System.Drawing.Size(240, 35);
             this.setupCWSDefinedLabel.TabIndex = 1;
             this.setupCWSDefinedLabel.Text = "User Defined";
             this.setupCWSDefinedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -7455,7 +7442,7 @@ namespace BARevitTools
             this.setupCWSExtendedListBox.Location = new System.Drawing.Point(238, 145);
             this.setupCWSExtendedListBox.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSExtendedListBox.Name = "setupCWSExtendedListBox";
-            this.setupCWSExtendedListBox.Size = new System.Drawing.Size(238, 164);
+            this.setupCWSExtendedListBox.Size = new System.Drawing.Size(238, 165);
             this.setupCWSExtendedListBox.TabIndex = 1;
             // 
             // setupCWSExtendedLabel
@@ -7480,7 +7467,7 @@ namespace BARevitTools
             this.setupCWSInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.setupCWSInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSInstructionsPanel.Name = "setupCWSInstructionsPanel";
-            this.setupCWSInstructionsPanel.Size = new System.Drawing.Size(717, 110);
+            this.setupCWSInstructionsPanel.Size = new System.Drawing.Size(716, 110);
             this.setupCWSInstructionsPanel.TabIndex = 0;
             // 
             // setupCWSInstructionsTextBox
@@ -7492,7 +7479,7 @@ namespace BARevitTools
             this.setupCWSInstructionsTextBox.Multiline = true;
             this.setupCWSInstructionsTextBox.Name = "setupCWSInstructionsTextBox";
             this.setupCWSInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.setupCWSInstructionsTextBox.Size = new System.Drawing.Size(717, 110);
+            this.setupCWSInstructionsTextBox.Size = new System.Drawing.Size(716, 110);
             this.setupCWSInstructionsTextBox.TabIndex = 0;
             this.setupCWSInstructionsTextBox.Text = resources.GetString("setupCWSInstructionsTextBox.Text");
             // 
@@ -7523,7 +7510,7 @@ namespace BARevitTools
             this.setupCWSDefaultListBox.Location = new System.Drawing.Point(0, 145);
             this.setupCWSDefaultListBox.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSDefaultListBox.Name = "setupCWSDefaultListBox";
-            this.setupCWSDefaultListBox.Size = new System.Drawing.Size(238, 164);
+            this.setupCWSDefaultListBox.Size = new System.Drawing.Size(238, 165);
             this.setupCWSDefaultListBox.TabIndex = 0;
             // 
             // setupCWSUserDataGridView
@@ -7541,7 +7528,7 @@ namespace BARevitTools
             this.setupCWSUserDataGridView.RowHeadersVisible = false;
             this.setupCWSUserDataGridView.RowHeadersWidth = 250;
             this.setupCWSUserDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.setupCWSUserDataGridView.Size = new System.Drawing.Size(241, 164);
+            this.setupCWSUserDataGridView.Size = new System.Drawing.Size(240, 165);
             this.setupCWSUserDataGridView.TabIndex = 2;
             this.setupCWSUserDataGridView.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SetupCWSUserDataGridView_CellMouseUp);
             // 
@@ -7557,16 +7544,16 @@ namespace BARevitTools
             this.setupCWSLayoutPanel.SetColumnSpan(this.setupCWSRunPanel, 3);
             this.setupCWSRunPanel.Controls.Add(this.setupCWSRunButton);
             this.setupCWSRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSRunPanel.Location = new System.Drawing.Point(0, 309);
+            this.setupCWSRunPanel.Location = new System.Drawing.Point(0, 310);
             this.setupCWSRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSRunPanel.Name = "setupCWSRunPanel";
-            this.setupCWSRunPanel.Size = new System.Drawing.Size(717, 35);
+            this.setupCWSRunPanel.Size = new System.Drawing.Size(716, 35);
             this.setupCWSRunPanel.TabIndex = 6;
             // 
             // setupCWSRunButton
             // 
             this.setupCWSRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.setupCWSRunButton.Location = new System.Drawing.Point(638, 6);
+            this.setupCWSRunButton.Location = new System.Drawing.Point(637, 6);
             this.setupCWSRunButton.Name = "setupCWSRunButton";
             this.setupCWSRunButton.Size = new System.Drawing.Size(75, 23);
             this.setupCWSRunButton.TabIndex = 0;
@@ -7584,7 +7571,7 @@ namespace BARevitTools
             this.UIFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.UIFormMenuStrip.Name = "UIFormMenuStrip";
             this.UIFormMenuStrip.Padding = new System.Windows.Forms.Padding(6, 1, 0, 1);
-            this.UIFormMenuStrip.Size = new System.Drawing.Size(770, 1);
+            this.UIFormMenuStrip.Size = new System.Drawing.Size(769, 1);
             this.UIFormMenuStrip.TabIndex = 2;
             this.UIFormMenuStrip.Text = "menuStrip1";
             // 
@@ -7641,7 +7628,7 @@ namespace BARevitTools
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(770, 450);
+            this.ClientSize = new System.Drawing.Size(769, 451);
             this.Controls.Add(this.UIFormTableLayoutPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(429, 161);
@@ -8539,7 +8526,6 @@ namespace BARevitTools
         public CheckBox adminFamiliesUFFullSyncCheckbox;
         public ListBox adminFamiliesUFUpgradedFamiliesListBox;
         public ListBox adminFamiliesUFDeletedFamiliesListBox;
-        public ProgressBar adminFamiliesUFProgressBar;
     }
 }
 

@@ -204,5 +204,18 @@ namespace BARevitTools.Properties {
                 return ((string)(this["RevitRoomTagSymbol"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\corp\\cad\\Revit\\BA Families\\BA 2018\\Annotations\\Tags - ID " +
+            "and Signage\\TAG ID Accent Mats.rfa")]
+        public string RevitIDAccentMatTag {
+            get {
+                return ((string)(this["RevitIDAccentMatTag"]));
+            }
+            set {
+                this["RevitIDAccentMatTag"] = value;
+            }
+        }
     }
 }

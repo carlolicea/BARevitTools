@@ -93,6 +93,16 @@ namespace BARevitTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap bimDataGBDVIcon {
+            get {
+                object obj = ResourceManager.GetObject("bimDataGBDVIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap bimDataGFFIcon {
             get {
                 object obj = ResourceManager.GetObject("bimDataGFFIcon", resourceCulture);

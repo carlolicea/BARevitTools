@@ -1037,10 +1037,10 @@ namespace BARevitTools
                 return null;
             }
         }
-        public static bool UpgradeRevitFile(UIApplication uiApp, string filePath, string upgradePath)
+        public static bool UpgradeRevitFile(UIApplication uiApp, string filePath, string upgradePath,bool overwrite)
         {
             bool result = false;
-            if (!File.Exists(upgradePath))
+            if (!File.Exists(upgradePath) || overwrite == true)
             {
                 TransactWithCentralOptions TWCOptions = new TransactWithCentralOptions();
                 RelinquishOptions relinquishOptions = new RelinquishOptions(true);
@@ -1055,7 +1055,6 @@ namespace BARevitTools
                 saveAsOptions.Compact = true;
                 saveAsOptions.OverwriteExistingFile = true;
                 saveAsOptions.SetWorksharingOptions(worksharingSaveOptions);
-
                 
                 try
                 {
@@ -1064,7 +1063,10 @@ namespace BARevitTools
                     {
                         try
                         {
-                            doc.Save(saveOptions);
+                            SaveAsOptions familySaveAsOptions = new SaveAsOptions();
+                            familySaveAsOptions.Compact = true;
+                            familySaveAsOptions.OverwriteExistingFile = true;
+                            doc.SaveAs(upgradePath,familySaveAsOptions);
                             result = true;
                         }
                         catch (Exception e) { MessageBox.Show(e.Message); doc.Close(); }

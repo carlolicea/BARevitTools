@@ -717,13 +717,39 @@ namespace BARevitTools
         {
             RVTDocument doc = uiApp.ActiveUIDocument.Document;            
             MaterialsAMLPalette materialsPalette = BARevitTools.Application.thisApp.newMainUi.materialsAMLPalette;
+
+            //Get the versioned symbol family
+            FamilySymbol familySymbol = null;
+            string versionedFamily = RVTOperations.GetVersionedFamilyFilePath(uiApp, BARevitTools.Properties.Settings.Default.RevitIDAccentMatTag);
+
+            //Try loading the family symbol
+            Transaction loadSymbolTransaction = new Transaction(doc, "LoadFamilySymbol");
+            loadSymbolTransaction.Start();
+            try
+            {
+                try
+                {
+                    IFamilyLoadOptions loadOptions = new RVTFamilyLoadOptions();
+                    doc.LoadFamilySymbol(versionedFamily, "Legend Tag (Fake)", loadOptions, out FamilySymbol symb);
+                    familySymbol = symb;
+                }
+                catch
+                {
+                    MessageBox.Show(String.Format("Could not get the 'Legend Tag (Fake)' type from {0}", versionedFamily), "Family Symbol Load Error");
+                }
+                loadSymbolTransaction.Commit();
+            }
+            catch(Exception transactionException)
+            { loadSymbolTransaction.RollBack(); MessageBox.Show(transactionException.ToString());}
             
+            //Assure the view being used is a floor plan
             if (doc.ActiveView.ViewType != ViewType.FloorPlan)
             {
                 MessageBox.Show("This tool should be used ina a Floor Plan or Area Plan view");
             }
             else
             {
+                //Create a loop for picking points. Change the palette background color based on the number of points picked
                 List<XYZ> pickedPoints = new List<XYZ>();
                 bool breakLoop = false;
                 int pickCount = 0;
@@ -757,13 +783,13 @@ namespace BARevitTools
                     }
                 }
 
-                //Get rid of the first point when activating the Revit view
+                //Get rid of the first point from clicking into the Revit view. This point is not needed.
                 pickedPoints.RemoveAt(0);
 
                 if (pickedPoints.Count>2)
                 {
-                    Transaction t = new Transaction(doc, "CreateAccentLines");
-                    t.Start();
+                    Transaction createLinesTransaction = new Transaction(doc, "CreateAccentLines");
+                    createLinesTransaction.Start();
 
                     try
                     {
@@ -857,7 +883,7 @@ namespace BARevitTools
                         else
                         {
                             lineStyle = doc.Settings.Categories.get_Item(BuiltInCategory.OST_Lines).SubCategories.get_Item("ID " + materialsPalette.paletteMaterialComboBox.Text).GetGraphicsStyle(GraphicsStyleType.Projection);
-                        }
+                        }                        
 
                         //If there is only one line segment, both end operations must be performed on it
                         if (lastLine == null)
@@ -885,12 +911,26 @@ namespace BARevitTools
                             newAccentLine2.LineStyle = lineStyle;
                             newAccentLine3.LineStyle = lineStyle;
 
-                            t.Commit();
+                            XYZ tagPlacementPoint = firstLine.Evaluate(0.5d, true);
+                            XYZ direction = firstLine.Direction;
+                            Line axisLine = Line.CreateUnbound(tagPlacementPoint, XYZ.BasisZ);
+                            double rotationAngle = direction.AngleTo(XYZ.BasisX);
+
+                            //Get the midpoint of the line, its direction, and create the rotation and axis
+                            if (familySymbol != null)
+                            {
+                                //Create the tag instance
+                                FamilyInstance newTag = doc.Create.NewFamilyInstance(tagPlacementPoint, familySymbol, doc.ActiveView);
+                                //Rotate the new tag instance
+                                ElementTransformUtils.RotateElement(doc, newTag.Id, axisLine, rotationAngle);
+                            }
+
+                            createLinesTransaction.Commit();
                         }
                         //If there is more than one line segment, an operation must be performed on the start and end of the start and end lines, respectively
                         else
                         {
-                            XYZ tagPlacementPoint = new XYZ();
+                            
                             List<Line> linesToDraw = new List<Line>();
                             // Get the normalized value for 8" relative to the lengths of the start and end lines
                             double firstLineLength = firstLine.Length;
@@ -906,14 +946,12 @@ namespace BARevitTools
                             firstLine = Line.CreateBound(shiftedStartPoint, firstLine.GetEndPoint(1));
                             lastLine = Line.CreateBound(lastLine.GetEndPoint(0), shiftedEndPoint);
                             linesToDraw.Add(firstLine);
-
+                            
                             //If there are only 3 offset lines, there will be just one middle segment
                             if (offsetLines.Count == 3)
                             {
                                 linesToDraw.Add(offsetLines[1]);
-                                tagPlacementPoint = offsetLines[1].Evaluate(0.5d, true);
                             }
-
                             //If there are more than three offset lines, there will be more than one middle line segment                            
                             else
                             {
@@ -922,18 +960,6 @@ namespace BARevitTools
                                 {
                                     linesToDraw.Add(middleLine);
                                 }
-
-                                //Find the placementpoint for the tag by generating a polyline from the points along the path
-                                IList<XYZ> midPoints = new List<XYZ>();
-                                midPoints.Add(offsetLines[0].GetEndPoint(0));
-
-                                for (int i = 0; i < offsetLines.Count - 1; i++)
-                                {
-                                    midPoints.Add(offsetLines[i].GetEndPoint(1));
-                                }
-
-                                PolyLine path = PolyLine.Create(midPoints);
-                                tagPlacementPoint = path.Evaluate(0.5d);
                             }
                             linesToDraw.Add(lastLine);
 
@@ -969,7 +995,53 @@ namespace BARevitTools
                                 newAccentLine.LineStyle = lineStyle;
                             }
 
-                            t.Commit();
+                            //Declare some stuff for use in the symbol placement
+                            Line firstMiddleLine = linesToDraw[0];
+                            Line lastMiddleLine = linesToDraw[linesToDraw.Count - 3];
+                            XYZ firstTagPoint = firstMiddleLine.Evaluate((firstLineLength / 2), false);
+                            XYZ lastTagPoint = lastMiddleLine.Evaluate((lastLineLength / 2), false);
+                            XYZ firstDirection = firstMiddleLine.Direction;
+                            XYZ lastDirection = lastMiddleLine.Direction;
+                            Line firstAxisLine = Line.CreateUnbound(firstTagPoint, XYZ.BasisZ);
+                            Line lastAxisLine = Line.CreateUnbound(lastTagPoint, XYZ.BasisZ);
+                            double firstRotation = firstDirection.AngleTo(XYZ.BasisX);
+                            double lastRotation = lastDirection.AngleTo(XYZ.BasisX);
+
+                            if (familySymbol != null)
+                            {
+                                //Create tag at the beginning of the middle lines
+                                FamilyInstance firstTag = doc.Create.NewFamilyInstance(firstTagPoint, familySymbol, doc.ActiveView);
+                                ElementTransformUtils.RotateElement(doc, firstTag.Id, firstAxisLine, firstRotation);
+
+                                //Create a tag at the end of the middle lines if there are more than 2 middle lines
+                                if (linesToDraw.Count>4)
+                                {
+                                    FamilyInstance lastTag = doc.Create.NewFamilyInstance(lastTagPoint, familySymbol, doc.ActiveView);
+                                    ElementTransformUtils.RotateElement(doc, lastTag.Id, lastAxisLine, lastRotation);
+                                }
+                            }
+
+                            #region PlaceAtEveryLine
+                            //*This is old, and was designed for tagging every middle line segment*//
+                            //foreach (Line middleLine in linesToDraw.GetRange(0, linesToDraw.Count - 2))
+                            //{
+                            //    //Get the midpoint of the line, its direction, and create the rotation and axis
+                            //    XYZ tagPlacementPoint = middleLine.Evaluate(middleLine.Length/2, false);
+                            //    XYZ direction = middleLine.Direction;
+                            //    Line axisLine = Line.CreateUnbound(tagPlacementPoint, XYZ.BasisZ);
+                            //    double rotationAngle = direction.AngleTo(XYZ.BasisX);
+
+                            //    if (familySymbol != null)
+                            //    {
+                            //        //Create the tag instance
+                            //        FamilyInstance newTag = doc.Create.NewFamilyInstance(tagPlacementPoint, familySymbol, doc.ActiveView);
+                            //        //Rotate the new tag instance
+                            //        ElementTransformUtils.RotateElement(doc, newTag.Id, axisLine, rotationAngle);
+                            //    }
+                            //}
+                            #endregion PlaceAtEveryLine
+
+                            createLinesTransaction.Commit();
                         }
                     }
                     catch (Exception e)
@@ -979,7 +1051,7 @@ namespace BARevitTools
                             MessageBox.Show("AML Picker was closed prematurely. Please keep the picker open until the lines are drawn.");
                         }
                         else {MessageBox.Show(e.ToString()); }
-                        t.RollBack();
+                        createLinesTransaction.RollBack();
                     }                    
                 }
                 else
@@ -2724,7 +2796,7 @@ namespace BARevitTools
                             {
                                 string linkFilePathToUpgrade = dgv.Rows[i].Cells["Original Path"].Value.ToString();
                                 string linkFilePathForUpgrade = dgv.Rows[i].Cells["New Path"].Value.ToString();
-                                bool linkResult = RVTOperations.UpgradeRevitFile(uiApp, linkFilePathToUpgrade, linkFilePathForUpgrade);
+                                bool linkResult = RVTOperations.UpgradeRevitFile(uiApp, linkFilePathToUpgrade, linkFilePathForUpgrade,false);
                                 if (linkResult == true)
                                 {
                                     dgv.Rows[i].Cells["Upgrade Result"].Value = true;
@@ -2746,7 +2818,7 @@ namespace BARevitTools
                     
                 }
 
-                bool hostResult = RVTOperations.UpgradeRevitFile(uiApp, hostFilePathToUpgrade, hostFilePathForUpgrade);
+                bool hostResult = RVTOperations.UpgradeRevitFile(uiApp, hostFilePathToUpgrade, hostFilePathForUpgrade,false);
 
                 int countOfUpgradeLinks = 0;
                 foreach (DataGridViewRow row in dgv.Rows)
@@ -3092,7 +3164,7 @@ namespace BARevitTools
 
                 List<string> familiesInCurrentLibrary = GeneralOperations.GetAllRvtFamilies(currentLibraryPath);
                 Dictionary<string, string> currentLibraryDict = new Dictionary<string, string>();
-                List<string> familiesInUpgradedLibrary = GeneralOperations.GetAllRvtBackupFamilies(upgradedLibraryPath);
+                List<string> familiesInUpgradedLibrary = GeneralOperations.GetAllRvtFamilies(upgradedLibraryPath);
                 Dictionary<string, string> upgradedLibraryDict = new Dictionary<string, string>();
                 List<string> familiesToUpgrade = new List<string>();
                 List<string> familiesToDelete = new List<string>();
@@ -3112,6 +3184,7 @@ namespace BARevitTools
                         catch
                         {
                             MessageBox.Show(currentEvaluation + " is a duplicate name");
+                            continue;
                         }
                     }
                 }            
@@ -3128,6 +3201,7 @@ namespace BARevitTools
                         catch
                         {
                             MessageBox.Show(currentEvaluation + " is a duplicate name");
+                            continue;
                         }
                     }
                 }
@@ -3154,6 +3228,30 @@ namespace BARevitTools
                 else
                 {
                     familiesToUpgrade = familiesInCurrentLibrary;
+                }                
+
+                foreach (string familyToUpgrade in familiesToUpgrade)
+                {
+                    try
+                    {
+                        if (RVTOperations.RevitVersionUpgradeCheck(uiApp, familyToUpgrade, true))
+                        {
+                            MessageBox.Show(Path.GetFileNameWithoutExtension(familyToUpgrade));
+                            MessageBox.Show(familyToUpgrade);
+                            MessageBox.Show(familyToUpgrade.Replace(currentVersion, upgradedVersion));
+                            bool result = RVTOperations.UpgradeRevitFile(uiApp, familyToUpgrade, familyToUpgrade.Replace(currentVersion, upgradedVersion),true);
+                            if (result == true)
+                            {
+                                upgradedFamilies.Add(Path.GetFileNameWithoutExtension(familyToUpgrade));
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(String.Format("{0} was saved in a new version of Revit", Path.GetFileNameWithoutExtension(familyToUpgrade)));
+                        }
+                    }
+                    catch (Exception f)
+                    { MessageBox.Show(f.ToString()); }
                 }
 
                 if (fullSync)
@@ -3168,27 +3266,6 @@ namespace BARevitTools
                         catch (Exception e)
                         { MessageBox.Show(e.ToString()); }
                     }
-                }
-
-                foreach (string familyToUpgrade in familiesToUpgrade)
-                {
-                    try
-                    {
-                        if (RVTOperations.RevitVersionUpgradeCheck(uiApp, familyToUpgrade, true))
-                        {
-                            bool result = RVTOperations.UpgradeRevitFile(uiApp, familyToUpgrade, familyToUpgrade.Replace(currentVersion, upgradedVersion));
-                            if (result == true)
-                            {
-                                upgradedFamilies.Add(Path.GetFileNameWithoutExtension(familyToUpgrade));
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show(String.Format("{0} was saved in a new version of Revit", Path.GetFileNameWithoutExtension(familyToUpgrade)));
-                        }
-                    }
-                    catch (Exception f)
-                    { MessageBox.Show(f.ToString()); }
                 }
 
                 uiForm.adminFamiliesUFUpgradedFamiliesListBox.DataSource = upgradedFamilies;
