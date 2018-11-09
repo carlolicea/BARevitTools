@@ -1058,6 +1058,7 @@ namespace BARevitTools
                 
                 try
                 {
+                    TransmissionData transmissionData = UnloadLinks(filePath);
                     RVTDocument doc = OpenRevitFile(uiApp, filePath);
                     if (doc.IsFamilyDocument)
                     {
@@ -1074,7 +1075,7 @@ namespace BARevitTools
 
                     else
                     {
-                        TransmissionData transmissionData = UnloadLinks(filePath);
+                        
                         try
                         {                            
                             RVTOperations.SetLinksToOverlay(doc);

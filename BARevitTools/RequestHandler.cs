@@ -2819,15 +2819,21 @@ namespace BARevitTools
                 }
 
                 bool hostResult = RVTOperations.UpgradeRevitFile(uiApp, hostFilePathToUpgrade, hostFilePathForUpgrade,false);
-
-                int countOfUpgradeLinks = 0;
+                int countOfUpgradeLinks = 0;                   
                 foreach (DataGridViewRow row in dgv.Rows)
                 {
-                    if (row.Cells["Upgrade"].Value.ToString() == "True")
+                    try
                     {
-                        countOfUpgradeLinks++;
+                        if (row.Cells["Upgrade"].Value != null)
+                        {
+                            if (row.Cells["Upgrade"].Value.ToString() == "True")
+                            {
+                                countOfUpgradeLinks++;
+                            }
+                        }
                     }
-                }
+                    catch { continue; }                                           
+                }                
 
                 if (hostResult == true)
                 {                    
@@ -2846,25 +2852,30 @@ namespace BARevitTools
 
                             foreach (DataGridViewRow row in dgv.Rows)
                             {
-                                if (row.Cells["Upgrade"].Value.ToString() == "True" &&
-                                    row.Cells["Upgrade Result"].Value.ToString() == "True" &&
-                                    File.Exists(row.Cells["New Path"].Value.ToString()) &&
-                                    linkNames.Keys.Contains(row.Cells["Original Name"].Value.ToString()))
+                                try
                                 {
-                                    try
-                                    {
+                                    if (row.Cells["Upgrade"].Value.ToString() == "True" &&
+                                        row.Cells["Upgrade Result"].Value.ToString() == "True" &&
+                                        File.Exists(row.Cells["New Path"].Value.ToString()) &&
+                                        linkNames.Keys.Contains(row.Cells["Original Name"].Value.ToString()))
+    {
+                                        try
+                                        {
 
-                                        RevitLinkType linkToReload = linkNames[row.Cells["Original Name"].Value.ToString().Replace(".rvt", "")];
-                                        ModelPath modelPathToLoadFrom = ModelPathUtils.ConvertUserVisiblePathToModelPath(row.Cells["New Path"].Value.ToString());
-                                        linkToReload.LoadFrom(modelPathToLoadFrom, new WorksetConfiguration());
-                                    }
-                                    catch (Exception e)
-                                    {
-                                    row.DefaultCellStyle.BackColor = System.Drawing.Color.Orange;
-                                        MessageBox.Show(String.Format("Could not remap the link named {0} in the host file", row.Cells["Original Name"].Value.ToString()));
-                                        MessageBox.Show(e.ToString());
+                                            RevitLinkType linkToReload = linkNames[row.Cells["Original Name"].Value.ToString().Replace(".rvt", "")];
+                                            ModelPath modelPathToLoadFrom = ModelPathUtils.ConvertUserVisiblePathToModelPath(row.Cells["New Path"].Value.ToString());
+                                            linkToReload.LoadFrom(modelPathToLoadFrom, new WorksetConfiguration());
+                                        }
+                                        catch (Exception e)
+                                        {
+                                            row.DefaultCellStyle.BackColor = System.Drawing.Color.Orange;
+                                            MessageBox.Show(String.Format("Could not remap the link named {0} in the host file", row.Cells["Original Name"].Value.ToString()));
+                                            MessageBox.Show(e.ToString());
+                                        }
                                     }
                                 }
+                                catch { continue; }
+                                
                             }
                             RVTOperations.SaveRevitFile(uiApp,hostDoc);
                         }

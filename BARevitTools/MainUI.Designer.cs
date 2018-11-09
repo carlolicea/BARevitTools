@@ -2728,6 +2728,7 @@ namespace BARevitTools
             this.roomsCDRTButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.roomsCDRTButton.ToolTipText = "Create Demo Room Tags: Places room tag symbols where rooms exist in a previous ph" +
     "ase, but do not exist in the current phase. This is intended for Demo Plans";
+            this.roomsCDRTButton.Visible = false;
             this.roomsCDRTButton.Click += new System.EventHandler(this.RoomsCDRTButton_Click);
             // 
             // mgmtSetupCWSUserContextMenu
@@ -3946,6 +3947,7 @@ namespace BARevitTools
             this.materialsAMLButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.materialsAMLButton.ToolTipText = "Accent Material Lines: Creates lines along the wall for indicating accent materia" +
     "ls.";
+            this.materialsAMLButton.Visible = false;
             this.materialsAMLButton.Click += new System.EventHandler(this.MaterialsAMLButton_Click);
             // 
             // materialsToolsPanel
