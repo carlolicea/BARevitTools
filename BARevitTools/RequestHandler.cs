@@ -742,6 +742,37 @@ namespace BARevitTools
             catch(Exception transactionException)
             { loadSymbolTransaction.RollBack(); MessageBox.Show(transactionException.ToString());}
             
+            //Get the line style to use, or create the default
+                        Element lineStyle = null;
+                        if (materialsPalette.paletteMaterialComboBox.Text == "Default")
+                        {
+                            try
+                            {
+                                lineStyle = doc.Settings.Categories.get_Item(BuiltInCategory.OST_Lines).SubCategories.get_Item("6 BA ID ACCENT").GetGraphicsStyle(GraphicsStyleType.Projection);
+                            }
+                            catch
+                            {
+                                try
+                                {
+                                    Category linesCategory = doc.Settings.Categories.get_Item(BuiltInCategory.OST_Lines);
+                                    Category newLineStyleCategory = doc.Settings.Categories.NewSubcategory(linesCategory, "6 BA ID ACCENT");
+                                    newLineStyleCategory.LineColor = new Color(0, 0, 0);
+                                    newLineStyleCategory.SetLineWeight(6, GraphicsStyleType.Projection);
+                                    newLineStyleCategory.SetLinePatternId(LinePatternElement.GetSolidPatternId(), GraphicsStyleType.Projection);
+                                    doc.Regenerate();
+                                    lineStyle = newLineStyleCategory.GetGraphicsStyle(GraphicsStyleType.Projection);
+                                }
+                                catch (Exception e)
+                                {
+                                    MessageBox.Show(e.ToString());
+                                }
+                            }
+                        }
+                        else
+                        {
+                            lineStyle = doc.Settings.Categories.get_Item(BuiltInCategory.OST_Lines).SubCategories.get_Item("ID " + materialsPalette.paletteMaterialComboBox.Text).GetGraphicsStyle(GraphicsStyleType.Projection);
+                        }
+
             //Assure the view being used is a floor plan
             if (doc.ActiveView.ViewType != ViewType.FloorPlan)
             {
@@ -844,7 +875,7 @@ namespace BARevitTools
                                 offsetLines.Add(guideLine.CreateOffset(-0.6666666667d, XYZ.BasisZ) as Line);
                             }
 
-                        }
+                        }                        
 
                         //Determine if the number of line segments is 1 or more
                         Line firstLine = offsetLines.First();
@@ -854,43 +885,18 @@ namespace BARevitTools
                             lastLine = offsetLines.Last();
                         }
 
-                        //Get the line style to use, or create the default
-                        Element lineStyle = null;
-                        if (materialsPalette.paletteMaterialComboBox.Text == "Default")
-                        {
-                            try
-                            {
-                                lineStyle = doc.Settings.Categories.get_Item(BuiltInCategory.OST_Lines).SubCategories.get_Item("6 BA ID ACCENT").GetGraphicsStyle(GraphicsStyleType.Projection);
-                            }
-                            catch
-                            {
-                                try
-                                {
-                                    Category linesCategory = doc.Settings.Categories.get_Item(BuiltInCategory.OST_Lines);
-                                    Category newLineStyleCategory = doc.Settings.Categories.NewSubcategory(linesCategory, "6 BA ID ACCENT");
-                                    newLineStyleCategory.LineColor = new Color(0, 0, 0);
-                                    newLineStyleCategory.SetLineWeight(6, GraphicsStyleType.Projection);
-                                    newLineStyleCategory.SetLinePatternId(LinePatternElement.GetSolidPatternId(), GraphicsStyleType.Projection);
-                                    doc.Regenerate();
-                                    lineStyle = newLineStyleCategory.GetGraphicsStyle(GraphicsStyleType.Projection);
-                                }
-                                catch (Exception e)
-                                {
-                                    MessageBox.Show(e.ToString());
-                                }
-                            }
-                        }
-                        else
-                        {
-                            lineStyle = doc.Settings.Categories.get_Item(BuiltInCategory.OST_Lines).SubCategories.get_Item("ID " + materialsPalette.paletteMaterialComboBox.Text).GetGraphicsStyle(GraphicsStyleType.Projection);
-                        }                        
-
                         //If there is only one line segment, both end operations must be performed on it
                         if (lastLine == null)
                         {
 
                             double lineLength = firstLine.Length;
                             double fractionOfLength = 0.6666666667d / lineLength;
+
+                            //Checking fractions to ensure they are not greater than 1 for the normalization
+                            if (fractionOfLength>1)
+                            {
+                                fractionOfLength = 0.25d;
+                            }
 
                             //Re-evaluating where to place the start and end point of the line
                             XYZ shiftedStartPoint = firstLine.Evaluate(fractionOfLength, true);
@@ -911,6 +917,7 @@ namespace BARevitTools
                             newAccentLine2.LineStyle = lineStyle;
                             newAccentLine3.LineStyle = lineStyle;
 
+                            
                             XYZ tagPlacementPoint = firstLine.Evaluate(0.5d, true);
                             XYZ direction = firstLine.Direction;
                             Line axisLine = Line.CreateUnbound(tagPlacementPoint, XYZ.BasisZ);
@@ -937,6 +944,16 @@ namespace BARevitTools
                             double fractionOfFirstLine = 0.6666666667 / firstLineLength;
                             double lastLineLength = lastLine.Length;
                             double fractionOfLastLine = 0.666666667 / lastLineLength;
+
+                            //Checking fractions to ensure they are not greater than 1 for the normalization
+                            if (fractionOfFirstLine > 1)
+                            {
+                                fractionOfFirstLine = 0.25d;
+                            }
+                            if (fractionOfLastLine > 1)
+                            {
+                                fractionOfLastLine = 0.25d;
+                            }
 
                             //Shift the ends of the start and end lines by finding the point along the line relative to the normalized 8" value
                             XYZ shiftedStartPoint = firstLine.Evaluate(fractionOfFirstLine, true);
@@ -998,8 +1015,8 @@ namespace BARevitTools
                             //Declare some stuff for use in the symbol placement
                             Line firstMiddleLine = linesToDraw[0];
                             Line lastMiddleLine = linesToDraw[linesToDraw.Count - 3];
-                            XYZ firstTagPoint = firstMiddleLine.Evaluate((firstLineLength / 2), false);
-                            XYZ lastTagPoint = lastMiddleLine.Evaluate((lastLineLength / 2), false);
+                            XYZ firstTagPoint = firstMiddleLine.Evaluate(0.5d, true);
+                            XYZ lastTagPoint = lastMiddleLine.Evaluate(0.5d, true);
                             XYZ firstDirection = firstMiddleLine.Direction;
                             XYZ lastDirection = lastMiddleLine.Direction;
                             Line firstAxisLine = Line.CreateUnbound(firstTagPoint, XYZ.BasisZ);
@@ -1021,26 +1038,6 @@ namespace BARevitTools
                                 }
                             }
 
-                            #region PlaceAtEveryLine
-                            //*This is old, and was designed for tagging every middle line segment*//
-                            //foreach (Line middleLine in linesToDraw.GetRange(0, linesToDraw.Count - 2))
-                            //{
-                            //    //Get the midpoint of the line, its direction, and create the rotation and axis
-                            //    XYZ tagPlacementPoint = middleLine.Evaluate(middleLine.Length/2, false);
-                            //    XYZ direction = middleLine.Direction;
-                            //    Line axisLine = Line.CreateUnbound(tagPlacementPoint, XYZ.BasisZ);
-                            //    double rotationAngle = direction.AngleTo(XYZ.BasisX);
-
-                            //    if (familySymbol != null)
-                            //    {
-                            //        //Create the tag instance
-                            //        FamilyInstance newTag = doc.Create.NewFamilyInstance(tagPlacementPoint, familySymbol, doc.ActiveView);
-                            //        //Rotate the new tag instance
-                            //        ElementTransformUtils.RotateElement(doc, newTag.Id, axisLine, rotationAngle);
-                            //    }
-                            //}
-                            #endregion PlaceAtEveryLine
-
                             createLinesTransaction.Commit();
                         }
                     }
@@ -1050,7 +1047,12 @@ namespace BARevitTools
                         {
                             MessageBox.Show("AML Picker was closed prematurely. Please keep the picker open until the lines are drawn.");
                         }
-                        else {MessageBox.Show(e.ToString()); }
+                        else
+                        {
+                            var st = new StackTrace(e, true);
+                            var LineNumber = st.GetFrame(st.FrameCount-1).GetFileLineNumber();
+                            MessageBox.Show("Exception \""+e.ToString()+"\" was thrown at line: "+LineNumber.ToString());
+                        }
                         createLinesTransaction.RollBack();
                     }                    
                 }

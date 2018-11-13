@@ -913,6 +913,11 @@ namespace BARevitTools
 
                 dgv.RowHeadersVisible = false;
                 dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                foreach(DataGridViewColumn column in dgv.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+
                 dgv.Update();
                 dgv.Refresh();
             }
@@ -947,12 +952,14 @@ namespace BARevitTools
                 try
                 {
                     System.Windows.Forms.ColorDialog clrDialog = CustomColors.CustomColorDialog();
+                    
                     if (clrDialog.ShowDialog() == DialogResult.OK)
                     {
                         System.Drawing.Color color = clrDialog.Color;
                         cell.Style.BackColor = color;
                         dgv.Rows[cell.RowIndex].Cells["Updated"].Value = true;
                         dgv.ClearSelection();
+                        dgv.CurrentCell = null;
                     }
                 }
                 catch (Exception j)
