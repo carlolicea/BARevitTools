@@ -3334,9 +3334,9 @@ namespace BARevitTools
                 da.Fill(detailsTable);
                 da.Dispose();
             }
-            CsvOperations.CreateCSVFromDataTable(familyTable, "FamilyFiles", @"C:\Users\clicea\Desktop");
-            CsvOperations.CreateCSVFromDataTable(detailsTable, "DetailFiles", @"C:\Users\clicea\Desktop");
             //Return the list containing both tables
+            output.Add(familyTable);
+            output.Add(detailsTable);            
             return output;
         }
         private void AdminTemplatePMPickPackageComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -3355,6 +3355,20 @@ namespace BARevitTools
             foreach (string path in currentFamilyPaths)
             {
                 currentFamilyNames.Add(Path.GetFileNameWithoutExtension(path));
+            }
+            //Add a column to check if the family still exists
+            familiesTable.Columns.Add("Exists", typeof(Boolean));
+
+            foreach (DataRow row in familiesTable.Rows)
+            {
+                if (currentFamilyNames.Contains(row["FamilyName"]))
+                {
+                    row["Exists"] = true;
+                }
+                else
+                {
+                    row["Exists"] = false;
+                }
             }
 
 

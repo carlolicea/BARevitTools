@@ -3194,7 +3194,6 @@ namespace BARevitTools
                         }
                         catch
                         {
-                            MessageBox.Show(currentEvaluation + " is a duplicate name");
                             continue;
                         }
                     }
@@ -3211,7 +3210,6 @@ namespace BARevitTools
                         }
                         catch
                         {
-                            MessageBox.Show(currentEvaluation + " is a duplicate name");
                             continue;
                         }
                     }
@@ -3235,6 +3233,14 @@ namespace BARevitTools
                             familiesToDelete.Add(upgradedLibraryDict[upgradedFamily]);
                         }
                     }
+
+                    foreach (string originalFamily in currentLibraryDict.Keys)
+                    {
+                        if (!upgradedLibraryDict.Keys.Contains(originalFamily))
+                        {
+                            familiesToUpgrade.Add(currentLibraryDict[originalFamily]);
+                        }
+                    }
                 }
                 else
                 {
@@ -3247,9 +3253,6 @@ namespace BARevitTools
                     {
                         if (RVTOperations.RevitVersionUpgradeCheck(uiApp, familyToUpgrade, true))
                         {
-                            MessageBox.Show(Path.GetFileNameWithoutExtension(familyToUpgrade));
-                            MessageBox.Show(familyToUpgrade);
-                            MessageBox.Show(familyToUpgrade.Replace(currentVersion, upgradedVersion));
                             bool result = RVTOperations.UpgradeRevitFile(uiApp, familyToUpgrade, familyToUpgrade.Replace(currentVersion, upgradedVersion),true);
                             if (result == true)
                             {
@@ -3281,6 +3284,7 @@ namespace BARevitTools
 
                 uiForm.adminFamiliesUFUpgradedFamiliesListBox.DataSource = upgradedFamilies;
                 uiForm.adminFamiliesUFDeletedFamiliesListBox.DataSource = deletedFamilies;
+                GeneralOperations.CleanRfaBackups(upgradedLibraryPath);
             }
             catch (Exception g)
             {
