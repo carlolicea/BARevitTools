@@ -151,6 +151,13 @@
     </Compile>
     <Compile Include="ReferencedSwitchCaseIds.cs" />
     <Compile Include="RVTOperations.cs" />
+    <Compile Include="Tools\AllCatCFFE\AllCatCFFE.cs" />
+    <Compile Include="Tools\AllCatCFFE\AllCatCFFEForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\AllCatCFFE\AllCatCFFEForm.Designer.cs">
+      <DependentUpon>AllCatCFFEForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIOperations.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="ReferencedGUIDs.cs" />
@@ -184,6 +191,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\AllCatCFFE\AllCatCFFEForm.resx">
+      <DependentUpon>AllCatCFFEForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -10,7 +10,6 @@ namespace BARevitTools
 {
     [Transaction(TransactionMode.Manual)]
     [Regeneration(RegenerationOption.Manual)]
-    [Journaling(JournalingMode.NoCommandData)]
     public class Launcher : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elementSet)

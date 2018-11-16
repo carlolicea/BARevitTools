@@ -107,9 +107,13 @@ namespace BARevitTools
             this.adminFamiliesToolStrip = new System.Windows.Forms.ToolStrip();
             this.adminFamiliesUFButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.adminFamiliesSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesDFBButton = new System.Windows.Forms.ToolStripButton();
+            this.adminFamiliesSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.adminFamiliesParametersDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
+            this.adminFamiliesBAPButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminFamiliesBRPButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.bulkUpdatePublishVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesUFLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesUFFullSyncPanel = new System.Windows.Forms.Panel();
@@ -581,10 +585,6 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminFamiliesParametersDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.adminFamiliesBAPButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminFamiliesBRPButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.bulkUpdatePublishVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -1715,17 +1715,6 @@ namespace BARevitTools
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 53);
             // 
-            // adminFamiliesSeparator1
-            // 
-            this.adminFamiliesSeparator1.AutoSize = false;
-            this.adminFamiliesSeparator1.Name = "adminFamiliesSeparator1";
-            this.adminFamiliesSeparator1.Size = new System.Drawing.Size(6, 54);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
-            // 
             // adminFamiliesDFBButton
             // 
             this.adminFamiliesDFBButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesDFBButton.Image")));
@@ -1737,6 +1726,54 @@ namespace BARevitTools
             this.adminFamiliesDFBButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.adminFamiliesDFBButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.adminFamiliesDFBButton.Click += new System.EventHandler(this.AdminFamiliesDFBButton_Click);
+            // 
+            // adminFamiliesSeparator1
+            // 
+            this.adminFamiliesSeparator1.AutoSize = false;
+            this.adminFamiliesSeparator1.Name = "adminFamiliesSeparator1";
+            this.adminFamiliesSeparator1.Size = new System.Drawing.Size(6, 54);
+            // 
+            // adminFamiliesParametersDropDownButton
+            // 
+            this.adminFamiliesParametersDropDownButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adminFamiliesBAPButton,
+            this.adminFamiliesBRPButton,
+            this.bulkUpdatePublishVersionToolStripMenuItem});
+            this.adminFamiliesParametersDropDownButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesParametersDropDownButton.Image")));
+            this.adminFamiliesParametersDropDownButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.adminFamiliesParametersDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.adminFamiliesParametersDropDownButton.Name = "adminFamiliesParametersDropDownButton";
+            this.adminFamiliesParametersDropDownButton.Size = new System.Drawing.Size(79, 50);
+            this.adminFamiliesParametersDropDownButton.Text = "Parameters";
+            this.adminFamiliesParametersDropDownButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.adminFamiliesParametersDropDownButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // adminFamiliesBAPButton
+            // 
+            this.adminFamiliesBAPButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesBAPIcon;
+            this.adminFamiliesBAPButton.Name = "adminFamiliesBAPButton";
+            this.adminFamiliesBAPButton.Size = new System.Drawing.Size(221, 22);
+            this.adminFamiliesBAPButton.Text = "Bulk Add Parameters";
+            this.adminFamiliesBAPButton.Click += new System.EventHandler(this.AdminFamiliesBAPButton_Click);
+            // 
+            // adminFamiliesBRPButton
+            // 
+            this.adminFamiliesBRPButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesBRPIcon;
+            this.adminFamiliesBRPButton.Name = "adminFamiliesBRPButton";
+            this.adminFamiliesBRPButton.Size = new System.Drawing.Size(221, 22);
+            this.adminFamiliesBRPButton.Text = "Bulk Remove Parameters";
+            this.adminFamiliesBRPButton.Click += new System.EventHandler(this.AdminFamiliesBRPButton_Click);
+            // 
+            // bulkUpdatePublishVersionToolStripMenuItem
+            // 
+            this.bulkUpdatePublishVersionToolStripMenuItem.Name = "bulkUpdatePublishVersionToolStripMenuItem";
+            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.bulkUpdatePublishVersionToolStripMenuItem.Text = "Bulk Update Publish Version";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
             // 
             // adminFamiliesToolsPanel
             // 
@@ -7599,43 +7636,6 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
             // 
-            // adminFamiliesParametersDropDownButton
-            // 
-            this.adminFamiliesParametersDropDownButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adminFamiliesBAPButton,
-            this.adminFamiliesBRPButton,
-            this.bulkUpdatePublishVersionToolStripMenuItem});
-            this.adminFamiliesParametersDropDownButton.Image = (Image)(new Bitmap(BARevitTools.Properties.Resources.bimFamiliesBAPIcon,new Size(32,32)));
-            this.adminFamiliesParametersDropDownButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.adminFamiliesParametersDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.adminFamiliesParametersDropDownButton.Name = "adminFamiliesParametersDropDownButton";
-            this.adminFamiliesParametersDropDownButton.Size = new System.Drawing.Size(1013, 1019);
-            this.adminFamiliesParametersDropDownButton.Text = "Parameters";
-            this.adminFamiliesParametersDropDownButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.adminFamiliesParametersDropDownButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // adminFamiliesBAPButton
-            // 
-            this.adminFamiliesBAPButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesBAPIcon;
-            this.adminFamiliesBAPButton.Name = "adminFamiliesBAPButton";
-            this.adminFamiliesBAPButton.Size = new System.Drawing.Size(237, 38);
-            this.adminFamiliesBAPButton.Text = "Bulk Add Parameters";
-            this.adminFamiliesBAPButton.Click += new System.EventHandler(this.AdminFamiliesBAPButton_Click);
-            // 
-            // adminFamiliesBRPButton
-            // 
-            this.adminFamiliesBRPButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesBRPIcon;
-            this.adminFamiliesBRPButton.Name = "adminFamiliesBRPButton";
-            this.adminFamiliesBRPButton.Size = new System.Drawing.Size(237, 38);
-            this.adminFamiliesBRPButton.Text = "Bulk Remove Parameters";
-            this.adminFamiliesBRPButton.Click += new System.EventHandler(this.AdminFamiliesBRPButton_Click);
-            // 
-            // bulkUpdatePublishVersionToolStripMenuItem
-            // 
-            this.bulkUpdatePublishVersionToolStripMenuItem.Name = "bulkUpdatePublishVersionToolStripMenuItem";
-            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(237, 38);
-            this.bulkUpdatePublishVersionToolStripMenuItem.Text = "Bulk Update Publish Version";
-            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7644,6 +7644,7 @@ namespace BARevitTools
             this.ClientSize = new System.Drawing.Size(769, 451);
             this.Controls.Add(this.UIFormTableLayoutPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MinimumSize = new System.Drawing.Size(429, 161);
             this.Name = "MainUI";
             this.RightToLeftLayout = true;
