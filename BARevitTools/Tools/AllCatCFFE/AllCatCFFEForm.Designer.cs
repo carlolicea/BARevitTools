@@ -540,7 +540,6 @@
             this.Name = "AllCatCFFEForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "allCatCFFEForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.multiCatCFFSplitContainer.Panel1.ResumeLayout(false);

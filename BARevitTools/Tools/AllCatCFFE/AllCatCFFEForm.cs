@@ -20,6 +20,11 @@ namespace BARevitTools.Tools
         public AllCatCFFEForm(UIApplication exUiApp, ExternalEvent exEvent, RequestHandler handler)
         {
             InitializeComponent();
+            this.TopLevel = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Visible = true;
+            this.Dock = DockStyle.Fill;
+            uiForm.multiCatToolsPanel.Controls.Add(this);
             m_Handler = handler;
             m_ExEvent = exEvent;
             uiApp = exUiApp;

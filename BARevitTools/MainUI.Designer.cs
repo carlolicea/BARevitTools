@@ -7644,7 +7644,6 @@ namespace BARevitTools
             this.ClientSize = new System.Drawing.Size(769, 451);
             this.Controls.Add(this.UIFormTableLayoutPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.MinimumSize = new System.Drawing.Size(429, 161);
             this.Name = "MainUI";
             this.RightToLeftLayout = true;
@@ -8029,7 +8028,6 @@ namespace BARevitTools
         public ToolStripButton multiCatCFFEButton;
         private ToolStripSeparator multiCatSeparator1;
         private ToolStripButton multiCatRE;
-        private Panel multiCatToolsPanel;
         private SplitContainer multiCatCFFSplitContainer;
         private SplitContainer multiCatCFFEExcelSplitContainer;
         private TableLayoutPanel multiCatCFFECreateExcelLayoutPanel1;
@@ -8542,6 +8540,7 @@ namespace BARevitTools
         private ToolStripMenuItem adminFamiliesBAPButton;
         private ToolStripMenuItem adminFamiliesBRPButton;
         private ToolStripMenuItem bulkUpdatePublishVersionToolStripMenuItem;
+        public Panel multiCatToolsPanel;
     }
 }
 
