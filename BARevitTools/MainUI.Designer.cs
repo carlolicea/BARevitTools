@@ -2944,9 +2944,10 @@ namespace BARevitTools
             // aboutCreditLabel
             // 
             this.aboutCreditLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.aboutCreditLabel.AutoSize = true;
             this.aboutCreditLabel.Location = new System.Drawing.Point(2, 6);
             this.aboutCreditLabel.Name = "aboutCreditLabel";
-            this.aboutCreditLabel.Size = new System.Drawing.Size(216, 15);
+            this.aboutCreditLabel.Size = new System.Drawing.Size(208, 13);
             this.aboutCreditLabel.TabIndex = 4;
             this.aboutCreditLabel.Text = "Created By: Carlo Licea and Lots of Coffee";
             // 
@@ -7757,6 +7758,7 @@ namespace BARevitTools
             this.aboutTabHeaderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aboutTabLogo)).EndInit();
             this.aboutTabFooterPanel.ResumeLayout(false);
+            this.aboutTabFooterPanel.PerformLayout();
             this.analysisTab.ResumeLayout(false);
             this.analysisTabControl.ResumeLayout(false);
             this.modelingTab.ResumeLayout(false);

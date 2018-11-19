@@ -2679,6 +2679,7 @@ namespace BARevitTools
             SWCOptions.SetRelinquishOptions(relinquishOptions);
             WorksharingSaveAsOptions worksharingSaveOptions = new WorksharingSaveAsOptions();
             worksharingSaveOptions.SaveAsCentral = true;
+            worksharingSaveOptions.OpenWorksetsDefault = SimpleWorksetConfiguration.AllWorksets;
             SaveOptions projectSaveOptions = new SaveOptions();
             projectSaveOptions.Compact = true;
             SaveAsOptions projectSaveAsOptions = new SaveAsOptions();
