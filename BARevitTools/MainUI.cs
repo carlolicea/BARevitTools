@@ -349,16 +349,11 @@ namespace BARevitTools
         public string multiCatCFFEFamilySaveLocation = "";
         private void AllCatCFFEButton_Click(object sender, EventArgs e)
         {
-            //SwitchActivePanel(ReferencedSwitchCaseIds.multiCatCFFE1);
+            SwitchActivePanel(ReferencedSwitchCaseIds.multiCatCFFE1);
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEExcelStatusLabel.Visible = false;
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEFamiliesProgressBar.Visible = false;
             BARevitTools.Application.thisApp.newMainUi.allCATCFFEFamiliesSaveDirectoryTextBox.Text = "";
-            BARevitTools.Tools.AllCatCFFEForm CFFEForm = new Tools.AllCatCFFEForm(uiApp,m_ExEvent,m_Handler);
-            // Set the Parent Form of the Child window.  
-            CFFEForm.MdiParent = this;
-            // Display the new form.  
-            CFFEForm.Show();
-            //DatabaseOperations.CollectUserInputData(BARevitTools.ReferencedGuids.multiCatCFFguid, multiCatCFFEButton.Text, Environment.UserName.ToString(), DateTime.Now);
+            DatabaseOperations.CollectUserInputData(BARevitTools.ReferencedGuids.multiCatCFFguid, multiCatCFFEButton.Text, Environment.UserName.ToString(), DateTime.Now);
         }
         private void AllCatCFFEDirectorySelectButton_Click(object sender, EventArgs e)
         {
