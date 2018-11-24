@@ -151,6 +151,40 @@
     </Compile>
     <Compile Include="ReferencedSwitchCaseIds.cs" />
     <Compile Include="RVTOperations.cs" />
+    <Compile Include="Tools\AdminDataGFFRequest.cs" />
+    <Compile Include="Tools\AdminFamiliesBAPRequest.cs" />
+    <Compile Include="Tools\AdminFamiliesBRPRequest.cs" />
+    <Compile Include="Tools\AdminFamiliesUFRequest.cs" />
+    <Compile Include="Tools\AllCatCFFE1Request.cs" />
+    <Compile Include="Tools\AllCatCFFE2Request.cs" />
+    <Compile Include="Tools\DataEPIRequest.cs" />
+    <Compile Include="Tools\DocumentsCTSRequest.cs" />
+    <Compile Include="Tools\ElectricalCEORequest.cs" />
+    <Compile Include="Tools\FloorsCFBRRequest.cs" />
+    <Compile Include="Tools\MaterialsAMLPaletteRequest.cs" />
+    <Compile Include="Tools\MaterialsAMLRequest.cs" />
+    <Compile Include="Tools\MaterialsCMSRequest.cs" />
+    <Compile Include="Tools\MiscEDVRequest.cs" />
+    <Compile Include="Tools\QaqcCSVNRequest.cs" />
+    <Compile Include="Tools\QaqcCSVRequest.cs" />
+    <Compile Include="Tools\QaqcDRNPRequest.cs" />
+    <Compile Include="Tools\QaqcRFSPRequest.cs" />
+    <Compile Include="Tools\QaqcRLSRequest.cs" />
+    <Compile Include="Tools\RoomsCDRTRequest.cs" />
+    <Compile Include="Tools\RoomsSRNNRequest.cs" />
+    <Compile Include="Tools\AdminSandboxSetPreviewHost.cs" />
+    <Compile Include="Tools\SetupCWSRequest.cs" />
+    <Compile Include="Tools\SetupUPRequest.cs" />
+    <Compile Include="Tools\SheetsCSLRequest.cs" />
+    <Compile Include="Tools\SheetsCSSFRequest.cs" />
+    <Compile Include="Tools\SheetsISFLRequest.cs" />
+    <Compile Include="Tools\SheetsOSSNewSetRequest.cs" />
+    <Compile Include="Tools\SheetsOSSRequest.cs" />
+    <Compile Include="Tools\ViewsCEPRRequest.cs" />
+    <Compile Include="Tools\ViewsHNIECRequest.cs" />
+    <Compile Include="Tools\ViewsOICBRequest.cs" />
+    <Compile Include="Tools\WallsDPRequest.cs" />
+    <Compile Include="Tools\WallsMPWRequest.cs" />
     <Compile Include="UIOperations.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="ReferencedGUIDs.cs" />
@@ -336,9 +370,7 @@
   <ItemGroup>
     <None Include="Resources\bimDataGBDVIcon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tools\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if "$(ConfigurationName)" == "Revit2018" (

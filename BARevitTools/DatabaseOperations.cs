@@ -285,7 +285,7 @@ namespace BARevitTools
                 }
                 DatabaseOperations.SqlCloseConnection(sqlConnection);
             }
-            catch { ; }            
+            catch(Exception SqlRecordAppUseException) { MessageBox.Show(SqlRecordAppUseException.ToString()); }            
         }
     }          
 }

@@ -123,6 +123,9 @@
   <metadata name="adminDataToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>193, 91</value>
   </metadata>
+  <metadata name="adminDataToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>193, 91</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="adminDataGFFButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -181,6 +184,9 @@
         T5+XVJEAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="adminFamiliesToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>186, 126</value>
+  </metadata>
   <metadata name="adminFamiliesToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>186, 126</value>
   </metadata>
@@ -274,6 +280,9 @@
   <metadata name="adminTemplateToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>738, 10</value>
   </metadata>
+  <metadata name="adminTemplateToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>738, 10</value>
+  </metadata>
   <data name="adminTemplatePMButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -289,6 +298,9 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="sandBoxToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>379, 146</value>
+  </metadata>
   <metadata name="sandBoxToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>379, 146</value>
   </metadata>
@@ -362,6 +374,39 @@
   </data>
   <metadata name="mgmtSetupCWSUserContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1097, 133</value>
+  </metadata>
+  <data name="aboutTabUpdatesTextBox.Text" xml:space="preserve">
+    <value>V 1.0.5 Changes (Upcoming):
+- Added(Modeling&gt;Rooms) Create Demo Room Tags
+- Added (Modeling&gt;Materials) Accent Material Lines tool
+- Changed the Create Worksets default open worksets to All instead of Specify upon opening a local.
+
+V1.0.4 Changes:
+- Various fixes
+ 
+V 1.0.3 Changes:
+- Added (Modeling &gt; Electrical) Correct Electrical Fixture Elevation tool
+- Added (Management&gt;QA/QC) Remove Family Shared Parameters tool
+- Added (Management&gt;QA/QC) Replace Line Styles tool
+- Added (Management&gt;Setup) Upgrade Projects tool 
+- Added (Modeling&gt;Walls) Delete Parts tool
+- Added (Modeling&gt;Materials) Create Material Symbols tool
+- Added filtering functionality to (Documentation&gt;Sheets) Copy Sheet Legends tool
+- Added wildcard * functionality to the filters. Search must begin with something other than *. Example: A*5
+- Changed All Categories tab to MultiCategory
+- Changed the window behavior so it no longer stays on top of everything else
+
+V 1.0.2 Changes:
+- Fixed Unhandled Exception for Insert Sheets From Link tool.
+- Added URL for Create Elevations for explaination of how to use it relative to the Dynamo version.
+- Added URL for Swap Room Name / Number for explaination of how  to use it with Bluebeam
+
+V 1.0.1 Changes:
+- Added (Modeling&gt;All Categories) Create Families From Excel tool
+- Fixed some UI issues</value>
+  </data>
+  <metadata name="UIFormMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1272, 17</value>
   </metadata>
   <data name="aboutTabLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2170,32 +2215,9 @@
         fuvdf//Z
 </value>
   </data>
-  <data name="aboutTabUpdatesTextBox.Text" xml:space="preserve">
-    <value>V 1.0.4 Changes (Upcoming):
-- Added(Modeling&gt;Rooms) Create Demo Room Tags
-- Added (Modeling&gt;Materials) Accent Material Lines tool
- 
-V 1.0.3 Changes:
-- Added (Modeling &gt; Electrical) Correct Electrical Fixture Elevation tool
-- Added (Management&gt;QA/QC) Remove Family Shared Parameters tool
-- Added (Management&gt;QA/QC) Replace Line Styles tool
-- Added (Management&gt;Setup) Upgrade Projects tool 
-- Added (Modeling&gt;Walls) Delete Parts tool
-- Added (Modeling&gt;Materials) Create Material Symbols tool
-- Added filtering functionality to (Documentation&gt;Sheets) Copy Sheet Legends tool
-- Added wildcard * functionality to the filters. Search must begin with something other than *. Example: A*5
-- Changed All Categories tab to MultiCategory
-- Changed the window behavior so it no longer stays on top of everything else
-
-V 1.0.2 Changes:
-- Fixed Unhandled Exception for Insert Sheets From Link tool.
-- Added URL for Create Elevations for explaination of how to use it relative to the Dynamo version.
-- Added URL for Swap Room Name / Number for explaination of how  to use it with Bluebeam
-
-V 1.0.1 Changes:
-- Added (Modeling&gt;All Categories) Create Families From Excel tool
-- Fixed some UI issues</value>
-  </data>
+  <metadata name="multiCatToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>591, 172</value>
+  </metadata>
   <metadata name="multiCatToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>591, 172</value>
   </metadata>
@@ -2279,6 +2301,9 @@ V 1.0.1 Changes:
   <metadata name="electricalToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 138</value>
   </metadata>
+  <metadata name="electricalToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 138</value>
+  </metadata>
   <data name="electricalCEOEButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -2295,6 +2320,9 @@ V 1.0.1 Changes:
   <data name="electricalCEOETextBox.Text" xml:space="preserve">
     <value>This script will keep all Electrical Fixture families at their current physical height, but will adjust any that have an Elevation or Offset parameter value not equal to 0' to be 0' with an adjusted MOUNTING HEIGHT value to accurately reflect the actual mounting height.</value>
   </data>
+  <metadata name="floorsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
   <data name="floorsCFBRInstructionsTextBox.Text" xml:space="preserve">
     <value>Instructions:
 1) Click "SELECT" to begin room selection; this script can only work for rooms with one perimeter loop (no internal loops)
@@ -2326,6 +2354,9 @@ Due to API limitations, this cannot work with rooms that have more than one loop
         mLhCsDEQG0GxLgi7iDzQsRV5AHRAChAPJGBgAACkwNjAeAhV5AAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="materialsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 138</value>
+  </metadata>
   <metadata name="materialsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 138</value>
   </metadata>
@@ -2411,6 +2442,9 @@ This script will load the SYMB Room Name and Number family and insert it in the 
   <metadata name="wallsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>16, 86</value>
   </metadata>
+  <metadata name="wallsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>16, 86</value>
+  </metadata>
   <data name="wallsMPWButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -2488,6 +2522,9 @@ The script will create perimeter walls around the room and try to join them to a
   <metadata name="sheetsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 138</value>
   </metadata>
+  <metadata name="sheetsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 138</value>
+  </metadata>
   <data name="sheetsCSLButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -2531,6 +2568,39 @@ The script will create perimeter walls around the room and try to join them to a
         NZyA3XWp051KXJVgARjVVgwNPH3wZ2Dqn2W6BxYBo6YxjAY2XPlee/7VnaAasLo59WlTSUYZ6B+J4egf
         QC3/bOf552v7iT8c3gudvzjHc4GMMpC4B9Qfr58XkCqBmoqO487XXSATAqu3FG/zl5QG/N7igF5LtgX8
         pZQtJQF/IOBOsrKy1vwHVn+5/c2YW8oAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="sheetsSheetSetsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        RK5CYII=
 </value>
   </data>
   <data name="sheetsCSSFSButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -2596,39 +2666,6 @@ The script will create perimeter walls around the room and try to join them to a
         NXBjxqGiVId7BDJBqW5VYOykplDdZAt8NROauP5pmkr1LxpjxxH322JYAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="sheetsSheetSetsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAYqSURBVFhHzZZrTFRHFMdXBAQUsChWQQFRXBGQBUFwQZDX
-        8lJAHgLK0woiCNUKAiLISxDFaqpUrSipj9rWtvhAfDdqrX1aa2rS1qT91leaNmmTkvbT6fnP3bu6u1fW
-        9Is9yW/vmTt3Zv8zc87MqP4PlvZMyTg4RCXD31D+25/S6ivfCQoGv2TuUWb/Fcp/6xNKP3CeMg4NU8nF
-        b6nq8z8FST3HqfzmD8Ivv/UjpfWdFX7FnV9pce1OWv7aRVEuGLxPeW/cEX7ppYek6xqglfxfKCfvOkEq
-        fJh19BoVnrlPCR39FNO8n1L3nqbiC19TbHMfrfvoN9FZZv9lIa763ghVf/EXJXQeoZTeU6K89vYvlHFg
-        SPgQsGB1Lem2D4hy0bkHYnDw0Ua015Oy+5QkAB/hT3OO3RBgxFCOBuW3fqKc129Q5mEWcPV70TB74DrF
-        tx0ibU2HKK+9/TNhJuFDgBjI1n2iXHTuKzFi+Giz7uPfqeqzP0RZCPDPeeFhdP3eu5bAd0lNtZS+o5V0
-        DdXimdhYw89tlNrWSP7ZUj9R9b13Z0an3Q2taBXtgssaHsRsqBTfp7Y3UEBSCC2pLhblhYW5xHGgisHP
-        U1hM69Ai2n0n2oj1BzVUuT8QHcVKn5nZnNrjIUZtut+PpMxNPlTS7WckYAkTzkxiqvCCbRZTwIQwsaYC
-        NhwJJhs7Kyrt8R9VQN2JRwJ6b0eR7yIXUoc9ZyagkCmRXFWO/rlC/8xlYtsuSAKa3g2jnhuLyXWGPc2Y
-        60ibji0YTYC67mQItZwLp67rkZSxcTZZ21hR7ha1kYAZzHqmjpnIQACeSxl0HM/EtV3QUlKZFzk4WVPi
-        Gi9yV0+g7VcjqfNyBDp60lKqy14OIEcXW4or9KDxE22odIefGMjjAmyZMcxYxoYZp38HfyoDEwJ2fRBF
-        Edlu5OBsQ82D4aKjjkujC9h8MpRqj4WQ0yRbIVxeDllAK4MRW6I9t1FNRZ3zqKhjHsUVe0g+k9ukpnH2
-        Y7scXWyKTLGbYF2/bJXL3wXbfEd0qz1HVrbMHYEPonJd/+F+n6jc1BLaL2oN6mXK98wnBGdlX6BZXcOb
-        oZRWPQuj9JW6MLNM/MgCXBlnBlmQzFgxExjEAZbETADW0trWivC+sk9jVNdyJlxMeUSWOwTMZZTMSAAi
-        HtE+ntEwfowD8zyjAx2XJAHI45az4cTTS94aZ2rmP6t6VRKw5fRC8USauUyzI57ypxJgzexguhk3ZjkD
-        w4zkMajXtQ5pKTDWlTTxUyg0darI5503o6h9WCsEIB6sxo6hZTztzq7jaOtgGCEAua2aUTKDAC8GI8XG
-        k86kMIEM0i+VQX0ior2e19XVw56meo+nrmuRYrRtegHws2p9RJ7XHA4SZWxC3HZUARUMdjpLVK/bFyh2
-        v+IuP8qu8xE+KN87n3Ia5hjKKzhbZL+w3RcCskz6ktnMqPIZjNASxZs4l7ELPg4CceNRsRMiVZXaJTLy
-        LJuCwRuCcDLjxCAbEhhsTMiEJMaeSe68EiGmVSY6bzqFp08jbNFcH8EoWQDjI7lmZpYFALsfrksQgliA
-        MLxP3s4Cej+U/hwBx+8oodRT7APsjyZgtuSamUEAtmA5CzBaRD4CEn+MmcD0przYH0Qefo4i4BDlOBcg
-        Ri9AyyjZfMaiAKwH9nx8uIjBH8JH9CJG3JlUpFt0/nSyd7QWaSgvRet5IQDtlAzZhMEomRCAacbmY4ks
-        jLSbj9TktTPFqOGDRt58uB6nplI73DH8Td7JrGRUDQy2Xkvg0IJipbpVzEaTdzLrcfav2R1gxNJKb4ov
-        8YBwQxBi15MN2SCb7C9jcDYoGXZPjFTJNFveCTMsF5BjyPRGhMtIEIMg3IMXbFj7lyRXCMC0KRm+C5Nc
-        MwtqekwADi5cTqZ4OciZJAS4MMiCej3tjDxyBCQMqflfBATXnwqlyBx3nnJP0ma6cSY58U0qwmgGcCHF
-        DQinnh2DM2AeA4vWP3FG4HRUsunMQsk1s2B5x8TxPNndnjcu6VQ1XQJLBgFYHiUbTcCCre9JS1B1QEMV
-        rzy6uMgCcBtGdFsCN2YcKkp1uEcgE5TqVvlHTW4J1k0xw1szsYXrn6WpVP8CeB/GwcbY/6sAAAAASUVO
-        RK5CYII=
-</value>
-  </data>
   <data name="sheetsOSSInstructionsTextBox.Text" xml:space="preserve">
     <value>Instructions:
 1) In the table below, check the boxes in the columns for print sets where sheets should belong
@@ -2646,6 +2683,9 @@ This script updates which sheets belong to a print set based on which are sheets
   <metadata name="viewsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 138</value>
   </metadata>
+  <metadata name="viewsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>180, 138</value>
+  </metadata>
   <data name="viewsCEPRButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -2656,6 +2696,14 @@ This script updates which sheets belong to a print set based on which are sheets
         JEeOxyPNAERRBF3XSY7P43vIbrcj30qbUBQFJElqnsDlcgFZlmn1jGVZcDqdaPUeYRi+FkDw7idJQqtP
         sizr/NdTRysBBCUMwyA3AMf+Ne6+tBZAUEIQBMjznK70p5PAGPw9ge/XcAimI5gEJoEnAZ7nwbbtHw1s
         TgT2+z04jvMrEUURfAAhmbttqu2pagAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="viewsInteriorCropButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABNSURBVFhH7Y5BCgAgCMD8/5+jQAiKvKhRQRvsYKBNAF6g
+        bjCFddBriswhAgjoeyWo/tmP6OBk3I06D4chgAACCCCAgCXghubjSeFrRBrX19ETfjh7DQAAAABJRU5E
+        rkJggg==
 </value>
   </data>
   <data name="viewsOICBButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -2676,14 +2724,6 @@ This script updates which sheets belong to a print set based on which are sheets
         e+XOr71E0TFDLjLXTLk4OWfLxbpEWL55Nbm0DinmawAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="viewsInteriorCropButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABNSURBVFhH7Y5BCgAgCMD8/5+jQAiKvKhRQRvsYKBNAF6g
-        bjCFddBriswhAgjoeyWo/tmP6OBk3I06D4chgAACCCCAgCXghubjSeFrRBrX19ETfjh7DQAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
   <data name="viewsCEPRInstructionsTextBox.Text" xml:space="preserve">
     <value>Instructions: 
 From a floor plan view with rooms, complete these steps
@@ -2698,6 +2738,9 @@ This script will create new elevation markers for each direction (N,E,S,W) for t
 
 </value>
   </data>
+  <metadata name="dataToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>867, 133</value>
+  </metadata>
   <metadata name="dataToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>867, 133</value>
   </metadata>
@@ -2728,6 +2771,9 @@ This script will create new elevation markers for each direction (N,E,S,W) for t
 
 This script will export the current plan view's extents to a JPG image suffixed with the coordinates for the minimum (X,Y) and maximum (X,Y) for the crop boundary. This can then be used in Tableau for placing markers by element coordinates.</value>
   </data>
+  <metadata name="documentsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 138</value>
+  </metadata>
   <metadata name="documentsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 138</value>
   </metadata>
@@ -2763,6 +2809,9 @@ This script will export the current plan view's extents to a JPG image suffixed 
     <value>This script will upgrade text from Revit 2016 and earlier projects to a comparable size for Revit 2017 and later. This is achieved by decreasing the text size by 1/64". Thus, 3/32" will become 5/64". Names do not, and should not, change to reflect the scale.
 </value>
   </data>
+  <metadata name="miscToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>992, 133</value>
+  </metadata>
   <metadata name="miscToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>992, 133</value>
   </metadata>
@@ -2812,6 +2861,35 @@ This script collects the drafting views in the project and saves each one to a n
   <metadata name="qaqcToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>408, 95</value>
   </metadata>
+  <metadata name="qaqcToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>408, 95</value>
+  </metadata>
+  <data name="qaqcCapitalizeValuesButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASQSURBVFhH7ZZriFRlGMd3ZnZndra5tLst2402ti1iCYMW
+        pYKo6EI3rOwCRlGZlYgfIiKzgjISCikLsjApiwrTCBL6EHYBi+wKSbEYoYiQRbppa5Zr2p5+//d95p05
+        c87k0qc++Ic/z/W9nfO8zzltR/B/RRU+DtfAa+X4DzgdPgjnQ803ZXTB1fB8eCxcCBfAK+BUMRuugpfA
+        G+E7cAhOCffDU7wa8ATc7NXD4gy42KsBJbgS3gn/9Wl0Qm2gGZvgTq8eFk/CnFdjuBpOwpOc1QJXwdO8
+        GsP1cA/MOKs1BqAefxpehBFUbbTE3SYT6OjomJbP52fBK2V6bwJ3QdVQGsrwQ3iWs1pA7ygNlUwm8w1S
+        J4jQv0Bqwmao4gNyudwqcteZKegVF6Rks9mbiP8svRF3mIyBSZYgtPAOqFqIGJx2PeeadCB3KdxlZgz4
+        n4HfmRkwx2QMJG6FG1DzQ0NDBfRX2cANPhpD7ACc8hZE1NXVdZz31MEc78M3zAy41WRAd3e3rk3EZDd7
+        j0N7T09PxfQaVKC3e9WDujkToaelfhADi//EnOoxdVSr1e6RkZFYgRUKhUGEJrnAe1pCG7jGqwF5+BcL
+        3etNj3K53IvQnJd7D2hvb3+AXR2AvxKYZe62zs5OXS0lB18jyF/O2HPMdCD3IvyuGSG/heqKAeSry0bF
+        YvEE5+BR6WpMkrgPTsCvXcBDlXsQ3yvejAP/NrjUTAfsFfBj01+HX7mAgScyH9+YmS5pCdzS29tbVsFw
+        gucs5EDsc8Qh/InvAbF18D0zHbA/hW4OFlNn/QOG7khsOfzITOdYC583MwEmUXWrB+xXM3JOA+MegzvM
+        FDAz44xxPYVNX4aIGHeqbIH4Bvismc7xNnzJzDTkiK9HahMHG+sB/TpEZIUVaob3PEM27/l42Y1jmGvM
+        DuWBYxliN8knek8SfX19JfLUSrWJvbW7bScLtwSpVn0IhpbMuF0s+Ih0G6cNTpftYIPV6bZRkCPemwo1
+        oXeR6gtuQpCFv2Prn0GvayE5sU+3Ng7fks5aFyNiG3QgQa9Am9jH7s723iToFUeTMwY/MZfGboQrTFfV
+        v+kCBuxl8HvpbPCemt6MLLt7FKnrGLs2zSD+MvzRTNkvwI2mb2KRRS5gwFaH1KmLxFfCtS6QBoL6F5ws
+        lUp93pOKxeSFjwwLzMMeHx4eziMnOEjsutprjdRviH9G/sM+koJaUZE8zXuSYJKn4VYz1dnUCVWIWrje
+        4epwzYyFb0OOkzfTeWvQF85U9X79D+reuj8XJj+veTMs/iUMzUc3BPE3E7+Gv9Xnd5S4Hn3EGid7r4Hg
+        +lqjYJfqXAdg0ey5xH8hPnNwcLDKhu7DrVsgGUDOD3Av/MBcMeBfDf+Ev8n0XgPOUbifSUcxVYThL4Zd
+        X4hwf0IN3EONHIMMYIyumW7RU94TB3OrMBUPtyeA4GwC6tdK2G6vIYBTL8I/gaq4vpaX+kgdzPEQQk9G
+        PyEJMMbVB+Nj35mASqXSQ/FMHxgYUMEkoFZLfIa97wT6+/uPYqPnooZ6akJOca1j9hGAtrZ/AOxF1dIg
+        II0sAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="capitalizeSheetViewNamesButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -2859,32 +2937,6 @@ This script collects the drafting views in the project and saves each one to a n
         BXuc21jBw8MD34c7jsVHDBBARsVYkDKyHxaDvyJMiEyJNqAgABeBHZjjhwJlFVYOIIHgXg4tAki5mAAT
         BwIBHhdkcNJ6vV46Pz8XewYRAI6OjrgmwP9cJMQtCFEHws3RWlZWFhP4vd9zPf0Cp3UvDOA8+18AAAAA
         SUVORK5CYII=
-</value>
-  </data>
-  <data name="qaqcCapitalizeValuesButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASQSURBVFhH7ZZriFRlGMd3ZnZndra5tLst2402ti1iCYMW
-        pYKo6EI3rOwCRlGZlYgfIiKzgjISCikLsjApiwrTCBL6EHYBi+wKSbEYoYiQRbppa5Zr2p5+//d95p05
-        c87k0qc++Ic/z/W9nfO8zzltR/B/RRU+DtfAa+X4DzgdPgjnQ803ZXTB1fB8eCxcCBfAK+BUMRuugpfA
-        G+E7cAhOCffDU7wa8ATc7NXD4gy42KsBJbgS3gn/9Wl0Qm2gGZvgTq8eFk/CnFdjuBpOwpOc1QJXwdO8
-        GsP1cA/MOKs1BqAefxpehBFUbbTE3SYT6OjomJbP52fBK2V6bwJ3QdVQGsrwQ3iWs1pA7ygNlUwm8w1S
-        J4jQv0Bqwmao4gNyudwqcteZKegVF6Rks9mbiP8svRF3mIyBSZYgtPAOqFqIGJx2PeeadCB3KdxlZgz4
-        n4HfmRkwx2QMJG6FG1DzQ0NDBfRX2cANPhpD7ACc8hZE1NXVdZz31MEc78M3zAy41WRAd3e3rk3EZDd7
-        j0N7T09PxfQaVKC3e9WDujkToaelfhADi//EnOoxdVSr1e6RkZFYgRUKhUGEJrnAe1pCG7jGqwF5+BcL
-        3etNj3K53IvQnJd7D2hvb3+AXR2AvxKYZe62zs5OXS0lB18jyF/O2HPMdCD3IvyuGSG/heqKAeSry0bF
-        YvEE5+BR6WpMkrgPTsCvXcBDlXsQ3yvejAP/NrjUTAfsFfBj01+HX7mAgScyH9+YmS5pCdzS29tbVsFw
-        gucs5EDsc8Qh/InvAbF18D0zHbA/hW4OFlNn/QOG7khsOfzITOdYC583MwEmUXWrB+xXM3JOA+MegzvM
-        FDAz44xxPYVNX4aIGHeqbIH4Bvismc7xNnzJzDTkiK9HahMHG+sB/TpEZIUVaob3PEM27/l42Y1jmGvM
-        DuWBYxliN8knek8SfX19JfLUSrWJvbW7bScLtwSpVn0IhpbMuF0s+Ih0G6cNTpftYIPV6bZRkCPemwo1
-        oXeR6gtuQpCFv2Prn0GvayE5sU+3Ng7fks5aFyNiG3QgQa9Am9jH7s723iToFUeTMwY/MZfGboQrTFfV
-        v+kCBuxl8HvpbPCemt6MLLt7FKnrGLs2zSD+MvzRTNkvwI2mb2KRRS5gwFaH1KmLxFfCtS6QBoL6F5ws
-        lUp93pOKxeSFjwwLzMMeHx4eziMnOEjsutprjdRviH9G/sM+koJaUZE8zXuSYJKn4VYz1dnUCVWIWrje
-        4epwzYyFb0OOkzfTeWvQF85U9X79D+reuj8XJj+veTMs/iUMzUc3BPE3E7+Gv9Xnd5S4Hn3EGid7r4Hg
-        +lqjYJfqXAdg0ey5xH8hPnNwcLDKhu7DrVsgGUDOD3Av/MBcMeBfDf+Ev8n0XgPOUbifSUcxVYThL4Zd
-        X4hwf0IN3EONHIMMYIyumW7RU94TB3OrMBUPtyeA4GwC6tdK2G6vIYBTL8I/gaq4vpaX+kgdzPEQQk9G
-        PyEJMMbVB+Nj35mASqXSQ/FMHxgYUMEkoFZLfIa97wT6+/uPYqPnooZ6akJOca1j9hGAtrZ/AOxF1dIg
-        II0sAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="qaqcDRNPButtton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -2980,6 +3032,9 @@ From a schedule view, click "RUN" to capitalize all text values for fields visib
   <metadata name="setupToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>420, 62</value>
   </metadata>
+  <metadata name="setupToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>420, 62</value>
+  </metadata>
   <data name="setupCWSButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -3062,9 +3117,6 @@ If the project is not a worksharing-enabled file, it will become one. The script
   </data>
   <metadata name="WorksetName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="UIFormMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1272, 17</value>
   </metadata>
   <metadata name="dataFamiliesBAPParametersContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>593, 133</value>
