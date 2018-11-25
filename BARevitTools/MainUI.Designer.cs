@@ -115,19 +115,9 @@ namespace BARevitTools
             this.bulkUpdatePublishVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesUFLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.adminFamiliesUFFullSyncPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesUFFullSyncCheckbox = new System.Windows.Forms.CheckBox();
-            this.adminFamiliesUFUpgradedFamiliesListBox = new System.Windows.Forms.ListBox();
-            this.adminFamiliesUFDeletedFamiliesListBox = new System.Windows.Forms.ListBox();
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesUFUpgradedFamiliesTextBox = new System.Windows.Forms.TextBox();
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesUFDeletedFamiliesTextBox = new System.Windows.Forms.TextBox();
-            this.adminFamiliesUFRunPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesUFRunButton = new System.Windows.Forms.Button();
             this.adminFamiliesBAPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesBAPRunPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesBAPDoneLabel = new System.Windows.Forms.Label();
             this.adminFamiliesBAPProgressBar = new System.Windows.Forms.ProgressBar();
             this.adminFamiliesBAPRunButton = new System.Windows.Forms.Button();
             this.adminFamiliesBAPSplitPanel = new System.Windows.Forms.Panel();
@@ -143,6 +133,17 @@ namespace BARevitTools
             this.adminFamiliesBAPFamiliesDGV = new System.Windows.Forms.DataGridView();
             this.adminFamiliesBAPFamiliesDirectoryPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBAPDirectorySelectButton = new System.Windows.Forms.Button();
+            this.adminFamiliesUFLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesUFFullSyncPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFFullSyncCheckbox = new System.Windows.Forms.CheckBox();
+            this.adminFamiliesUFUpgradedFamiliesListBox = new System.Windows.Forms.ListBox();
+            this.adminFamiliesUFDeletedFamiliesListBox = new System.Windows.Forms.ListBox();
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFUpgradedFamiliesTextBox = new System.Windows.Forms.TextBox();
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFDeletedFamiliesTextBox = new System.Windows.Forms.TextBox();
+            this.adminFamiliesUFRunPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFRunButton = new System.Windows.Forms.Button();
             this.adminFamiliesBRPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesBRPRunPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBRPProgressBar = new System.Windows.Forms.ProgressBar();
@@ -616,11 +617,6 @@ namespace BARevitTools
             this.adminFamiliesLayoutPanel.SuspendLayout();
             this.adminFamiliesToolStrip.SuspendLayout();
             this.adminFamiliesToolsPanel.SuspendLayout();
-            this.adminFamiliesUFLayoutPanel.SuspendLayout();
-            this.adminFamiliesUFFullSyncPanel.SuspendLayout();
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.SuspendLayout();
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.SuspendLayout();
-            this.adminFamiliesUFRunPanel.SuspendLayout();
             this.adminFamiliesBAPLayoutPanel.SuspendLayout();
             this.adminFamiliesBAPRunPanel.SuspendLayout();
             this.adminFamiliesBAPSplitPanel.SuspendLayout();
@@ -635,6 +631,11 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBAPFamiliesDGV)).BeginInit();
             this.adminFamiliesBAPFamiliesDirectoryPanel.SuspendLayout();
+            this.adminFamiliesUFLayoutPanel.SuspendLayout();
+            this.adminFamiliesUFFullSyncPanel.SuspendLayout();
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.SuspendLayout();
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.SuspendLayout();
+            this.adminFamiliesUFRunPanel.SuspendLayout();
             this.adminFamiliesBRPLayoutPanel.SuspendLayout();
             this.adminFamiliesBRPRunPanel.SuspendLayout();
             this.adminFamiliesBRPSplitPanel.SuspendLayout();
@@ -1040,6 +1041,7 @@ namespace BARevitTools
             this.adminDataGFFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.adminDataGFFLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminDataGFFLayoutPanel.TabIndex = 4;
+            this.adminDataGFFLayoutPanel.Visible = false;
             // 
             // adminDataGFFCollectDataPanel
             // 
@@ -1777,8 +1779,8 @@ namespace BARevitTools
             // 
             // adminFamiliesToolsPanel
             // 
-            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesUFLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBAPLayoutPanel);
+            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesUFLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBRPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesDFBLayoutPanel);
             this.adminFamiliesToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1787,147 +1789,6 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel.Name = "adminFamiliesToolsPanel";
             this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesToolsPanel.TabIndex = 1;
-            // 
-            // adminFamiliesUFLayoutPanel
-            // 
-            this.adminFamiliesUFLayoutPanel.ColumnCount = 2;
-            this.adminFamiliesUFLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.adminFamiliesUFLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFFullSyncPanel, 0, 0);
-            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFUpgradedFamiliesListBox, 0, 2);
-            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFDeletedFamiliesListBox, 1, 2);
-            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFUpgradedFamiliesTextBoxPanel, 0, 1);
-            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFDeletedFamiliesTextBoxPanel, 1, 1);
-            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFRunPanel, 0, 3);
-            this.adminFamiliesUFLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesUFLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesUFLayoutPanel.Name = "adminFamiliesUFLayoutPanel";
-            this.adminFamiliesUFLayoutPanel.RowCount = 4;
-            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.adminFamiliesUFLayoutPanel.Size = new System.Drawing.Size(710, 339);
-            this.adminFamiliesUFLayoutPanel.TabIndex = 1;
-            this.adminFamiliesUFLayoutPanel.Visible = false;
-            // 
-            // adminFamiliesUFFullSyncPanel
-            // 
-            this.adminFamiliesUFLayoutPanel.SetColumnSpan(this.adminFamiliesUFFullSyncPanel, 2);
-            this.adminFamiliesUFFullSyncPanel.Controls.Add(this.adminFamiliesUFFullSyncCheckbox);
-            this.adminFamiliesUFFullSyncPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFFullSyncPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesUFFullSyncPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesUFFullSyncPanel.Name = "adminFamiliesUFFullSyncPanel";
-            this.adminFamiliesUFFullSyncPanel.Size = new System.Drawing.Size(710, 30);
-            this.adminFamiliesUFFullSyncPanel.TabIndex = 0;
-            // 
-            // adminFamiliesUFFullSyncCheckbox
-            // 
-            this.adminFamiliesUFFullSyncCheckbox.AutoSize = true;
-            this.adminFamiliesUFFullSyncCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminFamiliesUFFullSyncCheckbox.Location = new System.Drawing.Point(3, 7);
-            this.adminFamiliesUFFullSyncCheckbox.Name = "adminFamiliesUFFullSyncCheckbox";
-            this.adminFamiliesUFFullSyncCheckbox.Size = new System.Drawing.Size(109, 17);
-            this.adminFamiliesUFFullSyncCheckbox.TabIndex = 0;
-            this.adminFamiliesUFFullSyncCheckbox.Text = "Full Library Sync?";
-            this.adminFamiliesUFFullSyncCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // adminFamiliesUFUpgradedFamiliesListBox
-            // 
-            this.adminFamiliesUFUpgradedFamiliesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFUpgradedFamiliesListBox.FormattingEnabled = true;
-            this.adminFamiliesUFUpgradedFamiliesListBox.Location = new System.Drawing.Point(0, 65);
-            this.adminFamiliesUFUpgradedFamiliesListBox.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.adminFamiliesUFUpgradedFamiliesListBox.Name = "adminFamiliesUFUpgradedFamiliesListBox";
-            this.adminFamiliesUFUpgradedFamiliesListBox.Size = new System.Drawing.Size(352, 244);
-            this.adminFamiliesUFUpgradedFamiliesListBox.TabIndex = 1;
-            // 
-            // adminFamiliesUFDeletedFamiliesListBox
-            // 
-            this.adminFamiliesUFDeletedFamiliesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFDeletedFamiliesListBox.FormattingEnabled = true;
-            this.adminFamiliesUFDeletedFamiliesListBox.Location = new System.Drawing.Point(358, 65);
-            this.adminFamiliesUFDeletedFamiliesListBox.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.adminFamiliesUFDeletedFamiliesListBox.Name = "adminFamiliesUFDeletedFamiliesListBox";
-            this.adminFamiliesUFDeletedFamiliesListBox.Size = new System.Drawing.Size(352, 244);
-            this.adminFamiliesUFDeletedFamiliesListBox.TabIndex = 2;
-            // 
-            // adminFamiliesUFUpgradedFamiliesTextBoxPanel
-            // 
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Controls.Add(this.adminFamiliesUFUpgradedFamiliesTextBox);
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Location = new System.Drawing.Point(0, 30);
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Name = "adminFamiliesUFUpgradedFamiliesTextBoxPanel";
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Size = new System.Drawing.Size(352, 35);
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.TabIndex = 3;
-            // 
-            // adminFamiliesUFUpgradedFamiliesTextBox
-            // 
-            this.adminFamiliesUFUpgradedFamiliesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesUFUpgradedFamiliesTextBox.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.adminFamiliesUFUpgradedFamiliesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.adminFamiliesUFUpgradedFamiliesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminFamiliesUFUpgradedFamiliesTextBox.Location = new System.Drawing.Point(-1, 9);
-            this.adminFamiliesUFUpgradedFamiliesTextBox.Multiline = true;
-            this.adminFamiliesUFUpgradedFamiliesTextBox.Name = "adminFamiliesUFUpgradedFamiliesTextBox";
-            this.adminFamiliesUFUpgradedFamiliesTextBox.Size = new System.Drawing.Size(352, 20);
-            this.adminFamiliesUFUpgradedFamiliesTextBox.TabIndex = 0;
-            this.adminFamiliesUFUpgradedFamiliesTextBox.Text = "FAMILIES UPGRADED";
-            this.adminFamiliesUFUpgradedFamiliesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // adminFamiliesUFDeletedFamiliesTextBoxPanel
-            // 
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.BackColor = System.Drawing.Color.GreenYellow;
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Controls.Add(this.adminFamiliesUFDeletedFamiliesTextBox);
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Location = new System.Drawing.Point(358, 30);
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Name = "adminFamiliesUFDeletedFamiliesTextBoxPanel";
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Size = new System.Drawing.Size(352, 35);
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.TabIndex = 4;
-            // 
-            // adminFamiliesUFDeletedFamiliesTextBox
-            // 
-            this.adminFamiliesUFDeletedFamiliesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesUFDeletedFamiliesTextBox.BackColor = System.Drawing.Color.GreenYellow;
-            this.adminFamiliesUFDeletedFamiliesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.adminFamiliesUFDeletedFamiliesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminFamiliesUFDeletedFamiliesTextBox.Location = new System.Drawing.Point(0, 10);
-            this.adminFamiliesUFDeletedFamiliesTextBox.Multiline = true;
-            this.adminFamiliesUFDeletedFamiliesTextBox.Name = "adminFamiliesUFDeletedFamiliesTextBox";
-            this.adminFamiliesUFDeletedFamiliesTextBox.Size = new System.Drawing.Size(351, 22);
-            this.adminFamiliesUFDeletedFamiliesTextBox.TabIndex = 0;
-            this.adminFamiliesUFDeletedFamiliesTextBox.Text = "FAMILIES DELETED";
-            this.adminFamiliesUFDeletedFamiliesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // adminFamiliesUFRunPanel
-            // 
-            this.adminFamiliesUFLayoutPanel.SetColumnSpan(this.adminFamiliesUFRunPanel, 2);
-            this.adminFamiliesUFRunPanel.Controls.Add(this.adminFamiliesUFRunButton);
-            this.adminFamiliesUFRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFRunPanel.Location = new System.Drawing.Point(0, 309);
-            this.adminFamiliesUFRunPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesUFRunPanel.Name = "adminFamiliesUFRunPanel";
-            this.adminFamiliesUFRunPanel.Size = new System.Drawing.Size(710, 30);
-            this.adminFamiliesUFRunPanel.TabIndex = 5;
-            // 
-            // adminFamiliesUFRunButton
-            // 
-            this.adminFamiliesUFRunButton.Location = new System.Drawing.Point(3, 4);
-            this.adminFamiliesUFRunButton.Name = "adminFamiliesUFRunButton";
-            this.adminFamiliesUFRunButton.Size = new System.Drawing.Size(75, 23);
-            this.adminFamiliesUFRunButton.TabIndex = 0;
-            this.adminFamiliesUFRunButton.Text = "RUN";
-            this.adminFamiliesUFRunButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesUFRunButton.Click += new System.EventHandler(this.AdminFamiliesUFRunButton_Click);
             // 
             // adminFamiliesBAPLayoutPanel
             // 
@@ -1953,6 +1814,7 @@ namespace BARevitTools
             // adminFamiliesBAPRunPanel
             // 
             this.adminFamiliesBAPLayoutPanel.SetColumnSpan(this.adminFamiliesBAPRunPanel, 2);
+            this.adminFamiliesBAPRunPanel.Controls.Add(this.adminFamiliesBAPDoneLabel);
             this.adminFamiliesBAPRunPanel.Controls.Add(this.adminFamiliesBAPProgressBar);
             this.adminFamiliesBAPRunPanel.Controls.Add(this.adminFamiliesBAPRunButton);
             this.adminFamiliesBAPRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1962,21 +1824,32 @@ namespace BARevitTools
             this.adminFamiliesBAPRunPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesBAPRunPanel.TabIndex = 5;
             // 
+            // adminFamiliesBAPDoneLabel
+            // 
+            this.adminFamiliesBAPDoneLabel.AutoSize = true;
+            this.adminFamiliesBAPDoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesBAPDoneLabel.Location = new System.Drawing.Point(89, 9);
+            this.adminFamiliesBAPDoneLabel.Name = "adminFamiliesBAPDoneLabel";
+            this.adminFamiliesBAPDoneLabel.Size = new System.Drawing.Size(41, 13);
+            this.adminFamiliesBAPDoneLabel.TabIndex = 2;
+            this.adminFamiliesBAPDoneLabel.Text = "Done!";
+            this.adminFamiliesBAPDoneLabel.Visible = false;
+            // 
             // adminFamiliesBAPProgressBar
             // 
             this.adminFamiliesBAPProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.adminFamiliesBAPProgressBar.ForeColor = System.Drawing.Color.GreenYellow;
-            this.adminFamiliesBAPProgressBar.Location = new System.Drawing.Point(7, 6);
+            this.adminFamiliesBAPProgressBar.Location = new System.Drawing.Point(136, 6);
             this.adminFamiliesBAPProgressBar.Name = "adminFamiliesBAPProgressBar";
-            this.adminFamiliesBAPProgressBar.Size = new System.Drawing.Size(619, 23);
+            this.adminFamiliesBAPProgressBar.Size = new System.Drawing.Size(571, 23);
             this.adminFamiliesBAPProgressBar.TabIndex = 1;
             this.adminFamiliesBAPProgressBar.Visible = false;
             // 
             // adminFamiliesBAPRunButton
             // 
-            this.adminFamiliesBAPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesBAPRunButton.Location = new System.Drawing.Point(633, 6);
+            this.adminFamiliesBAPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.adminFamiliesBAPRunButton.Location = new System.Drawing.Point(7, 5);
             this.adminFamiliesBAPRunButton.Name = "adminFamiliesBAPRunButton";
             this.adminFamiliesBAPRunButton.Size = new System.Drawing.Size(75, 23);
             this.adminFamiliesBAPRunButton.TabIndex = 0;
@@ -2125,6 +1998,7 @@ namespace BARevitTools
             this.adminFamiliesBAPFamiliesDGV.RowHeadersVisible = false;
             this.adminFamiliesBAPFamiliesDGV.Size = new System.Drawing.Size(336, 228);
             this.adminFamiliesBAPFamiliesDGV.TabIndex = 1;
+            this.adminFamiliesBAPFamiliesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminFamiliesBAPFamiliesDGV_CellContentClick);
             // 
             // adminFamiliesBAPFamiliesDirectoryPanel
             // 
@@ -2147,6 +2021,147 @@ namespace BARevitTools
             this.adminFamiliesBAPDirectorySelectButton.Text = "Select Directory";
             this.adminFamiliesBAPDirectorySelectButton.UseVisualStyleBackColor = true;
             this.adminFamiliesBAPDirectorySelectButton.Click += new System.EventHandler(this.AdminFamiliesBAPSelectDirectoryButton_Click);
+            // 
+            // adminFamiliesUFLayoutPanel
+            // 
+            this.adminFamiliesUFLayoutPanel.ColumnCount = 2;
+            this.adminFamiliesUFLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.adminFamiliesUFLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFFullSyncPanel, 0, 0);
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFUpgradedFamiliesListBox, 0, 2);
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFDeletedFamiliesListBox, 1, 2);
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFUpgradedFamiliesTextBoxPanel, 0, 1);
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFDeletedFamiliesTextBoxPanel, 1, 1);
+            this.adminFamiliesUFLayoutPanel.Controls.Add(this.adminFamiliesUFRunPanel, 0, 3);
+            this.adminFamiliesUFLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesUFLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFLayoutPanel.Name = "adminFamiliesUFLayoutPanel";
+            this.adminFamiliesUFLayoutPanel.RowCount = 4;
+            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.adminFamiliesUFLayoutPanel.Size = new System.Drawing.Size(710, 339);
+            this.adminFamiliesUFLayoutPanel.TabIndex = 1;
+            this.adminFamiliesUFLayoutPanel.Visible = false;
+            // 
+            // adminFamiliesUFFullSyncPanel
+            // 
+            this.adminFamiliesUFLayoutPanel.SetColumnSpan(this.adminFamiliesUFFullSyncPanel, 2);
+            this.adminFamiliesUFFullSyncPanel.Controls.Add(this.adminFamiliesUFFullSyncCheckbox);
+            this.adminFamiliesUFFullSyncPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFFullSyncPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesUFFullSyncPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFFullSyncPanel.Name = "adminFamiliesUFFullSyncPanel";
+            this.adminFamiliesUFFullSyncPanel.Size = new System.Drawing.Size(710, 30);
+            this.adminFamiliesUFFullSyncPanel.TabIndex = 0;
+            // 
+            // adminFamiliesUFFullSyncCheckbox
+            // 
+            this.adminFamiliesUFFullSyncCheckbox.AutoSize = true;
+            this.adminFamiliesUFFullSyncCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesUFFullSyncCheckbox.Location = new System.Drawing.Point(3, 7);
+            this.adminFamiliesUFFullSyncCheckbox.Name = "adminFamiliesUFFullSyncCheckbox";
+            this.adminFamiliesUFFullSyncCheckbox.Size = new System.Drawing.Size(109, 17);
+            this.adminFamiliesUFFullSyncCheckbox.TabIndex = 0;
+            this.adminFamiliesUFFullSyncCheckbox.Text = "Full Library Sync?";
+            this.adminFamiliesUFFullSyncCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // adminFamiliesUFUpgradedFamiliesListBox
+            // 
+            this.adminFamiliesUFUpgradedFamiliesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFUpgradedFamiliesListBox.FormattingEnabled = true;
+            this.adminFamiliesUFUpgradedFamiliesListBox.Location = new System.Drawing.Point(0, 65);
+            this.adminFamiliesUFUpgradedFamiliesListBox.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.adminFamiliesUFUpgradedFamiliesListBox.Name = "adminFamiliesUFUpgradedFamiliesListBox";
+            this.adminFamiliesUFUpgradedFamiliesListBox.Size = new System.Drawing.Size(352, 244);
+            this.adminFamiliesUFUpgradedFamiliesListBox.TabIndex = 1;
+            // 
+            // adminFamiliesUFDeletedFamiliesListBox
+            // 
+            this.adminFamiliesUFDeletedFamiliesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFDeletedFamiliesListBox.FormattingEnabled = true;
+            this.adminFamiliesUFDeletedFamiliesListBox.Location = new System.Drawing.Point(358, 65);
+            this.adminFamiliesUFDeletedFamiliesListBox.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.adminFamiliesUFDeletedFamiliesListBox.Name = "adminFamiliesUFDeletedFamiliesListBox";
+            this.adminFamiliesUFDeletedFamiliesListBox.Size = new System.Drawing.Size(352, 244);
+            this.adminFamiliesUFDeletedFamiliesListBox.TabIndex = 2;
+            // 
+            // adminFamiliesUFUpgradedFamiliesTextBoxPanel
+            // 
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Controls.Add(this.adminFamiliesUFUpgradedFamiliesTextBox);
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Location = new System.Drawing.Point(0, 30);
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Name = "adminFamiliesUFUpgradedFamiliesTextBoxPanel";
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Size = new System.Drawing.Size(352, 35);
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.TabIndex = 3;
+            // 
+            // adminFamiliesUFUpgradedFamiliesTextBox
+            // 
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesUFUpgradedFamiliesTextBox.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.adminFamiliesUFUpgradedFamiliesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Location = new System.Drawing.Point(-1, 9);
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Multiline = true;
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Name = "adminFamiliesUFUpgradedFamiliesTextBox";
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Size = new System.Drawing.Size(352, 20);
+            this.adminFamiliesUFUpgradedFamiliesTextBox.TabIndex = 0;
+            this.adminFamiliesUFUpgradedFamiliesTextBox.Text = "FAMILIES UPGRADED";
+            this.adminFamiliesUFUpgradedFamiliesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // adminFamiliesUFDeletedFamiliesTextBoxPanel
+            // 
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.BackColor = System.Drawing.Color.GreenYellow;
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Controls.Add(this.adminFamiliesUFDeletedFamiliesTextBox);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Location = new System.Drawing.Point(358, 30);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Name = "adminFamiliesUFDeletedFamiliesTextBoxPanel";
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Size = new System.Drawing.Size(352, 35);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.TabIndex = 4;
+            // 
+            // adminFamiliesUFDeletedFamiliesTextBox
+            // 
+            this.adminFamiliesUFDeletedFamiliesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesUFDeletedFamiliesTextBox.BackColor = System.Drawing.Color.GreenYellow;
+            this.adminFamiliesUFDeletedFamiliesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminFamiliesUFDeletedFamiliesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesUFDeletedFamiliesTextBox.Location = new System.Drawing.Point(0, 10);
+            this.adminFamiliesUFDeletedFamiliesTextBox.Multiline = true;
+            this.adminFamiliesUFDeletedFamiliesTextBox.Name = "adminFamiliesUFDeletedFamiliesTextBox";
+            this.adminFamiliesUFDeletedFamiliesTextBox.Size = new System.Drawing.Size(351, 22);
+            this.adminFamiliesUFDeletedFamiliesTextBox.TabIndex = 0;
+            this.adminFamiliesUFDeletedFamiliesTextBox.Text = "FAMILIES DELETED";
+            this.adminFamiliesUFDeletedFamiliesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // adminFamiliesUFRunPanel
+            // 
+            this.adminFamiliesUFLayoutPanel.SetColumnSpan(this.adminFamiliesUFRunPanel, 2);
+            this.adminFamiliesUFRunPanel.Controls.Add(this.adminFamiliesUFRunButton);
+            this.adminFamiliesUFRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFRunPanel.Location = new System.Drawing.Point(0, 309);
+            this.adminFamiliesUFRunPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFRunPanel.Name = "adminFamiliesUFRunPanel";
+            this.adminFamiliesUFRunPanel.Size = new System.Drawing.Size(710, 30);
+            this.adminFamiliesUFRunPanel.TabIndex = 5;
+            // 
+            // adminFamiliesUFRunButton
+            // 
+            this.adminFamiliesUFRunButton.Location = new System.Drawing.Point(3, 4);
+            this.adminFamiliesUFRunButton.Name = "adminFamiliesUFRunButton";
+            this.adminFamiliesUFRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesUFRunButton.TabIndex = 0;
+            this.adminFamiliesUFRunButton.Text = "RUN";
+            this.adminFamiliesUFRunButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesUFRunButton.Click += new System.EventHandler(this.AdminFamiliesUFRunButton_Click);
             // 
             // adminFamiliesBRPLayoutPanel
             // 
@@ -7691,16 +7706,9 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.ResumeLayout(false);
             this.adminFamiliesToolStrip.PerformLayout();
             this.adminFamiliesToolsPanel.ResumeLayout(false);
-            this.adminFamiliesUFLayoutPanel.ResumeLayout(false);
-            this.adminFamiliesUFFullSyncPanel.ResumeLayout(false);
-            this.adminFamiliesUFFullSyncPanel.PerformLayout();
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.ResumeLayout(false);
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.PerformLayout();
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.ResumeLayout(false);
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.PerformLayout();
-            this.adminFamiliesUFRunPanel.ResumeLayout(false);
             this.adminFamiliesBAPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.ResumeLayout(false);
+            this.adminFamiliesBAPRunPanel.PerformLayout();
             this.adminFamiliesBAPSplitPanel.ResumeLayout(false);
             this.adminFamiliesBAPSplitContainer.Panel1.ResumeLayout(false);
             this.adminFamiliesBAPSplitContainer.Panel2.ResumeLayout(false);
@@ -7714,6 +7722,14 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBAPFamiliesDGV)).EndInit();
             this.adminFamiliesBAPFamiliesDirectoryPanel.ResumeLayout(false);
+            this.adminFamiliesUFLayoutPanel.ResumeLayout(false);
+            this.adminFamiliesUFFullSyncPanel.ResumeLayout(false);
+            this.adminFamiliesUFFullSyncPanel.PerformLayout();
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.ResumeLayout(false);
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.PerformLayout();
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.ResumeLayout(false);
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.PerformLayout();
+            this.adminFamiliesUFRunPanel.ResumeLayout(false);
             this.adminFamiliesBRPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesBRPRunPanel.ResumeLayout(false);
             this.adminFamiliesBRPSplitPanel.ResumeLayout(false);
@@ -8543,6 +8559,7 @@ namespace BARevitTools
         private ToolStripMenuItem adminFamiliesBRPButton;
         private ToolStripMenuItem bulkUpdatePublishVersionToolStripMenuItem;
         public Panel multiCatToolsPanel;
+        public Label adminFamiliesBAPDoneLabel;
     }
 }
 

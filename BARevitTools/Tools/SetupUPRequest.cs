@@ -121,7 +121,7 @@ namespace BARevitTools.Tools
                                 catch { continue; }
 
                             }
-                            RVTOperations.SaveRevitFile(uiApp, hostDoc);
+                            RVTOperations.SaveRevitFile(uiApp, hostDoc, true);
                         }
                         catch (Exception e) { MessageBox.Show(e.ToString()); }
                     }

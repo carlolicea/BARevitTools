@@ -1,6 +1,7 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using RVTDocument = Autodesk.Revit.DB.Document;
 
@@ -48,7 +49,8 @@ namespace BARevitTools.Tools
             {
                 t.RollBack();
             }
-            RVTOperations.SaveRevitFile(uiApp, familyDoc);
+            RVTOperations.SaveRevitFile(uiApp, familyDoc, true);
+            GeneralOperations.CleanRfaBackups(Path.GetDirectoryName(familyFile));
         }
     }
 }

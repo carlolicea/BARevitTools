@@ -2769,6 +2769,7 @@ namespace BARevitTools
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             uiForm.adminFamiliesBAPFamiliesDGV.Columns.Clear();
             uiForm.adminFamiliesBAPParametersDGV.Columns.Clear();
+            uiForm.adminFamiliesBAPDoneLabel.Visible = false;
 
             RVTDocument doc = uiApp.ActiveUIDocument.Document;
             DataGridView pdgv = uiForm.adminFamiliesBAPParametersDGV;
@@ -2913,7 +2914,18 @@ namespace BARevitTools
         }
         private void AdminFamiliesBAPSharedParametersButton_Click(object sender, EventArgs e)
         {
-            if (uiApp.Application.OpenSharedParameterFile() != null)
+            bool accessibleSPFile = false;
+            try
+            {
+                uiApp.Application.OpenSharedParameterFile();
+                accessibleSPFile = true;
+            }
+            catch
+            {
+                accessibleSPFile = false;
+            }
+
+            if (accessibleSPFile == true)
             {
                 try
                 {
@@ -3401,6 +3413,8 @@ namespace BARevitTools
         private void OptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Need something for the options when they are done.
-        }        
+        }
+
+        
     }
 }

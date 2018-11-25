@@ -738,7 +738,7 @@ namespace BARevitTools
             }
             return result;
         }
-        public static bool SaveRevitFile(UIApplication uiApp, RVTDocument doc)
+        public static bool SaveRevitFile(UIApplication uiApp, RVTDocument doc, bool close)
         {
             bool result = false;
             TransactWithCentralOptions TWCOptions = new TransactWithCentralOptions();
@@ -750,6 +750,10 @@ namespace BARevitTools
             worksharingSaveOptions.SaveAsCentral = true;
             SaveOptions saveOptions = new SaveOptions();
             saveOptions.Compact = true;
+            SaveAsOptions saveAsOptions = new SaveAsOptions();
+            saveAsOptions.Compact = true;
+            saveAsOptions.MaximumBackups = 3;
+            saveAsOptions.OverwriteExistingFile = true;
 
             try
             {
@@ -757,10 +761,13 @@ namespace BARevitTools
                 {
                     try
                     {
-                        doc.Save(saveOptions);
+                        doc.SaveAs(doc.PathName,saveAsOptions);
                         result = true;
                     }
-                    catch (Exception e) { MessageBox.Show(e.Message); doc.Close(); }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);                        
+                    }
                 }
                 else
                 {
@@ -771,23 +778,30 @@ namespace BARevitTools
                         {
                             doc.Save(saveOptions);
                             doc.SynchronizeWithCentral(TWCOptions, SWCOptions);
-                            doc.Close();
                         }
                         else
                         {
                             doc.EnableWorksharing("Shared Levels and Grids", "Workset1");
                             doc.Save(saveOptions);
                             doc.SynchronizeWithCentral(TWCOptions, SWCOptions);
-                            doc.Close();
                         }
                         result = true;
                     }
                     catch (Exception e) { MessageBox.Show(e.Message); doc.Close(); }
                 }
             }
-            catch (Exception e) { MessageBox.Show(e.Message); }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                if (close == true)
+                {
+                    doc.Close(false);
+                }
+            }
             return result;
-
         }
         public static ElementId SelectElement(UIApplication uiApp)
         {
