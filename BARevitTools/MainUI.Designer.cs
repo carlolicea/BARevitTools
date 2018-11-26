@@ -1876,13 +1876,16 @@ namespace BARevitTools
             // adminFamiliesBAPSplitContainer.Panel1
             // 
             this.adminFamiliesBAPSplitContainer.Panel1.Controls.Add(this.adminFamiliesBAPParametersLayoutPanel);
+            this.adminFamiliesBAPSplitContainer.Panel1.UseWaitCursor = true;
             // 
             // adminFamiliesBAPSplitContainer.Panel2
             // 
             this.adminFamiliesBAPSplitContainer.Panel2.Controls.Add(this.adminFamiliesBAPSelectLayoutPanel);
+            this.adminFamiliesBAPSplitContainer.Panel2.UseWaitCursor = true;
             this.adminFamiliesBAPSplitContainer.Size = new System.Drawing.Size(704, 263);
             this.adminFamiliesBAPSplitContainer.SplitterDistance = 364;
             this.adminFamiliesBAPSplitContainer.TabIndex = 0;
+            this.adminFamiliesBAPSplitContainer.UseWaitCursor = true;
             // 
             // adminFamiliesBAPParametersLayoutPanel
             // 
@@ -2236,13 +2239,16 @@ namespace BARevitTools
             // adminFamiliesBRPSplitContainer.Panel1
             // 
             this.adminFamiliesBRPSplitContainer.Panel1.Controls.Add(this.adminFamiliesBRPParametersLayoutPanel);
+            this.adminFamiliesBRPSplitContainer.Panel1.UseWaitCursor = true;
             // 
             // adminFamiliesBRPSplitContainer.Panel2
             // 
             this.adminFamiliesBRPSplitContainer.Panel2.Controls.Add(this.adminFamiliesBPRSFamiliesLayoutPanel);
+            this.adminFamiliesBRPSplitContainer.Panel2.UseWaitCursor = true;
             this.adminFamiliesBRPSplitContainer.Size = new System.Drawing.Size(704, 263);
             this.adminFamiliesBRPSplitContainer.SplitterDistance = 336;
             this.adminFamiliesBRPSplitContainer.TabIndex = 0;
+            this.adminFamiliesBRPSplitContainer.UseWaitCursor = true;
             // 
             // adminFamiliesBRPParametersLayoutPanel
             // 
@@ -2756,6 +2762,7 @@ namespace BARevitTools
             this.roomsCDRTButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.roomsCDRTButton.ToolTipText = "Create Demo Room Tags: Places room tag symbols where rooms exist in a previous ph" +
     "ase, but do not exist in the current phase. This is intended for Demo Plans";
+            this.roomsCDRTButton.Visible = false;
             this.roomsCDRTButton.Click += new System.EventHandler(this.RoomsCDRTButton_Click);
             // 
             // mgmtSetupCWSUserContextMenu
@@ -2920,7 +2927,7 @@ namespace BARevitTools
             this.aboutPublishLabel.Name = "aboutPublishLabel";
             this.aboutPublishLabel.Size = new System.Drawing.Size(65, 13);
             this.aboutPublishLabel.TabIndex = 5;
-            this.aboutPublishLabel.Text = "11/09/2018";
+            this.aboutPublishLabel.Text = "11/16/2018";
             // 
             // aboutTabVersionLabel
             // 
@@ -2932,7 +2939,7 @@ namespace BARevitTools
             this.aboutTabVersionLabel.Name = "aboutTabVersionLabel";
             this.aboutTabVersionLabel.Size = new System.Drawing.Size(102, 20);
             this.aboutTabVersionLabel.TabIndex = 0;
-            this.aboutTabVersionLabel.Text = "Version 1.0.3";
+            this.aboutTabVersionLabel.Text = "Version 1.0.4";
             // 
             // aboutTabTitleLabel
             // 
@@ -3133,7 +3140,7 @@ namespace BARevitTools
             // 
             // multiCatCFFSplitContainer
             // 
-            this.multiCatCFFSplitContainer.Cursor = System.Windows.Forms.Cursors.SizeWE;
+            this.multiCatCFFSplitContainer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.multiCatCFFSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.multiCatCFFSplitContainer.Location = new System.Drawing.Point(0, 0);
             this.multiCatCFFSplitContainer.Margin = new System.Windows.Forms.Padding(0);
@@ -3142,20 +3149,23 @@ namespace BARevitTools
             // multiCatCFFSplitContainer.Panel1
             // 
             this.multiCatCFFSplitContainer.Panel1.Controls.Add(this.multiCatCFFEExcelSplitContainer);
+            this.multiCatCFFSplitContainer.Panel1.UseWaitCursor = true;
             this.multiCatCFFSplitContainer.Panel1MinSize = 90;
             // 
             // multiCatCFFSplitContainer.Panel2
             // 
             this.multiCatCFFSplitContainer.Panel2.Controls.Add(this.multiCatCFFEFamiliesSplitContainer);
+            this.multiCatCFFSplitContainer.Panel2.UseWaitCursor = true;
             this.multiCatCFFSplitContainer.Panel2MinSize = 90;
             this.multiCatCFFSplitContainer.Size = new System.Drawing.Size(720, 349);
             this.multiCatCFFSplitContainer.SplitterDistance = 316;
             this.multiCatCFFSplitContainer.TabIndex = 0;
+            this.multiCatCFFSplitContainer.UseWaitCursor = true;
             this.multiCatCFFSplitContainer.Visible = false;
             // 
             // multiCatCFFEExcelSplitContainer
             // 
-            this.multiCatCFFEExcelSplitContainer.Cursor = System.Windows.Forms.Cursors.SizeNS;
+            this.multiCatCFFEExcelSplitContainer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.multiCatCFFEExcelSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.multiCatCFFEExcelSplitContainer.Location = new System.Drawing.Point(0, 0);
             this.multiCatCFFEExcelSplitContainer.Margin = new System.Windows.Forms.Padding(0);
@@ -3165,15 +3175,18 @@ namespace BARevitTools
             // multiCatCFFEExcelSplitContainer.Panel1
             // 
             this.multiCatCFFEExcelSplitContainer.Panel1.Controls.Add(this.multiCatCFFECreateExcelLayoutPanel1);
+            this.multiCatCFFEExcelSplitContainer.Panel1.UseWaitCursor = true;
             this.multiCatCFFEExcelSplitContainer.Panel1MinSize = 45;
             // 
             // multiCatCFFEExcelSplitContainer.Panel2
             // 
             this.multiCatCFFEExcelSplitContainer.Panel2.Controls.Add(this.multiCatCFFECreateExcelLayoutPanel2);
+            this.multiCatCFFEExcelSplitContainer.Panel2.UseWaitCursor = true;
             this.multiCatCFFEExcelSplitContainer.Panel2MinSize = 45;
             this.multiCatCFFEExcelSplitContainer.Size = new System.Drawing.Size(316, 349);
             this.multiCatCFFEExcelSplitContainer.SplitterDistance = 114;
             this.multiCatCFFEExcelSplitContainer.TabIndex = 2;
+            this.multiCatCFFEExcelSplitContainer.UseWaitCursor = true;
             // 
             // multiCatCFFECreateExcelLayoutPanel1
             // 
@@ -3182,7 +3195,6 @@ namespace BARevitTools
             this.multiCatCFFECreateExcelLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.multiCatCFFECreateExcelLayoutPanel1.Controls.Add(this.multiCatCFFECreateExcelLabel, 0, 0);
             this.multiCatCFFECreateExcelLayoutPanel1.Controls.Add(this.multiCatCFFECreateExcelInstructions, 0, 1);
-            this.multiCatCFFECreateExcelLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.multiCatCFFECreateExcelLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.multiCatCFFECreateExcelLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.multiCatCFFECreateExcelLayoutPanel1.Name = "multiCatCFFECreateExcelLayoutPanel1";
@@ -3233,7 +3245,6 @@ namespace BARevitTools
             this.multiCatCFFECreateExcelLayoutPanel2.Controls.Add(this.multiCatCFFEExcelRunPanel, 0, 3);
             this.multiCatCFFECreateExcelLayoutPanel2.Controls.Add(this.multiCatCFFEDirectoryPanel, 0, 0);
             this.multiCatCFFECreateExcelLayoutPanel2.Controls.Add(this.multiCatCFFESelectFamilyPanel, 0, 1);
-            this.multiCatCFFECreateExcelLayoutPanel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.multiCatCFFECreateExcelLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.multiCatCFFECreateExcelLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.multiCatCFFECreateExcelLayoutPanel2.Name = "multiCatCFFECreateExcelLayoutPanel2";
@@ -3322,7 +3333,6 @@ namespace BARevitTools
             this.multiCatCFFEDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.multiCatCFFEDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.multiCatCFFEDirectoryTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.multiCatCFFEDirectoryTextBox.Location = new System.Drawing.Point(136, 12);
             this.multiCatCFFEDirectoryTextBox.Name = "multiCatCFFEDirectoryTextBox";
             this.multiCatCFFEDirectoryTextBox.ReadOnly = true;
@@ -3355,7 +3365,6 @@ namespace BARevitTools
             this.multiCatCFFESelectFamilyTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.multiCatCFFESelectFamilyTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.multiCatCFFESelectFamilyTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.multiCatCFFESelectFamilyTextBox.Location = new System.Drawing.Point(136, 12);
             this.multiCatCFFESelectFamilyTextBox.Name = "multiCatCFFESelectFamilyTextBox";
             this.multiCatCFFESelectFamilyTextBox.ReadOnly = true;
@@ -3364,7 +3373,7 @@ namespace BARevitTools
             // 
             // multiCatCFFEFamiliesSplitContainer
             // 
-            this.multiCatCFFEFamiliesSplitContainer.Cursor = System.Windows.Forms.Cursors.SizeNS;
+            this.multiCatCFFEFamiliesSplitContainer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.multiCatCFFEFamiliesSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.multiCatCFFEFamiliesSplitContainer.Location = new System.Drawing.Point(0, 0);
             this.multiCatCFFEFamiliesSplitContainer.Margin = new System.Windows.Forms.Padding(0);
@@ -3374,15 +3383,18 @@ namespace BARevitTools
             // multiCatCFFEFamiliesSplitContainer.Panel1
             // 
             this.multiCatCFFEFamiliesSplitContainer.Panel1.Controls.Add(this.multiCatCFFECreateFamiliesLayoutPanel1);
+            this.multiCatCFFEFamiliesSplitContainer.Panel1.UseWaitCursor = true;
             this.multiCatCFFEFamiliesSplitContainer.Panel1MinSize = 45;
             // 
             // multiCatCFFEFamiliesSplitContainer.Panel2
             // 
             this.multiCatCFFEFamiliesSplitContainer.Panel2.Controls.Add(this.multiCatCFFECreateFamiliesLayoutPanel2);
+            this.multiCatCFFEFamiliesSplitContainer.Panel2.UseWaitCursor = true;
             this.multiCatCFFEFamiliesSplitContainer.Panel2MinSize = 45;
             this.multiCatCFFEFamiliesSplitContainer.Size = new System.Drawing.Size(400, 349);
             this.multiCatCFFEFamiliesSplitContainer.SplitterDistance = 114;
             this.multiCatCFFEFamiliesSplitContainer.TabIndex = 0;
+            this.multiCatCFFEFamiliesSplitContainer.UseWaitCursor = true;
             // 
             // multiCatCFFECreateFamiliesLayoutPanel1
             // 
@@ -3391,7 +3403,6 @@ namespace BARevitTools
             this.multiCatCFFECreateFamiliesLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.multiCatCFFECreateFamiliesLayoutPanel1.Controls.Add(this.multiCatCFFECreateFamiliesLabel, 0, 0);
             this.multiCatCFFECreateFamiliesLayoutPanel1.Controls.Add(this.multiCatCFFECreateFamiliesInstructions, 0, 1);
-            this.multiCatCFFECreateFamiliesLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.multiCatCFFECreateFamiliesLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.multiCatCFFECreateFamiliesLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.multiCatCFFECreateFamiliesLayoutPanel1.Name = "multiCatCFFECreateFamiliesLayoutPanel1";
@@ -3442,7 +3453,6 @@ namespace BARevitTools
             this.multiCatCFFECreateFamiliesLayoutPanel2.Controls.Add(this.multiCatCFFEFamiliesExcelPanel, 0, 0);
             this.multiCatCFFECreateFamiliesLayoutPanel2.Controls.Add(this.multiCatCFFEFamiliesRunPanel, 0, 3);
             this.multiCatCFFECreateFamiliesLayoutPanel2.Controls.Add(this.multiCatCFFEFamilyCreationPanel, 0, 1);
-            this.multiCatCFFECreateFamiliesLayoutPanel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.multiCatCFFECreateFamiliesLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.multiCatCFFECreateFamiliesLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.multiCatCFFECreateFamiliesLayoutPanel2.Name = "multiCatCFFECreateFamiliesLayoutPanel2";
@@ -3488,7 +3498,6 @@ namespace BARevitTools
             this.allCATCFFEFamiliesSaveDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.allCATCFFEFamiliesSaveDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.allCATCFFEFamiliesSaveDirectoryTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.allCATCFFEFamiliesSaveDirectoryTextBox.Location = new System.Drawing.Point(259, 12);
             this.allCATCFFEFamiliesSaveDirectoryTextBox.Name = "allCATCFFEFamiliesSaveDirectoryTextBox";
             this.allCATCFFEFamiliesSaveDirectoryTextBox.ReadOnly = true;
@@ -3926,6 +3935,7 @@ namespace BARevitTools
             this.materialsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.materialsLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.materialsLayoutPanel.TabIndex = 0;
+            this.materialsLayoutPanel.UseWaitCursor = true;
             // 
             // materialsToolStrip
             // 
@@ -3975,6 +3985,7 @@ namespace BARevitTools
             this.materialsAMLButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.materialsAMLButton.ToolTipText = "Accent Material Lines: Creates lines along the wall for indicating accent materia" +
     "ls.";
+            this.materialsAMLButton.Visible = false;
             this.materialsAMLButton.Click += new System.EventHandler(this.MaterialsAMLButton_Click);
             // 
             // materialsToolsPanel
@@ -7559,6 +7570,7 @@ namespace BARevitTools
             this.setupCWSUserDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.setupCWSUserDataGridView.Size = new System.Drawing.Size(240, 165);
             this.setupCWSUserDataGridView.TabIndex = 2;
+            this.setupCWSUserDataGridView.UseWaitCursor = true;
             this.setupCWSUserDataGridView.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SetupCWSUserDataGridView_CellMouseUp);
             // 
             // WorksetName
@@ -7665,6 +7677,7 @@ namespace BARevitTools
             this.RightToLeftLayout = true;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "BART";
+            this.UseWaitCursor = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainUI_FormClosed);
             adminTab.ResumeLayout(false);
             this.adminManagementTabControl.ResumeLayout(false);

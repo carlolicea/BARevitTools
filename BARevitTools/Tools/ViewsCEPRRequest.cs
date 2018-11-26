@@ -29,7 +29,7 @@ namespace BARevitTools.Tools
 
             if (viewTypeId != null && uidoc.ActiveView.GetType().ToString() == "Autodesk.Revit.DB.ViewPlan")
             {
-                List<Room> selectedRoomElements = uiForm.floorsCFBRRoomsList;
+                List<Room> selectedRoomElements = RVTOperations.SelectRoomElements(uiApp);
 
                 if (selectedRoomElements != null)
                 {
