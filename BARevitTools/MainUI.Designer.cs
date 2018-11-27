@@ -3292,7 +3292,7 @@ namespace BARevitTools
             // 
             // multiCatCFFSplitContainer
             // 
-            this.multiCatCFFSplitContainer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.multiCatCFFSplitContainer.Cursor = System.Windows.Forms.Cursors.Default;
             this.multiCatCFFSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.multiCatCFFSplitContainer.Location = new System.Drawing.Point(0, 0);
             this.multiCatCFFSplitContainer.Margin = new System.Windows.Forms.Padding(0);
@@ -3314,7 +3314,7 @@ namespace BARevitTools
             // 
             // multiCatCFFEExcelSplitContainer
             // 
-            this.multiCatCFFEExcelSplitContainer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.multiCatCFFEExcelSplitContainer.Cursor = System.Windows.Forms.Cursors.Default;
             this.multiCatCFFEExcelSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.multiCatCFFEExcelSplitContainer.Location = new System.Drawing.Point(0, 0);
             this.multiCatCFFEExcelSplitContainer.Margin = new System.Windows.Forms.Padding(0);
@@ -3533,7 +3533,7 @@ namespace BARevitTools
             // 
             // multiCatCFFEFamiliesSplitContainer
             // 
-            this.multiCatCFFEFamiliesSplitContainer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.multiCatCFFEFamiliesSplitContainer.Cursor = System.Windows.Forms.Cursors.Default;
             this.multiCatCFFEFamiliesSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.multiCatCFFEFamiliesSplitContainer.Location = new System.Drawing.Point(0, 0);
             this.multiCatCFFEFamiliesSplitContainer.Margin = new System.Windows.Forms.Padding(0);

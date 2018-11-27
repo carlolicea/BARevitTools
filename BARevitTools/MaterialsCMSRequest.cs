@@ -6,20 +6,20 @@ using System.Linq;
 using System.Windows.Forms;
 using RVTDocument = Autodesk.Revit.DB.Document;
 
-namespace BARevitTools.Tools
+namespace BARevitTools.ToolRequests.ToolRequests
 {
     class MaterialsCMSRequest
     {
         public MaterialsCMSRequest(UIApplication uiApp, String text)
         {
-            MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
+            MainUI uiForm = BARevitTools.ToolRequests.Application.thisApp.newMainUi;
             DataGridView dgv = uiForm.materialsCMSExcelDataGridView;
             RVTDocument doc = uiApp.ActiveUIDocument.Document;
             uiForm.materialsCMSExcelCreateSymbolsProgressBar.Value = 0;
             int columnCount = dgv.Columns.Count;
             int rowCount = dgv.Rows.Count;
 
-            string familyFile = Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule;
+            string familyFile = BARevitTools.ToolRequests.Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule;
             string versionedFamilyFile = RVTOperations.GetVersionedFamilyFilePath(uiApp, familyFile);
             if (versionedFamilyFile != "")
             {

@@ -19,15 +19,15 @@ namespace BARevitTools
     public static class DatabaseOperations
     {
         private static string integratedSecurity = "False";
-        private static string userId = BARevitTools.Properties.Settings.Default.SqlServerUser;
-        private static string password = BARevitTools.Properties.Settings.Default.SqlServerPwd;
+        private static string userId = Properties.Settings.Default.SqlServerUser;
+        private static string password = Properties.Settings.Default.SqlServerPwd;
         private static string connectTimeout = "3";
         private static string encrypt = "False";
         private static string trustServerCertificate = "True";
         private static string applicationIntent = "ReadWrite";
         private static string multiSubnetFailover = "False";
-        private static string dbServer = BARevitTools.Properties.Settings.Default.SqlServerName;
-        private static string database = BARevitTools.Properties.Settings.Default.SqlBARevitToolsDbName;
+        private static string dbServer = Properties.Settings.Default.SqlServerName;
+        private static string database = Properties.Settings.Default.SqlBARevitToolsDbName;
         public static string adminDataSqlConnectionString = "Server=" + dbServer +
                                 ";Database=" + database +
                                 ";Integrated Security=" + integratedSecurity +

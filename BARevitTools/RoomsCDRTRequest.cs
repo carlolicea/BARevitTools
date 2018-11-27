@@ -8,7 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using RVTDocument = Autodesk.Revit.DB.Document;
 
-namespace BARevitTools.Tools
+namespace BARevitTools.ToolRequests.ToolRequests
 {
     class RoomsCDRTRequest
     {
@@ -87,7 +87,7 @@ namespace BARevitTools.Tools
                     try
                     {
                         IFamilyLoadOptions loadOptions = new RVTFamilyLoadOptions();
-                        string roomTagSymbolPath = RVTOperations.GetVersionedFamilyFilePath(uiApp, Properties.Settings.Default.RevitRoomTagSymbol);
+                        string roomTagSymbolPath = RVTOperations.GetVersionedFamilyFilePath(uiApp, BARevitTools.ToolRequests.Properties.Settings.Default.RevitRoomTagSymbol);
                         doc.LoadFamilySymbol(roomTagSymbolPath, "Name and Number", loadOptions, out FamilySymbol symb);
                         symbol = symb;
                     }

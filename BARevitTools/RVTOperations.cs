@@ -622,7 +622,7 @@ namespace BARevitTools
         }
         public static string GetVersionedFamilyFilePath(UIApplication uiApp, string familyFileToUse)
         {
-            string versionedFamilyFile = familyFileToUse.Replace(BARevitTools.Properties.Settings.Default.BARTRevitFamilyCurrentYear, uiApp.Application.VersionNumber);
+            string versionedFamilyFile = familyFileToUse.Replace(Properties.Settings.Default.BARTRevitFamilyCurrentYear, uiApp.Application.VersionNumber);
             if (!File.Exists(versionedFamilyFile))
             {
                 MessageBox.Show(String.Format("Could not find the family file '{0}'. Please navigate to it in the following window", versionedFamilyFile));

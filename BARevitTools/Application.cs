@@ -59,8 +59,8 @@ namespace BARevitTools
         }
         private RibbonPanel CreateExtAppRibbonPanel()
         {
-            System.Windows.Media.ImageSource largeIcon = BmpImageSource(BARevitTools.Properties.Resources.BAlogo32x32);
-            System.Windows.Media.ImageSource smallIcon = BmpImageSource(BARevitTools.Properties.Resources.BAlogo16x16);
+            System.Windows.Media.ImageSource largeIcon = BmpImageSource(Properties.Resources.BAlogo32x32);
+            System.Windows.Media.ImageSource smallIcon = BmpImageSource(Properties.Resources.BAlogo16x16);
 
             RibbonPanel ribbonPanel = _cachedUiCtrApp.CreateRibbonPanel("BART");
             ribbonPanel.Name = "BART";

@@ -7,18 +7,18 @@ using System.Linq;
 using System.Windows.Forms;
 using RVTDocument = Autodesk.Revit.DB.Document;
 
-namespace BARevitTools.Tools
+namespace BARevitTools.ToolRequests.ToolRequests
 {
     class MaterialsAMLPaletteRequest
     {
         public MaterialsAMLPaletteRequest(UIApplication uiApp, String text)
         {
             RVTDocument doc = uiApp.ActiveUIDocument.Document;
-            MaterialsAMLPalette materialsPalette = BARevitTools.Application.thisApp.newMainUi.materialsAMLPalette;
+            MaterialsAMLPalette materialsPalette = BARevitTools.ToolRequests.Application.thisApp.newMainUi.materialsAMLPalette;
 
             //Get the versioned symbol family
             FamilySymbol familySymbol = null;
-            string versionedFamily = RVTOperations.GetVersionedFamilyFilePath(uiApp, Properties.Settings.Default.RevitIDAccentMatTag);
+            string versionedFamily = RVTOperations.GetVersionedFamilyFilePath(uiApp, BARevitTools.ToolRequests.Properties.Settings.Default.RevitIDAccentMatTag);
 
             //Try loading the family symbol
             Transaction loadSymbolTransaction = new Transaction(doc, "LoadFamilySymbol");
@@ -341,7 +341,7 @@ namespace BARevitTools.Tools
                     }
                     catch (Exception e)
                     {
-                        if (BARevitTools.Application.thisApp.newMainUi.materialsAMLPalette == null)
+                        if (BARevitTools.ToolRequests.Application.thisApp.newMainUi.materialsAMLPalette == null)
                         {
                             MessageBox.Show("AML Picker was closed prematurely. Please keep the picker open until the lines are drawn.");
                         }
