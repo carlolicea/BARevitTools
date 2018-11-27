@@ -858,7 +858,7 @@ namespace BARevitTools
             adminTab.TabIndex = 3;
             adminTab.Text = "Admin";
             adminTab.UseVisualStyleBackColor = true;
-            adminTab.UseWaitCursor = true;
+            adminTab.UseWaitCursor = false;
             // 
             // adminManagementTabControl
             // 
@@ -875,7 +875,7 @@ namespace BARevitTools
             this.adminManagementTabControl.SelectedIndex = 0;
             this.adminManagementTabControl.Size = new System.Drawing.Size(728, 431);
             this.adminManagementTabControl.TabIndex = 0;
-            this.adminManagementTabControl.UseWaitCursor = true;
+            this.adminManagementTabControl.UseWaitCursor = false;
             this.adminManagementTabControl.Click += new System.EventHandler(this.AllowBIMManagementTab);
             // 
             // adminAboutTab
@@ -890,7 +890,7 @@ namespace BARevitTools
             this.adminAboutTab.Size = new System.Drawing.Size(720, 402);
             this.adminAboutTab.TabIndex = 3;
             this.adminAboutTab.Text = "About";
-            this.adminAboutTab.UseWaitCursor = true;
+            this.adminAboutTab.UseWaitCursor = false;
             this.adminAboutTab.Click += new System.EventHandler(this.AllowBIMManagementTab);
             // 
             // adminAboutReservedLabel
@@ -903,7 +903,7 @@ namespace BARevitTools
             this.adminAboutReservedLabel.Size = new System.Drawing.Size(344, 18);
             this.adminAboutReservedLabel.TabIndex = 1;
             this.adminAboutReservedLabel.Text = "Section Reserved for BIM Management Operations";
-            this.adminAboutReservedLabel.UseWaitCursor = true;
+            this.adminAboutReservedLabel.UseWaitCursor = false;
             // 
             // adminAboutTitleLabel
             // 
@@ -914,7 +914,7 @@ namespace BARevitTools
             this.adminAboutTitleLabel.Size = new System.Drawing.Size(300, 31);
             this.adminAboutTitleLabel.TabIndex = 0;
             this.adminAboutTitleLabel.Text = "BIM Management Tools";
-            this.adminAboutTitleLabel.UseWaitCursor = true;
+            this.adminAboutTitleLabel.UseWaitCursor = false;
             // 
             // adminDataTab
             // 
@@ -928,7 +928,7 @@ namespace BARevitTools
             this.adminDataTab.Size = new System.Drawing.Size(720, 402);
             this.adminDataTab.TabIndex = 0;
             this.adminDataTab.Text = "Data";
-            this.adminDataTab.UseWaitCursor = true;
+            this.adminDataTab.UseWaitCursor = false;
             // 
             // adminDataTabLayoutPanel
             // 
@@ -946,7 +946,7 @@ namespace BARevitTools
             this.adminDataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.adminDataTabLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.adminDataTabLayoutPanel.TabIndex = 0;
-            this.adminDataTabLayoutPanel.UseWaitCursor = true;
+            this.adminDataTabLayoutPanel.UseWaitCursor = false;
             // 
             // adminDataToolStrip
             // 
@@ -965,7 +965,7 @@ namespace BARevitTools
             this.adminDataToolStrip.Size = new System.Drawing.Size(710, 53);
             this.adminDataToolStrip.TabIndex = 0;
             this.adminDataToolStrip.Text = "BIMMgmtDataToolStrip";
-            this.adminDataToolStrip.UseWaitCursor = true;
+            this.adminDataToolStrip.UseWaitCursor = false;
             // 
             // adminDataGFFButton
             // 
@@ -1025,7 +1025,7 @@ namespace BARevitTools
             this.adminDataToolsPanel.Name = "adminDataToolsPanel";
             this.adminDataToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminDataToolsPanel.TabIndex = 2;
-            this.adminDataToolsPanel.UseWaitCursor = true;
+            this.adminDataToolsPanel.UseWaitCursor = false;
             // 
             // adminDataGFFLayoutPanel
             // 
@@ -1050,7 +1050,7 @@ namespace BARevitTools
             this.adminDataGFFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.adminDataGFFLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminDataGFFLayoutPanel.TabIndex = 4;
-            this.adminDataGFFLayoutPanel.UseWaitCursor = true;
+            this.adminDataGFFLayoutPanel.UseWaitCursor = false;
             this.adminDataGFFLayoutPanel.Visible = false;
             // 
             // adminDataGFFCollectDataPanel
@@ -1066,7 +1066,7 @@ namespace BARevitTools
             this.adminDataGFFCollectDataPanel.Name = "adminDataGFFCollectDataPanel";
             this.adminDataGFFCollectDataPanel.Size = new System.Drawing.Size(710, 35);
             this.adminDataGFFCollectDataPanel.TabIndex = 4;
-            this.adminDataGFFCollectDataPanel.UseWaitCursor = true;
+            this.adminDataGFFCollectDataPanel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectDataWaitLabel
             // 
@@ -1080,7 +1080,7 @@ namespace BARevitTools
             this.adminDataGFFCollectDataWaitLabel.TabIndex = 5;
             this.adminDataGFFCollectDataWaitLabel.Text = "Please Wait...";
             this.adminDataGFFCollectDataWaitLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminDataGFFCollectDataWaitLabel.UseWaitCursor = true;
+            this.adminDataGFFCollectDataWaitLabel.UseWaitCursor = false;
             this.adminDataGFFCollectDataWaitLabel.Visible = false;
             // 
             // adminDataGFFDataProgressBar
@@ -1093,7 +1093,7 @@ namespace BARevitTools
             this.adminDataGFFDataProgressBar.Name = "adminDataGFFDataProgressBar";
             this.adminDataGFFDataProgressBar.Size = new System.Drawing.Size(452, 22);
             this.adminDataGFFDataProgressBar.TabIndex = 5;
-            this.adminDataGFFDataProgressBar.UseWaitCursor = true;
+            this.adminDataGFFDataProgressBar.UseWaitCursor = false;
             this.adminDataGFFDataProgressBar.Visible = false;
             // 
             // adminDataGFFCollectDataButton
@@ -1104,7 +1104,7 @@ namespace BARevitTools
             this.adminDataGFFCollectDataButton.TabIndex = 4;
             this.adminDataGFFCollectDataButton.Text = "COLLECT DATA";
             this.adminDataGFFCollectDataButton.UseVisualStyleBackColor = true;
-            this.adminDataGFFCollectDataButton.UseWaitCursor = true;
+            this.adminDataGFFCollectDataButton.UseWaitCursor = false;
             this.adminDataGFFCollectDataButton.Click += new System.EventHandler(this.AdminDataGFFCollectDataButton_Click);
             // 
             // adminDataGFFSqlExportPanel
@@ -1118,7 +1118,7 @@ namespace BARevitTools
             this.adminDataGFFSqlExportPanel.Name = "adminDataGFFSqlExportPanel";
             this.adminDataGFFSqlExportPanel.Size = new System.Drawing.Size(355, 150);
             this.adminDataGFFSqlExportPanel.TabIndex = 5;
-            this.adminDataGFFSqlExportPanel.UseWaitCursor = true;
+            this.adminDataGFFSqlExportPanel.UseWaitCursor = false;
             // 
             // adminDataGFFSqlExportRunButton
             // 
@@ -1129,7 +1129,7 @@ namespace BARevitTools
             this.adminDataGFFSqlExportRunButton.TabIndex = 2;
             this.adminDataGFFSqlExportRunButton.Text = "RUN";
             this.adminDataGFFSqlExportRunButton.UseVisualStyleBackColor = true;
-            this.adminDataGFFSqlExportRunButton.UseWaitCursor = true;
+            this.adminDataGFFSqlExportRunButton.UseWaitCursor = false;
             this.adminDataGFFSqlExportRunButton.Click += new System.EventHandler(this.AdminDataGFFSqlExportRunButton_Click);
             // 
             // adminDataGFFSqlExportLabel
@@ -1144,7 +1144,7 @@ namespace BARevitTools
             this.adminDataGFFSqlExportLabel.TabIndex = 4;
             this.adminDataGFFSqlExportLabel.Text = "EXPORT TO DATABASE";
             this.adminDataGFFSqlExportLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.adminDataGFFSqlExportLabel.UseWaitCursor = true;
+            this.adminDataGFFSqlExportLabel.UseWaitCursor = false;
             // 
             // adminDataGFFCsvExportPanel
             // 
@@ -1161,7 +1161,7 @@ namespace BARevitTools
             this.adminDataGFFCsvExportPanel.Name = "adminDataGFFCsvExportPanel";
             this.adminDataGFFCsvExportPanel.Size = new System.Drawing.Size(355, 150);
             this.adminDataGFFCsvExportPanel.TabIndex = 6;
-            this.adminDataGFFCsvExportPanel.UseWaitCursor = true;
+            this.adminDataGFFCsvExportPanel.UseWaitCursor = false;
             // 
             // adminDataGFFCsvExportDirectoryTextBox
             // 
@@ -1173,7 +1173,7 @@ namespace BARevitTools
             this.adminDataGFFCsvExportDirectoryTextBox.Size = new System.Drawing.Size(207, 20);
             this.adminDataGFFCsvExportDirectoryTextBox.TabIndex = 1;
             this.adminDataGFFCsvExportDirectoryTextBox.Text = "<Save Directory>";
-            this.adminDataGFFCsvExportDirectoryTextBox.UseWaitCursor = true;
+            this.adminDataGFFCsvExportDirectoryTextBox.UseWaitCursor = false;
             // 
             // adminDataGFFCsvExportRunButton
             // 
@@ -1184,7 +1184,7 @@ namespace BARevitTools
             this.adminDataGFFCsvExportRunButton.TabIndex = 3;
             this.adminDataGFFCsvExportRunButton.Text = "RUN";
             this.adminDataGFFCsvExportRunButton.UseVisualStyleBackColor = true;
-            this.adminDataGFFCsvExportRunButton.UseWaitCursor = true;
+            this.adminDataGFFCsvExportRunButton.UseWaitCursor = false;
             this.adminDataGFFCsvExportRunButton.Click += new System.EventHandler(this.AdminDataGFFCsvExportRunButton_Click);
             // 
             // adminDataGFFCsvExportNameTextBox
@@ -1196,7 +1196,7 @@ namespace BARevitTools
             this.adminDataGFFCsvExportNameTextBox.Size = new System.Drawing.Size(347, 20);
             this.adminDataGFFCsvExportNameTextBox.TabIndex = 6;
             this.adminDataGFFCsvExportNameTextBox.Text = "<File Export Name>";
-            this.adminDataGFFCsvExportNameTextBox.UseWaitCursor = true;
+            this.adminDataGFFCsvExportNameTextBox.UseWaitCursor = false;
             // 
             // adminDataGFFCsvExportLabel
             // 
@@ -1211,7 +1211,7 @@ namespace BARevitTools
             this.adminDataGFFCsvExportLabel.TabIndex = 5;
             this.adminDataGFFCsvExportLabel.Text = "EXPORT TO CSV";
             this.adminDataGFFCsvExportLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.adminDataGFFCsvExportLabel.UseWaitCursor = true;
+            this.adminDataGFFCsvExportLabel.UseWaitCursor = false;
             // 
             // adminDataGFFCsvExportDirectoryButton
             // 
@@ -1221,7 +1221,7 @@ namespace BARevitTools
             this.adminDataGFFCsvExportDirectoryButton.TabIndex = 4;
             this.adminDataGFFCsvExportDirectoryButton.Text = "Select Export Location";
             this.adminDataGFFCsvExportDirectoryButton.UseVisualStyleBackColor = true;
-            this.adminDataGFFCsvExportDirectoryButton.UseWaitCursor = true;
+            this.adminDataGFFCsvExportDirectoryButton.UseWaitCursor = false;
             this.adminDataGFFCsvExportDirectoryButton.Click += new System.EventHandler(this.AdminDataGFFCsvExportDirectoryButton_Click);
             // 
             // adminDataGFFCollectionPanel
@@ -1237,7 +1237,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionPanel.Name = "adminDataGFFCollectionPanel";
             this.adminDataGFFCollectionPanel.Size = new System.Drawing.Size(710, 119);
             this.adminDataGFFCollectionPanel.TabIndex = 3;
-            this.adminDataGFFCollectionPanel.UseWaitCursor = true;
+            this.adminDataGFFCollectionPanel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionLayoutPanel
             // 
@@ -1260,7 +1260,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminDataGFFCollectionLayoutPanel.Size = new System.Drawing.Size(708, 117);
             this.adminDataGFFCollectionLayoutPanel.TabIndex = 5;
-            this.adminDataGFFCollectionLayoutPanel.UseWaitCursor = true;
+            this.adminDataGFFCollectionLayoutPanel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionFastLabelPanel
             // 
@@ -1274,7 +1274,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionFastLabelPanel.Name = "adminDataGFFCollectionFastLabelPanel";
             this.adminDataGFFCollectionFastLabelPanel.Size = new System.Drawing.Size(175, 25);
             this.adminDataGFFCollectionFastLabelPanel.TabIndex = 0;
-            this.adminDataGFFCollectionFastLabelPanel.UseWaitCursor = true;
+            this.adminDataGFFCollectionFastLabelPanel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionFastLabel
             // 
@@ -1286,7 +1286,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionFastLabel.TabIndex = 3;
             this.adminDataGFFCollectionFastLabel.Text = "FAST COLLECTION";
             this.adminDataGFFCollectionFastLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminDataGFFCollectionFastLabel.UseWaitCursor = true;
+            this.adminDataGFFCollectionFastLabel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionFastSelectAllCheckBox
             // 
@@ -1296,7 +1296,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionFastSelectAllCheckBox.Size = new System.Drawing.Size(15, 14);
             this.adminDataGFFCollectionFastSelectAllCheckBox.TabIndex = 4;
             this.adminDataGFFCollectionFastSelectAllCheckBox.UseVisualStyleBackColor = true;
-            this.adminDataGFFCollectionFastSelectAllCheckBox.UseWaitCursor = true;
+            this.adminDataGFFCollectionFastSelectAllCheckBox.UseWaitCursor = false;
             this.adminDataGFFCollectionFastSelectAllCheckBox.CheckedChanged += new System.EventHandler(this.AdminDataGFFCollectionFastSelectAllCheckBox_CheckedChanged);
             // 
             // adminDataGFFCollectionSlowLabelPanel
@@ -1311,7 +1311,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowLabelPanel.Name = "adminDataGFFCollectionSlowLabelPanel";
             this.adminDataGFFCollectionSlowLabelPanel.Size = new System.Drawing.Size(178, 25);
             this.adminDataGFFCollectionSlowLabelPanel.TabIndex = 1;
-            this.adminDataGFFCollectionSlowLabelPanel.UseWaitCursor = true;
+            this.adminDataGFFCollectionSlowLabelPanel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionSlowLabel
             // 
@@ -1323,7 +1323,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowLabel.TabIndex = 3;
             this.adminDataGFFCollectionSlowLabel.Text = "SLOWER COLLECTION";
             this.adminDataGFFCollectionSlowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminDataGFFCollectionSlowLabel.UseWaitCursor = true;
+            this.adminDataGFFCollectionSlowLabel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionSlowSelectAllCheckBox
             // 
@@ -1333,7 +1333,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowSelectAllCheckBox.Size = new System.Drawing.Size(15, 14);
             this.adminDataGFFCollectionSlowSelectAllCheckBox.TabIndex = 4;
             this.adminDataGFFCollectionSlowSelectAllCheckBox.UseVisualStyleBackColor = true;
-            this.adminDataGFFCollectionSlowSelectAllCheckBox.UseWaitCursor = true;
+            this.adminDataGFFCollectionSlowSelectAllCheckBox.UseWaitCursor = false;
             this.adminDataGFFCollectionSlowSelectAllCheckBox.CheckedChanged += new System.EventHandler(this.AdminDataGFFCollectionSlowSelectAllCheckBox_CheckedChanged);
             // 
             // adminDataGFFCollectionSlowestLabelPanel
@@ -1348,7 +1348,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowestLabelPanel.Name = "adminDataGFFCollectionSlowestLabelPanel";
             this.adminDataGFFCollectionSlowestLabelPanel.Size = new System.Drawing.Size(355, 25);
             this.adminDataGFFCollectionSlowestLabelPanel.TabIndex = 2;
-            this.adminDataGFFCollectionSlowestLabelPanel.UseWaitCursor = true;
+            this.adminDataGFFCollectionSlowestLabelPanel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionSlowestLabel
             // 
@@ -1360,7 +1360,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowestLabel.TabIndex = 3;
             this.adminDataGFFCollectionSlowestLabel.Text = "SLOWEST COLLECTION";
             this.adminDataGFFCollectionSlowestLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminDataGFFCollectionSlowestLabel.UseWaitCursor = true;
+            this.adminDataGFFCollectionSlowestLabel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionSlowestSelectAllCheckBox
             // 
@@ -1370,7 +1370,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowestSelectAllCheckBox.Size = new System.Drawing.Size(15, 14);
             this.adminDataGFFCollectionSlowestSelectAllCheckBox.TabIndex = 4;
             this.adminDataGFFCollectionSlowestSelectAllCheckBox.UseVisualStyleBackColor = true;
-            this.adminDataGFFCollectionSlowestSelectAllCheckBox.UseWaitCursor = true;
+            this.adminDataGFFCollectionSlowestSelectAllCheckBox.UseWaitCursor = false;
             this.adminDataGFFCollectionSlowestSelectAllCheckBox.CheckedChanged += new System.EventHandler(this.AdminDataGFFCollectionSlowestSelectAllCheckBox_CheckedChanged);
             // 
             // adminDataGFFCollectionsFastCheckedListPanel
@@ -1382,7 +1382,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionsFastCheckedListPanel.Name = "adminDataGFFCollectionsFastCheckedListPanel";
             this.adminDataGFFCollectionsFastCheckedListPanel.Size = new System.Drawing.Size(175, 92);
             this.adminDataGFFCollectionsFastCheckedListPanel.TabIndex = 3;
-            this.adminDataGFFCollectionsFastCheckedListPanel.UseWaitCursor = true;
+            this.adminDataGFFCollectionsFastCheckedListPanel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionFastCheckedListBox
             // 
@@ -1399,7 +1399,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionFastCheckedListBox.TabIndex = 1;
             this.adminDataGFFCollectionFastCheckedListBox.ThreeDCheckBoxes = true;
             this.adminDataGFFCollectionFastCheckedListBox.UseTabStops = false;
-            this.adminDataGFFCollectionFastCheckedListBox.UseWaitCursor = true;
+            this.adminDataGFFCollectionFastCheckedListBox.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionsSlowCheckedListPanel
             // 
@@ -1410,7 +1410,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionsSlowCheckedListPanel.Name = "adminDataGFFCollectionsSlowCheckedListPanel";
             this.adminDataGFFCollectionsSlowCheckedListPanel.Size = new System.Drawing.Size(178, 92);
             this.adminDataGFFCollectionsSlowCheckedListPanel.TabIndex = 4;
-            this.adminDataGFFCollectionsSlowCheckedListPanel.UseWaitCursor = true;
+            this.adminDataGFFCollectionsSlowCheckedListPanel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionSlowCheckedListBox
             // 
@@ -1427,7 +1427,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowCheckedListBox.TabIndex = 2;
             this.adminDataGFFCollectionSlowCheckedListBox.ThreeDCheckBoxes = true;
             this.adminDataGFFCollectionSlowCheckedListBox.UseTabStops = false;
-            this.adminDataGFFCollectionSlowCheckedListBox.UseWaitCursor = true;
+            this.adminDataGFFCollectionSlowCheckedListBox.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionsSlowestCheckedListPanel
             // 
@@ -1438,7 +1438,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionsSlowestCheckedListPanel.Name = "adminDataGFFCollectionsSlowestCheckedListPanel";
             this.adminDataGFFCollectionsSlowestCheckedListPanel.Size = new System.Drawing.Size(355, 92);
             this.adminDataGFFCollectionsSlowestCheckedListPanel.TabIndex = 5;
-            this.adminDataGFFCollectionsSlowestCheckedListPanel.UseWaitCursor = true;
+            this.adminDataGFFCollectionsSlowestCheckedListPanel.UseWaitCursor = false;
             // 
             // adminDataGFFCollectionSlowestCheckedListBox
             // 
@@ -1462,7 +1462,7 @@ namespace BARevitTools
             this.adminDataGFFCollectionSlowestCheckedListBox.TabIndex = 2;
             this.adminDataGFFCollectionSlowestCheckedListBox.ThreeDCheckBoxes = true;
             this.adminDataGFFCollectionSlowestCheckedListBox.UseTabStops = false;
-            this.adminDataGFFCollectionSlowestCheckedListBox.UseWaitCursor = true;
+            this.adminDataGFFCollectionSlowestCheckedListBox.UseWaitCursor = false;
             // 
             // adminDataGFFSearchDirectoryPanel
             // 
@@ -1476,7 +1476,7 @@ namespace BARevitTools
             this.adminDataGFFSearchDirectoryPanel.Name = "adminDataGFFSearchDirectoryPanel";
             this.adminDataGFFSearchDirectoryPanel.Size = new System.Drawing.Size(355, 35);
             this.adminDataGFFSearchDirectoryPanel.TabIndex = 7;
-            this.adminDataGFFSearchDirectoryPanel.UseWaitCursor = true;
+            this.adminDataGFFSearchDirectoryPanel.UseWaitCursor = false;
             // 
             // adminDataGFFSearchDirectoryTextBox
             // 
@@ -1488,7 +1488,7 @@ namespace BARevitTools
             this.adminDataGFFSearchDirectoryTextBox.Size = new System.Drawing.Size(205, 20);
             this.adminDataGFFSearchDirectoryTextBox.TabIndex = 1;
             this.adminDataGFFSearchDirectoryTextBox.Text = "<Search Directory>";
-            this.adminDataGFFSearchDirectoryTextBox.UseWaitCursor = true;
+            this.adminDataGFFSearchDirectoryTextBox.UseWaitCursor = false;
             // 
             // adminDataGFFSearchDirectorySelectButton
             // 
@@ -1498,7 +1498,7 @@ namespace BARevitTools
             this.adminDataGFFSearchDirectorySelectButton.TabIndex = 0;
             this.adminDataGFFSearchDirectorySelectButton.Text = "SELECT DIRECTORY";
             this.adminDataGFFSearchDirectorySelectButton.UseVisualStyleBackColor = true;
-            this.adminDataGFFSearchDirectorySelectButton.UseWaitCursor = true;
+            this.adminDataGFFSearchDirectorySelectButton.UseWaitCursor = false;
             this.adminDataGFFSearchDirectorySelectButton.Click += new System.EventHandler(this.AdminDataGFFSearchDirectorySelectButton_Click);
             // 
             // adminDataGFFDatePanel
@@ -1512,7 +1512,7 @@ namespace BARevitTools
             this.adminDataGFFDatePanel.Name = "adminDataGFFDatePanel";
             this.adminDataGFFDatePanel.Size = new System.Drawing.Size(355, 35);
             this.adminDataGFFDatePanel.TabIndex = 8;
-            this.adminDataGFFDatePanel.UseWaitCursor = true;
+            this.adminDataGFFDatePanel.UseWaitCursor = false;
             // 
             // adminDataGFFDatePicker
             // 
@@ -1523,7 +1523,7 @@ namespace BARevitTools
             this.adminDataGFFDatePicker.Name = "adminDataGFFDatePicker";
             this.adminDataGFFDatePicker.Size = new System.Drawing.Size(208, 20);
             this.adminDataGFFDatePicker.TabIndex = 6;
-            this.adminDataGFFDatePicker.UseWaitCursor = true;
+            this.adminDataGFFDatePicker.UseWaitCursor = false;
             this.adminDataGFFDatePicker.Value = new System.DateTime(2018, 7, 7, 0, 0, 0, 0);
             // 
             // adminDataGFFDateCheckBox
@@ -1535,7 +1535,7 @@ namespace BARevitTools
             this.adminDataGFFDateCheckBox.TabIndex = 7;
             this.adminDataGFFDateCheckBox.Text = "Use Date Range";
             this.adminDataGFFDateCheckBox.UseVisualStyleBackColor = true;
-            this.adminDataGFFDateCheckBox.UseWaitCursor = true;
+            this.adminDataGFFDateCheckBox.UseWaitCursor = false;
             // 
             // adminDataGBDVLayoutPanel
             // 
@@ -1554,7 +1554,7 @@ namespace BARevitTools
             this.adminDataGBDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminDataGBDVLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminDataGBDVLayoutPanel.TabIndex = 7;
-            this.adminDataGBDVLayoutPanel.UseWaitCursor = true;
+            this.adminDataGBDVLayoutPanel.UseWaitCursor = false;
             this.adminDataGBDVLayoutPanel.Visible = false;
             // 
             // adminDataGBDVCollectPanel
@@ -1569,7 +1569,7 @@ namespace BARevitTools
             this.adminDataGBDVCollectPanel.Name = "adminDataGBDVCollectPanel";
             this.adminDataGBDVCollectPanel.Size = new System.Drawing.Size(706, 32);
             this.adminDataGBDVCollectPanel.TabIndex = 0;
-            this.adminDataGBDVCollectPanel.UseWaitCursor = true;
+            this.adminDataGBDVCollectPanel.UseWaitCursor = false;
             // 
             // adminDataGBDVWaitLabel
             // 
@@ -1581,7 +1581,7 @@ namespace BARevitTools
             this.adminDataGBDVWaitLabel.Size = new System.Drawing.Size(87, 13);
             this.adminDataGBDVWaitLabel.TabIndex = 1;
             this.adminDataGBDVWaitLabel.Text = "Please Wait...";
-            this.adminDataGBDVWaitLabel.UseWaitCursor = true;
+            this.adminDataGBDVWaitLabel.UseWaitCursor = false;
             this.adminDataGBDVWaitLabel.Visible = false;
             // 
             // adminDataGBDVCollectButton
@@ -1594,7 +1594,7 @@ namespace BARevitTools
             this.adminDataGBDVCollectButton.TabIndex = 0;
             this.adminDataGBDVCollectButton.Text = "COLLECT DATA";
             this.adminDataGBDVCollectButton.UseVisualStyleBackColor = true;
-            this.adminDataGBDVCollectButton.UseWaitCursor = true;
+            this.adminDataGBDVCollectButton.UseWaitCursor = false;
             this.adminDataGBDVCollectButton.Click += new System.EventHandler(this.AdminDataGBDVCollectButton_Click);
             // 
             // adminDataGBDVExportDbPanel
@@ -1608,7 +1608,7 @@ namespace BARevitTools
             this.adminDataGBDVExportDbPanel.Name = "adminDataGBDVExportDbPanel";
             this.adminDataGBDVExportDbPanel.Size = new System.Drawing.Size(351, 299);
             this.adminDataGBDVExportDbPanel.TabIndex = 1;
-            this.adminDataGBDVExportDbPanel.UseWaitCursor = true;
+            this.adminDataGBDVExportDbPanel.UseWaitCursor = false;
             // 
             // adminDataGBDVExportDbRunButton
             // 
@@ -1618,7 +1618,7 @@ namespace BARevitTools
             this.adminDataGBDVExportDbRunButton.TabIndex = 2;
             this.adminDataGBDVExportDbRunButton.Text = "RUN";
             this.adminDataGBDVExportDbRunButton.UseVisualStyleBackColor = true;
-            this.adminDataGBDVExportDbRunButton.UseWaitCursor = true;
+            this.adminDataGBDVExportDbRunButton.UseWaitCursor = false;
             this.adminDataGBDVExportDbRunButton.Click += new System.EventHandler(this.AdminDataGBDVExportDbRunButton_Click);
             // 
             // adminDataGBDVExportDbLabel
@@ -1634,7 +1634,7 @@ namespace BARevitTools
             this.adminDataGBDVExportDbLabel.TabIndex = 0;
             this.adminDataGBDVExportDbLabel.Text = "EXPORT TO DATABASE";
             this.adminDataGBDVExportDbLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.adminDataGBDVExportDbLabel.UseWaitCursor = true;
+            this.adminDataGBDVExportDbLabel.UseWaitCursor = false;
             // 
             // adminDataGBDVExportCsvPanel
             // 
@@ -1650,7 +1650,7 @@ namespace BARevitTools
             this.adminDataGBDVExportCsvPanel.Name = "adminDataGBDVExportCsvPanel";
             this.adminDataGBDVExportCsvPanel.Size = new System.Drawing.Size(351, 299);
             this.adminDataGBDVExportCsvPanel.TabIndex = 2;
-            this.adminDataGBDVExportCsvPanel.UseWaitCursor = true;
+            this.adminDataGBDVExportCsvPanel.UseWaitCursor = false;
             // 
             // adminDataGBDVExportCsvDirectoryTextBox
             // 
@@ -1660,7 +1660,7 @@ namespace BARevitTools
             this.adminDataGBDVExportCsvDirectoryTextBox.Size = new System.Drawing.Size(205, 20);
             this.adminDataGBDVExportCsvDirectoryTextBox.TabIndex = 4;
             this.adminDataGBDVExportCsvDirectoryTextBox.Text = "<Save Directory>";
-            this.adminDataGBDVExportCsvDirectoryTextBox.UseWaitCursor = true;
+            this.adminDataGBDVExportCsvDirectoryTextBox.UseWaitCursor = false;
             // 
             // adminDataGBDVExportCsvSelectDirectoryButton
             // 
@@ -1670,7 +1670,7 @@ namespace BARevitTools
             this.adminDataGBDVExportCsvSelectDirectoryButton.TabIndex = 3;
             this.adminDataGBDVExportCsvSelectDirectoryButton.Text = "Select Export Location";
             this.adminDataGBDVExportCsvSelectDirectoryButton.UseVisualStyleBackColor = true;
-            this.adminDataGBDVExportCsvSelectDirectoryButton.UseWaitCursor = true;
+            this.adminDataGBDVExportCsvSelectDirectoryButton.UseWaitCursor = false;
             this.adminDataGBDVExportCsvSelectDirectoryButton.Click += new System.EventHandler(this.AdminDataGBDVExportCsvSelectDirectoryButton_Click);
             // 
             // adminDataGBDVExportCsvRunButton
@@ -1681,7 +1681,7 @@ namespace BARevitTools
             this.adminDataGBDVExportCsvRunButton.TabIndex = 2;
             this.adminDataGBDVExportCsvRunButton.Text = "RUN";
             this.adminDataGBDVExportCsvRunButton.UseVisualStyleBackColor = true;
-            this.adminDataGBDVExportCsvRunButton.UseWaitCursor = true;
+            this.adminDataGBDVExportCsvRunButton.UseWaitCursor = false;
             this.adminDataGBDVExportCsvRunButton.Click += new System.EventHandler(this.AdminDataGBDVExportCsvRunButton_Click);
             // 
             // adminDataGBDVExportCsvTextBox
@@ -1694,7 +1694,7 @@ namespace BARevitTools
             this.adminDataGBDVExportCsvTextBox.Size = new System.Drawing.Size(342, 20);
             this.adminDataGBDVExportCsvTextBox.TabIndex = 1;
             this.adminDataGBDVExportCsvTextBox.Text = "<File Export Name>";
-            this.adminDataGBDVExportCsvTextBox.UseWaitCursor = true;
+            this.adminDataGBDVExportCsvTextBox.UseWaitCursor = false;
             // 
             // adminDataGBDVExportCsvLabel
             // 
@@ -1709,7 +1709,7 @@ namespace BARevitTools
             this.adminDataGBDVExportCsvLabel.TabIndex = 0;
             this.adminDataGBDVExportCsvLabel.Text = "EXPORT TO CSV";
             this.adminDataGBDVExportCsvLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.adminDataGBDVExportCsvLabel.UseWaitCursor = true;
+            this.adminDataGBDVExportCsvLabel.UseWaitCursor = false;
             // 
             // adminFamiliesTab
             // 
@@ -1723,7 +1723,7 @@ namespace BARevitTools
             this.adminFamiliesTab.Size = new System.Drawing.Size(720, 402);
             this.adminFamiliesTab.TabIndex = 1;
             this.adminFamiliesTab.Text = "Families";
-            this.adminFamiliesTab.UseWaitCursor = true;
+            this.adminFamiliesTab.UseWaitCursor = false;
             // 
             // adminFamiliesLayoutPanel
             // 
@@ -1740,7 +1740,7 @@ namespace BARevitTools
             this.adminFamiliesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.adminFamiliesLayoutPanel.TabIndex = 0;
-            this.adminFamiliesLayoutPanel.UseWaitCursor = true;
+            this.adminFamiliesLayoutPanel.UseWaitCursor = false;
             // 
             // adminFamiliesToolStrip
             // 
@@ -1760,7 +1760,7 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.Size = new System.Drawing.Size(710, 53);
             this.adminFamiliesToolStrip.TabIndex = 0;
             this.adminFamiliesToolStrip.Text = "BIMFamiliesToolStrip";
-            this.adminFamiliesToolStrip.UseWaitCursor = true;
+            this.adminFamiliesToolStrip.UseWaitCursor = false;
             // 
             // adminFamiliesUFButton
             // 
@@ -1851,7 +1851,7 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel.Name = "adminFamiliesToolsPanel";
             this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesToolsPanel.TabIndex = 1;
-            this.adminFamiliesToolsPanel.UseWaitCursor = true;
+            this.adminFamiliesToolsPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBAPLayoutPanel
             // 
@@ -1872,7 +1872,7 @@ namespace BARevitTools
             this.adminFamiliesBAPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.adminFamiliesBAPLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesBAPLayoutPanel.TabIndex = 2;
-            this.adminFamiliesBAPLayoutPanel.UseWaitCursor = true;
+            this.adminFamiliesBAPLayoutPanel.UseWaitCursor = false;
             this.adminFamiliesBAPLayoutPanel.Visible = false;
             // 
             // adminFamiliesBAPRunPanel
@@ -1887,7 +1887,7 @@ namespace BARevitTools
             this.adminFamiliesBAPRunPanel.Name = "adminFamiliesBAPRunPanel";
             this.adminFamiliesBAPRunPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesBAPRunPanel.TabIndex = 5;
-            this.adminFamiliesBAPRunPanel.UseWaitCursor = true;
+            this.adminFamiliesBAPRunPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBAPDoneLabel
             // 
@@ -1898,7 +1898,7 @@ namespace BARevitTools
             this.adminFamiliesBAPDoneLabel.Size = new System.Drawing.Size(41, 13);
             this.adminFamiliesBAPDoneLabel.TabIndex = 2;
             this.adminFamiliesBAPDoneLabel.Text = "Done!";
-            this.adminFamiliesBAPDoneLabel.UseWaitCursor = true;
+            this.adminFamiliesBAPDoneLabel.UseWaitCursor = false;
             this.adminFamiliesBAPDoneLabel.Visible = false;
             // 
             // adminFamiliesBAPProgressBar
@@ -1910,7 +1910,7 @@ namespace BARevitTools
             this.adminFamiliesBAPProgressBar.Name = "adminFamiliesBAPProgressBar";
             this.adminFamiliesBAPProgressBar.Size = new System.Drawing.Size(571, 23);
             this.adminFamiliesBAPProgressBar.TabIndex = 1;
-            this.adminFamiliesBAPProgressBar.UseWaitCursor = true;
+            this.adminFamiliesBAPProgressBar.UseWaitCursor = false;
             this.adminFamiliesBAPProgressBar.Visible = false;
             // 
             // adminFamiliesBAPRunButton
@@ -1922,7 +1922,7 @@ namespace BARevitTools
             this.adminFamiliesBAPRunButton.TabIndex = 0;
             this.adminFamiliesBAPRunButton.Text = "RUN";
             this.adminFamiliesBAPRunButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBAPRunButton.UseWaitCursor = true;
+            this.adminFamiliesBAPRunButton.UseWaitCursor = false;
             this.adminFamiliesBAPRunButton.Click += new System.EventHandler(this.AdminFamiliesBAPRunButton_Click);
             // 
             // adminFamiliesBAPSplitPanel
@@ -1934,7 +1934,7 @@ namespace BARevitTools
             this.adminFamiliesBAPSplitPanel.Name = "adminFamiliesBAPSplitPanel";
             this.adminFamiliesBAPSplitPanel.Size = new System.Drawing.Size(704, 263);
             this.adminFamiliesBAPSplitPanel.TabIndex = 6;
-            this.adminFamiliesBAPSplitPanel.UseWaitCursor = true;
+            this.adminFamiliesBAPSplitPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBAPSplitContainer
             // 
@@ -1968,7 +1968,7 @@ namespace BARevitTools
             this.adminFamiliesBAPParametersLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesBAPParametersLayoutPanel.Size = new System.Drawing.Size(364, 263);
             this.adminFamiliesBAPParametersLayoutPanel.TabIndex = 4;
-            this.adminFamiliesBAPParametersLayoutPanel.UseWaitCursor = true;
+            this.adminFamiliesBAPParametersLayoutPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBAPParametersDGV
             // 
@@ -1981,7 +1981,7 @@ namespace BARevitTools
             this.adminFamiliesBAPParametersDGV.RowHeadersWidth = 15;
             this.adminFamiliesBAPParametersDGV.Size = new System.Drawing.Size(364, 228);
             this.adminFamiliesBAPParametersDGV.TabIndex = 0;
-            this.adminFamiliesBAPParametersDGV.UseWaitCursor = true;
+            this.adminFamiliesBAPParametersDGV.UseWaitCursor = false;
             // 
             // adminFamiliesBAPSharedParametersPanel
             // 
@@ -1994,7 +1994,7 @@ namespace BARevitTools
             this.adminFamiliesBAPSharedParametersPanel.Name = "adminFamiliesBAPSharedParametersPanel";
             this.adminFamiliesBAPSharedParametersPanel.Size = new System.Drawing.Size(364, 35);
             this.adminFamiliesBAPSharedParametersPanel.TabIndex = 3;
-            this.adminFamiliesBAPSharedParametersPanel.UseWaitCursor = true;
+            this.adminFamiliesBAPSharedParametersPanel.UseWaitCursor = false;
             // 
             // BIMFamiliesBAPSharedParametersButton
             // 
@@ -2006,7 +2006,7 @@ namespace BARevitTools
             this.BIMFamiliesBAPSharedParametersButton.TabIndex = 2;
             this.BIMFamiliesBAPSharedParametersButton.Text = "Add Shared Parameter";
             this.BIMFamiliesBAPSharedParametersButton.UseVisualStyleBackColor = true;
-            this.BIMFamiliesBAPSharedParametersButton.UseWaitCursor = true;
+            this.BIMFamiliesBAPSharedParametersButton.UseWaitCursor = false;
             this.BIMFamiliesBAPSharedParametersButton.Click += new System.EventHandler(this.AdminFamiliesBAPSharedParametersButton_Click);
             // 
             // adminFamiliesBAPSelectLayoutPanel
@@ -2024,7 +2024,7 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesBAPSelectLayoutPanel.Size = new System.Drawing.Size(336, 263);
             this.adminFamiliesBAPSelectLayoutPanel.TabIndex = 5;
-            this.adminFamiliesBAPSelectLayoutPanel.UseWaitCursor = true;
+            this.adminFamiliesBAPSelectLayoutPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBAPSelectPanel
             // 
@@ -2038,7 +2038,7 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectPanel.Name = "adminFamiliesBAPSelectPanel";
             this.adminFamiliesBAPSelectPanel.Size = new System.Drawing.Size(336, 35);
             this.adminFamiliesBAPSelectPanel.TabIndex = 4;
-            this.adminFamiliesBAPSelectPanel.UseWaitCursor = true;
+            this.adminFamiliesBAPSelectPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBAPSelectNoneButton
             // 
@@ -2048,7 +2048,7 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectNoneButton.TabIndex = 0;
             this.adminFamiliesBAPSelectNoneButton.Text = "Select None";
             this.adminFamiliesBAPSelectNoneButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBAPSelectNoneButton.UseWaitCursor = true;
+            this.adminFamiliesBAPSelectNoneButton.UseWaitCursor = false;
             this.adminFamiliesBAPSelectNoneButton.Click += new System.EventHandler(this.AdminFamiliesBAPSelectNoneButton_Click);
             // 
             // adminFamiliesBAPSelectAllButton
@@ -2059,7 +2059,7 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectAllButton.TabIndex = 0;
             this.adminFamiliesBAPSelectAllButton.Text = "Select All";
             this.adminFamiliesBAPSelectAllButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBAPSelectAllButton.UseWaitCursor = true;
+            this.adminFamiliesBAPSelectAllButton.UseWaitCursor = false;
             this.adminFamiliesBAPSelectAllButton.Click += new System.EventHandler(this.AdminFamiliesBAPSelectAllButton_Click);
             // 
             // adminFamiliesBAPFamiliesDGV
@@ -2075,7 +2075,7 @@ namespace BARevitTools
             this.adminFamiliesBAPFamiliesDGV.RowHeadersVisible = false;
             this.adminFamiliesBAPFamiliesDGV.Size = new System.Drawing.Size(336, 228);
             this.adminFamiliesBAPFamiliesDGV.TabIndex = 1;
-            this.adminFamiliesBAPFamiliesDGV.UseWaitCursor = true;
+            this.adminFamiliesBAPFamiliesDGV.UseWaitCursor = false;
             this.adminFamiliesBAPFamiliesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminFamiliesBAPFamiliesDGV_CellContentClick);
             // 
             // adminFamiliesBAPFamiliesDirectoryPanel
@@ -2089,7 +2089,7 @@ namespace BARevitTools
             this.adminFamiliesBAPFamiliesDirectoryPanel.Name = "adminFamiliesBAPFamiliesDirectoryPanel";
             this.adminFamiliesBAPFamiliesDirectoryPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesBAPFamiliesDirectoryPanel.TabIndex = 7;
-            this.adminFamiliesBAPFamiliesDirectoryPanel.UseWaitCursor = true;
+            this.adminFamiliesBAPFamiliesDirectoryPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBAPDirectorySelectButton
             // 
@@ -2099,7 +2099,7 @@ namespace BARevitTools
             this.adminFamiliesBAPDirectorySelectButton.TabIndex = 0;
             this.adminFamiliesBAPDirectorySelectButton.Text = "Select Directory";
             this.adminFamiliesBAPDirectorySelectButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBAPDirectorySelectButton.UseWaitCursor = true;
+            this.adminFamiliesBAPDirectorySelectButton.UseWaitCursor = false;
             this.adminFamiliesBAPDirectorySelectButton.Click += new System.EventHandler(this.AdminFamiliesBAPSelectDirectoryButton_Click);
             // 
             // adminFamiliesUFLayoutPanel
@@ -2124,7 +2124,7 @@ namespace BARevitTools
             this.adminFamiliesUFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.adminFamiliesUFLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesUFLayoutPanel.TabIndex = 1;
-            this.adminFamiliesUFLayoutPanel.UseWaitCursor = true;
+            this.adminFamiliesUFLayoutPanel.UseWaitCursor = false;
             this.adminFamiliesUFLayoutPanel.Visible = false;
             // 
             // adminFamiliesUFFullSyncPanel
@@ -2137,7 +2137,7 @@ namespace BARevitTools
             this.adminFamiliesUFFullSyncPanel.Name = "adminFamiliesUFFullSyncPanel";
             this.adminFamiliesUFFullSyncPanel.Size = new System.Drawing.Size(710, 30);
             this.adminFamiliesUFFullSyncPanel.TabIndex = 0;
-            this.adminFamiliesUFFullSyncPanel.UseWaitCursor = true;
+            this.adminFamiliesUFFullSyncPanel.UseWaitCursor = false;
             // 
             // adminFamiliesUFFullSyncCheckbox
             // 
@@ -2149,7 +2149,7 @@ namespace BARevitTools
             this.adminFamiliesUFFullSyncCheckbox.TabIndex = 0;
             this.adminFamiliesUFFullSyncCheckbox.Text = "Full Library Sync?";
             this.adminFamiliesUFFullSyncCheckbox.UseVisualStyleBackColor = true;
-            this.adminFamiliesUFFullSyncCheckbox.UseWaitCursor = true;
+            this.adminFamiliesUFFullSyncCheckbox.UseWaitCursor = false;
             // 
             // adminFamiliesUFUpgradedFamiliesListBox
             // 
@@ -2160,7 +2160,7 @@ namespace BARevitTools
             this.adminFamiliesUFUpgradedFamiliesListBox.Name = "adminFamiliesUFUpgradedFamiliesListBox";
             this.adminFamiliesUFUpgradedFamiliesListBox.Size = new System.Drawing.Size(352, 244);
             this.adminFamiliesUFUpgradedFamiliesListBox.TabIndex = 1;
-            this.adminFamiliesUFUpgradedFamiliesListBox.UseWaitCursor = true;
+            this.adminFamiliesUFUpgradedFamiliesListBox.UseWaitCursor = false;
             // 
             // adminFamiliesUFDeletedFamiliesListBox
             // 
@@ -2171,7 +2171,7 @@ namespace BARevitTools
             this.adminFamiliesUFDeletedFamiliesListBox.Name = "adminFamiliesUFDeletedFamiliesListBox";
             this.adminFamiliesUFDeletedFamiliesListBox.Size = new System.Drawing.Size(352, 244);
             this.adminFamiliesUFDeletedFamiliesListBox.TabIndex = 2;
-            this.adminFamiliesUFDeletedFamiliesListBox.UseWaitCursor = true;
+            this.adminFamiliesUFDeletedFamiliesListBox.UseWaitCursor = false;
             // 
             // adminFamiliesUFUpgradedFamiliesTextBoxPanel
             // 
@@ -2184,7 +2184,7 @@ namespace BARevitTools
             this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Name = "adminFamiliesUFUpgradedFamiliesTextBoxPanel";
             this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.Size = new System.Drawing.Size(352, 35);
             this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.TabIndex = 3;
-            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.UseWaitCursor = true;
+            this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.UseWaitCursor = false;
             // 
             // adminFamiliesUFUpgradedFamiliesTextBox
             // 
@@ -2200,7 +2200,7 @@ namespace BARevitTools
             this.adminFamiliesUFUpgradedFamiliesTextBox.TabIndex = 0;
             this.adminFamiliesUFUpgradedFamiliesTextBox.Text = "FAMILIES UPGRADED";
             this.adminFamiliesUFUpgradedFamiliesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.adminFamiliesUFUpgradedFamiliesTextBox.UseWaitCursor = true;
+            this.adminFamiliesUFUpgradedFamiliesTextBox.UseWaitCursor = false;
             // 
             // adminFamiliesUFDeletedFamiliesTextBoxPanel
             // 
@@ -2213,7 +2213,7 @@ namespace BARevitTools
             this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Name = "adminFamiliesUFDeletedFamiliesTextBoxPanel";
             this.adminFamiliesUFDeletedFamiliesTextBoxPanel.Size = new System.Drawing.Size(352, 35);
             this.adminFamiliesUFDeletedFamiliesTextBoxPanel.TabIndex = 4;
-            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.UseWaitCursor = true;
+            this.adminFamiliesUFDeletedFamiliesTextBoxPanel.UseWaitCursor = false;
             // 
             // adminFamiliesUFDeletedFamiliesTextBox
             // 
@@ -2229,7 +2229,7 @@ namespace BARevitTools
             this.adminFamiliesUFDeletedFamiliesTextBox.TabIndex = 0;
             this.adminFamiliesUFDeletedFamiliesTextBox.Text = "FAMILIES DELETED";
             this.adminFamiliesUFDeletedFamiliesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.adminFamiliesUFDeletedFamiliesTextBox.UseWaitCursor = true;
+            this.adminFamiliesUFDeletedFamiliesTextBox.UseWaitCursor = false;
             // 
             // adminFamiliesUFRunPanel
             // 
@@ -2241,7 +2241,7 @@ namespace BARevitTools
             this.adminFamiliesUFRunPanel.Name = "adminFamiliesUFRunPanel";
             this.adminFamiliesUFRunPanel.Size = new System.Drawing.Size(710, 30);
             this.adminFamiliesUFRunPanel.TabIndex = 5;
-            this.adminFamiliesUFRunPanel.UseWaitCursor = true;
+            this.adminFamiliesUFRunPanel.UseWaitCursor = false;
             // 
             // adminFamiliesUFRunButton
             // 
@@ -2251,7 +2251,7 @@ namespace BARevitTools
             this.adminFamiliesUFRunButton.TabIndex = 0;
             this.adminFamiliesUFRunButton.Text = "RUN";
             this.adminFamiliesUFRunButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesUFRunButton.UseWaitCursor = true;
+            this.adminFamiliesUFRunButton.UseWaitCursor = false;
             this.adminFamiliesUFRunButton.Click += new System.EventHandler(this.AdminFamiliesUFRunButton_Click);
             // 
             // adminFamiliesBRPLayoutPanel
@@ -2272,7 +2272,7 @@ namespace BARevitTools
             this.adminFamiliesBRPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminFamiliesBRPLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesBRPLayoutPanel.TabIndex = 3;
-            this.adminFamiliesBRPLayoutPanel.UseWaitCursor = true;
+            this.adminFamiliesBRPLayoutPanel.UseWaitCursor = false;
             this.adminFamiliesBRPLayoutPanel.Visible = false;
             // 
             // adminFamiliesBRPRunPanel
@@ -2286,7 +2286,7 @@ namespace BARevitTools
             this.adminFamiliesBRPRunPanel.Name = "adminFamiliesBRPRunPanel";
             this.adminFamiliesBRPRunPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesBRPRunPanel.TabIndex = 5;
-            this.adminFamiliesBRPRunPanel.UseWaitCursor = true;
+            this.adminFamiliesBRPRunPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBRPProgressBar
             // 
@@ -2297,7 +2297,7 @@ namespace BARevitTools
             this.adminFamiliesBRPProgressBar.Name = "adminFamiliesBRPProgressBar";
             this.adminFamiliesBRPProgressBar.Size = new System.Drawing.Size(619, 23);
             this.adminFamiliesBRPProgressBar.TabIndex = 1;
-            this.adminFamiliesBRPProgressBar.UseWaitCursor = true;
+            this.adminFamiliesBRPProgressBar.UseWaitCursor = false;
             this.adminFamiliesBRPProgressBar.Visible = false;
             // 
             // adminFamiliesBRPRunButton
@@ -2309,7 +2309,7 @@ namespace BARevitTools
             this.adminFamiliesBRPRunButton.TabIndex = 0;
             this.adminFamiliesBRPRunButton.Text = "RUN";
             this.adminFamiliesBRPRunButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBRPRunButton.UseWaitCursor = true;
+            this.adminFamiliesBRPRunButton.UseWaitCursor = false;
             this.adminFamiliesBRPRunButton.Click += new System.EventHandler(this.AdminFamiliesBRPRunButton_Click);
             // 
             // adminFamiliesBRPSplitPanel
@@ -2321,7 +2321,7 @@ namespace BARevitTools
             this.adminFamiliesBRPSplitPanel.Name = "adminFamiliesBRPSplitPanel";
             this.adminFamiliesBRPSplitPanel.Size = new System.Drawing.Size(704, 263);
             this.adminFamiliesBRPSplitPanel.TabIndex = 6;
-            this.adminFamiliesBRPSplitPanel.UseWaitCursor = true;
+            this.adminFamiliesBRPSplitPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBRPSplitContainer
             // 
@@ -2355,7 +2355,7 @@ namespace BARevitTools
             this.adminFamiliesBRPParametersLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesBRPParametersLayoutPanel.Size = new System.Drawing.Size(336, 263);
             this.adminFamiliesBRPParametersLayoutPanel.TabIndex = 4;
-            this.adminFamiliesBRPParametersLayoutPanel.UseWaitCursor = true;
+            this.adminFamiliesBRPParametersLayoutPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBRPParametersDGV
             // 
@@ -2368,7 +2368,7 @@ namespace BARevitTools
             this.adminFamiliesBRPParametersDGV.RowHeadersWidth = 15;
             this.adminFamiliesBRPParametersDGV.Size = new System.Drawing.Size(336, 228);
             this.adminFamiliesBRPParametersDGV.TabIndex = 0;
-            this.adminFamiliesBRPParametersDGV.UseWaitCursor = true;
+            this.adminFamiliesBRPParametersDGV.UseWaitCursor = false;
             this.adminFamiliesBRPParametersDGV.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AdminFamiliesBRPParametersDGV_CellMouseUp);
             // 
             // adminFamiliesBRPParametersPanel
@@ -2381,7 +2381,7 @@ namespace BARevitTools
             this.adminFamiliesBRPParametersPanel.Name = "adminFamiliesBRPParametersPanel";
             this.adminFamiliesBRPParametersPanel.Size = new System.Drawing.Size(336, 35);
             this.adminFamiliesBRPParametersPanel.TabIndex = 3;
-            this.adminFamiliesBRPParametersPanel.UseWaitCursor = true;
+            this.adminFamiliesBRPParametersPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBPRSFamiliesLayoutPanel
             // 
@@ -2398,7 +2398,7 @@ namespace BARevitTools
             this.adminFamiliesBPRSFamiliesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesBPRSFamiliesLayoutPanel.Size = new System.Drawing.Size(364, 263);
             this.adminFamiliesBPRSFamiliesLayoutPanel.TabIndex = 4;
-            this.adminFamiliesBPRSFamiliesLayoutPanel.UseWaitCursor = true;
+            this.adminFamiliesBPRSFamiliesLayoutPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBRPFamiliesDGV
             // 
@@ -2413,7 +2413,7 @@ namespace BARevitTools
             this.adminFamiliesBRPFamiliesDGV.RowHeadersVisible = false;
             this.adminFamiliesBRPFamiliesDGV.Size = new System.Drawing.Size(364, 228);
             this.adminFamiliesBRPFamiliesDGV.TabIndex = 1;
-            this.adminFamiliesBRPFamiliesDGV.UseWaitCursor = true;
+            this.adminFamiliesBRPFamiliesDGV.UseWaitCursor = false;
             this.adminFamiliesBRPFamiliesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminFamiliesBRPFamiliesDGV_CellContentClick);
             // 
             // adminFamiliesBRPSelectPanel
@@ -2428,7 +2428,7 @@ namespace BARevitTools
             this.adminFamiliesBRPSelectPanel.Name = "adminFamiliesBRPSelectPanel";
             this.adminFamiliesBRPSelectPanel.Size = new System.Drawing.Size(364, 35);
             this.adminFamiliesBRPSelectPanel.TabIndex = 4;
-            this.adminFamiliesBRPSelectPanel.UseWaitCursor = true;
+            this.adminFamiliesBRPSelectPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBRPSelectNoneButton
             // 
@@ -2438,7 +2438,7 @@ namespace BARevitTools
             this.adminFamiliesBRPSelectNoneButton.TabIndex = 0;
             this.adminFamiliesBRPSelectNoneButton.Text = "Select None";
             this.adminFamiliesBRPSelectNoneButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBRPSelectNoneButton.UseWaitCursor = true;
+            this.adminFamiliesBRPSelectNoneButton.UseWaitCursor = false;
             this.adminFamiliesBRPSelectNoneButton.Click += new System.EventHandler(this.AdminFamiliesBRPSelectNoneButton_Click);
             // 
             // adminFamiliesBRPSelectAllButton
@@ -2449,7 +2449,7 @@ namespace BARevitTools
             this.adminFamiliesBRPSelectAllButton.TabIndex = 0;
             this.adminFamiliesBRPSelectAllButton.Text = "Select All";
             this.adminFamiliesBRPSelectAllButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBRPSelectAllButton.UseWaitCursor = true;
+            this.adminFamiliesBRPSelectAllButton.UseWaitCursor = false;
             this.adminFamiliesBRPSelectAllButton.Click += new System.EventHandler(this.AdminFamiliesBRPSelectAllButton_Click);
             // 
             // adminFamiliesBRPCsvDirectoryPanel
@@ -2463,7 +2463,7 @@ namespace BARevitTools
             this.adminFamiliesBRPCsvDirectoryPanel.Name = "adminFamiliesBRPCsvDirectoryPanel";
             this.adminFamiliesBRPCsvDirectoryPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesBRPCsvDirectoryPanel.TabIndex = 7;
-            this.adminFamiliesBRPCsvDirectoryPanel.UseWaitCursor = true;
+            this.adminFamiliesBRPCsvDirectoryPanel.UseWaitCursor = false;
             // 
             // adminFamiliesBRPDirectorySelectButton
             // 
@@ -2473,7 +2473,7 @@ namespace BARevitTools
             this.adminFamiliesBRPDirectorySelectButton.TabIndex = 0;
             this.adminFamiliesBRPDirectorySelectButton.Text = "Select Directory";
             this.adminFamiliesBRPDirectorySelectButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesBRPDirectorySelectButton.UseWaitCursor = true;
+            this.adminFamiliesBRPDirectorySelectButton.UseWaitCursor = false;
             this.adminFamiliesBRPDirectorySelectButton.Click += new System.EventHandler(this.AdminFamiliesBRPDirectorySelectButton_Click);
             // 
             // adminFamiliesDFBLayoutPanel
@@ -2492,7 +2492,7 @@ namespace BARevitTools
             this.adminFamiliesDFBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminFamiliesDFBLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesDFBLayoutPanel.TabIndex = 5;
-            this.adminFamiliesDFBLayoutPanel.UseWaitCursor = true;
+            this.adminFamiliesDFBLayoutPanel.UseWaitCursor = false;
             this.adminFamiliesDFBLayoutPanel.Visible = false;
             // 
             // adminFamiliesDFBSelectPanel
@@ -2508,7 +2508,7 @@ namespace BARevitTools
             this.adminFamiliesDFBSelectPanel.Name = "adminFamiliesDFBSelectPanel";
             this.adminFamiliesDFBSelectPanel.Size = new System.Drawing.Size(710, 35);
             this.adminFamiliesDFBSelectPanel.TabIndex = 0;
-            this.adminFamiliesDFBSelectPanel.UseWaitCursor = true;
+            this.adminFamiliesDFBSelectPanel.UseWaitCursor = false;
             // 
             // adminFamiliesDBFSelectNoneButton
             // 
@@ -2520,7 +2520,7 @@ namespace BARevitTools
             this.adminFamiliesDBFSelectNoneButton.TabIndex = 1;
             this.adminFamiliesDBFSelectNoneButton.Text = "Select None";
             this.adminFamiliesDBFSelectNoneButton.UseVisualStyleBackColor = false;
-            this.adminFamiliesDBFSelectNoneButton.UseWaitCursor = true;
+            this.adminFamiliesDBFSelectNoneButton.UseWaitCursor = false;
             this.adminFamiliesDBFSelectNoneButton.Click += new System.EventHandler(this.AdminFamiliesDBFSelectNoneButton_Click);
             // 
             // adminFamiliesDBFSelectAllButton
@@ -2533,7 +2533,7 @@ namespace BARevitTools
             this.adminFamiliesDBFSelectAllButton.TabIndex = 1;
             this.adminFamiliesDBFSelectAllButton.Text = "Select All";
             this.adminFamiliesDBFSelectAllButton.UseVisualStyleBackColor = false;
-            this.adminFamiliesDBFSelectAllButton.UseWaitCursor = true;
+            this.adminFamiliesDBFSelectAllButton.UseWaitCursor = false;
             this.adminFamiliesDBFSelectAllButton.Click += new System.EventHandler(this.AdminFamiliesDBFSelectAllButton_Click);
             // 
             // adminFamiliesDFBSelectDirectoryButton
@@ -2544,7 +2544,7 @@ namespace BARevitTools
             this.adminFamiliesDFBSelectDirectoryButton.TabIndex = 0;
             this.adminFamiliesDFBSelectDirectoryButton.Text = "Select Directory";
             this.adminFamiliesDFBSelectDirectoryButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesDFBSelectDirectoryButton.UseWaitCursor = true;
+            this.adminFamiliesDFBSelectDirectoryButton.UseWaitCursor = false;
             this.adminFamiliesDFBSelectDirectoryButton.Click += new System.EventHandler(this.AdminFamiliesDFBSelectDirectoryButton_Click);
             // 
             // adminFamiliesDFBFamiliesDGV
@@ -2560,7 +2560,7 @@ namespace BARevitTools
             this.adminFamiliesDFBFamiliesDGV.RowHeadersVisible = false;
             this.adminFamiliesDFBFamiliesDGV.Size = new System.Drawing.Size(710, 269);
             this.adminFamiliesDFBFamiliesDGV.TabIndex = 1;
-            this.adminFamiliesDFBFamiliesDGV.UseWaitCursor = true;
+            this.adminFamiliesDFBFamiliesDGV.UseWaitCursor = false;
             this.adminFamiliesDFBFamiliesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminFamiliesDFBFamiliesDGV_CellContentClick);
             // 
             // panel1
@@ -2572,7 +2572,7 @@ namespace BARevitTools
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(710, 35);
             this.panel1.TabIndex = 2;
-            this.panel1.UseWaitCursor = true;
+            this.panel1.UseWaitCursor = false;
             // 
             // adminFamiliesDFBRunButton
             // 
@@ -2583,7 +2583,7 @@ namespace BARevitTools
             this.adminFamiliesDFBRunButton.TabIndex = 1;
             this.adminFamiliesDFBRunButton.Text = "RUN";
             this.adminFamiliesDFBRunButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesDFBRunButton.UseWaitCursor = true;
+            this.adminFamiliesDFBRunButton.UseWaitCursor = false;
             this.adminFamiliesDFBRunButton.Click += new System.EventHandler(this.AdminFamiliesDFBRunButton_Click);
             // 
             // adminTemplateTab
@@ -2596,7 +2596,7 @@ namespace BARevitTools
             this.adminTemplateTab.Size = new System.Drawing.Size(720, 402);
             this.adminTemplateTab.TabIndex = 2;
             this.adminTemplateTab.Text = "Templates";
-            this.adminTemplateTab.UseWaitCursor = true;
+            this.adminTemplateTab.UseWaitCursor = false;
             // 
             // adminTemplateLayoutPanel
             // 
@@ -2612,7 +2612,7 @@ namespace BARevitTools
             this.adminTemplateLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminTemplateLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.adminTemplateLayoutPanel.TabIndex = 0;
-            this.adminTemplateLayoutPanel.UseWaitCursor = true;
+            this.adminTemplateLayoutPanel.UseWaitCursor = false;
             // 
             // adminTemplateToolStrip
             // 
@@ -2626,7 +2626,7 @@ namespace BARevitTools
             this.adminTemplateToolStrip.Size = new System.Drawing.Size(716, 53);
             this.adminTemplateToolStrip.TabIndex = 0;
             this.adminTemplateToolStrip.Text = "toolStrip1";
-            this.adminTemplateToolStrip.UseWaitCursor = true;
+            this.adminTemplateToolStrip.UseWaitCursor = false;
             // 
             // adminTemplatePMButton
             // 
@@ -2649,7 +2649,7 @@ namespace BARevitTools
             this.adminTemplateToolsPanel.Name = "adminTemplateToolsPanel";
             this.adminTemplateToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminTemplateToolsPanel.TabIndex = 1;
-            this.adminTemplateToolsPanel.UseWaitCursor = true;
+            this.adminTemplateToolsPanel.UseWaitCursor = false;
             // 
             // adminTemplatePMLayoutPanel
             // 
@@ -2668,7 +2668,7 @@ namespace BARevitTools
             this.adminTemplatePMLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.adminTemplatePMLayoutPanel.Size = new System.Drawing.Size(708, 338);
             this.adminTemplatePMLayoutPanel.TabIndex = 1;
-            this.adminTemplatePMLayoutPanel.UseWaitCursor = true;
+            this.adminTemplatePMLayoutPanel.UseWaitCursor = false;
             // 
             // adminTemplatePMPickPackagePanel
             // 
@@ -2682,7 +2682,7 @@ namespace BARevitTools
             this.adminTemplatePMPickPackagePanel.Name = "adminTemplatePMPickPackagePanel";
             this.adminTemplatePMPickPackagePanel.Size = new System.Drawing.Size(708, 35);
             this.adminTemplatePMPickPackagePanel.TabIndex = 2;
-            this.adminTemplatePMPickPackagePanel.UseWaitCursor = true;
+            this.adminTemplatePMPickPackagePanel.UseWaitCursor = false;
             // 
             // adminTemplatePMDeletePackateButton
             // 
@@ -2692,7 +2692,7 @@ namespace BARevitTools
             this.adminTemplatePMDeletePackateButton.TabIndex = 2;
             this.adminTemplatePMDeletePackateButton.Text = "DELETE PACKAGE";
             this.adminTemplatePMDeletePackateButton.UseVisualStyleBackColor = true;
-            this.adminTemplatePMDeletePackateButton.UseWaitCursor = true;
+            this.adminTemplatePMDeletePackateButton.UseWaitCursor = false;
             // 
             // adminTemplatePMPickPackageLabel
             // 
@@ -2703,7 +2703,7 @@ namespace BARevitTools
             this.adminTemplatePMPickPackageLabel.Size = new System.Drawing.Size(143, 13);
             this.adminTemplatePMPickPackageLabel.TabIndex = 0;
             this.adminTemplatePMPickPackageLabel.Text = "Package To Reference:";
-            this.adminTemplatePMPickPackageLabel.UseWaitCursor = true;
+            this.adminTemplatePMPickPackageLabel.UseWaitCursor = false;
             // 
             // adminTemplatePMPickPackageComboBox
             // 
@@ -2714,7 +2714,7 @@ namespace BARevitTools
             this.adminTemplatePMPickPackageComboBox.Name = "adminTemplatePMPickPackageComboBox";
             this.adminTemplatePMPickPackageComboBox.Size = new System.Drawing.Size(171, 21);
             this.adminTemplatePMPickPackageComboBox.TabIndex = 1;
-            this.adminTemplatePMPickPackageComboBox.UseWaitCursor = true;
+            this.adminTemplatePMPickPackageComboBox.UseWaitCursor = false;
             this.adminTemplatePMPickPackageComboBox.SelectedIndexChanged += new System.EventHandler(this.AdminTemplatePMPickPackageComboBox_SelectedIndexChanged);
             // 
             // adminTemplateSavePackagePanel
@@ -2729,7 +2729,7 @@ namespace BARevitTools
             this.adminTemplateSavePackagePanel.Name = "adminTemplateSavePackagePanel";
             this.adminTemplateSavePackagePanel.Size = new System.Drawing.Size(708, 35);
             this.adminTemplateSavePackagePanel.TabIndex = 3;
-            this.adminTemplateSavePackagePanel.UseWaitCursor = true;
+            this.adminTemplateSavePackagePanel.UseWaitCursor = false;
             // 
             // adminTemplateSavePackagePublishButton
             // 
@@ -2739,7 +2739,7 @@ namespace BARevitTools
             this.adminTemplateSavePackagePublishButton.TabIndex = 4;
             this.adminTemplateSavePackagePublishButton.Text = "PUBLISH";
             this.adminTemplateSavePackagePublishButton.UseVisualStyleBackColor = true;
-            this.adminTemplateSavePackagePublishButton.UseWaitCursor = true;
+            this.adminTemplateSavePackagePublishButton.UseWaitCursor = false;
             // 
             // adminTemplateSavePackageComboBox
             // 
@@ -2750,7 +2750,7 @@ namespace BARevitTools
             this.adminTemplateSavePackageComboBox.Name = "adminTemplateSavePackageComboBox";
             this.adminTemplateSavePackageComboBox.Size = new System.Drawing.Size(181, 21);
             this.adminTemplateSavePackageComboBox.TabIndex = 3;
-            this.adminTemplateSavePackageComboBox.UseWaitCursor = true;
+            this.adminTemplateSavePackageComboBox.UseWaitCursor = false;
             // 
             // adminTemplateSavePackageLabel
             // 
@@ -2761,7 +2761,7 @@ namespace BARevitTools
             this.adminTemplateSavePackageLabel.Size = new System.Drawing.Size(132, 13);
             this.adminTemplateSavePackageLabel.TabIndex = 2;
             this.adminTemplateSavePackageLabel.Text = "Package To Save To:";
-            this.adminTemplateSavePackageLabel.UseWaitCursor = true;
+            this.adminTemplateSavePackageLabel.UseWaitCursor = false;
             // 
             // adminTemplatePMTreeView
             // 
@@ -2770,7 +2770,7 @@ namespace BARevitTools
             this.adminTemplatePMTreeView.Name = "adminTemplatePMTreeView";
             this.adminTemplatePMTreeView.Size = new System.Drawing.Size(702, 262);
             this.adminTemplatePMTreeView.TabIndex = 4;
-            this.adminTemplatePMTreeView.UseWaitCursor = true;
+            this.adminTemplatePMTreeView.UseWaitCursor = false;
             // 
             // sandBoxTab
             // 
@@ -2782,7 +2782,7 @@ namespace BARevitTools
             this.sandBoxTab.TabIndex = 4;
             this.sandBoxTab.Text = "DevSandBox";
             this.sandBoxTab.UseVisualStyleBackColor = true;
-            this.sandBoxTab.UseWaitCursor = true;
+            this.sandBoxTab.UseWaitCursor = false;
             // 
             // sandBoxLayoutPanel
             // 
@@ -2800,7 +2800,7 @@ namespace BARevitTools
             this.sandBoxLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.sandBoxLayoutPanel.Size = new System.Drawing.Size(720, 402);
             this.sandBoxLayoutPanel.TabIndex = 0;
-            this.sandBoxLayoutPanel.UseWaitCursor = true;
+            this.sandBoxLayoutPanel.UseWaitCursor = false;
             // 
             // sandBoxElementHost
             // 
@@ -2811,7 +2811,7 @@ namespace BARevitTools
             this.sandBoxElementHost.Size = new System.Drawing.Size(716, 347);
             this.sandBoxElementHost.TabIndex = 0;
             this.sandBoxElementHost.Text = "elementHost1";
-            this.sandBoxElementHost.UseWaitCursor = true;
+            this.sandBoxElementHost.UseWaitCursor = false;
             this.sandBoxElementHost.Child = null;
             // 
             // sandBoxToolStrip
@@ -2826,7 +2826,7 @@ namespace BARevitTools
             this.sandBoxToolStrip.Size = new System.Drawing.Size(720, 53);
             this.sandBoxToolStrip.TabIndex = 1;
             this.sandBoxToolStrip.Text = "toolStrip1";
-            this.sandBoxToolStrip.UseWaitCursor = true;
+            this.sandBoxToolStrip.UseWaitCursor = false;
             // 
             // sandBoxTestButton1
             // 
@@ -2856,7 +2856,7 @@ namespace BARevitTools
             roomsToolStrip.Stretch = true;
             roomsToolStrip.TabIndex = 0;
             roomsToolStrip.Text = "toolStrip1";
-            roomsToolStrip.UseWaitCursor = true;
+            roomsToolStrip.UseWaitCursor = false;
             // 
             // roomsSRNNButton
             // 
@@ -2922,7 +2922,7 @@ namespace BARevitTools
             this.UIFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.UIFormTableLayoutPanel.Size = new System.Drawing.Size(769, 451);
             this.UIFormTableLayoutPanel.TabIndex = 2;
-            this.UIFormTableLayoutPanel.UseWaitCursor = true;
+            this.UIFormTableLayoutPanel.UseWaitCursor = false;
             // 
             // mainTabControl
             // 
@@ -2941,7 +2941,7 @@ namespace BARevitTools
             this.mainTabControl.SelectedIndex = 0;
             this.mainTabControl.Size = new System.Drawing.Size(763, 445);
             this.mainTabControl.TabIndex = 1;
-            this.mainTabControl.UseWaitCursor = true;
+            this.mainTabControl.UseWaitCursor = false;
             this.mainTabControl.Click += new System.EventHandler(this.AllowBIMManagementTab);
             // 
             // aboutTab
@@ -2953,7 +2953,7 @@ namespace BARevitTools
             this.aboutTab.Name = "aboutTab";
             this.aboutTab.Size = new System.Drawing.Size(734, 437);
             this.aboutTab.TabIndex = 4;
-            this.aboutTab.UseWaitCursor = true;
+            this.aboutTab.UseWaitCursor = false;
             // 
             // aboutTabLayoutPanel
             // 
@@ -2972,7 +2972,7 @@ namespace BARevitTools
             this.aboutTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.aboutTabLayoutPanel.Size = new System.Drawing.Size(734, 437);
             this.aboutTabLayoutPanel.TabIndex = 6;
-            this.aboutTabLayoutPanel.UseWaitCursor = true;
+            this.aboutTabLayoutPanel.UseWaitCursor = false;
             // 
             // aboutTabHeaderPanel
             // 
@@ -2990,7 +2990,7 @@ namespace BARevitTools
             this.aboutTabHeaderPanel.Name = "aboutTabHeaderPanel";
             this.aboutTabHeaderPanel.Size = new System.Drawing.Size(734, 120);
             this.aboutTabHeaderPanel.TabIndex = 0;
-            this.aboutTabHeaderPanel.UseWaitCursor = true;
+            this.aboutTabHeaderPanel.UseWaitCursor = false;
             // 
             // aboutTabDevelopmentLinkURLLabel
             // 
@@ -3002,7 +3002,7 @@ namespace BARevitTools
             this.aboutTabDevelopmentLinkURLLabel.TabIndex = 6;
             this.aboutTabDevelopmentLinkURLLabel.TabStop = true;
             this.aboutTabDevelopmentLinkURLLabel.Text = "Development Board\r\n";
-            this.aboutTabDevelopmentLinkURLLabel.UseWaitCursor = true;
+            this.aboutTabDevelopmentLinkURLLabel.UseWaitCursor = false;
             this.aboutTabDevelopmentLinkURLLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AboutTabDevelopmentLinkURLLabel_LinkClicked);
             // 
             // aboutTabDevelopmentLinkLabel
@@ -3015,7 +3015,7 @@ namespace BARevitTools
             this.aboutTabDevelopmentLinkLabel.Size = new System.Drawing.Size(231, 13);
             this.aboutTabDevelopmentLinkLabel.TabIndex = 7;
             this.aboutTabDevelopmentLinkLabel.Text = "Track development and make tool suggestions:";
-            this.aboutTabDevelopmentLinkLabel.UseWaitCursor = true;
+            this.aboutTabDevelopmentLinkLabel.UseWaitCursor = false;
             // 
             // aboutTabLearningLinkURLLabel
             // 
@@ -3027,7 +3027,7 @@ namespace BARevitTools
             this.aboutTabLearningLinkURLLabel.TabIndex = 6;
             this.aboutTabLearningLinkURLLabel.TabStop = true;
             this.aboutTabLearningLinkURLLabel.Text = "BIMhaus\r\n";
-            this.aboutTabLearningLinkURLLabel.UseWaitCursor = true;
+            this.aboutTabLearningLinkURLLabel.UseWaitCursor = false;
             this.aboutTabLearningLinkURLLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AboutTabLearningLinkURLLabel_LinkClicked);
             // 
             // aboutTabLearningLinkLabel
@@ -3040,7 +3040,7 @@ namespace BARevitTools
             this.aboutTabLearningLinkLabel.Size = new System.Drawing.Size(168, 13);
             this.aboutTabLearningLinkLabel.TabIndex = 7;
             this.aboutTabLearningLinkLabel.Text = "Learn more about the BART tools:";
-            this.aboutTabLearningLinkLabel.UseWaitCursor = true;
+            this.aboutTabLearningLinkLabel.UseWaitCursor = false;
             // 
             // aboutTabLogo
             // 
@@ -3053,7 +3053,7 @@ namespace BARevitTools
             this.aboutTabLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.aboutTabLogo.TabIndex = 1;
             this.aboutTabLogo.TabStop = false;
-            this.aboutTabLogo.UseWaitCursor = true;
+            this.aboutTabLogo.UseWaitCursor = false;
             // 
             // aboutPublishLabel
             // 
@@ -3065,7 +3065,7 @@ namespace BARevitTools
             this.aboutPublishLabel.Size = new System.Drawing.Size(65, 13);
             this.aboutPublishLabel.TabIndex = 5;
             this.aboutPublishLabel.Text = "11/16/2018";
-            this.aboutPublishLabel.UseWaitCursor = true;
+            this.aboutPublishLabel.UseWaitCursor = false;
             // 
             // aboutTabVersionLabel
             // 
@@ -3078,7 +3078,7 @@ namespace BARevitTools
             this.aboutTabVersionLabel.Size = new System.Drawing.Size(102, 20);
             this.aboutTabVersionLabel.TabIndex = 0;
             this.aboutTabVersionLabel.Text = "Version 1.0.4";
-            this.aboutTabVersionLabel.UseWaitCursor = true;
+            this.aboutTabVersionLabel.UseWaitCursor = false;
             // 
             // aboutTabTitleLabel
             // 
@@ -3091,7 +3091,7 @@ namespace BARevitTools
             this.aboutTabTitleLabel.Size = new System.Drawing.Size(277, 37);
             this.aboutTabTitleLabel.TabIndex = 0;
             this.aboutTabTitleLabel.Text = "BA Revit Tools (BART)";
-            this.aboutTabTitleLabel.UseWaitCursor = true;
+            this.aboutTabTitleLabel.UseWaitCursor = false;
             // 
             // aboutTabFooterPanel
             // 
@@ -3102,7 +3102,7 @@ namespace BARevitTools
             this.aboutTabFooterPanel.Name = "aboutTabFooterPanel";
             this.aboutTabFooterPanel.Size = new System.Drawing.Size(734, 23);
             this.aboutTabFooterPanel.TabIndex = 1;
-            this.aboutTabFooterPanel.UseWaitCursor = true;
+            this.aboutTabFooterPanel.UseWaitCursor = false;
             // 
             // aboutCreditLabel
             // 
@@ -3113,7 +3113,7 @@ namespace BARevitTools
             this.aboutCreditLabel.Size = new System.Drawing.Size(208, 13);
             this.aboutCreditLabel.TabIndex = 4;
             this.aboutCreditLabel.Text = "Created By: Carlo Licea and Lots of Coffee";
-            this.aboutCreditLabel.UseWaitCursor = true;
+            this.aboutCreditLabel.UseWaitCursor = false;
             // 
             // aboutTabUpdatesTextBox
             // 
@@ -3127,7 +3127,7 @@ namespace BARevitTools
             this.aboutTabUpdatesTextBox.Size = new System.Drawing.Size(730, 292);
             this.aboutTabUpdatesTextBox.TabIndex = 2;
             this.aboutTabUpdatesTextBox.Text = resources.GetString("aboutTabUpdatesTextBox.Text");
-            this.aboutTabUpdatesTextBox.UseWaitCursor = true;
+            this.aboutTabUpdatesTextBox.UseWaitCursor = false;
             // 
             // analysisTab
             // 
@@ -3140,7 +3140,7 @@ namespace BARevitTools
             this.analysisTab.Size = new System.Drawing.Size(734, 437);
             this.analysisTab.TabIndex = 1;
             this.analysisTab.Text = "Analysis";
-            this.analysisTab.UseWaitCursor = true;
+            this.analysisTab.UseWaitCursor = false;
             // 
             // analysisTabControl
             // 
@@ -3153,7 +3153,7 @@ namespace BARevitTools
             this.analysisTabControl.SelectedIndex = 0;
             this.analysisTabControl.Size = new System.Drawing.Size(728, 431);
             this.analysisTabControl.TabIndex = 0;
-            this.analysisTabControl.UseWaitCursor = true;
+            this.analysisTabControl.UseWaitCursor = false;
             // 
             // sightTab
             // 
@@ -3164,7 +3164,7 @@ namespace BARevitTools
             this.sightTab.TabIndex = 0;
             this.sightTab.Text = "Sight";
             this.sightTab.UseVisualStyleBackColor = true;
-            this.sightTab.UseWaitCursor = true;
+            this.sightTab.UseWaitCursor = false;
             // 
             // modelingTab
             // 
@@ -3177,7 +3177,7 @@ namespace BARevitTools
             this.modelingTab.Size = new System.Drawing.Size(734, 437);
             this.modelingTab.TabIndex = 0;
             this.modelingTab.Text = "Modeling";
-            this.modelingTab.UseWaitCursor = true;
+            this.modelingTab.UseWaitCursor = false;
             // 
             // modelingTabControl
             // 
@@ -3199,7 +3199,7 @@ namespace BARevitTools
             this.modelingTabControl.SelectedIndex = 0;
             this.modelingTabControl.Size = new System.Drawing.Size(728, 431);
             this.modelingTabControl.TabIndex = 0;
-            this.modelingTabControl.UseWaitCursor = true;
+            this.modelingTabControl.UseWaitCursor = false;
             // 
             // multiCatTab
             // 
@@ -3211,7 +3211,7 @@ namespace BARevitTools
             this.multiCatTab.TabIndex = 9;
             this.multiCatTab.Text = "Multi-category";
             this.multiCatTab.UseVisualStyleBackColor = true;
-            this.multiCatTab.UseWaitCursor = true;
+            this.multiCatTab.UseWaitCursor = false;
             // 
             // multiCatLayoutPanel
             // 
@@ -3228,7 +3228,7 @@ namespace BARevitTools
             this.multiCatLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.multiCatLayoutPanel.Size = new System.Drawing.Size(720, 402);
             this.multiCatLayoutPanel.TabIndex = 1;
-            this.multiCatLayoutPanel.UseWaitCursor = true;
+            this.multiCatLayoutPanel.UseWaitCursor = false;
             // 
             // multiCatToolStrip
             // 
@@ -3246,7 +3246,7 @@ namespace BARevitTools
             this.multiCatToolStrip.Size = new System.Drawing.Size(720, 53);
             this.multiCatToolStrip.TabIndex = 0;
             this.multiCatToolStrip.Text = "toolStrip1";
-            this.multiCatToolStrip.UseWaitCursor = true;
+            this.multiCatToolStrip.UseWaitCursor = false;
             // 
             // multiCatCFFEButton
             // 
@@ -3288,7 +3288,7 @@ namespace BARevitTools
             this.multiCatToolsPanel.Name = "multiCatToolsPanel";
             this.multiCatToolsPanel.Size = new System.Drawing.Size(720, 349);
             this.multiCatToolsPanel.TabIndex = 1;
-            this.multiCatToolsPanel.UseWaitCursor = true;
+            this.multiCatToolsPanel.UseWaitCursor = false;
             // 
             // multiCatCFFSplitContainer
             // 
@@ -3353,7 +3353,7 @@ namespace BARevitTools
             this.multiCatCFFECreateExcelLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.multiCatCFFECreateExcelLayoutPanel1.Size = new System.Drawing.Size(316, 114);
             this.multiCatCFFECreateExcelLayoutPanel1.TabIndex = 1;
-            this.multiCatCFFECreateExcelLayoutPanel1.UseWaitCursor = true;
+            this.multiCatCFFECreateExcelLayoutPanel1.UseWaitCursor = false;
             // 
             // multiCatCFFECreateExcelLabel
             // 
@@ -3369,7 +3369,7 @@ namespace BARevitTools
             this.multiCatCFFECreateExcelLabel.TabIndex = 3;
             this.multiCatCFFECreateExcelLabel.Text = "Step 1 - Create Excel Template";
             this.multiCatCFFECreateExcelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.multiCatCFFECreateExcelLabel.UseWaitCursor = true;
+            this.multiCatCFFECreateExcelLabel.UseWaitCursor = false;
             // 
             // multiCatCFFECreateExcelInstructions
             // 
@@ -3383,7 +3383,7 @@ namespace BARevitTools
             this.multiCatCFFECreateExcelInstructions.Size = new System.Drawing.Size(314, 76);
             this.multiCatCFFECreateExcelInstructions.TabIndex = 4;
             this.multiCatCFFECreateExcelInstructions.Text = resources.GetString("multiCatCFFECreateExcelInstructions.Text");
-            this.multiCatCFFECreateExcelInstructions.UseWaitCursor = true;
+            this.multiCatCFFECreateExcelInstructions.UseWaitCursor = false;
             // 
             // multiCatCFFECreateExcelLayoutPanel2
             // 
@@ -3406,7 +3406,7 @@ namespace BARevitTools
             this.multiCatCFFECreateExcelLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.multiCatCFFECreateExcelLayoutPanel2.Size = new System.Drawing.Size(316, 231);
             this.multiCatCFFECreateExcelLayoutPanel2.TabIndex = 1;
-            this.multiCatCFFECreateExcelLayoutPanel2.UseWaitCursor = true;
+            this.multiCatCFFECreateExcelLayoutPanel2.UseWaitCursor = false;
             // 
             // multiCatCFFEExcelDGV
             // 
@@ -3421,7 +3421,7 @@ namespace BARevitTools
             this.multiCatCFFEExcelDGV.Name = "multiCatCFFEExcelDGV";
             this.multiCatCFFEExcelDGV.Size = new System.Drawing.Size(314, 121);
             this.multiCatCFFEExcelDGV.TabIndex = 1;
-            this.multiCatCFFEExcelDGV.UseWaitCursor = true;
+            this.multiCatCFFEExcelDGV.UseWaitCursor = false;
             this.multiCatCFFEExcelDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllCatCFFEExcelDGV_CellContentClick);
             // 
             // multiCatCFFEExcelRunPanel
@@ -3434,7 +3434,7 @@ namespace BARevitTools
             this.multiCatCFFEExcelRunPanel.Name = "multiCatCFFEExcelRunPanel";
             this.multiCatCFFEExcelRunPanel.Size = new System.Drawing.Size(314, 35);
             this.multiCatCFFEExcelRunPanel.TabIndex = 2;
-            this.multiCatCFFEExcelRunPanel.UseWaitCursor = true;
+            this.multiCatCFFEExcelRunPanel.UseWaitCursor = false;
             // 
             // multiCatCFFEExcelStatusLabel
             // 
@@ -3446,7 +3446,7 @@ namespace BARevitTools
             this.multiCatCFFEExcelStatusLabel.Size = new System.Drawing.Size(41, 13);
             this.multiCatCFFEExcelStatusLabel.TabIndex = 1;
             this.multiCatCFFEExcelStatusLabel.Text = "Done!";
-            this.multiCatCFFEExcelStatusLabel.UseWaitCursor = true;
+            this.multiCatCFFEExcelStatusLabel.UseWaitCursor = false;
             this.multiCatCFFEExcelStatusLabel.Visible = false;
             // 
             // multiCatCFFEExcelRunButton
@@ -3458,7 +3458,7 @@ namespace BARevitTools
             this.multiCatCFFEExcelRunButton.TabIndex = 0;
             this.multiCatCFFEExcelRunButton.Text = "CREATE TEMPLATE";
             this.multiCatCFFEExcelRunButton.UseVisualStyleBackColor = true;
-            this.multiCatCFFEExcelRunButton.UseWaitCursor = true;
+            this.multiCatCFFEExcelRunButton.UseWaitCursor = false;
             this.multiCatCFFEExcelRunButton.Click += new System.EventHandler(this.AllCatCFFEExcelRunButton_Click);
             // 
             // multiCatCFFEDirectoryPanel
@@ -3471,7 +3471,7 @@ namespace BARevitTools
             this.multiCatCFFEDirectoryPanel.Name = "multiCatCFFEDirectoryPanel";
             this.multiCatCFFEDirectoryPanel.Size = new System.Drawing.Size(314, 35);
             this.multiCatCFFEDirectoryPanel.TabIndex = 1;
-            this.multiCatCFFEDirectoryPanel.UseWaitCursor = true;
+            this.multiCatCFFEDirectoryPanel.UseWaitCursor = false;
             // 
             // multiCatCFFEDirectorySelectButton
             // 
@@ -3481,7 +3481,7 @@ namespace BARevitTools
             this.multiCatCFFEDirectorySelectButton.TabIndex = 1;
             this.multiCatCFFEDirectorySelectButton.Text = "Select Save Directory";
             this.multiCatCFFEDirectorySelectButton.UseVisualStyleBackColor = true;
-            this.multiCatCFFEDirectorySelectButton.UseWaitCursor = true;
+            this.multiCatCFFEDirectorySelectButton.UseWaitCursor = false;
             this.multiCatCFFEDirectorySelectButton.Click += new System.EventHandler(this.AllCatCFFEDirectorySelectButton_Click);
             // 
             // multiCatCFFEDirectoryTextBox
@@ -3494,7 +3494,7 @@ namespace BARevitTools
             this.multiCatCFFEDirectoryTextBox.ReadOnly = true;
             this.multiCatCFFEDirectoryTextBox.Size = new System.Drawing.Size(175, 13);
             this.multiCatCFFEDirectoryTextBox.TabIndex = 3;
-            this.multiCatCFFEDirectoryTextBox.UseWaitCursor = true;
+            this.multiCatCFFEDirectoryTextBox.UseWaitCursor = false;
             // 
             // multiCatCFFESelectFamilyPanel
             // 
@@ -3506,7 +3506,7 @@ namespace BARevitTools
             this.multiCatCFFESelectFamilyPanel.Name = "multiCatCFFESelectFamilyPanel";
             this.multiCatCFFESelectFamilyPanel.Size = new System.Drawing.Size(314, 35);
             this.multiCatCFFESelectFamilyPanel.TabIndex = 5;
-            this.multiCatCFFESelectFamilyPanel.UseWaitCursor = true;
+            this.multiCatCFFESelectFamilyPanel.UseWaitCursor = false;
             // 
             // multiCatCFFESelectFamilyButton
             // 
@@ -3516,7 +3516,7 @@ namespace BARevitTools
             this.multiCatCFFESelectFamilyButton.TabIndex = 1;
             this.multiCatCFFESelectFamilyButton.Text = "Select Family File";
             this.multiCatCFFESelectFamilyButton.UseVisualStyleBackColor = true;
-            this.multiCatCFFESelectFamilyButton.UseWaitCursor = true;
+            this.multiCatCFFESelectFamilyButton.UseWaitCursor = false;
             this.multiCatCFFESelectFamilyButton.Click += new System.EventHandler(this.AllCatCFFESelectFamilyButton_Click);
             // 
             // multiCatCFFESelectFamilyTextBox
@@ -3529,7 +3529,7 @@ namespace BARevitTools
             this.multiCatCFFESelectFamilyTextBox.ReadOnly = true;
             this.multiCatCFFESelectFamilyTextBox.Size = new System.Drawing.Size(176, 13);
             this.multiCatCFFESelectFamilyTextBox.TabIndex = 3;
-            this.multiCatCFFESelectFamilyTextBox.UseWaitCursor = true;
+            this.multiCatCFFESelectFamilyTextBox.UseWaitCursor = false;
             // 
             // multiCatCFFEFamiliesSplitContainer
             // 
@@ -3572,7 +3572,7 @@ namespace BARevitTools
             this.multiCatCFFECreateFamiliesLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.multiCatCFFECreateFamiliesLayoutPanel1.Size = new System.Drawing.Size(400, 114);
             this.multiCatCFFECreateFamiliesLayoutPanel1.TabIndex = 2;
-            this.multiCatCFFECreateFamiliesLayoutPanel1.UseWaitCursor = true;
+            this.multiCatCFFECreateFamiliesLayoutPanel1.UseWaitCursor = false;
             // 
             // multiCatCFFECreateFamiliesLabel
             // 
@@ -3588,7 +3588,7 @@ namespace BARevitTools
             this.multiCatCFFECreateFamiliesLabel.TabIndex = 3;
             this.multiCatCFFECreateFamiliesLabel.Text = "Step 2 - Create Revit Families";
             this.multiCatCFFECreateFamiliesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.multiCatCFFECreateFamiliesLabel.UseWaitCursor = true;
+            this.multiCatCFFECreateFamiliesLabel.UseWaitCursor = false;
             // 
             // multiCatCFFECreateFamiliesInstructions
             // 
@@ -3602,7 +3602,7 @@ namespace BARevitTools
             this.multiCatCFFECreateFamiliesInstructions.Size = new System.Drawing.Size(398, 76);
             this.multiCatCFFECreateFamiliesInstructions.TabIndex = 4;
             this.multiCatCFFECreateFamiliesInstructions.Text = resources.GetString("multiCatCFFECreateFamiliesInstructions.Text");
-            this.multiCatCFFECreateFamiliesInstructions.UseWaitCursor = true;
+            this.multiCatCFFECreateFamiliesInstructions.UseWaitCursor = false;
             // 
             // multiCatCFFECreateFamiliesLayoutPanel2
             // 
@@ -3625,7 +3625,7 @@ namespace BARevitTools
             this.multiCatCFFECreateFamiliesLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.multiCatCFFECreateFamiliesLayoutPanel2.Size = new System.Drawing.Size(400, 231);
             this.multiCatCFFECreateFamiliesLayoutPanel2.TabIndex = 2;
-            this.multiCatCFFECreateFamiliesLayoutPanel2.UseWaitCursor = true;
+            this.multiCatCFFECreateFamiliesLayoutPanel2.UseWaitCursor = false;
             // 
             // multiCatCFFEFamiliesDGV
             // 
@@ -3641,7 +3641,7 @@ namespace BARevitTools
             this.multiCatCFFEFamiliesDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.multiCatCFFEFamiliesDGV.Size = new System.Drawing.Size(398, 121);
             this.multiCatCFFEFamiliesDGV.TabIndex = 1;
-            this.multiCatCFFEFamiliesDGV.UseWaitCursor = true;
+            this.multiCatCFFEFamiliesDGV.UseWaitCursor = false;
             // 
             // multiCatCFFEFamiliesExcelPanel
             // 
@@ -3654,7 +3654,7 @@ namespace BARevitTools
             this.multiCatCFFEFamiliesExcelPanel.Name = "multiCatCFFEFamiliesExcelPanel";
             this.multiCatCFFEFamiliesExcelPanel.Size = new System.Drawing.Size(398, 35);
             this.multiCatCFFEFamiliesExcelPanel.TabIndex = 1;
-            this.multiCatCFFEFamiliesExcelPanel.UseWaitCursor = true;
+            this.multiCatCFFEFamiliesExcelPanel.UseWaitCursor = false;
             // 
             // allCATCFFEFamiliesSaveDirectoryTextBox
             // 
@@ -3666,7 +3666,7 @@ namespace BARevitTools
             this.allCATCFFEFamiliesSaveDirectoryTextBox.ReadOnly = true;
             this.allCATCFFEFamiliesSaveDirectoryTextBox.Size = new System.Drawing.Size(130, 13);
             this.allCATCFFEFamiliesSaveDirectoryTextBox.TabIndex = 4;
-            this.allCATCFFEFamiliesSaveDirectoryTextBox.UseWaitCursor = true;
+            this.allCATCFFEFamiliesSaveDirectoryTextBox.UseWaitCursor = false;
             // 
             // multiCatCFFEFamiliesSaveDirectoryButton
             // 
@@ -3676,7 +3676,7 @@ namespace BARevitTools
             this.multiCatCFFEFamiliesSaveDirectoryButton.TabIndex = 1;
             this.multiCatCFFEFamiliesSaveDirectoryButton.Text = "Select Save Directory";
             this.multiCatCFFEFamiliesSaveDirectoryButton.UseVisualStyleBackColor = true;
-            this.multiCatCFFEFamiliesSaveDirectoryButton.UseWaitCursor = true;
+            this.multiCatCFFEFamiliesSaveDirectoryButton.UseWaitCursor = false;
             this.multiCatCFFEFamiliesSaveDirectoryButton.Click += new System.EventHandler(this.AllCatCFFEFamiliesSaveDirectoryButton_Click);
             // 
             // multiCatCFFEExcelSelectButton
@@ -3687,7 +3687,7 @@ namespace BARevitTools
             this.multiCatCFFEExcelSelectButton.TabIndex = 1;
             this.multiCatCFFEExcelSelectButton.Text = "Select Excel File";
             this.multiCatCFFEExcelSelectButton.UseVisualStyleBackColor = true;
-            this.multiCatCFFEExcelSelectButton.UseWaitCursor = true;
+            this.multiCatCFFEExcelSelectButton.UseWaitCursor = false;
             this.multiCatCFFEExcelSelectButton.Click += new System.EventHandler(this.AllCatCFFEExcelSelectButton_Click);
             // 
             // multiCatCFFEFamiliesRunPanel
@@ -3700,7 +3700,7 @@ namespace BARevitTools
             this.multiCatCFFEFamiliesRunPanel.Name = "multiCatCFFEFamiliesRunPanel";
             this.multiCatCFFEFamiliesRunPanel.Size = new System.Drawing.Size(398, 35);
             this.multiCatCFFEFamiliesRunPanel.TabIndex = 2;
-            this.multiCatCFFEFamiliesRunPanel.UseWaitCursor = true;
+            this.multiCatCFFEFamiliesRunPanel.UseWaitCursor = false;
             // 
             // multiCatCFFEFamiliesProgressBar
             // 
@@ -3712,7 +3712,7 @@ namespace BARevitTools
             this.multiCatCFFEFamiliesProgressBar.Size = new System.Drawing.Size(262, 23);
             this.multiCatCFFEFamiliesProgressBar.Step = 1;
             this.multiCatCFFEFamiliesProgressBar.TabIndex = 1;
-            this.multiCatCFFEFamiliesProgressBar.UseWaitCursor = true;
+            this.multiCatCFFEFamiliesProgressBar.UseWaitCursor = false;
             this.multiCatCFFEFamiliesProgressBar.Visible = false;
             // 
             // multiCatCFFEFamiliesRunButton
@@ -3724,7 +3724,7 @@ namespace BARevitTools
             this.multiCatCFFEFamiliesRunButton.TabIndex = 0;
             this.multiCatCFFEFamiliesRunButton.Text = "CREATE FAMILIES";
             this.multiCatCFFEFamiliesRunButton.UseVisualStyleBackColor = true;
-            this.multiCatCFFEFamiliesRunButton.UseWaitCursor = true;
+            this.multiCatCFFEFamiliesRunButton.UseWaitCursor = false;
             this.multiCatCFFEFamiliesRunButton.Click += new System.EventHandler(this.AllCatCFFEFamiliesRunButton_Click);
             // 
             // multiCatCFFEFamilyCreationPanel
@@ -3737,7 +3737,7 @@ namespace BARevitTools
             this.multiCatCFFEFamilyCreationPanel.Name = "multiCatCFFEFamilyCreationPanel";
             this.multiCatCFFEFamilyCreationPanel.Size = new System.Drawing.Size(398, 35);
             this.multiCatCFFEFamilyCreationPanel.TabIndex = 5;
-            this.multiCatCFFEFamilyCreationPanel.UseWaitCursor = true;
+            this.multiCatCFFEFamilyCreationPanel.UseWaitCursor = false;
             // 
             // multiCatCFFEFamilyCreationLabel
             // 
@@ -3747,7 +3747,7 @@ namespace BARevitTools
             this.multiCatCFFEFamilyCreationLabel.Size = new System.Drawing.Size(114, 13);
             this.multiCatCFFEFamilyCreationLabel.TabIndex = 1;
             this.multiCatCFFEFamilyCreationLabel.Text = "Save Family Types As:";
-            this.multiCatCFFEFamilyCreationLabel.UseWaitCursor = true;
+            this.multiCatCFFEFamilyCreationLabel.UseWaitCursor = false;
             // 
             // multiCatCFFEFamilyCreationComboBox
             // 
@@ -3760,7 +3760,7 @@ namespace BARevitTools
             this.multiCatCFFEFamilyCreationComboBox.Size = new System.Drawing.Size(259, 21);
             this.multiCatCFFEFamilyCreationComboBox.TabIndex = 0;
             this.multiCatCFFEFamilyCreationComboBox.Text = "<Select Creation Method>";
-            this.multiCatCFFEFamilyCreationComboBox.UseWaitCursor = true;
+            this.multiCatCFFEFamilyCreationComboBox.UseWaitCursor = false;
             // 
             // doorsTab
             // 
@@ -3772,7 +3772,7 @@ namespace BARevitTools
             this.doorsTab.Size = new System.Drawing.Size(720, 402);
             this.doorsTab.TabIndex = 8;
             this.doorsTab.Text = "Doors";
-            this.doorsTab.UseWaitCursor = true;
+            this.doorsTab.UseWaitCursor = false;
             // 
             // electricalTab
             // 
@@ -3785,7 +3785,7 @@ namespace BARevitTools
             this.electricalTab.TabIndex = 5;
             this.electricalTab.Text = "Electrical";
             this.electricalTab.UseVisualStyleBackColor = true;
-            this.electricalTab.UseWaitCursor = true;
+            this.electricalTab.UseWaitCursor = false;
             // 
             // electricalLayoutPanel
             // 
@@ -3802,7 +3802,7 @@ namespace BARevitTools
             this.electricalLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.electricalLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.electricalLayoutPanel.TabIndex = 0;
-            this.electricalLayoutPanel.UseWaitCursor = true;
+            this.electricalLayoutPanel.UseWaitCursor = false;
             // 
             // electricalToolStrip
             // 
@@ -3817,7 +3817,7 @@ namespace BARevitTools
             this.electricalToolStrip.Size = new System.Drawing.Size(716, 53);
             this.electricalToolStrip.TabIndex = 0;
             this.electricalToolStrip.Text = "toolStrip1";
-            this.electricalToolStrip.UseWaitCursor = true;
+            this.electricalToolStrip.UseWaitCursor = false;
             // 
             // electricalCEOEButton
             // 
@@ -3842,7 +3842,7 @@ namespace BARevitTools
             this.electricalToolsPanel.Name = "electricalToolsPanel";
             this.electricalToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.electricalToolsPanel.TabIndex = 1;
-            this.electricalToolsPanel.UseWaitCursor = true;
+            this.electricalToolsPanel.UseWaitCursor = false;
             // 
             // electricalCEOELayoutPanel
             // 
@@ -3859,7 +3859,7 @@ namespace BARevitTools
             this.electricalCEOELayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.electricalCEOELayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.electricalCEOELayoutPanel.TabIndex = 0;
-            this.electricalCEOELayoutPanel.UseWaitCursor = true;
+            this.electricalCEOELayoutPanel.UseWaitCursor = false;
             this.electricalCEOELayoutPanel.Visible = false;
             // 
             // electricalCEOETextBox
@@ -3874,7 +3874,7 @@ namespace BARevitTools
             this.electricalCEOETextBox.Size = new System.Drawing.Size(716, 45);
             this.electricalCEOETextBox.TabIndex = 0;
             this.electricalCEOETextBox.Text = resources.GetString("electricalCEOETextBox.Text");
-            this.electricalCEOETextBox.UseWaitCursor = true;
+            this.electricalCEOETextBox.UseWaitCursor = false;
             // 
             // electricalCEOEControlsPanel
             // 
@@ -3885,7 +3885,7 @@ namespace BARevitTools
             this.electricalCEOEControlsPanel.Name = "electricalCEOEControlsPanel";
             this.electricalCEOEControlsPanel.Size = new System.Drawing.Size(716, 300);
             this.electricalCEOEControlsPanel.TabIndex = 1;
-            this.electricalCEOEControlsPanel.UseWaitCursor = true;
+            this.electricalCEOEControlsPanel.UseWaitCursor = false;
             // 
             // electricalCEOERunButton
             // 
@@ -3895,7 +3895,7 @@ namespace BARevitTools
             this.electricalCEOERunButton.TabIndex = 0;
             this.electricalCEOERunButton.Text = "RUN";
             this.electricalCEOERunButton.UseVisualStyleBackColor = true;
-            this.electricalCEOERunButton.UseWaitCursor = true;
+            this.electricalCEOERunButton.UseWaitCursor = false;
             this.electricalCEOERunButton.Click += new System.EventHandler(this.ElectricalCEOERunButton_Click);
             // 
             // floorsTab
@@ -3911,7 +3911,7 @@ namespace BARevitTools
             this.floorsTab.TabIndex = 1;
             this.floorsTab.Text = "Floors";
             this.floorsTab.UseVisualStyleBackColor = true;
-            this.floorsTab.UseWaitCursor = true;
+            this.floorsTab.UseWaitCursor = false;
             // 
             // floorsTabLayoutPanel
             // 
@@ -3929,7 +3929,7 @@ namespace BARevitTools
             this.floorsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.floorsTabLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.floorsTabLayoutPanel.TabIndex = 0;
-            this.floorsTabLayoutPanel.UseWaitCursor = true;
+            this.floorsTabLayoutPanel.UseWaitCursor = false;
             // 
             // floorsToolsPanel
             // 
@@ -3940,7 +3940,7 @@ namespace BARevitTools
             this.floorsToolsPanel.Name = "floorsToolsPanel";
             this.floorsToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.floorsToolsPanel.TabIndex = 4;
-            this.floorsToolsPanel.UseWaitCursor = true;
+            this.floorsToolsPanel.UseWaitCursor = false;
             // 
             // floorsCFBRLayoutPanel
             // 
@@ -3957,7 +3957,7 @@ namespace BARevitTools
             this.floorsCFBRLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.floorsCFBRLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.floorsCFBRLayoutPanel.TabIndex = 1;
-            this.floorsCFBRLayoutPanel.UseWaitCursor = true;
+            this.floorsCFBRLayoutPanel.UseWaitCursor = false;
             this.floorsCFBRLayoutPanel.Visible = false;
             // 
             // floorsCFBRInstructionsPanel
@@ -3969,7 +3969,7 @@ namespace BARevitTools
             this.floorsCFBRInstructionsPanel.Name = "floorsCFBRInstructionsPanel";
             this.floorsCFBRInstructionsPanel.Size = new System.Drawing.Size(710, 175);
             this.floorsCFBRInstructionsPanel.TabIndex = 0;
-            this.floorsCFBRInstructionsPanel.UseWaitCursor = true;
+            this.floorsCFBRInstructionsPanel.UseWaitCursor = false;
             // 
             // floorsCFBRInstructionsTextBox
             // 
@@ -3983,7 +3983,7 @@ namespace BARevitTools
             this.floorsCFBRInstructionsTextBox.Size = new System.Drawing.Size(710, 175);
             this.floorsCFBRInstructionsTextBox.TabIndex = 4;
             this.floorsCFBRInstructionsTextBox.Text = resources.GetString("floorsCFBRInstructionsTextBox.Text");
-            this.floorsCFBRInstructionsTextBox.UseWaitCursor = true;
+            this.floorsCFBRInstructionsTextBox.UseWaitCursor = false;
             // 
             // floorsCFBRControlsPanel
             // 
@@ -3999,7 +3999,7 @@ namespace BARevitTools
             this.floorsCFBRControlsPanel.Name = "floorsCFBRControlsPanel";
             this.floorsCFBRControlsPanel.Size = new System.Drawing.Size(710, 164);
             this.floorsCFBRControlsPanel.TabIndex = 1;
-            this.floorsCFBRControlsPanel.UseWaitCursor = true;
+            this.floorsCFBRControlsPanel.UseWaitCursor = false;
             // 
             // floorsCFBROffsetFinishFloorCheckBox
             // 
@@ -4010,7 +4010,7 @@ namespace BARevitTools
             this.floorsCFBROffsetFinishFloorCheckBox.TabIndex = 3;
             this.floorsCFBROffsetFinishFloorCheckBox.Text = "Offset Finish Floor";
             this.floorsCFBROffsetFinishFloorCheckBox.UseVisualStyleBackColor = true;
-            this.floorsCFBROffsetFinishFloorCheckBox.UseWaitCursor = true;
+            this.floorsCFBROffsetFinishFloorCheckBox.UseWaitCursor = false;
             // 
             // floorsCFBRSelectFloorTypeLabel
             // 
@@ -4020,7 +4020,7 @@ namespace BARevitTools
             this.floorsCFBRSelectFloorTypeLabel.Size = new System.Drawing.Size(95, 13);
             this.floorsCFBRSelectFloorTypeLabel.TabIndex = 2;
             this.floorsCFBRSelectFloorTypeLabel.Text = "Select Floor Type:";
-            this.floorsCFBRSelectFloorTypeLabel.UseWaitCursor = true;
+            this.floorsCFBRSelectFloorTypeLabel.UseWaitCursor = false;
             // 
             // floorsCFBRSelectRoomsLabel
             // 
@@ -4030,7 +4030,7 @@ namespace BARevitTools
             this.floorsCFBRSelectRoomsLabel.Size = new System.Drawing.Size(78, 13);
             this.floorsCFBRSelectRoomsLabel.TabIndex = 2;
             this.floorsCFBRSelectRoomsLabel.Text = "Select Rooms:";
-            this.floorsCFBRSelectRoomsLabel.UseWaitCursor = true;
+            this.floorsCFBRSelectRoomsLabel.UseWaitCursor = false;
             // 
             // floorsCFBRSelectFloorTypeComboBox
             // 
@@ -4040,7 +4040,7 @@ namespace BARevitTools
             this.floorsCFBRSelectFloorTypeComboBox.Size = new System.Drawing.Size(150, 21);
             this.floorsCFBRSelectFloorTypeComboBox.TabIndex = 1;
             this.floorsCFBRSelectFloorTypeComboBox.Text = "<Floor Type>";
-            this.floorsCFBRSelectFloorTypeComboBox.UseWaitCursor = true;
+            this.floorsCFBRSelectFloorTypeComboBox.UseWaitCursor = false;
             // 
             // floorsCFBRRunButton
             // 
@@ -4050,7 +4050,7 @@ namespace BARevitTools
             this.floorsCFBRRunButton.TabIndex = 0;
             this.floorsCFBRRunButton.Text = "RUN";
             this.floorsCFBRRunButton.UseVisualStyleBackColor = true;
-            this.floorsCFBRRunButton.UseWaitCursor = true;
+            this.floorsCFBRRunButton.UseWaitCursor = false;
             this.floorsCFBRRunButton.Click += new System.EventHandler(this.FloorsCFBRRunButton_Click);
             // 
             // floorsCFBRSelectRoomsButton
@@ -4061,7 +4061,7 @@ namespace BARevitTools
             this.floorsCFBRSelectRoomsButton.TabIndex = 0;
             this.floorsCFBRSelectRoomsButton.Text = "SELECT";
             this.floorsCFBRSelectRoomsButton.UseVisualStyleBackColor = true;
-            this.floorsCFBRSelectRoomsButton.UseWaitCursor = true;
+            this.floorsCFBRSelectRoomsButton.UseWaitCursor = false;
             this.floorsCFBRSelectRoomsButton.Click += new System.EventHandler(this.FloorsCFBRSelectRoomsButton_Click);
             // 
             // floorsToolStrip
@@ -4076,7 +4076,7 @@ namespace BARevitTools
             this.floorsToolStrip.Name = "floorsToolStrip";
             this.floorsToolStrip.Size = new System.Drawing.Size(710, 53);
             this.floorsToolStrip.TabIndex = 0;
-            this.floorsToolStrip.UseWaitCursor = true;
+            this.floorsToolStrip.UseWaitCursor = false;
             // 
             // floorsCFBRButton
             // 
@@ -4102,7 +4102,7 @@ namespace BARevitTools
             this.massesTab.TabIndex = 7;
             this.massesTab.Text = "Masses";
             this.massesTab.UseVisualStyleBackColor = true;
-            this.massesTab.UseWaitCursor = true;
+            this.massesTab.UseWaitCursor = false;
             // 
             // materialsTab
             // 
@@ -4115,7 +4115,7 @@ namespace BARevitTools
             this.materialsTab.TabIndex = 6;
             this.materialsTab.Text = "Materials";
             this.materialsTab.UseVisualStyleBackColor = true;
-            this.materialsTab.UseWaitCursor = true;
+            this.materialsTab.UseWaitCursor = false;
             // 
             // materialsLayoutPanel
             // 
@@ -4132,7 +4132,7 @@ namespace BARevitTools
             this.materialsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.materialsLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.materialsLayoutPanel.TabIndex = 0;
-            this.materialsLayoutPanel.UseWaitCursor = true;
+            this.materialsLayoutPanel.UseWaitCursor = false;
             // 
             // materialsToolStrip
             // 
@@ -4149,7 +4149,7 @@ namespace BARevitTools
             this.materialsToolStrip.Size = new System.Drawing.Size(716, 53);
             this.materialsToolStrip.TabIndex = 0;
             this.materialsToolStrip.Text = "toolStrip1";
-            this.materialsToolStrip.UseWaitCursor = true;
+            this.materialsToolStrip.UseWaitCursor = false;
             // 
             // materialsCMSButton
             // 
@@ -4196,7 +4196,7 @@ namespace BARevitTools
             this.materialsToolsPanel.Name = "materialsToolsPanel";
             this.materialsToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.materialsToolsPanel.TabIndex = 1;
-            this.materialsToolsPanel.UseWaitCursor = true;
+            this.materialsToolsPanel.UseWaitCursor = false;
             // 
             // materialsAMLLayoutPanel
             // 
@@ -4217,7 +4217,7 @@ namespace BARevitTools
             this.materialsAMLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.materialsAMLLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.materialsAMLLayoutPanel.TabIndex = 3;
-            this.materialsAMLLayoutPanel.UseWaitCursor = true;
+            this.materialsAMLLayoutPanel.UseWaitCursor = false;
             this.materialsAMLLayoutPanel.Visible = false;
             // 
             // materialsAMLHeaderPanel
@@ -4230,7 +4230,7 @@ namespace BARevitTools
             this.materialsAMLHeaderPanel.Name = "materialsAMLHeaderPanel";
             this.materialsAMLHeaderPanel.Size = new System.Drawing.Size(487, 30);
             this.materialsAMLHeaderPanel.TabIndex = 0;
-            this.materialsAMLHeaderPanel.UseWaitCursor = true;
+            this.materialsAMLHeaderPanel.UseWaitCursor = false;
             // 
             // materialsAMLHeaderLabel
             // 
@@ -4241,7 +4241,7 @@ namespace BARevitTools
             this.materialsAMLHeaderLabel.Size = new System.Drawing.Size(150, 13);
             this.materialsAMLHeaderLabel.TabIndex = 0;
             this.materialsAMLHeaderLabel.Text = "Materials For Line Types:";
-            this.materialsAMLHeaderLabel.UseWaitCursor = true;
+            this.materialsAMLHeaderLabel.UseWaitCursor = false;
             // 
             // materialsAMLInstructionsTextBox
             // 
@@ -4257,7 +4257,7 @@ namespace BARevitTools
             this.materialsAMLInstructionsTextBox.Size = new System.Drawing.Size(229, 345);
             this.materialsAMLInstructionsTextBox.TabIndex = 1;
             this.materialsAMLInstructionsTextBox.Text = resources.GetString("materialsAMLInstructionsTextBox.Text");
-            this.materialsAMLInstructionsTextBox.UseWaitCursor = true;
+            this.materialsAMLInstructionsTextBox.UseWaitCursor = false;
             // 
             // materialsAMLDataGridView
             // 
@@ -4269,7 +4269,7 @@ namespace BARevitTools
             this.materialsAMLDataGridView.Name = "materialsAMLDataGridView";
             this.materialsAMLDataGridView.Size = new System.Drawing.Size(481, 276);
             this.materialsAMLDataGridView.TabIndex = 3;
-            this.materialsAMLDataGridView.UseWaitCursor = true;
+            this.materialsAMLDataGridView.UseWaitCursor = false;
             this.materialsAMLDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MaterialsAMLDataGridView_CellContentClick);
             // 
             // materialsAMLLaunchPanel
@@ -4281,7 +4281,7 @@ namespace BARevitTools
             this.materialsAMLLaunchPanel.Name = "materialsAMLLaunchPanel";
             this.materialsAMLLaunchPanel.Size = new System.Drawing.Size(487, 33);
             this.materialsAMLLaunchPanel.TabIndex = 4;
-            this.materialsAMLLaunchPanel.UseWaitCursor = true;
+            this.materialsAMLLaunchPanel.UseWaitCursor = false;
             // 
             // materialsAMLLaunchPaletteButton
             // 
@@ -4292,7 +4292,7 @@ namespace BARevitTools
             this.materialsAMLLaunchPaletteButton.TabIndex = 2;
             this.materialsAMLLaunchPaletteButton.Text = "LAUNCH PICKER";
             this.materialsAMLLaunchPaletteButton.UseVisualStyleBackColor = true;
-            this.materialsAMLLaunchPaletteButton.UseWaitCursor = true;
+            this.materialsAMLLaunchPaletteButton.UseWaitCursor = false;
             this.materialsAMLLaunchPaletteButton.Click += new System.EventHandler(this.MaterialsAMLLaunchPaletteButton_Click);
             // 
             // materialsCMSExcelLayoutPanel
@@ -4316,7 +4316,7 @@ namespace BARevitTools
             this.materialsCMSExcelLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.materialsCMSExcelLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.materialsCMSExcelLayoutPanel.TabIndex = 2;
-            this.materialsCMSExcelLayoutPanel.UseWaitCursor = true;
+            this.materialsCMSExcelLayoutPanel.UseWaitCursor = false;
             this.materialsCMSExcelLayoutPanel.Visible = false;
             // 
             // materialsCMSExcelExportPanel
@@ -4333,7 +4333,7 @@ namespace BARevitTools
             this.materialsCMSExcelExportPanel.Name = "materialsCMSExcelExportPanel";
             this.materialsCMSExcelExportPanel.Size = new System.Drawing.Size(549, 51);
             this.materialsCMSExcelExportPanel.TabIndex = 0;
-            this.materialsCMSExcelExportPanel.UseWaitCursor = true;
+            this.materialsCMSExcelExportPanel.UseWaitCursor = false;
             // 
             // materialsCMSExcelCreateSpreadsheetButton
             // 
@@ -4345,7 +4345,7 @@ namespace BARevitTools
             this.materialsCMSExcelCreateSpreadsheetButton.TabIndex = 0;
             this.materialsCMSExcelCreateSpreadsheetButton.Text = "Create Spreadsheet";
             this.materialsCMSExcelCreateSpreadsheetButton.UseVisualStyleBackColor = true;
-            this.materialsCMSExcelCreateSpreadsheetButton.UseWaitCursor = true;
+            this.materialsCMSExcelCreateSpreadsheetButton.UseWaitCursor = false;
             this.materialsCMSExcelCreateSpreadsheetButton.Click += new System.EventHandler(this.MaterialsCMSExcelCreateSpreadsheetButton_Click);
             // 
             // materialsCMSExcelSpreadsheetNameTextBox
@@ -4358,7 +4358,7 @@ namespace BARevitTools
             this.materialsCMSExcelSpreadsheetNameTextBox.Size = new System.Drawing.Size(249, 20);
             this.materialsCMSExcelSpreadsheetNameTextBox.TabIndex = 2;
             this.materialsCMSExcelSpreadsheetNameTextBox.Text = "<Excel Spreadsheet Name>";
-            this.materialsCMSExcelSpreadsheetNameTextBox.UseWaitCursor = true;
+            this.materialsCMSExcelSpreadsheetNameTextBox.UseWaitCursor = false;
             this.materialsCMSExcelSpreadsheetNameTextBox.WordWrap = false;
             // 
             // materialsCMSExcelSelectSaveDirectoryButton
@@ -4370,7 +4370,7 @@ namespace BARevitTools
             this.materialsCMSExcelSelectSaveDirectoryButton.TabIndex = 1;
             this.materialsCMSExcelSelectSaveDirectoryButton.Text = "Select Save Directory";
             this.materialsCMSExcelSelectSaveDirectoryButton.UseVisualStyleBackColor = true;
-            this.materialsCMSExcelSelectSaveDirectoryButton.UseWaitCursor = true;
+            this.materialsCMSExcelSelectSaveDirectoryButton.UseWaitCursor = false;
             this.materialsCMSExcelSelectSaveDirectoryButton.Click += new System.EventHandler(this.MaterialsCMSExcelSelectSaveDirectoryButton_Click);
             // 
             // materialsCMSExcelExportLabel
@@ -4382,7 +4382,7 @@ namespace BARevitTools
             this.materialsCMSExcelExportLabel.Size = new System.Drawing.Size(134, 13);
             this.materialsCMSExcelExportLabel.TabIndex = 0;
             this.materialsCMSExcelExportLabel.Text = "Export the Excel Template:";
-            this.materialsCMSExcelExportLabel.UseWaitCursor = true;
+            this.materialsCMSExcelExportLabel.UseWaitCursor = false;
             // 
             // materialsCMSExcelRunPanel
             // 
@@ -4396,7 +4396,7 @@ namespace BARevitTools
             this.materialsCMSExcelRunPanel.Name = "materialsCMSExcelRunPanel";
             this.materialsCMSExcelRunPanel.Size = new System.Drawing.Size(549, 30);
             this.materialsCMSExcelRunPanel.TabIndex = 1;
-            this.materialsCMSExcelRunPanel.UseWaitCursor = true;
+            this.materialsCMSExcelRunPanel.UseWaitCursor = false;
             // 
             // materialsCMSExcelCreateSymbolsProgressBar
             // 
@@ -4408,7 +4408,7 @@ namespace BARevitTools
             this.materialsCMSExcelCreateSymbolsProgressBar.Name = "materialsCMSExcelCreateSymbolsProgressBar";
             this.materialsCMSExcelCreateSymbolsProgressBar.Size = new System.Drawing.Size(399, 19);
             this.materialsCMSExcelCreateSymbolsProgressBar.TabIndex = 1;
-            this.materialsCMSExcelCreateSymbolsProgressBar.UseWaitCursor = true;
+            this.materialsCMSExcelCreateSymbolsProgressBar.UseWaitCursor = false;
             // 
             // materialsCMSExcelCreateSymbolsButton
             // 
@@ -4420,7 +4420,7 @@ namespace BARevitTools
             this.materialsCMSExcelCreateSymbolsButton.TabIndex = 0;
             this.materialsCMSExcelCreateSymbolsButton.Text = "Create Material Symbols";
             this.materialsCMSExcelCreateSymbolsButton.UseVisualStyleBackColor = true;
-            this.materialsCMSExcelCreateSymbolsButton.UseWaitCursor = true;
+            this.materialsCMSExcelCreateSymbolsButton.UseWaitCursor = false;
             this.materialsCMSExcelCreateSymbolsButton.Click += new System.EventHandler(this.MaterialsCMSExcelCreateSymbolsButton_Click);
             // 
             // materialsCMSExcelImportPanel
@@ -4437,7 +4437,7 @@ namespace BARevitTools
             this.materialsCMSExcelImportPanel.Name = "materialsCMSExcelImportPanel";
             this.materialsCMSExcelImportPanel.Size = new System.Drawing.Size(549, 51);
             this.materialsCMSExcelImportPanel.TabIndex = 2;
-            this.materialsCMSExcelImportPanel.UseWaitCursor = true;
+            this.materialsCMSExcelImportPanel.UseWaitCursor = false;
             // 
             // materialsCMSSetViewNameTextBox
             // 
@@ -4447,7 +4447,7 @@ namespace BARevitTools
             this.materialsCMSSetViewNameTextBox.Name = "materialsCMSSetViewNameTextBox";
             this.materialsCMSSetViewNameTextBox.Size = new System.Drawing.Size(249, 20);
             this.materialsCMSSetViewNameTextBox.TabIndex = 2;
-            this.materialsCMSSetViewNameTextBox.UseWaitCursor = true;
+            this.materialsCMSSetViewNameTextBox.UseWaitCursor = false;
             // 
             // materialsCMSSetViewNameLabel
             // 
@@ -4457,7 +4457,7 @@ namespace BARevitTools
             this.materialsCMSSetViewNameLabel.Size = new System.Drawing.Size(151, 20);
             this.materialsCMSSetViewNameLabel.TabIndex = 0;
             this.materialsCMSSetViewNameLabel.Text = "*Optional* Set View Name:";
-            this.materialsCMSSetViewNameLabel.UseWaitCursor = true;
+            this.materialsCMSSetViewNameLabel.UseWaitCursor = false;
             // 
             // materialsCMSExcelImportLabel
             // 
@@ -4467,7 +4467,7 @@ namespace BARevitTools
             this.materialsCMSExcelImportLabel.Size = new System.Drawing.Size(151, 18);
             this.materialsCMSExcelImportLabel.TabIndex = 0;
             this.materialsCMSExcelImportLabel.Text = "Import the Excel Template:";
-            this.materialsCMSExcelImportLabel.UseWaitCursor = true;
+            this.materialsCMSExcelImportLabel.UseWaitCursor = false;
             // 
             // materialsCMSExcelSelectImportFileButton
             // 
@@ -4478,7 +4478,7 @@ namespace BARevitTools
             this.materialsCMSExcelSelectImportFileButton.TabIndex = 1;
             this.materialsCMSExcelSelectImportFileButton.Text = "Select Excel File";
             this.materialsCMSExcelSelectImportFileButton.UseVisualStyleBackColor = true;
-            this.materialsCMSExcelSelectImportFileButton.UseWaitCursor = true;
+            this.materialsCMSExcelSelectImportFileButton.UseWaitCursor = false;
             this.materialsCMSExcelSelectImportFileButton.Click += new System.EventHandler(this.MaterialsCMSExcelSelectImportFileButton_Click);
             // 
             // materialsCMSExcelDataGridView
@@ -4494,7 +4494,7 @@ namespace BARevitTools
             this.materialsCMSExcelDataGridView.RowTemplate.Height = 28;
             this.materialsCMSExcelDataGridView.Size = new System.Drawing.Size(549, 213);
             this.materialsCMSExcelDataGridView.TabIndex = 3;
-            this.materialsCMSExcelDataGridView.UseWaitCursor = true;
+            this.materialsCMSExcelDataGridView.UseWaitCursor = false;
             // 
             // materialsCMSExcelInstructionsTextBox
             // 
@@ -4509,7 +4509,7 @@ namespace BARevitTools
             this.materialsCMSExcelInstructionsTextBox.Size = new System.Drawing.Size(163, 343);
             this.materialsCMSExcelInstructionsTextBox.TabIndex = 4;
             this.materialsCMSExcelInstructionsTextBox.Text = resources.GetString("materialsCMSExcelInstructionsTextBox.Text");
-            this.materialsCMSExcelInstructionsTextBox.UseWaitCursor = true;
+            this.materialsCMSExcelInstructionsTextBox.UseWaitCursor = false;
             // 
             // roomsTab
             // 
@@ -4522,7 +4522,7 @@ namespace BARevitTools
             this.roomsTab.TabIndex = 2;
             this.roomsTab.Text = "Rooms";
             this.roomsTab.UseVisualStyleBackColor = true;
-            this.roomsTab.UseWaitCursor = true;
+            this.roomsTab.UseWaitCursor = false;
             // 
             // roomsTabLayoutPanel
             // 
@@ -4539,7 +4539,7 @@ namespace BARevitTools
             this.roomsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.roomsTabLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.roomsTabLayoutPanel.TabIndex = 2;
-            this.roomsTabLayoutPanel.UseWaitCursor = true;
+            this.roomsTabLayoutPanel.UseWaitCursor = false;
             // 
             // roomsToolsPanel
             // 
@@ -4550,7 +4550,7 @@ namespace BARevitTools
             this.roomsToolsPanel.Name = "roomsToolsPanel";
             this.roomsToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.roomsToolsPanel.TabIndex = 1;
-            this.roomsToolsPanel.UseWaitCursor = true;
+            this.roomsToolsPanel.UseWaitCursor = false;
             // 
             // roomsCDRTLayoutPanel
             // 
@@ -4566,7 +4566,7 @@ namespace BARevitTools
             this.roomsCDRTLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.42604F));
             this.roomsCDRTLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.roomsCDRTLayoutPanel.TabIndex = 16;
-            this.roomsCDRTLayoutPanel.UseWaitCursor = true;
+            this.roomsCDRTLayoutPanel.UseWaitCursor = false;
             this.roomsCDRTLayoutPanel.Visible = false;
             // 
             // roomsCDRTInstructionsTextBox
@@ -4581,7 +4581,7 @@ namespace BARevitTools
             this.roomsCDRTInstructionsTextBox.Size = new System.Drawing.Size(710, 127);
             this.roomsCDRTInstructionsTextBox.TabIndex = 0;
             this.roomsCDRTInstructionsTextBox.Text = resources.GetString("roomsCDRTInstructionsTextBox.Text");
-            this.roomsCDRTInstructionsTextBox.UseWaitCursor = true;
+            this.roomsCDRTInstructionsTextBox.UseWaitCursor = false;
             // 
             // roomsCDRTControlsPanel
             // 
@@ -4592,7 +4592,7 @@ namespace BARevitTools
             this.roomsCDRTControlsPanel.Name = "roomsCDRTControlsPanel";
             this.roomsCDRTControlsPanel.Size = new System.Drawing.Size(710, 212);
             this.roomsCDRTControlsPanel.TabIndex = 1;
-            this.roomsCDRTControlsPanel.UseWaitCursor = true;
+            this.roomsCDRTControlsPanel.UseWaitCursor = false;
             // 
             // roomsCDRTRunButton
             // 
@@ -4602,7 +4602,7 @@ namespace BARevitTools
             this.roomsCDRTRunButton.TabIndex = 0;
             this.roomsCDRTRunButton.Text = "RUN";
             this.roomsCDRTRunButton.UseVisualStyleBackColor = true;
-            this.roomsCDRTRunButton.UseWaitCursor = true;
+            this.roomsCDRTRunButton.UseWaitCursor = false;
             this.roomsCDRTRunButton.Click += new System.EventHandler(this.RoomsCDRTRunButton_Click);
             // 
             // roomsSRNNLayoutPanel
@@ -4621,7 +4621,7 @@ namespace BARevitTools
             this.roomsSRNNLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.roomsSRNNLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.roomsSRNNLayoutPanel.TabIndex = 2;
-            this.roomsSRNNLayoutPanel.UseWaitCursor = true;
+            this.roomsSRNNLayoutPanel.UseWaitCursor = false;
             this.roomsSRNNLayoutPanel.Visible = false;
             // 
             // roomsSRNNInstructions
@@ -4636,7 +4636,7 @@ namespace BARevitTools
             this.roomsSRNNInstructions.TabIndex = 14;
             this.roomsSRNNInstructions.Text = "This will swap the room name and numbers for better sorting with a Bluebeam PDF p" +
     "rint. Swap back after printing.";
-            this.roomsSRNNInstructions.UseWaitCursor = true;
+            this.roomsSRNNInstructions.UseWaitCursor = false;
             // 
             // roomsSRNNPanel
             // 
@@ -4647,7 +4647,7 @@ namespace BARevitTools
             this.roomsSRNNPanel.Name = "roomsSRNNPanel";
             this.roomsSRNNPanel.Size = new System.Drawing.Size(710, 279);
             this.roomsSRNNPanel.TabIndex = 1;
-            this.roomsSRNNPanel.UseWaitCursor = true;
+            this.roomsSRNNPanel.UseWaitCursor = false;
             // 
             // roomsSRNNRunButton
             // 
@@ -4658,7 +4658,7 @@ namespace BARevitTools
             this.roomsSRNNRunButton.TabIndex = 15;
             this.roomsSRNNRunButton.Text = "RUN";
             this.roomsSRNNRunButton.UseVisualStyleBackColor = true;
-            this.roomsSRNNRunButton.UseWaitCursor = true;
+            this.roomsSRNNRunButton.UseWaitCursor = false;
             this.roomsSRNNRunButton.Click += new System.EventHandler(this.RoomsSRNNRunButton_Click);
             // 
             // roomsSRRNUrlPanel
@@ -4671,7 +4671,7 @@ namespace BARevitTools
             this.roomsSRRNUrlPanel.Name = "roomsSRRNUrlPanel";
             this.roomsSRRNUrlPanel.Size = new System.Drawing.Size(710, 30);
             this.roomsSRRNUrlPanel.TabIndex = 15;
-            this.roomsSRRNUrlPanel.UseWaitCursor = true;
+            this.roomsSRRNUrlPanel.UseWaitCursor = false;
             // 
             // roomsSRRNUrlLabel
             // 
@@ -4682,7 +4682,7 @@ namespace BARevitTools
             this.roomsSRRNUrlLabel.Size = new System.Drawing.Size(221, 13);
             this.roomsSRRNUrlLabel.TabIndex = 1;
             this.roomsSRRNUrlLabel.Text = "(Covers the same process that used Dynamo)";
-            this.roomsSRRNUrlLabel.UseWaitCursor = true;
+            this.roomsSRRNUrlLabel.UseWaitCursor = false;
             // 
             // roomsSRRNUrlLinkLabel
             // 
@@ -4694,7 +4694,7 @@ namespace BARevitTools
             this.roomsSRRNUrlLinkLabel.TabIndex = 0;
             this.roomsSRRNUrlLinkLabel.TabStop = true;
             this.roomsSRRNUrlLinkLabel.Text = "Bluebeam Spaces from Revit";
-            this.roomsSRRNUrlLinkLabel.UseWaitCursor = true;
+            this.roomsSRRNUrlLinkLabel.UseWaitCursor = false;
             this.roomsSRRNUrlLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RoomsSRRNUrlLinkLabel_LinkClicked);
             // 
             // wallsTab
@@ -4710,7 +4710,7 @@ namespace BARevitTools
             this.wallsTab.TabIndex = 0;
             this.wallsTab.Text = "Walls";
             this.wallsTab.UseVisualStyleBackColor = true;
-            this.wallsTab.UseWaitCursor = true;
+            this.wallsTab.UseWaitCursor = false;
             // 
             // wallsTabLayoutPanel
             // 
@@ -4727,7 +4727,7 @@ namespace BARevitTools
             this.wallsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.wallsTabLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.wallsTabLayoutPanel.TabIndex = 8;
-            this.wallsTabLayoutPanel.UseWaitCursor = true;
+            this.wallsTabLayoutPanel.UseWaitCursor = false;
             // 
             // wallsToolStrip
             // 
@@ -4748,7 +4748,7 @@ namespace BARevitTools
             this.wallsToolStrip.Stretch = true;
             this.wallsToolStrip.TabIndex = 0;
             this.wallsToolStrip.Text = "toolStrip1";
-            this.wallsToolStrip.UseWaitCursor = true;
+            this.wallsToolStrip.UseWaitCursor = false;
             // 
             // wallsMPWButton
             // 
@@ -4794,7 +4794,7 @@ namespace BARevitTools
             this.wallsToolsPanel.Name = "wallsToolsPanel";
             this.wallsToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.wallsToolsPanel.TabIndex = 1;
-            this.wallsToolsPanel.UseWaitCursor = true;
+            this.wallsToolsPanel.UseWaitCursor = false;
             // 
             // wallsDPLayoutPanel
             // 
@@ -4810,7 +4810,7 @@ namespace BARevitTools
             this.wallsDPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.wallsDPLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.wallsDPLayoutPanel.TabIndex = 8;
-            this.wallsDPLayoutPanel.UseWaitCursor = true;
+            this.wallsDPLayoutPanel.UseWaitCursor = false;
             this.wallsDPLayoutPanel.Visible = false;
             // 
             // wallsDPInstructionsTextBox
@@ -4825,7 +4825,7 @@ namespace BARevitTools
             this.wallsDPInstructionsTextBox.Size = new System.Drawing.Size(716, 100);
             this.wallsDPInstructionsTextBox.TabIndex = 0;
             this.wallsDPInstructionsTextBox.Text = resources.GetString("wallsDPInstructionsTextBox.Text");
-            this.wallsDPInstructionsTextBox.UseWaitCursor = true;
+            this.wallsDPInstructionsTextBox.UseWaitCursor = false;
             // 
             // panel2
             // 
@@ -4836,7 +4836,7 @@ namespace BARevitTools
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(716, 245);
             this.panel2.TabIndex = 1;
-            this.panel2.UseWaitCursor = true;
+            this.panel2.UseWaitCursor = false;
             // 
             // wallsDPRunButton
             // 
@@ -4846,7 +4846,7 @@ namespace BARevitTools
             this.wallsDPRunButton.TabIndex = 0;
             this.wallsDPRunButton.Text = "RUN";
             this.wallsDPRunButton.UseVisualStyleBackColor = true;
-            this.wallsDPRunButton.UseWaitCursor = true;
+            this.wallsDPRunButton.UseWaitCursor = false;
             this.wallsDPRunButton.Click += new System.EventHandler(this.WallsDPRunButton_Click);
             // 
             // wallsMPWLayoutPanel
@@ -4864,7 +4864,7 @@ namespace BARevitTools
             this.wallsMPWLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.wallsMPWLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.wallsMPWLayoutPanel.TabIndex = 0;
-            this.wallsMPWLayoutPanel.UseWaitCursor = true;
+            this.wallsMPWLayoutPanel.UseWaitCursor = false;
             this.wallsMPWLayoutPanel.Visible = false;
             // 
             // wallsMPWControlsPanel
@@ -4883,7 +4883,7 @@ namespace BARevitTools
             this.wallsMPWControlsPanel.Name = "wallsMPWControlsPanel";
             this.wallsMPWControlsPanel.Size = new System.Drawing.Size(716, 166);
             this.wallsMPWControlsPanel.TabIndex = 0;
-            this.wallsMPWControlsPanel.UseWaitCursor = true;
+            this.wallsMPWControlsPanel.UseWaitCursor = false;
             // 
             // wallsMPWLabelSelectWall
             // 
@@ -4893,7 +4893,7 @@ namespace BARevitTools
             this.wallsMPWLabelSelectWall.Size = new System.Drawing.Size(91, 13);
             this.wallsMPWLabelSelectWall.TabIndex = 0;
             this.wallsMPWLabelSelectWall.Text = "Select Wall Type:";
-            this.wallsMPWLabelSelectWall.UseWaitCursor = true;
+            this.wallsMPWLabelSelectWall.UseWaitCursor = false;
             // 
             // wallsMPWNumericUpDownWallHeightIn
             // 
@@ -4902,7 +4902,7 @@ namespace BARevitTools
             this.wallsMPWNumericUpDownWallHeightIn.Name = "wallsMPWNumericUpDownWallHeightIn";
             this.wallsMPWNumericUpDownWallHeightIn.Size = new System.Drawing.Size(53, 22);
             this.wallsMPWNumericUpDownWallHeightIn.TabIndex = 7;
-            this.wallsMPWNumericUpDownWallHeightIn.UseWaitCursor = true;
+            this.wallsMPWNumericUpDownWallHeightIn.UseWaitCursor = false;
             // 
             // wallsMPWLabelSetWall
             // 
@@ -4912,7 +4912,7 @@ namespace BARevitTools
             this.wallsMPWLabelSetWall.Size = new System.Drawing.Size(71, 13);
             this.wallsMPWLabelSetWall.TabIndex = 0;
             this.wallsMPWLabelSetWall.Text = "Wall Height:";
-            this.wallsMPWLabelSetWall.UseWaitCursor = true;
+            this.wallsMPWLabelSetWall.UseWaitCursor = false;
             // 
             // wallsMPWNumericUpDownWallHeightFt
             // 
@@ -4920,7 +4920,7 @@ namespace BARevitTools
             this.wallsMPWNumericUpDownWallHeightFt.Name = "wallsMPWNumericUpDownWallHeightFt";
             this.wallsMPWNumericUpDownWallHeightFt.Size = new System.Drawing.Size(39, 22);
             this.wallsMPWNumericUpDownWallHeightFt.TabIndex = 7;
-            this.wallsMPWNumericUpDownWallHeightFt.UseWaitCursor = true;
+            this.wallsMPWNumericUpDownWallHeightFt.UseWaitCursor = false;
             // 
             // wallsMPWLabelWallHtFtTxt
             // 
@@ -4931,7 +4931,7 @@ namespace BARevitTools
             this.wallsMPWLabelWallHtFtTxt.Size = new System.Drawing.Size(27, 20);
             this.wallsMPWLabelWallHtFtTxt.TabIndex = 0;
             this.wallsMPWLabelWallHtFtTxt.Text = "\' - ";
-            this.wallsMPWLabelWallHtFtTxt.UseWaitCursor = true;
+            this.wallsMPWLabelWallHtFtTxt.UseWaitCursor = false;
             // 
             // wallsMPWButtonRun
             // 
@@ -4941,7 +4941,7 @@ namespace BARevitTools
             this.wallsMPWButtonRun.TabIndex = 6;
             this.wallsMPWButtonRun.Text = "RUN";
             this.wallsMPWButtonRun.UseVisualStyleBackColor = true;
-            this.wallsMPWButtonRun.UseWaitCursor = true;
+            this.wallsMPWButtonRun.UseWaitCursor = false;
             this.wallsMPWButtonRun.Click += new System.EventHandler(this.WallsMPWRun_Click);
             // 
             // wallsMPWLabelWallHtInTxt
@@ -4953,7 +4953,7 @@ namespace BARevitTools
             this.wallsMPWLabelWallHtInTxt.Size = new System.Drawing.Size(16, 20);
             this.wallsMPWLabelWallHtInTxt.TabIndex = 0;
             this.wallsMPWLabelWallHtInTxt.Text = "\"";
-            this.wallsMPWLabelWallHtInTxt.UseWaitCursor = true;
+            this.wallsMPWLabelWallHtInTxt.UseWaitCursor = false;
             // 
             // wallsMPWComboBoxWall
             // 
@@ -4963,7 +4963,7 @@ namespace BARevitTools
             this.wallsMPWComboBoxWall.Size = new System.Drawing.Size(258, 21);
             this.wallsMPWComboBoxWall.TabIndex = 2;
             this.wallsMPWComboBoxWall.Text = "<Wall Type>";
-            this.wallsMPWComboBoxWall.UseWaitCursor = true;
+            this.wallsMPWComboBoxWall.UseWaitCursor = false;
             // 
             // wallsMPWInstructionsPanel
             // 
@@ -4974,7 +4974,7 @@ namespace BARevitTools
             this.wallsMPWInstructionsPanel.Name = "wallsMPWInstructionsPanel";
             this.wallsMPWInstructionsPanel.Size = new System.Drawing.Size(716, 179);
             this.wallsMPWInstructionsPanel.TabIndex = 1;
-            this.wallsMPWInstructionsPanel.UseWaitCursor = true;
+            this.wallsMPWInstructionsPanel.UseWaitCursor = false;
             // 
             // textBox1
             // 
@@ -4988,7 +4988,7 @@ namespace BARevitTools
             this.textBox1.Size = new System.Drawing.Size(716, 179);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
-            this.textBox1.UseWaitCursor = true;
+            this.textBox1.UseWaitCursor = false;
             // 
             // documentationTab
             // 
@@ -5001,7 +5001,7 @@ namespace BARevitTools
             this.documentationTab.Size = new System.Drawing.Size(734, 437);
             this.documentationTab.TabIndex = 5;
             this.documentationTab.Text = "Documentation";
-            this.documentationTab.UseWaitCursor = true;
+            this.documentationTab.UseWaitCursor = false;
             // 
             // documentationTabControl
             // 
@@ -5015,7 +5015,7 @@ namespace BARevitTools
             this.documentationTabControl.SelectedIndex = 0;
             this.documentationTabControl.Size = new System.Drawing.Size(728, 431);
             this.documentationTabControl.TabIndex = 0;
-            this.documentationTabControl.UseWaitCursor = true;
+            this.documentationTabControl.UseWaitCursor = false;
             // 
             // sheetsTab
             // 
@@ -5029,7 +5029,7 @@ namespace BARevitTools
             this.sheetsTab.Size = new System.Drawing.Size(720, 402);
             this.sheetsTab.TabIndex = 0;
             this.sheetsTab.Text = "Sheets";
-            this.sheetsTab.UseWaitCursor = true;
+            this.sheetsTab.UseWaitCursor = false;
             // 
             // sheetsTabLayoutPanel
             // 
@@ -5049,7 +5049,7 @@ namespace BARevitTools
             this.sheetsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.sheetsTabLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.sheetsTabLayoutPanel.TabIndex = 4;
-            this.sheetsTabLayoutPanel.UseWaitCursor = true;
+            this.sheetsTabLayoutPanel.UseWaitCursor = false;
             // 
             // sheetsToolStrip
             // 
@@ -5070,7 +5070,7 @@ namespace BARevitTools
             this.sheetsToolStrip.Stretch = true;
             this.sheetsToolStrip.TabIndex = 0;
             this.sheetsToolStrip.Text = "toolStrip1";
-            this.sheetsToolStrip.UseWaitCursor = true;
+            this.sheetsToolStrip.UseWaitCursor = false;
             // 
             // sheetsCSLButton
             // 
@@ -5157,7 +5157,7 @@ namespace BARevitTools
             this.sheetsToolsPanel.Name = "sheetsToolsPanel";
             this.sheetsToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsToolsPanel.TabIndex = 0;
-            this.sheetsToolsPanel.UseWaitCursor = true;
+            this.sheetsToolsPanel.UseWaitCursor = false;
             // 
             // sheetsCSLLayoutPanel
             // 
@@ -5182,7 +5182,7 @@ namespace BARevitTools
             this.sheetsCSLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.sheetsCSLLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsCSLLayoutPanel.TabIndex = 1;
-            this.sheetsCSLLayoutPanel.UseWaitCursor = true;
+            this.sheetsCSLLayoutPanel.UseWaitCursor = false;
             this.sheetsCSLLayoutPanel.Visible = false;
             // 
             // sheetsCLSRunButton
@@ -5194,7 +5194,7 @@ namespace BARevitTools
             this.sheetsCLSRunButton.TabIndex = 2;
             this.sheetsCLSRunButton.Text = "RUN";
             this.sheetsCLSRunButton.UseVisualStyleBackColor = true;
-            this.sheetsCLSRunButton.UseWaitCursor = true;
+            this.sheetsCLSRunButton.UseWaitCursor = false;
             this.sheetsCLSRunButton.Click += new System.EventHandler(this.SheetsCSLRunButton_Click);
             // 
             // sheetsCSLDataGridView
@@ -5208,7 +5208,7 @@ namespace BARevitTools
             this.sheetsCSLDataGridView.Name = "sheetsCSLDataGridView";
             this.sheetsCSLDataGridView.Size = new System.Drawing.Size(704, 209);
             this.sheetsCSLDataGridView.TabIndex = 1;
-            this.sheetsCSLDataGridView.UseWaitCursor = true;
+            this.sheetsCSLDataGridView.UseWaitCursor = false;
             this.sheetsCSLDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SheetsCSLDataGridView_CellContentClick);
             // 
             // sheetsCSLControlsPanel
@@ -5224,7 +5224,7 @@ namespace BARevitTools
             this.sheetsCSLControlsPanel.Name = "sheetsCSLControlsPanel";
             this.sheetsCSLControlsPanel.Size = new System.Drawing.Size(710, 53);
             this.sheetsCSLControlsPanel.TabIndex = 3;
-            this.sheetsCSLControlsPanel.UseWaitCursor = true;
+            this.sheetsCSLControlsPanel.UseWaitCursor = false;
             // 
             // sheetsCSLFilterConditionComboBox
             // 
@@ -5237,7 +5237,7 @@ namespace BARevitTools
             this.sheetsCSLFilterConditionComboBox.Size = new System.Drawing.Size(133, 21);
             this.sheetsCSLFilterConditionComboBox.TabIndex = 3;
             this.sheetsCSLFilterConditionComboBox.Text = "<Condition>";
-            this.sheetsCSLFilterConditionComboBox.UseWaitCursor = true;
+            this.sheetsCSLFilterConditionComboBox.UseWaitCursor = false;
             this.sheetsCSLFilterConditionComboBox.SelectedIndexChanged += new System.EventHandler(this.SheetsCSLFilterConditionComboBox_SelectedIndexChanged);
             // 
             // sheetsCSLFilterTextBox
@@ -5247,7 +5247,7 @@ namespace BARevitTools
             this.sheetsCSLFilterTextBox.Size = new System.Drawing.Size(236, 20);
             this.sheetsCSLFilterTextBox.TabIndex = 2;
             this.sheetsCSLFilterTextBox.Text = "<Search String>";
-            this.sheetsCSLFilterTextBox.UseWaitCursor = true;
+            this.sheetsCSLFilterTextBox.UseWaitCursor = false;
             this.sheetsCSLFilterTextBox.TextChanged += new System.EventHandler(this.SheetsCSLFilterTextBox_TextChanged);
             // 
             // sheetsCSLCopyFromLabel
@@ -5258,7 +5258,7 @@ namespace BARevitTools
             this.sheetsCSLCopyFromLabel.Size = new System.Drawing.Size(136, 13);
             this.sheetsCSLCopyFromLabel.TabIndex = 0;
             this.sheetsCSLCopyFromLabel.Text = "Select Sheet to Copy From:";
-            this.sheetsCSLCopyFromLabel.UseWaitCursor = true;
+            this.sheetsCSLCopyFromLabel.UseWaitCursor = false;
             // 
             // sheetsCSLCopyToLabel
             // 
@@ -5268,7 +5268,7 @@ namespace BARevitTools
             this.sheetsCSLCopyToLabel.Size = new System.Drawing.Size(131, 13);
             this.sheetsCSLCopyToLabel.TabIndex = 0;
             this.sheetsCSLCopyToLabel.Text = "Select Sheets to Copy To:";
-            this.sheetsCSLCopyToLabel.UseWaitCursor = true;
+            this.sheetsCSLCopyToLabel.UseWaitCursor = false;
             // 
             // sheetsCSLComboBox
             // 
@@ -5278,7 +5278,7 @@ namespace BARevitTools
             this.sheetsCSLComboBox.Size = new System.Drawing.Size(133, 21);
             this.sheetsCSLComboBox.TabIndex = 1;
             this.sheetsCSLComboBox.Text = "<Originating Sheet>";
-            this.sheetsCSLComboBox.UseWaitCursor = true;
+            this.sheetsCSLComboBox.UseWaitCursor = false;
             this.sheetsCSLComboBox.TextChanged += new System.EventHandler(this.SheetsCSLComboBox_TextChanged);
             // 
             // sheetsCSLInstructionsPanel
@@ -5290,7 +5290,7 @@ namespace BARevitTools
             this.sheetsCSLInstructionsPanel.Name = "sheetsCSLInstructionsPanel";
             this.sheetsCSLInstructionsPanel.Size = new System.Drawing.Size(710, 42);
             this.sheetsCSLInstructionsPanel.TabIndex = 4;
-            this.sheetsCSLInstructionsPanel.UseWaitCursor = true;
+            this.sheetsCSLInstructionsPanel.UseWaitCursor = false;
             // 
             // sheetsCSLInstructionsLabel
             // 
@@ -5303,7 +5303,7 @@ namespace BARevitTools
             this.sheetsCSLInstructionsLabel.TabIndex = 0;
             this.sheetsCSLInstructionsLabel.Text = "Instructions:\r\n1) Select the sheet to copy legends from; 2) Select the sheets to " +
     "copy legends to; 3) Click RUN to copy the legends.";
-            this.sheetsCSLInstructionsLabel.UseWaitCursor = true;
+            this.sheetsCSLInstructionsLabel.UseWaitCursor = false;
             // 
             // sheetsOSSLayoutPanel
             // 
@@ -5327,7 +5327,7 @@ namespace BARevitTools
             this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.sheetsOSSLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsOSSLayoutPanel.TabIndex = 1;
-            this.sheetsOSSLayoutPanel.UseWaitCursor = true;
+            this.sheetsOSSLayoutPanel.UseWaitCursor = false;
             this.sheetsOSSLayoutPanel.Visible = false;
             // 
             // sheetsOSSDataGridView
@@ -5342,7 +5342,7 @@ namespace BARevitTools
             this.sheetsOSSDataGridView.RowHeadersVisible = false;
             this.sheetsOSSDataGridView.Size = new System.Drawing.Size(529, 195);
             this.sheetsOSSDataGridView.TabIndex = 0;
-            this.sheetsOSSDataGridView.UseWaitCursor = true;
+            this.sheetsOSSDataGridView.UseWaitCursor = false;
             this.sheetsOSSDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SheetsOSSDataGridView_CellContentClick);
             // 
             // sheetsOSSInstructionsPanel
@@ -5355,7 +5355,7 @@ namespace BARevitTools
             this.sheetsOSSInstructionsPanel.Name = "sheetsOSSInstructionsPanel";
             this.sheetsOSSInstructionsPanel.Size = new System.Drawing.Size(710, 79);
             this.sheetsOSSInstructionsPanel.TabIndex = 1;
-            this.sheetsOSSInstructionsPanel.UseWaitCursor = true;
+            this.sheetsOSSInstructionsPanel.UseWaitCursor = false;
             // 
             // sheetsOSSInstructionsTextBox
             // 
@@ -5368,7 +5368,7 @@ namespace BARevitTools
             this.sheetsOSSInstructionsTextBox.Size = new System.Drawing.Size(710, 79);
             this.sheetsOSSInstructionsTextBox.TabIndex = 0;
             this.sheetsOSSInstructionsTextBox.Text = resources.GetString("sheetsOSSInstructionsTextBox.Text");
-            this.sheetsOSSInstructionsTextBox.UseWaitCursor = true;
+            this.sheetsOSSInstructionsTextBox.UseWaitCursor = false;
             // 
             // sheetsOSSFilterPanel
             // 
@@ -5382,7 +5382,7 @@ namespace BARevitTools
             this.sheetsOSSFilterPanel.Name = "sheetsOSSFilterPanel";
             this.sheetsOSSFilterPanel.Size = new System.Drawing.Size(529, 35);
             this.sheetsOSSFilterPanel.TabIndex = 4;
-            this.sheetsOSSFilterPanel.UseWaitCursor = true;
+            this.sheetsOSSFilterPanel.UseWaitCursor = false;
             // 
             // sheetsOSSFilterFieldComboBox
             // 
@@ -5395,7 +5395,7 @@ namespace BARevitTools
             this.sheetsOSSFilterFieldComboBox.Size = new System.Drawing.Size(72, 21);
             this.sheetsOSSFilterFieldComboBox.TabIndex = 4;
             this.sheetsOSSFilterFieldComboBox.Text = "<Field>";
-            this.sheetsOSSFilterFieldComboBox.UseWaitCursor = true;
+            this.sheetsOSSFilterFieldComboBox.UseWaitCursor = false;
             this.sheetsOSSFilterFieldComboBox.SelectedIndexChanged += new System.EventHandler(this.SheetsOSSFilterFieldComboBox_SelectedIndexChanged);
             // 
             // sheetsOSSFilterTextBox
@@ -5407,7 +5407,7 @@ namespace BARevitTools
             this.sheetsOSSFilterTextBox.Size = new System.Drawing.Size(201, 20);
             this.sheetsOSSFilterTextBox.TabIndex = 3;
             this.sheetsOSSFilterTextBox.Text = "<Search String>";
-            this.sheetsOSSFilterTextBox.UseWaitCursor = true;
+            this.sheetsOSSFilterTextBox.UseWaitCursor = false;
             this.sheetsOSSFilterTextBox.TextChanged += new System.EventHandler(this.SheetsOSSFilterTextBox_TextChanged);
             // 
             // sheetsOSSFilterConditionComboBox
@@ -5421,7 +5421,7 @@ namespace BARevitTools
             this.sheetsOSSFilterConditionComboBox.Size = new System.Drawing.Size(133, 21);
             this.sheetsOSSFilterConditionComboBox.TabIndex = 2;
             this.sheetsOSSFilterConditionComboBox.Text = "<Condition>";
-            this.sheetsOSSFilterConditionComboBox.UseWaitCursor = true;
+            this.sheetsOSSFilterConditionComboBox.UseWaitCursor = false;
             this.sheetsOSSFilterConditionComboBox.SelectedIndexChanged += new System.EventHandler(this.SheetsOSSFilterConditionComboBox_SelectedIndexChanged);
             // 
             // sheetsOSSFilterLabel
@@ -5433,7 +5433,7 @@ namespace BARevitTools
             this.sheetsOSSFilterLabel.Size = new System.Drawing.Size(39, 13);
             this.sheetsOSSFilterLabel.TabIndex = 1;
             this.sheetsOSSFilterLabel.Text = "Filter:";
-            this.sheetsOSSFilterLabel.UseWaitCursor = true;
+            this.sheetsOSSFilterLabel.UseWaitCursor = false;
             // 
             // sheetsOSSNewSetPanel
             // 
@@ -5447,7 +5447,7 @@ namespace BARevitTools
             this.sheetsOSSLayoutPanel.SetRowSpan(this.sheetsOSSNewSetPanel, 2);
             this.sheetsOSSNewSetPanel.Size = new System.Drawing.Size(181, 230);
             this.sheetsOSSNewSetPanel.TabIndex = 3;
-            this.sheetsOSSNewSetPanel.UseWaitCursor = true;
+            this.sheetsOSSNewSetPanel.UseWaitCursor = false;
             // 
             // sheetsOSSNewSetButton
             // 
@@ -5457,7 +5457,7 @@ namespace BARevitTools
             this.sheetsOSSNewSetButton.TabIndex = 2;
             this.sheetsOSSNewSetButton.Text = "Add Set";
             this.sheetsOSSNewSetButton.UseVisualStyleBackColor = true;
-            this.sheetsOSSNewSetButton.UseWaitCursor = true;
+            this.sheetsOSSNewSetButton.UseWaitCursor = false;
             this.sheetsOSSNewSetButton.Click += new System.EventHandler(this.SheetsOSSNewSetButton_Click);
             // 
             // sheetsOSSNewSetLabel
@@ -5469,7 +5469,7 @@ namespace BARevitTools
             this.sheetsOSSNewSetLabel.Size = new System.Drawing.Size(85, 13);
             this.sheetsOSSNewSetLabel.TabIndex = 1;
             this.sheetsOSSNewSetLabel.Text = "Add New Set:";
-            this.sheetsOSSNewSetLabel.UseWaitCursor = true;
+            this.sheetsOSSNewSetLabel.UseWaitCursor = false;
             // 
             // sheetsOSSNewSetTextBox
             // 
@@ -5478,7 +5478,7 @@ namespace BARevitTools
             this.sheetsOSSNewSetTextBox.Size = new System.Drawing.Size(173, 20);
             this.sheetsOSSNewSetTextBox.TabIndex = 0;
             this.sheetsOSSNewSetTextBox.Text = "<New Set Name>";
-            this.sheetsOSSNewSetTextBox.UseWaitCursor = true;
+            this.sheetsOSSNewSetTextBox.UseWaitCursor = false;
             // 
             // sheetsOSSControlsPanel
             // 
@@ -5491,7 +5491,7 @@ namespace BARevitTools
             this.sheetsOSSControlsPanel.Name = "sheetsOSSControlsPanel";
             this.sheetsOSSControlsPanel.Size = new System.Drawing.Size(710, 30);
             this.sheetsOSSControlsPanel.TabIndex = 2;
-            this.sheetsOSSControlsPanel.UseWaitCursor = true;
+            this.sheetsOSSControlsPanel.UseWaitCursor = false;
             // 
             // sheetsOSSRunButton
             // 
@@ -5502,7 +5502,7 @@ namespace BARevitTools
             this.sheetsOSSRunButton.TabIndex = 1;
             this.sheetsOSSRunButton.Text = "RUN";
             this.sheetsOSSRunButton.UseVisualStyleBackColor = true;
-            this.sheetsOSSRunButton.UseWaitCursor = true;
+            this.sheetsOSSRunButton.UseWaitCursor = false;
             this.sheetsOSSRunButton.Click += new System.EventHandler(this.SheetsOSSRunButton_Click);
             // 
             // sheetsOSSRunLabel
@@ -5514,7 +5514,7 @@ namespace BARevitTools
             this.sheetsOSSRunLabel.Size = new System.Drawing.Size(69, 13);
             this.sheetsOSSRunLabel.TabIndex = 0;
             this.sheetsOSSRunLabel.Text = "Update Sets:";
-            this.sheetsOSSRunLabel.UseWaitCursor = true;
+            this.sheetsOSSRunLabel.UseWaitCursor = false;
             // 
             // sheetsISFLLayoutPanel
             // 
@@ -5538,7 +5538,7 @@ namespace BARevitTools
             this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.sheetsISFLLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsISFLLayoutPanel.TabIndex = 3;
-            this.sheetsISFLLayoutPanel.UseWaitCursor = true;
+            this.sheetsISFLLayoutPanel.UseWaitCursor = false;
             this.sheetsISFLLayoutPanel.Visible = false;
             // 
             // sheetsISFLInstructionsPanel
@@ -5550,7 +5550,7 @@ namespace BARevitTools
             this.sheetsISFLInstructionsPanel.Name = "sheetsISFLInstructionsPanel";
             this.sheetsISFLInstructionsPanel.Size = new System.Drawing.Size(704, 55);
             this.sheetsISFLInstructionsPanel.TabIndex = 5;
-            this.sheetsISFLInstructionsPanel.UseWaitCursor = true;
+            this.sheetsISFLInstructionsPanel.UseWaitCursor = false;
             // 
             // sheetsISFLInstructionsLabel
             // 
@@ -5562,7 +5562,7 @@ namespace BARevitTools
             this.sheetsISFLInstructionsLabel.Size = new System.Drawing.Size(704, 55);
             this.sheetsISFLInstructionsLabel.TabIndex = 0;
             this.sheetsISFLInstructionsLabel.Text = resources.GetString("sheetsISFLInstructionsLabel.Text");
-            this.sheetsISFLInstructionsLabel.UseWaitCursor = true;
+            this.sheetsISFLInstructionsLabel.UseWaitCursor = false;
             // 
             // sheetsISFLRunButton
             // 
@@ -5573,7 +5573,7 @@ namespace BARevitTools
             this.sheetsISFLRunButton.TabIndex = 2;
             this.sheetsISFLRunButton.Text = "RUN";
             this.sheetsISFLRunButton.UseVisualStyleBackColor = true;
-            this.sheetsISFLRunButton.UseWaitCursor = true;
+            this.sheetsISFLRunButton.UseWaitCursor = false;
             this.sheetsISFLRunButton.Click += new System.EventHandler(this.SheetsISFLRunButton_Click);
             // 
             // sheetsISFLDataGridView
@@ -5588,7 +5588,7 @@ namespace BARevitTools
             this.sheetsISFLDataGridView.Name = "sheetsISFLDataGridView";
             this.sheetsISFLDataGridView.Size = new System.Drawing.Size(486, 191);
             this.sheetsISFLDataGridView.TabIndex = 1;
-            this.sheetsISFLDataGridView.UseWaitCursor = true;
+            this.sheetsISFLDataGridView.UseWaitCursor = false;
             this.sheetsISFLDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SheetsISFLDataGridView_CellContentClick);
             // 
             // sheetsISFLControlsPanel
@@ -5603,7 +5603,7 @@ namespace BARevitTools
             this.sheetsISFLControlsPanel.Name = "sheetsISFLControlsPanel";
             this.sheetsISFLControlsPanel.Size = new System.Drawing.Size(710, 58);
             this.sheetsISFLControlsPanel.TabIndex = 4;
-            this.sheetsISFLControlsPanel.UseWaitCursor = true;
+            this.sheetsISFLControlsPanel.UseWaitCursor = false;
             // 
             // sheetsISFLComboBox
             // 
@@ -5613,7 +5613,7 @@ namespace BARevitTools
             this.sheetsISFLComboBox.Size = new System.Drawing.Size(250, 21);
             this.sheetsISFLComboBox.TabIndex = 1;
             this.sheetsISFLComboBox.Text = "<Originating Link>";
-            this.sheetsISFLComboBox.UseWaitCursor = true;
+            this.sheetsISFLComboBox.UseWaitCursor = false;
             this.sheetsISFLComboBox.TextChanged += new System.EventHandler(this.SheetsISFLComboBox_TextChanged);
             // 
             // sheetsISFLLabel1
@@ -5624,7 +5624,7 @@ namespace BARevitTools
             this.sheetsISFLLabel1.Size = new System.Drawing.Size(128, 13);
             this.sheetsISFLLabel1.TabIndex = 0;
             this.sheetsISFLLabel1.Text = "Select Link to Copy From:";
-            this.sheetsISFLLabel1.UseWaitCursor = true;
+            this.sheetsISFLLabel1.UseWaitCursor = false;
             // 
             // sheetsISFLLabel2
             // 
@@ -5634,7 +5634,7 @@ namespace BARevitTools
             this.sheetsISFLLabel2.Size = new System.Drawing.Size(117, 13);
             this.sheetsISFLLabel2.TabIndex = 0;
             this.sheetsISFLLabel2.Text = "Select Sheets to Insert:";
-            this.sheetsISFLLabel2.UseWaitCursor = true;
+            this.sheetsISFLLabel2.UseWaitCursor = false;
             // 
             // sheetsIFSLDisciplinePanel
             // 
@@ -5648,7 +5648,7 @@ namespace BARevitTools
             this.sheetsISFLLayoutPanel.SetRowSpan(this.sheetsIFSLDisciplinePanel, 2);
             this.sheetsIFSLDisciplinePanel.Size = new System.Drawing.Size(224, 220);
             this.sheetsIFSLDisciplinePanel.TabIndex = 2;
-            this.sheetsIFSLDisciplinePanel.UseWaitCursor = true;
+            this.sheetsIFSLDisciplinePanel.UseWaitCursor = false;
             // 
             // sheetsISFLDisciplineUpdateButton
             // 
@@ -5658,7 +5658,7 @@ namespace BARevitTools
             this.sheetsISFLDisciplineUpdateButton.TabIndex = 2;
             this.sheetsISFLDisciplineUpdateButton.Text = "UPDATE";
             this.sheetsISFLDisciplineUpdateButton.UseVisualStyleBackColor = true;
-            this.sheetsISFLDisciplineUpdateButton.UseWaitCursor = true;
+            this.sheetsISFLDisciplineUpdateButton.UseWaitCursor = false;
             this.sheetsISFLDisciplineUpdateButton.Click += new System.EventHandler(this.SheetsISFLDisciplineUpdateButton_Click);
             // 
             // sheetsISFLDisciplineComboBox
@@ -5672,7 +5672,7 @@ namespace BARevitTools
             this.sheetsISFLDisciplineComboBox.TabIndex = 1;
             this.sheetsISFLDisciplineComboBox.Tag = "";
             this.sheetsISFLDisciplineComboBox.Text = "<Select BA Discipline>";
-            this.sheetsISFLDisciplineComboBox.UseWaitCursor = true;
+            this.sheetsISFLDisciplineComboBox.UseWaitCursor = false;
             // 
             // sheetsISFLDisciplineLabel
             // 
@@ -5682,7 +5682,7 @@ namespace BARevitTools
             this.sheetsISFLDisciplineLabel.Size = new System.Drawing.Size(117, 13);
             this.sheetsISFLDisciplineLabel.TabIndex = 0;
             this.sheetsISFLDisciplineLabel.Text = "BA Discipline To Apply:";
-            this.sheetsISFLDisciplineLabel.UseWaitCursor = true;
+            this.sheetsISFLDisciplineLabel.UseWaitCursor = false;
             // 
             // sheetsCSSFSLayoutPanel
             // 
@@ -5698,7 +5698,7 @@ namespace BARevitTools
             this.sheetsCSSFSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.08069F));
             this.sheetsCSSFSLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsCSSFSLayoutPanel.TabIndex = 1;
-            this.sheetsCSSFSLayoutPanel.UseWaitCursor = true;
+            this.sheetsCSSFSLayoutPanel.UseWaitCursor = false;
             this.sheetsCSSFSLayoutPanel.Visible = false;
             // 
             // sheetsCSSFSInstructionsPanel
@@ -5710,7 +5710,7 @@ namespace BARevitTools
             this.sheetsCSSFSInstructionsPanel.Name = "sheetsCSSFSInstructionsPanel";
             this.sheetsCSSFSInstructionsPanel.Size = new System.Drawing.Size(710, 81);
             this.sheetsCSSFSInstructionsPanel.TabIndex = 0;
-            this.sheetsCSSFSInstructionsPanel.UseWaitCursor = true;
+            this.sheetsCSSFSInstructionsPanel.UseWaitCursor = false;
             // 
             // sheetsCSSFSInstructionsTextBox
             // 
@@ -5725,7 +5725,7 @@ namespace BARevitTools
             this.sheetsCSSFSInstructionsTextBox.Text = "Instructions:\r\n1) Set the sheet set name\r\n2) Select the sheet schedule to make th" +
     "e set from\r\n\r\nThis script will make new sheet sets using the visible sheets in a" +
     " sheet schedule.";
-            this.sheetsCSSFSInstructionsTextBox.UseWaitCursor = true;
+            this.sheetsCSSFSInstructionsTextBox.UseWaitCursor = false;
             // 
             // sheetsCSSFSControlsPanel
             // 
@@ -5740,7 +5740,7 @@ namespace BARevitTools
             this.sheetsCSSFSControlsPanel.Name = "sheetsCSSFSControlsPanel";
             this.sheetsCSSFSControlsPanel.Size = new System.Drawing.Size(710, 258);
             this.sheetsCSSFSControlsPanel.TabIndex = 1;
-            this.sheetsCSSFSControlsPanel.UseWaitCursor = true;
+            this.sheetsCSSFSControlsPanel.UseWaitCursor = false;
             // 
             // sheetsCSSFSSScheduleLabel
             // 
@@ -5750,7 +5750,7 @@ namespace BARevitTools
             this.sheetsCSSFSSScheduleLabel.Size = new System.Drawing.Size(93, 13);
             this.sheetsCSSFSSScheduleLabel.TabIndex = 4;
             this.sheetsCSSFSSScheduleLabel.Text = "Schedule To Use:";
-            this.sheetsCSSFSSScheduleLabel.UseWaitCursor = true;
+            this.sheetsCSSFSSScheduleLabel.UseWaitCursor = false;
             // 
             // sheetsCSSFSSetNameLabel
             // 
@@ -5760,7 +5760,7 @@ namespace BARevitTools
             this.sheetsCSSFSSetNameLabel.Size = new System.Drawing.Size(88, 13);
             this.sheetsCSSFSSetNameLabel.TabIndex = 4;
             this.sheetsCSSFSSetNameLabel.Text = "Sheet Set Name:";
-            this.sheetsCSSFSSetNameLabel.UseWaitCursor = true;
+            this.sheetsCSSFSSetNameLabel.UseWaitCursor = false;
             // 
             // sheetsCSSFSSetNameTextBox
             // 
@@ -5771,7 +5771,7 @@ namespace BARevitTools
             this.sheetsCSSFSSetNameTextBox.Size = new System.Drawing.Size(479, 20);
             this.sheetsCSSFSSetNameTextBox.TabIndex = 3;
             this.sheetsCSSFSSetNameTextBox.Text = "<Sheet Set Name>";
-            this.sheetsCSSFSSetNameTextBox.UseWaitCursor = true;
+            this.sheetsCSSFSSetNameTextBox.UseWaitCursor = false;
             // 
             // sheetsCSSFSScheduleComboBox
             // 
@@ -5783,7 +5783,7 @@ namespace BARevitTools
             this.sheetsCSSFSScheduleComboBox.Size = new System.Drawing.Size(479, 21);
             this.sheetsCSSFSScheduleComboBox.TabIndex = 2;
             this.sheetsCSSFSScheduleComboBox.Text = "<Schedule Name>";
-            this.sheetsCSSFSScheduleComboBox.UseWaitCursor = true;
+            this.sheetsCSSFSScheduleComboBox.UseWaitCursor = false;
             // 
             // sheetsCSSFSRunButton
             // 
@@ -5793,7 +5793,7 @@ namespace BARevitTools
             this.sheetsCSSFSRunButton.TabIndex = 1;
             this.sheetsCSSFSRunButton.Text = "RUN";
             this.sheetsCSSFSRunButton.UseVisualStyleBackColor = true;
-            this.sheetsCSSFSRunButton.UseWaitCursor = true;
+            this.sheetsCSSFSRunButton.UseWaitCursor = false;
             this.sheetsCSSFSRunButton.Click += new System.EventHandler(this.SheetsCSSFSRunButton_Click);
             // 
             // viewsTab
@@ -5808,7 +5808,7 @@ namespace BARevitTools
             this.viewsTab.TabIndex = 1;
             this.viewsTab.Text = "Views";
             this.viewsTab.UseVisualStyleBackColor = true;
-            this.viewsTab.UseWaitCursor = true;
+            this.viewsTab.UseWaitCursor = false;
             // 
             // viewsTabLayoutPanel
             // 
@@ -5826,7 +5826,7 @@ namespace BARevitTools
             this.viewsTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.viewsTabLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.viewsTabLayoutPanel.TabIndex = 14;
-            this.viewsTabLayoutPanel.UseWaitCursor = true;
+            this.viewsTabLayoutPanel.UseWaitCursor = false;
             // 
             // viewsToolStrip
             // 
@@ -5844,7 +5844,7 @@ namespace BARevitTools
             this.viewsToolStrip.Stretch = true;
             this.viewsToolStrip.TabIndex = 1;
             this.viewsToolStrip.Text = "toolStrip1";
-            this.viewsToolStrip.UseWaitCursor = true;
+            this.viewsToolStrip.UseWaitCursor = false;
             // 
             // viewsCEPRButton
             // 
@@ -5912,7 +5912,7 @@ namespace BARevitTools
             this.viewsToolsPanel.Name = "viewsToolsPanel";
             this.viewsToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.viewsToolsPanel.TabIndex = 2;
-            this.viewsToolsPanel.UseWaitCursor = true;
+            this.viewsToolsPanel.UseWaitCursor = false;
             // 
             // viewsCEPRLayoutPanel
             // 
@@ -5931,7 +5931,7 @@ namespace BARevitTools
             this.viewsCEPRLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.viewsCEPRLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.viewsCEPRLayoutPanel.TabIndex = 6;
-            this.viewsCEPRLayoutPanel.UseWaitCursor = true;
+            this.viewsCEPRLayoutPanel.UseWaitCursor = false;
             this.viewsCEPRLayoutPanel.Visible = false;
             // 
             // viewsCEPRControlsPanel
@@ -5946,7 +5946,7 @@ namespace BARevitTools
             this.viewsCEPRControlsPanel.Name = "viewsCEPRControlsPanel";
             this.viewsCEPRControlsPanel.Size = new System.Drawing.Size(710, 125);
             this.viewsCEPRControlsPanel.TabIndex = 2;
-            this.viewsCEPRControlsPanel.UseWaitCursor = true;
+            this.viewsCEPRControlsPanel.UseWaitCursor = false;
             // 
             // viewsCEPRRunButton
             // 
@@ -5957,7 +5957,7 @@ namespace BARevitTools
             this.viewsCEPRRunButton.TabIndex = 13;
             this.viewsCEPRRunButton.Text = "RUN";
             this.viewsCEPRRunButton.UseVisualStyleBackColor = true;
-            this.viewsCEPRRunButton.UseWaitCursor = true;
+            this.viewsCEPRRunButton.UseWaitCursor = false;
             this.viewsCEPRRunButton.Click += new System.EventHandler(this.ViewsCEPRRunButton_Click);
             // 
             // viewsCEPROverrideCheckBox
@@ -5969,7 +5969,7 @@ namespace BARevitTools
             this.viewsCEPROverrideCheckBox.TabIndex = 12;
             this.viewsCEPROverrideCheckBox.Text = "Override Viewport Boundary";
             this.viewsCEPROverrideCheckBox.UseVisualStyleBackColor = true;
-            this.viewsCEPROverrideCheckBox.UseWaitCursor = true;
+            this.viewsCEPROverrideCheckBox.UseWaitCursor = false;
             // 
             // viewsCEPRCropCheckBox
             // 
@@ -5980,7 +5980,7 @@ namespace BARevitTools
             this.viewsCEPRCropCheckBox.TabIndex = 12;
             this.viewsCEPRCropCheckBox.Text = "Crop Viewport Boundary";
             this.viewsCEPRCropCheckBox.UseVisualStyleBackColor = true;
-            this.viewsCEPRCropCheckBox.UseWaitCursor = true;
+            this.viewsCEPRCropCheckBox.UseWaitCursor = false;
             // 
             // viewsCEPRElevationComboBox
             // 
@@ -5993,7 +5993,7 @@ namespace BARevitTools
             this.viewsCEPRElevationComboBox.Size = new System.Drawing.Size(153, 21);
             this.viewsCEPRElevationComboBox.TabIndex = 10;
             this.viewsCEPRElevationComboBox.Text = "<Select Elevation Type>";
-            this.viewsCEPRElevationComboBox.UseWaitCursor = true;
+            this.viewsCEPRElevationComboBox.UseWaitCursor = false;
             // 
             // viewsCEPRInstructionsPanel
             // 
@@ -6004,7 +6004,7 @@ namespace BARevitTools
             this.viewsCEPRInstructionsPanel.Name = "viewsCEPRInstructionsPanel";
             this.viewsCEPRInstructionsPanel.Size = new System.Drawing.Size(710, 184);
             this.viewsCEPRInstructionsPanel.TabIndex = 0;
-            this.viewsCEPRInstructionsPanel.UseWaitCursor = true;
+            this.viewsCEPRInstructionsPanel.UseWaitCursor = false;
             // 
             // viewsCEPRInstructionsTextBox
             // 
@@ -6018,7 +6018,7 @@ namespace BARevitTools
             this.viewsCEPRInstructionsTextBox.Size = new System.Drawing.Size(710, 184);
             this.viewsCEPRInstructionsTextBox.TabIndex = 14;
             this.viewsCEPRInstructionsTextBox.Text = resources.GetString("viewsCEPRInstructionsTextBox.Text");
-            this.viewsCEPRInstructionsTextBox.UseWaitCursor = true;
+            this.viewsCEPRInstructionsTextBox.UseWaitCursor = false;
             // 
             // viewsCEPRUrlPanel
             // 
@@ -6030,7 +6030,7 @@ namespace BARevitTools
             this.viewsCEPRUrlPanel.Name = "viewsCEPRUrlPanel";
             this.viewsCEPRUrlPanel.Size = new System.Drawing.Size(710, 30);
             this.viewsCEPRUrlPanel.TabIndex = 3;
-            this.viewsCEPRUrlPanel.UseWaitCursor = true;
+            this.viewsCEPRUrlPanel.UseWaitCursor = false;
             // 
             // viewsCEPRUrlLabel
             // 
@@ -6041,7 +6041,7 @@ namespace BARevitTools
             this.viewsCEPRUrlLabel.TabIndex = 1;
             this.viewsCEPRUrlLabel.Text = "(Video showing how to use the Dynamo version of this tool. Same principles apply)" +
     "";
-            this.viewsCEPRUrlLabel.UseWaitCursor = true;
+            this.viewsCEPRUrlLabel.UseWaitCursor = false;
             // 
             // viewsCEPRUrlLinkLabel
             // 
@@ -6053,7 +6053,7 @@ namespace BARevitTools
             this.viewsCEPRUrlLinkLabel.TabIndex = 0;
             this.viewsCEPRUrlLinkLabel.TabStop = true;
             this.viewsCEPRUrlLinkLabel.Text = "Automate Interior Elevations";
-            this.viewsCEPRUrlLinkLabel.UseWaitCursor = true;
+            this.viewsCEPRUrlLinkLabel.UseWaitCursor = false;
             this.viewsCEPRUrlLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ViewsCEPRUrlLinkLabel_LinkClicked);
             // 
             // viewsHNIECLayoutPanel
@@ -6071,7 +6071,7 @@ namespace BARevitTools
             this.viewsHNIECLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.viewsHNIECLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.viewsHNIECLayoutPanel.TabIndex = 15;
-            this.viewsHNIECLayoutPanel.UseWaitCursor = true;
+            this.viewsHNIECLayoutPanel.UseWaitCursor = false;
             this.viewsHNIECLayoutPanel.Visible = false;
             // 
             // viewsHNIECInstructionsPanel
@@ -6083,7 +6083,7 @@ namespace BARevitTools
             this.viewsHNIECInstructionsPanel.Name = "viewsHNIECInstructionsPanel";
             this.viewsHNIECInstructionsPanel.Size = new System.Drawing.Size(710, 40);
             this.viewsHNIECInstructionsPanel.TabIndex = 0;
-            this.viewsHNIECInstructionsPanel.UseWaitCursor = true;
+            this.viewsHNIECInstructionsPanel.UseWaitCursor = false;
             // 
             // viewsHNIECBInstructions
             // 
@@ -6097,7 +6097,7 @@ namespace BARevitTools
             this.viewsHNIECBInstructions.TabIndex = 8;
             this.viewsHNIECBInstructions.Text = "This script will turn off the crop boundaries of elevation views without \"Interio" +
     "r\" in their viewport type name.";
-            this.viewsHNIECBInstructions.UseWaitCursor = true;
+            this.viewsHNIECBInstructions.UseWaitCursor = false;
             // 
             // viewsHNIECControlsPanel
             // 
@@ -6108,7 +6108,7 @@ namespace BARevitTools
             this.viewsHNIECControlsPanel.Name = "viewsHNIECControlsPanel";
             this.viewsHNIECControlsPanel.Size = new System.Drawing.Size(710, 299);
             this.viewsHNIECControlsPanel.TabIndex = 1;
-            this.viewsHNIECControlsPanel.UseWaitCursor = true;
+            this.viewsHNIECControlsPanel.UseWaitCursor = false;
             // 
             // viewsHNIECBRunButton
             // 
@@ -6119,7 +6119,7 @@ namespace BARevitTools
             this.viewsHNIECBRunButton.TabIndex = 13;
             this.viewsHNIECBRunButton.Text = "RUN";
             this.viewsHNIECBRunButton.UseVisualStyleBackColor = true;
-            this.viewsHNIECBRunButton.UseWaitCursor = true;
+            this.viewsHNIECBRunButton.UseWaitCursor = false;
             this.viewsHNIECBRunButton.Click += new System.EventHandler(this.ViewsHNIECBRunButton_Click);
             // 
             // viewsOICBLayoutPanel
@@ -6137,7 +6137,7 @@ namespace BARevitTools
             this.viewsOICBLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.viewsOICBLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.viewsOICBLayoutPanel.TabIndex = 6;
-            this.viewsOICBLayoutPanel.UseWaitCursor = true;
+            this.viewsOICBLayoutPanel.UseWaitCursor = false;
             this.viewsOICBLayoutPanel.Visible = false;
             // 
             // viewsOICBInstructionsPanel
@@ -6149,7 +6149,7 @@ namespace BARevitTools
             this.viewsOICBInstructionsPanel.Name = "viewsOICBInstructionsPanel";
             this.viewsOICBInstructionsPanel.Size = new System.Drawing.Size(710, 40);
             this.viewsOICBInstructionsPanel.TabIndex = 0;
-            this.viewsOICBInstructionsPanel.UseWaitCursor = true;
+            this.viewsOICBInstructionsPanel.UseWaitCursor = false;
             // 
             // viewsOICBInstructionsLabel
             // 
@@ -6163,7 +6163,7 @@ namespace BARevitTools
             this.viewsOICBInstructionsLabel.TabIndex = 8;
             this.viewsOICBInstructionsLabel.Text = "This script will override the crop boundary of Interior Elevation type viewports " +
     "to match the standard.";
-            this.viewsOICBInstructionsLabel.UseWaitCursor = true;
+            this.viewsOICBInstructionsLabel.UseWaitCursor = false;
             // 
             // viewsOICBControlsPanel
             // 
@@ -6174,7 +6174,7 @@ namespace BARevitTools
             this.viewsOICBControlsPanel.Name = "viewsOICBControlsPanel";
             this.viewsOICBControlsPanel.Size = new System.Drawing.Size(710, 299);
             this.viewsOICBControlsPanel.TabIndex = 1;
-            this.viewsOICBControlsPanel.UseWaitCursor = true;
+            this.viewsOICBControlsPanel.UseWaitCursor = false;
             // 
             // elemViewsOCIBRunButton
             // 
@@ -6185,7 +6185,7 @@ namespace BARevitTools
             this.elemViewsOCIBRunButton.TabIndex = 13;
             this.elemViewsOCIBRunButton.Text = "RUN";
             this.elemViewsOCIBRunButton.UseVisualStyleBackColor = true;
-            this.elemViewsOCIBRunButton.UseWaitCursor = true;
+            this.elemViewsOCIBRunButton.UseWaitCursor = false;
             this.elemViewsOCIBRunButton.Click += new System.EventHandler(this.ViewsOCIBRunButton_Click);
             // 
             // managementTab
@@ -6199,7 +6199,7 @@ namespace BARevitTools
             this.managementTab.Size = new System.Drawing.Size(734, 437);
             this.managementTab.TabIndex = 2;
             this.managementTab.Text = "Management";
-            this.managementTab.UseWaitCursor = true;
+            this.managementTab.UseWaitCursor = false;
             // 
             // managmentTabControl
             // 
@@ -6217,7 +6217,7 @@ namespace BARevitTools
             this.managmentTabControl.SelectedIndex = 0;
             this.managmentTabControl.Size = new System.Drawing.Size(728, 431);
             this.managmentTabControl.TabIndex = 0;
-            this.managmentTabControl.UseWaitCursor = true;
+            this.managmentTabControl.UseWaitCursor = false;
             // 
             // dataTab
             // 
@@ -6231,7 +6231,7 @@ namespace BARevitTools
             this.dataTab.TabIndex = 0;
             this.dataTab.Text = "Data";
             this.dataTab.UseVisualStyleBackColor = true;
-            this.dataTab.UseWaitCursor = true;
+            this.dataTab.UseWaitCursor = false;
             // 
             // dataTabLayoutPanel
             // 
@@ -6247,7 +6247,7 @@ namespace BARevitTools
             this.dataTabLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.dataTabLayoutPanel.Size = new System.Drawing.Size(710, 392);
             this.dataTabLayoutPanel.TabIndex = 0;
-            this.dataTabLayoutPanel.UseWaitCursor = true;
+            this.dataTabLayoutPanel.UseWaitCursor = false;
             // 
             // dataToolStrip
             // 
@@ -6263,7 +6263,7 @@ namespace BARevitTools
             this.dataToolStrip.Size = new System.Drawing.Size(710, 53);
             this.dataToolStrip.TabIndex = 0;
             this.dataToolStrip.Text = "toolStrip1";
-            this.dataToolStrip.UseWaitCursor = true;
+            this.dataToolStrip.UseWaitCursor = false;
             // 
             // dataEPIButton
             // 
@@ -6293,7 +6293,7 @@ namespace BARevitTools
             this.dataToolsPanel.Name = "dataToolsPanel";
             this.dataToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.dataToolsPanel.TabIndex = 1;
-            this.dataToolsPanel.UseWaitCursor = true;
+            this.dataToolsPanel.UseWaitCursor = false;
             // 
             // dataEPILayoutPanel
             // 
@@ -6312,7 +6312,7 @@ namespace BARevitTools
             this.dataEPILayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.dataEPILayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.dataEPILayoutPanel.TabIndex = 14;
-            this.dataEPILayoutPanel.UseWaitCursor = true;
+            this.dataEPILayoutPanel.UseWaitCursor = false;
             this.dataEPILayoutPanel.Visible = false;
             // 
             // dataEPIInstructionsPanel
@@ -6324,7 +6324,7 @@ namespace BARevitTools
             this.dataEPIInstructionsPanel.Name = "dataEPIInstructionsPanel";
             this.dataEPIInstructionsPanel.Size = new System.Drawing.Size(710, 140);
             this.dataEPIInstructionsPanel.TabIndex = 0;
-            this.dataEPIInstructionsPanel.UseWaitCursor = true;
+            this.dataEPIInstructionsPanel.UseWaitCursor = false;
             // 
             // dataEPIInstructionsLabel
             // 
@@ -6335,7 +6335,7 @@ namespace BARevitTools
             this.dataEPIInstructionsLabel.Size = new System.Drawing.Size(710, 140);
             this.dataEPIInstructionsLabel.TabIndex = 0;
             this.dataEPIInstructionsLabel.Text = resources.GetString("dataEPIInstructionsLabel.Text");
-            this.dataEPIInstructionsLabel.UseWaitCursor = true;
+            this.dataEPIInstructionsLabel.UseWaitCursor = false;
             // 
             // dataEPIControlsPanel
             // 
@@ -6353,7 +6353,7 @@ namespace BARevitTools
             this.dataEPIControlsPanel.Name = "dataEPIControlsPanel";
             this.dataEPIControlsPanel.Size = new System.Drawing.Size(710, 199);
             this.dataEPIControlsPanel.TabIndex = 1;
-            this.dataEPIControlsPanel.UseWaitCursor = true;
+            this.dataEPIControlsPanel.UseWaitCursor = false;
             // 
             // dataEPIDPIComboBox
             // 
@@ -6367,7 +6367,7 @@ namespace BARevitTools
             this.dataEPIDPIComboBox.Name = "dataEPIDPIComboBox";
             this.dataEPIDPIComboBox.Size = new System.Drawing.Size(75, 21);
             this.dataEPIDPIComboBox.TabIndex = 5;
-            this.dataEPIDPIComboBox.UseWaitCursor = true;
+            this.dataEPIDPIComboBox.UseWaitCursor = false;
             // 
             // dataEPIDirectorySelectedLabel
             // 
@@ -6377,7 +6377,7 @@ namespace BARevitTools
             this.dataEPIDirectorySelectedLabel.Name = "dataEPIDirectorySelectedLabel";
             this.dataEPIDirectorySelectedLabel.Size = new System.Drawing.Size(363, 23);
             this.dataEPIDirectorySelectedLabel.TabIndex = 4;
-            this.dataEPIDirectorySelectedLabel.UseWaitCursor = true;
+            this.dataEPIDirectorySelectedLabel.UseWaitCursor = false;
             // 
             // dataEPISaveTextBox
             // 
@@ -6385,7 +6385,7 @@ namespace BARevitTools
             this.dataEPISaveTextBox.Name = "dataEPISaveTextBox";
             this.dataEPISaveTextBox.Size = new System.Drawing.Size(444, 20);
             this.dataEPISaveTextBox.TabIndex = 3;
-            this.dataEPISaveTextBox.UseWaitCursor = true;
+            this.dataEPISaveTextBox.UseWaitCursor = false;
             // 
             // dataEPIRunButton
             // 
@@ -6395,7 +6395,7 @@ namespace BARevitTools
             this.dataEPIRunButton.TabIndex = 2;
             this.dataEPIRunButton.Text = "RUN";
             this.dataEPIRunButton.UseVisualStyleBackColor = true;
-            this.dataEPIRunButton.UseWaitCursor = true;
+            this.dataEPIRunButton.UseWaitCursor = false;
             this.dataEPIRunButton.Click += new System.EventHandler(this.DataEPIRunButton_Click);
             // 
             // dataEPIDirectoryButton
@@ -6406,7 +6406,7 @@ namespace BARevitTools
             this.dataEPIDirectoryButton.TabIndex = 2;
             this.dataEPIDirectoryButton.Text = "SELECT";
             this.dataEPIDirectoryButton.UseVisualStyleBackColor = true;
-            this.dataEPIDirectoryButton.UseWaitCursor = true;
+            this.dataEPIDirectoryButton.UseWaitCursor = false;
             this.dataEPIDirectoryButton.Click += new System.EventHandler(this.DataEPIDirectoryButton_Click);
             // 
             // dataEPIDPILabel
@@ -6417,7 +6417,7 @@ namespace BARevitTools
             this.dataEPIDPILabel.Size = new System.Drawing.Size(96, 13);
             this.dataEPIDPILabel.TabIndex = 1;
             this.dataEPIDPILabel.Text = "Set the image DPI:";
-            this.dataEPIDPILabel.UseWaitCursor = true;
+            this.dataEPIDPILabel.UseWaitCursor = false;
             // 
             // dataEPIDirectoryLabel
             // 
@@ -6427,7 +6427,7 @@ namespace BARevitTools
             this.dataEPIDirectoryLabel.Size = new System.Drawing.Size(113, 13);
             this.dataEPIDirectoryLabel.TabIndex = 1;
             this.dataEPIDirectoryLabel.Text = "Set the save directory:";
-            this.dataEPIDirectoryLabel.UseWaitCursor = true;
+            this.dataEPIDirectoryLabel.UseWaitCursor = false;
             // 
             // dataEPINameLabel
             // 
@@ -6437,7 +6437,7 @@ namespace BARevitTools
             this.dataEPINameLabel.Size = new System.Drawing.Size(130, 13);
             this.dataEPINameLabel.TabIndex = 0;
             this.dataEPINameLabel.Text = "Set the image save name:";
-            this.dataEPINameLabel.UseWaitCursor = true;
+            this.dataEPINameLabel.UseWaitCursor = false;
             // 
             // documentsTab
             // 
@@ -6450,7 +6450,7 @@ namespace BARevitTools
             this.documentsTab.TabIndex = 1;
             this.documentsTab.Text = "Documents";
             this.documentsTab.UseVisualStyleBackColor = true;
-            this.documentsTab.UseWaitCursor = true;
+            this.documentsTab.UseWaitCursor = false;
             // 
             // documentsLayoutPanel
             // 
@@ -6466,7 +6466,7 @@ namespace BARevitTools
             this.documentsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.documentsLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.documentsLayoutPanel.TabIndex = 0;
-            this.documentsLayoutPanel.UseWaitCursor = true;
+            this.documentsLayoutPanel.UseWaitCursor = false;
             // 
             // documentsToolStrip
             // 
@@ -6487,7 +6487,7 @@ namespace BARevitTools
             this.documentsToolStrip.Stretch = true;
             this.documentsToolStrip.TabIndex = 2;
             this.documentsToolStrip.Text = "mgmtGraphicsToolStrip";
-            this.documentsToolStrip.UseWaitCursor = true;
+            this.documentsToolStrip.UseWaitCursor = false;
             // 
             // documentsCTSButton
             // 
@@ -6531,7 +6531,7 @@ namespace BARevitTools
             this.documentsToolsPanel.Name = "documentsToolsPanel";
             this.documentsToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.documentsToolsPanel.TabIndex = 3;
-            this.documentsToolsPanel.UseWaitCursor = true;
+            this.documentsToolsPanel.UseWaitCursor = false;
             // 
             // documentsCTSPanel
             // 
@@ -6542,7 +6542,7 @@ namespace BARevitTools
             this.documentsCTSPanel.Name = "documentsCTSPanel";
             this.documentsCTSPanel.Size = new System.Drawing.Size(726, 350);
             this.documentsCTSPanel.TabIndex = 3;
-            this.documentsCTSPanel.UseWaitCursor = true;
+            this.documentsCTSPanel.UseWaitCursor = false;
             this.documentsCTSPanel.Visible = false;
             // 
             // documentsCTSRun
@@ -6553,7 +6553,7 @@ namespace BARevitTools
             this.documentsCTSRun.TabIndex = 9;
             this.documentsCTSRun.Text = "RUN";
             this.documentsCTSRun.UseVisualStyleBackColor = true;
-            this.documentsCTSRun.UseWaitCursor = true;
+            this.documentsCTSRun.UseWaitCursor = false;
             this.documentsCTSRun.Click += new System.EventHandler(this.DocumentsCTSRun_Click);
             // 
             // documentsCTSInstructions
@@ -6568,7 +6568,7 @@ namespace BARevitTools
             this.documentsCTSInstructions.Size = new System.Drawing.Size(726, 59);
             this.documentsCTSInstructions.TabIndex = 8;
             this.documentsCTSInstructions.Text = resources.GetString("documentsCTSInstructions.Text");
-            this.documentsCTSInstructions.UseWaitCursor = true;
+            this.documentsCTSInstructions.UseWaitCursor = false;
             // 
             // graphicsTab
             // 
@@ -6580,7 +6580,7 @@ namespace BARevitTools
             this.graphicsTab.TabIndex = 2;
             this.graphicsTab.Text = "Graphics";
             this.graphicsTab.UseVisualStyleBackColor = true;
-            this.graphicsTab.UseWaitCursor = true;
+            this.graphicsTab.UseWaitCursor = false;
             // 
             // miscTab
             // 
@@ -6593,7 +6593,7 @@ namespace BARevitTools
             this.miscTab.TabIndex = 3;
             this.miscTab.Text = "Misc";
             this.miscTab.UseVisualStyleBackColor = true;
-            this.miscTab.UseWaitCursor = true;
+            this.miscTab.UseWaitCursor = false;
             // 
             // miscToolsLayoutPanel
             // 
@@ -6610,7 +6610,7 @@ namespace BARevitTools
             this.miscToolsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.miscToolsLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.miscToolsLayoutPanel.TabIndex = 0;
-            this.miscToolsLayoutPanel.UseWaitCursor = true;
+            this.miscToolsLayoutPanel.UseWaitCursor = false;
             // 
             // miscToolStrip
             // 
@@ -6627,7 +6627,7 @@ namespace BARevitTools
             this.miscToolStrip.Size = new System.Drawing.Size(716, 53);
             this.miscToolStrip.TabIndex = 0;
             this.miscToolStrip.Text = "toolStrip1";
-            this.miscToolStrip.UseWaitCursor = true;
+            this.miscToolStrip.UseWaitCursor = false;
             // 
             // miscEDVButton
             // 
@@ -6671,7 +6671,7 @@ namespace BARevitTools
             this.miscToolsPanel.Name = "miscToolsPanel";
             this.miscToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.miscToolsPanel.TabIndex = 1;
-            this.miscToolsPanel.UseWaitCursor = true;
+            this.miscToolsPanel.UseWaitCursor = false;
             // 
             // miscEDVLayoutPanel
             // 
@@ -6694,7 +6694,7 @@ namespace BARevitTools
             this.miscEDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.miscEDVLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.miscEDVLayoutPanel.TabIndex = 6;
-            this.miscEDVLayoutPanel.UseWaitCursor = true;
+            this.miscEDVLayoutPanel.UseWaitCursor = false;
             this.miscEDVLayoutPanel.Visible = false;
             // 
             // miscEDVInstructionsPanel
@@ -6707,7 +6707,7 @@ namespace BARevitTools
             this.miscEDVInstructionsPanel.Name = "miscEDVInstructionsPanel";
             this.miscEDVInstructionsPanel.Size = new System.Drawing.Size(716, 75);
             this.miscEDVInstructionsPanel.TabIndex = 0;
-            this.miscEDVInstructionsPanel.UseWaitCursor = true;
+            this.miscEDVInstructionsPanel.UseWaitCursor = false;
             // 
             // miscEDVInstructionsTextBox
             // 
@@ -6720,7 +6720,7 @@ namespace BARevitTools
             this.miscEDVInstructionsTextBox.Size = new System.Drawing.Size(716, 75);
             this.miscEDVInstructionsTextBox.TabIndex = 0;
             this.miscEDVInstructionsTextBox.Text = resources.GetString("miscEDVInstructionsTextBox.Text");
-            this.miscEDVInstructionsTextBox.UseWaitCursor = true;
+            this.miscEDVInstructionsTextBox.UseWaitCursor = false;
             // 
             // miscEDVRunPanel
             // 
@@ -6733,7 +6733,7 @@ namespace BARevitTools
             this.miscEDVRunPanel.Name = "miscEDVRunPanel";
             this.miscEDVRunPanel.Size = new System.Drawing.Size(716, 35);
             this.miscEDVRunPanel.TabIndex = 1;
-            this.miscEDVRunPanel.UseWaitCursor = true;
+            this.miscEDVRunPanel.UseWaitCursor = false;
             // 
             // miscEDVProgressBar
             // 
@@ -6744,7 +6744,7 @@ namespace BARevitTools
             this.miscEDVProgressBar.Name = "miscEDVProgressBar";
             this.miscEDVProgressBar.Size = new System.Drawing.Size(629, 23);
             this.miscEDVProgressBar.TabIndex = 1;
-            this.miscEDVProgressBar.UseWaitCursor = true;
+            this.miscEDVProgressBar.UseWaitCursor = false;
             this.miscEDVProgressBar.Visible = false;
             // 
             // miscEDVRunButton
@@ -6756,7 +6756,7 @@ namespace BARevitTools
             this.miscEDVRunButton.TabIndex = 0;
             this.miscEDVRunButton.Text = "RUN";
             this.miscEDVRunButton.UseVisualStyleBackColor = true;
-            this.miscEDVRunButton.UseWaitCursor = true;
+            this.miscEDVRunButton.UseWaitCursor = false;
             this.miscEDVRunButton.Click += new System.EventHandler(this.MiscEDVRunButton_Click);
             // 
             // miscEDVDirectoryPanel
@@ -6770,7 +6770,7 @@ namespace BARevitTools
             this.miscEDVDirectoryPanel.Name = "miscEDVDirectoryPanel";
             this.miscEDVDirectoryPanel.Size = new System.Drawing.Size(716, 35);
             this.miscEDVDirectoryPanel.TabIndex = 2;
-            this.miscEDVDirectoryPanel.UseWaitCursor = true;
+            this.miscEDVDirectoryPanel.UseWaitCursor = false;
             // 
             // miscEDVSelectDirectoryTextBox
             // 
@@ -6782,7 +6782,7 @@ namespace BARevitTools
             this.miscEDVSelectDirectoryTextBox.ReadOnly = true;
             this.miscEDVSelectDirectoryTextBox.Size = new System.Drawing.Size(603, 20);
             this.miscEDVSelectDirectoryTextBox.TabIndex = 1;
-            this.miscEDVSelectDirectoryTextBox.UseWaitCursor = true;
+            this.miscEDVSelectDirectoryTextBox.UseWaitCursor = false;
             // 
             // miscEDVSelectDirectoryButton
             // 
@@ -6792,7 +6792,7 @@ namespace BARevitTools
             this.miscEDVSelectDirectoryButton.TabIndex = 0;
             this.miscEDVSelectDirectoryButton.Text = "Select Directory";
             this.miscEDVSelectDirectoryButton.UseVisualStyleBackColor = true;
-            this.miscEDVSelectDirectoryButton.UseWaitCursor = true;
+            this.miscEDVSelectDirectoryButton.UseWaitCursor = false;
             this.miscEDVSelectDirectoryButton.Click += new System.EventHandler(this.MiscEDVSelectDirectoryButton_Click);
             // 
             // miscEDVDataGridView
@@ -6808,7 +6808,7 @@ namespace BARevitTools
             this.miscEDVDataGridView.RowHeadersVisible = false;
             this.miscEDVDataGridView.Size = new System.Drawing.Size(545, 200);
             this.miscEDVDataGridView.TabIndex = 3;
-            this.miscEDVDataGridView.UseWaitCursor = true;
+            this.miscEDVDataGridView.UseWaitCursor = false;
             this.miscEDVDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MiscEDVDataGridView_CellContentClick);
             // 
             // miscEDVControlsPanel
@@ -6824,7 +6824,7 @@ namespace BARevitTools
             this.miscEDVControlsPanel.Name = "miscEDVControlsPanel";
             this.miscEDVControlsPanel.Size = new System.Drawing.Size(171, 200);
             this.miscEDVControlsPanel.TabIndex = 4;
-            this.miscEDVControlsPanel.UseWaitCursor = true;
+            this.miscEDVControlsPanel.UseWaitCursor = false;
             // 
             // miscEDVFilterLabel
             // 
@@ -6835,7 +6835,7 @@ namespace BARevitTools
             this.miscEDVFilterLabel.Size = new System.Drawing.Size(39, 13);
             this.miscEDVFilterLabel.TabIndex = 8;
             this.miscEDVFilterLabel.Text = "Filter:";
-            this.miscEDVFilterLabel.UseWaitCursor = true;
+            this.miscEDVFilterLabel.UseWaitCursor = false;
             // 
             // miscEDVFilterStringTextBox
             // 
@@ -6846,7 +6846,7 @@ namespace BARevitTools
             this.miscEDVFilterStringTextBox.Size = new System.Drawing.Size(162, 20);
             this.miscEDVFilterStringTextBox.TabIndex = 7;
             this.miscEDVFilterStringTextBox.Text = "<Search String>";
-            this.miscEDVFilterStringTextBox.UseWaitCursor = true;
+            this.miscEDVFilterStringTextBox.UseWaitCursor = false;
             this.miscEDVFilterStringTextBox.TextChanged += new System.EventHandler(this.MiscEDVFilterStringTextBox_TextChanged);
             // 
             // miscEDVFilterConditionComboBox
@@ -6859,7 +6859,7 @@ namespace BARevitTools
             this.miscEDVFilterConditionComboBox.Name = "miscEDVFilterConditionComboBox";
             this.miscEDVFilterConditionComboBox.Size = new System.Drawing.Size(162, 21);
             this.miscEDVFilterConditionComboBox.TabIndex = 6;
-            this.miscEDVFilterConditionComboBox.UseWaitCursor = true;
+            this.miscEDVFilterConditionComboBox.UseWaitCursor = false;
             this.miscEDVFilterConditionComboBox.SelectedIndexChanged += new System.EventHandler(this.MiscEDVFilterConditionComboBox_SelectedIndexChanged);
             // 
             // miscEDVSelectNoneButton
@@ -6870,7 +6870,7 @@ namespace BARevitTools
             this.miscEDVSelectNoneButton.TabIndex = 0;
             this.miscEDVSelectNoneButton.Text = "Select None";
             this.miscEDVSelectNoneButton.UseVisualStyleBackColor = true;
-            this.miscEDVSelectNoneButton.UseWaitCursor = true;
+            this.miscEDVSelectNoneButton.UseWaitCursor = false;
             this.miscEDVSelectNoneButton.Click += new System.EventHandler(this.MiscEDVSelectNoneButton_Click);
             // 
             // miscEDVSelectAllButton
@@ -6881,7 +6881,7 @@ namespace BARevitTools
             this.miscEDVSelectAllButton.TabIndex = 0;
             this.miscEDVSelectAllButton.Text = "Select All";
             this.miscEDVSelectAllButton.UseVisualStyleBackColor = true;
-            this.miscEDVSelectAllButton.UseWaitCursor = true;
+            this.miscEDVSelectAllButton.UseWaitCursor = false;
             this.miscEDVSelectAllButton.Click += new System.EventHandler(this.MiscEDVSelectAllButton_Click);
             // 
             // qaqcTab
@@ -6895,7 +6895,7 @@ namespace BARevitTools
             this.qaqcTab.TabIndex = 4;
             this.qaqcTab.Text = "QA/QC";
             this.qaqcTab.UseVisualStyleBackColor = true;
-            this.qaqcTab.UseWaitCursor = true;
+            this.qaqcTab.UseWaitCursor = false;
             // 
             // qaqcLayoutPanel
             // 
@@ -6913,7 +6913,7 @@ namespace BARevitTools
             this.qaqcLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.qaqcLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.qaqcLayoutPanel.TabIndex = 12;
-            this.qaqcLayoutPanel.UseWaitCursor = true;
+            this.qaqcLayoutPanel.UseWaitCursor = false;
             // 
             // qaqcToolStrip
             // 
@@ -6936,7 +6936,7 @@ namespace BARevitTools
             this.qaqcToolStrip.Stretch = true;
             this.qaqcToolStrip.TabIndex = 2;
             this.qaqcToolStrip.Text = "mgmtQAQCToolStrip";
-            this.qaqcToolStrip.UseWaitCursor = true;
+            this.qaqcToolStrip.UseWaitCursor = false;
             // 
             // qaqcCapitalizeValuesButton
             // 
@@ -7044,7 +7044,7 @@ namespace BARevitTools
             this.qaqcToolsPanel.Name = "qaqcToolsPanel";
             this.qaqcToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcToolsPanel.TabIndex = 3;
-            this.qaqcToolsPanel.UseWaitCursor = true;
+            this.qaqcToolsPanel.UseWaitCursor = false;
             // 
             // qaqcRFSPLayoutPanel
             // 
@@ -7065,7 +7065,7 @@ namespace BARevitTools
             this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.qaqcRFSPLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcRFSPLayoutPanel.TabIndex = 4;
-            this.qaqcRFSPLayoutPanel.UseWaitCursor = true;
+            this.qaqcRFSPLayoutPanel.UseWaitCursor = false;
             this.qaqcRFSPLayoutPanel.Visible = false;
             // 
             // qaqcRFSPInstructionsTextBox
@@ -7080,7 +7080,7 @@ namespace BARevitTools
             this.qaqcRFSPInstructionsTextBox.Size = new System.Drawing.Size(710, 54);
             this.qaqcRFSPInstructionsTextBox.TabIndex = 1;
             this.qaqcRFSPInstructionsTextBox.Text = resources.GetString("qaqcRFSPInstructionsTextBox.Text");
-            this.qaqcRFSPInstructionsTextBox.UseWaitCursor = true;
+            this.qaqcRFSPInstructionsTextBox.UseWaitCursor = false;
             // 
             // qaqcRFSPParametersListBox
             // 
@@ -7090,7 +7090,7 @@ namespace BARevitTools
             this.qaqcRFSPParametersListBox.Name = "qaqcRFSPParametersListBox";
             this.qaqcRFSPParametersListBox.Size = new System.Drawing.Size(352, 254);
             this.qaqcRFSPParametersListBox.TabIndex = 2;
-            this.qaqcRFSPParametersListBox.UseWaitCursor = true;
+            this.qaqcRFSPParametersListBox.UseWaitCursor = false;
             // 
             // qaqcRFSPToolsPanel
             // 
@@ -7104,7 +7104,7 @@ namespace BARevitTools
             this.qaqcRFSPLayoutPanel.SetRowSpan(this.qaqcRFSPToolsPanel, 2);
             this.qaqcRFSPToolsPanel.Size = new System.Drawing.Size(358, 285);
             this.qaqcRFSPToolsPanel.TabIndex = 0;
-            this.qaqcRFSPToolsPanel.UseWaitCursor = true;
+            this.qaqcRFSPToolsPanel.UseWaitCursor = false;
             // 
             // qaqcRFSPSFamilyLabel
             // 
@@ -7115,7 +7115,7 @@ namespace BARevitTools
             this.qaqcRFSPSFamilyLabel.Size = new System.Drawing.Size(240, 23);
             this.qaqcRFSPSFamilyLabel.TabIndex = 1;
             this.qaqcRFSPSFamilyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.qaqcRFSPSFamilyLabel.UseWaitCursor = true;
+            this.qaqcRFSPSFamilyLabel.UseWaitCursor = false;
             // 
             // qaqcRFSPRunButton
             // 
@@ -7125,7 +7125,7 @@ namespace BARevitTools
             this.qaqcRFSPRunButton.TabIndex = 0;
             this.qaqcRFSPRunButton.Text = "RUN";
             this.qaqcRFSPRunButton.UseVisualStyleBackColor = true;
-            this.qaqcRFSPRunButton.UseWaitCursor = true;
+            this.qaqcRFSPRunButton.UseWaitCursor = false;
             this.qaqcRFSPRunButton.Click += new System.EventHandler(this.QaqcRFSPRunButton_Click);
             // 
             // qaqcRFSPSelectFamilyButton
@@ -7136,7 +7136,7 @@ namespace BARevitTools
             this.qaqcRFSPSelectFamilyButton.TabIndex = 0;
             this.qaqcRFSPSelectFamilyButton.Text = "Select Family";
             this.qaqcRFSPSelectFamilyButton.UseVisualStyleBackColor = true;
-            this.qaqcRFSPSelectFamilyButton.UseWaitCursor = true;
+            this.qaqcRFSPSelectFamilyButton.UseWaitCursor = false;
             this.qaqcRFSPSelectFamilyButton.Click += new System.EventHandler(this.QaqcRFSPSelectFamilyButton_Click);
             // 
             // panel5
@@ -7148,7 +7148,7 @@ namespace BARevitTools
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(358, 25);
             this.panel5.TabIndex = 3;
-            this.panel5.UseWaitCursor = true;
+            this.panel5.UseWaitCursor = false;
             // 
             // label4
             // 
@@ -7159,7 +7159,7 @@ namespace BARevitTools
             this.label4.Size = new System.Drawing.Size(179, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Shared Parameters Evaluated:";
-            this.label4.UseWaitCursor = true;
+            this.label4.UseWaitCursor = false;
             // 
             // qaqcRLSLayoutPanel
             // 
@@ -7181,7 +7181,7 @@ namespace BARevitTools
             this.qaqcRLSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.qaqcRLSLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcRLSLayoutPanel.TabIndex = 10;
-            this.qaqcRLSLayoutPanel.UseWaitCursor = true;
+            this.qaqcRLSLayoutPanel.UseWaitCursor = false;
             this.qaqcRLSLayoutPanel.Visible = false;
             // 
             // qaqcRLSRunPanel
@@ -7195,7 +7195,7 @@ namespace BARevitTools
             this.qaqcRLSRunPanel.Name = "qaqcRLSRunPanel";
             this.qaqcRLSRunPanel.Size = new System.Drawing.Size(732, 35);
             this.qaqcRLSRunPanel.TabIndex = 1;
-            this.qaqcRLSRunPanel.UseWaitCursor = true;
+            this.qaqcRLSRunPanel.UseWaitCursor = false;
             // 
             // qaqcRLSRunButton
             // 
@@ -7206,7 +7206,7 @@ namespace BARevitTools
             this.qaqcRLSRunButton.TabIndex = 4;
             this.qaqcRLSRunButton.Text = "RUN";
             this.qaqcRLSRunButton.UseVisualStyleBackColor = true;
-            this.qaqcRLSRunButton.UseWaitCursor = true;
+            this.qaqcRLSRunButton.UseWaitCursor = false;
             this.qaqcRLSRunButton.Click += new System.EventHandler(this.QaqcRLSRunButton_Click);
             // 
             // qaqcRLSInstructionsTextBox
@@ -7222,7 +7222,7 @@ namespace BARevitTools
             this.qaqcRLSInstructionsTextBox.Size = new System.Drawing.Size(732, 150);
             this.qaqcRLSInstructionsTextBox.TabIndex = 2;
             this.qaqcRLSInstructionsTextBox.Text = resources.GetString("qaqcRLSInstructionsTextBox.Text");
-            this.qaqcRLSInstructionsTextBox.UseWaitCursor = true;
+            this.qaqcRLSInstructionsTextBox.UseWaitCursor = false;
             // 
             // qaqcRLSDataGridView
             // 
@@ -7237,7 +7237,7 @@ namespace BARevitTools
             this.qaqcRLSDataGridView.ReadOnly = true;
             this.qaqcRLSDataGridView.Size = new System.Drawing.Size(482, 130);
             this.qaqcRLSDataGridView.TabIndex = 3;
-            this.qaqcRLSDataGridView.UseWaitCursor = true;
+            this.qaqcRLSDataGridView.UseWaitCursor = false;
             this.qaqcRLSDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QaqcRLSDataGridView_CellContentClick);
             // 
             // qaqcRLSControlsPanel
@@ -7254,7 +7254,7 @@ namespace BARevitTools
             this.qaqcRLSLayoutPanel.SetRowSpan(this.qaqcRLSControlsPanel, 2);
             this.qaqcRLSControlsPanel.Size = new System.Drawing.Size(250, 152);
             this.qaqcRLSControlsPanel.TabIndex = 0;
-            this.qaqcRLSControlsPanel.UseWaitCursor = true;
+            this.qaqcRLSControlsPanel.UseWaitCursor = false;
             // 
             // qaqcRLSReplaceWithLabel
             // 
@@ -7266,7 +7266,7 @@ namespace BARevitTools
             this.qaqcRLSReplaceWithLabel.Size = new System.Drawing.Size(177, 19);
             this.qaqcRLSReplaceWithLabel.TabIndex = 3;
             this.qaqcRLSReplaceWithLabel.Text = "Select Line Style To Replace WIth";
-            this.qaqcRLSReplaceWithLabel.UseWaitCursor = true;
+            this.qaqcRLSReplaceWithLabel.UseWaitCursor = false;
             // 
             // qaqcRLSReplaceLabel
             // 
@@ -7277,7 +7277,7 @@ namespace BARevitTools
             this.qaqcRLSReplaceLabel.Size = new System.Drawing.Size(165, 13);
             this.qaqcRLSReplaceLabel.TabIndex = 3;
             this.qaqcRLSReplaceLabel.Text = "Select Line Style Being Replaced";
-            this.qaqcRLSReplaceLabel.UseWaitCursor = true;
+            this.qaqcRLSReplaceLabel.UseWaitCursor = false;
             // 
             // qaqcRLSReplaceWithComboBox
             // 
@@ -7291,7 +7291,7 @@ namespace BARevitTools
             this.qaqcRLSReplaceWithComboBox.Sorted = true;
             this.qaqcRLSReplaceWithComboBox.TabIndex = 2;
             this.qaqcRLSReplaceWithComboBox.Text = "<With>";
-            this.qaqcRLSReplaceWithComboBox.UseWaitCursor = true;
+            this.qaqcRLSReplaceWithComboBox.UseWaitCursor = false;
             // 
             // qaqcRLSDeleteCheckBox
             // 
@@ -7302,7 +7302,7 @@ namespace BARevitTools
             this.qaqcRLSDeleteCheckBox.TabIndex = 1;
             this.qaqcRLSDeleteCheckBox.Text = "Delete Line Style Being Replaced?";
             this.qaqcRLSDeleteCheckBox.UseVisualStyleBackColor = true;
-            this.qaqcRLSDeleteCheckBox.UseWaitCursor = true;
+            this.qaqcRLSDeleteCheckBox.UseWaitCursor = false;
             // 
             // qaqcRLSReplaceComboBox
             // 
@@ -7316,7 +7316,7 @@ namespace BARevitTools
             this.qaqcRLSReplaceComboBox.Sorted = true;
             this.qaqcRLSReplaceComboBox.TabIndex = 0;
             this.qaqcRLSReplaceComboBox.Text = "<Replace>";
-            this.qaqcRLSReplaceComboBox.UseWaitCursor = true;
+            this.qaqcRLSReplaceComboBox.UseWaitCursor = false;
             this.qaqcRLSReplaceComboBox.SelectedIndexChanged += new System.EventHandler(this.QaqcRLSReplaceComboBox_SelectedIndexChanged);
             // 
             // qaqcRLSUnswitchablePanel
@@ -7329,7 +7329,7 @@ namespace BARevitTools
             this.qaqcRLSUnswitchablePanel.Name = "qaqcRLSUnswitchablePanel";
             this.qaqcRLSUnswitchablePanel.Size = new System.Drawing.Size(482, 30);
             this.qaqcRLSUnswitchablePanel.TabIndex = 4;
-            this.qaqcRLSUnswitchablePanel.UseWaitCursor = true;
+            this.qaqcRLSUnswitchablePanel.UseWaitCursor = false;
             // 
             // label1
             // 
@@ -7340,7 +7340,7 @@ namespace BARevitTools
             this.label1.Size = new System.Drawing.Size(308, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "The Following Groups Have Lines That Could Not Be Switched:";
-            this.label1.UseWaitCursor = true;
+            this.label1.UseWaitCursor = false;
             // 
             // qaqcCSVNPanel
             // 
@@ -7352,7 +7352,7 @@ namespace BARevitTools
             this.qaqcCSVNPanel.Name = "qaqcCSVNPanel";
             this.qaqcCSVNPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcCSVNPanel.TabIndex = 3;
-            this.qaqcCSVNPanel.UseWaitCursor = true;
+            this.qaqcCSVNPanel.UseWaitCursor = false;
             this.qaqcCSVNPanel.Visible = false;
             // 
             // qaqcCSVNRun
@@ -7363,7 +7363,7 @@ namespace BARevitTools
             this.qaqcCSVNRun.TabIndex = 9;
             this.qaqcCSVNRun.Text = "RUN";
             this.qaqcCSVNRun.UseVisualStyleBackColor = true;
-            this.qaqcCSVNRun.UseWaitCursor = true;
+            this.qaqcCSVNRun.UseWaitCursor = false;
             this.qaqcCSVNRun.Click += new System.EventHandler(this.QaqcCSVNRun_Click);
             // 
             // qaqcCTVNInstructions
@@ -7377,7 +7377,7 @@ namespace BARevitTools
             this.qaqcCTVNInstructions.Size = new System.Drawing.Size(716, 53);
             this.qaqcCTVNInstructions.TabIndex = 8;
             this.qaqcCTVNInstructions.Text = "This script will capitalize the names of sheets and views on sheets.";
-            this.qaqcCTVNInstructions.UseWaitCursor = true;
+            this.qaqcCTVNInstructions.UseWaitCursor = false;
             // 
             // qaqcCSVLayoutPanel
             // 
@@ -7394,7 +7394,7 @@ namespace BARevitTools
             this.qaqcCSVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.qaqcCSVLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcCSVLayoutPanel.TabIndex = 11;
-            this.qaqcCSVLayoutPanel.UseWaitCursor = true;
+            this.qaqcCSVLayoutPanel.UseWaitCursor = false;
             this.qaqcCSVLayoutPanel.Visible = false;
             // 
             // qaqcCSVControlsPanel
@@ -7406,7 +7406,7 @@ namespace BARevitTools
             this.qaqcCSVControlsPanel.Name = "qaqcCSVControlsPanel";
             this.qaqcCSVControlsPanel.Size = new System.Drawing.Size(716, 286);
             this.qaqcCSVControlsPanel.TabIndex = 0;
-            this.qaqcCSVControlsPanel.UseWaitCursor = true;
+            this.qaqcCSVControlsPanel.UseWaitCursor = false;
             // 
             // qaqcCSVRunButton
             // 
@@ -7416,7 +7416,7 @@ namespace BARevitTools
             this.qaqcCSVRunButton.TabIndex = 0;
             this.qaqcCSVRunButton.Text = "RUN";
             this.qaqcCSVRunButton.UseVisualStyleBackColor = true;
-            this.qaqcCSVRunButton.UseWaitCursor = true;
+            this.qaqcCSVRunButton.UseWaitCursor = false;
             this.qaqcCSVRunButton.Click += new System.EventHandler(this.QaqcCSVRunButton_Click);
             // 
             // qaqcCSVInstructionsPanel
@@ -7428,7 +7428,7 @@ namespace BARevitTools
             this.qaqcCSVInstructionsPanel.Name = "qaqcCSVInstructionsPanel";
             this.qaqcCSVInstructionsPanel.Size = new System.Drawing.Size(716, 59);
             this.qaqcCSVInstructionsPanel.TabIndex = 1;
-            this.qaqcCSVInstructionsPanel.UseWaitCursor = true;
+            this.qaqcCSVInstructionsPanel.UseWaitCursor = false;
             // 
             // qaqcCSVInstructionsLabel
             // 
@@ -7439,7 +7439,7 @@ namespace BARevitTools
             this.qaqcCSVInstructionsLabel.Size = new System.Drawing.Size(716, 59);
             this.qaqcCSVInstructionsLabel.TabIndex = 1;
             this.qaqcCSVInstructionsLabel.Text = resources.GetString("qaqcCSVInstructionsLabel.Text");
-            this.qaqcCSVInstructionsLabel.UseWaitCursor = true;
+            this.qaqcCSVInstructionsLabel.UseWaitCursor = false;
             // 
             // qaqcDRNPPanel
             // 
@@ -7451,7 +7451,7 @@ namespace BARevitTools
             this.qaqcDRNPPanel.Name = "qaqcDRNPPanel";
             this.qaqcDRNPPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcDRNPPanel.TabIndex = 10;
-            this.qaqcDRNPPanel.UseWaitCursor = true;
+            this.qaqcDRNPPanel.UseWaitCursor = false;
             this.qaqcDRNPPanel.Visible = false;
             // 
             // qaqcDRNPInstructions
@@ -7465,7 +7465,7 @@ namespace BARevitTools
             this.qaqcDRNPInstructions.Size = new System.Drawing.Size(716, 59);
             this.qaqcDRNPInstructions.TabIndex = 10;
             this.qaqcDRNPInstructions.Text = resources.GetString("qaqcDRNPInstructions.Text");
-            this.qaqcDRNPInstructions.UseWaitCursor = true;
+            this.qaqcDRNPInstructions.UseWaitCursor = false;
             // 
             // qaqcDRNPRun
             // 
@@ -7475,7 +7475,7 @@ namespace BARevitTools
             this.qaqcDRNPRun.TabIndex = 9;
             this.qaqcDRNPRun.Text = "RUN";
             this.qaqcDRNPRun.UseVisualStyleBackColor = true;
-            this.qaqcDRNPRun.UseWaitCursor = true;
+            this.qaqcDRNPRun.UseWaitCursor = false;
             this.qaqcDRNPRun.Click += new System.EventHandler(this.QaqcDRNPRun_Click);
             // 
             // setupTab
@@ -7489,7 +7489,7 @@ namespace BARevitTools
             this.setupTab.TabIndex = 5;
             this.setupTab.Text = "Setup";
             this.setupTab.UseVisualStyleBackColor = true;
-            this.setupTab.UseWaitCursor = true;
+            this.setupTab.UseWaitCursor = false;
             // 
             // setupLayoutPanel
             // 
@@ -7508,7 +7508,7 @@ namespace BARevitTools
             this.setupLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.setupLayoutPanel.Size = new System.Drawing.Size(716, 398);
             this.setupLayoutPanel.TabIndex = 0;
-            this.setupLayoutPanel.UseWaitCursor = true;
+            this.setupLayoutPanel.UseWaitCursor = false;
             // 
             // setupToolStrip
             // 
@@ -7525,7 +7525,7 @@ namespace BARevitTools
             this.setupToolStrip.Size = new System.Drawing.Size(716, 53);
             this.setupToolStrip.TabIndex = 0;
             this.setupToolStrip.Text = "toolStrip2";
-            this.setupToolStrip.UseWaitCursor = true;
+            this.setupToolStrip.UseWaitCursor = false;
             // 
             // setupCWSButton
             // 
@@ -7568,7 +7568,7 @@ namespace BARevitTools
             this.setupToolsPanel.Name = "setupToolsPanel";
             this.setupToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.setupToolsPanel.TabIndex = 1;
-            this.setupToolsPanel.UseWaitCursor = true;
+            this.setupToolsPanel.UseWaitCursor = false;
             // 
             // setupUPLayoutPanel
             // 
@@ -7595,7 +7595,7 @@ namespace BARevitTools
             this.setupUPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.setupUPLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.setupUPLayoutPanel.TabIndex = 2;
-            this.setupUPLayoutPanel.UseWaitCursor = true;
+            this.setupUPLayoutPanel.UseWaitCursor = false;
             this.setupUPLayoutPanel.Visible = false;
             // 
             // setupUPInstructionsTextBox
@@ -7611,7 +7611,7 @@ namespace BARevitTools
             this.setupUPInstructionsTextBox.Size = new System.Drawing.Size(250, 178);
             this.setupUPInstructionsTextBox.TabIndex = 5;
             this.setupUPInstructionsTextBox.Text = resources.GetString("setupUPInstructionsTextBox.Text");
-            this.setupUPInstructionsTextBox.UseWaitCursor = true;
+            this.setupUPInstructionsTextBox.UseWaitCursor = false;
             // 
             // setupUPDataGridView
             // 
@@ -7626,7 +7626,7 @@ namespace BARevitTools
             this.setupUPDataGridView.RowTemplate.Height = 28;
             this.setupUPDataGridView.Size = new System.Drawing.Size(712, 106);
             this.setupUPDataGridView.TabIndex = 0;
-            this.setupUPDataGridView.UseWaitCursor = true;
+            this.setupUPDataGridView.UseWaitCursor = false;
             this.setupUPDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellContentClick);
             this.setupUPDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellEndEdit);
             // 
@@ -7644,7 +7644,7 @@ namespace BARevitTools
             this.setupUPLinkedModelsLabel.TabIndex = 2;
             this.setupUPLinkedModelsLabel.Text = "LINKED MODELS";
             this.setupUPLinkedModelsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.setupUPLinkedModelsLabel.UseWaitCursor = true;
+            this.setupUPLinkedModelsLabel.UseWaitCursor = false;
             // 
             // setupUPControlsPanel1
             // 
@@ -7657,7 +7657,7 @@ namespace BARevitTools
             this.setupUPControlsPanel1.Name = "setupUPControlsPanel1";
             this.setupUPControlsPanel1.Size = new System.Drawing.Size(466, 50);
             this.setupUPControlsPanel1.TabIndex = 3;
-            this.setupUPControlsPanel1.UseWaitCursor = true;
+            this.setupUPControlsPanel1.UseWaitCursor = false;
             // 
             // setupUPOriginalPathSelectButton
             // 
@@ -7670,7 +7670,7 @@ namespace BARevitTools
             this.setupUPOriginalPathSelectButton.TabIndex = 4;
             this.setupUPOriginalPathSelectButton.Text = "...";
             this.setupUPOriginalPathSelectButton.UseVisualStyleBackColor = false;
-            this.setupUPOriginalPathSelectButton.UseWaitCursor = true;
+            this.setupUPOriginalPathSelectButton.UseWaitCursor = false;
             this.setupUPOriginalPathSelectButton.Click += new System.EventHandler(this.SetupUPOriginalPathSelectButton_Click);
             // 
             // setupUPOriginalFilePathTextBox
@@ -7684,7 +7684,7 @@ namespace BARevitTools
             this.setupUPOriginalFilePathTextBox.Size = new System.Drawing.Size(421, 20);
             this.setupUPOriginalFilePathTextBox.TabIndex = 1;
             this.setupUPOriginalFilePathTextBox.Text = "<File to Upgrade>";
-            this.setupUPOriginalFilePathTextBox.UseWaitCursor = true;
+            this.setupUPOriginalFilePathTextBox.UseWaitCursor = false;
             // 
             // setupUPOriginalFilePathLabel
             // 
@@ -7695,7 +7695,7 @@ namespace BARevitTools
             this.setupUPOriginalFilePathLabel.Size = new System.Drawing.Size(104, 13);
             this.setupUPOriginalFilePathLabel.TabIndex = 0;
             this.setupUPOriginalFilePathLabel.Text = "Original File Path";
-            this.setupUPOriginalFilePathLabel.UseWaitCursor = true;
+            this.setupUPOriginalFilePathLabel.UseWaitCursor = false;
             // 
             // setupUPRunPanel
             // 
@@ -7707,7 +7707,7 @@ namespace BARevitTools
             this.setupUPRunPanel.Name = "setupUPRunPanel";
             this.setupUPRunPanel.Size = new System.Drawing.Size(716, 29);
             this.setupUPRunPanel.TabIndex = 4;
-            this.setupUPRunPanel.UseWaitCursor = true;
+            this.setupUPRunPanel.UseWaitCursor = false;
             // 
             // setupUPRunButton
             // 
@@ -7719,7 +7719,7 @@ namespace BARevitTools
             this.setupUPRunButton.TabIndex = 1;
             this.setupUPRunButton.Text = "RUN";
             this.setupUPRunButton.UseVisualStyleBackColor = true;
-            this.setupUPRunButton.UseWaitCursor = true;
+            this.setupUPRunButton.UseWaitCursor = false;
             this.setupUPRunButton.Click += new System.EventHandler(this.SetupUPRunButton_Click);
             // 
             // setupUPControlsPanel2
@@ -7736,7 +7736,7 @@ namespace BARevitTools
             this.setupUPControlsPanel2.Name = "setupUPControlsPanel2";
             this.setupUPControlsPanel2.Size = new System.Drawing.Size(466, 73);
             this.setupUPControlsPanel2.TabIndex = 7;
-            this.setupUPControlsPanel2.UseWaitCursor = true;
+            this.setupUPControlsPanel2.UseWaitCursor = false;
             // 
             // setupUPUpgradePathSelectButton
             // 
@@ -7749,7 +7749,7 @@ namespace BARevitTools
             this.setupUPUpgradePathSelectButton.TabIndex = 4;
             this.setupUPUpgradePathSelectButton.Text = "...";
             this.setupUPUpgradePathSelectButton.UseVisualStyleBackColor = false;
-            this.setupUPUpgradePathSelectButton.UseWaitCursor = true;
+            this.setupUPUpgradePathSelectButton.UseWaitCursor = false;
             this.setupUPUpgradePathSelectButton.Click += new System.EventHandler(this.SetupUPUpgradePathSelectButton_Click);
             // 
             // setupUPOriginalDirectoryButton
@@ -7761,7 +7761,7 @@ namespace BARevitTools
             this.setupUPOriginalDirectoryButton.TabIndex = 4;
             this.setupUPOriginalDirectoryButton.Text = "Use Original Path Directory";
             this.setupUPOriginalDirectoryButton.UseVisualStyleBackColor = true;
-            this.setupUPOriginalDirectoryButton.UseWaitCursor = true;
+            this.setupUPOriginalDirectoryButton.UseWaitCursor = false;
             this.setupUPOriginalDirectoryButton.Click += new System.EventHandler(this.SetupUPOriginalDirectoryButton_Click);
             // 
             // setupUPUpgradedFilePathLabel
@@ -7773,7 +7773,7 @@ namespace BARevitTools
             this.setupUPUpgradedFilePathLabel.Size = new System.Drawing.Size(116, 13);
             this.setupUPUpgradedFilePathLabel.TabIndex = 3;
             this.setupUPUpgradedFilePathLabel.Text = "Upgraded File Path";
-            this.setupUPUpgradedFilePathLabel.UseWaitCursor = true;
+            this.setupUPUpgradedFilePathLabel.UseWaitCursor = false;
             // 
             // setupUPSlashLabel
             // 
@@ -7785,7 +7785,7 @@ namespace BARevitTools
             this.setupUPSlashLabel.Size = new System.Drawing.Size(13, 13);
             this.setupUPSlashLabel.TabIndex = 3;
             this.setupUPSlashLabel.Text = "\\";
-            this.setupUPSlashLabel.UseWaitCursor = true;
+            this.setupUPSlashLabel.UseWaitCursor = false;
             // 
             // setupUPUpgradedFilePathUserTextBox
             // 
@@ -7796,7 +7796,7 @@ namespace BARevitTools
             this.setupUPUpgradedFilePathUserTextBox.Name = "setupUPUpgradedFilePathUserTextBox";
             this.setupUPUpgradedFilePathUserTextBox.Size = new System.Drawing.Size(242, 20);
             this.setupUPUpgradedFilePathUserTextBox.TabIndex = 2;
-            this.setupUPUpgradedFilePathUserTextBox.UseWaitCursor = true;
+            this.setupUPUpgradedFilePathUserTextBox.UseWaitCursor = false;
             // 
             // setupUPUpgradedFilePathSetTextBox
             // 
@@ -7807,7 +7807,7 @@ namespace BARevitTools
             this.setupUPUpgradedFilePathSetTextBox.Size = new System.Drawing.Size(157, 20);
             this.setupUPUpgradedFilePathSetTextBox.TabIndex = 2;
             this.setupUPUpgradedFilePathSetTextBox.Text = "<Upgraded File Path>";
-            this.setupUPUpgradedFilePathSetTextBox.UseWaitCursor = true;
+            this.setupUPUpgradedFilePathSetTextBox.UseWaitCursor = false;
             // 
             // setupUPControlsPanel3
             // 
@@ -7821,7 +7821,7 @@ namespace BARevitTools
             this.setupUPControlsPanel3.Name = "setupUPControlsPanel3";
             this.setupUPControlsPanel3.Size = new System.Drawing.Size(466, 40);
             this.setupUPControlsPanel3.TabIndex = 6;
-            this.setupUPControlsPanel3.UseWaitCursor = true;
+            this.setupUPControlsPanel3.UseWaitCursor = false;
             // 
             // setupUPUpgradingToLabel
             // 
@@ -7833,7 +7833,7 @@ namespace BARevitTools
             this.setupUPUpgradingToLabel.Size = new System.Drawing.Size(88, 13);
             this.setupUPUpgradingToLabel.TabIndex = 3;
             this.setupUPUpgradingToLabel.Text = "Upgrading To:";
-            this.setupUPUpgradingToLabel.UseWaitCursor = true;
+            this.setupUPUpgradingToLabel.UseWaitCursor = false;
             // 
             // setupUPUpgradingToRevitLabel
             // 
@@ -7845,7 +7845,7 @@ namespace BARevitTools
             this.setupUPUpgradingToRevitLabel.Size = new System.Drawing.Size(31, 13);
             this.setupUPUpgradingToRevitLabel.TabIndex = 3;
             this.setupUPUpgradingToRevitLabel.Text = "2018";
-            this.setupUPUpgradingToRevitLabel.UseWaitCursor = true;
+            this.setupUPUpgradingToRevitLabel.UseWaitCursor = false;
             // 
             // setupUPUpgradingFromRevitLabel
             // 
@@ -7856,7 +7856,7 @@ namespace BARevitTools
             this.setupUPUpgradingFromRevitLabel.Size = new System.Drawing.Size(73, 18);
             this.setupUPUpgradingFromRevitLabel.TabIndex = 3;
             this.setupUPUpgradingFromRevitLabel.Text = "<Unknown>";
-            this.setupUPUpgradingFromRevitLabel.UseWaitCursor = true;
+            this.setupUPUpgradingFromRevitLabel.UseWaitCursor = false;
             // 
             // setupUPUpgradingFromLabel
             // 
@@ -7868,7 +7868,7 @@ namespace BARevitTools
             this.setupUPUpgradingFromLabel.Size = new System.Drawing.Size(100, 13);
             this.setupUPUpgradingFromLabel.TabIndex = 3;
             this.setupUPUpgradingFromLabel.Text = "Upgrading From:";
-            this.setupUPUpgradingFromLabel.UseWaitCursor = true;
+            this.setupUPUpgradingFromLabel.UseWaitCursor = false;
             // 
             // setupCWSLayoutPanel
             // 
@@ -7896,7 +7896,7 @@ namespace BARevitTools
             this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.setupCWSLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.setupCWSLayoutPanel.TabIndex = 1;
-            this.setupCWSLayoutPanel.UseWaitCursor = true;
+            this.setupCWSLayoutPanel.UseWaitCursor = false;
             this.setupCWSLayoutPanel.Visible = false;
             // 
             // setupCWSDefinedLabel
@@ -7912,7 +7912,7 @@ namespace BARevitTools
             this.setupCWSDefinedLabel.TabIndex = 1;
             this.setupCWSDefinedLabel.Text = "User Defined";
             this.setupCWSDefinedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.setupCWSDefinedLabel.UseWaitCursor = true;
+            this.setupCWSDefinedLabel.UseWaitCursor = false;
             // 
             // setupCWSExtendedListBox
             // 
@@ -7931,7 +7931,7 @@ namespace BARevitTools
             this.setupCWSExtendedListBox.Name = "setupCWSExtendedListBox";
             this.setupCWSExtendedListBox.Size = new System.Drawing.Size(238, 165);
             this.setupCWSExtendedListBox.TabIndex = 1;
-            this.setupCWSExtendedListBox.UseWaitCursor = true;
+            this.setupCWSExtendedListBox.UseWaitCursor = false;
             // 
             // setupCWSExtendedLabel
             // 
@@ -7946,7 +7946,7 @@ namespace BARevitTools
             this.setupCWSExtendedLabel.TabIndex = 1;
             this.setupCWSExtendedLabel.Text = "BA Extended";
             this.setupCWSExtendedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.setupCWSExtendedLabel.UseWaitCursor = true;
+            this.setupCWSExtendedLabel.UseWaitCursor = false;
             // 
             // setupCWSInstructionsPanel
             // 
@@ -7958,7 +7958,7 @@ namespace BARevitTools
             this.setupCWSInstructionsPanel.Name = "setupCWSInstructionsPanel";
             this.setupCWSInstructionsPanel.Size = new System.Drawing.Size(716, 110);
             this.setupCWSInstructionsPanel.TabIndex = 0;
-            this.setupCWSInstructionsPanel.UseWaitCursor = true;
+            this.setupCWSInstructionsPanel.UseWaitCursor = false;
             // 
             // setupCWSInstructionsTextBox
             // 
@@ -7972,7 +7972,7 @@ namespace BARevitTools
             this.setupCWSInstructionsTextBox.Size = new System.Drawing.Size(716, 110);
             this.setupCWSInstructionsTextBox.TabIndex = 0;
             this.setupCWSInstructionsTextBox.Text = resources.GetString("setupCWSInstructionsTextBox.Text");
-            this.setupCWSInstructionsTextBox.UseWaitCursor = true;
+            this.setupCWSInstructionsTextBox.UseWaitCursor = false;
             // 
             // setupCWSDefaultLabel
             // 
@@ -7987,7 +7987,7 @@ namespace BARevitTools
             this.setupCWSDefaultLabel.TabIndex = 0;
             this.setupCWSDefaultLabel.Text = "BA Default";
             this.setupCWSDefaultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.setupCWSDefaultLabel.UseWaitCursor = true;
+            this.setupCWSDefaultLabel.UseWaitCursor = false;
             // 
             // setupCWSDefaultListBox
             // 
@@ -8004,7 +8004,7 @@ namespace BARevitTools
             this.setupCWSDefaultListBox.Name = "setupCWSDefaultListBox";
             this.setupCWSDefaultListBox.Size = new System.Drawing.Size(238, 165);
             this.setupCWSDefaultListBox.TabIndex = 0;
-            this.setupCWSDefaultListBox.UseWaitCursor = true;
+            this.setupCWSDefaultListBox.UseWaitCursor = false;
             // 
             // setupCWSUserDataGridView
             // 
@@ -8042,7 +8042,7 @@ namespace BARevitTools
             this.setupCWSRunPanel.Name = "setupCWSRunPanel";
             this.setupCWSRunPanel.Size = new System.Drawing.Size(716, 35);
             this.setupCWSRunPanel.TabIndex = 6;
-            this.setupCWSRunPanel.UseWaitCursor = true;
+            this.setupCWSRunPanel.UseWaitCursor = false;
             // 
             // setupCWSRunButton
             // 
@@ -8053,7 +8053,7 @@ namespace BARevitTools
             this.setupCWSRunButton.TabIndex = 0;
             this.setupCWSRunButton.Text = "RUN";
             this.setupCWSRunButton.UseVisualStyleBackColor = true;
-            this.setupCWSRunButton.UseWaitCursor = true;
+            this.setupCWSRunButton.UseWaitCursor = false;
             this.setupCWSRunButton.Click += new System.EventHandler(this.SetupCWSRunButton_Click);
             // 
             // UIFormMenuStrip
@@ -8069,7 +8069,7 @@ namespace BARevitTools
             this.UIFormMenuStrip.Size = new System.Drawing.Size(769, 1);
             this.UIFormMenuStrip.TabIndex = 2;
             this.UIFormMenuStrip.Text = "menuStrip1";
-            this.UIFormMenuStrip.UseWaitCursor = true;
+            this.UIFormMenuStrip.UseWaitCursor = false;
             // 
             // fileToolStripMenuItem
             // 
