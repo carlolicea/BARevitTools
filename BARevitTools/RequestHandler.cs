@@ -29,106 +29,106 @@ namespace BARevitTools
                     case RequestId.None:
                         {return;}
                     case RequestId.multiCatCFFE1:
-                        Tools.AllCatCFFE1Request allCatCFFE1Request = new Tools.AllCatCFFE1Request(uiApp, "Get Parameters");
+                        ToolRequests.AllCatCFFE1Request allCatCFFE1Request = new ToolRequests.AllCatCFFE1Request(uiApp, "Get Parameters");
                         break;
                     case RequestId.multiCatCFFE2:
-                        Tools.AllCatCFFE2Request allCatCFFE2Request = new Tools.AllCatCFFE2Request(uiApp, "Make Families");
+                        ToolRequests.AllCatCFFE2Request allCatCFFE2Request = new ToolRequests.AllCatCFFE2Request(uiApp, "Make Families");
                         break;
                     case RequestId.electricalCEOE:
-                        Tools.ElectricalCEORequest electricalCEORequest = new Tools.ElectricalCEORequest(uiApp, "Correct Electrical Outlet Elevation");
+                        ToolRequests.ElectricalCEORequest electricalCEORequest = new ToolRequests.ElectricalCEORequest(uiApp, "Correct Electrical Outlet Elevation");
                         break;
                     case RequestId.floorsCFBR:
-                        Tools.FloorsCFBRRequest floorsCFBRRequest = new Tools.FloorsCFBRRequest(uiApp, "Create Floors by Room");
+                        ToolRequests.FloorsCFBRRequest floorsCFBRRequest = new ToolRequests.FloorsCFBRRequest(uiApp, "Create Floors by Room");
                         break;
                     case RequestId.materialsCMS:
-                        Tools.MaterialsCMSRequest materialsCMSRequest = new Tools.MaterialsCMSRequest(uiApp, "Create Material Symbols");
+                        ToolRequests.MaterialsCMSRequest materialsCMSRequest = new ToolRequests.MaterialsCMSRequest(uiApp, "Create Material Symbols");
                         break;
                     case RequestId.materialsAML:
-                        Tools.MaterialsAMLRequest materialsAMLRequest = new Tools.MaterialsAMLRequest(uiApp, "Accent Material Lines");
+                        ToolRequests.MaterialsAMLRequest materialsAMLRequest = new ToolRequests.MaterialsAMLRequest(uiApp, "Accent Material Lines");
                         break;
                     case RequestId.materialsAMLPalette:
-                        Tools.MaterialsAMLPaletteRequest materialsAMLPaletteRequest = new Tools.MaterialsAMLPaletteRequest(uiApp, "Accent Material Lines Palette");
+                        ToolRequests.MaterialsAMLPaletteRequest materialsAMLPaletteRequest = new ToolRequests.MaterialsAMLPaletteRequest(uiApp, "Accent Material Lines Palette");
                         break;
                     case RequestId.roomsSRNN:
-                        Tools.RoomsSRNNRequest roomsSRNNRequest = new Tools.RoomsSRNNRequest(uiApp, "Swap Room Names and Numbers");
+                        ToolRequests.RoomsSRNNRequest roomsSRNNRequest = new ToolRequests.RoomsSRNNRequest(uiApp, "Swap Room Names and Numbers");
                         break;
                     case RequestId.roomsCDRT:
-                        Tools.RoomsCDRTRequest roomsCDRTRequest = new Tools.RoomsCDRTRequest(uiApp, "Create Demo Room Tags");
+                        ToolRequests.RoomsCDRTRequest roomsCDRTRequest = new ToolRequests.RoomsCDRTRequest(uiApp, "Create Demo Room Tags");
                         break;
                     case RequestId.wallsMPW:
-                        Tools.WallsMPWRequest wallsMPWRequest = new Tools.WallsMPWRequest(uiApp, "Make Perimeter Walls");
+                        ToolRequests.WallsMPWRequest wallsMPWRequest = new ToolRequests.WallsMPWRequest(uiApp, "Make Perimeter Walls");
                         break;
                     case RequestId.wallsDP:
-                        Tools.WallsDPRequest wallsDPRequest = new Tools.WallsDPRequest(uiApp, "Delete Wall Parts");
+                        ToolRequests.WallsDPRequest wallsDPRequest = new ToolRequests.WallsDPRequest(uiApp, "Delete Wall Parts");
                         break;
                     case RequestId.sheetsCSL:
-                        Tools.SheetsCSLRequest sheetsCSLReqeuset = new Tools.SheetsCSLRequest(uiApp, "Copy Sheet Legends to Sheets");
+                        ToolRequests.SheetsCSLRequest sheetsCSLReqeuset = new ToolRequests.SheetsCSLRequest(uiApp, "Copy Sheet Legends to Sheets");
                         break;
                     case RequestId.sheetsISFL:
-                        Tools.SheetsISFLRequest sheetsISFLRequest = new Tools.SheetsISFLRequest(uiApp, "Insert sheets from link");
+                        ToolRequests.SheetsISFLRequest sheetsISFLRequest = new ToolRequests.SheetsISFLRequest(uiApp, "Insert sheets from link");
                         break;
                     case RequestId.sheetsCSSFS:
-                        Tools.SheetsCSSFRequest sheetsCSSFRequest = new Tools.SheetsCSSFRequest(uiApp, "Create Sheet Set from Schedule");
+                        ToolRequests.SheetsCSSFRequest sheetsCSSFRequest = new ToolRequests.SheetsCSSFRequest(uiApp, "Create Sheet Set from Schedule");
                         break;
                     case RequestId.sheetsOSS:
-                        Tools.SheetsOSSRequest sheetsOSSRequest = new Tools.SheetsOSSRequest(uiApp, "Organize Sheet Set");
+                        ToolRequests.SheetsOSSRequest sheetsOSSRequest = new ToolRequests.SheetsOSSRequest(uiApp, "Organize Sheet Set");
                         break;
                     case RequestId.sheetSOSSNewSet:
-                        Tools.SheetsOSSNewSetRequest sheetsOSSNewSetRequest = new Tools.SheetsOSSNewSetRequest(uiApp, "Make New Set");
+                        ToolRequests.SheetsOSSNewSetRequest sheetsOSSNewSetRequest = new ToolRequests.SheetsOSSNewSetRequest(uiApp, "Make New Set");
                         break;
                     case RequestId.viewsCEPR:
-                        Tools.ViewsCEPRRequest viewsCEPRRequest = new Tools.ViewsCEPRRequest(uiApp, "Create Elevations Per Room");
+                        ToolRequests.ViewsCEPRRequest viewsCEPRRequest = new ToolRequests.ViewsCEPRRequest(uiApp, "Create Elevations Per Room");
                         break;
                     case RequestId.viewsOICB:
-                        Tools.ViewsOICBRequest viewsOICBRequest = new Tools.ViewsOICBRequest(uiApp, "Override Interior Elevation Crop Boundaries");
+                        ToolRequests.ViewsOICBRequest viewsOICBRequest = new ToolRequests.ViewsOICBRequest(uiApp, "Override Interior Elevation Crop Boundaries");
                         break;
                     case RequestId.viewsHNIEC:
-                        Tools.ViewsHNIECRequest viewsHNIECRequest = new Tools.ViewsHNIECRequest(uiApp, "Hide Non Interior Elevation Crops");
+                        ToolRequests.ViewsHNIECRequest viewsHNIECRequest = new ToolRequests.ViewsHNIECRequest(uiApp, "Hide Non Interior Elevation Crops");
                         break;
                     case RequestId.dataEPI:
-                        Tools.DataEPIRequest dataEPIRequest = new Tools.DataEPIRequest(uiApp, "Export Plan Image");
+                        ToolRequests.DataEPIRequest dataEPIRequest = new ToolRequests.DataEPIRequest(uiApp, "Export Plan Image");
                         break;
                     case RequestId.miscEDV:
-                        Tools.MiscEDVRequest miscEDVRequest = new Tools.MiscEDVRequest(uiApp, "Export Drafting Views");
+                        ToolRequests.MiscEDVRequest miscEDVRequest = new ToolRequests.MiscEDVRequest(uiApp, "Export Drafting Views");
                         break;
                     case RequestId.documentsCTS:
-                        Tools.DocumentsCTSRequest documentsCTSRequest = new Tools.DocumentsCTSRequest(uiApp, "Change Text Scale");
+                        ToolRequests.DocumentsCTSRequest documentsCTSRequest = new ToolRequests.DocumentsCTSRequest(uiApp, "Change Text Scale");
                         break;
                     case RequestId.qaqcCSVN:
-                        Tools.QaqcCSVNRequest qaqcCSVNRequest = new Tools.QaqcCSVNRequest(uiApp, "Capitalize Sheet and View Names");
+                        ToolRequests.QaqcCSVNRequest qaqcCSVNRequest = new ToolRequests.QaqcCSVNRequest(uiApp, "Capitalize Sheet and View Names");
                         break;
                     case RequestId.qaqcDRNP:
-                        Tools.QaqcDRNPRequest qaqcDRNPRequest = new Tools.QaqcDRNPRequest(uiApp, "Delete Rooms Not Placed");
+                        ToolRequests.QaqcDRNPRequest qaqcDRNPRequest = new ToolRequests.QaqcDRNPRequest(uiApp, "Delete Rooms Not Placed");
                         break;
                     case RequestId.qaqcCSV:
-                        Tools.QaqcCSVRequest qaqcCSVRequest= new Tools.QaqcCSVRequest(uiApp, "Capitalize Sheet Values");
+                        ToolRequests.QaqcCSVRequest qaqcCSVRequest= new ToolRequests.QaqcCSVRequest(uiApp, "Capitalize Sheet Values");
                         break;
                     case RequestId.qaqcRLS:
-                        Tools.QaqcRLSRequest qaqcRLSRequest = new Tools.QaqcRLSRequest(uiApp, "Remove Line Styles");
+                        ToolRequests.QaqcRLSRequest qaqcRLSRequest = new ToolRequests.QaqcRLSRequest(uiApp, "Remove Line Styles");
                         break;
                     case RequestId.qaqcRFSP:
-                        Tools.QaqcRFSPRequest qaqcRFSPRequest = new Tools.QaqcRFSPRequest(uiApp, "Remove Family Shared Parameters");
+                        ToolRequests.QaqcRFSPRequest qaqcRFSPRequest = new ToolRequests.QaqcRFSPRequest(uiApp, "Remove Family Shared Parameters");
                         break;
                     case RequestId.setupCWS:
-                        Tools.SetupCWSRequest setupCWSRequest = new Tools.SetupCWSRequest(uiApp, "Create Worksets");
+                        ToolRequests.SetupCWSRequest setupCWSRequest = new ToolRequests.SetupCWSRequest(uiApp, "Create Worksets");
                         break;
                     case RequestId.setupUP:
-                        Tools.SetupUPRequest setupUPRequest = new Tools.SetupUPRequest(uiApp, "Upgrade Project");
+                        ToolRequests.SetupUPRequest setupUPRequest = new ToolRequests.SetupUPRequest(uiApp, "Upgrade Project");
                         break;
                     case RequestId.adminDataGFF:
-                        Tools.AdminDataGFFRequest adminDataGFFRequest = new Tools.AdminDataGFFRequest(uiApp, "Get Family Data");
+                        ToolRequests.AdminDataGFFRequest adminDataGFFRequest = new ToolRequests.AdminDataGFFRequest(uiApp, "Get Family Data");
                         break;
                     case RequestId.adminFamiliesUF:
-                        Tools.AdminFamiliesUFRequest adminFamiliesUFRequest = new Tools.AdminFamiliesUFRequest(uiApp, "Upgrade Families");
+                        ToolRequests.AdminFamiliesUFRequest adminFamiliesUFRequest = new ToolRequests.AdminFamiliesUFRequest(uiApp, "Upgrade Families");
                         break;
                     case RequestId.adminFamiliesBAP:
-                        Tools.AdminFamiliesBAPRequest adminFamiliesBAPRequest = new Tools.AdminFamiliesBAPRequest(uiApp, "Bulk Add Parameters");
+                        ToolRequests.AdminFamiliesBAPRequest adminFamiliesBAPRequest = new ToolRequests.AdminFamiliesBAPRequest(uiApp, "Bulk Add Parameters");
                         break;
                     case RequestId.adminFamiliesBRP:
-                        Tools.AdminFamiliesBRPRequest adminFamiliesBRPRequest = new Tools.AdminFamiliesBRPRequest(uiApp, "Bulk Remove Parameters");
+                        ToolRequests.AdminFamiliesBRPRequest adminFamiliesBRPRequest = new ToolRequests.AdminFamiliesBRPRequest(uiApp, "Bulk Remove Parameters");
                         break;
                     case RequestId.testApp:
-                        Tools.AdminSandboxSetPreviewHost adminSandboxSetPreviewHost = new Tools.AdminSandboxSetPreviewHost(uiApp, "testapp");
+                        ToolRequests.AdminSandboxSetPreviewHost adminSandboxSetPreviewHost = new ToolRequests.AdminSandboxSetPreviewHost(uiApp, "testapp");
                         break;
 
                     default:
