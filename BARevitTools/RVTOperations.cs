@@ -601,6 +601,70 @@ namespace BARevitTools
             }
             return type;
         }
+        public static object SetParameterValueFromString(string typeName, object value)
+        {
+            object returnValue = null;
+            switch (typeName)
+            {
+                case "Text":
+                    returnValue = Convert.ToString(value);
+                    break;
+                case "Integer":
+                    returnValue = Convert.ToInt32(value);
+                    break;
+                case "Number":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Length":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Area":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Volume":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Angle":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Slope":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Currencey":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Mass Density":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "URL":
+                    returnValue = Convert.ToString(value);
+                    break;
+                case "Material":
+                    returnValue = new ElementId(Convert.ToInt32(value));
+                    break;
+                case "Image":
+                    returnValue = ParameterType.Image;
+                    break;
+                case "Yes/No":
+                    if (Convert.ToBoolean(value) == true)
+                    {returnValue = 1;}
+                    else if (Convert.ToBoolean(value) == false)
+                    {returnValue = 0;}
+                    else
+                    {returnValue = null;}
+                    break;
+                case "Multiline Text":
+                    returnValue = Convert.ToString(value);
+                    break;
+                case "<Family Type...>":
+                    returnValue = new ElementId(Convert.ToInt32(value));
+                    break;
+                default:
+                    returnValue = ParameterType.Invalid;
+                    break;
+            }
+            return returnValue;
+        }
         public static string GetRevitFamilyCategory(RVTDocument doc)
         {
             string familyCategory = null;

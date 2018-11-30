@@ -594,7 +594,7 @@ namespace BARevitTools
                     int lastUsedRow = last.Row;
                     int lastUsedColumn = last.Column;
 
-                    for (int i = pncs; i < lastUsedColumn; i++)
+                    for (int i = pncs; i <= lastUsedColumn; i++)
                     {
                         if (!dt.Columns.Contains(worksheet.Cells[pnrs, i].Value2.ToString()) && worksheet.Cells[pnrs, i].Value2.ToString() != "")
                         {
@@ -2817,6 +2817,11 @@ namespace BARevitTools
             paramIsInstanceColumn.HeaderText = "Instance?";
             paramIsInstanceColumn.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.GreenYellow;
 
+            DataGridViewTextBoxColumn paramValueColumn = new DataGridViewTextBoxColumn();
+            paramValueColumn.Name = "Parameter Value";
+            paramValueColumn.HeaderText = "Value";
+            paramValueColumn.Width = 150;
+
             DataGridViewCheckBoxColumn famSelectColumn = new DataGridViewCheckBoxColumn();
             famSelectColumn.Name = "Family Select";
             famSelectColumn.HeaderText = "Select";
@@ -2831,7 +2836,7 @@ namespace BARevitTools
             famPathColumn.Name = "Family Path";
             famPathColumn.Visible = false;
 
-            pdgv.Columns.AddRange(paramIsSharedColumn, paramNameColumn, paramTypeColumn, paramGroupColumn, paramIsInstanceColumn);
+            pdgv.Columns.AddRange(paramIsSharedColumn, paramNameColumn, paramTypeColumn, paramGroupColumn, paramIsInstanceColumn, paramValueColumn);
             pdgv.ColumnCount = pdgv.Columns.Count;
             fdgv.Columns.AddRange(famSelectColumn, famNameColumn, famPathColumn);
             fdgv.ColumnCount = fdgv.Columns.Count;

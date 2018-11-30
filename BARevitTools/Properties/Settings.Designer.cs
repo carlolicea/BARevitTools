@@ -88,7 +88,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("T3kZ!lla")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string ExcelWorksheetPwd {
             get {
                 return ((string)(this["ExcelWorksheetPwd"]));

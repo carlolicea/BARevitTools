@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BARevitTools.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="SqlServerName" Type="System.String" Scope="Application">
@@ -24,7 +24,7 @@
       <Value Profile="(Default)">http://bimhaus.boulderassociates.com/bart</Value>
     </Setting>
     <Setting Name="ExcelWorksheetPwd" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">T3kZ!lla</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="SqlAppUseTableName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">BARevitTools_AppUse</Value>
