@@ -163,6 +163,9 @@ namespace BARevitTools
                     case "System.Decimal":
                         sqlsc += " decimal ";
                         break;
+                    case "System.Double":
+                        sqlsc += "decimal";
+                        break;
                     case "System.DateTime":
                         sqlsc += " datetime ";
                         break;
@@ -230,7 +233,7 @@ namespace BARevitTools
                             s.WriteToServer(dataTable);
                         }
                     }
-                    catch { MessageBox.Show("Could not append"); }
+                    catch(SqlException appendException) { MessageBox.Show(appendException.ToString()); }
                 }
                 
                

@@ -188,7 +188,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Corp\\cad\\Revit\\BA Families\\BA 2018")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\corp\\cad\\Revit\\BA Families\\BA 2018")]
         public string BARTBARevitFamilyLibraryPath {
             get {
                 return ((string)(this["BARTBARevitFamilyLibraryPath"]));
@@ -205,7 +205,7 @@ namespace BARevitTools.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\corp\\cad\\Revit\\BA Families\\BA 2018\\Annotations\\Tags - ID " +
             "and Signage\\TAG ID Accent Mats.rfa")]
@@ -213,8 +213,14 @@ namespace BARevitTools.Properties {
             get {
                 return ((string)(this["RevitIDAccentMatTag"]));
             }
-            set {
-                this["RevitIDAccentMatTag"] = value;
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BAS Version")]
+        public string RevitUFVPParameter {
+            get {
+                return ((string)(this["RevitUFVPParameter"]));
             }
         }
     }

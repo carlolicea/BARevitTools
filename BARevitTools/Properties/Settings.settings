@@ -57,13 +57,16 @@
       <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Details\BA Details A18.rvt</Value>
     </Setting>
     <Setting Name="BARTBARevitFamilyLibraryPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">\\boulderassociates.com\Corp\cad\Revit\BA Families\BA 2018</Value>
+      <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Families\BA 2018</Value>
     </Setting>
     <Setting Name="RevitRoomTagSymbol" Type="System.String" Scope="Application">
       <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Families\BA 2018\Annotations\Symbols\SYMB Room Name and Number.rfa</Value>
     </Setting>
-    <Setting Name="RevitIDAccentMatTag" Type="System.String" Scope="User">
+    <Setting Name="RevitIDAccentMatTag" Type="System.String" Scope="Application">
       <Value Profile="(Default)">\\boulderassociates.com\corp\cad\Revit\BA Families\BA 2018\Annotations\Tags - ID and Signage\TAG ID Accent Mats.rfa</Value>
+    </Setting>
+    <Setting Name="RevitUFVPParameter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BAS Version</Value>
     </Setting>
   </Settings>
 </SettingsFile>

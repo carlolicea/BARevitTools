@@ -601,70 +601,7 @@ namespace BARevitTools
             }
             return type;
         }
-        public static object SetParameterValueFromString(string typeName, object value)
-        {
-            object returnValue = null;
-            switch (typeName)
-            {
-                case "Text":
-                    returnValue = Convert.ToString(value);
-                    break;
-                case "Integer":
-                    returnValue = Convert.ToInt32(value);
-                    break;
-                case "Number":
-                    returnValue = Convert.ToDouble(value);
-                    break;
-                case "Length":
-                    returnValue = Convert.ToDouble(value);
-                    break;
-                case "Area":
-                    returnValue = Convert.ToDouble(value);
-                    break;
-                case "Volume":
-                    returnValue = Convert.ToDouble(value);
-                    break;
-                case "Angle":
-                    returnValue = Convert.ToDouble(value);
-                    break;
-                case "Slope":
-                    returnValue = Convert.ToDouble(value);
-                    break;
-                case "Currencey":
-                    returnValue = Convert.ToDouble(value);
-                    break;
-                case "Mass Density":
-                    returnValue = Convert.ToDouble(value);
-                    break;
-                case "URL":
-                    returnValue = Convert.ToString(value);
-                    break;
-                case "Material":
-                    returnValue = new ElementId(Convert.ToInt32(value));
-                    break;
-                case "Image":
-                    returnValue = ParameterType.Image;
-                    break;
-                case "Yes/No":
-                    if (Convert.ToBoolean(value) == true)
-                    {returnValue = 1;}
-                    else if (Convert.ToBoolean(value) == false)
-                    {returnValue = 0;}
-                    else
-                    {returnValue = null;}
-                    break;
-                case "Multiline Text":
-                    returnValue = Convert.ToString(value);
-                    break;
-                case "<Family Type...>":
-                    returnValue = new ElementId(Convert.ToInt32(value));
-                    break;
-                default:
-                    returnValue = ParameterType.Invalid;
-                    break;
-            }
-            return returnValue;
-        }
+        
         public static string GetRevitFamilyCategory(RVTDocument doc)
         {
             string familyCategory = null;
@@ -773,6 +710,34 @@ namespace BARevitTools
                 MessageBox.Show(e.ToString());
             }
             
+        }
+        public static TransmissionData ReloadLinks(string filePath)
+        {
+
+            ModelPath modelPath = ModelPathUtils.ConvertUserVisiblePathToModelPath(filePath);
+            try
+            {
+                TransmissionData transmissionData = TransmissionData.ReadTransmissionData(modelPath);
+                if (transmissionData != null)
+                {
+                    ICollection<ElementId> externalFileReferences = transmissionData.GetAllExternalFileReferenceIds();
+                    foreach (ElementId elemId in externalFileReferences)
+                    {
+                        ExternalFileReference exRef = transmissionData.GetLastSavedReferenceData(elemId);
+                        if (exRef.ExternalFileReferenceType == ExternalFileReferenceType.RevitLink)
+                        {
+                            transmissionData.SetDesiredReferenceData(elemId, modelPath, PathType.Absolute, true);
+                        }
+                    }
+                }
+                transmissionData.IsTransmitted = false;
+                TransmissionData.WriteTransmissionData(modelPath, transmissionData);
+                return transmissionData;
+            }
+            catch
+            {
+                return null;
+            }
         }
         public static bool RevitVersionUpgradeCheck(UIApplication uiApp, string filePath)
         {
@@ -966,26 +931,6 @@ namespace BARevitTools
             }
             catch { MessageBox.Show(String.Format("Could not set parameter ({0}) with value ({1}) for type ({2})", param.Definition.Name, paramValue.ToString(), famMan.CurrentType.Name)); }
         }
-        public static void SetLinksToOverlay(RVTDocument doc)
-        {
-            var linkTypes = new FilteredElementCollector(doc).OfClass(typeof(RevitLinkType)).ToElements();
-
-            Transaction t = new Transaction(doc, "SetLinksToOverlay");
-            t.Start();
-            try
-            {
-                foreach (Element elem in linkTypes)
-                {
-                    RevitLinkType linkType = elem as RevitLinkType;
-                    linkType.AttachmentType = AttachmentType.Overlay;
-                }
-                t.Commit();
-            }
-            catch
-            {
-                t.RollBack();
-            }
-        }
         public static void SetFamilyParameterValue(FamilyManager famMan, FamilyParameter param, object paramValue)
         {
             string paramStorageTypeString = param.StorageType.ToString();
@@ -1009,6 +954,90 @@ namespace BARevitTools
                 }
             }
             catch { MessageBox.Show(String.Format("Could not set parameter {0} with value {1}", param.Definition.Name, paramValue.ToString())); }
+        }
+        public static void SetLinksToOverlay(RVTDocument doc)
+        {
+            var linkTypes = new FilteredElementCollector(doc).OfClass(typeof(RevitLinkType)).ToElements();
+
+            Transaction t = new Transaction(doc, "SetLinksToOverlay");
+            t.Start();
+            try
+            {
+                foreach (Element elem in linkTypes)
+                {
+                    RevitLinkType linkType = elem as RevitLinkType;
+                    linkType.AttachmentType = AttachmentType.Overlay;
+                }
+                t.Commit();
+            }
+            catch
+            {
+                t.RollBack();
+            }
+        }
+        public static object SetParameterValueFromString(string typeName, object value)
+        {
+            object returnValue = null;
+            switch (typeName)
+            {
+                case "Text":
+                    returnValue = Convert.ToString(value);
+                    break;
+                case "Integer":
+                    returnValue = Convert.ToInt32(value);
+                    break;
+                case "Number":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Length":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Area":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Volume":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Angle":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Slope":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Currencey":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "Mass Density":
+                    returnValue = Convert.ToDouble(value);
+                    break;
+                case "URL":
+                    returnValue = Convert.ToString(value);
+                    break;
+                case "Material":
+                    returnValue = new ElementId(Convert.ToInt32(value));
+                    break;
+                case "Image":
+                    returnValue = ParameterType.Image;
+                    break;
+                case "Yes/No":
+                    if (Convert.ToBoolean(value) == true)
+                    { returnValue = 1; }
+                    else if (Convert.ToBoolean(value) == false)
+                    { returnValue = 0; }
+                    else
+                    { returnValue = null; }
+                    break;
+                case "Multiline Text":
+                    returnValue = Convert.ToString(value);
+                    break;
+                case "<Family Type...>":
+                    returnValue = new ElementId(Convert.ToInt32(value));
+                    break;
+                default:
+                    returnValue = ParameterType.Invalid;
+                    break;
+            }
+            return returnValue;
         }
         public static string SetProjectUpgradeName(UIApplication uiApp, string originalFilePath)
         {
@@ -1079,34 +1108,6 @@ namespace BARevitTools
                     }
                 }
                 transmissionData.IsTransmitted = true;
-                TransmissionData.WriteTransmissionData(modelPath, transmissionData);
-                return transmissionData;
-            }
-            catch
-            {
-                return null;
-            }
-        }
-        public static TransmissionData ReloadLinks(string filePath)
-        {
-
-            ModelPath modelPath = ModelPathUtils.ConvertUserVisiblePathToModelPath(filePath);
-            try
-            {
-                TransmissionData transmissionData = TransmissionData.ReadTransmissionData(modelPath);
-                if (transmissionData != null)
-                {
-                    ICollection<ElementId> externalFileReferences = transmissionData.GetAllExternalFileReferenceIds();
-                    foreach (ElementId elemId in externalFileReferences)
-                    {
-                        ExternalFileReference exRef = transmissionData.GetLastSavedReferenceData(elemId);
-                        if (exRef.ExternalFileReferenceType == ExternalFileReferenceType.RevitLink)
-                        {
-                            transmissionData.SetDesiredReferenceData(elemId, modelPath, PathType.Absolute, true);
-                        }
-                    }
-                }
-                transmissionData.IsTransmitted = false;
                 TransmissionData.WriteTransmissionData(modelPath, transmissionData);
                 return transmissionData;
             }

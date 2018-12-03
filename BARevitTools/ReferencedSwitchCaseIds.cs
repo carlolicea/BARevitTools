@@ -8,7 +8,7 @@ namespace BARevitTools
 {
     class ReferencedSwitchCaseIds
     {
-        private const int currentnumber = 036;
+        private const int currentnumber = 037;
 
         //Multicategory Create Family From Excel
         public const int multiCatCFFE1 = 001;
@@ -77,6 +77,8 @@ namespace BARevitTools
         public const int adminFamiliesBRP = 028;
         //Admin Delete Family Backups
         public const int adminFamiliesDFB = 029;
+        //Admin Update Family Version Parameter
+        public const int adminFamiliesUFVP = 037;
         //Admin Package Manager
         public const int adminTemplatesPM = 032;
 

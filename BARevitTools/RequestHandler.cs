@@ -4,22 +4,33 @@ using RVTDocument = Autodesk.Revit.DB.Document;
 
 namespace BARevitTools
 {
-    public partial class RequestHandler : IExternalEventHandler
-    {        
+    //The RequestHandler derived from IExternalEventHandler is required for all transactions with the Revit API.
+    //It signals the MainUI needs access to Revit to make changes with a transaction.
+    public partial class RequestHandler : IExternalEventHandler    {       
+
         UIControlledApplication uiApp = null;
+        //When called, the request handler will assign the UIControlledApplication
         public RequestHandler(UIControlledApplication newUIApp)
         {
             uiApp = newUIApp;
         }
-        public Requests m_request = new Requests();        
+
+        //Preparing a new Request object to retrieve
+        public Requests m_request = new Requests();
+        
+        //When a Request is made, the associated request is retrieved from the Requests class
         public Requests Request
         {
             get { return m_request; }
         }        
+
+        //This is required as part of the IExternalEventHandler. Doesn't have a functional purpose for this application.
         public String GetName()
         {
             return "BARevitTools External Event";
         }
+
+        //When the request is made, the following Switch Case will create a new instance of the class to be used for the tool operation.
         public void Execute(UIApplication uiApp)
         {
             try
@@ -127,6 +138,9 @@ namespace BARevitTools
                     case RequestId.adminFamiliesBRP:
                         ToolRequests.AdminFamiliesBRPRequest adminFamiliesBRPRequest = new ToolRequests.AdminFamiliesBRPRequest(uiApp, "Bulk Remove Parameters");
                         break;
+                    case RequestId.adminFamiliesUFVP:
+                        ToolRequests.AdminFamiliesUFVPRequest adminFamiliesUFVPRequest = new ToolRequests.AdminFamiliesUFVPRequest(uiApp, "Update Family Version Parameter");
+                        break;
                     case RequestId.testApp:
                         ToolRequests.AdminSandboxSetPreviewHost adminSandboxSetPreviewHost = new ToolRequests.AdminSandboxSetPreviewHost(uiApp, "testapp");
                         break;
@@ -135,6 +149,8 @@ namespace BARevitTools
                         break;
                 }
             }
+
+            //When the request has been made, the MainUI that was dormant during the operation is allowed to be interacted with again.
             finally
             {
                 Application.thisApp.WakeFormUp();

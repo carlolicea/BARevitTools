@@ -43,6 +43,7 @@ namespace BARevitTools
         public static Guid adminFamiliesBAPguid = new Guid("9724E094-207E-44E3-AC00-B743A7C946D6");
         public static Guid adminFamiliesBRPguid = new Guid("0DBD168A-AD10-43D4-91B2-5D64C73BF1D6");
         public static Guid adminFamiliesDFBguid = new Guid("3010A8D9-D4FD-4BCE-BE29-60C8B5EBD4B9");
+        public static Guid adminFamiliesUFVPguid = new Guid("7149252A-2B34-4E6E-B800-3D318AB4C7CF");
         #endregion guids
     }
 }

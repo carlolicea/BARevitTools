@@ -114,7 +114,12 @@ namespace BARevitTools
             this.adminFamiliesBRPButton = new System.Windows.Forms.ToolStripMenuItem();
             this.bulkUpdatePublishVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.adminFamiliesUFVPButton = new System.Windows.Forms.ToolStripButton();
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFVPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesUFVPControlsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFVPRunButton = new System.Windows.Forms.Button();
+            this.adminFamiliesUFVPInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.adminFamiliesBAPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesBAPRunPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBAPDoneLabel = new System.Windows.Forms.Label();
@@ -252,7 +257,6 @@ namespace BARevitTools
             this.multiCatCFFEFamilyCreationPanel = new System.Windows.Forms.Panel();
             this.multiCatCFFEFamilyCreationLabel = new System.Windows.Forms.Label();
             this.multiCatCFFEFamilyCreationComboBox = new System.Windows.Forms.ComboBox();
-            this.doorsTab = new System.Windows.Forms.TabPage();
             this.electricalTab = new System.Windows.Forms.TabPage();
             this.electricalLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.electricalToolStrip = new System.Windows.Forms.ToolStrip();
@@ -277,7 +281,6 @@ namespace BARevitTools
             this.floorsCFBRSelectRoomsButton = new System.Windows.Forms.Button();
             this.floorsToolStrip = new System.Windows.Forms.ToolStrip();
             this.floorsCFBRButton = new System.Windows.Forms.ToolStripButton();
-            this.massesTab = new System.Windows.Forms.TabPage();
             this.materialsTab = new System.Windows.Forms.TabPage();
             this.materialsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.materialsToolStrip = new System.Windows.Forms.ToolStrip();
@@ -467,7 +470,6 @@ namespace BARevitTools
             this.documentsCTSPanel = new System.Windows.Forms.Panel();
             this.documentsCTSRun = new System.Windows.Forms.Button();
             this.documentsCTSInstructions = new System.Windows.Forms.Label();
-            this.graphicsTab = new System.Windows.Forms.TabPage();
             this.miscTab = new System.Windows.Forms.TabPage();
             this.miscToolsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.miscToolStrip = new System.Windows.Forms.ToolStrip();
@@ -585,6 +587,7 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminFamiliesUFVPProgressBar = new System.Windows.Forms.ProgressBar();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -616,6 +619,8 @@ namespace BARevitTools
             this.adminFamiliesLayoutPanel.SuspendLayout();
             this.adminFamiliesToolStrip.SuspendLayout();
             this.adminFamiliesToolsPanel.SuspendLayout();
+            this.adminFamiliesUFVPLayoutPanel.SuspendLayout();
+            this.adminFamiliesUFVPControlsPanel.SuspendLayout();
             this.adminFamiliesBAPLayoutPanel.SuspendLayout();
             this.adminFamiliesBAPRunPanel.SuspendLayout();
             this.adminFamiliesBAPSplitPanel.SuspendLayout();
@@ -1691,7 +1696,8 @@ namespace BARevitTools
             this.adminFamiliesDFBButton,
             this.adminFamiliesSeparator1,
             this.adminFamiliesParametersDropDownButton,
-            this.toolStripSeparator1});
+            this.toolStripSeparator1,
+            this.adminFamiliesUFVPButton});
             this.adminFamiliesToolStrip.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesToolStrip.Name = "adminFamiliesToolStrip";
             this.adminFamiliesToolStrip.Size = new System.Drawing.Size(710, 53);
@@ -1775,8 +1781,21 @@ namespace BARevitTools
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
             // 
+            // adminFamiliesUFVPButton
+            // 
+            this.adminFamiliesUFVPButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesUFVPButton.Image")));
+            this.adminFamiliesUFVPButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.adminFamiliesUFVPButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.adminFamiliesUFVPButton.Name = "adminFamiliesUFVPButton";
+            this.adminFamiliesUFVPButton.Size = new System.Drawing.Size(128, 50);
+            this.adminFamiliesUFVPButton.Text = "Update Family Version";
+            this.adminFamiliesUFVPButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.adminFamiliesUFVPButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.adminFamiliesUFVPButton.Click += new System.EventHandler(this.adminFamiliesUFVPButton_Click);
+            // 
             // adminFamiliesToolsPanel
             // 
+            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesUFVPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBAPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesUFLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBRPLayoutPanel);
@@ -1787,6 +1806,56 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel.Name = "adminFamiliesToolsPanel";
             this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesToolsPanel.TabIndex = 1;
+            // 
+            // adminFamiliesUFVPLayoutPanel
+            // 
+            this.adminFamiliesUFVPLayoutPanel.ColumnCount = 1;
+            this.adminFamiliesUFVPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPControlsPanel, 0, 1);
+            this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPInstructionsTextBox, 0, 0);
+            this.adminFamiliesUFVPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFVPLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesUFVPLayoutPanel.Name = "adminFamiliesUFVPLayoutPanel";
+            this.adminFamiliesUFVPLayoutPanel.RowCount = 2;
+            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.40413F));
+            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.59587F));
+            this.adminFamiliesUFVPLayoutPanel.Size = new System.Drawing.Size(710, 339);
+            this.adminFamiliesUFVPLayoutPanel.TabIndex = 1;
+            this.adminFamiliesUFVPLayoutPanel.Visible = false;
+            // 
+            // adminFamiliesUFVPControlsPanel
+            // 
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPProgressBar);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPRunButton);
+            this.adminFamiliesUFVPControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFVPControlsPanel.Location = new System.Drawing.Point(0, 59);
+            this.adminFamiliesUFVPControlsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFVPControlsPanel.Name = "adminFamiliesUFVPControlsPanel";
+            this.adminFamiliesUFVPControlsPanel.Size = new System.Drawing.Size(710, 280);
+            this.adminFamiliesUFVPControlsPanel.TabIndex = 1;
+            // 
+            // adminFamiliesUFVPRunButton
+            // 
+            this.adminFamiliesUFVPRunButton.Location = new System.Drawing.Point(3, 3);
+            this.adminFamiliesUFVPRunButton.Name = "adminFamiliesUFVPRunButton";
+            this.adminFamiliesUFVPRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesUFVPRunButton.TabIndex = 0;
+            this.adminFamiliesUFVPRunButton.Text = "RUN";
+            this.adminFamiliesUFVPRunButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesUFVPRunButton.Click += new System.EventHandler(this.adminFamiliesUFVPRunButton_Click);
+            // 
+            // adminFamiliesUFVPInstructionsTextBox
+            // 
+            this.adminFamiliesUFVPInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesUFVPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFVPInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesUFVPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFVPInstructionsTextBox.Multiline = true;
+            this.adminFamiliesUFVPInstructionsTextBox.Name = "adminFamiliesUFVPInstructionsTextBox";
+            this.adminFamiliesUFVPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.adminFamiliesUFVPInstructionsTextBox.Size = new System.Drawing.Size(710, 59);
+            this.adminFamiliesUFVPInstructionsTextBox.TabIndex = 2;
+            this.adminFamiliesUFVPInstructionsTextBox.Text = resources.GetString("adminFamiliesUFVPInstructionsTextBox.Text");
             // 
             // adminFamiliesBAPLayoutPanel
             // 
@@ -3016,10 +3085,8 @@ namespace BARevitTools
             // 
             this.modelingTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.modelingTabControl.Controls.Add(this.multiCatTab);
-            this.modelingTabControl.Controls.Add(this.doorsTab);
             this.modelingTabControl.Controls.Add(this.electricalTab);
             this.modelingTabControl.Controls.Add(this.floorsTab);
-            this.modelingTabControl.Controls.Add(this.massesTab);
             this.modelingTabControl.Controls.Add(this.materialsTab);
             this.modelingTabControl.Controls.Add(this.roomsTab);
             this.modelingTabControl.Controls.Add(this.wallsTab);
@@ -3561,17 +3628,6 @@ namespace BARevitTools
             this.multiCatCFFEFamilyCreationComboBox.TabIndex = 0;
             this.multiCatCFFEFamilyCreationComboBox.Text = "<Select Creation Method>";
             // 
-            // doorsTab
-            // 
-            this.doorsTab.BackColor = System.Drawing.SystemColors.Control;
-            this.doorsTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.doorsTab.Location = new System.Drawing.Point(4, 25);
-            this.doorsTab.Margin = new System.Windows.Forms.Padding(0);
-            this.doorsTab.Name = "doorsTab";
-            this.doorsTab.Size = new System.Drawing.Size(720, 402);
-            this.doorsTab.TabIndex = 8;
-            this.doorsTab.Text = "Doors";
-            // 
             // electricalTab
             // 
             this.electricalTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -3867,17 +3923,6 @@ namespace BARevitTools
             this.floorsCFBRButton.ToolTipText = "Create Floor By  Room: Creates floors for the selected rooms using the room bound" +
     "aries.";
             this.floorsCFBRButton.Click += new System.EventHandler(this.FloorsCFBRButton_Click);
-            // 
-            // massesTab
-            // 
-            this.massesTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.massesTab.Location = new System.Drawing.Point(4, 25);
-            this.massesTab.Margin = new System.Windows.Forms.Padding(0);
-            this.massesTab.Name = "massesTab";
-            this.massesTab.Size = new System.Drawing.Size(720, 402);
-            this.massesTab.TabIndex = 7;
-            this.massesTab.Text = "Masses";
-            this.massesTab.UseVisualStyleBackColor = true;
             // 
             // materialsTab
             // 
@@ -5838,7 +5883,6 @@ namespace BARevitTools
             this.managmentTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.managmentTabControl.Controls.Add(this.dataTab);
             this.managmentTabControl.Controls.Add(this.documentsTab);
-            this.managmentTabControl.Controls.Add(this.graphicsTab);
             this.managmentTabControl.Controls.Add(this.miscTab);
             this.managmentTabControl.Controls.Add(this.qaqcTab);
             this.managmentTabControl.Controls.Add(this.setupTab);
@@ -6177,17 +6221,6 @@ namespace BARevitTools
             this.documentsCTSInstructions.Size = new System.Drawing.Size(726, 59);
             this.documentsCTSInstructions.TabIndex = 8;
             this.documentsCTSInstructions.Text = resources.GetString("documentsCTSInstructions.Text");
-            // 
-            // graphicsTab
-            // 
-            this.graphicsTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.graphicsTab.Location = new System.Drawing.Point(4, 25);
-            this.graphicsTab.Margin = new System.Windows.Forms.Padding(0);
-            this.graphicsTab.Name = "graphicsTab";
-            this.graphicsTab.Size = new System.Drawing.Size(720, 402);
-            this.graphicsTab.TabIndex = 2;
-            this.graphicsTab.Text = "Graphics";
-            this.graphicsTab.UseVisualStyleBackColor = true;
             // 
             // miscTab
             // 
@@ -7632,6 +7665,14 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
             // 
+            // adminFamiliesUFVPProgressBar
+            // 
+            this.adminFamiliesUFVPProgressBar.Location = new System.Drawing.Point(84, 3);
+            this.adminFamiliesUFVPProgressBar.Name = "adminFamiliesUFVPProgressBar";
+            this.adminFamiliesUFVPProgressBar.Size = new System.Drawing.Size(620, 23);
+            this.adminFamiliesUFVPProgressBar.TabIndex = 1;
+            this.adminFamiliesUFVPProgressBar.Visible = false;
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7686,6 +7727,9 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.ResumeLayout(false);
             this.adminFamiliesToolStrip.PerformLayout();
             this.adminFamiliesToolsPanel.ResumeLayout(false);
+            this.adminFamiliesUFVPLayoutPanel.ResumeLayout(false);
+            this.adminFamiliesUFVPLayoutPanel.PerformLayout();
+            this.adminFamiliesUFVPControlsPanel.ResumeLayout(false);
             this.adminFamiliesBAPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.PerformLayout();
@@ -8055,7 +8099,6 @@ namespace BARevitTools
         private Panel multiCatCFFEFamilyCreationPanel;
         private Label multiCatCFFEFamilyCreationLabel;
         public ComboBox multiCatCFFEFamilyCreationComboBox;
-        private TabPage doorsTab;
         private TabPage electricalTab;
         private TableLayoutPanel electricalLayoutPanel;
         private ToolStrip electricalToolStrip;
@@ -8080,7 +8123,6 @@ namespace BARevitTools
         private Button floorsCFBRSelectRoomsButton;
         private ToolStrip floorsToolStrip;
         private ToolStripButton floorsCFBRButton;
-        private TabPage massesTab;
         private TabPage materialsTab;
         private TableLayoutPanel materialsLayoutPanel;
         private ToolStrip materialsToolStrip;
@@ -8273,7 +8315,6 @@ namespace BARevitTools
         private Panel documentsCTSPanel;
         public Button documentsCTSRun;
         private Label documentsCTSInstructions;
-        private TabPage graphicsTab;
         private TabPage miscTab;
         private TableLayoutPanel miscToolsLayoutPanel;
         private ToolStrip miscToolStrip;
@@ -8537,6 +8578,12 @@ namespace BARevitTools
         private ToolStripMenuItem bulkUpdatePublishVersionToolStripMenuItem;
         public Panel multiCatToolsPanel;
         public Label adminFamiliesBAPDoneLabel;
+        private ToolStripButton adminFamiliesUFVPButton;
+        private TableLayoutPanel adminFamiliesUFVPLayoutPanel;
+        private Panel adminFamiliesUFVPControlsPanel;
+        private TextBox adminFamiliesUFVPInstructionsTextBox;
+        private Button adminFamiliesUFVPRunButton;
+        public ProgressBar adminFamiliesUFVPProgressBar;
     }
 }
 

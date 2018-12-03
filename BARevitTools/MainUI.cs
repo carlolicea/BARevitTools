@@ -23,7 +23,8 @@ namespace BARevitTools
         private UIApplication uiApp;
         private RequestHandler m_Handler;
         private ExternalEvent m_ExEvent;        
-
+        //
+        //This is the constructor for the MainUI of BART that pops up when the Ribbon Panel button is clicked
         public MainUI(UIApplication exUiApp, ExternalEvent exEvent, RequestHandler handler)
         {
             InitializeComponent();
@@ -31,11 +32,12 @@ namespace BARevitTools
             m_ExEvent = exEvent;
             uiApp = exUiApp;
         }
-
-        // This sets who can access the BIM Management tab
+        //
+        // This sets who can access the Admin tab
         private void AllowBIMManagementTab(object sender, EventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
+            //This will take the Properties setting and split it out to a list to see if the logged in user's name is in the list.
             List<string> adminUsersList = BARevitTools.Properties.Settings.Default.BARTBAAdminUsers.Split(',').ToList();
             string userName = Environment.UserName.ToString();
             if (adminUsersList.Contains(userName))
@@ -46,6 +48,8 @@ namespace BARevitTools
             }
             else { uiForm.adminManagementTabControl.Enabled = false; }
         }
+        //
+        //When the MainUI is closed, this is performed to clean up data
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             m_ExEvent.Dispose();
@@ -53,30 +57,37 @@ namespace BARevitTools
             m_Handler = null;
             base.OnFormClosed(e);
         }
+        //
+        //This will allow the MainUI's controls to be interacted with while a Request is not active
+        public void WakeUp()
+        {
+            EnableCommands(true);
+        }
+        //
+        //When a Request is active and modifying the Revit document, the MainUI's controls are disabled
+        private void DozeOff()
+        {
+            EnableCommands(false);
+        }
+        //
+        //This will allow the MainUI controls to be interacted with or disabled.
         private void EnableCommands(bool status)
         {
             foreach (System.Windows.Forms.Control ctrl in this.Controls)
             {
                 ctrl.Enabled = status;
             }
-            //
-            //May need to implement close button. See the ModelessForm example
-            //
         }
+        //
+        //This method is called to make a request from the MainUI, and set the MainUI controsl as inactive so no MainUI operations can be performed while the request's operations are performed
         public void MakeRequest(RequestId request)
         {
             m_Handler.Request.Make(request);
             m_ExEvent.Raise();
             DozeOff();
         }
-        private void DozeOff()
-        {
-            EnableCommands(false);
-        }
-        public void WakeUp()
-        {
-            EnableCommands(true);
-        }
+        //
+        //When the MainUI is closed, the activities of the user will be recorded
         private void MainUI_FormClosed(object sender, FormClosedEventArgs e)
         {
             try
@@ -88,12 +99,15 @@ namespace BARevitTools
                 ;
             }
         }
+        //
+        //This Switch Case will determine what panels of controls are visible and which are hidden. This allows multiple panels to be stacked for each tab and only show the one being after the tool button is clicked
         public void SwitchActivePanel(int panelNumber)
         {
             #region Switch Cases for Panels
             int caseSwitch = panelNumber;
             switch (caseSwitch)
             {
+                //Each of these cases are to show the parent control (panel or layout panel) when the tool button is pressed, while hiding the other parent controls hosted in the same tab
                 case ReferencedSwitchCaseIds.multiCatCFFE1:
                     this.multiCatCFFSplitContainer.Visible = true;
                     this.multiCatCFFEButton.Checked = true;
@@ -290,6 +304,8 @@ namespace BARevitTools
                     this.adminFamiliesBRPButton.Checked = false;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
+                    this.adminFamiliesUFVPButton.Checked = false;
+                    this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesBAP:
                     this.adminFamiliesBAPLayoutPanel.Visible = true;
@@ -300,6 +316,8 @@ namespace BARevitTools
                     this.adminFamiliesBRPButton.Checked = false;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
+                    this.adminFamiliesUFVPButton.Checked = false;
+                    this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesBRP:
                     this.adminFamiliesBRPLayoutPanel.Visible = true;
@@ -310,6 +328,8 @@ namespace BARevitTools
                     this.adminFamiliesBAPButton.Checked = false;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
+                    this.adminFamiliesUFVPButton.Checked = false;
+                    this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesDFB:
                     this.adminFamiliesDFBLayoutPanel.Visible = true;
@@ -320,7 +340,22 @@ namespace BARevitTools
                     this.adminFamiliesBAPButton.Checked = false;
                     this.adminFamiliesBRPLayoutPanel.Visible = false;
                     this.adminFamiliesBRPButton.Checked = false;
+                    this.adminFamiliesUFVPButton.Checked = false;
+                    this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     break;
+                case ReferencedSwitchCaseIds.adminFamiliesUFVP:
+                    this.adminFamiliesUFVPButton.Checked = true;
+                    this.adminFamiliesUFVPLayoutPanel.Visible = true;
+                    this.adminFamiliesDFBLayoutPanel.Visible = false;
+                    this.adminFamiliesDFBButton.Checked = false;
+                    this.adminFamiliesUFLayoutPanel.Visible = false;
+                    this.adminFamiliesUFButton.Checked = false;
+                    this.adminFamiliesBAPLayoutPanel.Visible = false;
+                    this.adminFamiliesBAPButton.Checked = false;
+                    this.adminFamiliesBRPLayoutPanel.Visible = false;
+                    this.adminFamiliesBRPButton.Checked = false;
+                    break;
+
                 case ReferencedSwitchCaseIds.adminTemplatesPM:
                     this.adminTemplatePMLayoutPanel.Visible = true;
                     this.adminTemplatePMButton.Checked = true;
@@ -331,57 +366,78 @@ namespace BARevitTools
             #endregion Switch Cases for Panels
         }
 
-        // ABOUT TAB
+        //
+        // ABOUT TAB TOOLS
+        //
+
+        //When a user clicks on the hyperlink on the main page of the BART UI, it will launch a web browser and the website with these events
         private void AboutTabDevelopmentLinkURLLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
             System.Diagnostics.Process.Start(BARevitTools.Properties.Settings.Default.BARTDevelopmentUrl);
         }
         private void AboutTabLearningLinkURLLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(BARevitTools.Properties.Settings.Default.UrlBARTLearning);
         }
+        
+        
+        // MODELING TAB TOOLS
 
-        // MODELING TAB
+        //Create Families From Excel
         #region multiCatCFFE
+        //
+        //The following strings are for storing the data obtained by the MainUI
         public string multiCatSelectedFamilyFile = "";
         public string multiCatCFFEExcelFileToUse = "";
         public string multiCatCFFEFamilyFileToUse = "";
         public string multiCatCFFEFamilySaveLocation = "";
+        //
+        //This switches the active MainUI panel of controls and records the user's click of the tool button
         private void AllCatCFFEButton_Click(object sender, EventArgs e)
         {
             SwitchActivePanel(ReferencedSwitchCaseIds.multiCatCFFE1);
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEExcelStatusLabel.Visible = false;
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEFamiliesProgressBar.Visible = false;
             BARevitTools.Application.thisApp.newMainUi.allCATCFFEFamiliesSaveDirectoryTextBox.Text = "";
-            //BARevitTools.Tools.AllCatCFFEForm CFFEForm = new Tools.AllCatCFFEForm(uiApp,m_ExEvent,m_Handler);
             DatabaseOperations.CollectUserInputData(BARevitTools.ReferencedGuids.multiCatCFFguid, multiCatCFFEButton.Text, Environment.UserName.ToString(), DateTime.Now);
         }
+        //
+        //When the user clicks on the button to select a directory for saving the Excel template, this is called
         private void AllCatCFFEDirectorySelectButton_Click(object sender, EventArgs e)
         {
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEExcelStatusLabel.Visible = false;
             string saveDirectory = GeneralOperations.GetDirectory();
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEDirectoryTextBox.Text = saveDirectory;
         }
+        //
+        //After a user clicks on the button to select a Revit family, this is called
         private void AllCatCFFESelectFamilyButton_Click(object sender, EventArgs e)
         {
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEExcelStatusLabel.Visible = false;
+            //A bool is used to determine if Revit should try to read the family file later
             bool readFamilyFile = false;
             string fileName = RVTOperations.GetFamilyFile();
+            //If the user selected a file, continue
             if (fileName != "")
             {
-                string rvtVersion = RVTOperations.GetRevitVersion(fileName);
-                if (rvtVersion != "")
+                //Determine if the family can be opened by the actively running version of Revit
+                if (Convert.ToInt32(uiApp.Application.VersionNumber) >= RVTOperations.GetRevitNumber(fileName))
                 {
-                    string rvtNumber = rvtVersion.Substring(rvtVersion.Length - 4);
-                    if (Convert.ToDouble(uiApp.Application.VersionNumber) >= Convert.ToDouble(rvtNumber))
-                    { BARevitTools.Application.thisApp.newMainUi.multiCatCFFESelectFamilyTextBox.Text = Path.GetFileNameWithoutExtension(fileName); readFamilyFile = true; }
-                }
+                    BARevitTools.Application.thisApp.newMainUi.multiCatCFFESelectFamilyTextBox.Text = Path.GetFileNameWithoutExtension(fileName);
+                    readFamilyFile = true;
+                }                
                 else
-                { BARevitTools.Application.thisApp.newMainUi.multiCatCFFESelectFamilyTextBox.Text = "RVT Version Error"; }
+                {
+                    BARevitTools.Application.thisApp.newMainUi.multiCatCFFESelectFamilyTextBox.Text = "RVT Version Error";
+                }
             }
             else
-            { BARevitTools.Application.thisApp.newMainUi.multiCatCFFESelectFamilyTextBox.Text = "No Selection Error"; }
+            {
+                BARevitTools.Application.thisApp.newMainUi.multiCatCFFESelectFamilyTextBox.Text = "No Selection Error";
+            }
 
+            //If the family can be opened by Revit, proceed with raising and ExternalEvent and making the Request
             if (readFamilyFile == true)
             {
                 multiCatSelectedFamilyFile = fileName;
@@ -390,18 +446,25 @@ namespace BARevitTools
             }
 
         }
+        //
+        //When a user has imported their Excel template, the DataGridView will populate. This method controls what happens with the DGV when it is interacted with
         private void AllCatCFFEExcelDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             DataGridView dgv = uiForm.multiCatCFFEExcelDGV;
+            //Verify there are rows in the DGV
             if (dgv.Rows.Count > 0)
             {
+                //Get the value of the clicked cell and its ColumnIndex
                 var rowValue = dgv.CurrentCell.Value.ToString();
                 int columnIndex = dgv.CurrentCell.ColumnIndex;
+                //If the user was interacting with the checkboxes...
                 if (columnIndex == 0)
                 {
+                    //If the cell's check state was null...
                     if (rowValue == "")
                     {
+                        //Set each selected row's check box to True and set the background color
                         foreach (DataGridViewRow row in dgv.SelectedRows)
                         {
                             int rowIndex = row.Index;
@@ -409,8 +472,10 @@ namespace BARevitTools
                             row.Cells[columnIndex].Style.BackColor = System.Drawing.Color.GreenYellow;
                         }
                     }
+                    //If the cell's check state was True...
                     else if (rowValue.ToString() == "True")
                     {
+                        //Set each selected row's check box to False and clear the background color
                         foreach (DataGridViewRow row in dgv.SelectedRows)
                         {
                             int rowIndex = row.Index;
@@ -418,8 +483,10 @@ namespace BARevitTools
                             row.Cells[columnIndex].Style.BackColor = dgv.DefaultCellStyle.BackColor;
                         }
                     }
+                    //Otherwise, the cell's check state was False
                     else
                     {
+                        //Sete each Rows's check box to True and set the background color
                         foreach (DataGridViewRow row in dgv.SelectedRows)
                         {
                             int rowIndex = row.Index;
@@ -432,71 +499,100 @@ namespace BARevitTools
             dgv.Update();
             dgv.Refresh();
         }
+        //
+        //When the user clicks the button for saving the Excel template, this is called
         private void AllCatCFFEExcelRunButton_Click(object sender, EventArgs e)
         {
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEExcelStatusLabel.Visible = false;
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             DataGridView dgv = uiForm.multiCatCFFEExcelDGV;
 
+            //Determine how many rows of parameters were selected
             int trueCount = 0;
             foreach (DataGridViewRow row in dgv.Rows)
             {
-                if (row.Cells[0].Value.ToString() == "True")
+                try
                 {
-                    trueCount++;
+                    if (row.Cells["Parameter Select"].Value.ToString() == "True")
+                    {
+                        trueCount++;
+                    }
                 }
+                catch { continue; }                
             }
 
+            //If the user didn't select the directory where to save the template, give a message
             if (uiForm.multiCatCFFEDirectoryTextBox.Text == "")
             {
                 MessageBox.Show("No save directory was selected");
             }
+            //If they also didn't select a family, give a message
             else if (uiForm.multiCatCFFESelectFamilyTextBox.Text == "")
             {
                 MessageBox.Show("No family was selected");
             }
+            //If they didn't select any parameters, give a message
             else if (dgv.Rows.Count == 0 || trueCount == 0)
             {
                 MessageBox.Show("No family parameters were selected");
             }
+            //Otherwise not all is lost on them and they can continue
             else
             {
                 string savePath = uiForm.multiCatCFFEDirectoryTextBox.Text;
                 string familyName = uiForm.multiCatCFFESelectFamilyTextBox.Text;
 
+                //Fire up Excel and set it to be visible when launched, and ignore any alerts
                 Excel.Application excel = new Excel.Application();
                 excel.Visible = false;
                 excel.DisplayAlerts = false;
 
+                //Add a new workbook after Excel launches
                 Excel.Workbook newWorkbook = excel.Workbooks.Add("");
+                //Set the worksheet to the first active worksheeet
                 Excel.Worksheet newWorksheet = newWorkbook.ActiveSheet;
+                //Set all cells as locked
                 newWorksheet.Cells.Locked = true;
 
+                //For cell A3, set it to the following
                 newWorksheet.Cells[3, 1] = "Family Type Name";
+                //For cell A1, set it to the following
                 newWorksheet.Cells[1, 1] = "READ ME: Refer to the family parameters to know what is expected for parameter values. " +
                     "The GREEN row is the parameter names. " +
                     "The BLUE row is the parameter types as seen in Revit. " +
                     "The ORANGE row is the types of data formats expected. " +
                     "NOTE: INTEGERS are whole Numbers, DOUBLES are decimal numbers, STRINGS are text. " +
                     "For all parameters that are LENGTHS, use DECIMAL INCHES. For YES/NO Parameters, 0 is False and 1 is True";
+                //Merge the cells for A1 and A2
                 Excel.Range mergeRange = excel.Range[newWorksheet.Cells[1, 1], newWorksheet.Cells[2, 1]];
                 mergeRange.Merge(Missing.Value);
-                newWorksheet.Range["A1,A2"].Cells.Interior.ColorIndex = 3; //Red//
+                //Set the cell's color to Red
+                newWorksheet.Range["A1,A2"].Cells.Interior.ColorIndex = 3;
+                //Allow the merged cells to wrap text
                 newWorksheet.Range["A1,A2"].Cells.WrapText = true;
 
+                //Now, parameter names will start in column B
                 int j = 2; //Parameter Names starting column//
+                //For each row in the DGV of parameters
                 foreach (DataGridViewRow row in dgv.Rows)
                 {
-                    if (row.Cells[0].Value.ToString() == "True")
+                    //If the checkbox is checked for that row...
+                    if (row.Cells["Parameter Select"].Value.ToString() == "True")
                     {
-                        newWorksheet.Cells[1, j] = row.Cells[3].Value.ToString();//Parameter Type
-                        newWorksheet.Cells[2, j] = row.Cells[4].Value.ToString();//Parameter Storage Type
-                        newWorksheet.Cells[3, j] = row.Cells[1].Value.ToString();//Parameter Name
+                        //Set cell "j"1 to the parameter type
+                        newWorksheet.Cells[1, j] = row.Cells["Parameter Type"].Value.ToString();
+                        //Set cell "j"2 to the storage type
+                        newWorksheet.Cells[2, j] = row.Cells["Parameter Storage Type"].Value.ToString();
+                        //Set cell "j"3 to the parameter name
+                        newWorksheet.Cells[3, j] = row.Cells["Parameter Name"].Value.ToString();
                         j++;
                     }
                 }
+                //Unlock the cells
                 excel.Cells.Locked = false;
+                //Cell A3 should be locked
                 newWorksheet.Cells[3, 1].Locked = true;
+                //Set the ranges for the cells
                 Excel.Range familyTypeHeaderCells = newWorksheet.Cells[3, 1];
                 Excel.Range paramNamesStartCells = newWorksheet.Cells[3, 2];
                 Excel.Range paramNamesEndCells = newWorksheet.Cells[3, j - 1];
@@ -505,18 +601,25 @@ namespace BARevitTools
                 Excel.Range paramStorageTypesStartCells = newWorksheet.Cells[2, 2];
                 Excel.Range paramStorageTypesEndCells = newWorksheet.Cells[2, j - 1];
                 Excel.Range paramNamesRange = excel.Range[paramNamesStartCells, paramNamesEndCells];
+                //Set the color of the cells for the family type header
                 familyTypeHeaderCells.Cells.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.GreenYellow);
+                //For the parameter name header cells, set their color
                 paramNamesRange.Cells.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.GreenYellow);
+                //Lock the cells in the parameter names
                 paramNamesRange.Locked = true;
                 Excel.Range paramTypesRange = excel.Range[paramTypesStartCells, paramTypesEndCells];
+                //Set the color of the cells for the parameter type headers
                 paramTypesRange.Cells.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.DeepSkyBlue);
+                //Lock those cells too
                 paramTypesRange.Locked = true;
                 Excel.Range paramStorageRange = excel.Range[paramStorageTypesStartCells, paramStorageTypesEndCells];
+                //Finally, set the color for the cells in the parameter storage headers and lock them
                 paramStorageRange.Cells.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Gold);
                 paramStorageRange.Locked = true;
 
-
+                //The password to lock the sheet
                 string password = BARevitTools.Properties.Settings.Default.ExcelWorksheetPwd;
+                //Rest of these settings are for allowing or restricting changes
                 bool drawingObjects = false;
                 bool contents = true;
                 bool scenarios = false;
@@ -535,18 +638,27 @@ namespace BARevitTools
                 newWorksheet.Protect(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells,
                     allowFormattingColumns, allowFormattingRows, allowInsertingColumns, allowInsertingRows, allowInsertingHyperlinks,
                     allowDeletingColumns, allowDeletingRows, allowSorting, allowFiltering, allowUsingPivotTables);
+
+                //Here is where the Excel file is saved
                 try
                 {
+                    //Get the file properties
                     dynamic properties = newWorkbook.BuiltinDocumentProperties;
+                    //Set the Comments field of the properties to the family path so the script will know later which family corresponds to the spreadsheet, even if the spreadsheet name changes
                     properties["Comments"].Value = multiCatSelectedFamilyFile;
+                    //Save the file
                     newWorkbook.SaveAs(savePath + "\\" + familyName + "_Types Template.xlsx");
+                    //Close the file
                     newWorkbook.Close();
+                    //Exit Excel
                     excel.Quit();
+                    //Try to close the Excel application running
                     System.Runtime.InteropServices.Marshal.ReleaseComObject(excel);
                     BARevitTools.Application.thisApp.newMainUi.multiCatCFFEExcelStatusLabel.Visible = true;
                 }
                 catch
                 {
+                    //The save could fail because the file was open, this will inform the user
                     System.Runtime.InteropServices.Marshal.ReleaseComObject(excel);
                     MessageBox.Show("Error: A previously saved template with the same name might be open. " +
                     "Please close it in Excel and re-export the template. " +
@@ -554,6 +666,8 @@ namespace BARevitTools
                 }
             }
         }
+        //
+        //When the user clicks the button for importing dat from the Excel template, this is called
         private void AllCatCFFEExcelSelectButton_Click(object sender, EventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
@@ -1101,6 +1215,7 @@ namespace BARevitTools
             MakeRequest(RequestId.wallsDP);
         }
         #endregion wallsDP
+
 
         // Documentation Tab
         #region sheetsCSL
@@ -3257,7 +3372,20 @@ namespace BARevitTools
         }
         #endregion adminFamiliesDFB
 
-        
+        #region adminFamiliesUFVP
+        private void adminFamiliesUFVPButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
+            uiForm.adminFamiliesUFVPProgressBar.Visible = false;
+            uiForm.adminFamiliesUFVPProgressBar.Value = 0;
+
+            SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesUFVP);
+            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesUFVPguid, adminFamiliesUFVPButton.Text, Environment.UserName.ToString(), DateTime.Now);
+
+        }
+        #endregion adminFamiliesUFVP
+
+
         //In Development
         #region adminTemplatesPM
         private void AdminTemplatePMButton_Click(object sender, EventArgs e)
@@ -3420,6 +3548,10 @@ namespace BARevitTools
             // Need something for the options when they are done.
         }
 
-        
+        private void adminFamiliesUFVPRunButton_Click(object sender, EventArgs e)
+        {
+            m_ExEvent.Raise();
+            MakeRequest(RequestId.adminFamiliesUFVP);
+        }
     }
 }

@@ -139,10 +139,7 @@ namespace BARevitTools.ToolRequests
                                 }
                                 else { MessageBox.Show(String.Format("Could not make parameter '{0}' because it already exists.", name)); }                                                            
                             }
-                            catch
-                            {
-                                continue;
-                            }
+                            catch { continue; }
                             finally
                             {
                                 ModelPath modelPath = ModelPathUtils.ConvertUserVisiblePathToModelPath(filePath);

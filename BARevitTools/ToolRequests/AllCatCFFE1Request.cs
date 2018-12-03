@@ -51,18 +51,23 @@ namespace BARevitTools.ToolRequests
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.Columns["Parameter Select"].Width = 45;
             dgv.Columns["Parameter Select"].HeaderText = "Select";
+            dgv.Columns["Parameter Select"].Name = "Parameter Select";
             dgv.Columns["Parameter Name"].Width = 125;
             dgv.Columns["Parameter Name"].ReadOnly = true;
             dgv.Columns["Parameter Name"].HeaderText = "Name";
+            dgv.Columns["Parameter Name"].Name = "Parameter Name";
             dgv.Columns["Parameter Group"].Width = 75;
             dgv.Columns["Parameter Group"].ReadOnly = true;
             dgv.Columns["Parameter Group"].HeaderText = "Group";
+            dgv.Columns["Parameter Group"].Name = "Parameter Group";
             dgv.Columns["Parameter Type"].Width = 100;
             dgv.Columns["Parameter Type"].ReadOnly = true;
             dgv.Columns["Parameter Type"].HeaderText = "Param Type";
+            dgv.Columns["Parameter Type"].Name = "Parameter Type";
             dgv.Columns["Parameter Storage Type"].Width = 100;
             dgv.Columns["Parameter Storage Type"].ReadOnly = true;
             dgv.Columns["Parameter Storage Type"].HeaderText = "Data Format";
+            dgv.Columns["Parameter Storage Type"].Name = "Parameter Storage Type";
 
             dgv.Sort(dgv.Columns["Parameter Name"], ListSortDirection.Ascending);
             foreach (DataGridViewColumn column in dgv.Columns)
