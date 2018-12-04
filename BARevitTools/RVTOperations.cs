@@ -652,7 +652,7 @@ namespace BARevitTools
                 }
                 catch
                 {
-                    MessageBox.Show(string.Format("{0} a Revit file, but could not be opened", fileName));
+                    MessageBox.Show(string.Format("{0} is a Revit file, but could not be opened", fileName));
                 }
             }
             else

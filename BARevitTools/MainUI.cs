@@ -3378,6 +3378,7 @@ namespace BARevitTools
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             uiForm.adminFamiliesUFVPProgressBar.Visible = false;
             uiForm.adminFamiliesUFVPProgressBar.Value = 0;
+            uiForm.adminFamiliesUFVPDatePicker.Value = DateTime.Today;
 
             SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesUFVP);
             DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesUFVPguid, adminFamiliesUFVPButton.Text, Environment.UserName.ToString(), DateTime.Now);

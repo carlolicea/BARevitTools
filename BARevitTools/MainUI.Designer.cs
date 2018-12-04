@@ -118,6 +118,7 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesUFVPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesUFVPControlsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFVPProgressBar = new System.Windows.Forms.ProgressBar();
             this.adminFamiliesUFVPRunButton = new System.Windows.Forms.Button();
             this.adminFamiliesUFVPInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.adminFamiliesBAPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -587,7 +588,8 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminFamiliesUFVPProgressBar = new System.Windows.Forms.ProgressBar();
+            this.adminFamiliesUFVPDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.adminFamiliesUFVPCheckBox = new System.Windows.Forms.CheckBox();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -1810,33 +1812,43 @@ namespace BARevitTools
             // adminFamiliesUFVPLayoutPanel
             // 
             this.adminFamiliesUFVPLayoutPanel.ColumnCount = 1;
-            this.adminFamiliesUFVPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.adminFamiliesUFVPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPControlsPanel, 0, 1);
             this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPInstructionsTextBox, 0, 0);
             this.adminFamiliesUFVPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adminFamiliesUFVPLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesUFVPLayoutPanel.Name = "adminFamiliesUFVPLayoutPanel";
             this.adminFamiliesUFVPLayoutPanel.RowCount = 2;
-            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.40413F));
-            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.59587F));
+            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.adminFamiliesUFVPLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesUFVPLayoutPanel.TabIndex = 1;
             this.adminFamiliesUFVPLayoutPanel.Visible = false;
             // 
             // adminFamiliesUFVPControlsPanel
             // 
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPCheckBox);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDatePicker);
             this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPProgressBar);
             this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPRunButton);
             this.adminFamiliesUFVPControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFVPControlsPanel.Location = new System.Drawing.Point(0, 59);
+            this.adminFamiliesUFVPControlsPanel.Location = new System.Drawing.Point(0, 75);
             this.adminFamiliesUFVPControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adminFamiliesUFVPControlsPanel.Name = "adminFamiliesUFVPControlsPanel";
-            this.adminFamiliesUFVPControlsPanel.Size = new System.Drawing.Size(710, 280);
+            this.adminFamiliesUFVPControlsPanel.Size = new System.Drawing.Size(710, 264);
             this.adminFamiliesUFVPControlsPanel.TabIndex = 1;
+            // 
+            // adminFamiliesUFVPProgressBar
+            // 
+            this.adminFamiliesUFVPProgressBar.Location = new System.Drawing.Point(84, 33);
+            this.adminFamiliesUFVPProgressBar.Name = "adminFamiliesUFVPProgressBar";
+            this.adminFamiliesUFVPProgressBar.Size = new System.Drawing.Size(620, 23);
+            this.adminFamiliesUFVPProgressBar.TabIndex = 1;
+            this.adminFamiliesUFVPProgressBar.Visible = false;
             // 
             // adminFamiliesUFVPRunButton
             // 
-            this.adminFamiliesUFVPRunButton.Location = new System.Drawing.Point(3, 3);
+            this.adminFamiliesUFVPRunButton.Location = new System.Drawing.Point(3, 33);
             this.adminFamiliesUFVPRunButton.Name = "adminFamiliesUFVPRunButton";
             this.adminFamiliesUFVPRunButton.Size = new System.Drawing.Size(75, 23);
             this.adminFamiliesUFVPRunButton.TabIndex = 0;
@@ -1853,7 +1865,7 @@ namespace BARevitTools
             this.adminFamiliesUFVPInstructionsTextBox.Multiline = true;
             this.adminFamiliesUFVPInstructionsTextBox.Name = "adminFamiliesUFVPInstructionsTextBox";
             this.adminFamiliesUFVPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.adminFamiliesUFVPInstructionsTextBox.Size = new System.Drawing.Size(710, 59);
+            this.adminFamiliesUFVPInstructionsTextBox.Size = new System.Drawing.Size(710, 75);
             this.adminFamiliesUFVPInstructionsTextBox.TabIndex = 2;
             this.adminFamiliesUFVPInstructionsTextBox.Text = resources.GetString("adminFamiliesUFVPInstructionsTextBox.Text");
             // 
@@ -7665,13 +7677,22 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
             // 
-            // adminFamiliesUFVPProgressBar
+            // adminFamiliesUFVPDatePicker
             // 
-            this.adminFamiliesUFVPProgressBar.Location = new System.Drawing.Point(84, 3);
-            this.adminFamiliesUFVPProgressBar.Name = "adminFamiliesUFVPProgressBar";
-            this.adminFamiliesUFVPProgressBar.Size = new System.Drawing.Size(620, 23);
-            this.adminFamiliesUFVPProgressBar.TabIndex = 1;
-            this.adminFamiliesUFVPProgressBar.Visible = false;
+            this.adminFamiliesUFVPDatePicker.Location = new System.Drawing.Point(84, 6);
+            this.adminFamiliesUFVPDatePicker.Name = "adminFamiliesUFVPDatePicker";
+            this.adminFamiliesUFVPDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.adminFamiliesUFVPDatePicker.TabIndex = 2;
+            // 
+            // adminFamiliesUFVPCheckBox
+            // 
+            this.adminFamiliesUFVPCheckBox.AutoSize = true;
+            this.adminFamiliesUFVPCheckBox.Location = new System.Drawing.Point(3, 7);
+            this.adminFamiliesUFVPCheckBox.Name = "adminFamiliesUFVPCheckBox";
+            this.adminFamiliesUFVPCheckBox.Size = new System.Drawing.Size(71, 17);
+            this.adminFamiliesUFVPCheckBox.TabIndex = 3;
+            this.adminFamiliesUFVPCheckBox.Text = "Use Date";
+            this.adminFamiliesUFVPCheckBox.UseVisualStyleBackColor = true;
             // 
             // MainUI
             // 
@@ -7730,6 +7751,7 @@ namespace BARevitTools
             this.adminFamiliesUFVPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesUFVPLayoutPanel.PerformLayout();
             this.adminFamiliesUFVPControlsPanel.ResumeLayout(false);
+            this.adminFamiliesUFVPControlsPanel.PerformLayout();
             this.adminFamiliesBAPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.PerformLayout();
@@ -8584,6 +8606,8 @@ namespace BARevitTools
         private TextBox adminFamiliesUFVPInstructionsTextBox;
         private Button adminFamiliesUFVPRunButton;
         public ProgressBar adminFamiliesUFVPProgressBar;
+        public DateTimePicker adminFamiliesUFVPDatePicker;
+        public CheckBox adminFamiliesUFVPCheckBox;
     }
 }
 

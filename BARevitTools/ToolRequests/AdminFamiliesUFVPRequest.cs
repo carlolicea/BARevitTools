@@ -16,9 +16,16 @@ namespace BARevitTools.ToolRequests
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             RVTDocument doc = uiApp.ActiveUIDocument.Document;
 
-            
-
-            List<string> familyFiles = GeneralOperations.GetAllRvtFamilies(BARevitTools.Properties.Settings.Default.BARTBARevitFamilyLibraryPath);
+            List<string> familyFiles = new List<string>();
+            if (uiForm.adminFamiliesUFVPCheckBox.Checked)
+            {
+                familyFiles = GeneralOperations.GetAllRvtFamilies(BARevitTools.Properties.Settings.Default.BARTBARevitFamilyLibraryPath, uiForm.adminFamiliesUFVPDatePicker.Value, true);
+            }
+            else
+            {
+                familyFiles = GeneralOperations.GetAllRvtFamilies(BARevitTools.Properties.Settings.Default.BARTBARevitFamilyLibraryPath);
+            }
+           
 
             if (familyFiles.Count > 0)
             {
@@ -57,6 +64,8 @@ namespace BARevitTools.ToolRequests
                             SetParameters(uiApp, familyFile, sharedParameterDefinitions[Properties.Settings.Default.RevitUFVPParameter]);
                             uiForm.adminFamiliesUFVPProgressBar.PerformStep();
                         }
+                        List<string> backupFamilies = GeneralOperations.GetAllRvtBackupFamilies(Properties.Settings.Default.BARTBARevitFamilyLibraryPath);
+                        GeneralOperations.CleanRfaBackups(backupFamilies);
                     }
                     else if (sharedParametersIsAccessible && !sharedParameterDefinitions.Keys.Contains(BARevitTools.Properties.Settings.Default.RevitUFVPParameter))
                     {                        
@@ -79,35 +88,47 @@ namespace BARevitTools.ToolRequests
                 string lastModified = fileInfo.LastWriteTime.ToShortDateString();
 
                 RVTDocument famDoc = RVTOperations.OpenRevitFile(uiApp, familyFile);
-                FamilyManager famMan = famDoc.FamilyManager;
-                FamilyParameter famParameter = null;
-                Dictionary<string, FamilyParameter> famParamDict = new Dictionary<string, FamilyParameter>();
-                foreach (FamilyParameter famParam in famMan.Parameters)
+                if (famDoc!=null)
                 {
-                    famParamDict.Add(famParam.Definition.Name, famParam);
-                }
+                    FamilyManager famMan = famDoc.FamilyManager;
+                    FamilyParameter famParameter = null;
+                    Dictionary<string, FamilyParameter> famParamDict = new Dictionary<string, FamilyParameter>();
+                    foreach (FamilyParameter famParam in famMan.Parameters)
+                    {
+                        famParamDict.Add(famParam.Definition.Name, famParam);
+                    }
 
-                Transaction t1 = new Transaction(famDoc, "SetParameters");
-                t1.Start();
-                if (!famParamDict.Keys.Contains(BARevitTools.Properties.Settings.Default.RevitUFVPParameter))
-                {
-                    famParameter = famMan.AddParameter(externalDefinition, BuiltInParameterGroup.PG_IDENTITY_DATA, false);
+                    FamilyTypeSet types = famMan.Types;
+                    int numberOfTypes = types.Size;
+
+                    Transaction t1 = new Transaction(famDoc, "SetParameters");
+                    t1.Start();
+                    if (numberOfTypes == 0)
+                    {
+                        try
+                        {
+                            famMan.NewType("Default");
+                        }
+                        catch { MessageBox.Show(String.Format("Could not make a default type or find any type for {0}", familyFile)); }
+                    }
+
+                    if (!famParamDict.Keys.Contains(BARevitTools.Properties.Settings.Default.RevitUFVPParameter))
+                    {
+                        famParameter = famMan.AddParameter(externalDefinition, BuiltInParameterGroup.PG_IDENTITY_DATA, false);
+                        famDoc.Regenerate();
+                    }
+                    else
+                    {
+                        famParameter = famParamDict[BARevitTools.Properties.Settings.Default.RevitUFVPParameter];
+                    }
+                    famMan.SetFormula(famParameter, "\""+lastModified+"\"");                      
+                    t1.Commit();
+                    RVTOperations.SaveRevitFile(uiApp, famDoc, true);
                 }
                 else
                 {
-                    famParameter = famParamDict[BARevitTools.Properties.Settings.Default.RevitUFVPParameter];
-                }
-                foreach (FamilyType famType in famMan.Types)
-                {
-                    SubTransaction s1 = new SubTransaction(famDoc);
-                    s1.Start();
-                    famMan.CurrentType = famType;
-                    famMan.Set(famParameter, lastModified);
-                    s1.Commit();
-                }
-                t1.Commit();
-                RVTOperations.SaveRevitFile(uiApp, famDoc, true);
-                GeneralOperations.CleanRfaBackups(BARevitTools.Properties.Settings.Default.BARTBARevitFamilyLibraryPath);
+                    MessageBox.Show(String.Format("{0} could not be opened.", familyFile));
+                }                
             }
             catch (Exception e)
             {
