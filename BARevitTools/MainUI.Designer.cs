@@ -118,6 +118,8 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesUFVPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesUFVPControlsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFVPCheckBox = new System.Windows.Forms.CheckBox();
+            this.adminFamiliesUFVPDatePicker = new System.Windows.Forms.DateTimePicker();
             this.adminFamiliesUFVPProgressBar = new System.Windows.Forms.ProgressBar();
             this.adminFamiliesUFVPRunButton = new System.Windows.Forms.Button();
             this.adminFamiliesUFVPInstructionsTextBox = new System.Windows.Forms.TextBox();
@@ -588,8 +590,6 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminFamiliesUFVPDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.adminFamiliesUFVPCheckBox = new System.Windows.Forms.CheckBox();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -1785,11 +1785,11 @@ namespace BARevitTools
             // 
             // adminFamiliesUFVPButton
             // 
-            this.adminFamiliesUFVPButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesUFVPButton.Image")));
+            this.adminFamiliesUFVPButton.Image = (Image)(new Bitmap(BARevitTools.Properties.Resources.bimFamiliesUFVPIcon, new Size(32,32)));
             this.adminFamiliesUFVPButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.adminFamiliesUFVPButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.adminFamiliesUFVPButton.Name = "adminFamiliesUFVPButton";
-            this.adminFamiliesUFVPButton.Size = new System.Drawing.Size(128, 50);
+            this.adminFamiliesUFVPButton.Size = new System.Drawing.Size(1004, 1019);
             this.adminFamiliesUFVPButton.Text = "Update Family Version";
             this.adminFamiliesUFVPButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.adminFamiliesUFVPButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -1837,6 +1837,23 @@ namespace BARevitTools
             this.adminFamiliesUFVPControlsPanel.Name = "adminFamiliesUFVPControlsPanel";
             this.adminFamiliesUFVPControlsPanel.Size = new System.Drawing.Size(710, 264);
             this.adminFamiliesUFVPControlsPanel.TabIndex = 1;
+            // 
+            // adminFamiliesUFVPCheckBox
+            // 
+            this.adminFamiliesUFVPCheckBox.AutoSize = true;
+            this.adminFamiliesUFVPCheckBox.Location = new System.Drawing.Point(3, 7);
+            this.adminFamiliesUFVPCheckBox.Name = "adminFamiliesUFVPCheckBox";
+            this.adminFamiliesUFVPCheckBox.Size = new System.Drawing.Size(71, 17);
+            this.adminFamiliesUFVPCheckBox.TabIndex = 3;
+            this.adminFamiliesUFVPCheckBox.Text = "Use Date";
+            this.adminFamiliesUFVPCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // adminFamiliesUFVPDatePicker
+            // 
+            this.adminFamiliesUFVPDatePicker.Location = new System.Drawing.Point(84, 6);
+            this.adminFamiliesUFVPDatePicker.Name = "adminFamiliesUFVPDatePicker";
+            this.adminFamiliesUFVPDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.adminFamiliesUFVPDatePicker.TabIndex = 2;
             // 
             // adminFamiliesUFVPProgressBar
             // 
@@ -7676,23 +7693,6 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Size = new System.Drawing.Size(107, 22);
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
-            // 
-            // adminFamiliesUFVPDatePicker
-            // 
-            this.adminFamiliesUFVPDatePicker.Location = new System.Drawing.Point(84, 6);
-            this.adminFamiliesUFVPDatePicker.Name = "adminFamiliesUFVPDatePicker";
-            this.adminFamiliesUFVPDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.adminFamiliesUFVPDatePicker.TabIndex = 2;
-            // 
-            // adminFamiliesUFVPCheckBox
-            // 
-            this.adminFamiliesUFVPCheckBox.AutoSize = true;
-            this.adminFamiliesUFVPCheckBox.Location = new System.Drawing.Point(3, 7);
-            this.adminFamiliesUFVPCheckBox.Name = "adminFamiliesUFVPCheckBox";
-            this.adminFamiliesUFVPCheckBox.Size = new System.Drawing.Size(71, 17);
-            this.adminFamiliesUFVPCheckBox.TabIndex = 3;
-            this.adminFamiliesUFVPCheckBox.Text = "Use Date";
-            this.adminFamiliesUFVPCheckBox.UseVisualStyleBackColor = true;
             // 
             // MainUI
             // 

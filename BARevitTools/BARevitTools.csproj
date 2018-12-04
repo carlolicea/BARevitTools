@@ -374,6 +374,9 @@
   <ItemGroup>
     <Folder Include="Forms\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bimFamiliesUFVPIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if "$(ConfigurationName)" == "Revit2018" (
