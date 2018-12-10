@@ -4,6 +4,7 @@ using Autodesk.Revit.UI;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using RVTDocument = Autodesk.Revit.DB.Document;
@@ -84,16 +85,26 @@ namespace BARevitTools.ToolRequests
                     Transaction t = new Transaction(doc, "Create Demo Room Tags");
                     t.Start();
                     FamilySymbol symbol = null;
+                    IFamilyLoadOptions loadOptions = new RVTFamilyLoadOptions();
+
                     try
                     {
-                        IFamilyLoadOptions loadOptions = new RVTFamilyLoadOptions();
                         string roomTagSymbolPath = RVTOperations.GetVersionedFamilyFilePath(uiApp, Properties.Settings.Default.RevitRoomTagSymbol);
-                        doc.LoadFamilySymbol(roomTagSymbolPath, "Name and Number", loadOptions, out FamilySymbol symb);
-                        symbol = symb;
+                        try
+                        {
+                            doc.LoadFamilySymbol(roomTagSymbolPath, "Name and Number", loadOptions, out FamilySymbol symb);
+                            symbol = symb;
+                        }
+                        catch
+                        {
+                            MessageBox.Show(String.Format("The family type 'Name and Number' could not be found in {0}. Please add it for this tool to work.", Properties.Settings.Default.RevitRoomTagSymbol));
+                        }                            
                     }
-                    catch (Exception g)
+                    catch
                     {
-                        MessageBox.Show(g.ToString(), "Loading Symbol Error");
+                        MessageBox.Show(String.Format("The {0} family could not be found at {1}. Please place the {0} family in the {1} folder for this tool to work.",
+                            Path.GetFileNameWithoutExtension(Properties.Settings.Default.RevitRoomTagSymbol),
+                            Path.GetDirectoryName(Properties.Settings.Default.RevitRoomTagSymbol)));
                     }
 
                     try

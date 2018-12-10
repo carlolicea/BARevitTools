@@ -304,7 +304,6 @@ namespace BARevitTools
                     this.adminFamiliesBRPButton.Checked = false;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
-                    this.adminFamiliesUFVPButton.Checked = false;
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesBAP:
@@ -316,7 +315,6 @@ namespace BARevitTools
                     this.adminFamiliesBRPButton.Checked = false;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
-                    this.adminFamiliesUFVPButton.Checked = false;
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesBRP:
@@ -328,7 +326,6 @@ namespace BARevitTools
                     this.adminFamiliesBAPButton.Checked = false;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
-                    this.adminFamiliesUFVPButton.Checked = false;
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesDFB:
@@ -340,11 +337,9 @@ namespace BARevitTools
                     this.adminFamiliesBAPButton.Checked = false;
                     this.adminFamiliesBRPLayoutPanel.Visible = false;
                     this.adminFamiliesBRPButton.Checked = false;
-                    this.adminFamiliesUFVPButton.Checked = false;
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesUFVP:
-                    this.adminFamiliesUFVPButton.Checked = true;
                     this.adminFamiliesUFVPLayoutPanel.Visible = true;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
@@ -850,6 +845,11 @@ namespace BARevitTools
         public string materialsCMSExcelSaveDirectory = "";
         private void MaterialsCMS_Click(object sender, EventArgs e)
         {
+            if(Application.thisApp.CadDriveIsAccessible == false)
+            {
+                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.materialsCMSExcelLayoutPanel.Controls);
+            }
+
             materialsCMSExcelSaveDirectory = "";
             materialsCMSExcelDataGridView.DataBindings.Clear();
             materialsCMSExcelDataGridView.Update();
@@ -1168,7 +1168,11 @@ namespace BARevitTools
         #region roomsCDRT
         private void RoomsCDRTButton_Click(object sender, EventArgs e)
         {
-            this.SwitchActivePanel(ReferencedSwitchCaseIds.roomsCDRT);
+            if (Application.thisApp.CadDriveIsAccessible == false)
+            {
+                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.roomsCDRTLayoutPanel.Controls);
+            }
+            SwitchActivePanel(ReferencedSwitchCaseIds.roomsCDRT);
             DatabaseOperations.CollectUserInputData(ReferencedGuids.roomsCDRTguid, roomsCDRTButton.Text, Environment.UserName.ToString(), DateTime.Now);
         }
         private void RoomsCDRTRunButton_Click(object sender, EventArgs e)
@@ -2631,7 +2635,7 @@ namespace BARevitTools
             uiForm.adminDataGFFDataProgressBar.Visible = false;
             uiForm.adminDataGFFDataProgressBar.Value = 0;
             uiForm.adminDataGFFCollectDataWaitLabel.Visible = false;
-            uiForm.adminDataGFFSearchDirectoryTextBox.Text = BARevitTools.Properties.Settings.Default.BARTBARevitFamilyLibraryPath;
+            uiForm.adminDataGFFSearchDirectoryTextBox.Text = BARevitTools.Properties.Settings.Default.RevitBAFamilyLibraryPath;
             uiForm.adminDataGFFCsvExportNameTextBox.Text = "<File Export Name>";
             uiForm.adminDataGFFDatePicker.Value = DateTime.Now;
             DatabaseOperations.CollectUserInputData(ReferencedGuids.adminDataGFFguid, adminDataGFFButton.Text, Environment.UserName.ToString(), DateTime.Now);
@@ -2788,10 +2792,14 @@ namespace BARevitTools
         }
         #endregion adminDataGFF
 
-        #region adminDataGBAV
+        #region adminDataGBDV
         public DataTable adminDataGBDVDataTable = null;
         private void AdminDataGBDV_Click(object sender, EventArgs e)
         {
+            if(Application.thisApp.CadDriveIsAccessible == false)
+            {
+                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.adminDataGBDVLayoutPanel.Controls);
+            }
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             uiForm.adminDataGBDVWaitLabel.Visible = false;
             uiForm.adminDataGBDVExportCsvDirectoryTextBox.Text = "<Save Directory>";
@@ -2897,11 +2905,15 @@ namespace BARevitTools
             { MessageBox.Show("No data was collected"); }
             else { MessageBox.Show("Something unaccounted for created an error."); }
         }
-        #endregion adminDataGABD
+        #endregion adminDataGBDV
 
         #region adminFamiliesUF
         private void AdminFamiliesUFButton_Click(object sender, EventArgs e)
         {
+            if (Application.thisApp.CadDriveIsAccessible == false)
+            {
+                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.adminFamiliesUFLayoutPanel.Controls);
+            }
             this.SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesUF);
         }
         private void AdminFamiliesUFRunButton_Click(object sender, EventArgs e)
@@ -3409,13 +3421,17 @@ namespace BARevitTools
         #region adminFamiliesUFVP
         private void adminFamiliesUFVPButton_Click(object sender, EventArgs e)
         {
+            if (Application.thisApp.CadDriveIsAccessible == false)
+            {
+                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.adminFamiliesUFVPLayoutPanel.Controls);
+            }
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             uiForm.adminFamiliesUFVPProgressBar.Visible = false;
             uiForm.adminFamiliesUFVPProgressBar.Value = 0;
             uiForm.adminFamiliesUFVPDatePicker.Value = DateTime.Today;
 
             SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesUFVP);
-            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesUFVPguid, adminFamiliesUFVPButton.Text, Environment.UserName.ToString(), DateTime.Now);
+            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesUFVPguid, bulkUpdatePublishVersionToolStripMenuItem.Text, Environment.UserName.ToString(), DateTime.Now);
 
         }
         private void adminFamiliesUFVPRunButton_Click(object sender, EventArgs e)
@@ -3424,7 +3440,6 @@ namespace BARevitTools
             MakeRequest(RequestId.adminFamiliesUFVP);
         }
         #endregion adminFamiliesUFVP
-
 
         //In Development
         #region adminTemplatesPM
@@ -3552,7 +3567,7 @@ namespace BARevitTools
         private void AdminTemplateFillTreeView(DataTable familiesTable, DataTable detailsTable)
         {
             //Get all families in the BA Families so those in the SQL database can be verified as existing
-            List<string> currentFamilyPaths = GeneralOperations.GetAllRvtFamilies(Properties.Settings.Default.BARTBARevitFamilyLibraryPath);
+            List<string> currentFamilyPaths = GeneralOperations.GetAllRvtFamilies(Properties.Settings.Default.RevitBAFamilyLibraryPath);
             List<string> currentFamilyNames = new List<string>();
             foreach (string path in currentFamilyPaths)
             {

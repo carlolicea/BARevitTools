@@ -116,7 +116,6 @@ namespace BARevitTools
             this.adminFamiliesBRPButton = new System.Windows.Forms.ToolStripMenuItem();
             this.bulkUpdatePublishVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.adminFamiliesUFVPButton = new System.Windows.Forms.ToolStripButton();
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesUFVPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesUFVPControlsPanel = new System.Windows.Forms.Panel();
@@ -514,12 +513,12 @@ namespace BARevitTools
             this.qaqcRFSPInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.qaqcRFSPParametersListBox = new System.Windows.Forms.ListBox();
             this.qaqcRFSPToolsPanel = new System.Windows.Forms.Panel();
+            this.qaqcRFSPRunButton = new System.Windows.Forms.Button();
             this.qaqcRFSPSelectFamilyLabel = new System.Windows.Forms.Label();
             this.qaqcRFSPSFamilyLabel = new System.Windows.Forms.Label();
             this.qaqcRFSPSelectFamilyButton = new System.Windows.Forms.Button();
             this.qaqcRFSPEvaluatedParametersPanel = new System.Windows.Forms.Panel();
             this.qaqcRFSPEvaluatedParametersLabel = new System.Windows.Forms.Label();
-            this.qaqcRFSPRunButton = new System.Windows.Forms.Button();
             this.qaqcRLSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.qaqcRLSRunPanel = new System.Windows.Forms.Panel();
             this.qaqcRLSRunButton = new System.Windows.Forms.Button();
@@ -560,6 +559,7 @@ namespace BARevitTools
             this.setupUPOriginalFilePathTextBox = new System.Windows.Forms.TextBox();
             this.setupUPOriginalFilePathLabel = new System.Windows.Forms.Label();
             this.setupUPRunPanel = new System.Windows.Forms.Panel();
+            this.setupUPProgressBar = new System.Windows.Forms.ProgressBar();
             this.setupUPRunButton = new System.Windows.Forms.Button();
             this.setupUPControlsPanel2 = new System.Windows.Forms.Panel();
             this.setupUPUpgradePathSelectButton = new System.Windows.Forms.Button();
@@ -592,7 +592,6 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.setupUPProgressBar = new System.Windows.Forms.ProgressBar();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -1718,8 +1717,7 @@ namespace BARevitTools
             this.adminFamiliesDFBButton,
             this.adminFamiliesSeparator1,
             this.adminFamiliesParametersDropDownButton,
-            this.toolStripSeparator1,
-            this.adminFamiliesUFVPButton});
+            this.toolStripSeparator1});
             this.adminFamiliesToolStrip.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesToolStrip.Name = "adminFamiliesToolStrip";
             this.adminFamiliesToolStrip.Size = new System.Drawing.Size(710, 53);
@@ -1794,26 +1792,16 @@ namespace BARevitTools
             // 
             // bulkUpdatePublishVersionToolStripMenuItem
             // 
+            this.bulkUpdatePublishVersionToolStripMenuItem.Image = global::BARevitTools.Properties.Resources.bimFamiliesUFVPIcon;
             this.bulkUpdatePublishVersionToolStripMenuItem.Name = "bulkUpdatePublishVersionToolStripMenuItem";
-            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(237, 38);
             this.bulkUpdatePublishVersionToolStripMenuItem.Text = "Bulk Update Publish Version";
+            this.bulkUpdatePublishVersionToolStripMenuItem.Click += new System.EventHandler(this.adminFamiliesUFVPButton_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
-            // 
-            // adminFamiliesUFVPButton
-            // 
-            this.adminFamiliesUFVPButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesUFVPButton.Image")));
-            this.adminFamiliesUFVPButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.adminFamiliesUFVPButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.adminFamiliesUFVPButton.Name = "adminFamiliesUFVPButton";
-            this.adminFamiliesUFVPButton.Size = new System.Drawing.Size(128, 50);
-            this.adminFamiliesUFVPButton.Text = "Update Family Version";
-            this.adminFamiliesUFVPButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.adminFamiliesUFVPButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.adminFamiliesUFVPButton.Click += new System.EventHandler(this.adminFamiliesUFVPButton_Click);
             // 
             // adminFamiliesToolsPanel
             // 
@@ -6759,6 +6747,17 @@ namespace BARevitTools
             this.qaqcRFSPToolsPanel.Size = new System.Drawing.Size(275, 285);
             this.qaqcRFSPToolsPanel.TabIndex = 0;
             // 
+            // qaqcRFSPRunButton
+            // 
+            this.qaqcRFSPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.qaqcRFSPRunButton.Location = new System.Drawing.Point(2, 257);
+            this.qaqcRFSPRunButton.Name = "qaqcRFSPRunButton";
+            this.qaqcRFSPRunButton.Size = new System.Drawing.Size(75, 23);
+            this.qaqcRFSPRunButton.TabIndex = 0;
+            this.qaqcRFSPRunButton.Text = "RUN";
+            this.qaqcRFSPRunButton.UseVisualStyleBackColor = true;
+            this.qaqcRFSPRunButton.Click += new System.EventHandler(this.QaqcRFSPRunButton_Click);
+            // 
             // qaqcRFSPSelectFamilyLabel
             // 
             this.qaqcRFSPSelectFamilyLabel.AutoSize = true;
@@ -6809,17 +6808,6 @@ namespace BARevitTools
             this.qaqcRFSPEvaluatedParametersLabel.Size = new System.Drawing.Size(179, 13);
             this.qaqcRFSPEvaluatedParametersLabel.TabIndex = 0;
             this.qaqcRFSPEvaluatedParametersLabel.Text = "Shared Parameters Evaluated:";
-            // 
-            // qaqcRFSPRunButton
-            // 
-            this.qaqcRFSPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.qaqcRFSPRunButton.Location = new System.Drawing.Point(2, 257);
-            this.qaqcRFSPRunButton.Name = "qaqcRFSPRunButton";
-            this.qaqcRFSPRunButton.Size = new System.Drawing.Size(75, 23);
-            this.qaqcRFSPRunButton.TabIndex = 0;
-            this.qaqcRFSPRunButton.Text = "RUN";
-            this.qaqcRFSPRunButton.UseVisualStyleBackColor = true;
-            this.qaqcRFSPRunButton.Click += new System.EventHandler(this.QaqcRFSPRunButton_Click);
             // 
             // qaqcRLSLayoutPanel
             // 
@@ -7333,6 +7321,16 @@ namespace BARevitTools
             this.setupUPRunPanel.Size = new System.Drawing.Size(716, 35);
             this.setupUPRunPanel.TabIndex = 4;
             // 
+            // setupUPProgressBar
+            // 
+            this.setupUPProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.setupUPProgressBar.Location = new System.Drawing.Point(67, 6);
+            this.setupUPProgressBar.Name = "setupUPProgressBar";
+            this.setupUPProgressBar.Size = new System.Drawing.Size(646, 23);
+            this.setupUPProgressBar.TabIndex = 2;
+            this.setupUPProgressBar.Visible = false;
+            // 
             // setupUPRunButton
             // 
             this.setupUPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -7719,16 +7717,6 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Size = new System.Drawing.Size(107, 22);
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
-            // 
-            // setupUPProgressBar
-            // 
-            this.setupUPProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.setupUPProgressBar.Location = new System.Drawing.Point(67, 6);
-            this.setupUPProgressBar.Name = "setupUPProgressBar";
-            this.setupUPProgressBar.Size = new System.Drawing.Size(646, 23);
-            this.setupUPProgressBar.TabIndex = 2;
-            this.setupUPProgressBar.Visible = false;
             // 
             // MainUI
             // 
@@ -8191,7 +8179,6 @@ namespace BARevitTools
         public DataGridView materialsAMLDataGridView;
         private Panel materialsAMLLaunchPanel;
         private Button materialsAMLLaunchPaletteButton;
-        private TableLayoutPanel materialsCMSExcelLayoutPanel;
         private Panel materialsCMSExcelExportPanel;
         private Button materialsCMSExcelCreateSpreadsheetButton;
         public TextBox materialsCMSExcelSpreadsheetNameTextBox;
@@ -8524,7 +8511,6 @@ namespace BARevitTools
         private Panel adminDataGFFDatePanel;
         public DateTimePicker adminDataGFFDatePicker;
         public CheckBox adminDataGFFDateCheckBox;
-        private TableLayoutPanel adminDataGBDVLayoutPanel;
         private Panel adminDataGBDVCollectPanel;
         public Label adminDataGBDVWaitLabel;
         private Button adminDataGBDVCollectButton;
@@ -8546,7 +8532,6 @@ namespace BARevitTools
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton adminFamiliesDFBButton;
         private Panel adminFamiliesToolsPanel;
-        private TableLayoutPanel adminFamiliesUFLayoutPanel;
         private Panel adminFamiliesUFFullSyncPanel;
         private Panel adminFamiliesUFUpgradedFamiliesTextBoxPanel;
         private TextBox adminFamiliesUFUpgradedFamiliesTextBox;
@@ -8627,8 +8612,6 @@ namespace BARevitTools
         private ToolStripMenuItem bulkUpdatePublishVersionToolStripMenuItem;
         public Panel multiCatToolsPanel;
         public Label adminFamiliesBAPDoneLabel;
-        private ToolStripButton adminFamiliesUFVPButton;
-        private TableLayoutPanel adminFamiliesUFVPLayoutPanel;
         private Panel adminFamiliesUFVPControlsPanel;
         private TextBox adminFamiliesUFVPInstructionsTextBox;
         private Button adminFamiliesUFVPRunButton;
@@ -8647,6 +8630,10 @@ namespace BARevitTools
         private Label qaqcRFSPSelectFamilyLabel;
         private TableLayoutPanel qaqcRLSLayoutPanel;
         public ProgressBar setupUPProgressBar;
+        public TableLayoutPanel materialsCMSExcelLayoutPanel;
+        public TableLayoutPanel adminDataGBDVLayoutPanel;
+        public TableLayoutPanel adminFamiliesUFLayoutPanel;
+        public TableLayoutPanel adminFamiliesUFVPLayoutPanel;
     }
 }
 

@@ -33,5 +33,17 @@ namespace BARevitTools
             dgv.Update();
             dgv.Refresh();
         }
-    }        
+    }
+
+    public static class DisableUIFeatures
+    {
+        public static void DisableControls(TableLayoutControlCollection controls)
+        {
+            MessageBox.Show(String.Format("This tool cannot be used while {0} is inaccessible", Properties.Settings.Default.RevitCadDrive));
+            foreach (System.Windows.Forms.Control control in controls)
+            {
+                control.Enabled = false;
+            }
+        }
+    }
 }

@@ -20,7 +20,7 @@ namespace BARevitTools.ToolRequests
                 bool fullSync = uiForm.adminFamiliesUFFullSyncCheckbox.Checked;
                 string currentVersion = Properties.Settings.Default.BARTRevitFamilyCurrentYear;
                 string upgradedVersion = uiApp.Application.VersionNumber;
-                string currentLibraryPath = Properties.Settings.Default.BARTBARevitFamilyLibraryPath;
+                string currentLibraryPath = Properties.Settings.Default.RevitBAFamilyLibraryPath;
                 string upgradedLibraryPath = currentLibraryPath.Replace(currentVersion, upgradedVersion);
                 if (!Directory.Exists(upgradedLibraryPath)) { Directory.CreateDirectory(upgradedLibraryPath); }
 

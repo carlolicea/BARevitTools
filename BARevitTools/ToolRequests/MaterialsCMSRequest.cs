@@ -2,6 +2,7 @@
 using Autodesk.Revit.UI;
 using System;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using RVTDocument = Autodesk.Revit.DB.Document;
@@ -21,6 +22,7 @@ namespace BARevitTools.ToolRequests
 
             string familyFile = Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule;
             string versionedFamilyFile = RVTOperations.GetVersionedFamilyFilePath(uiApp, familyFile);
+
             if (versionedFamilyFile != "")
             {
                 RVTDocument famDoc = RVTOperations.CreateFamilyTypesFromTable(uiApp, uiForm.materialsCMSExcelCreateSymbolsProgressBar, uiForm.materialsCMSExcelDataGridView, versionedFamilyFile);
@@ -83,6 +85,12 @@ namespace BARevitTools.ToolRequests
                 t.Commit();
 
                 RVTOperations.PlaceSymbolsInView(uiApp, famDoc, "ID Use", "Mark", placementView);
+            }
+            else
+            {
+                MessageBox.Show(String.Format("The {0} family could not be found at {1}. Please place the {0} family in the {1} folder for this tool to work.", 
+                    Path.GetFileNameWithoutExtension(Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule), 
+                    Path.GetDirectoryName(Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule)));
             }
         }
     }

@@ -189,9 +189,9 @@ namespace BARevitTools.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\corp\\cad\\Revit\\BA Families\\BA 2018")]
-        public string BARTBARevitFamilyLibraryPath {
+        public string RevitBAFamilyLibraryPath {
             get {
-                return ((string)(this["BARTBARevitFamilyLibraryPath"]));
+                return ((string)(this["RevitBAFamilyLibraryPath"]));
             }
         }
         
@@ -221,6 +221,15 @@ namespace BARevitTools.Properties {
         public string RevitUFVPParameter {
             get {
                 return ((string)(this["RevitUFVPParameter"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\corp\\cad")]
+        public string RevitCadDrive {
+            get {
+                return ((string)(this["RevitCadDrive"]));
             }
         }
     }

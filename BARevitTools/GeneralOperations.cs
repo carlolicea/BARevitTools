@@ -187,6 +187,17 @@ namespace BARevitTools
         {
             return File.GetLastWriteTime(filePath).ToString();
         }
+        public static bool IsCadDriveAccessible()
+        {
+            if (Directory.Exists(Properties.Settings.Default.RevitCadDrive))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public static void ResetDataGridView(DataGridView dataGridView)
         {
             dataGridView.CancelEdit();

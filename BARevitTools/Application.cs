@@ -25,6 +25,8 @@ namespace BARevitTools
         //Create an object for the additional shared parameters UI to be assigned with it is created
         public SharedParametersUI newSPUi = null;   
         
+        public bool CadDriveIsAccessible = false;
+
         //When Revit starts, IExternalApplication implements OnStartup
         public Result OnStartup(UIControlledApplication application)
         {
@@ -67,6 +69,12 @@ namespace BARevitTools
             newMainUi = new MainUI(uiApp, exEvent, handler);
             //Set the newSPUi to a new instance of SharedParameterUI, which only needs UIApplication. Do not show until needed
             newSPUi = new SharedParametersUI(uiApp);
+
+            CadDriveIsAccessible = GeneralOperations.IsCadDriveAccessible();
+            if (CadDriveIsAccessible == false)
+            {
+                MessageBox.Show("Cannot access the K Drive. Some tools will not be functional.");
+            }
 
             //Generate a new DataTable for collecting data
             appUseDataTable = new DataTable();

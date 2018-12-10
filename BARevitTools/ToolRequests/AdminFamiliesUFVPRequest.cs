@@ -19,11 +19,11 @@ namespace BARevitTools.ToolRequests
             List<string> familyFiles = new List<string>();
             if (uiForm.adminFamiliesUFVPCheckBox.Checked)
             {
-                familyFiles = GeneralOperations.GetAllRvtFamilies(BARevitTools.Properties.Settings.Default.BARTBARevitFamilyLibraryPath, uiForm.adminFamiliesUFVPDatePicker.Value, true);
+                familyFiles = GeneralOperations.GetAllRvtFamilies(BARevitTools.Properties.Settings.Default.RevitBAFamilyLibraryPath, uiForm.adminFamiliesUFVPDatePicker.Value, true);
             }
             else
             {
-                familyFiles = GeneralOperations.GetAllRvtFamilies(BARevitTools.Properties.Settings.Default.BARTBARevitFamilyLibraryPath);
+                familyFiles = GeneralOperations.GetAllRvtFamilies(BARevitTools.Properties.Settings.Default.RevitBAFamilyLibraryPath);
             }
            
 
@@ -64,7 +64,7 @@ namespace BARevitTools.ToolRequests
                             SetParameters(uiApp, familyFile, sharedParameterDefinitions[Properties.Settings.Default.RevitUFVPParameter]);
                             uiForm.adminFamiliesUFVPProgressBar.PerformStep();
                         }
-                        List<string> backupFamilies = GeneralOperations.GetAllRvtBackupFamilies(Properties.Settings.Default.BARTBARevitFamilyLibraryPath);
+                        List<string> backupFamilies = GeneralOperations.GetAllRvtBackupFamilies(Properties.Settings.Default.RevitBAFamilyLibraryPath);
                         GeneralOperations.CleanRfaBackups(backupFamilies);
                     }
                     else if (sharedParametersIsAccessible && !sharedParameterDefinitions.Keys.Contains(BARevitTools.Properties.Settings.Default.RevitUFVPParameter))
