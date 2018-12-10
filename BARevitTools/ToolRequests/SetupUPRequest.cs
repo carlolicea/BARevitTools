@@ -20,6 +20,20 @@ namespace BARevitTools.ToolRequests
             string hostFilePathToUpgrade = uiForm.setupUPOriginalFilePathTextBox.Text;
             string hostFilePathForUpgrade = uiForm.setupUPUpgradedFilePathSetTextBox.Text + "\\" + uiForm.setupUPUpgradedFilePathUserTextBox.Text + ".rvt";
 
+            uiForm.setupUPProgressBar.Value = 0;
+            uiForm.setupUPProgressBar.Minimum = 0;
+            uiForm.setupUPProgressBar.Step = 1;
+
+            int progressBarSteps = 1;
+            foreach(DataGridViewRow row in dgv.Rows)
+            {
+                if(row.Cells["Upgrade"].Value != null || row.Cells["Upgrade"].Value.ToString() == "True")
+                {
+                    progressBarSteps++;
+                }
+            }
+            uiForm.setupUPProgressBar.Maximum = progressBarSteps;
+
             if (File.Exists(hostFilePathForUpgrade))
             {
                 MessageBox.Show("A file already exists with the name and location specified for the upgrade of the host Revit project file");
@@ -30,6 +44,7 @@ namespace BARevitTools.ToolRequests
             }
             else
             {
+                uiForm.setupUPProgressBar.Visible = true;
                 for (int i = 0; i < dgv.Rows.Count; i++)
                 {
                     try
@@ -59,6 +74,11 @@ namespace BARevitTools.ToolRequests
                     {
                         MessageBox.Show(e.Message);
                     }
+                    finally
+                    {
+                        uiForm.setupUPProgressBar.PerformStep();
+                        uiForm.Update();
+                    }
 
                 }
 
@@ -76,7 +96,15 @@ namespace BARevitTools.ToolRequests
                             }
                         }
                     }
-                    catch { continue; }
+                    catch
+                    {
+                        continue;
+                    }
+                    finally
+                    {
+                        uiForm.setupUPProgressBar.PerformStep();
+                        uiForm.Update();
+                    }
                 }
 
                 if (hostResult == true)

@@ -797,10 +797,12 @@ namespace BARevitTools
         #endregion electricalCEOE
 
         #region floorsCFBR
-        public List<Room> floorsCFBRRoomsList = null;
+        public List<Room> floorsCFBRRoomsList = new List<Room>();
         private void FloorsCFBRButton_Click(object sender, EventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
+            uiForm.floorsCFBRDoneLabel.Visible = false;
+
             List<string> floorTypeNames = RVTGetElementsByCollection.DocumentFloorTypeNames(uiApp);
             foreach (string floorTypeName in floorTypeNames)
             {
@@ -811,6 +813,12 @@ namespace BARevitTools
         }
         private void FloorsCFBRSelectRoomsButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                floorsCFBRRoomsList.Clear();
+            }
+            catch {; }
+            
             List<Room> rooms = RVTOperations.SelectRoomElements(uiApp);
             if (rooms != null)
             {
@@ -819,25 +827,26 @@ namespace BARevitTools
         }
         private void FloorsCFBRRunButton_Click(object sender, EventArgs e)
         {
-            m_ExEvent.Raise();
-            MakeRequest(RequestId.floorsCFBR);
+            MainUI uiForm = Application.thisApp.newMainUi;
+            uiForm.floorsCFBRDoneLabel.Visible = false;
+
+            if (floorsCFBRRoomsList == null || floorsCFBRRoomsList.Count==0)
+            {
+                MessageBox.Show("Either no rooms have been selected, or if the Revit UI is grayed out, then it is waiting for you to click 'Finish' on the Options Bar below the Ribbon");
+            }
+            else if(floorsCFBRSelectFloorTypeComboBox.Text == "<Floor Type>")
+            {
+                MessageBox.Show("No floor type was selected. Please select a floor type.");
+            }
+            else
+            {
+                m_ExEvent.Raise();
+                MakeRequest(RequestId.floorsCFBR);                
+            }            
         }
         #endregion floorsCFBR        
 
-        #region materialsCMS        
-        //private void materialsCMSTabControl_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
-        //    if(uiForm.materialsCMSTabControl.SelectedIndex == 0)
-        //    {
-        //        uiForm.materialsCMSTableEntryDataGridView.DataSource = null;  
-        //    } 
-        //    else if (uiForm.materialsCMSTabControl.SelectedIndex == 1)
-        //    {
-        //        uiForm.materialsCMSExcelDataGridView.DataSource = null;
-        //    }
-        //    else { return; }
-        //}        
+        #region materialsCMS       
         public string materialsCMSExcelSaveDirectory = "";
         private void MaterialsCMS_Click(object sender, EventArgs e)
         {
@@ -1223,6 +1232,7 @@ namespace BARevitTools
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             uiForm.sheetsCSLComboBox.Items.Clear();
+            uiForm.sheetsCSLProgressBar.Visible = false;
             uiForm.SwitchActivePanel(ReferencedSwitchCaseIds.sheetsCSL);
             DatabaseOperations.CollectUserInputData(ReferencedGuids.sheetsCSLguid, sheetsCSLButton.Text, Environment.UserName.ToString(), DateTime.Now);
 
@@ -1265,6 +1275,7 @@ namespace BARevitTools
             dataGridView.Columns[2].ReadOnly = true;
             dataGridView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView.Sort(dataGridView.Columns[1], ListSortDirection.Descending);
             dataGridView.AutoGenerateColumns = true;
             dataGridView.RowHeadersVisible = false;
             #endregion Update DataGridView
@@ -1292,33 +1303,37 @@ namespace BARevitTools
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             DataGridView dataGridView = uiForm.sheetsCSLDataGridView;
             var rowValue = dataGridView.CurrentCell.Value;
-            if (rowValue == null)
+            if (dataGridView.CurrentCell.ColumnIndex == 0)
             {
-                foreach (DataGridViewRow row in dataGridView.SelectedRows)
+                if (rowValue == null)
                 {
-                    int rowIndex = row.Index;
-                    dataGridView.Rows[rowIndex].Cells["Select"].Value = true;
-                    row.Cells["Select"].Style.BackColor = System.Drawing.Color.GreenYellow;
+                    foreach (DataGridViewRow row in dataGridView.SelectedRows)
+                    {
+                        int rowIndex = row.Index;
+                        dataGridView.Rows[rowIndex].Cells["Select"].Value = true;
+                        row.Cells["Select"].Style.BackColor = System.Drawing.Color.GreenYellow;
+                    }
+                }
+                else if (rowValue.ToString() == "True")
+                {
+                    foreach (DataGridViewRow row in dataGridView.SelectedRows)
+                    {
+                        int rowIndex = row.Index;
+                        dataGridView.Rows[rowIndex].Cells["Select"].Value = false;
+                        row.Cells["Select"].Style.BackColor = dataGridView.DefaultCellStyle.BackColor;
+                    }
+                }
+                else
+                {
+                    foreach (DataGridViewRow row in dataGridView.SelectedRows)
+                    {
+                        int rowIndex = row.Index;
+                        dataGridView.Rows[rowIndex].Cells["Select"].Value = true;
+                        row.Cells["Select"].Style.BackColor = System.Drawing.Color.GreenYellow;
+                    }
                 }
             }
-            else if (rowValue.ToString() == "True")
-            {
-                foreach (DataGridViewRow row in dataGridView.SelectedRows)
-                {
-                    int rowIndex = row.Index;
-                    dataGridView.Rows[rowIndex].Cells["Select"].Value = false;
-                    row.Cells["Select"].Style.BackColor = dataGridView.DefaultCellStyle.BackColor;
-                }
-            }
-            else
-            {
-                foreach (DataGridViewRow row in dataGridView.SelectedRows)
-                {
-                    int rowIndex = row.Index;
-                    dataGridView.Rows[rowIndex].Cells["Select"].Value = true;
-                    row.Cells["Select"].Style.BackColor = System.Drawing.Color.GreenYellow;
-                }
-            }
+            
             dataGridView.Update();
             dataGridView.Refresh();
         }
@@ -1577,17 +1592,20 @@ namespace BARevitTools
             uiForm.sheetsISFLDataGridView.Rows.Clear();
             DataGridView dataGridView = uiForm.sheetsISFLDataGridView;
             RVTDocument doc = uiApp.ActiveUIDocument.Document;
+
             var linkDocSheets = new FilteredElementCollector(linkDoc).OfClass(typeof(ViewSheet)).ToElements();
             var hostDocSheets = new FilteredElementCollector(doc).OfClass(typeof(ViewSheet)).ToElements();
             Dictionary<string, Element> hostSheetDict = new Dictionary<string, Element>();
             List<string> hostSheetNumbers = new List<string>();
             Dictionary<string, Element> linkSheetDict = new Dictionary<string, Element>();
             List<string> linkSheetNumbers = new List<string>();
+
             foreach (ViewSheet hostSheet in hostDocSheets)
             {
                 hostSheetDict.Add(hostSheet.SheetNumber.ToString(), hostSheet);
                 hostSheetNumbers.Add(hostSheet.SheetNumber.ToString());
             }
+
             foreach (ViewSheet linkSheet in linkDocSheets)
             {
                 linkSheetDict.Add(linkSheet.SheetNumber.ToString(), linkSheet);
@@ -1612,7 +1630,8 @@ namespace BARevitTools
                         }
                     }
                     catch { continue; }
-                    dataGridView.Rows.Add(null, true, linkSheetNumber, hostSheetDict[linkSheetNumber].Name, linkSheetDict[linkSheetNumber].Name, hostSheetDiscipline);
+                    int rowIndex = dataGridView.Rows.Add(null, true, linkSheetNumber, hostSheetDict[linkSheetNumber].Name, linkSheetDict[linkSheetNumber].Name, hostSheetDiscipline);
+                    dataGridView.Rows[rowIndex].Cells[1].Style.BackColor = System.Drawing.Color.Gray;
                 }
                 else
                 {
@@ -2388,6 +2407,8 @@ namespace BARevitTools
             uiForm.setupUPDataGridView.Columns.Clear();
             uiForm.setupUPUpgradingFromRevitLabel.Text = "<Unknown>";
             uiForm.setupUPOriginalFilePathTextBox.BackColor = DefaultBackColor;
+            uiForm.setupUPProgressBar.Value = 0;
+            uiForm.setupUPProgressBar.Visible = false;
             SwitchActivePanel(ReferencedSwitchCaseIds.setupUP);
             DatabaseOperations.CollectUserInputData(ReferencedGuids.setupUPguid, setupUPButton.Text, Environment.UserName.ToString(), DateTime.Now);
         }
@@ -2613,10 +2634,22 @@ namespace BARevitTools
             uiForm.adminDataGFFSearchDirectoryTextBox.Text = BARevitTools.Properties.Settings.Default.BARTBARevitFamilyLibraryPath;
             uiForm.adminDataGFFCsvExportNameTextBox.Text = "<File Export Name>";
             uiForm.adminDataGFFDatePicker.Value = DateTime.Now;
-            SwitchActivePanel(ReferencedSwitchCaseIds.adminDataGFF);
             DatabaseOperations.CollectUserInputData(ReferencedGuids.adminDataGFFguid, adminDataGFFButton.Text, Environment.UserName.ToString(), DateTime.Now);
-
             SqlConnection newConnection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
+            if (newConnection != null)
+            {
+                List<string> dtNames = DatabaseOperations.SqlGetTableNames(newConnection);
+                foreach (string name in dtNames)
+                {
+                    uiForm.adminDataGFFSqlExportComboBox.Items.Add(name);
+                    uiForm.adminDataGFFSqlExportComboBox.Text = BARevitTools.Properties.Settings.Default.SqlBARevitFamiliesDataTable;
+                }
+            }
+            else
+            {
+                uiForm.adminDataGFFSqlExportComboBox.Text = "SQL Database Connection Failed";
+            }            
+            SwitchActivePanel(ReferencedSwitchCaseIds.adminDataGFF);
         }
         private void AdminDataGFFCollectionFastSelectAllCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -2721,12 +2754,13 @@ namespace BARevitTools
         }
         private void AdminDataGFFSqlExportRunButton_Click(object sender, EventArgs e)
         {
+            MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             try
             {
                 SqlConnection connection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
                 if (adminDataGFFDataTable.Rows.Count != 0)
                 {
-                    try { DatabaseOperations.SqlWriteDataTable(BARevitTools.Properties.Settings.Default.SqlBARevitFamiliesDataTable, connection, adminDataGFFDataTable, false); MessageBox.Show("Successful export to database"); }
+                    try { DatabaseOperations.SqlWriteDataTable(uiForm.adminDataGFFSqlExportComboBox.Text, connection, adminDataGFFDataTable, false); MessageBox.Show("Successful export to database"); }
                     catch { MessageBox.Show("Export failed"); }
 
                 }
@@ -3384,6 +3418,11 @@ namespace BARevitTools
             DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesUFVPguid, adminFamiliesUFVPButton.Text, Environment.UserName.ToString(), DateTime.Now);
 
         }
+        private void adminFamiliesUFVPRunButton_Click(object sender, EventArgs e)
+        {
+            m_ExEvent.Raise();
+            MakeRequest(RequestId.adminFamiliesUFVP);
+        }
         #endregion adminFamiliesUFVP
 
 
@@ -3393,78 +3432,88 @@ namespace BARevitTools
         {
             //Open a SQL connection and get the tables from the database
             SqlConnection sqlConnection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
-            DataTable sqlTables = sqlConnection.GetSchema("Tables");
-            DataTable dt = new DataTable();
-
-            //List the existing tables
-            List<string> existingTables = new List<string>();
-            foreach (DataRow row in sqlTables.Rows)
+            
+            //If a connection was able to be made, continue
+            if (sqlConnection != null)
             {
-                string tableName = (string)row[2];
-                existingTables.Add(tableName);
-            }
+                DataTable sqlTables = sqlConnection.GetSchema("Tables");
+                DataTable dt = new DataTable();
 
-            try
-            {
-                //If the table for the packages already exists, get it
-                if (existingTables.Contains(BARevitTools.Properties.Settings.Default.SqlBAPackagesDataTable))
+                //List the existing tables
+                List<string> existingTables = new List<string>();
+                foreach (DataRow row in sqlTables.Rows)
                 {
-                    //Get everything from the SQL table and fill a DataTable
-                    using (SqlCommand command = new SqlCommand("SELECT * FROM " + BARevitTools.Properties.Settings.Default.SqlBAPackagesDataTable, sqlConnection))
+                    string tableName = (string)row[2];
+                    existingTables.Add(tableName);
+                }
+
+                try
+                {
+                    //If the table for the packages already exists, get it
+                    if (existingTables.Contains(BARevitTools.Properties.Settings.Default.SqlBAPackagesDataTable))
                     {
-                        SqlDataAdapter da = new SqlDataAdapter(command);
-                        da.Fill(dt);
-                        da.Dispose();
-                    }
-
-                    //Find the unique package names from the DataTable's Packages column
-                    var uniquePackagesQuery =
-                        from row in dt.AsEnumerable()
-                        group row["Packages"] by row["Packages"] into packageGroup
-                        select packageGroup;
-
-                    //Make a list of the packages
-                    List<string> allNames = new List<string>();
-                    foreach (var name in uniquePackagesQuery)
-                    {
-                        allNames.Add(Convert.ToString(name));
-                    }
-
-                    //Find unique package names to add to the list
-                    List<string> packageNames = allNames.Distinct().ToList();
-
-                    //Assuming there were package names...
-                    if (packageNames.Count > 0)
-                    {
-                        //Add the package names to the combo box dropdown
-                        foreach (string packageName in packageNames)
+                        //Get everything from the SQL table and fill a DataTable
+                        using (SqlCommand command = new SqlCommand("SELECT * FROM " + BARevitTools.Properties.Settings.Default.SqlBAPackagesDataTable, sqlConnection))
                         {
-                            BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Items.Add(packageName);
-                            BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Enabled = true;
+                            SqlDataAdapter da = new SqlDataAdapter(command);
+                            da.Fill(dt);
+                            da.Dispose();
+                        }
+
+                        //Find the unique package names from the DataTable's Packages column
+                        var uniquePackagesQuery =
+                            from row in dt.AsEnumerable()
+                            group row["Packages"] by row["Packages"] into packageGroup
+                            select packageGroup;
+
+                        //Make a list of the packages
+                        List<string> allNames = new List<string>();
+                        foreach (var name in uniquePackagesQuery)
+                        {
+                            allNames.Add(Convert.ToString(name));
+                        }
+
+                        //Find unique package names to add to the list
+                        List<string> packageNames = allNames.Distinct().ToList();
+
+                        //Assuming there were package names...
+                        if (packageNames.Count > 0)
+                        {
+                            //Add the package names to the combo box dropdown
+                            foreach (string packageName in packageNames)
+                            {
+                                BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Items.Add(packageName);
+                                BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Enabled = true;
+                            }
                         }
                     }
-                }
 
-                //If the table for packages does not exist, go forward with filling out the tree view
-                else
+                    //If the table for packages does not exist, go forward with filling out the tree view
+                    else
+                    {
+                        BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Enabled = false;
+                        //Get both tables by calling the adminTemplateGetFamiliesAndDetails method
+                        List<DataTable> treeViewData = this.AdminTemplateGetFamiliesAndDetails(sqlConnection);
+                        DataTable familiesTable = treeViewData[0]; //Index 0 is the families table
+                        DataTable detailsTable = treeViewData[1]; //Index 1 is the details table
+
+                        //Fill the tree view with the two tables
+                        this.AdminTemplateFillTreeView(familiesTable, detailsTable);
+                    }
+                }
+                catch (Exception f)
                 {
-                    BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Enabled = false;
-                    //Get both tables by calling the adminTemplateGetFamiliesAndDetails method
-                    List<DataTable> treeViewData = this.AdminTemplateGetFamiliesAndDetails(sqlConnection);
-                    DataTable familiesTable = treeViewData[0]; //Index 0 is the families table
-                    DataTable detailsTable = treeViewData[1]; //Index 1 is the details table
-
-                    //Fill the tree view with the two tables
-                    this.AdminTemplateFillTreeView(familiesTable, detailsTable);
+                    MessageBox.Show(f.ToString(), "SQL Connection Error");
+                    sqlConnection.Close();
                 }
-            }
-            catch (Exception f)
-            {
-                MessageBox.Show(f.ToString(), "SQL Connection Error");
-                sqlConnection.Close();
-            }
 
-            sqlConnection.Close();
+                sqlConnection.Close();
+            } 
+            //If the connection to the SQL database could not be made, report it.
+            else
+            {
+                MessageBox.Show(String.Format("Could not connect to {0}", BARevitTools.Properties.Settings.Default.SqlServerName));
+            }
         }
         private List<DataTable> AdminTemplateGetFamiliesAndDetails(SqlConnection sqlConnection)
         {
@@ -3547,12 +3596,6 @@ namespace BARevitTools
         private void OptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Need something for the options when they are done.
-        }
-
-        private void adminFamiliesUFVPRunButton_Click(object sender, EventArgs e)
-        {
-            m_ExEvent.Raise();
-            MakeRequest(RequestId.adminFamiliesUFVP);
         }
     }
 }

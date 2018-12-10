@@ -58,6 +58,8 @@ namespace BARevitTools
             this.adminDataGFFDataProgressBar = new System.Windows.Forms.ProgressBar();
             this.adminDataGFFCollectDataButton = new System.Windows.Forms.Button();
             this.adminDataGFFSqlExportPanel = new System.Windows.Forms.Panel();
+            this.adminDataGFFSqlExportTableLabel = new System.Windows.Forms.Label();
+            this.adminDataGFFSqlExportComboBox = new System.Windows.Forms.ComboBox();
             this.adminDataGFFSqlExportRunButton = new System.Windows.Forms.Button();
             this.adminDataGFFSqlExportLabel = new System.Windows.Forms.Label();
             this.adminDataGFFCsvExportPanel = new System.Windows.Forms.Panel();
@@ -216,9 +218,6 @@ namespace BARevitTools
             this.aboutTabTitleLabel = new System.Windows.Forms.Label();
             this.aboutTabFooterPanel = new System.Windows.Forms.Panel();
             this.aboutTabUpdatesTextBox = new System.Windows.Forms.RichTextBox();
-            this.analysisTab = new System.Windows.Forms.TabPage();
-            this.analysisTabControl = new System.Windows.Forms.TabControl();
-            this.sightTab = new System.Windows.Forms.TabPage();
             this.modelingTab = new System.Windows.Forms.TabPage();
             this.modelingTabControl = new System.Windows.Forms.TabControl();
             this.multiCatTab = new System.Windows.Forms.TabPage();
@@ -276,6 +275,7 @@ namespace BARevitTools
             this.floorsCFBRInstructionsPanel = new System.Windows.Forms.Panel();
             this.floorsCFBRInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.floorsCFBRControlsPanel = new System.Windows.Forms.Panel();
+            this.floorsCFBRDoneLabel = new System.Windows.Forms.Label();
             this.floorsCFBROffsetFinishFloorCheckBox = new System.Windows.Forms.CheckBox();
             this.floorsCFBRSelectFloorTypeLabel = new System.Windows.Forms.Label();
             this.floorsCFBRSelectRoomsLabel = new System.Windows.Forms.Label();
@@ -364,8 +364,20 @@ namespace BARevitTools
             this.sheetsCSSFSButton = new System.Windows.Forms.ToolStripMenuItem();
             this.sheetsOSSButton = new System.Windows.Forms.ToolStripMenuItem();
             this.sheetsToolsPanel = new System.Windows.Forms.Panel();
+            this.sheetsISFLLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.sheetsISFLInstructionsPanel = new System.Windows.Forms.Panel();
+            this.sheetsISFLInstructionsLabel = new System.Windows.Forms.Label();
+            this.sheetsISFLRunButton = new System.Windows.Forms.Button();
+            this.sheetsISFLDataGridView = new System.Windows.Forms.DataGridView();
+            this.sheetsISFLControlsPanel = new System.Windows.Forms.Panel();
+            this.sheetsISFLComboBox = new System.Windows.Forms.ComboBox();
+            this.sheetsISFLLabel1 = new System.Windows.Forms.Label();
+            this.sheetsISFLLabel2 = new System.Windows.Forms.Label();
+            this.sheetsIFSLDisciplinePanel = new System.Windows.Forms.Panel();
+            this.sheetsISFLDisciplineUpdateButton = new System.Windows.Forms.Button();
+            this.sheetsISFLDisciplineComboBox = new System.Windows.Forms.ComboBox();
+            this.sheetsISFLDisciplineLabel = new System.Windows.Forms.Label();
             this.sheetsCSLLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.sheetsCLSRunButton = new System.Windows.Forms.Button();
             this.sheetsCSLDataGridView = new System.Windows.Forms.DataGridView();
             this.sheetsCSLControlsPanel = new System.Windows.Forms.Panel();
             this.sheetsCSLFilterConditionComboBox = new System.Windows.Forms.ComboBox();
@@ -375,6 +387,9 @@ namespace BARevitTools
             this.sheetsCSLComboBox = new System.Windows.Forms.ComboBox();
             this.sheetsCSLInstructionsPanel = new System.Windows.Forms.Panel();
             this.sheetsCSLInstructionsLabel = new System.Windows.Forms.Label();
+            this.sheetsCSLRunPanel = new System.Windows.Forms.Panel();
+            this.sheetsCSLProgressBar = new System.Windows.Forms.ProgressBar();
+            this.sheetsCLSRunButton = new System.Windows.Forms.Button();
             this.sheetsOSSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.sheetsOSSDataGridView = new System.Windows.Forms.DataGridView();
             this.sheetsOSSInstructionsPanel = new System.Windows.Forms.Panel();
@@ -391,19 +406,6 @@ namespace BARevitTools
             this.sheetsOSSControlsPanel = new System.Windows.Forms.Panel();
             this.sheetsOSSRunButton = new System.Windows.Forms.Button();
             this.sheetsOSSRunLabel = new System.Windows.Forms.Label();
-            this.sheetsISFLLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.sheetsISFLInstructionsPanel = new System.Windows.Forms.Panel();
-            this.sheetsISFLInstructionsLabel = new System.Windows.Forms.Label();
-            this.sheetsISFLRunButton = new System.Windows.Forms.Button();
-            this.sheetsISFLDataGridView = new System.Windows.Forms.DataGridView();
-            this.sheetsISFLControlsPanel = new System.Windows.Forms.Panel();
-            this.sheetsISFLComboBox = new System.Windows.Forms.ComboBox();
-            this.sheetsISFLLabel1 = new System.Windows.Forms.Label();
-            this.sheetsISFLLabel2 = new System.Windows.Forms.Label();
-            this.sheetsIFSLDisciplinePanel = new System.Windows.Forms.Panel();
-            this.sheetsISFLDisciplineUpdateButton = new System.Windows.Forms.Button();
-            this.sheetsISFLDisciplineComboBox = new System.Windows.Forms.ComboBox();
-            this.sheetsISFLDisciplineLabel = new System.Windows.Forms.Label();
             this.sheetsCSSFSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.sheetsCSSFSInstructionsPanel = new System.Windows.Forms.Panel();
             this.sheetsCSSFSInstructionsTextBox = new System.Windows.Forms.TextBox();
@@ -481,14 +483,12 @@ namespace BARevitTools
             this.miscEEVButton = new System.Windows.Forms.ToolStripButton();
             this.miscToolsPanel = new System.Windows.Forms.Panel();
             this.miscEDVLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.miscEDVInstructionsPanel = new System.Windows.Forms.Panel();
-            this.miscEDVInstructionsTextBox = new System.Windows.Forms.TextBox();
-            this.miscEDVRunPanel = new System.Windows.Forms.Panel();
-            this.miscEDVProgressBar = new System.Windows.Forms.ProgressBar();
-            this.miscEDVRunButton = new System.Windows.Forms.Button();
             this.miscEDVDirectoryPanel = new System.Windows.Forms.Panel();
             this.miscEDVSelectDirectoryTextBox = new System.Windows.Forms.TextBox();
             this.miscEDVSelectDirectoryButton = new System.Windows.Forms.Button();
+            this.miscEDVRunPanel = new System.Windows.Forms.Panel();
+            this.miscEDVProgressBar = new System.Windows.Forms.ProgressBar();
+            this.miscEDVRunButton = new System.Windows.Forms.Button();
             this.miscEDVDataGridView = new System.Windows.Forms.DataGridView();
             this.miscEDVControlsPanel = new System.Windows.Forms.Panel();
             this.miscEDVFilterLabel = new System.Windows.Forms.Label();
@@ -496,6 +496,7 @@ namespace BARevitTools
             this.miscEDVFilterConditionComboBox = new System.Windows.Forms.ComboBox();
             this.miscEDVSelectNoneButton = new System.Windows.Forms.Button();
             this.miscEDVSelectAllButton = new System.Windows.Forms.Button();
+            this.miscEDVInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.qaqcTab = new System.Windows.Forms.TabPage();
             this.qaqcLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.qaqcToolStrip = new System.Windows.Forms.ToolStrip();
@@ -513,11 +514,12 @@ namespace BARevitTools
             this.qaqcRFSPInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.qaqcRFSPParametersListBox = new System.Windows.Forms.ListBox();
             this.qaqcRFSPToolsPanel = new System.Windows.Forms.Panel();
+            this.qaqcRFSPSelectFamilyLabel = new System.Windows.Forms.Label();
             this.qaqcRFSPSFamilyLabel = new System.Windows.Forms.Label();
-            this.qaqcRFSPRunButton = new System.Windows.Forms.Button();
             this.qaqcRFSPSelectFamilyButton = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.qaqcRFSPEvaluatedParametersPanel = new System.Windows.Forms.Panel();
+            this.qaqcRFSPEvaluatedParametersLabel = new System.Windows.Forms.Label();
+            this.qaqcRFSPRunButton = new System.Windows.Forms.Button();
             this.qaqcRLSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.qaqcRLSRunPanel = new System.Windows.Forms.Panel();
             this.qaqcRLSRunButton = new System.Windows.Forms.Button();
@@ -530,7 +532,7 @@ namespace BARevitTools
             this.qaqcRLSDeleteCheckBox = new System.Windows.Forms.CheckBox();
             this.qaqcRLSReplaceComboBox = new System.Windows.Forms.ComboBox();
             this.qaqcRLSUnswitchablePanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.qaqcRLSUnswitchableLabel = new System.Windows.Forms.Label();
             this.qaqcCSVNPanel = new System.Windows.Forms.Panel();
             this.qaqcCSVNRun = new System.Windows.Forms.Button();
             this.qaqcCTVNInstructions = new System.Windows.Forms.Label();
@@ -590,6 +592,7 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.setupUPProgressBar = new System.Windows.Forms.ProgressBar();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -677,8 +680,6 @@ namespace BARevitTools
             this.aboutTabLayoutPanel.SuspendLayout();
             this.aboutTabHeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aboutTabLogo)).BeginInit();
-            this.analysisTab.SuspendLayout();
-            this.analysisTabControl.SuspendLayout();
             this.modelingTab.SuspendLayout();
             this.modelingTabControl.SuspendLayout();
             this.multiCatTab.SuspendLayout();
@@ -760,21 +761,22 @@ namespace BARevitTools
             this.sheetsTabLayoutPanel.SuspendLayout();
             this.sheetsToolStrip.SuspendLayout();
             this.sheetsToolsPanel.SuspendLayout();
+            this.sheetsISFLLayoutPanel.SuspendLayout();
+            this.sheetsISFLInstructionsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sheetsISFLDataGridView)).BeginInit();
+            this.sheetsISFLControlsPanel.SuspendLayout();
+            this.sheetsIFSLDisciplinePanel.SuspendLayout();
             this.sheetsCSLLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sheetsCSLDataGridView)).BeginInit();
             this.sheetsCSLControlsPanel.SuspendLayout();
             this.sheetsCSLInstructionsPanel.SuspendLayout();
+            this.sheetsCSLRunPanel.SuspendLayout();
             this.sheetsOSSLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sheetsOSSDataGridView)).BeginInit();
             this.sheetsOSSInstructionsPanel.SuspendLayout();
             this.sheetsOSSFilterPanel.SuspendLayout();
             this.sheetsOSSNewSetPanel.SuspendLayout();
             this.sheetsOSSControlsPanel.SuspendLayout();
-            this.sheetsISFLLayoutPanel.SuspendLayout();
-            this.sheetsISFLInstructionsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sheetsISFLDataGridView)).BeginInit();
-            this.sheetsISFLControlsPanel.SuspendLayout();
-            this.sheetsIFSLDisciplinePanel.SuspendLayout();
             this.sheetsCSSFSLayoutPanel.SuspendLayout();
             this.sheetsCSSFSInstructionsPanel.SuspendLayout();
             this.sheetsCSSFSControlsPanel.SuspendLayout();
@@ -811,9 +813,8 @@ namespace BARevitTools
             this.miscToolStrip.SuspendLayout();
             this.miscToolsPanel.SuspendLayout();
             this.miscEDVLayoutPanel.SuspendLayout();
-            this.miscEDVInstructionsPanel.SuspendLayout();
-            this.miscEDVRunPanel.SuspendLayout();
             this.miscEDVDirectoryPanel.SuspendLayout();
+            this.miscEDVRunPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miscEDVDataGridView)).BeginInit();
             this.miscEDVControlsPanel.SuspendLayout();
             this.qaqcTab.SuspendLayout();
@@ -822,7 +823,7 @@ namespace BARevitTools
             this.qaqcToolsPanel.SuspendLayout();
             this.qaqcRFSPLayoutPanel.SuspendLayout();
             this.qaqcRFSPToolsPanel.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.qaqcRFSPEvaluatedParametersPanel.SuspendLayout();
             this.qaqcRLSLayoutPanel.SuspendLayout();
             this.qaqcRLSRunPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qaqcRLSDataGridView)).BeginInit();
@@ -1101,6 +1102,8 @@ namespace BARevitTools
             // adminDataGFFSqlExportPanel
             // 
             this.adminDataGFFSqlExportPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminDataGFFSqlExportPanel.Controls.Add(this.adminDataGFFSqlExportTableLabel);
+            this.adminDataGFFSqlExportPanel.Controls.Add(this.adminDataGFFSqlExportComboBox);
             this.adminDataGFFSqlExportPanel.Controls.Add(this.adminDataGFFSqlExportRunButton);
             this.adminDataGFFSqlExportPanel.Controls.Add(this.adminDataGFFSqlExportLabel);
             this.adminDataGFFSqlExportPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1109,6 +1112,23 @@ namespace BARevitTools
             this.adminDataGFFSqlExportPanel.Name = "adminDataGFFSqlExportPanel";
             this.adminDataGFFSqlExportPanel.Size = new System.Drawing.Size(355, 150);
             this.adminDataGFFSqlExportPanel.TabIndex = 5;
+            // 
+            // adminDataGFFSqlExportTableLabel
+            // 
+            this.adminDataGFFSqlExportTableLabel.AutoSize = true;
+            this.adminDataGFFSqlExportTableLabel.Location = new System.Drawing.Point(3, 36);
+            this.adminDataGFFSqlExportTableLabel.Name = "adminDataGFFSqlExportTableLabel";
+            this.adminDataGFFSqlExportTableLabel.Size = new System.Drawing.Size(86, 13);
+            this.adminDataGFFSqlExportTableLabel.TabIndex = 6;
+            this.adminDataGFFSqlExportTableLabel.Text = "Database Table:";
+            // 
+            // adminDataGFFSqlExportComboBox
+            // 
+            this.adminDataGFFSqlExportComboBox.FormattingEnabled = true;
+            this.adminDataGFFSqlExportComboBox.Location = new System.Drawing.Point(95, 33);
+            this.adminDataGFFSqlExportComboBox.Name = "adminDataGFFSqlExportComboBox";
+            this.adminDataGFFSqlExportComboBox.Size = new System.Drawing.Size(186, 21);
+            this.adminDataGFFSqlExportComboBox.TabIndex = 5;
             // 
             // adminDataGFFSqlExportRunButton
             // 
@@ -1154,7 +1174,7 @@ namespace BARevitTools
             // 
             this.adminDataGFFCsvExportDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminDataGFFCsvExportDirectoryTextBox.Location = new System.Drawing.Point(143, 56);
+            this.adminDataGFFCsvExportDirectoryTextBox.Location = new System.Drawing.Point(143, 61);
             this.adminDataGFFCsvExportDirectoryTextBox.Name = "adminDataGFFCsvExportDirectoryTextBox";
             this.adminDataGFFCsvExportDirectoryTextBox.ReadOnly = true;
             this.adminDataGFFCsvExportDirectoryTextBox.Size = new System.Drawing.Size(207, 20);
@@ -1164,7 +1184,7 @@ namespace BARevitTools
             // adminDataGFFCsvExportRunButton
             // 
             this.adminDataGFFCsvExportRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminDataGFFCsvExportRunButton.Location = new System.Drawing.Point(293, 120);
+            this.adminDataGFFCsvExportRunButton.Location = new System.Drawing.Point(290, 121);
             this.adminDataGFFCsvExportRunButton.Name = "adminDataGFFCsvExportRunButton";
             this.adminDataGFFCsvExportRunButton.Size = new System.Drawing.Size(60, 25);
             this.adminDataGFFCsvExportRunButton.TabIndex = 3;
@@ -1176,7 +1196,7 @@ namespace BARevitTools
             // 
             this.adminDataGFFCsvExportNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminDataGFFCsvExportNameTextBox.Location = new System.Drawing.Point(3, 29);
+            this.adminDataGFFCsvExportNameTextBox.Location = new System.Drawing.Point(3, 33);
             this.adminDataGFFCsvExportNameTextBox.Name = "adminDataGFFCsvExportNameTextBox";
             this.adminDataGFFCsvExportNameTextBox.Size = new System.Drawing.Size(347, 20);
             this.adminDataGFFCsvExportNameTextBox.TabIndex = 6;
@@ -1198,7 +1218,7 @@ namespace BARevitTools
             // 
             // adminDataGFFCsvExportDirectoryButton
             // 
-            this.adminDataGFFCsvExportDirectoryButton.Location = new System.Drawing.Point(3, 53);
+            this.adminDataGFFCsvExportDirectoryButton.Location = new System.Drawing.Point(2, 59);
             this.adminDataGFFCsvExportDirectoryButton.Name = "adminDataGFFCsvExportDirectoryButton";
             this.adminDataGFFCsvExportDirectoryButton.Size = new System.Drawing.Size(134, 23);
             this.adminDataGFFCsvExportDirectoryButton.TabIndex = 4;
@@ -1785,11 +1805,11 @@ namespace BARevitTools
             // 
             // adminFamiliesUFVPButton
             // 
-            this.adminFamiliesUFVPButton.Image = (Image)(new Bitmap(BARevitTools.Properties.Resources.bimFamiliesUFVPIcon, new Size(32,32)));
+            this.adminFamiliesUFVPButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesUFVPButton.Image")));
             this.adminFamiliesUFVPButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.adminFamiliesUFVPButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.adminFamiliesUFVPButton.Name = "adminFamiliesUFVPButton";
-            this.adminFamiliesUFVPButton.Size = new System.Drawing.Size(1004, 1019);
+            this.adminFamiliesUFVPButton.Size = new System.Drawing.Size(128, 50);
             this.adminFamiliesUFVPButton.Text = "Update Family Version";
             this.adminFamiliesUFVPButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.adminFamiliesUFVPButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -2889,7 +2909,6 @@ namespace BARevitTools
             // 
             this.mainTabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.mainTabControl.Controls.Add(this.aboutTab);
-            this.mainTabControl.Controls.Add(this.analysisTab);
             this.mainTabControl.Controls.Add(this.modelingTab);
             this.mainTabControl.Controls.Add(this.documentationTab);
             this.mainTabControl.Controls.Add(this.managementTab);
@@ -3028,7 +3047,7 @@ namespace BARevitTools
             this.aboutTabVersionLabel.Name = "aboutTabVersionLabel";
             this.aboutTabVersionLabel.Size = new System.Drawing.Size(102, 20);
             this.aboutTabVersionLabel.TabIndex = 0;
-            this.aboutTabVersionLabel.Text = "Version 1.0.4";
+            this.aboutTabVersionLabel.Text = "Version 1.0.5";
             // 
             // aboutTabTitleLabel
             // 
@@ -3063,40 +3082,6 @@ namespace BARevitTools
             this.aboutTabUpdatesTextBox.Size = new System.Drawing.Size(730, 292);
             this.aboutTabUpdatesTextBox.TabIndex = 2;
             this.aboutTabUpdatesTextBox.Text = resources.GetString("aboutTabUpdatesTextBox.Text");
-            // 
-            // analysisTab
-            // 
-            this.analysisTab.BackColor = System.Drawing.SystemColors.Control;
-            this.analysisTab.Controls.Add(this.analysisTabControl);
-            this.analysisTab.Location = new System.Drawing.Point(25, 4);
-            this.analysisTab.Margin = new System.Windows.Forms.Padding(0);
-            this.analysisTab.Name = "analysisTab";
-            this.analysisTab.Padding = new System.Windows.Forms.Padding(3);
-            this.analysisTab.Size = new System.Drawing.Size(734, 437);
-            this.analysisTab.TabIndex = 1;
-            this.analysisTab.Text = "Analysis";
-            // 
-            // analysisTabControl
-            // 
-            this.analysisTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.analysisTabControl.Controls.Add(this.sightTab);
-            this.analysisTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.analysisTabControl.Location = new System.Drawing.Point(3, 3);
-            this.analysisTabControl.Margin = new System.Windows.Forms.Padding(0);
-            this.analysisTabControl.Name = "analysisTabControl";
-            this.analysisTabControl.SelectedIndex = 0;
-            this.analysisTabControl.Size = new System.Drawing.Size(728, 431);
-            this.analysisTabControl.TabIndex = 0;
-            // 
-            // sightTab
-            // 
-            this.sightTab.Location = new System.Drawing.Point(4, 25);
-            this.sightTab.Name = "sightTab";
-            this.sightTab.Padding = new System.Windows.Forms.Padding(3);
-            this.sightTab.Size = new System.Drawing.Size(720, 402);
-            this.sightTab.TabIndex = 0;
-            this.sightTab.Text = "Sight";
-            this.sightTab.UseVisualStyleBackColor = true;
             // 
             // modelingTab
             // 
@@ -3856,6 +3841,7 @@ namespace BARevitTools
             // 
             // floorsCFBRControlsPanel
             // 
+            this.floorsCFBRControlsPanel.Controls.Add(this.floorsCFBRDoneLabel);
             this.floorsCFBRControlsPanel.Controls.Add(this.floorsCFBROffsetFinishFloorCheckBox);
             this.floorsCFBRControlsPanel.Controls.Add(this.floorsCFBRSelectFloorTypeLabel);
             this.floorsCFBRControlsPanel.Controls.Add(this.floorsCFBRSelectRoomsLabel);
@@ -3868,6 +3854,17 @@ namespace BARevitTools
             this.floorsCFBRControlsPanel.Name = "floorsCFBRControlsPanel";
             this.floorsCFBRControlsPanel.Size = new System.Drawing.Size(710, 164);
             this.floorsCFBRControlsPanel.TabIndex = 1;
+            // 
+            // floorsCFBRDoneLabel
+            // 
+            this.floorsCFBRDoneLabel.AutoSize = true;
+            this.floorsCFBRDoneLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.floorsCFBRDoneLabel.Location = new System.Drawing.Point(86, 100);
+            this.floorsCFBRDoneLabel.Name = "floorsCFBRDoneLabel";
+            this.floorsCFBRDoneLabel.Size = new System.Drawing.Size(39, 13);
+            this.floorsCFBRDoneLabel.TabIndex = 4;
+            this.floorsCFBRDoneLabel.Text = "Done!";
+            this.floorsCFBRDoneLabel.Visible = false;
             // 
             // floorsCFBROffsetFinishFloorCheckBox
             // 
@@ -4929,9 +4926,9 @@ namespace BARevitTools
             // 
             // sheetsToolsPanel
             // 
+            this.sheetsToolsPanel.Controls.Add(this.sheetsISFLLayoutPanel);
             this.sheetsToolsPanel.Controls.Add(this.sheetsCSLLayoutPanel);
             this.sheetsToolsPanel.Controls.Add(this.sheetsOSSLayoutPanel);
-            this.sheetsToolsPanel.Controls.Add(this.sheetsISFLLayoutPanel);
             this.sheetsToolsPanel.Controls.Add(this.sheetsCSSFSLayoutPanel);
             this.sheetsToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sheetsToolsPanel.Location = new System.Drawing.Point(0, 53);
@@ -4940,14 +4937,169 @@ namespace BARevitTools
             this.sheetsToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsToolsPanel.TabIndex = 0;
             // 
+            // sheetsISFLLayoutPanel
+            // 
+            this.sheetsISFLLayoutPanel.ColumnCount = 2;
+            this.sheetsISFLLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.sheetsISFLLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
+            this.sheetsISFLLayoutPanel.Controls.Add(this.sheetsISFLInstructionsPanel, 0, 0);
+            this.sheetsISFLLayoutPanel.Controls.Add(this.sheetsISFLRunButton, 0, 3);
+            this.sheetsISFLLayoutPanel.Controls.Add(this.sheetsISFLDataGridView, 0, 2);
+            this.sheetsISFLLayoutPanel.Controls.Add(this.sheetsISFLControlsPanel, 0, 1);
+            this.sheetsISFLLayoutPanel.Controls.Add(this.sheetsIFSLDisciplinePanel, 1, 2);
+            this.sheetsISFLLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsISFLLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.sheetsISFLLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsISFLLayoutPanel.Name = "sheetsISFLLayoutPanel";
+            this.sheetsISFLLayoutPanel.RowCount = 4;
+            this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.sheetsISFLLayoutPanel.Size = new System.Drawing.Size(710, 339);
+            this.sheetsISFLLayoutPanel.TabIndex = 3;
+            this.sheetsISFLLayoutPanel.Visible = false;
+            // 
+            // sheetsISFLInstructionsPanel
+            // 
+            this.sheetsISFLLayoutPanel.SetColumnSpan(this.sheetsISFLInstructionsPanel, 2);
+            this.sheetsISFLInstructionsPanel.Controls.Add(this.sheetsISFLInstructionsLabel);
+            this.sheetsISFLInstructionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsISFLInstructionsPanel.Location = new System.Drawing.Point(3, 3);
+            this.sheetsISFLInstructionsPanel.Name = "sheetsISFLInstructionsPanel";
+            this.sheetsISFLInstructionsPanel.Size = new System.Drawing.Size(704, 55);
+            this.sheetsISFLInstructionsPanel.TabIndex = 5;
+            // 
+            // sheetsISFLInstructionsLabel
+            // 
+            this.sheetsISFLInstructionsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.sheetsISFLInstructionsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsISFLInstructionsLabel.Location = new System.Drawing.Point(0, 0);
+            this.sheetsISFLInstructionsLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsISFLInstructionsLabel.Name = "sheetsISFLInstructionsLabel";
+            this.sheetsISFLInstructionsLabel.Size = new System.Drawing.Size(704, 55);
+            this.sheetsISFLInstructionsLabel.TabIndex = 0;
+            this.sheetsISFLInstructionsLabel.Text = resources.GetString("sheetsISFLInstructionsLabel.Text");
+            // 
+            // sheetsISFLRunButton
+            // 
+            this.sheetsISFLRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.sheetsISFLRunButton.Location = new System.Drawing.Point(3, 313);
+            this.sheetsISFLRunButton.Name = "sheetsISFLRunButton";
+            this.sheetsISFLRunButton.Size = new System.Drawing.Size(65, 23);
+            this.sheetsISFLRunButton.TabIndex = 2;
+            this.sheetsISFLRunButton.Text = "RUN";
+            this.sheetsISFLRunButton.UseVisualStyleBackColor = true;
+            this.sheetsISFLRunButton.Click += new System.EventHandler(this.SheetsISFLRunButton_Click);
+            // 
+            // sheetsISFLDataGridView
+            // 
+            this.sheetsISFLDataGridView.AllowUserToAddRows = false;
+            this.sheetsISFLDataGridView.AllowUserToDeleteRows = false;
+            this.sheetsISFLDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.sheetsISFLDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sheetsISFLDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsISFLDataGridView.Location = new System.Drawing.Point(0, 119);
+            this.sheetsISFLDataGridView.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsISFLDataGridView.Name = "sheetsISFLDataGridView";
+            this.sheetsISFLDataGridView.Size = new System.Drawing.Size(486, 191);
+            this.sheetsISFLDataGridView.TabIndex = 1;
+            this.sheetsISFLDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SheetsISFLDataGridView_CellContentClick);
+            // 
+            // sheetsISFLControlsPanel
+            // 
+            this.sheetsISFLLayoutPanel.SetColumnSpan(this.sheetsISFLControlsPanel, 2);
+            this.sheetsISFLControlsPanel.Controls.Add(this.sheetsISFLComboBox);
+            this.sheetsISFLControlsPanel.Controls.Add(this.sheetsISFLLabel1);
+            this.sheetsISFLControlsPanel.Controls.Add(this.sheetsISFLLabel2);
+            this.sheetsISFLControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsISFLControlsPanel.Location = new System.Drawing.Point(0, 61);
+            this.sheetsISFLControlsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsISFLControlsPanel.Name = "sheetsISFLControlsPanel";
+            this.sheetsISFLControlsPanel.Size = new System.Drawing.Size(710, 58);
+            this.sheetsISFLControlsPanel.TabIndex = 4;
+            // 
+            // sheetsISFLComboBox
+            // 
+            this.sheetsISFLComboBox.FormattingEnabled = true;
+            this.sheetsISFLComboBox.Location = new System.Drawing.Point(137, 4);
+            this.sheetsISFLComboBox.Name = "sheetsISFLComboBox";
+            this.sheetsISFLComboBox.Size = new System.Drawing.Size(250, 21);
+            this.sheetsISFLComboBox.TabIndex = 1;
+            this.sheetsISFLComboBox.Text = "<Originating Link>";
+            this.sheetsISFLComboBox.TextChanged += new System.EventHandler(this.SheetsISFLComboBox_TextChanged);
+            // 
+            // sheetsISFLLabel1
+            // 
+            this.sheetsISFLLabel1.AutoSize = true;
+            this.sheetsISFLLabel1.Location = new System.Drawing.Point(3, 7);
+            this.sheetsISFLLabel1.Name = "sheetsISFLLabel1";
+            this.sheetsISFLLabel1.Size = new System.Drawing.Size(128, 13);
+            this.sheetsISFLLabel1.TabIndex = 0;
+            this.sheetsISFLLabel1.Text = "Select Link to Copy From:";
+            // 
+            // sheetsISFLLabel2
+            // 
+            this.sheetsISFLLabel2.AutoSize = true;
+            this.sheetsISFLLabel2.Location = new System.Drawing.Point(3, 39);
+            this.sheetsISFLLabel2.Name = "sheetsISFLLabel2";
+            this.sheetsISFLLabel2.Size = new System.Drawing.Size(117, 13);
+            this.sheetsISFLLabel2.TabIndex = 0;
+            this.sheetsISFLLabel2.Text = "Select Sheets to Insert:";
+            // 
+            // sheetsIFSLDisciplinePanel
+            // 
+            this.sheetsIFSLDisciplinePanel.Controls.Add(this.sheetsISFLDisciplineUpdateButton);
+            this.sheetsIFSLDisciplinePanel.Controls.Add(this.sheetsISFLDisciplineComboBox);
+            this.sheetsIFSLDisciplinePanel.Controls.Add(this.sheetsISFLDisciplineLabel);
+            this.sheetsIFSLDisciplinePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsIFSLDisciplinePanel.Location = new System.Drawing.Point(486, 119);
+            this.sheetsIFSLDisciplinePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsIFSLDisciplinePanel.Name = "sheetsIFSLDisciplinePanel";
+            this.sheetsISFLLayoutPanel.SetRowSpan(this.sheetsIFSLDisciplinePanel, 2);
+            this.sheetsIFSLDisciplinePanel.Size = new System.Drawing.Size(224, 220);
+            this.sheetsIFSLDisciplinePanel.TabIndex = 2;
+            // 
+            // sheetsISFLDisciplineUpdateButton
+            // 
+            this.sheetsISFLDisciplineUpdateButton.Location = new System.Drawing.Point(3, 49);
+            this.sheetsISFLDisciplineUpdateButton.Name = "sheetsISFLDisciplineUpdateButton";
+            this.sheetsISFLDisciplineUpdateButton.Size = new System.Drawing.Size(75, 23);
+            this.sheetsISFLDisciplineUpdateButton.TabIndex = 2;
+            this.sheetsISFLDisciplineUpdateButton.Text = "UPDATE";
+            this.sheetsISFLDisciplineUpdateButton.UseVisualStyleBackColor = true;
+            this.sheetsISFLDisciplineUpdateButton.Click += new System.EventHandler(this.SheetsISFLDisciplineUpdateButton_Click);
+            // 
+            // sheetsISFLDisciplineComboBox
+            // 
+            this.sheetsISFLDisciplineComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sheetsISFLDisciplineComboBox.FormattingEnabled = true;
+            this.sheetsISFLDisciplineComboBox.Location = new System.Drawing.Point(3, 22);
+            this.sheetsISFLDisciplineComboBox.Name = "sheetsISFLDisciplineComboBox";
+            this.sheetsISFLDisciplineComboBox.Size = new System.Drawing.Size(217, 21);
+            this.sheetsISFLDisciplineComboBox.TabIndex = 1;
+            this.sheetsISFLDisciplineComboBox.Tag = "";
+            this.sheetsISFLDisciplineComboBox.Text = "<Select BA Discipline>";
+            // 
+            // sheetsISFLDisciplineLabel
+            // 
+            this.sheetsISFLDisciplineLabel.AutoSize = true;
+            this.sheetsISFLDisciplineLabel.Location = new System.Drawing.Point(4, 4);
+            this.sheetsISFLDisciplineLabel.Name = "sheetsISFLDisciplineLabel";
+            this.sheetsISFLDisciplineLabel.Size = new System.Drawing.Size(117, 13);
+            this.sheetsISFLDisciplineLabel.TabIndex = 0;
+            this.sheetsISFLDisciplineLabel.Text = "BA Discipline To Apply:";
+            // 
             // sheetsCSLLayoutPanel
             // 
             this.sheetsCSLLayoutPanel.ColumnCount = 1;
             this.sheetsCSLLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.sheetsCSLLayoutPanel.Controls.Add(this.sheetsCLSRunButton, 0, 3);
             this.sheetsCSLLayoutPanel.Controls.Add(this.sheetsCSLDataGridView, 0, 2);
             this.sheetsCSLLayoutPanel.Controls.Add(this.sheetsCSLControlsPanel, 0, 1);
             this.sheetsCSLLayoutPanel.Controls.Add(this.sheetsCSLInstructionsPanel, 0, 0);
+            this.sheetsCSLLayoutPanel.Controls.Add(this.sheetsCSLRunPanel, 0, 3);
             this.sheetsCSLLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sheetsCSLLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.sheetsCSLLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -4964,17 +5116,6 @@ namespace BARevitTools
             this.sheetsCSLLayoutPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsCSLLayoutPanel.TabIndex = 1;
             this.sheetsCSLLayoutPanel.Visible = false;
-            // 
-            // sheetsCLSRunButton
-            // 
-            this.sheetsCLSRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.sheetsCLSRunButton.Location = new System.Drawing.Point(3, 313);
-            this.sheetsCLSRunButton.Name = "sheetsCLSRunButton";
-            this.sheetsCLSRunButton.Size = new System.Drawing.Size(65, 23);
-            this.sheetsCLSRunButton.TabIndex = 2;
-            this.sheetsCLSRunButton.Text = "RUN";
-            this.sheetsCLSRunButton.UseVisualStyleBackColor = true;
-            this.sheetsCLSRunButton.Click += new System.EventHandler(this.SheetsCSLRunButton_Click);
             // 
             // sheetsCSLDataGridView
             // 
@@ -5074,6 +5215,35 @@ namespace BARevitTools
             this.sheetsCSLInstructionsLabel.TabIndex = 0;
             this.sheetsCSLInstructionsLabel.Text = "Instructions:\r\n1) Select the sheet to copy legends from; 2) Select the sheets to " +
     "copy legends to; 3) Click RUN to copy the legends.";
+            // 
+            // sheetsCSLRunPanel
+            // 
+            this.sheetsCSLRunPanel.Controls.Add(this.sheetsCSLProgressBar);
+            this.sheetsCSLRunPanel.Controls.Add(this.sheetsCLSRunButton);
+            this.sheetsCSLRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsCSLRunPanel.Location = new System.Drawing.Point(0, 310);
+            this.sheetsCSLRunPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsCSLRunPanel.Name = "sheetsCSLRunPanel";
+            this.sheetsCSLRunPanel.Size = new System.Drawing.Size(710, 29);
+            this.sheetsCSLRunPanel.TabIndex = 5;
+            // 
+            // sheetsCSLProgressBar
+            // 
+            this.sheetsCSLProgressBar.Location = new System.Drawing.Point(74, 2);
+            this.sheetsCSLProgressBar.Name = "sheetsCSLProgressBar";
+            this.sheetsCSLProgressBar.Size = new System.Drawing.Size(632, 23);
+            this.sheetsCSLProgressBar.TabIndex = 4;
+            // 
+            // sheetsCLSRunButton
+            // 
+            this.sheetsCLSRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.sheetsCLSRunButton.Location = new System.Drawing.Point(3, 2);
+            this.sheetsCLSRunButton.Name = "sheetsCLSRunButton";
+            this.sheetsCLSRunButton.Size = new System.Drawing.Size(65, 23);
+            this.sheetsCLSRunButton.TabIndex = 2;
+            this.sheetsCLSRunButton.Text = "RUN";
+            this.sheetsCLSRunButton.UseVisualStyleBackColor = true;
+            this.sheetsCLSRunButton.Click += new System.EventHandler(this.SheetsCSLRunButton_Click);
             // 
             // sheetsOSSLayoutPanel
             // 
@@ -5269,161 +5439,6 @@ namespace BARevitTools
             this.sheetsOSSRunLabel.Size = new System.Drawing.Size(69, 13);
             this.sheetsOSSRunLabel.TabIndex = 0;
             this.sheetsOSSRunLabel.Text = "Update Sets:";
-            // 
-            // sheetsISFLLayoutPanel
-            // 
-            this.sheetsISFLLayoutPanel.ColumnCount = 2;
-            this.sheetsISFLLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.sheetsISFLLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
-            this.sheetsISFLLayoutPanel.Controls.Add(this.sheetsISFLInstructionsPanel, 0, 0);
-            this.sheetsISFLLayoutPanel.Controls.Add(this.sheetsISFLRunButton, 0, 3);
-            this.sheetsISFLLayoutPanel.Controls.Add(this.sheetsISFLDataGridView, 0, 2);
-            this.sheetsISFLLayoutPanel.Controls.Add(this.sheetsISFLControlsPanel, 0, 1);
-            this.sheetsISFLLayoutPanel.Controls.Add(this.sheetsIFSLDisciplinePanel, 1, 2);
-            this.sheetsISFLLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsISFLLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.sheetsISFLLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsISFLLayoutPanel.Name = "sheetsISFLLayoutPanel";
-            this.sheetsISFLLayoutPanel.RowCount = 4;
-            this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.sheetsISFLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.sheetsISFLLayoutPanel.Size = new System.Drawing.Size(710, 339);
-            this.sheetsISFLLayoutPanel.TabIndex = 3;
-            this.sheetsISFLLayoutPanel.Visible = false;
-            // 
-            // sheetsISFLInstructionsPanel
-            // 
-            this.sheetsISFLLayoutPanel.SetColumnSpan(this.sheetsISFLInstructionsPanel, 2);
-            this.sheetsISFLInstructionsPanel.Controls.Add(this.sheetsISFLInstructionsLabel);
-            this.sheetsISFLInstructionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsISFLInstructionsPanel.Location = new System.Drawing.Point(3, 3);
-            this.sheetsISFLInstructionsPanel.Name = "sheetsISFLInstructionsPanel";
-            this.sheetsISFLInstructionsPanel.Size = new System.Drawing.Size(704, 55);
-            this.sheetsISFLInstructionsPanel.TabIndex = 5;
-            // 
-            // sheetsISFLInstructionsLabel
-            // 
-            this.sheetsISFLInstructionsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.sheetsISFLInstructionsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsISFLInstructionsLabel.Location = new System.Drawing.Point(0, 0);
-            this.sheetsISFLInstructionsLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsISFLInstructionsLabel.Name = "sheetsISFLInstructionsLabel";
-            this.sheetsISFLInstructionsLabel.Size = new System.Drawing.Size(704, 55);
-            this.sheetsISFLInstructionsLabel.TabIndex = 0;
-            this.sheetsISFLInstructionsLabel.Text = resources.GetString("sheetsISFLInstructionsLabel.Text");
-            // 
-            // sheetsISFLRunButton
-            // 
-            this.sheetsISFLRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.sheetsISFLRunButton.Location = new System.Drawing.Point(3, 313);
-            this.sheetsISFLRunButton.Name = "sheetsISFLRunButton";
-            this.sheetsISFLRunButton.Size = new System.Drawing.Size(65, 23);
-            this.sheetsISFLRunButton.TabIndex = 2;
-            this.sheetsISFLRunButton.Text = "RUN";
-            this.sheetsISFLRunButton.UseVisualStyleBackColor = true;
-            this.sheetsISFLRunButton.Click += new System.EventHandler(this.SheetsISFLRunButton_Click);
-            // 
-            // sheetsISFLDataGridView
-            // 
-            this.sheetsISFLDataGridView.AllowUserToAddRows = false;
-            this.sheetsISFLDataGridView.AllowUserToDeleteRows = false;
-            this.sheetsISFLDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.sheetsISFLDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sheetsISFLDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsISFLDataGridView.Location = new System.Drawing.Point(0, 119);
-            this.sheetsISFLDataGridView.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsISFLDataGridView.Name = "sheetsISFLDataGridView";
-            this.sheetsISFLDataGridView.Size = new System.Drawing.Size(486, 191);
-            this.sheetsISFLDataGridView.TabIndex = 1;
-            this.sheetsISFLDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SheetsISFLDataGridView_CellContentClick);
-            // 
-            // sheetsISFLControlsPanel
-            // 
-            this.sheetsISFLLayoutPanel.SetColumnSpan(this.sheetsISFLControlsPanel, 2);
-            this.sheetsISFLControlsPanel.Controls.Add(this.sheetsISFLComboBox);
-            this.sheetsISFLControlsPanel.Controls.Add(this.sheetsISFLLabel1);
-            this.sheetsISFLControlsPanel.Controls.Add(this.sheetsISFLLabel2);
-            this.sheetsISFLControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsISFLControlsPanel.Location = new System.Drawing.Point(0, 61);
-            this.sheetsISFLControlsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsISFLControlsPanel.Name = "sheetsISFLControlsPanel";
-            this.sheetsISFLControlsPanel.Size = new System.Drawing.Size(710, 58);
-            this.sheetsISFLControlsPanel.TabIndex = 4;
-            // 
-            // sheetsISFLComboBox
-            // 
-            this.sheetsISFLComboBox.FormattingEnabled = true;
-            this.sheetsISFLComboBox.Location = new System.Drawing.Point(137, 4);
-            this.sheetsISFLComboBox.Name = "sheetsISFLComboBox";
-            this.sheetsISFLComboBox.Size = new System.Drawing.Size(250, 21);
-            this.sheetsISFLComboBox.TabIndex = 1;
-            this.sheetsISFLComboBox.Text = "<Originating Link>";
-            this.sheetsISFLComboBox.TextChanged += new System.EventHandler(this.SheetsISFLComboBox_TextChanged);
-            // 
-            // sheetsISFLLabel1
-            // 
-            this.sheetsISFLLabel1.AutoSize = true;
-            this.sheetsISFLLabel1.Location = new System.Drawing.Point(3, 7);
-            this.sheetsISFLLabel1.Name = "sheetsISFLLabel1";
-            this.sheetsISFLLabel1.Size = new System.Drawing.Size(128, 13);
-            this.sheetsISFLLabel1.TabIndex = 0;
-            this.sheetsISFLLabel1.Text = "Select Link to Copy From:";
-            // 
-            // sheetsISFLLabel2
-            // 
-            this.sheetsISFLLabel2.AutoSize = true;
-            this.sheetsISFLLabel2.Location = new System.Drawing.Point(3, 39);
-            this.sheetsISFLLabel2.Name = "sheetsISFLLabel2";
-            this.sheetsISFLLabel2.Size = new System.Drawing.Size(117, 13);
-            this.sheetsISFLLabel2.TabIndex = 0;
-            this.sheetsISFLLabel2.Text = "Select Sheets to Insert:";
-            // 
-            // sheetsIFSLDisciplinePanel
-            // 
-            this.sheetsIFSLDisciplinePanel.Controls.Add(this.sheetsISFLDisciplineUpdateButton);
-            this.sheetsIFSLDisciplinePanel.Controls.Add(this.sheetsISFLDisciplineComboBox);
-            this.sheetsIFSLDisciplinePanel.Controls.Add(this.sheetsISFLDisciplineLabel);
-            this.sheetsIFSLDisciplinePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsIFSLDisciplinePanel.Location = new System.Drawing.Point(486, 119);
-            this.sheetsIFSLDisciplinePanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsIFSLDisciplinePanel.Name = "sheetsIFSLDisciplinePanel";
-            this.sheetsISFLLayoutPanel.SetRowSpan(this.sheetsIFSLDisciplinePanel, 2);
-            this.sheetsIFSLDisciplinePanel.Size = new System.Drawing.Size(224, 220);
-            this.sheetsIFSLDisciplinePanel.TabIndex = 2;
-            // 
-            // sheetsISFLDisciplineUpdateButton
-            // 
-            this.sheetsISFLDisciplineUpdateButton.Location = new System.Drawing.Point(3, 49);
-            this.sheetsISFLDisciplineUpdateButton.Name = "sheetsISFLDisciplineUpdateButton";
-            this.sheetsISFLDisciplineUpdateButton.Size = new System.Drawing.Size(75, 23);
-            this.sheetsISFLDisciplineUpdateButton.TabIndex = 2;
-            this.sheetsISFLDisciplineUpdateButton.Text = "UPDATE";
-            this.sheetsISFLDisciplineUpdateButton.UseVisualStyleBackColor = true;
-            this.sheetsISFLDisciplineUpdateButton.Click += new System.EventHandler(this.SheetsISFLDisciplineUpdateButton_Click);
-            // 
-            // sheetsISFLDisciplineComboBox
-            // 
-            this.sheetsISFLDisciplineComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sheetsISFLDisciplineComboBox.FormattingEnabled = true;
-            this.sheetsISFLDisciplineComboBox.Location = new System.Drawing.Point(3, 22);
-            this.sheetsISFLDisciplineComboBox.Name = "sheetsISFLDisciplineComboBox";
-            this.sheetsISFLDisciplineComboBox.Size = new System.Drawing.Size(217, 21);
-            this.sheetsISFLDisciplineComboBox.TabIndex = 1;
-            this.sheetsISFLDisciplineComboBox.Tag = "";
-            this.sheetsISFLDisciplineComboBox.Text = "<Select BA Discipline>";
-            // 
-            // sheetsISFLDisciplineLabel
-            // 
-            this.sheetsISFLDisciplineLabel.AutoSize = true;
-            this.sheetsISFLDisciplineLabel.Location = new System.Drawing.Point(4, 4);
-            this.sheetsISFLDisciplineLabel.Name = "sheetsISFLDisciplineLabel";
-            this.sheetsISFLDisciplineLabel.Size = new System.Drawing.Size(117, 13);
-            this.sheetsISFLDisciplineLabel.TabIndex = 0;
-            this.sheetsISFLDisciplineLabel.Text = "BA Discipline To Apply:";
             // 
             // sheetsCSSFSLayoutPanel
             // 
@@ -6240,7 +6255,7 @@ namespace BARevitTools
             // 
             // documentsCTSInstructions
             // 
-            this.documentsCTSInstructions.BackColor = System.Drawing.Color.Orange;
+            this.documentsCTSInstructions.BackColor = System.Drawing.Color.Moccasin;
             this.documentsCTSInstructions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.documentsCTSInstructions.Dock = System.Windows.Forms.DockStyle.Top;
             this.documentsCTSInstructions.Location = new System.Drawing.Point(0, 0);
@@ -6342,50 +6357,61 @@ namespace BARevitTools
             // 
             this.miscEDVLayoutPanel.ColumnCount = 2;
             this.miscEDVLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.miscEDVLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.miscEDVLayoutPanel.Controls.Add(this.miscEDVInstructionsPanel, 0, 0);
+            this.miscEDVLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.miscEDVLayoutPanel.Controls.Add(this.miscEDVDirectoryPanel, 0, 0);
             this.miscEDVLayoutPanel.Controls.Add(this.miscEDVRunPanel, 0, 3);
-            this.miscEDVLayoutPanel.Controls.Add(this.miscEDVDirectoryPanel, 0, 1);
             this.miscEDVLayoutPanel.Controls.Add(this.miscEDVDataGridView, 0, 2);
-            this.miscEDVLayoutPanel.Controls.Add(this.miscEDVControlsPanel, 1, 2);
+            this.miscEDVLayoutPanel.Controls.Add(this.miscEDVControlsPanel, 0, 1);
+            this.miscEDVLayoutPanel.Controls.Add(this.miscEDVInstructionsTextBox, 1, 0);
             this.miscEDVLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.miscEDVLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.miscEDVLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscEDVLayoutPanel.Name = "miscEDVLayoutPanel";
             this.miscEDVLayoutPanel.RowCount = 4;
-            this.miscEDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
-            this.miscEDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.miscEDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.miscEDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
             this.miscEDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.miscEDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.miscEDVLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.miscEDVLayoutPanel.TabIndex = 6;
             this.miscEDVLayoutPanel.Visible = false;
             // 
-            // miscEDVInstructionsPanel
+            // miscEDVDirectoryPanel
             // 
-            this.miscEDVLayoutPanel.SetColumnSpan(this.miscEDVInstructionsPanel, 2);
-            this.miscEDVInstructionsPanel.Controls.Add(this.miscEDVInstructionsTextBox);
-            this.miscEDVInstructionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.miscEDVInstructionsPanel.Location = new System.Drawing.Point(0, 0);
-            this.miscEDVInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.miscEDVInstructionsPanel.Name = "miscEDVInstructionsPanel";
-            this.miscEDVInstructionsPanel.Size = new System.Drawing.Size(716, 75);
-            this.miscEDVInstructionsPanel.TabIndex = 0;
+            this.miscEDVDirectoryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.miscEDVDirectoryPanel.Controls.Add(this.miscEDVSelectDirectoryTextBox);
+            this.miscEDVDirectoryPanel.Controls.Add(this.miscEDVSelectDirectoryButton);
+            this.miscEDVDirectoryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.miscEDVDirectoryPanel.Location = new System.Drawing.Point(0, 0);
+            this.miscEDVDirectoryPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.miscEDVDirectoryPanel.Name = "miscEDVDirectoryPanel";
+            this.miscEDVDirectoryPanel.Size = new System.Drawing.Size(581, 37);
+            this.miscEDVDirectoryPanel.TabIndex = 2;
             // 
-            // miscEDVInstructionsTextBox
+            // miscEDVSelectDirectoryTextBox
             // 
-            this.miscEDVInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.miscEDVInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.miscEDVInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
-            this.miscEDVInstructionsTextBox.Multiline = true;
-            this.miscEDVInstructionsTextBox.Name = "miscEDVInstructionsTextBox";
-            this.miscEDVInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.miscEDVInstructionsTextBox.Size = new System.Drawing.Size(716, 75);
-            this.miscEDVInstructionsTextBox.TabIndex = 0;
-            this.miscEDVInstructionsTextBox.Text = resources.GetString("miscEDVInstructionsTextBox.Text");
+            this.miscEDVSelectDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.miscEDVSelectDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.miscEDVSelectDirectoryTextBox.Location = new System.Drawing.Point(109, 12);
+            this.miscEDVSelectDirectoryTextBox.Name = "miscEDVSelectDirectoryTextBox";
+            this.miscEDVSelectDirectoryTextBox.ReadOnly = true;
+            this.miscEDVSelectDirectoryTextBox.Size = new System.Drawing.Size(467, 13);
+            this.miscEDVSelectDirectoryTextBox.TabIndex = 1;
+            // 
+            // miscEDVSelectDirectoryButton
+            // 
+            this.miscEDVSelectDirectoryButton.Location = new System.Drawing.Point(3, 7);
+            this.miscEDVSelectDirectoryButton.Name = "miscEDVSelectDirectoryButton";
+            this.miscEDVSelectDirectoryButton.Size = new System.Drawing.Size(100, 23);
+            this.miscEDVSelectDirectoryButton.TabIndex = 0;
+            this.miscEDVSelectDirectoryButton.Text = "Select Directory";
+            this.miscEDVSelectDirectoryButton.UseVisualStyleBackColor = true;
+            this.miscEDVSelectDirectoryButton.Click += new System.EventHandler(this.MiscEDVSelectDirectoryButton_Click);
             // 
             // miscEDVRunPanel
             // 
+            this.miscEDVRunPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.miscEDVLayoutPanel.SetColumnSpan(this.miscEDVRunPanel, 2);
             this.miscEDVRunPanel.Controls.Add(this.miscEDVProgressBar);
             this.miscEDVRunPanel.Controls.Add(this.miscEDVRunButton);
@@ -6401,55 +6427,21 @@ namespace BARevitTools
             this.miscEDVProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.miscEDVProgressBar.ForeColor = System.Drawing.Color.GreenYellow;
-            this.miscEDVProgressBar.Location = new System.Drawing.Point(3, 6);
+            this.miscEDVProgressBar.Location = new System.Drawing.Point(84, 5);
             this.miscEDVProgressBar.Name = "miscEDVProgressBar";
-            this.miscEDVProgressBar.Size = new System.Drawing.Size(629, 23);
+            this.miscEDVProgressBar.Size = new System.Drawing.Size(627, 23);
             this.miscEDVProgressBar.TabIndex = 1;
             this.miscEDVProgressBar.Visible = false;
             // 
             // miscEDVRunButton
             // 
-            this.miscEDVRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.miscEDVRunButton.Location = new System.Drawing.Point(637, 6);
+            this.miscEDVRunButton.Location = new System.Drawing.Point(3, 5);
             this.miscEDVRunButton.Name = "miscEDVRunButton";
             this.miscEDVRunButton.Size = new System.Drawing.Size(75, 23);
             this.miscEDVRunButton.TabIndex = 0;
             this.miscEDVRunButton.Text = "RUN";
             this.miscEDVRunButton.UseVisualStyleBackColor = true;
             this.miscEDVRunButton.Click += new System.EventHandler(this.MiscEDVRunButton_Click);
-            // 
-            // miscEDVDirectoryPanel
-            // 
-            this.miscEDVLayoutPanel.SetColumnSpan(this.miscEDVDirectoryPanel, 2);
-            this.miscEDVDirectoryPanel.Controls.Add(this.miscEDVSelectDirectoryTextBox);
-            this.miscEDVDirectoryPanel.Controls.Add(this.miscEDVSelectDirectoryButton);
-            this.miscEDVDirectoryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.miscEDVDirectoryPanel.Location = new System.Drawing.Point(0, 75);
-            this.miscEDVDirectoryPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.miscEDVDirectoryPanel.Name = "miscEDVDirectoryPanel";
-            this.miscEDVDirectoryPanel.Size = new System.Drawing.Size(716, 35);
-            this.miscEDVDirectoryPanel.TabIndex = 2;
-            // 
-            // miscEDVSelectDirectoryTextBox
-            // 
-            this.miscEDVSelectDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.miscEDVSelectDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.miscEDVSelectDirectoryTextBox.Location = new System.Drawing.Point(109, 9);
-            this.miscEDVSelectDirectoryTextBox.Name = "miscEDVSelectDirectoryTextBox";
-            this.miscEDVSelectDirectoryTextBox.ReadOnly = true;
-            this.miscEDVSelectDirectoryTextBox.Size = new System.Drawing.Size(603, 20);
-            this.miscEDVSelectDirectoryTextBox.TabIndex = 1;
-            // 
-            // miscEDVSelectDirectoryButton
-            // 
-            this.miscEDVSelectDirectoryButton.Location = new System.Drawing.Point(3, 7);
-            this.miscEDVSelectDirectoryButton.Name = "miscEDVSelectDirectoryButton";
-            this.miscEDVSelectDirectoryButton.Size = new System.Drawing.Size(100, 23);
-            this.miscEDVSelectDirectoryButton.TabIndex = 0;
-            this.miscEDVSelectDirectoryButton.Text = "Select Directory";
-            this.miscEDVSelectDirectoryButton.UseVisualStyleBackColor = true;
-            this.miscEDVSelectDirectoryButton.Click += new System.EventHandler(this.MiscEDVSelectDirectoryButton_Click);
             // 
             // miscEDVDataGridView
             // 
@@ -6458,33 +6450,35 @@ namespace BARevitTools
             this.miscEDVDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.miscEDVDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.miscEDVDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.miscEDVDataGridView.Location = new System.Drawing.Point(0, 110);
+            this.miscEDVDataGridView.Location = new System.Drawing.Point(0, 123);
             this.miscEDVDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.miscEDVDataGridView.Name = "miscEDVDataGridView";
             this.miscEDVDataGridView.RowHeadersVisible = false;
-            this.miscEDVDataGridView.Size = new System.Drawing.Size(545, 200);
+            this.miscEDVDataGridView.Size = new System.Drawing.Size(581, 187);
             this.miscEDVDataGridView.TabIndex = 3;
             this.miscEDVDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MiscEDVDataGridView_CellContentClick);
             // 
             // miscEDVControlsPanel
             // 
+            this.miscEDVControlsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.miscEDVControlsPanel.Controls.Add(this.miscEDVFilterLabel);
             this.miscEDVControlsPanel.Controls.Add(this.miscEDVFilterStringTextBox);
             this.miscEDVControlsPanel.Controls.Add(this.miscEDVFilterConditionComboBox);
             this.miscEDVControlsPanel.Controls.Add(this.miscEDVSelectNoneButton);
             this.miscEDVControlsPanel.Controls.Add(this.miscEDVSelectAllButton);
             this.miscEDVControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.miscEDVControlsPanel.Location = new System.Drawing.Point(545, 110);
+            this.miscEDVControlsPanel.Location = new System.Drawing.Point(0, 37);
             this.miscEDVControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscEDVControlsPanel.Name = "miscEDVControlsPanel";
-            this.miscEDVControlsPanel.Size = new System.Drawing.Size(171, 200);
+            this.miscEDVControlsPanel.Size = new System.Drawing.Size(581, 86);
             this.miscEDVControlsPanel.TabIndex = 4;
             // 
             // miscEDVFilterLabel
             // 
             this.miscEDVFilterLabel.AutoSize = true;
             this.miscEDVFilterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.miscEDVFilterLabel.Location = new System.Drawing.Point(3, 47);
+            this.miscEDVFilterLabel.Location = new System.Drawing.Point(3, 6);
+            this.miscEDVFilterLabel.Margin = new System.Windows.Forms.Padding(3);
             this.miscEDVFilterLabel.Name = "miscEDVFilterLabel";
             this.miscEDVFilterLabel.Size = new System.Drawing.Size(39, 13);
             this.miscEDVFilterLabel.TabIndex = 8;
@@ -6494,9 +6488,9 @@ namespace BARevitTools
             // 
             this.miscEDVFilterStringTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.miscEDVFilterStringTextBox.Location = new System.Drawing.Point(6, 92);
+            this.miscEDVFilterStringTextBox.Location = new System.Drawing.Point(171, 26);
             this.miscEDVFilterStringTextBox.Name = "miscEDVFilterStringTextBox";
-            this.miscEDVFilterStringTextBox.Size = new System.Drawing.Size(162, 20);
+            this.miscEDVFilterStringTextBox.Size = new System.Drawing.Size(405, 20);
             this.miscEDVFilterStringTextBox.TabIndex = 7;
             this.miscEDVFilterStringTextBox.Text = "<Search String>";
             this.miscEDVFilterStringTextBox.TextChanged += new System.EventHandler(this.MiscEDVFilterStringTextBox_TextChanged);
@@ -6507,15 +6501,15 @@ namespace BARevitTools
             this.miscEDVFilterConditionComboBox.Items.AddRange(new object[] {
             "CONTAINS",
             "DOES NOT CONTAIN"});
-            this.miscEDVFilterConditionComboBox.Location = new System.Drawing.Point(6, 66);
+            this.miscEDVFilterConditionComboBox.Location = new System.Drawing.Point(6, 25);
             this.miscEDVFilterConditionComboBox.Name = "miscEDVFilterConditionComboBox";
-            this.miscEDVFilterConditionComboBox.Size = new System.Drawing.Size(162, 21);
+            this.miscEDVFilterConditionComboBox.Size = new System.Drawing.Size(159, 21);
             this.miscEDVFilterConditionComboBox.TabIndex = 6;
             this.miscEDVFilterConditionComboBox.SelectedIndexChanged += new System.EventHandler(this.MiscEDVFilterConditionComboBox_SelectedIndexChanged);
             // 
             // miscEDVSelectNoneButton
             // 
-            this.miscEDVSelectNoneButton.Location = new System.Drawing.Point(93, 3);
+            this.miscEDVSelectNoneButton.Location = new System.Drawing.Point(90, 52);
             this.miscEDVSelectNoneButton.Name = "miscEDVSelectNoneButton";
             this.miscEDVSelectNoneButton.Size = new System.Drawing.Size(75, 23);
             this.miscEDVSelectNoneButton.TabIndex = 0;
@@ -6525,13 +6519,26 @@ namespace BARevitTools
             // 
             // miscEDVSelectAllButton
             // 
-            this.miscEDVSelectAllButton.Location = new System.Drawing.Point(6, 3);
+            this.miscEDVSelectAllButton.Location = new System.Drawing.Point(6, 52);
             this.miscEDVSelectAllButton.Name = "miscEDVSelectAllButton";
             this.miscEDVSelectAllButton.Size = new System.Drawing.Size(75, 23);
             this.miscEDVSelectAllButton.TabIndex = 0;
             this.miscEDVSelectAllButton.Text = "Select All";
             this.miscEDVSelectAllButton.UseVisualStyleBackColor = true;
             this.miscEDVSelectAllButton.Click += new System.EventHandler(this.MiscEDVSelectAllButton_Click);
+            // 
+            // miscEDVInstructionsTextBox
+            // 
+            this.miscEDVInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.miscEDVInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.miscEDVInstructionsTextBox.Location = new System.Drawing.Point(581, 0);
+            this.miscEDVInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.miscEDVInstructionsTextBox.Multiline = true;
+            this.miscEDVInstructionsTextBox.Name = "miscEDVInstructionsTextBox";
+            this.miscEDVLayoutPanel.SetRowSpan(this.miscEDVInstructionsTextBox, 3);
+            this.miscEDVInstructionsTextBox.Size = new System.Drawing.Size(135, 310);
+            this.miscEDVInstructionsTextBox.TabIndex = 0;
+            this.miscEDVInstructionsTextBox.Text = resources.GetString("miscEDVInstructionsTextBox.Text");
             // 
             // qaqcTab
             // 
@@ -6694,12 +6701,12 @@ namespace BARevitTools
             // qaqcRFSPLayoutPanel
             // 
             this.qaqcRFSPLayoutPanel.ColumnCount = 2;
-            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
+            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPInstructionsTextBox, 0, 0);
             this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPParametersListBox, 1, 2);
             this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPToolsPanel, 0, 1);
-            this.qaqcRFSPLayoutPanel.Controls.Add(this.panel5, 1, 1);
+            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPEvaluatedParametersPanel, 1, 1);
             this.qaqcRFSPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.qaqcRFSPLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.qaqcRFSPLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
@@ -6708,6 +6715,7 @@ namespace BARevitTools
             this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.qaqcRFSPLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcRFSPLayoutPanel.TabIndex = 4;
             this.qaqcRFSPLayoutPanel.Visible = false;
@@ -6717,11 +6725,12 @@ namespace BARevitTools
             this.qaqcRFSPInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
             this.qaqcRFSPLayoutPanel.SetColumnSpan(this.qaqcRFSPInstructionsTextBox, 2);
             this.qaqcRFSPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPInstructionsTextBox.Location = new System.Drawing.Point(3, 3);
+            this.qaqcRFSPInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
+            this.qaqcRFSPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRFSPInstructionsTextBox.Multiline = true;
             this.qaqcRFSPInstructionsTextBox.Name = "qaqcRFSPInstructionsTextBox";
             this.qaqcRFSPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.qaqcRFSPInstructionsTextBox.Size = new System.Drawing.Size(710, 54);
+            this.qaqcRFSPInstructionsTextBox.Size = new System.Drawing.Size(716, 60);
             this.qaqcRFSPInstructionsTextBox.TabIndex = 1;
             this.qaqcRFSPInstructionsTextBox.Text = resources.GetString("qaqcRFSPInstructionsTextBox.Text");
             // 
@@ -6729,37 +6738,82 @@ namespace BARevitTools
             // 
             this.qaqcRFSPParametersListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.qaqcRFSPParametersListBox.FormattingEnabled = true;
-            this.qaqcRFSPParametersListBox.Location = new System.Drawing.Point(361, 88);
+            this.qaqcRFSPParametersListBox.Location = new System.Drawing.Point(275, 85);
+            this.qaqcRFSPParametersListBox.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRFSPParametersListBox.Name = "qaqcRFSPParametersListBox";
-            this.qaqcRFSPParametersListBox.Size = new System.Drawing.Size(352, 254);
+            this.qaqcRFSPParametersListBox.Size = new System.Drawing.Size(441, 260);
             this.qaqcRFSPParametersListBox.TabIndex = 2;
             // 
             // qaqcRFSPToolsPanel
             // 
-            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSFamilyLabel);
+            this.qaqcRFSPToolsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPRunButton);
+            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSelectFamilyLabel);
+            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSFamilyLabel);
             this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSelectFamilyButton);
             this.qaqcRFSPToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.qaqcRFSPToolsPanel.Location = new System.Drawing.Point(0, 60);
             this.qaqcRFSPToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRFSPToolsPanel.Name = "qaqcRFSPToolsPanel";
             this.qaqcRFSPLayoutPanel.SetRowSpan(this.qaqcRFSPToolsPanel, 2);
-            this.qaqcRFSPToolsPanel.Size = new System.Drawing.Size(358, 285);
+            this.qaqcRFSPToolsPanel.Size = new System.Drawing.Size(275, 285);
             this.qaqcRFSPToolsPanel.TabIndex = 0;
+            // 
+            // qaqcRFSPSelectFamilyLabel
+            // 
+            this.qaqcRFSPSelectFamilyLabel.AutoSize = true;
+            this.qaqcRFSPSelectFamilyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qaqcRFSPSelectFamilyLabel.Location = new System.Drawing.Point(4, 7);
+            this.qaqcRFSPSelectFamilyLabel.Name = "qaqcRFSPSelectFamilyLabel";
+            this.qaqcRFSPSelectFamilyLabel.Size = new System.Drawing.Size(86, 13);
+            this.qaqcRFSPSelectFamilyLabel.TabIndex = 2;
+            this.qaqcRFSPSelectFamilyLabel.Text = "Select Family:";
             // 
             // qaqcRFSPSFamilyLabel
             // 
             this.qaqcRFSPSFamilyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.qaqcRFSPSFamilyLabel.Location = new System.Drawing.Point(115, 7);
+            this.qaqcRFSPSFamilyLabel.Location = new System.Drawing.Point(85, 27);
             this.qaqcRFSPSFamilyLabel.Name = "qaqcRFSPSFamilyLabel";
-            this.qaqcRFSPSFamilyLabel.Size = new System.Drawing.Size(240, 23);
+            this.qaqcRFSPSFamilyLabel.Size = new System.Drawing.Size(184, 23);
             this.qaqcRFSPSFamilyLabel.TabIndex = 1;
             this.qaqcRFSPSFamilyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // qaqcRFSPSelectFamilyButton
+            // 
+            this.qaqcRFSPSelectFamilyButton.Location = new System.Drawing.Point(4, 28);
+            this.qaqcRFSPSelectFamilyButton.Name = "qaqcRFSPSelectFamilyButton";
+            this.qaqcRFSPSelectFamilyButton.Size = new System.Drawing.Size(75, 23);
+            this.qaqcRFSPSelectFamilyButton.TabIndex = 0;
+            this.qaqcRFSPSelectFamilyButton.Text = "Select";
+            this.qaqcRFSPSelectFamilyButton.UseVisualStyleBackColor = true;
+            this.qaqcRFSPSelectFamilyButton.Click += new System.EventHandler(this.QaqcRFSPSelectFamilyButton_Click);
+            // 
+            // qaqcRFSPEvaluatedParametersPanel
+            // 
+            this.qaqcRFSPEvaluatedParametersPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qaqcRFSPEvaluatedParametersPanel.Controls.Add(this.qaqcRFSPEvaluatedParametersLabel);
+            this.qaqcRFSPEvaluatedParametersPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPEvaluatedParametersPanel.Location = new System.Drawing.Point(275, 60);
+            this.qaqcRFSPEvaluatedParametersPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.qaqcRFSPEvaluatedParametersPanel.Name = "qaqcRFSPEvaluatedParametersPanel";
+            this.qaqcRFSPEvaluatedParametersPanel.Size = new System.Drawing.Size(441, 25);
+            this.qaqcRFSPEvaluatedParametersPanel.TabIndex = 3;
+            // 
+            // qaqcRFSPEvaluatedParametersLabel
+            // 
+            this.qaqcRFSPEvaluatedParametersLabel.AutoSize = true;
+            this.qaqcRFSPEvaluatedParametersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qaqcRFSPEvaluatedParametersLabel.Location = new System.Drawing.Point(3, 7);
+            this.qaqcRFSPEvaluatedParametersLabel.Name = "qaqcRFSPEvaluatedParametersLabel";
+            this.qaqcRFSPEvaluatedParametersLabel.Size = new System.Drawing.Size(179, 13);
+            this.qaqcRFSPEvaluatedParametersLabel.TabIndex = 0;
+            this.qaqcRFSPEvaluatedParametersLabel.Text = "Shared Parameters Evaluated:";
+            // 
             // qaqcRFSPRunButton
             // 
-            this.qaqcRFSPRunButton.Location = new System.Drawing.Point(5, 36);
+            this.qaqcRFSPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.qaqcRFSPRunButton.Location = new System.Drawing.Point(2, 257);
             this.qaqcRFSPRunButton.Name = "qaqcRFSPRunButton";
             this.qaqcRFSPRunButton.Size = new System.Drawing.Size(75, 23);
             this.qaqcRFSPRunButton.TabIndex = 0;
@@ -6767,41 +6821,11 @@ namespace BARevitTools
             this.qaqcRFSPRunButton.UseVisualStyleBackColor = true;
             this.qaqcRFSPRunButton.Click += new System.EventHandler(this.QaqcRFSPRunButton_Click);
             // 
-            // qaqcRFSPSelectFamilyButton
-            // 
-            this.qaqcRFSPSelectFamilyButton.Location = new System.Drawing.Point(5, 7);
-            this.qaqcRFSPSelectFamilyButton.Name = "qaqcRFSPSelectFamilyButton";
-            this.qaqcRFSPSelectFamilyButton.Size = new System.Drawing.Size(104, 23);
-            this.qaqcRFSPSelectFamilyButton.TabIndex = 0;
-            this.qaqcRFSPSelectFamilyButton.Text = "Select Family";
-            this.qaqcRFSPSelectFamilyButton.UseVisualStyleBackColor = true;
-            this.qaqcRFSPSelectFamilyButton.Click += new System.EventHandler(this.QaqcRFSPSelectFamilyButton_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(358, 60);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(358, 25);
-            this.panel5.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Shared Parameters Evaluated:";
-            // 
             // qaqcRLSLayoutPanel
             // 
             this.qaqcRLSLayoutPanel.ColumnCount = 2;
-            this.qaqcRLSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
-            this.qaqcRLSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 482F));
+            this.qaqcRLSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.qaqcRLSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.qaqcRLSLayoutPanel.Controls.Add(this.qaqcRLSRunPanel, 0, 3);
             this.qaqcRLSLayoutPanel.Controls.Add(this.qaqcRLSInstructionsTextBox, 0, 0);
             this.qaqcRLSLayoutPanel.Controls.Add(this.qaqcRLSDataGridView, 1, 2);
@@ -6810,11 +6834,12 @@ namespace BARevitTools
             this.qaqcRLSLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.qaqcRLSLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.qaqcRLSLayoutPanel.Name = "qaqcRLSLayoutPanel";
-            this.qaqcRLSLayoutPanel.RowCount = 4;
-            this.qaqcRLSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.qaqcRLSLayoutPanel.RowCount = 5;
+            this.qaqcRLSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.qaqcRLSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.qaqcRLSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.qaqcRLSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.qaqcRLSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.qaqcRLSLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcRLSLayoutPanel.TabIndex = 10;
             this.qaqcRLSLayoutPanel.Visible = false;
@@ -6825,10 +6850,10 @@ namespace BARevitTools
             this.qaqcRLSLayoutPanel.SetColumnSpan(this.qaqcRLSRunPanel, 2);
             this.qaqcRLSRunPanel.Controls.Add(this.qaqcRLSRunButton);
             this.qaqcRLSRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRLSRunPanel.Location = new System.Drawing.Point(0, 310);
+            this.qaqcRLSRunPanel.Location = new System.Drawing.Point(0, 290);
             this.qaqcRLSRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRLSRunPanel.Name = "qaqcRLSRunPanel";
-            this.qaqcRLSRunPanel.Size = new System.Drawing.Size(732, 35);
+            this.qaqcRLSRunPanel.Size = new System.Drawing.Size(716, 35);
             this.qaqcRLSRunPanel.TabIndex = 1;
             // 
             // qaqcRLSRunButton
@@ -6845,14 +6870,13 @@ namespace BARevitTools
             // qaqcRLSInstructionsTextBox
             // 
             this.qaqcRLSLayoutPanel.SetColumnSpan(this.qaqcRLSInstructionsTextBox, 2);
-            this.qaqcRLSInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.qaqcRLSInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
             this.qaqcRLSInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRLSInstructionsTextBox.Multiline = true;
             this.qaqcRLSInstructionsTextBox.Name = "qaqcRLSInstructionsTextBox";
             this.qaqcRLSInstructionsTextBox.ReadOnly = true;
             this.qaqcRLSInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.qaqcRLSInstructionsTextBox.Size = new System.Drawing.Size(732, 150);
+            this.qaqcRLSInstructionsTextBox.Size = new System.Drawing.Size(716, 85);
             this.qaqcRLSInstructionsTextBox.TabIndex = 2;
             this.qaqcRLSInstructionsTextBox.Text = resources.GetString("qaqcRLSInstructionsTextBox.Text");
             // 
@@ -6863,11 +6887,11 @@ namespace BARevitTools
             this.qaqcRLSDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.qaqcRLSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.qaqcRLSDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRLSDataGridView.Location = new System.Drawing.Point(250, 180);
+            this.qaqcRLSDataGridView.Location = new System.Drawing.Point(358, 115);
             this.qaqcRLSDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRLSDataGridView.Name = "qaqcRLSDataGridView";
             this.qaqcRLSDataGridView.ReadOnly = true;
-            this.qaqcRLSDataGridView.Size = new System.Drawing.Size(482, 130);
+            this.qaqcRLSDataGridView.Size = new System.Drawing.Size(358, 175);
             this.qaqcRLSDataGridView.TabIndex = 3;
             this.qaqcRLSDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QaqcRLSDataGridView_CellContentClick);
             // 
@@ -6879,11 +6903,12 @@ namespace BARevitTools
             this.qaqcRLSControlsPanel.Controls.Add(this.qaqcRLSReplaceWithComboBox);
             this.qaqcRLSControlsPanel.Controls.Add(this.qaqcRLSDeleteCheckBox);
             this.qaqcRLSControlsPanel.Controls.Add(this.qaqcRLSReplaceComboBox);
-            this.qaqcRLSControlsPanel.Location = new System.Drawing.Point(0, 150);
+            this.qaqcRLSControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRLSControlsPanel.Location = new System.Drawing.Point(0, 85);
             this.qaqcRLSControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRLSControlsPanel.Name = "qaqcRLSControlsPanel";
             this.qaqcRLSLayoutPanel.SetRowSpan(this.qaqcRLSControlsPanel, 2);
-            this.qaqcRLSControlsPanel.Size = new System.Drawing.Size(250, 152);
+            this.qaqcRLSControlsPanel.Size = new System.Drawing.Size(358, 205);
             this.qaqcRLSControlsPanel.TabIndex = 0;
             // 
             // qaqcRLSReplaceWithLabel
@@ -6915,7 +6940,7 @@ namespace BARevitTools
             this.qaqcRLSReplaceWithComboBox.Location = new System.Drawing.Point(4, 90);
             this.qaqcRLSReplaceWithComboBox.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.qaqcRLSReplaceWithComboBox.Name = "qaqcRLSReplaceWithComboBox";
-            this.qaqcRLSReplaceWithComboBox.Size = new System.Drawing.Size(239, 21);
+            this.qaqcRLSReplaceWithComboBox.Size = new System.Drawing.Size(347, 21);
             this.qaqcRLSReplaceWithComboBox.Sorted = true;
             this.qaqcRLSReplaceWithComboBox.TabIndex = 2;
             this.qaqcRLSReplaceWithComboBox.Text = "<With>";
@@ -6938,7 +6963,7 @@ namespace BARevitTools
             this.qaqcRLSReplaceComboBox.Location = new System.Drawing.Point(6, 29);
             this.qaqcRLSReplaceComboBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.qaqcRLSReplaceComboBox.Name = "qaqcRLSReplaceComboBox";
-            this.qaqcRLSReplaceComboBox.Size = new System.Drawing.Size(239, 21);
+            this.qaqcRLSReplaceComboBox.Size = new System.Drawing.Size(347, 21);
             this.qaqcRLSReplaceComboBox.Sorted = true;
             this.qaqcRLSReplaceComboBox.TabIndex = 0;
             this.qaqcRLSReplaceComboBox.Text = "<Replace>";
@@ -6947,23 +6972,23 @@ namespace BARevitTools
             // qaqcRLSUnswitchablePanel
             // 
             this.qaqcRLSUnswitchablePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.qaqcRLSUnswitchablePanel.Controls.Add(this.label1);
+            this.qaqcRLSUnswitchablePanel.Controls.Add(this.qaqcRLSUnswitchableLabel);
             this.qaqcRLSUnswitchablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRLSUnswitchablePanel.Location = new System.Drawing.Point(250, 150);
+            this.qaqcRLSUnswitchablePanel.Location = new System.Drawing.Point(358, 85);
             this.qaqcRLSUnswitchablePanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcRLSUnswitchablePanel.Name = "qaqcRLSUnswitchablePanel";
-            this.qaqcRLSUnswitchablePanel.Size = new System.Drawing.Size(482, 30);
+            this.qaqcRLSUnswitchablePanel.Size = new System.Drawing.Size(358, 30);
             this.qaqcRLSUnswitchablePanel.TabIndex = 4;
             // 
-            // label1
+            // qaqcRLSUnswitchableLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Margin = new System.Windows.Forms.Padding(3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "The Following Groups Have Lines That Could Not Be Switched:";
+            this.qaqcRLSUnswitchableLabel.AutoSize = true;
+            this.qaqcRLSUnswitchableLabel.Location = new System.Drawing.Point(3, 6);
+            this.qaqcRLSUnswitchableLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.qaqcRLSUnswitchableLabel.Name = "qaqcRLSUnswitchableLabel";
+            this.qaqcRLSUnswitchableLabel.Size = new System.Drawing.Size(308, 13);
+            this.qaqcRLSUnswitchableLabel.TabIndex = 0;
+            this.qaqcRLSUnswitchableLabel.Text = "The Following Groups Have Lines That Could Not Be Switched:";
             // 
             // qaqcCSVNPanel
             // 
@@ -6979,7 +7004,7 @@ namespace BARevitTools
             // 
             // qaqcCSVNRun
             // 
-            this.qaqcCSVNRun.Location = new System.Drawing.Point(5, 62);
+            this.qaqcCSVNRun.Location = new System.Drawing.Point(4, 63);
             this.qaqcCSVNRun.Name = "qaqcCSVNRun";
             this.qaqcCSVNRun.Size = new System.Drawing.Size(65, 23);
             this.qaqcCSVNRun.TabIndex = 9;
@@ -6995,23 +7020,22 @@ namespace BARevitTools
             this.qaqcCTVNInstructions.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcCTVNInstructions.Name = "qaqcCTVNInstructions";
             this.qaqcCTVNInstructions.Padding = new System.Windows.Forms.Padding(5);
-            this.qaqcCTVNInstructions.Size = new System.Drawing.Size(716, 53);
+            this.qaqcCTVNInstructions.Size = new System.Drawing.Size(716, 60);
             this.qaqcCTVNInstructions.TabIndex = 8;
             this.qaqcCTVNInstructions.Text = "This script will capitalize the names of sheets and views on sheets.";
             // 
             // qaqcCSVLayoutPanel
             // 
             this.qaqcCSVLayoutPanel.ColumnCount = 1;
-            this.qaqcCSVLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.qaqcCSVLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.qaqcCSVLayoutPanel.Controls.Add(this.qaqcCSVControlsPanel, 0, 1);
             this.qaqcCSVLayoutPanel.Controls.Add(this.qaqcCSVInstructionsPanel, 0, 0);
             this.qaqcCSVLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.qaqcCSVLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.qaqcCSVLayoutPanel.Name = "qaqcCSVLayoutPanel";
             this.qaqcCSVLayoutPanel.RowCount = 2;
-            this.qaqcCSVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.28045F));
-            this.qaqcCSVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.71954F));
-            this.qaqcCSVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.qaqcCSVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.qaqcCSVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.qaqcCSVLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcCSVLayoutPanel.TabIndex = 11;
             this.qaqcCSVLayoutPanel.Visible = false;
@@ -7020,10 +7044,10 @@ namespace BARevitTools
             // 
             this.qaqcCSVControlsPanel.Controls.Add(this.qaqcCSVRunButton);
             this.qaqcCSVControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcCSVControlsPanel.Location = new System.Drawing.Point(0, 59);
+            this.qaqcCSVControlsPanel.Location = new System.Drawing.Point(0, 60);
             this.qaqcCSVControlsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcCSVControlsPanel.Name = "qaqcCSVControlsPanel";
-            this.qaqcCSVControlsPanel.Size = new System.Drawing.Size(716, 286);
+            this.qaqcCSVControlsPanel.Size = new System.Drawing.Size(716, 285);
             this.qaqcCSVControlsPanel.TabIndex = 0;
             // 
             // qaqcCSVRunButton
@@ -7043,7 +7067,7 @@ namespace BARevitTools
             this.qaqcCSVInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.qaqcCSVInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.qaqcCSVInstructionsPanel.Name = "qaqcCSVInstructionsPanel";
-            this.qaqcCSVInstructionsPanel.Size = new System.Drawing.Size(716, 59);
+            this.qaqcCSVInstructionsPanel.Size = new System.Drawing.Size(716, 60);
             this.qaqcCSVInstructionsPanel.TabIndex = 1;
             // 
             // qaqcCSVInstructionsLabel
@@ -7052,7 +7076,7 @@ namespace BARevitTools
             this.qaqcCSVInstructionsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.qaqcCSVInstructionsLabel.Location = new System.Drawing.Point(0, 0);
             this.qaqcCSVInstructionsLabel.Name = "qaqcCSVInstructionsLabel";
-            this.qaqcCSVInstructionsLabel.Size = new System.Drawing.Size(716, 59);
+            this.qaqcCSVInstructionsLabel.Size = new System.Drawing.Size(716, 60);
             this.qaqcCSVInstructionsLabel.TabIndex = 1;
             this.qaqcCSVInstructionsLabel.Text = resources.GetString("qaqcCSVInstructionsLabel.Text");
             // 
@@ -7200,7 +7224,7 @@ namespace BARevitTools
             this.setupUPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.setupUPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.setupUPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.setupUPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.setupUPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.setupUPLayoutPanel.Size = new System.Drawing.Size(716, 345);
             this.setupUPLayoutPanel.TabIndex = 2;
             this.setupUPLayoutPanel.Visible = false;
@@ -7230,7 +7254,7 @@ namespace BARevitTools
             this.setupUPDataGridView.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.setupUPDataGridView.Name = "setupUPDataGridView";
             this.setupUPDataGridView.RowTemplate.Height = 28;
-            this.setupUPDataGridView.Size = new System.Drawing.Size(712, 106);
+            this.setupUPDataGridView.Size = new System.Drawing.Size(712, 100);
             this.setupUPDataGridView.TabIndex = 0;
             this.setupUPDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellContentClick);
             this.setupUPDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellEndEdit);
@@ -7300,18 +7324,19 @@ namespace BARevitTools
             // setupUPRunPanel
             // 
             this.setupUPLayoutPanel.SetColumnSpan(this.setupUPRunPanel, 2);
+            this.setupUPRunPanel.Controls.Add(this.setupUPProgressBar);
             this.setupUPRunPanel.Controls.Add(this.setupUPRunButton);
             this.setupUPRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupUPRunPanel.Location = new System.Drawing.Point(0, 316);
+            this.setupUPRunPanel.Location = new System.Drawing.Point(0, 310);
             this.setupUPRunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.setupUPRunPanel.Name = "setupUPRunPanel";
-            this.setupUPRunPanel.Size = new System.Drawing.Size(716, 29);
+            this.setupUPRunPanel.Size = new System.Drawing.Size(716, 35);
             this.setupUPRunPanel.TabIndex = 4;
             // 
             // setupUPRunButton
             // 
             this.setupUPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.setupUPRunButton.Location = new System.Drawing.Point(2, 2);
+            this.setupUPRunButton.Location = new System.Drawing.Point(2, 5);
             this.setupUPRunButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.setupUPRunButton.Name = "setupUPRunButton";
             this.setupUPRunButton.Size = new System.Drawing.Size(60, 25);
@@ -7476,7 +7501,7 @@ namespace BARevitTools
             this.setupCWSLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSLayoutPanel.Name = "setupCWSLayoutPanel";
             this.setupCWSLayoutPanel.RowCount = 4;
-            this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
@@ -7490,7 +7515,7 @@ namespace BARevitTools
             this.setupCWSDefinedLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.setupCWSDefinedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setupCWSDefinedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setupCWSDefinedLabel.Location = new System.Drawing.Point(476, 110);
+            this.setupCWSDefinedLabel.Location = new System.Drawing.Point(476, 100);
             this.setupCWSDefinedLabel.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSDefinedLabel.Name = "setupCWSDefinedLabel";
             this.setupCWSDefinedLabel.Size = new System.Drawing.Size(240, 35);
@@ -7504,16 +7529,17 @@ namespace BARevitTools
             this.setupCWSExtendedListBox.CheckOnClick = true;
             this.setupCWSExtendedListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setupCWSExtendedListBox.FormattingEnabled = true;
+            this.setupCWSExtendedListBox.IntegralHeight = false;
             this.setupCWSExtendedListBox.Items.AddRange(new object[] {
             "LINK RVT A Site Control",
             "LINK RVT S Structural",
             "LINK RVT MEP Electrical",
             "LINK RVT MEP Mechanical",
             "LINK RVT MEP Plumbing"});
-            this.setupCWSExtendedListBox.Location = new System.Drawing.Point(238, 145);
+            this.setupCWSExtendedListBox.Location = new System.Drawing.Point(238, 135);
             this.setupCWSExtendedListBox.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSExtendedListBox.Name = "setupCWSExtendedListBox";
-            this.setupCWSExtendedListBox.Size = new System.Drawing.Size(238, 165);
+            this.setupCWSExtendedListBox.Size = new System.Drawing.Size(238, 175);
             this.setupCWSExtendedListBox.TabIndex = 1;
             // 
             // setupCWSExtendedLabel
@@ -7522,7 +7548,7 @@ namespace BARevitTools
             this.setupCWSExtendedLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.setupCWSExtendedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setupCWSExtendedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setupCWSExtendedLabel.Location = new System.Drawing.Point(238, 110);
+            this.setupCWSExtendedLabel.Location = new System.Drawing.Point(238, 100);
             this.setupCWSExtendedLabel.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSExtendedLabel.Name = "setupCWSExtendedLabel";
             this.setupCWSExtendedLabel.Size = new System.Drawing.Size(238, 35);
@@ -7538,7 +7564,7 @@ namespace BARevitTools
             this.setupCWSInstructionsPanel.Location = new System.Drawing.Point(0, 0);
             this.setupCWSInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSInstructionsPanel.Name = "setupCWSInstructionsPanel";
-            this.setupCWSInstructionsPanel.Size = new System.Drawing.Size(716, 110);
+            this.setupCWSInstructionsPanel.Size = new System.Drawing.Size(716, 100);
             this.setupCWSInstructionsPanel.TabIndex = 0;
             // 
             // setupCWSInstructionsTextBox
@@ -7550,7 +7576,7 @@ namespace BARevitTools
             this.setupCWSInstructionsTextBox.Multiline = true;
             this.setupCWSInstructionsTextBox.Name = "setupCWSInstructionsTextBox";
             this.setupCWSInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.setupCWSInstructionsTextBox.Size = new System.Drawing.Size(716, 110);
+            this.setupCWSInstructionsTextBox.Size = new System.Drawing.Size(716, 100);
             this.setupCWSInstructionsTextBox.TabIndex = 0;
             this.setupCWSInstructionsTextBox.Text = resources.GetString("setupCWSInstructionsTextBox.Text");
             // 
@@ -7560,7 +7586,7 @@ namespace BARevitTools
             this.setupCWSDefaultLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.setupCWSDefaultLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setupCWSDefaultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setupCWSDefaultLabel.Location = new System.Drawing.Point(0, 110);
+            this.setupCWSDefaultLabel.Location = new System.Drawing.Point(0, 100);
             this.setupCWSDefaultLabel.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSDefaultLabel.Name = "setupCWSDefaultLabel";
             this.setupCWSDefaultLabel.Size = new System.Drawing.Size(238, 35);
@@ -7573,15 +7599,16 @@ namespace BARevitTools
             this.setupCWSDefaultListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.setupCWSDefaultListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setupCWSDefaultListBox.FormattingEnabled = true;
+            this.setupCWSDefaultListBox.IntegralHeight = false;
             this.setupCWSDefaultListBox.Items.AddRange(new object[] {
             "Arch",
             "Shared Levels and Grids",
             "ID",
             "Life Safety"});
-            this.setupCWSDefaultListBox.Location = new System.Drawing.Point(0, 145);
+            this.setupCWSDefaultListBox.Location = new System.Drawing.Point(0, 135);
             this.setupCWSDefaultListBox.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSDefaultListBox.Name = "setupCWSDefaultListBox";
-            this.setupCWSDefaultListBox.Size = new System.Drawing.Size(238, 165);
+            this.setupCWSDefaultListBox.Size = new System.Drawing.Size(238, 175);
             this.setupCWSDefaultListBox.TabIndex = 0;
             // 
             // setupCWSUserDataGridView
@@ -7593,13 +7620,13 @@ namespace BARevitTools
             this.WorksetName});
             this.setupCWSUserDataGridView.ContextMenuStrip = this.mgmtSetupCWSUserContextMenu;
             this.setupCWSUserDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSUserDataGridView.Location = new System.Drawing.Point(476, 145);
+            this.setupCWSUserDataGridView.Location = new System.Drawing.Point(476, 135);
             this.setupCWSUserDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.setupCWSUserDataGridView.Name = "setupCWSUserDataGridView";
             this.setupCWSUserDataGridView.RowHeadersVisible = false;
             this.setupCWSUserDataGridView.RowHeadersWidth = 250;
             this.setupCWSUserDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.setupCWSUserDataGridView.Size = new System.Drawing.Size(240, 165);
+            this.setupCWSUserDataGridView.Size = new System.Drawing.Size(240, 175);
             this.setupCWSUserDataGridView.TabIndex = 2;
             this.setupCWSUserDataGridView.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SetupCWSUserDataGridView_CellMouseUp);
             // 
@@ -7623,8 +7650,7 @@ namespace BARevitTools
             // 
             // setupCWSRunButton
             // 
-            this.setupCWSRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.setupCWSRunButton.Location = new System.Drawing.Point(637, 6);
+            this.setupCWSRunButton.Location = new System.Drawing.Point(2, 6);
             this.setupCWSRunButton.Name = "setupCWSRunButton";
             this.setupCWSRunButton.Size = new System.Drawing.Size(75, 23);
             this.setupCWSRunButton.TabIndex = 0;
@@ -7694,6 +7720,16 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
             // 
+            // setupUPProgressBar
+            // 
+            this.setupUPProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.setupUPProgressBar.Location = new System.Drawing.Point(67, 6);
+            this.setupUPProgressBar.Name = "setupUPProgressBar";
+            this.setupUPProgressBar.Size = new System.Drawing.Size(646, 23);
+            this.setupUPProgressBar.TabIndex = 2;
+            this.setupUPProgressBar.Visible = false;
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7720,6 +7756,7 @@ namespace BARevitTools
             this.adminDataGFFLayoutPanel.ResumeLayout(false);
             this.adminDataGFFCollectDataPanel.ResumeLayout(false);
             this.adminDataGFFSqlExportPanel.ResumeLayout(false);
+            this.adminDataGFFSqlExportPanel.PerformLayout();
             this.adminDataGFFCsvExportPanel.ResumeLayout(false);
             this.adminDataGFFCsvExportPanel.PerformLayout();
             this.adminDataGFFCollectionPanel.ResumeLayout(false);
@@ -7819,8 +7856,6 @@ namespace BARevitTools
             this.aboutTabHeaderPanel.ResumeLayout(false);
             this.aboutTabHeaderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aboutTabLogo)).EndInit();
-            this.analysisTab.ResumeLayout(false);
-            this.analysisTabControl.ResumeLayout(false);
             this.modelingTab.ResumeLayout(false);
             this.modelingTabControl.ResumeLayout(false);
             this.multiCatTab.ResumeLayout(false);
@@ -7929,11 +7964,19 @@ namespace BARevitTools
             this.sheetsToolStrip.ResumeLayout(false);
             this.sheetsToolStrip.PerformLayout();
             this.sheetsToolsPanel.ResumeLayout(false);
+            this.sheetsISFLLayoutPanel.ResumeLayout(false);
+            this.sheetsISFLInstructionsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sheetsISFLDataGridView)).EndInit();
+            this.sheetsISFLControlsPanel.ResumeLayout(false);
+            this.sheetsISFLControlsPanel.PerformLayout();
+            this.sheetsIFSLDisciplinePanel.ResumeLayout(false);
+            this.sheetsIFSLDisciplinePanel.PerformLayout();
             this.sheetsCSLLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sheetsCSLDataGridView)).EndInit();
             this.sheetsCSLControlsPanel.ResumeLayout(false);
             this.sheetsCSLControlsPanel.PerformLayout();
             this.sheetsCSLInstructionsPanel.ResumeLayout(false);
+            this.sheetsCSLRunPanel.ResumeLayout(false);
             this.sheetsOSSLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sheetsOSSDataGridView)).EndInit();
             this.sheetsOSSInstructionsPanel.ResumeLayout(false);
@@ -7944,13 +7987,6 @@ namespace BARevitTools
             this.sheetsOSSNewSetPanel.PerformLayout();
             this.sheetsOSSControlsPanel.ResumeLayout(false);
             this.sheetsOSSControlsPanel.PerformLayout();
-            this.sheetsISFLLayoutPanel.ResumeLayout(false);
-            this.sheetsISFLInstructionsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sheetsISFLDataGridView)).EndInit();
-            this.sheetsISFLControlsPanel.ResumeLayout(false);
-            this.sheetsISFLControlsPanel.PerformLayout();
-            this.sheetsIFSLDisciplinePanel.ResumeLayout(false);
-            this.sheetsIFSLDisciplinePanel.PerformLayout();
             this.sheetsCSSFSLayoutPanel.ResumeLayout(false);
             this.sheetsCSSFSInstructionsPanel.ResumeLayout(false);
             this.sheetsCSSFSInstructionsPanel.PerformLayout();
@@ -7997,11 +8033,10 @@ namespace BARevitTools
             this.miscToolStrip.PerformLayout();
             this.miscToolsPanel.ResumeLayout(false);
             this.miscEDVLayoutPanel.ResumeLayout(false);
-            this.miscEDVInstructionsPanel.ResumeLayout(false);
-            this.miscEDVInstructionsPanel.PerformLayout();
-            this.miscEDVRunPanel.ResumeLayout(false);
+            this.miscEDVLayoutPanel.PerformLayout();
             this.miscEDVDirectoryPanel.ResumeLayout(false);
             this.miscEDVDirectoryPanel.PerformLayout();
+            this.miscEDVRunPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.miscEDVDataGridView)).EndInit();
             this.miscEDVControlsPanel.ResumeLayout(false);
             this.miscEDVControlsPanel.PerformLayout();
@@ -8013,8 +8048,9 @@ namespace BARevitTools
             this.qaqcRFSPLayoutPanel.ResumeLayout(false);
             this.qaqcRFSPLayoutPanel.PerformLayout();
             this.qaqcRFSPToolsPanel.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.qaqcRFSPToolsPanel.PerformLayout();
+            this.qaqcRFSPEvaluatedParametersPanel.ResumeLayout(false);
+            this.qaqcRFSPEvaluatedParametersPanel.PerformLayout();
             this.qaqcRLSLayoutPanel.ResumeLayout(false);
             this.qaqcRLSLayoutPanel.PerformLayout();
             this.qaqcRLSRunPanel.ResumeLayout(false);
@@ -8078,9 +8114,6 @@ namespace BARevitTools
         private Label aboutTabTitleLabel;
         private Panel aboutTabFooterPanel;
         private RichTextBox aboutTabUpdatesTextBox;
-        private TabPage analysisTab;
-        private TabControl analysisTabControl;
-        private TabPage sightTab;
         private TabPage modelingTab;
         private TabControl modelingTabControl;
         private TabPage multiCatTab;
@@ -8137,7 +8170,6 @@ namespace BARevitTools
         private Panel floorsCFBRInstructionsPanel;
         private TextBox floorsCFBRInstructionsTextBox;
         private Panel floorsCFBRControlsPanel;
-        public CheckBox floorsCFBROffsetFinishFloorCheckBox;
         private Label floorsCFBRSelectFloorTypeLabel;
         private Label floorsCFBRSelectRoomsLabel;
         public ComboBox floorsCFBRSelectFloorTypeComboBox;
@@ -8345,14 +8377,10 @@ namespace BARevitTools
         private ToolStripButton miscEEVButton;
         private Panel miscToolsPanel;
         private TableLayoutPanel miscEDVLayoutPanel;
-        private Panel miscEDVInstructionsPanel;
         private TextBox miscEDVInstructionsTextBox;
         private Panel miscEDVRunPanel;
         public ProgressBar miscEDVProgressBar;
         private Button miscEDVRunButton;
-        private Panel miscEDVDirectoryPanel;
-        public TextBox miscEDVSelectDirectoryTextBox;
-        private Button miscEDVSelectDirectoryButton;
         public DataGridView miscEDVDataGridView;
         private Panel miscEDVControlsPanel;
         private Label miscEDVFilterLabel;
@@ -8380,9 +8408,8 @@ namespace BARevitTools
         public Label qaqcRFSPSFamilyLabel;
         private Button qaqcRFSPRunButton;
         private Button qaqcRFSPSelectFamilyButton;
-        private Panel panel5;
-        private Label label4;
-        public TableLayoutPanel qaqcRLSLayoutPanel;
+        private Panel qaqcRFSPEvaluatedParametersPanel;
+        private Label qaqcRFSPEvaluatedParametersLabel;
         private Panel qaqcRLSRunPanel;
         private Button qaqcRLSRunButton;
         private TextBox qaqcRLSInstructionsTextBox;
@@ -8394,7 +8421,7 @@ namespace BARevitTools
         public CheckBox qaqcRLSDeleteCheckBox;
         public ComboBox qaqcRLSReplaceComboBox;
         private Panel qaqcRLSUnswitchablePanel;
-        private Label label1;
+        private Label qaqcRLSUnswitchableLabel;
         private Panel qaqcCSVNPanel;
         public Button qaqcCSVNRun;
         private Label qaqcCTVNInstructions;
@@ -8608,6 +8635,18 @@ namespace BARevitTools
         public ProgressBar adminFamiliesUFVPProgressBar;
         public DateTimePicker adminFamiliesUFVPDatePicker;
         public CheckBox adminFamiliesUFVPCheckBox;
+        public CheckBox floorsCFBROffsetFinishFloorCheckBox;
+        public Label floorsCFBRDoneLabel;
+        private Panel sheetsCSLRunPanel;
+        public ProgressBar sheetsCSLProgressBar;
+        private Label adminDataGFFSqlExportTableLabel;
+        public ComboBox adminDataGFFSqlExportComboBox;
+        private Panel miscEDVDirectoryPanel;
+        public TextBox miscEDVSelectDirectoryTextBox;
+        private Button miscEDVSelectDirectoryButton;
+        private Label qaqcRFSPSelectFamilyLabel;
+        private TableLayoutPanel qaqcRLSLayoutPanel;
+        public ProgressBar setupUPProgressBar;
     }
 }
 

@@ -42,7 +42,18 @@ namespace BARevitTools.ToolRequests
                 {
                     if (view.Name == "ID Material View" || view.Name == uiForm.materialsCMSSetViewNameTextBox.Text)
                     {
-                        doc.Delete(view.Id);
+                        var elementsInView = new FilteredElementCollector(doc, view.Id).ToElementIds();
+                        foreach (ElementId id in elementsInView)
+                        {
+                            try
+                            {
+                                doc.Delete(id);
+                            }
+                            catch
+                            {
+                                continue;
+                            }                            
+                        }
                         doc.Regenerate();
                         break;
                     }

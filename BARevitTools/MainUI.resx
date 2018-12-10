@@ -123,6 +123,9 @@
   <metadata name="adminDataToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>193, 91</value>
   </metadata>
+  <metadata name="adminDataToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>193, 91</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="adminDataGFFButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -164,55 +167,58 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANtSURBVFhH7VddSFRBFL7tnZnbU0ERhD30svZiYtGDVmal
-        GEIZhgWC/cHeO7Pag/1hFNFbEKRE0EuJFBH2B4HQU9RDQhkVQfQH9tAPlQ9rCP6wurt3tnNmd9aL3F3d
-        ZamHHPjcmTPznflmzjmzq7HQSkpWrCtbFjhavtSYE8HlVnswGFySphanhUrpcF+lkZwPbgGqV1ldaWpx
-        WkepEfXbLBsaS4yeNLU4LV8Bu1YavUAjRUO+AjrXLkr2N5CioKPCjOYt4EpVIJkUrCi4V09AQHkgeqeO
-        JOeLwSbi66wQKAH4x2/SD3FufkxwNpBw2BuvfVywCZzz2uaDvAVIwfZKhx0D7Ib+OW13OeuVNlsTEUx6
-        18+FggREORsdE2xScrMuM8dZk3RIW0Kwl971c6EgAS4nDyRnp+DUN9EWFew33EgzbP4cPk/M5uRCQQJw
-        czitwBOjDa8fcD3SzFwZJlX5hKEgARgC1Xes7Zh8so3tlG1kkxRks2xfvBqSdHA2LxsKEhDj5CtWgQzT
-        9VOCRaSw6vW8K+hjuKHjXk4u5C0ANuhSYRD0IJz0Lcbddch9PR85xOIw3+nl5ELeAoqNjABQfRJrG8pp
-        nyvYVUikBC5IJRzUPABO/Ez3NWKCfBtpZVMQjhbNSfPOpvr0wjhnE9oO/l9LbjVAAle6DuubERC2arGc
-        4iHzi+TkCDhX5aTtCNhgGj8h429DKM6nbQkoy358hFxOn+iNYBP1RniTVoGT6mlBf2HFQC79nBGQJiBU
-        OQlagc69dg3Y/CHgkh7D6Q+4Dn0EwsMZWxYBePJYiPzQY18BaiFnjVM2GwGnNdKhLYhpmw7jnFeAun7H
-        2qE4UIaYhCm+vwBI2qfSpmVwi9dwnEMAqUnF1qqNOeQ7Qjv3ClDXD2twDJyNeBMpvr8ABIRuFG64FTjd
-        vgJA5Ssg7sH+bGEIrwDJ6X5I2h4sRbBdBsdOyp5dAGJSsDEZNmtnBNhkCyw+DVl7GE+PCaIcOGQrhOMM
-        IsHpANq0gNQNkSrtFHJGJm26Qb0FHgGY0Bk+fGkBt1sJ5/RiRgCU2Hs4+Yu4bX5QjtJOcYx2hBaFV4j5
-        gN+I8Bvgs16r1ofMoVHBovq3AY4VH55nDGNcmJ8g/nf1c50R4HXyN7EgQAloLwu8u7HNHPoXwL3hf4P/
-        uhnGH6ik4zFvtIpRAAAAAElFTkSuQmCC
+        GEIZRgWC/cHeO7Pag/1hFNFbEKRE0EuJFBH2B4HQU9RDQhkVQfQH9tAWlUSG4A+ru3tnO2d2Z73I3dVd
+        lnrIgc+dOTPfmW/mnDO7GvOtpGTZmrIlgSPli41ZEVxqtQWDwUVpanFaqJQO9VYaybngJqB6hdWZphan
+        tZcaUb/NsqGxxOhOU4vT8hWwY7nRAzRSNOQroGP1gmRfAykK2ivMaN4CLlcFkknBioK79QQElAeit+tI
+        cq4YaCK+zgqBEoB//Cb9EOfmhwRn/QmHvfbaxwQbxzmvbS7IW4AUbI902FHATuif1XaXsx5ps1URwaR3
+        /WwoSECUs5FRwSYkN+syc5w1SYe0JgR74V0/GwoS4HJyX3J2Ek59A21RwX7DjeyGzZ/B5/GZnFwoSABu
+        DqcVeGK04fUDrkUamCvDpCqfMBQkAEOg+o61FZNPtrLtspVskIJslG0LV0KSDszkZUNBAmKcRLAKZJiu
+        nRTslxRWvZ53BX0EN3TMy8mFvAXABp0qDIIegJO+wbi7Drmn5yMHWRzmO7ycXMhbQLGREQCqT2BtQznt
+        dQW7AomUwAWphIOaB8CJn+q+RkyQL8MtbBLC0aw5ad6ZVJ+eH+NsXNvB/yvJrQZI4ErXYb3TAsJWLZZT
+        PGR+lpwcBueqnLQd8VOwKfyEjL8FoTiHfdwUyrIPHyGX08d6I9hEvRHepFXgpHpK0B9YMZBL36cFpAkI
+        VU6CVqBzr10DNn8AuKjHcPr9rkMfgvBwxpZFAJ48FiLf9NhXgFrIWeOkzYbBaY10aDNiyqZDOOcVoK7f
+        sbYpDpQhJmGK7y8AkvaJtGkZ3OJVHOcQQGpSsbVqYw75itDOvQLU9cMaHANnPd5Eiu8vAAGhG4EbbgFO
+        l68AUPkSiLuwP1MYwitAcroPkrYbSxFsl8Cxk7JnF4CYEGxUhs3aaQE22QSLT0HWHsLTY4IoBw7ZDOE4
+        jUhw2o82LSB1Q6RKO1VPsE3XqbfAIwATOsOHLy3gdinhnF7ICIASewcnfx63zffKUdopjtGO0KLwCjEf
+        8BsRfgN80mvV+pA5OCJYVP82wLHiw/OMYYwL8yPE/45+rjMCvE7+JuYFKAFtZYG317eYg/8CuDf8b/Bf
+        N8P4A45W4mns00eXAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="adminFamiliesToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>186, 126</value>
+  </metadata>
   <metadata name="adminFamiliesToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>186, 126</value>
   </metadata>
   <data name="adminFamiliesUFButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
-        7bgAAAAASUVORK5CYII=
+        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
+        oQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="adminFamiliesDFBButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -248,32 +254,63 @@
   <data name="adminFamiliesParametersDropDownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASgSURBVFhH7Zd9TFVlHMevmYGXc869SEby0gXFaSDjn1b5
-        h2YuFehqaLjm1nCZQgmNBFHz3stVkWZmhWjcAGEXfAFkBK2bGUiCvdlga+XW4ILZpvYiFippvN5f3989
-        58BluIVDcG19ts94znOee873eTnPMzT/M1asFzTeic2aKVbS3KdUjT/mdn1k1kVxh/W8rjnVIboS8kTX
-        imyhXrk9/hR2+X94isLp42sRFGMWKBrGmLQNyu3x583L0ysqaTYVdswcDLB0IgNktk6rOEIzydYRcm8C
-        WNt8i0splD744x4FsLToi0oohPI7JyDA6uOayaZ2n8Ump7TU0io+YXUK4eYW3yN2BCi4Po4Btv0o+plb
-        xQxTq88Fs1OkISWyOPXEI1DUFeoOELdHoBSHtsvS5vOtySmesjilarSzW5xCLn6TnfGdsPW593R65dGj
-        w/bXtCuVNw1U0WWgo9eDqeTPQCq6OoPyrvjTvqsP0jEswo/6H6VUhy/tbNeR9TyCtXG44W5ukihuL0bI
-        KoUpjx4dOR1+HaUDj1CZK5SO0yyqojCqwafHHkPvyxCgjiLpDEVRA81TjKD6gXCq7ZtLJ3vmkuPWHDJm
-        yVO0bLt2hvLo0fFypbR3fY2+eqNDakiuk8693iheTD8p3dpS7+fKvjSdClxBlN8bTLnXAujAjUCy3Qyi
-        wu5gKu410OH+UAQPo5Ju9xS5EMCkPHbMTDI8pfFOPS29ZesLpHd+D6CFrwi0IFGgRUlenfE5wv61h3V5
-        66t05a+e0NduavRtit4uJCq/HROT4BwYDRcllIq2woEgKuox0DNpAkUZBQpf4vMz7vEw3/VDiR/6PExS
-        Xb5HW34IU2DvDaHYTIHmJwwGUNu8BNfAVTAW3tkC9OAByL2Ohy/CDTApdre2nEfA3hdCz1qxwLYJNG94
-        AE/XwYfgXYGnwuu1z6XkwoFAKkEA4w4+CQVauHFqC+4tgSvgC3At5JG4s9U/GtLO6tbl9weQvd9Axp3u
-        AK5Ys5ih3B5/UuqlNe/e8Kf3uwNo+S6hL8Ykck8njvgCXeiGal16Sp3+beNuMUap/m9zBl6Gv8FdXKGQ
-        Amvk4iC/QG77K+T7nuyDOXLRjQgHYLj7agiesq/kosyX8H6ohV/DSMh8Ar+BXK9yVvnrC9uhj/tK5jTk
-        9iocoANmua+G4E4NO77VAAyPwErIx+en0ArjoIoagKmD/nJREwEPQTuM4grAAT6D3Cn+hJlgeBTedgS4
-        0QnII8A72Sb4GCyGKk2QN5bF0LMXb0AOvhpmcgXgADyK++GTXAG2QCMcEaAKNkMbV4AyyPs/h/oeTobM
-        JXgO8np5mCsUGiG/UAfVaVADPA5zuQLw/w9ecESABXC2+0regjvhT4p/Q77PqFPAPeYRYni364Fq+17I
-        Q60GYL6APJoHIB9Yt50CFd5SOTEnZfks4BXOqAGmQh4ZXqB85KZBtf1mmAw9A/C08FqYD/81wEG4TC66
-        4ZX+g1wctgi3wnTogDxdKnz61ULPALNgG+QpHRGAX6auUoZPQG+5OAgfq+rpqMIv4J3Q8ytR4bop8Gn3
-        lYz6dfC78E6N5h+LUemwWW1XNwAAAABJRU5ErkJggg==
+        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
+</value>
+  </data>
+  <data name="adminFamiliesUFVPButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
 </value>
   </data>
   <data name="adminFamiliesUFVPInstructionsTextBox.Text" xml:space="preserve">
     <value>By clicking RUN, this script will add the BAS Version shared parameter to the families of the current development library if the parameter doesn't exist. If it exists or has been created, it will set the value for the parameter to the date when the family was last modified. Note that changing the parameter value will require saving the family, and thus the last modified date of the file will change after this script is ran to reflect the day it was ran on. This can take a long time because it will set the value for each family. Check Use Date to only evaluate families modified since the selected date.</value>
   </data>
+  <metadata name="adminTemplateToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>738, 10</value>
+  </metadata>
   <metadata name="adminTemplateToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>738, 10</value>
   </metadata>
@@ -292,6 +329,9 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="sandBoxToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>379, 146</value>
+  </metadata>
   <metadata name="sandBoxToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>379, 146</value>
   </metadata>
@@ -365,6 +405,25 @@
   </data>
   <metadata name="mgmtSetupCWSUserContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1097, 133</value>
+  </metadata>
+  <metadata name="setupToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>420, 62</value>
+  </metadata>
+  <data name="setupUPInstructionsTextBox.Text" xml:space="preserve">
+    <value>Instructions:
+1) Select the Revit file to upgrade (green button)
+2) Select the location of where to save the upgraded file (turquoise button) if the file is to be saved somewhere other than the original file's location.
+3) If links are present, they will be listed in the table. 
+4) Check the links to upgrade and set their save location if they are to be saved somewhere other than their original location. When links are upgraded, the host file will have its paths rewritten so the links load from the upgraded links.
+4) Click RUN
+5) Wait for the upgrades to be performed. Click through error or warning messages as they appear.
+
+RED: File could not be upgraded; GREEN: File was successfully upgraded; ORANGE: Link could not be remapped to the upgraded version
+
+This is a semi automatic upgrade process for models and their linked files. Due to errors and warnings that can occur, the user must be present to click through messages as they appear so the script can continue.</value>
+  </data>
+  <metadata name="UIFormMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1272, 17</value>
   </metadata>
   <data name="aboutTabLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2174,10 +2233,11 @@
 </value>
   </data>
   <data name="aboutTabUpdatesTextBox.Text" xml:space="preserve">
-    <value>V 1.0.5 Changes (Upcoming):
+    <value>V 1.0.5 Changes :
 - Added(Modeling&gt;Rooms) Create Demo Room Tags
 - Added (Modeling&gt;Materials) Accent Material Lines tool
-- Changed the Create Worksets default open worksets to All instead of Specify upon opening a local.
+- Changed the Create Worksets default open worksets to All instead of Specify upon opening a local
+- Various fixes
 
 V1.0.4 Changes:
 - Various fixes
@@ -2204,6 +2264,9 @@ V 1.0.1 Changes:
 - Added (Modeling&gt;All Categories) Create Families From Excel tool
 - Fixed some UI issues</value>
   </data>
+  <metadata name="multiCatToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>591, 172</value>
+  </metadata>
   <metadata name="multiCatToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>591, 172</value>
   </metadata>
@@ -2287,6 +2350,9 @@ V 1.0.1 Changes:
   <metadata name="electricalToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 138</value>
   </metadata>
+  <metadata name="electricalToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 138</value>
+  </metadata>
   <data name="electricalCEOEButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -2303,6 +2369,9 @@ V 1.0.1 Changes:
   <data name="electricalCEOETextBox.Text" xml:space="preserve">
     <value>This script will keep all Electrical Fixture families at their current physical height, but will adjust any that have an Elevation or Offset parameter value not equal to 0' to be 0' with an adjusted MOUNTING HEIGHT value to accurately reflect the actual mounting height.</value>
   </data>
+  <metadata name="floorsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
   <data name="floorsCFBRInstructionsTextBox.Text" xml:space="preserve">
     <value>Instructions:
 1) Click "SELECT" to begin room selection; this script can only work for rooms with one perimeter loop (no internal loops)
@@ -2334,6 +2403,9 @@ Due to API limitations, this cannot work with rooms that have more than one loop
         mLhCsDEQG0GxLgi7iDzQsRV5AHRAChAPJGBgAACkwNjAeAhV5AAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="materialsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 138</value>
+  </metadata>
   <metadata name="materialsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 138</value>
   </metadata>
@@ -2419,6 +2491,9 @@ This script will load the SYMB Room Name and Number family and insert it in the 
   <metadata name="wallsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>16, 86</value>
   </metadata>
+  <metadata name="wallsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>16, 86</value>
+  </metadata>
   <data name="wallsMPWButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -2496,6 +2571,9 @@ The script will create perimeter walls around the room and try to join them to a
   <metadata name="sheetsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 138</value>
   </metadata>
+  <metadata name="sheetsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 138</value>
+  </metadata>
   <data name="sheetsCSLButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -2539,6 +2617,39 @@ The script will create perimeter walls around the room and try to join them to a
         NZyA3XWp051KXJVgARjVVgwNPH3wZ2Dqn2W6BxYBo6YxjAY2XPlee/7VnaAasLo59WlTSUYZ6B+J4egf
         QC3/bOf552v7iT8c3gudvzjHc4GMMpC4B9Qfr58XkCqBmoqO487XXSATAqu3FG/zl5QG/N7igF5LtgX8
         pZQtJQF/IOBOsrKy1vwHVn+5/c2YW8oAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="sheetsSheetSetsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        RK5CYII=
 </value>
   </data>
   <data name="sheetsCSSFSButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -2604,38 +2715,9 @@ The script will create perimeter walls around the room and try to join them to a
         NXBjxqGiVId7BDJBqW5VYOykplDdZAt8NROauP5pmkr1LxpjxxH322JYAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="sheetsSheetSetsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        RK5CYII=
-</value>
+  <data name="sheetsISFLInstructionsLabel.Text" xml:space="preserve">
+    <value>Instructions:
+1) Select the link to copy from; 2) Check the sheets to insert; 3) Select the BA Discipline to apply to selected rows; 4) Click UPDATE to add BA Discipline value; 5) Click run to make placeholder sheets.</value>
   </data>
   <data name="sheetsOSSInstructionsTextBox.Text" xml:space="preserve">
     <value>Instructions:
@@ -2647,10 +2729,9 @@ The script will create perimeter walls around the room and try to join them to a
 
 This script updates which sheets belong to a print set based on which are sheets are checked. *This only works if at least one set already exists.*</value>
   </data>
-  <data name="sheetsISFLInstructionsLabel.Text" xml:space="preserve">
-    <value>Instructions:
-1) Select the link to copy from; 2) Check the sheets to insert; 3) Select the BA Discipline to apply to selected rows; 4) Click UPDATE to add BA Discipline value; 5) Click run to make placeholder sheets.</value>
-  </data>
+  <metadata name="viewsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>180, 138</value>
+  </metadata>
   <metadata name="viewsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 138</value>
   </metadata>
@@ -2664,6 +2745,14 @@ This script updates which sheets belong to a print set based on which are sheets
         JEeOxyPNAERRBF3XSY7P43vIbrcj30qbUBQFJElqnsDlcgFZlmn1jGVZcDqdaPUeYRi+FkDw7idJQqtP
         sizr/NdTRysBBCUMwyA3AMf+Ne6+tBZAUEIQBMjznK70p5PAGPw9ge/XcAimI5gEJoEnAZ7nwbbtHw1s
         TgT2+z04jvMrEUURfAAhmbttqu2pagAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="viewsInteriorCropButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABNSURBVFhH7Y5BCgAgCMD8/5+jQAiKvKhRQRvsYKBNAF6g
+        bjCFddBriswhAgjoeyWo/tmP6OBk3I06D4chgAACCCCAgCXghubjSeFrRBrX19ETfjh7DQAAAABJRU5E
+        rkJggg==
 </value>
   </data>
   <data name="viewsOICBButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -2684,14 +2773,6 @@ This script updates which sheets belong to a print set based on which are sheets
         e+XOr71E0TFDLjLXTLk4OWfLxbpEWL55Nbm0DinmawAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="viewsInteriorCropButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABNSURBVFhH7Y5BCgAgCMD8/5+jQAiKvKhRQRvsYKBNAF6g
-        bjCFddBriswhAgjoeyWo/tmP6OBk3I06D4chgAACCCCAgCXghubjSeFrRBrX19ETfjh7DQAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
   <data name="viewsCEPRInstructionsTextBox.Text" xml:space="preserve">
     <value>Instructions: 
 From a floor plan view with rooms, complete these steps
@@ -2706,6 +2787,9 @@ This script will create new elevation markers for each direction (N,E,S,W) for t
 
 </value>
   </data>
+  <metadata name="dataToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>867, 133</value>
+  </metadata>
   <metadata name="dataToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>867, 133</value>
   </metadata>
@@ -2736,6 +2820,9 @@ This script will create new elevation markers for each direction (N,E,S,W) for t
 
 This script will export the current plan view's extents to a JPG image suffixed with the coordinates for the minimum (X,Y) and maximum (X,Y) for the crop boundary. This can then be used in Tableau for placing markers by element coordinates.</value>
   </data>
+  <metadata name="documentsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 138</value>
+  </metadata>
   <metadata name="documentsToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 138</value>
   </metadata>
@@ -2771,6 +2858,9 @@ This script will export the current plan view's extents to a JPG image suffixed 
     <value>This script will upgrade text from Revit 2016 and earlier projects to a comparable size for Revit 2017 and later. This is achieved by decreasing the text size by 1/64". Thus, 3/32" will become 5/64". Names do not, and should not, change to reflect the scale.
 </value>
   </data>
+  <metadata name="miscToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>992, 133</value>
+  </metadata>
   <metadata name="miscToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>992, 133</value>
   </metadata>
@@ -2820,6 +2910,35 @@ This script collects the drafting views in the project and saves each one to a n
   <metadata name="qaqcToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>408, 95</value>
   </metadata>
+  <metadata name="qaqcToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>408, 95</value>
+  </metadata>
+  <data name="qaqcCapitalizeValuesButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASQSURBVFhH7ZZriFRlGMd3ZnZndra5tLst2402ti1iCYMW
+        pYKo6EI3rOwCRlGZlYgfIiKzgjISCikLsjApiwrTCBL6EHYBi+wKSbEYoYiQRbppa5Zr2p5+//d95p05
+        c87k0qc++Ic/z/W9nfO8zzltR/B/RRU+DtfAa+X4DzgdPgjnQ803ZXTB1fB8eCxcCBfAK+BUMRuugpfA
+        G+E7cAhOCffDU7wa8ATc7NXD4gy42KsBJbgS3gn/9Wl0Qm2gGZvgTq8eFk/CnFdjuBpOwpOc1QJXwdO8
+        GsP1cA/MOKs1BqAefxpehBFUbbTE3SYT6OjomJbP52fBK2V6bwJ3QdVQGsrwQ3iWs1pA7ygNlUwm8w1S
+        J4jQv0Bqwmao4gNyudwqcteZKegVF6Rks9mbiP8svRF3mIyBSZYgtPAOqFqIGJx2PeeadCB3KdxlZgz4
+        n4HfmRkwx2QMJG6FG1DzQ0NDBfRX2cANPhpD7ACc8hZE1NXVdZz31MEc78M3zAy41WRAd3e3rk3EZDd7
+        j0N7T09PxfQaVKC3e9WDujkToaelfhADi//EnOoxdVSr1e6RkZFYgRUKhUGEJrnAe1pCG7jGqwF5+BcL
+        3etNj3K53IvQnJd7D2hvb3+AXR2AvxKYZe62zs5OXS0lB18jyF/O2HPMdCD3IvyuGSG/heqKAeSry0bF
+        YvEE5+BR6WpMkrgPTsCvXcBDlXsQ3yvejAP/NrjUTAfsFfBj01+HX7mAgScyH9+YmS5pCdzS29tbVsFw
+        gucs5EDsc8Qh/InvAbF18D0zHbA/hW4OFlNn/QOG7khsOfzITOdYC583MwEmUXWrB+xXM3JOA+MegzvM
+        FDAz44xxPYVNX4aIGHeqbIH4Bvismc7xNnzJzDTkiK9HahMHG+sB/TpEZIUVaob3PEM27/l42Y1jmGvM
+        DuWBYxliN8knek8SfX19JfLUSrWJvbW7bScLtwSpVn0IhpbMuF0s+Ih0G6cNTpftYIPV6bZRkCPemwo1
+        oXeR6gtuQpCFv2Prn0GvayE5sU+3Ng7fks5aFyNiG3QgQa9Am9jH7s723iToFUeTMwY/MZfGboQrTFfV
+        v+kCBuxl8HvpbPCemt6MLLt7FKnrGLs2zSD+MvzRTNkvwI2mb2KRRS5gwFaH1KmLxFfCtS6QBoL6F5ws
+        lUp93pOKxeSFjwwLzMMeHx4eziMnOEjsutprjdRviH9G/sM+koJaUZE8zXuSYJKn4VYz1dnUCVWIWrje
+        4epwzYyFb0OOkzfTeWvQF85U9X79D+reuj8XJj+veTMs/iUMzUc3BPE3E7+Gv9Xnd5S4Hn3EGid7r4Hg
+        +lqjYJfqXAdg0ey5xH8hPnNwcLDKhu7DrVsgGUDOD3Av/MBcMeBfDf+Ev8n0XgPOUbifSUcxVYThL4Zd
+        X4hwf0IN3EONHIMMYIyumW7RU94TB3OrMBUPtyeA4GwC6tdK2G6vIYBTL8I/gaq4vpaX+kgdzPEQQk9G
+        PyEJMMbVB+Nj35mASqXSQ/FMHxgYUMEkoFZLfIa97wT6+/uPYqPnooZ6akJOca1j9hGAtrZ/AOxF1dIg
+        II0sAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="capitalizeSheetViewNamesButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -2869,32 +2988,6 @@ This script collects the drafting views in the project and saves each one to a n
         SUVORK5CYII=
 </value>
   </data>
-  <data name="qaqcCapitalizeValuesButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASQSURBVFhH7ZZriFRlGMd3ZnZndra5tLst2402ti1iCYMW
-        pYKo6EI3rOwCRlGZlYgfIiKzgjISCikLsjApiwrTCBL6EHYBi+wKSbEYoYiQRbppa5Zr2p5+//d95p05
-        c87k0qc++Ic/z/W9nfO8zzltR/B/RRU+DtfAa+X4DzgdPgjnQ803ZXTB1fB8eCxcCBfAK+BUMRuugpfA
-        G+E7cAhOCffDU7wa8ATc7NXD4gy42KsBJbgS3gn/9Wl0Qm2gGZvgTq8eFk/CnFdjuBpOwpOc1QJXwdO8
-        GsP1cA/MOKs1BqAefxpehBFUbbTE3SYT6OjomJbP52fBK2V6bwJ3QdVQGsrwQ3iWs1pA7ygNlUwm8w1S
-        J4jQv0Bqwmao4gNyudwqcteZKegVF6Rks9mbiP8svRF3mIyBSZYgtPAOqFqIGJx2PeeadCB3KdxlZgz4
-        n4HfmRkwx2QMJG6FG1DzQ0NDBfRX2cANPhpD7ACc8hZE1NXVdZz31MEc78M3zAy41WRAd3e3rk3EZDd7
-        j0N7T09PxfQaVKC3e9WDujkToaelfhADi//EnOoxdVSr1e6RkZFYgRUKhUGEJrnAe1pCG7jGqwF5+BcL
-        3etNj3K53IvQnJd7D2hvb3+AXR2AvxKYZe62zs5OXS0lB18jyF/O2HPMdCD3IvyuGSG/heqKAeSry0bF
-        YvEE5+BR6WpMkrgPTsCvXcBDlXsQ3yvejAP/NrjUTAfsFfBj01+HX7mAgScyH9+YmS5pCdzS29tbVsFw
-        gucs5EDsc8Qh/InvAbF18D0zHbA/hW4OFlNn/QOG7khsOfzITOdYC583MwEmUXWrB+xXM3JOA+MegzvM
-        FDAz44xxPYVNX4aIGHeqbIH4Bvismc7xNnzJzDTkiK9HahMHG+sB/TpEZIUVaob3PEM27/l42Y1jmGvM
-        DuWBYxliN8knek8SfX19JfLUSrWJvbW7bScLtwSpVn0IhpbMuF0s+Ih0G6cNTpftYIPV6bZRkCPemwo1
-        oXeR6gtuQpCFv2Prn0GvayE5sU+3Ng7fks5aFyNiG3QgQa9Am9jH7s723iToFUeTMwY/MZfGboQrTFfV
-        v+kCBuxl8HvpbPCemt6MLLt7FKnrGLs2zSD+MvzRTNkvwI2mb2KRRS5gwFaH1KmLxFfCtS6QBoL6F5ws
-        lUp93pOKxeSFjwwLzMMeHx4eziMnOEjsutprjdRviH9G/sM+koJaUZE8zXuSYJKn4VYz1dnUCVWIWrje
-        4epwzYyFb0OOkzfTeWvQF85U9X79D+reuj8XJj+veTMs/iUMzUc3BPE3E7+Gv9Xnd5S4Hn3EGid7r4Hg
-        +lqjYJfqXAdg0ey5xH8hPnNwcLDKhu7DrVsgGUDOD3Av/MBcMeBfDf+Ev8n0XgPOUbifSUcxVYThL4Zd
-        X4hwf0IN3EONHIMMYIyumW7RU94TB3OrMBUPtyeA4GwC6tdK2G6vIYBTL8I/gaq4vpaX+kgdzPEQQk9G
-        PyEJMMbVB+Nj35mASqXSQ/FMHxgYUMEkoFZLfIa97wT6+/uPYqPnooZ6akJOca1j9hGAtrZ/AOxF1dIg
-        II0sAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="qaqcDRNPButtton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -2932,34 +3025,34 @@ This script collects the drafting views in the project and saves each one to a n
   <data name="qaqcRFSPButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
-        8UgpZv8B2n7wpewXiDAAAAAASUVORK5CYII=
+        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
+        PFKK2X9RrvCaosN1CAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="qaqcRFSPInstructionsTextBox.Text" xml:space="preserve">
@@ -2985,9 +3078,6 @@ From a schedule view, click "RUN" to capitalize all text values for fields visib
   <data name="qaqcDRNPInstructions.Text" xml:space="preserve">
     <value>This script will delete all Not Placed rooms from the Revit database that were deleted from the project, but not from a schedule. This is equivalent to deleting rooms from a schedule for rooms Not Placed. </value>
   </data>
-  <metadata name="setupToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>420, 62</value>
-  </metadata>
   <data name="setupCWSButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -3018,46 +3108,33 @@ From a schedule view, click "RUN" to capitalize all text values for fields visib
   <data name="setupUPButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
-        vs4AAAAASUVORK5CYII=
+        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
+        z+4AAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="setupUPInstructionsTextBox.Text" xml:space="preserve">
-    <value>Instructions:
-1) Select the Revit file to upgrade (green button)
-2) Select the location of where to save the upgraded file (turquoise button) if the file is to be saved somewhere other than the original file's location.
-3) If links are present, they will be listed in the table. 
-4) Check the links to upgrade and set their save location if they are to be saved somewhere other than their original location. When links are upgraded, the host file will have its paths rewritten so the links load from the upgraded links.
-4) Click RUN
-5) Wait for the upgrades to be performed. Click through error or warning messages as they appear.
-
-RED: File could not be upgraded; GREEN: File was successfully upgraded; ORANGE: Link could not be remapped to the upgraded version
-
-This is a semi automatic upgrade process for models and their linked files. Due to errors and warnings that can occur, the user must be present to click through messages as they appear so the script can continue.</value>
   </data>
   <data name="setupCWSInstructionsTextBox.Text" xml:space="preserve">
     <value>Instructions:
@@ -3071,9 +3148,6 @@ If the project is not a worksharing-enabled file, it will become one. The script
   <metadata name="WorksetName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="UIFormMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1272, 17</value>
-  </metadata>
   <metadata name="dataFamiliesBAPParametersContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>593, 133</value>
   </metadata>
@@ -3081,7 +3155,7 @@ If the project is not a worksharing-enabled file, it will become one. The script
     <value>139, 44</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>49</value>
+    <value>90</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

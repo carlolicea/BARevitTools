@@ -47,7 +47,6 @@ namespace BARevitTools.ToolRequests
                     geomOptions.IncludeNonVisibleObjects = true;
                     foreach (Room room in roomElements)
                     {
-                        MessageBox.Show(room.Id.ToString());
                         IList<CurveLoop> faceCurveLoops = null;
                         Level roomLevel = room.Level;
                         GeometryElement roomGeomElements = room.get_Geometry(geomOptions);
@@ -98,6 +97,8 @@ namespace BARevitTools.ToolRequests
                         }
                     }
                     t1.Commit();
+                    uiForm.floorsCFBRDoneLabel.Visible = true;
+                    uiForm.floorsCFBRRoomsList = new List<Room>();                    
                 }
                 catch { t1.RollBack(); }
 
@@ -123,8 +124,7 @@ namespace BARevitTools.ToolRequests
                     }
                     catch { t2.RollBack(); }
                 }
-            }
-            uiForm.adminDataGFFElementList = null;
+            }            
         }
     }
 }

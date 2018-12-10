@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -58,19 +59,14 @@ namespace BARevitTools
         }
         public static SqlConnection SqlOpenConnection(string connectionString)
         {
-            List<string> dataTableNames = new List<string>();
-            SqlConnection sqlConnection;
-            
-            sqlConnection = new SqlConnection(connectionString);
             try
             {
+                SqlConnection sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
+                return sqlConnection;
             }
             catch
-            {
-                ;
-            }
-            return sqlConnection;
+            { return null; }            
         }       
         public static void SqlCloseConnection(SqlConnection sqlConnection)
         {
@@ -82,6 +78,22 @@ namespace BARevitTools
             {
                 MessageBox.Show("Could not close SQL connection");
             }
+        }
+        public static List<string> SqlGetTableNames(SqlConnection sqlConnection)
+        {
+            try
+            {
+                DataTable dt = sqlConnection.GetSchema("Tables");
+
+                List<string> existingTables = new List<string>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    string existingTableName = (string)row[2];
+                    existingTables.Add(existingTableName);
+                }
+                return existingTables;
+            }
+            catch { return null; }
         }
         public static void SqlLogWriter(string writtenTableName)
         {
@@ -134,7 +146,7 @@ namespace BARevitTools
             }
             if (dataTable.Columns.Count > 1000)
             {
-                TaskDialog.Show("alert", "Column Count for " + tableName + " is greater than 1000");
+                TaskDialog.Show("Alert", "Column Count for " + tableName + " is greater than 1000");
                 return;
             }
 
@@ -158,13 +170,13 @@ namespace BARevitTools
                         sqlsc += " smallint ";
                         break;
                     case "System.Byte":
-                        sqlsc += " tinyint";
+                        sqlsc += " tinyint ";
                         break;
                     case "System.Decimal":
-                        sqlsc += " decimal ";
+                        sqlsc += " decimal(15,6) ";
                         break;
                     case "System.Double":
-                        sqlsc += "decimal";
+                        sqlsc += " decimal(15,6) ";
                         break;
                     case "System.DateTime":
                         sqlsc += " datetime ";
@@ -206,7 +218,6 @@ namespace BARevitTools
                 SqlBulkCopyOptions options = SqlBulkCopyOptions.Default;
                 if (!existingTables.Contains(tableName))
                 {
-
                     SqlCommand sqlCreate = new SqlCommand(sqlstring, sqlconn);
                     sqlCreate.ExecuteNonQuery();
                     try
@@ -225,6 +236,67 @@ namespace BARevitTools
                 }
                 else
                 {
+                    DataTable columnsTable = sqlconn.GetSchema("Columns", new[] { sqlconn.DataSource, null, tableName });
+                    List<string> sqlColumnNamesList = new List<string>();
+                    List<string> dtColumnNamesList = new List<string>();
+
+                    foreach (DataRow sqlColumnRow in columnsTable.Rows)
+                    {
+                        sqlColumnNamesList.Add(sqlColumnRow[0].ToString());
+                        StringBuilder sb = StringOperations.BuildCSVStringFromDataTable(columnsTable);
+                        MessageBox.Show(sb.ToString());
+                    }
+
+                    string sqltype;
+                    foreach (DataColumn dtColumn in dataTable.Columns)
+                    {                        
+                        string columnType = dtColumn.DataType.ToString();
+                        switch (columnType)
+                        {
+                            case "System.Int32":
+                                sqltype = " int ";
+                                break;
+                            case "System.Int64":
+                                sqltype = " bigint ";
+                                break;
+                            case "System.Int16":
+                                sqltype = " smallint ";
+                                break;
+                            case "System.Byte":
+                                sqltype = " tinyint";
+                                break;
+                            case "System.Decimal":
+                                sqltype = " decimal(15,6) ";
+                                break;
+                            case "System.Double":
+                                sqltype = " decimal(15,6)";
+                                break;
+                            case "System.DateTime":
+                                sqltype = " datetime ";
+                                break;
+                            case "System.Guid":
+                                sqltype = " uniqueidentifier ";
+                                break;
+                            case "System.String":
+                            default:
+                                sqltype = string.Format(" nvarchar(255) ");
+                                break;
+                        }
+
+                        if (!sqlColumnNamesList.Contains(dtColumn.ColumnName))
+                        {
+                            SqlCommand sqlCommand = new SqlCommand("ALTER TABLE " + tableName + " ADD " + dtColumn.ColumnName +" "+sqltype,sqlconn);
+                            try
+                            {
+                                sqlCommand.ExecuteNonQuery();
+                            }
+                            catch (SqlException e)
+                            {
+                                continue;
+                            }
+                        }
+                    }
+
                     try
                     {
                         using (SqlBulkCopy s = new SqlBulkCopy(sqlconn, options, null))
@@ -233,10 +305,8 @@ namespace BARevitTools
                             s.WriteToServer(dataTable);
                         }
                     }
-                    catch(SqlException appendException) { MessageBox.Show(appendException.ToString()); }
-                }
-                
-               
+                    catch (SqlException appendException) { MessageBox.Show(appendException.ToString()); }
+                } 
                 SqlCloseConnection(sqlconn);
             }
             SqlLogWriter(tableName);

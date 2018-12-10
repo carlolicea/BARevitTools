@@ -122,7 +122,7 @@
 
 1) Select the material from the drop down menu and click "Select"
 
-2) Click points along the wall(s).
+2) Click into the viewport, and then click points along the wall(s). Note that the first click is required to activate the viewport and begin selecting, so the first click is always ignored. You will know the point selection is active when you have a pink box around the point being clicked.
 
 3) After the last point, click to the positive side of the last line to draw so it knows which side to offset toward. 
 

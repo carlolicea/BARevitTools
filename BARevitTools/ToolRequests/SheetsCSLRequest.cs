@@ -13,6 +13,10 @@ namespace BARevitTools.ToolRequests
         public SheetsCSLRequest(UIApplication uiApp, String text)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
+            uiForm.sheetsCSLProgressBar.Value = 0;
+            uiForm.sheetsCSLProgressBar.Minimum = 0;
+            uiForm.sheetsCSLProgressBar.Step = 1;
+            uiForm.sheetsCSLProgressBar.Visible = true;
 
             UIDocument uidoc = uiApp.ActiveUIDocument;
             var sheetsCollector = new FilteredElementCollector(uidoc.Document).OfClass(typeof(ViewSheet)).ToElements();
@@ -23,6 +27,7 @@ namespace BARevitTools.ToolRequests
             List<ElementId> viewportTypeIds = new List<ElementId>();
             List<XYZ> viewportLocations = new List<XYZ>();
 
+            int countOfSheets = 0;
             foreach (DataGridViewRow row in uiForm.sheetsCSLDataGridView.Rows)
             {
                 if (row.Cells["Select"].Value != null)
@@ -30,11 +35,13 @@ namespace BARevitTools.ToolRequests
                     if (row.Cells["Select"].Value.ToString() == "True")
                     {
                         selectedSheets.Add(row.Cells["Sheet Number"].Value.ToString());
+                        countOfSheets++;
                     }
                     else { continue; }
                 }
                 else { continue; }
             }
+            uiForm.sheetsCSLProgressBar.Maximum = countOfSheets;
 
             if (uiForm.sheetsCSLComboBox.Text != "<Originating Sheet>")
             {
@@ -45,7 +52,6 @@ namespace BARevitTools.ToolRequests
                         ICollection<ElementId> viewportIds = sheet.GetAllViewports();
                         foreach (ElementId viewportId in viewportIds)
                         {
-
                             Viewport viewportElement = uidoc.Document.GetElement(viewportId) as Viewport;
                             ElementId viewportViewId = viewportElement.ViewId;
                             ElementId viewportViewTypeId = viewportElement.GetTypeId();
@@ -54,7 +60,7 @@ namespace BARevitTools.ToolRequests
                             if (viewportView.ViewType.ToString() == "Legend")
                             {
                                 viewsToCopy.Add(viewportViewId);
-                                ; viewportTypeIds.Add(viewportViewTypeId);
+                                viewportTypeIds.Add(viewportViewTypeId);
                                 viewportLocations.Add(viewportLocation);
                             }
                             else { continue; }
@@ -71,6 +77,7 @@ namespace BARevitTools.ToolRequests
             {
                 if (selectedSheets.Contains(sheet.SheetNumber.ToString()))
                 {
+                    uiForm.sheetsCSLProgressBar.PerformStep();
                     int x = viewsToCopy.Count();
                     int i = 0;
                     while (i < x)
@@ -88,6 +95,13 @@ namespace BARevitTools.ToolRequests
             }
             t1.Commit();
             t1.Dispose();
+            uiForm.sheetsCSLFilterTextBox.Text = "";
+
+            foreach (DataGridViewRow row in uiForm.sheetsCSLDataGridView.Rows)
+            {
+                row.Cells["Select"].Value = false;
+                row.Cells["Select"].Style.BackColor = uiForm.sheetsCSLDataGridView.DefaultCellStyle.BackColor;
+            }
         }
     }
 }

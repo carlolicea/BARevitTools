@@ -351,9 +351,6 @@
     <None Include="Resources\qaqcRLSIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\materialsAMLInstructions.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\materialsAMLIcon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -376,6 +373,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bimFamiliesUFVPIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\materialsAMLInstructions.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
