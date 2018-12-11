@@ -8,7 +8,9 @@ namespace BARevitTools
 {
     class ReferencedSwitchCaseIds
     {
-        private const int currentnumber = 037;
+        //
+        //The current last number used for switch case IDs
+        private const int currentnumber = 038;
 
         //Multicategory Create Family From Excel
         public const int multiCatCFFE1 = 001;
@@ -69,6 +71,8 @@ namespace BARevitTools
         public const int adminDataGFF = 026;
         //Admin Get BA Details
         public const int adminDataGBDV = 033;
+        //Admin Get Project Files
+        public const int adminDataGPF = 038;
         //Admin Upgrade Families
         public const int adminFamiliesUF = 036;
         //Admin Bulk Add Parameters

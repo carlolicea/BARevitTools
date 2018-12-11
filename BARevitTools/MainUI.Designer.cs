@@ -48,10 +48,32 @@ namespace BARevitTools
             this.adminDataToolStrip = new System.Windows.Forms.ToolStrip();
             this.adminDataGFFButton = new System.Windows.Forms.ToolStripButton();
             this.adminDataSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.adminDataGPFButton = new System.Windows.Forms.ToolStripButton();
-            this.adminDataSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.adminDataGBDVButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.adminDataGPFButton = new System.Windows.Forms.ToolStripButton();
             this.adminDataToolsPanel = new System.Windows.Forms.Panel();
+            this.adminDataGPFLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminDataGPFExportCSVPanel = new System.Windows.Forms.Panel();
+            this.adminDataGPFExportCSVDirectoryTextBox = new System.Windows.Forms.TextBox();
+            this.adminDataGPFExportCSVRunButton = new System.Windows.Forms.Button();
+            this.adminDataGPFExportCSVFileNameTextBox = new System.Windows.Forms.TextBox();
+            this.adminDataGPFExportCSVHeaderLabel = new System.Windows.Forms.Label();
+            this.adminDataGPFExportCSVDirectoryButton = new System.Windows.Forms.Button();
+            this.adminDataGPFExportDbPanel = new System.Windows.Forms.Panel();
+            this.adminDataGPFExportDbTableLabel = new System.Windows.Forms.Label();
+            this.adminDataGPFExportDbSelectDbComboBox = new System.Windows.Forms.ComboBox();
+            this.adminDataGPFExportDbRunButton = new System.Windows.Forms.Button();
+            this.adminDataGPFExportDbHeaderLabel = new System.Windows.Forms.Label();
+            this.adminDataGPFSelectDataPanel = new System.Windows.Forms.Panel();
+            this.adminDataGPFSelectDataDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.adminDataGPFSelectDataDateCheckBox = new System.Windows.Forms.CheckBox();
+            this.adminDataGPFSelectDataDrivesListBox = new System.Windows.Forms.CheckedListBox();
+            this.adminDataGPFSelectDataDrivesLabel = new System.Windows.Forms.Label();
+            this.adminDataGPFCollectDataPanel = new System.Windows.Forms.Panel();
+            this.adminDataGPFCollectDataWaitLabel = new System.Windows.Forms.Label();
+            this.adminDataGPFCollectDataProgressBar = new System.Windows.Forms.ProgressBar();
+            this.adminDataGPFCollectDataButton = new System.Windows.Forms.Button();
+            this.adminDataGPFResultsTextBox = new System.Windows.Forms.TextBox();
             this.adminDataGFFLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminDataGFFCollectDataPanel = new System.Windows.Forms.Panel();
             this.adminDataGFFCollectDataWaitLabel = new System.Windows.Forms.Label();
@@ -601,6 +623,11 @@ namespace BARevitTools
             this.adminDataTabLayoutPanel.SuspendLayout();
             this.adminDataToolStrip.SuspendLayout();
             this.adminDataToolsPanel.SuspendLayout();
+            this.adminDataGPFLayoutPanel.SuspendLayout();
+            this.adminDataGPFExportCSVPanel.SuspendLayout();
+            this.adminDataGPFExportDbPanel.SuspendLayout();
+            this.adminDataGPFSelectDataPanel.SuspendLayout();
+            this.adminDataGPFCollectDataPanel.SuspendLayout();
             this.adminDataGFFLayoutPanel.SuspendLayout();
             this.adminDataGFFCollectDataPanel.SuspendLayout();
             this.adminDataGFFSqlExportPanel.SuspendLayout();
@@ -955,9 +982,9 @@ namespace BARevitTools
             this.adminDataToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminDataGFFButton,
             this.adminDataSeparator1,
-            this.adminDataGPFButton,
-            this.adminDataSeparator2,
-            this.adminDataGBDVButton});
+            this.adminDataGBDVButton,
+            this.toolStripSeparator4,
+            this.adminDataGPFButton});
             this.adminDataToolStrip.Location = new System.Drawing.Point(0, 0);
             this.adminDataToolStrip.Name = "adminDataToolStrip";
             this.adminDataToolStrip.Size = new System.Drawing.Size(710, 53);
@@ -982,23 +1009,6 @@ namespace BARevitTools
             this.adminDataSeparator1.Name = "adminDataSeparator1";
             this.adminDataSeparator1.Size = new System.Drawing.Size(6, 53);
             // 
-            // adminDataGPFButton
-            // 
-            this.adminDataGPFButton.Image = ((System.Drawing.Image)(resources.GetObject("adminDataGPFButton.Image")));
-            this.adminDataGPFButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.adminDataGPFButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.adminDataGPFButton.Name = "adminDataGPFButton";
-            this.adminDataGPFButton.Size = new System.Drawing.Size(95, 50);
-            this.adminDataGPFButton.Text = "Get Project Files";
-            this.adminDataGPFButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.adminDataGPFButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.adminDataGPFButton.ToolTipText = "Get Project Files: Collect data about project files from a directory";
-            // 
-            // adminDataSeparator2
-            // 
-            this.adminDataSeparator2.Name = "adminDataSeparator2";
-            this.adminDataSeparator2.Size = new System.Drawing.Size(6, 53);
-            // 
             // adminDataGBDVButton
             // 
             this.adminDataGBDVButton.Image = ((System.Drawing.Image)(resources.GetObject("adminDataGBDVButton.Image")));
@@ -1012,8 +1022,26 @@ namespace BARevitTools
             this.adminDataGBDVButton.ToolTipText = "Get BA Details: Gets the views from the BA Details and publishes the list.";
             this.adminDataGBDVButton.Click += new System.EventHandler(this.AdminDataGBDV_Click);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 53);
+            // 
+            // adminDataGPFButton
+            // 
+            this.adminDataGPFButton.Image = ((System.Drawing.Image)(resources.GetObject("adminDataGPFButton.Image")));
+            this.adminDataGPFButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.adminDataGPFButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.adminDataGPFButton.Name = "adminDataGPFButton";
+            this.adminDataGPFButton.Size = new System.Drawing.Size(95, 50);
+            this.adminDataGPFButton.Text = "Get Project Files";
+            this.adminDataGPFButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.adminDataGPFButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.adminDataGPFButton.Click += new System.EventHandler(this.AdminDataGPFButton_Click);
+            // 
             // adminDataToolsPanel
             // 
+            this.adminDataToolsPanel.Controls.Add(this.adminDataGPFLayoutPanel);
             this.adminDataToolsPanel.Controls.Add(this.adminDataGFFLayoutPanel);
             this.adminDataToolsPanel.Controls.Add(this.adminDataGBDVLayoutPanel);
             this.adminDataToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1022,6 +1050,266 @@ namespace BARevitTools
             this.adminDataToolsPanel.Name = "adminDataToolsPanel";
             this.adminDataToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminDataToolsPanel.TabIndex = 2;
+            // 
+            // adminDataGPFLayoutPanel
+            // 
+            this.adminDataGPFLayoutPanel.ColumnCount = 2;
+            this.adminDataGPFLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 358F));
+            this.adminDataGPFLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminDataGPFLayoutPanel.Controls.Add(this.adminDataGPFExportCSVPanel, 1, 2);
+            this.adminDataGPFLayoutPanel.Controls.Add(this.adminDataGPFExportDbPanel, 0, 2);
+            this.adminDataGPFLayoutPanel.Controls.Add(this.adminDataGPFSelectDataPanel, 0, 0);
+            this.adminDataGPFLayoutPanel.Controls.Add(this.adminDataGPFCollectDataPanel, 0, 1);
+            this.adminDataGPFLayoutPanel.Controls.Add(this.adminDataGPFResultsTextBox, 1, 0);
+            this.adminDataGPFLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDataGPFLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminDataGPFLayoutPanel.Name = "adminDataGPFLayoutPanel";
+            this.adminDataGPFLayoutPanel.RowCount = 3;
+            this.adminDataGPFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminDataGPFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.adminDataGPFLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 161F));
+            this.adminDataGPFLayoutPanel.Size = new System.Drawing.Size(710, 339);
+            this.adminDataGPFLayoutPanel.TabIndex = 7;
+            this.adminDataGPFLayoutPanel.Visible = false;
+            // 
+            // adminDataGPFExportCSVPanel
+            // 
+            this.adminDataGPFExportCSVPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.adminDataGPFExportCSVPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminDataGPFExportCSVPanel.Controls.Add(this.adminDataGPFExportCSVDirectoryTextBox);
+            this.adminDataGPFExportCSVPanel.Controls.Add(this.adminDataGPFExportCSVRunButton);
+            this.adminDataGPFExportCSVPanel.Controls.Add(this.adminDataGPFExportCSVFileNameTextBox);
+            this.adminDataGPFExportCSVPanel.Controls.Add(this.adminDataGPFExportCSVHeaderLabel);
+            this.adminDataGPFExportCSVPanel.Controls.Add(this.adminDataGPFExportCSVDirectoryButton);
+            this.adminDataGPFExportCSVPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDataGPFExportCSVPanel.Location = new System.Drawing.Point(358, 178);
+            this.adminDataGPFExportCSVPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminDataGPFExportCSVPanel.Name = "adminDataGPFExportCSVPanel";
+            this.adminDataGPFExportCSVPanel.Size = new System.Drawing.Size(352, 161);
+            this.adminDataGPFExportCSVPanel.TabIndex = 7;
+            // 
+            // adminDataGPFExportCSVDirectoryTextBox
+            // 
+            this.adminDataGPFExportCSVDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminDataGPFExportCSVDirectoryTextBox.Location = new System.Drawing.Point(143, 61);
+            this.adminDataGPFExportCSVDirectoryTextBox.Name = "adminDataGPFExportCSVDirectoryTextBox";
+            this.adminDataGPFExportCSVDirectoryTextBox.ReadOnly = true;
+            this.adminDataGPFExportCSVDirectoryTextBox.Size = new System.Drawing.Size(204, 20);
+            this.adminDataGPFExportCSVDirectoryTextBox.TabIndex = 1;
+            this.adminDataGPFExportCSVDirectoryTextBox.Text = "<Save Directory>";
+            // 
+            // adminDataGPFExportCSVRunButton
+            // 
+            this.adminDataGPFExportCSVRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminDataGPFExportCSVRunButton.Location = new System.Drawing.Point(287, 129);
+            this.adminDataGPFExportCSVRunButton.Name = "adminDataGPFExportCSVRunButton";
+            this.adminDataGPFExportCSVRunButton.Size = new System.Drawing.Size(60, 25);
+            this.adminDataGPFExportCSVRunButton.TabIndex = 3;
+            this.adminDataGPFExportCSVRunButton.Text = "RUN";
+            this.adminDataGPFExportCSVRunButton.UseVisualStyleBackColor = true;
+            this.adminDataGPFExportCSVRunButton.Click += new System.EventHandler(this.AdminDataGPFExportCSVRunButton_Click);
+            // 
+            // adminDataGPFExportCSVFileNameTextBox
+            // 
+            this.adminDataGPFExportCSVFileNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminDataGPFExportCSVFileNameTextBox.Location = new System.Drawing.Point(3, 33);
+            this.adminDataGPFExportCSVFileNameTextBox.Name = "adminDataGPFExportCSVFileNameTextBox";
+            this.adminDataGPFExportCSVFileNameTextBox.Size = new System.Drawing.Size(344, 20);
+            this.adminDataGPFExportCSVFileNameTextBox.TabIndex = 6;
+            this.adminDataGPFExportCSVFileNameTextBox.Text = "<File Export Name>";
+            // 
+            // adminDataGPFExportCSVHeaderLabel
+            // 
+            this.adminDataGPFExportCSVHeaderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminDataGPFExportCSVHeaderLabel.BackColor = System.Drawing.Color.YellowGreen;
+            this.adminDataGPFExportCSVHeaderLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adminDataGPFExportCSVHeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminDataGPFExportCSVHeaderLabel.Location = new System.Drawing.Point(3, 6);
+            this.adminDataGPFExportCSVHeaderLabel.Name = "adminDataGPFExportCSVHeaderLabel";
+            this.adminDataGPFExportCSVHeaderLabel.Size = new System.Drawing.Size(344, 21);
+            this.adminDataGPFExportCSVHeaderLabel.TabIndex = 5;
+            this.adminDataGPFExportCSVHeaderLabel.Text = "EXPORT TO CSV";
+            this.adminDataGPFExportCSVHeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // adminDataGPFExportCSVDirectoryButton
+            // 
+            this.adminDataGPFExportCSVDirectoryButton.Location = new System.Drawing.Point(2, 59);
+            this.adminDataGPFExportCSVDirectoryButton.Name = "adminDataGPFExportCSVDirectoryButton";
+            this.adminDataGPFExportCSVDirectoryButton.Size = new System.Drawing.Size(134, 23);
+            this.adminDataGPFExportCSVDirectoryButton.TabIndex = 4;
+            this.adminDataGPFExportCSVDirectoryButton.Text = "Select Export Location";
+            this.adminDataGPFExportCSVDirectoryButton.UseVisualStyleBackColor = true;
+            this.adminDataGPFExportCSVDirectoryButton.Click += new System.EventHandler(this.AdminDataGPFExportCSVDirectoryButton_Click);
+            // 
+            // adminDataGPFExportDbPanel
+            // 
+            this.adminDataGPFExportDbPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminDataGPFExportDbPanel.Controls.Add(this.adminDataGPFExportDbTableLabel);
+            this.adminDataGPFExportDbPanel.Controls.Add(this.adminDataGPFExportDbSelectDbComboBox);
+            this.adminDataGPFExportDbPanel.Controls.Add(this.adminDataGPFExportDbRunButton);
+            this.adminDataGPFExportDbPanel.Controls.Add(this.adminDataGPFExportDbHeaderLabel);
+            this.adminDataGPFExportDbPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDataGPFExportDbPanel.Location = new System.Drawing.Point(0, 178);
+            this.adminDataGPFExportDbPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminDataGPFExportDbPanel.Name = "adminDataGPFExportDbPanel";
+            this.adminDataGPFExportDbPanel.Size = new System.Drawing.Size(358, 161);
+            this.adminDataGPFExportDbPanel.TabIndex = 6;
+            // 
+            // adminDataGPFExportDbTableLabel
+            // 
+            this.adminDataGPFExportDbTableLabel.AutoSize = true;
+            this.adminDataGPFExportDbTableLabel.Location = new System.Drawing.Point(3, 36);
+            this.adminDataGPFExportDbTableLabel.Name = "adminDataGPFExportDbTableLabel";
+            this.adminDataGPFExportDbTableLabel.Size = new System.Drawing.Size(86, 13);
+            this.adminDataGPFExportDbTableLabel.TabIndex = 6;
+            this.adminDataGPFExportDbTableLabel.Text = "Database Table:";
+            // 
+            // adminDataGPFExportDbSelectDbComboBox
+            // 
+            this.adminDataGPFExportDbSelectDbComboBox.FormattingEnabled = true;
+            this.adminDataGPFExportDbSelectDbComboBox.Location = new System.Drawing.Point(95, 33);
+            this.adminDataGPFExportDbSelectDbComboBox.Name = "adminDataGPFExportDbSelectDbComboBox";
+            this.adminDataGPFExportDbSelectDbComboBox.Size = new System.Drawing.Size(186, 21);
+            this.adminDataGPFExportDbSelectDbComboBox.TabIndex = 5;
+            // 
+            // adminDataGPFExportDbRunButton
+            // 
+            this.adminDataGPFExportDbRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminDataGPFExportDbRunButton.Location = new System.Drawing.Point(290, 30);
+            this.adminDataGPFExportDbRunButton.Name = "adminDataGPFExportDbRunButton";
+            this.adminDataGPFExportDbRunButton.Size = new System.Drawing.Size(60, 25);
+            this.adminDataGPFExportDbRunButton.TabIndex = 2;
+            this.adminDataGPFExportDbRunButton.Text = "RUN";
+            this.adminDataGPFExportDbRunButton.UseVisualStyleBackColor = true;
+            this.adminDataGPFExportDbRunButton.Click += new System.EventHandler(this.AdminDataGPFExportDbRunButton_Click);
+            // 
+            // adminDataGPFExportDbHeaderLabel
+            // 
+            this.adminDataGPFExportDbHeaderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminDataGPFExportDbHeaderLabel.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.adminDataGPFExportDbHeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminDataGPFExportDbHeaderLabel.Location = new System.Drawing.Point(5, 7);
+            this.adminDataGPFExportDbHeaderLabel.Name = "adminDataGPFExportDbHeaderLabel";
+            this.adminDataGPFExportDbHeaderLabel.Size = new System.Drawing.Size(345, 20);
+            this.adminDataGPFExportDbHeaderLabel.TabIndex = 4;
+            this.adminDataGPFExportDbHeaderLabel.Text = "EXPORT TO DATABASE";
+            this.adminDataGPFExportDbHeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // adminDataGPFSelectDataPanel
+            // 
+            this.adminDataGPFSelectDataPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminDataGPFSelectDataPanel.Controls.Add(this.adminDataGPFSelectDataDatePicker);
+            this.adminDataGPFSelectDataPanel.Controls.Add(this.adminDataGPFSelectDataDateCheckBox);
+            this.adminDataGPFSelectDataPanel.Controls.Add(this.adminDataGPFSelectDataDrivesListBox);
+            this.adminDataGPFSelectDataPanel.Controls.Add(this.adminDataGPFSelectDataDrivesLabel);
+            this.adminDataGPFSelectDataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDataGPFSelectDataPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminDataGPFSelectDataPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminDataGPFSelectDataPanel.Name = "adminDataGPFSelectDataPanel";
+            this.adminDataGPFSelectDataPanel.Size = new System.Drawing.Size(358, 143);
+            this.adminDataGPFSelectDataPanel.TabIndex = 1;
+            // 
+            // adminDataGPFSelectDataDatePicker
+            // 
+            this.adminDataGPFSelectDataDatePicker.Location = new System.Drawing.Point(147, 42);
+            this.adminDataGPFSelectDataDatePicker.Name = "adminDataGPFSelectDataDatePicker";
+            this.adminDataGPFSelectDataDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.adminDataGPFSelectDataDatePicker.TabIndex = 5;
+            // 
+            // adminDataGPFSelectDataDateCheckBox
+            // 
+            this.adminDataGPFSelectDataDateCheckBox.AutoSize = true;
+            this.adminDataGPFSelectDataDateCheckBox.Location = new System.Drawing.Point(149, 24);
+            this.adminDataGPFSelectDataDateCheckBox.Name = "adminDataGPFSelectDataDateCheckBox";
+            this.adminDataGPFSelectDataDateCheckBox.Size = new System.Drawing.Size(106, 17);
+            this.adminDataGPFSelectDataDateCheckBox.TabIndex = 4;
+            this.adminDataGPFSelectDataDateCheckBox.Text = "Use Date Range";
+            this.adminDataGPFSelectDataDateCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // adminDataGPFSelectDataDrivesListBox
+            // 
+            this.adminDataGPFSelectDataDrivesListBox.FormattingEnabled = true;
+            this.adminDataGPFSelectDataDrivesListBox.IntegralHeight = false;
+            this.adminDataGPFSelectDataDrivesListBox.Items.AddRange(new object[] {
+            "Boulder Projects",
+            "Dallas Projects",
+            "OC Projects",
+            "SAC Projects",
+            "SF Projects"});
+            this.adminDataGPFSelectDataDrivesListBox.Location = new System.Drawing.Point(6, 24);
+            this.adminDataGPFSelectDataDrivesListBox.Name = "adminDataGPFSelectDataDrivesListBox";
+            this.adminDataGPFSelectDataDrivesListBox.Size = new System.Drawing.Size(120, 96);
+            this.adminDataGPFSelectDataDrivesListBox.TabIndex = 3;
+            // 
+            // adminDataGPFSelectDataDrivesLabel
+            // 
+            this.adminDataGPFSelectDataDrivesLabel.AutoSize = true;
+            this.adminDataGPFSelectDataDrivesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminDataGPFSelectDataDrivesLabel.Location = new System.Drawing.Point(3, 7);
+            this.adminDataGPFSelectDataDrivesLabel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.adminDataGPFSelectDataDrivesLabel.Name = "adminDataGPFSelectDataDrivesLabel";
+            this.adminDataGPFSelectDataDrivesLabel.Size = new System.Drawing.Size(95, 13);
+            this.adminDataGPFSelectDataDrivesLabel.TabIndex = 1;
+            this.adminDataGPFSelectDataDrivesLabel.Text = "Select Drive(s):";
+            // 
+            // adminDataGPFCollectDataPanel
+            // 
+            this.adminDataGPFCollectDataPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminDataGPFLayoutPanel.SetColumnSpan(this.adminDataGPFCollectDataPanel, 2);
+            this.adminDataGPFCollectDataPanel.Controls.Add(this.adminDataGPFCollectDataWaitLabel);
+            this.adminDataGPFCollectDataPanel.Controls.Add(this.adminDataGPFCollectDataProgressBar);
+            this.adminDataGPFCollectDataPanel.Controls.Add(this.adminDataGPFCollectDataButton);
+            this.adminDataGPFCollectDataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDataGPFCollectDataPanel.Location = new System.Drawing.Point(0, 143);
+            this.adminDataGPFCollectDataPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminDataGPFCollectDataPanel.Name = "adminDataGPFCollectDataPanel";
+            this.adminDataGPFCollectDataPanel.Size = new System.Drawing.Size(710, 35);
+            this.adminDataGPFCollectDataPanel.TabIndex = 2;
+            // 
+            // adminDataGPFCollectDataWaitLabel
+            // 
+            this.adminDataGPFCollectDataWaitLabel.AutoSize = true;
+            this.adminDataGPFCollectDataWaitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminDataGPFCollectDataWaitLabel.Location = new System.Drawing.Point(132, 10);
+            this.adminDataGPFCollectDataWaitLabel.Name = "adminDataGPFCollectDataWaitLabel";
+            this.adminDataGPFCollectDataWaitLabel.Size = new System.Drawing.Size(87, 13);
+            this.adminDataGPFCollectDataWaitLabel.TabIndex = 2;
+            this.adminDataGPFCollectDataWaitLabel.Text = "Please Wait...";
+            // 
+            // adminDataGPFCollectDataProgressBar
+            // 
+            this.adminDataGPFCollectDataProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminDataGPFCollectDataProgressBar.Location = new System.Drawing.Point(225, 5);
+            this.adminDataGPFCollectDataProgressBar.Name = "adminDataGPFCollectDataProgressBar";
+            this.adminDataGPFCollectDataProgressBar.Size = new System.Drawing.Size(481, 23);
+            this.adminDataGPFCollectDataProgressBar.TabIndex = 1;
+            // 
+            // adminDataGPFCollectDataButton
+            // 
+            this.adminDataGPFCollectDataButton.Location = new System.Drawing.Point(7, 5);
+            this.adminDataGPFCollectDataButton.Name = "adminDataGPFCollectDataButton";
+            this.adminDataGPFCollectDataButton.Size = new System.Drawing.Size(119, 23);
+            this.adminDataGPFCollectDataButton.TabIndex = 0;
+            this.adminDataGPFCollectDataButton.Text = "COLLECT DATA";
+            this.adminDataGPFCollectDataButton.UseVisualStyleBackColor = true;
+            this.adminDataGPFCollectDataButton.Click += new System.EventHandler(this.AdminDataGPFCollectDataButton_Click);
+            // 
+            // adminDataGPFResultsTextBox
+            // 
+            this.adminDataGPFResultsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.adminDataGPFResultsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDataGPFResultsTextBox.Location = new System.Drawing.Point(358, 0);
+            this.adminDataGPFResultsTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.adminDataGPFResultsTextBox.Multiline = true;
+            this.adminDataGPFResultsTextBox.Name = "adminDataGPFResultsTextBox";
+            this.adminDataGPFResultsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.adminDataGPFResultsTextBox.Size = new System.Drawing.Size(352, 143);
+            this.adminDataGPFResultsTextBox.TabIndex = 3;
             // 
             // adminDataGFFLayoutPanel
             // 
@@ -1794,9 +2082,9 @@ namespace BARevitTools
             // 
             this.bulkUpdatePublishVersionToolStripMenuItem.Image = global::BARevitTools.Properties.Resources.bimFamiliesUFVPIcon;
             this.bulkUpdatePublishVersionToolStripMenuItem.Name = "bulkUpdatePublishVersionToolStripMenuItem";
-            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(237, 38);
+            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.bulkUpdatePublishVersionToolStripMenuItem.Text = "Bulk Update Publish Version";
-            this.bulkUpdatePublishVersionToolStripMenuItem.Click += new System.EventHandler(this.adminFamiliesUFVPButton_Click);
+            this.bulkUpdatePublishVersionToolStripMenuItem.Click += new System.EventHandler(this.AdminFamiliesUFVPButton_Click);
             // 
             // toolStripSeparator1
             // 
@@ -1879,7 +2167,7 @@ namespace BARevitTools
             this.adminFamiliesUFVPRunButton.TabIndex = 0;
             this.adminFamiliesUFVPRunButton.Text = "RUN";
             this.adminFamiliesUFVPRunButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesUFVPRunButton.Click += new System.EventHandler(this.adminFamiliesUFVPRunButton_Click);
+            this.adminFamiliesUFVPRunButton.Click += new System.EventHandler(this.AdminFamiliesUFVPRunButton_Click);
             // 
             // adminFamiliesUFVPInstructionsTextBox
             // 
@@ -7741,6 +8029,16 @@ namespace BARevitTools
             this.adminDataToolStrip.ResumeLayout(false);
             this.adminDataToolStrip.PerformLayout();
             this.adminDataToolsPanel.ResumeLayout(false);
+            this.adminDataGPFLayoutPanel.ResumeLayout(false);
+            this.adminDataGPFLayoutPanel.PerformLayout();
+            this.adminDataGPFExportCSVPanel.ResumeLayout(false);
+            this.adminDataGPFExportCSVPanel.PerformLayout();
+            this.adminDataGPFExportDbPanel.ResumeLayout(false);
+            this.adminDataGPFExportDbPanel.PerformLayout();
+            this.adminDataGPFSelectDataPanel.ResumeLayout(false);
+            this.adminDataGPFSelectDataPanel.PerformLayout();
+            this.adminDataGPFCollectDataPanel.ResumeLayout(false);
+            this.adminDataGPFCollectDataPanel.PerformLayout();
             this.adminDataGFFLayoutPanel.ResumeLayout(false);
             this.adminDataGFFCollectDataPanel.ResumeLayout(false);
             this.adminDataGFFSqlExportPanel.ResumeLayout(false);
@@ -8470,8 +8768,6 @@ namespace BARevitTools
         private ToolStrip adminDataToolStrip;
         public ToolStripButton adminDataGFFButton;
         private ToolStripSeparator adminDataSeparator1;
-        private ToolStripButton adminDataGPFButton;
-        private ToolStripSeparator adminDataSeparator2;
         private ToolStripButton adminDataGBDVButton;
         private Panel adminDataToolsPanel;
         private TableLayoutPanel adminDataGFFLayoutPanel;
@@ -8634,6 +8930,30 @@ namespace BARevitTools
         public TableLayoutPanel adminDataGBDVLayoutPanel;
         public TableLayoutPanel adminFamiliesUFLayoutPanel;
         public TableLayoutPanel adminFamiliesUFVPLayoutPanel;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripButton adminDataGPFButton;
+        private TableLayoutPanel adminDataGPFLayoutPanel;
+        private Panel adminDataGPFSelectDataPanel;
+        private Label adminDataGPFSelectDataDrivesLabel;
+        private Panel adminDataGPFCollectDataPanel;
+        private Button adminDataGPFCollectDataButton;
+        private Panel adminDataGPFExportCSVPanel;
+        public TextBox adminDataGPFExportCSVDirectoryTextBox;
+        private Button adminDataGPFExportCSVRunButton;
+        public TextBox adminDataGPFExportCSVFileNameTextBox;
+        private Label adminDataGPFExportCSVHeaderLabel;
+        public Button adminDataGPFExportCSVDirectoryButton;
+        private Panel adminDataGPFExportDbPanel;
+        private Label adminDataGPFExportDbTableLabel;
+        public ComboBox adminDataGPFExportDbSelectDbComboBox;
+        private Button adminDataGPFExportDbRunButton;
+        private Label adminDataGPFExportDbHeaderLabel;
+        public DateTimePicker adminDataGPFSelectDataDatePicker;
+        public CheckBox adminDataGPFSelectDataDateCheckBox;
+        public CheckedListBox adminDataGPFSelectDataDrivesListBox;
+        public Label adminDataGPFCollectDataWaitLabel;
+        public ProgressBar adminDataGPFCollectDataProgressBar;
+        public TextBox adminDataGPFResultsTextBox;
     }
 }
 

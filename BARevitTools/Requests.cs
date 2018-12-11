@@ -58,6 +58,8 @@ namespace BARevitTools
         setupUP = ReferencedSwitchCaseIds.setupUP,        
         
         adminDataGFF = ReferencedSwitchCaseIds.adminDataGFF,
+        adminDataGBDV = ReferencedSwitchCaseIds.adminDataGBDV,
+        adminDataGPF = ReferencedSwitchCaseIds.adminDataGPF,
         adminFamiliesUF = ReferencedSwitchCaseIds.adminFamiliesUF,
         adminFamiliesBAP = ReferencedSwitchCaseIds.adminFamiliesBAP,
         adminFamiliesBRP = ReferencedSwitchCaseIds.adminFamiliesBRP,

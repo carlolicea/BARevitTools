@@ -288,10 +288,22 @@ namespace BARevitTools
                     this.adminDataGFFButton.Checked = true;
                     this.adminDataGBDVLayoutPanel.Visible = false;
                     this.adminDataGBDVButton.Checked = false;
+                    this.adminDataGPFLayoutPanel.Visible = false;
+                    this.adminDataGPFButton.Checked = false;
                     break;
                 case ReferencedSwitchCaseIds.adminDataGBDV:
                     this.adminDataGBDVLayoutPanel.Visible = true;
                     this.adminDataGBDVButton.Checked = true;
+                    this.adminDataGFFLayoutPanel.Visible = false;
+                    this.adminDataGFFButton.Checked = false;
+                    this.adminDataGPFLayoutPanel.Visible = false;
+                    this.adminDataGPFButton.Checked = false;
+                    break;
+                case ReferencedSwitchCaseIds.adminDataGPF:
+                    this.adminDataGPFLayoutPanel.Visible = true;
+                    this.adminDataGPFButton.Checked = true;
+                    this.adminDataGBDVLayoutPanel.Visible = false;
+                    this.adminDataGBDVButton.Checked = false;
                     this.adminDataGFFLayoutPanel.Visible = false;
                     this.adminDataGFFButton.Checked = false;
                     break;
@@ -847,7 +859,7 @@ namespace BARevitTools
         {
             if(Application.thisApp.CadDriveIsAccessible == false)
             {
-                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.materialsCMSExcelLayoutPanel.Controls);
+                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.materialsCMSExcelLayoutPanel.Controls, Properties.Settings.Default.RevitCadDrive);
             }
 
             materialsCMSExcelSaveDirectory = "";
@@ -1170,7 +1182,7 @@ namespace BARevitTools
         {
             if (Application.thisApp.CadDriveIsAccessible == false)
             {
-                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.roomsCDRTLayoutPanel.Controls);
+                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.roomsCDRTLayoutPanel.Controls, Properties.Settings.Default.RevitCadDrive);
             }
             SwitchActivePanel(ReferencedSwitchCaseIds.roomsCDRT);
             DatabaseOperations.CollectUserInputData(ReferencedGuids.roomsCDRTguid, roomsCDRTButton.Text, Environment.UserName.ToString(), DateTime.Now);
@@ -2644,7 +2656,8 @@ namespace BARevitTools
             {
                 List<string> dtNames = DatabaseOperations.SqlGetTableNames(newConnection);
                 foreach (string name in dtNames)
-                {
+                {                   
+                        
                     uiForm.adminDataGFFSqlExportComboBox.Items.Add(name);
                     uiForm.adminDataGFFSqlExportComboBox.Text = BARevitTools.Properties.Settings.Default.SqlBARevitFamiliesDataTable;
                 }
@@ -2753,24 +2766,35 @@ namespace BARevitTools
                         MakeRequest(RequestId.adminDataGFF);
                     }
                 }
+                else { uiForm.adminDataGFFCollectDataWaitLabel.Text = "No Results"; }
             }
             else { MessageBox.Show("No directory selected"); }
         }
         private void AdminDataGFFSqlExportRunButton_Click(object sender, EventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
-            try
+            bool confirmation = VerifySelectionDialog.VerifyDataTable(uiForm.adminDataGFFSqlExportComboBox.Text);
+            if (confirmation == true)
             {
                 SqlConnection connection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
-                if (adminDataGFFDataTable.Rows.Count != 0)
+                if (connection!=null)
                 {
-                    try { DatabaseOperations.SqlWriteDataTable(uiForm.adminDataGFFSqlExportComboBox.Text, connection, adminDataGFFDataTable, false); MessageBox.Show("Successful export to database"); }
-                    catch { MessageBox.Show("Export failed"); }
-
+                    try
+                    {                    
+                        if (adminDataGFFDataTable.Rows.Count != 0)
+                        {
+                            try { DatabaseOperations.SqlWriteDataTable(uiForm.adminDataGFFSqlExportComboBox.Text, connection, adminDataGFFDataTable, false); MessageBox.Show("Successful export to database"); }
+                            catch { MessageBox.Show("Export failed"); }
+                        }
+                    }
+                    catch { ; }
+                    finally { DatabaseOperations.SqlCloseConnection(connection); }
                 }
-                DatabaseOperations.SqlCloseConnection(connection);
-            }
-            catch { MessageBox.Show("Could not write to a database because a connection could not be made"); }
+                else
+                {
+                    MessageBox.Show("Could not write to a database because a connection could not be made");
+                }                
+            }            
         }
         private void AdminDataGFFCsvExportRunButton_Click(object sender, EventArgs e)
         {
@@ -2798,88 +2822,41 @@ namespace BARevitTools
         {
             if(Application.thisApp.CadDriveIsAccessible == false)
             {
-                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.adminDataGBDVLayoutPanel.Controls);
+                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.adminDataGBDVLayoutPanel.Controls, Properties.Settings.Default.RevitCadDrive);
             }
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             uiForm.adminDataGBDVWaitLabel.Visible = false;
             uiForm.adminDataGBDVExportCsvDirectoryTextBox.Text = "<Save Directory>";
             uiForm.adminDataGBDVExportCsvTextBox.Text = "<File Export Name>";
+            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminDataGBDVguid, adminDataGBDVButton.Text, Environment.UserName.ToString(), DateTime.Now);
             SwitchActivePanel(ReferencedSwitchCaseIds.adminDataGBDV);
         }
         private void AdminDataGBDVCollectButton_Click(object sender, EventArgs e)
         {
-            MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
-            uiForm.adminDataGBDVWaitLabel.Text = "Please Wait...";
-            uiForm.adminDataGBDVWaitLabel.Visible = true;
-
-            string detailVersion = RVTOperations.GetRevitNumber(BARevitTools.Properties.Settings.Default.RevitProjectBADetails).ToString();
-            string detailSubVersion = detailVersion.Substring(detailVersion.Length - 2);
-            string activeSubVersion = BARevitTools.Properties.Settings.Default.BARTRevitFamilyCurrentYear.Substring(BARevitTools.Properties.Settings.Default.BARTRevitFamilyCurrentYear.Length - 2);
-            //Get the appropriate BA Details file by version number
-            string detailsFile = BARevitTools.Properties.Settings.Default.RevitProjectBADetails.Replace(detailSubVersion, activeSubVersion);
-
-            adminDataGBDVDataTable = new DataTable();
-            DataColumn categoryColumn = adminDataGBDVDataTable.Columns.Add("Category", typeof(String)); //View type
-            DataColumn divisionSortColumn = adminDataGBDVDataTable.Columns.Add("Division", typeof(String)); //BA View Sort 1 Division
-            DataColumn typeSortColumn = adminDataGBDVDataTable.Columns.Add("Type", typeof(String)); //BA View Sort 2 Type
-            DataColumn nameColumn = adminDataGBDVDataTable.Columns.Add("Name", typeof(String)); //View name
-
-            RVTDocument detailsDoc = RVTOperations.OpenRevitFile(uiApp, detailsFile);
-            List<ViewDrafting> viewsCollection = new FilteredElementCollector(detailsDoc).OfClass(typeof(ViewDrafting)).WhereElementIsNotElementType().Cast<ViewDrafting>().ToList();
-            List<ViewSheet> sheetsCollection = new FilteredElementCollector(detailsDoc).OfClass(typeof(ViewSheet)).WhereElementIsNotElementType().Cast<ViewSheet>().ToList();
-
-            //Order the views by division, type, and name
-            var viewsGroupedQuery =
-                from viewElem in viewsCollection
-                orderby viewElem.GetParameters("BA View Sort 1 Division").First().ToString(), viewElem.GetParameters("BA View Sort 2 Type").First().ToString(), viewElem.Name
-                select viewElem;
-
-            //Fill out the DataTable
-            foreach (ViewDrafting viewDrafting in viewsGroupedQuery)
-            {
-                DataRow row = adminDataGBDVDataTable.NewRow();
-                row["Category"] = "View";
-                row["Division"] = viewDrafting.GetParameters("BA View Sort 1 Division").First().AsString();
-                row["Type"] = viewDrafting.GetParameters("BA View Sort 2 Type").First().AsString();
-                row["Name"] = viewDrafting.Name;
-                adminDataGBDVDataTable.Rows.Add(row);
-            }
-
-            //Order the sheets by discipline, division, and name
-            var sheetsGroupedQuery =
-                from sheetElem in sheetsCollection
-                orderby sheetElem.GetParameters("BA Sheet Discipline").First().AsString(), sheetElem.GetParameters("BA Sheet Division").First().AsString(), sheetElem.Name
-                select sheetElem;
-
-            //Add the sheets to the DataTable
-            foreach (ViewSheet viewSheet in sheetsGroupedQuery)
-            {
-                DataRow row = adminDataGBDVDataTable.NewRow();
-                row["Category"] = "Sheet";
-                row["Division"] = viewSheet.GetParameters("BA Sheet Discipline").First().AsString();
-                row["Type"] = viewSheet.GetParameters("BA Sheet Division").First().AsString();
-                row["Name"] = viewSheet.Name;
-                adminDataGBDVDataTable.Rows.Add(row);
-            }
-
-            uiForm.adminDataGBDVWaitLabel.Text = "Done!";
-            detailsDoc.Close(false);
+            m_ExEvent.Raise();
+            MakeRequest(RequestId.adminDataGBDV);
         }
         private void AdminDataGBDVExportDbRunButton_Click(object sender, EventArgs e)
         {
-            try
+            SqlConnection connection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
+            if (connection != null)
             {
-                SqlConnection connection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
-                if (adminDataGBDVDataTable.Rows.Count != 0)
+                try
                 {
-                    //Write to the database by first dropping the BA Details SQL table
-                    try { DatabaseOperations.SqlWriteDataTable(BARevitTools.Properties.Settings.Default.SqlBADetailsDataTable, connection, adminDataGBDVDataTable, true); MessageBox.Show("Successful export to database"); }
-                    catch (Exception f) { MessageBox.Show(f.ToString()); }
-
+                    if (adminDataGBDVDataTable.Rows.Count != 0)
+                    {
+                        //Write to the database by first dropping the BA Details SQL table
+                        try { DatabaseOperations.SqlWriteDataTable(BARevitTools.Properties.Settings.Default.SqlBADetailsDataTable, connection, adminDataGBDVDataTable, true); MessageBox.Show("Successful export to database"); }
+                        catch (Exception f) { MessageBox.Show(f.ToString()); }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Could not write to a database because a connection could not be made");
+                    }
                 }
-                DatabaseOperations.SqlCloseConnection(connection);
+                catch {; }
+                finally { DatabaseOperations.SqlCloseConnection(connection); }
             }
-            catch { MessageBox.Show("Could not write to a database because a connection could not be made"); }
         }
         private void AdminDataGBDVExportCsvSelectDirectoryButton_Click(object sender, EventArgs e)
         {
@@ -2907,13 +2884,103 @@ namespace BARevitTools
         }
         #endregion adminDataGBDV
 
+        #region adminDataGPF
+        public DataTable adminDataGPFExportTable = null;
+        private void AdminDataGPFButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            if (Directory.Exists(@"\\boulderassociates.com\projects"))
+            {                
+                foreach (int i in uiForm.adminDataGPFSelectDataDrivesListBox.CheckedIndices)
+                {
+                    string drivePath = "";
+                    string driveName = uiForm.adminDataGPFSelectDataDrivesListBox.Items[i].ToString();
+                    switch (driveName)
+                    {
+                        case "Boulder Projects":
+                            drivePath = Properties.Settings.Default.BABoulderProjects;
+                            break;
+                        case "Dallas Projects":
+                            drivePath = Properties.Settings.Default.BADallasProjects;
+                            break;
+                        case "OC Projects":
+                            drivePath = Properties.Settings.Default.BAOcProjects;
+                            break;
+                        case "SAC Projects":
+                            drivePath = Properties.Settings.Default.BASacProjects;
+                            break;
+                        case "SF Projects":
+                            drivePath = Properties.Settings.Default.BASfProjects;
+                            break;
+                        default:
+                            break;
+                    }
+                    if (!Directory.Exists(drivePath))
+                    {
+                        MessageBox.Show(String.Format("Could not connect to {0}", drivePath));
+                    }
+                    uiForm.adminDataGPFSelectDataDrivesListBox.SetItemCheckState(i, CheckState.Unchecked);
+                }                
+                uiForm.adminDataGPFSelectDataDateCheckBox.CheckState = CheckState.Unchecked;
+                uiForm.adminDataGPFResultsTextBox.Text = "";
+                uiForm.adminDataGPFCollectDataProgressBar.Visible = false;
+                uiForm.adminDataGPFCollectDataProgressBar.Value = 0;
+                uiForm.adminDataGPFSelectDataDatePicker.Value = DateTime.Today;
+                uiForm.adminDataGPFCollectDataWaitLabel.Visible = false;
+                uiForm.adminDataGPFExportCSVDirectoryTextBox.Text = "<Save Directory>";
+                uiForm.adminDataGPFExportCSVFileNameTextBox.Text = "<File Export Name>";
+
+                SqlConnection newConnection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
+                if (newConnection != null)
+                {
+                    List<string> dtNames = DatabaseOperations.SqlGetTableNames(newConnection);
+                    foreach (string name in dtNames)
+                    {
+                        uiForm.adminDataGPFExportDbSelectDbComboBox.Items.Add(name);
+                        uiForm.adminDataGPFExportDbSelectDbComboBox.Text = BARevitTools.Properties.Settings.Default.SqlBARevitProjectFilesTable;
+                    }
+                }
+                else
+                {
+                    uiForm.adminDataGPFExportDbSelectDbComboBox.Text = "SQL Database Connection Failed";
+                }
+            }   
+            else
+            {
+                DisableUIFeatures.DisableControls(uiForm.adminDataGPFLayoutPanel.Controls, @"\\boulderassociates.com\projects");
+            }            
+
+            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminDataGPFguid, adminDataGPFButton.Text, Environment.UserName.ToString(), DateTime.Now);
+            this.SwitchActivePanel(ReferencedSwitchCaseIds.adminDataGPF);
+        }
+        private void AdminDataGPFExportDbRunButton_Click(object sender, EventArgs e)
+        {
+            bool confirmation = VerifySelectionDialog.VerifyDataTable(BARevitTools.Application.thisApp.newMainUi.adminDataGPFExportDbSelectDbComboBox.Text);
+        }
+        private void AdminDataGPFExportCSVRunButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void AdminDataGPFExportCSVDirectoryButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void AdminDataGPFCollectDataButton_Click(object sender, EventArgs e)
+        {
+            BARevitTools.Application.thisApp.newMainUi.adminDataGPFCollectDataWaitLabel.Visible = true;
+            m_ExEvent.Raise();
+            MakeRequest(RequestId.adminDataGPF);
+        }
+        #endregion adminDataGPF
+
         #region adminFamiliesUF
         private void AdminFamiliesUFButton_Click(object sender, EventArgs e)
         {
             if (Application.thisApp.CadDriveIsAccessible == false)
             {
-                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.adminFamiliesUFLayoutPanel.Controls);
+                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.adminFamiliesUFLayoutPanel.Controls, Properties.Settings.Default.RevitCadDrive);
             }
+            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesUFguid, adminFamiliesUFButton.Text, Environment.UserName.ToString(), DateTime.Now);
             this.SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesUF);
         }
         private void AdminFamiliesUFRunButton_Click(object sender, EventArgs e)
@@ -3000,9 +3067,9 @@ namespace BARevitTools
             pdgv.Columns.AddRange(paramIsSharedColumn, paramNameColumn, paramTypeColumn, paramGroupColumn, paramIsInstanceColumn, paramValueColumn);
             pdgv.ColumnCount = pdgv.Columns.Count;
             fdgv.Columns.AddRange(famSelectColumn, famNameColumn, famPathColumn);
-            fdgv.ColumnCount = fdgv.Columns.Count;
-            SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesBAP);
+            fdgv.ColumnCount = fdgv.Columns.Count;            
             DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesBAPguid, adminFamiliesBAPButton.Text, Environment.UserName.ToString(), DateTime.Now);
+            SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesBAP);
 
         }
         private void AdminFamiliesBAPParametersDGV_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
@@ -3419,11 +3486,11 @@ namespace BARevitTools
         #endregion adminFamiliesDFB
 
         #region adminFamiliesUFVP
-        private void adminFamiliesUFVPButton_Click(object sender, EventArgs e)
+        private void AdminFamiliesUFVPButton_Click(object sender, EventArgs e)
         {
             if (Application.thisApp.CadDriveIsAccessible == false)
             {
-                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.adminFamiliesUFVPLayoutPanel.Controls);
+                DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.adminFamiliesUFVPLayoutPanel.Controls, Properties.Settings.Default.RevitCadDrive);
             }
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             uiForm.adminFamiliesUFVPProgressBar.Visible = false;
@@ -3434,7 +3501,7 @@ namespace BARevitTools
             DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesUFVPguid, bulkUpdatePublishVersionToolStripMenuItem.Text, Environment.UserName.ToString(), DateTime.Now);
 
         }
-        private void adminFamiliesUFVPRunButton_Click(object sender, EventArgs e)
+        private void AdminFamiliesUFVPRunButton_Click(object sender, EventArgs e)
         {
             m_ExEvent.Raise();
             MakeRequest(RequestId.adminFamiliesUFVP);
@@ -3612,5 +3679,7 @@ namespace BARevitTools
         {
             // Need something for the options when they are done.
         }
+
+        
     }
 }

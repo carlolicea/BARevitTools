@@ -232,5 +232,68 @@ namespace BARevitTools.Properties {
                 return ((string)(this["RevitCadDrive"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Projects\\Boulder")]
+        public string BABoulderProjects {
+            get {
+                return ((string)(this["BABoulderProjects"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Projects\\Dallas")]
+        public string BADallasProjects {
+            get {
+                return ((string)(this["BADallasProjects"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Projects\\OC")]
+        public string BAOcProjects {
+            get {
+                return ((string)(this["BAOcProjects"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Projects\\Sac")]
+        public string BASacProjects {
+            get {
+                return ((string)(this["BASacProjects"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Projects\\SF")]
+        public string BASfProjects {
+            get {
+                return ((string)(this["BASfProjects"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BAProjectFilesData")]
+        public string SqlBARevitProjectFilesTable {
+            get {
+                return ((string)(this["SqlBARevitProjectFilesTable"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("E1 Revit")]
+        public string BAProjectCentralFolder {
+            get {
+                return ((string)(this["BAProjectCentralFolder"]));
+            }
+        }
     }
 }

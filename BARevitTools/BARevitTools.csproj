@@ -151,7 +151,9 @@
     </Compile>
     <Compile Include="ReferencedSwitchCaseIds.cs" />
     <Compile Include="RVTOperations.cs" />
+    <Compile Include="ToolRequests\AdminDataGBDVRequest.cs" />
     <Compile Include="ToolRequests\AdminDataGFFRequest.cs" />
+    <Compile Include="ToolRequests\AdminDataGPFRequest.cs" />
     <Compile Include="ToolRequests\AdminFamiliesBAPRequest.cs" />
     <Compile Include="ToolRequests\AdminFamiliesBRPRequest.cs" />
     <Compile Include="ToolRequests\AdminFamiliesUFRequest.cs" />

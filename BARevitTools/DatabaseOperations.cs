@@ -290,7 +290,7 @@ namespace BARevitTools
                             {
                                 sqlCommand.ExecuteNonQuery();
                             }
-                            catch (SqlException e)
+                            catch
                             {
                                 continue;
                             }

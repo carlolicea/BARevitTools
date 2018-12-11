@@ -37,12 +37,28 @@ namespace BARevitTools
 
     public static class DisableUIFeatures
     {
-        public static void DisableControls(TableLayoutControlCollection controls)
+        public static void DisableControls(TableLayoutControlCollection controls, string drive)
         {
-            MessageBox.Show(String.Format("This tool cannot be used while {0} is inaccessible", Properties.Settings.Default.RevitCadDrive));
+            MessageBox.Show(String.Format("This tool cannot be used while {0} is inaccessible.", drive));
             foreach (System.Windows.Forms.Control control in controls)
             {
                 control.Enabled = false;
+            }
+        }
+    }
+
+    public static class VerifySelectionDialog
+    {
+        public static bool VerifyDataTable(string dataTableName)
+        {
+            DialogResult dialogResult = MessageBox.Show(String.Format("Are you sure you want to export to the {0} database table? Selecting the wrong table could mess up the data.", dataTableName), "Verify Table", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

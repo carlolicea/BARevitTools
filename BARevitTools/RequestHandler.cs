@@ -129,6 +129,12 @@ namespace BARevitTools
                     case RequestId.adminDataGFF:
                         ToolRequests.AdminDataGFFRequest adminDataGFFRequest = new ToolRequests.AdminDataGFFRequest(uiApp, "Get Family Data");
                         break;
+                    case RequestId.adminDataGBDV:
+                        ToolRequests.AdminDataGBDVRequest adminDataGBDVRequest = new ToolRequests.AdminDataGBDVRequest(uiApp, "Get BA Detail Views");
+                        break;
+                    case RequestId.adminDataGPF:
+                        ToolRequests.AdminDataGPFRequest adminDataGPFRequest = new ToolRequests.AdminDataGPFRequest(uiApp, "Get Project Files");
+                        break;
                     case RequestId.adminFamiliesUF:
                         ToolRequests.AdminFamiliesUFRequest adminFamiliesUFRequest = new ToolRequests.AdminFamiliesUFRequest(uiApp, "Upgrade Families");
                         break;

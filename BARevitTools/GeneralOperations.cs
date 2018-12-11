@@ -133,6 +133,56 @@ namespace BARevitTools
             }
             return filePaths;
         }
+        //
+        //Gets all Revit RVT files from a directory, passing a last modified date newer than the one supplied. This also takes the log file to record failures
+        public static List<string> GetAllRvtProjectFiles(string directoryPath, DateTime date, ToolRequests.CreateOutputLog log)
+        {
+            List<string> files = new List<string>();
+            //Get an array of directories given the path
+            string[] directories = Directory.GetDirectories(directoryPath);
+            //Cyle through the directories
+            foreach (string directory in directories)
+            {
+                //Wrapping this in a TRY/CATCH because some directories may not be accessible
+                try
+                {
+                    //Get the files from the directory and add them to a list
+                    List<string> filePaths = Directory.EnumerateFiles(directory, "*.rvt", SearchOption.AllDirectories).ToList();
+                    //Cycle through the file paths
+                    foreach (string file in filePaths)
+                    {
+                        //Wrapping this in a TRY/CATCH because some files may not be accessible
+                        try
+                        {
+                            //If the file path contains the main folder for Project files, continue
+                            if (file.Contains(Properties.Settings.Default.BAProjectCentralFolder))
+                            {
+                                //Change the attributes to normal to disable any Read Only attribute, then reset the Archive attribute.
+                                File.SetAttributes(file, FileAttributes.Normal);
+                                File.SetAttributes(file, FileAttributes.Archive);
+                                //Get the FileInfo from the file
+                                FileInfo fileInfo = new FileInfo(file);
+                                //If the LastWriteTime is newer than the date supplied to the method, add the file path to the list of files
+                                if (fileInfo.LastWriteTime >= date)
+                                {
+                                    files.Add(file);
+                                }
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            //If the file couls not be accessed, add it and the exception to the log
+                            System.Diagnostics.Debug.WriteLine(String.Format("{0} : Exception: {1}", file, e.Message));
+                            log.m_fileReadErrors.Add(file);
+                            log.m_fileReadErrors.Add("    Exception: " + e.Message);
+                            continue;
+                        }
+                    }
+                }
+                catch { continue; }
+            }
+            return files;
+        }
         public static string GetDirectory()
         {
             string directory = "";
