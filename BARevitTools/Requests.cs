@@ -59,13 +59,10 @@ namespace BARevitTools
         
         adminDataGFF = ReferencedSwitchCaseIds.adminDataGFF,
         adminDataGBDV = ReferencedSwitchCaseIds.adminDataGBDV,
-        adminDataGPF = ReferencedSwitchCaseIds.adminDataGPF,
         adminFamiliesUF = ReferencedSwitchCaseIds.adminFamiliesUF,
         adminFamiliesBAP = ReferencedSwitchCaseIds.adminFamiliesBAP,
         adminFamiliesBRP = ReferencedSwitchCaseIds.adminFamiliesBRP,
         adminFamiliesUFVP = ReferencedSwitchCaseIds.adminFamiliesUFVP,
-
-        testApp = ReferencedSwitchCaseIds.testApp,
     }
     
     //This class makes the request to the thread running Revit so the RequestHandler can slip in an operation

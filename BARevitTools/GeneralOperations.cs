@@ -135,7 +135,7 @@ namespace BARevitTools
         }
         //
         //Gets all Revit RVT files from a directory, passing a last modified date newer than the one supplied. This also takes the log file to record failures
-        public static List<string> GetAllRvtProjectFiles(string directoryPath, DateTime date, ToolRequests.CreateOutputLog log)
+        public static List<string> GetAllRvtProjectFiles(string directoryPath, DateTime date)
         {
             List<string> files = new List<string>();
             //Get an array of directories given the path
@@ -169,12 +169,8 @@ namespace BARevitTools
                                 }
                             }
                         }
-                        catch (Exception e)
+                        catch
                         {
-                            //If the file couls not be accessed, add it and the exception to the log
-                            System.Diagnostics.Debug.WriteLine(String.Format("{0} : Exception: {1}", file, e.Message));
-                            log.m_fileReadErrors.Add(file);
-                            log.m_fileReadErrors.Add("    Exception: " + e.Message);
                             continue;
                         }
                     }

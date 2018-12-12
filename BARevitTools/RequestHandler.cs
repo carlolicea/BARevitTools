@@ -132,9 +132,6 @@ namespace BARevitTools
                     case RequestId.adminDataGBDV:
                         ToolRequests.AdminDataGBDVRequest adminDataGBDVRequest = new ToolRequests.AdminDataGBDVRequest(uiApp, "Get BA Detail Views");
                         break;
-                    case RequestId.adminDataGPF:
-                        ToolRequests.AdminDataGPFRequest adminDataGPFRequest = new ToolRequests.AdminDataGPFRequest(uiApp, "Get Project Files");
-                        break;
                     case RequestId.adminFamiliesUF:
                         ToolRequests.AdminFamiliesUFRequest adminFamiliesUFRequest = new ToolRequests.AdminFamiliesUFRequest(uiApp, "Upgrade Families");
                         break;
@@ -147,10 +144,6 @@ namespace BARevitTools
                     case RequestId.adminFamiliesUFVP:
                         ToolRequests.AdminFamiliesUFVPRequest adminFamiliesUFVPRequest = new ToolRequests.AdminFamiliesUFVPRequest(uiApp, "Update Family Version Parameter");
                         break;
-                    case RequestId.testApp:
-                        ToolRequests.AdminSandboxSetPreviewHost adminSandboxSetPreviewHost = new ToolRequests.AdminSandboxSetPreviewHost(uiApp, "testapp");
-                        break;
-
                     default:
                         break;
                 }

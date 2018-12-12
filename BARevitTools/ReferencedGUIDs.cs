@@ -40,7 +40,6 @@ namespace BARevitTools
         public static Guid setupUPguid = new Guid("3D7E83D1-3C77-47DC-9727-AD361F2B92AA");
         public static Guid adminDataGFFguid = new Guid("E8A5A450-3FFA-4E9E-85A7-5313117395D0");
         public static Guid adminDataGBDVguid = new Guid("3a795cce-4fb6-4c3c-b309-1f4291cfc027");
-        public static Guid adminDataGPFguid = new Guid("AD21F151-F895-4F37-89EA-988894C59EF4");
         public static Guid adminFamiliesUFguid = new Guid("c5fab6ff-4fda-41f8-962d-ce2628bc164d");
         public static Guid adminFamiliesBAPguid = new Guid("9724E094-207E-44E3-AC00-B743A7C946D6");
         public static Guid adminFamiliesBRPguid = new Guid("0DBD168A-AD10-43D4-91B2-5D64C73BF1D6");

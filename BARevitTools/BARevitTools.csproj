@@ -153,7 +153,6 @@
     <Compile Include="RVTOperations.cs" />
     <Compile Include="ToolRequests\AdminDataGBDVRequest.cs" />
     <Compile Include="ToolRequests\AdminDataGFFRequest.cs" />
-    <Compile Include="ToolRequests\AdminDataGPFRequest.cs" />
     <Compile Include="ToolRequests\AdminFamiliesBAPRequest.cs" />
     <Compile Include="ToolRequests\AdminFamiliesBRPRequest.cs" />
     <Compile Include="ToolRequests\AdminFamiliesUFRequest.cs" />
@@ -175,7 +174,7 @@
     <Compile Include="ToolRequests\QaqcRLSRequest.cs" />
     <Compile Include="ToolRequests\RoomsCDRTRequest.cs" />
     <Compile Include="ToolRequests\RoomsSRNNRequest.cs" />
-    <Compile Include="ToolRequests\AdminSandboxSetPreviewHost.cs" />
+    <None Include="ToolRequests\AdminSandboxSetPreviewHost.cs" />
     <Compile Include="ToolRequests\SetupCWSRequest.cs" />
     <Compile Include="ToolRequests\SetupUPRequest.cs" />
     <Compile Include="ToolRequests\SheetsCSLRequest.cs" />

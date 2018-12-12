@@ -10,7 +10,7 @@ namespace BARevitTools
     {
         //
         //The current last number used for switch case IDs
-        private const int currentnumber = 038;
+        private const int currentnumber = 037;
 
         //Multicategory Create Family From Excel
         public const int multiCatCFFE1 = 001;
@@ -71,8 +71,6 @@ namespace BARevitTools
         public const int adminDataGFF = 026;
         //Admin Get BA Details
         public const int adminDataGBDV = 033;
-        //Admin Get Project Files
-        public const int adminDataGPF = 038;
         //Admin Upgrade Families
         public const int adminFamiliesUF = 036;
         //Admin Bulk Add Parameters
@@ -83,9 +81,5 @@ namespace BARevitTools
         public const int adminFamiliesDFB = 029;
         //Admin Update Family Version Parameter
         public const int adminFamiliesUFVP = 037;
-        //Admin Package Manager
-        public const int adminTemplatesPM = 032;
-
-        public const int testApp = 999;
     }
 }

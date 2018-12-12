@@ -288,22 +288,10 @@ namespace BARevitTools
                     this.adminDataGFFButton.Checked = true;
                     this.adminDataGBDVLayoutPanel.Visible = false;
                     this.adminDataGBDVButton.Checked = false;
-                    this.adminDataGPFLayoutPanel.Visible = false;
-                    this.adminDataGPFButton.Checked = false;
                     break;
                 case ReferencedSwitchCaseIds.adminDataGBDV:
                     this.adminDataGBDVLayoutPanel.Visible = true;
                     this.adminDataGBDVButton.Checked = true;
-                    this.adminDataGFFLayoutPanel.Visible = false;
-                    this.adminDataGFFButton.Checked = false;
-                    this.adminDataGPFLayoutPanel.Visible = false;
-                    this.adminDataGPFButton.Checked = false;
-                    break;
-                case ReferencedSwitchCaseIds.adminDataGPF:
-                    this.adminDataGPFLayoutPanel.Visible = true;
-                    this.adminDataGPFButton.Checked = true;
-                    this.adminDataGBDVLayoutPanel.Visible = false;
-                    this.adminDataGBDVButton.Checked = false;
                     this.adminDataGFFLayoutPanel.Visible = false;
                     this.adminDataGFFButton.Checked = false;
                     break;
@@ -361,11 +349,6 @@ namespace BARevitTools
                     this.adminFamiliesBAPButton.Checked = false;
                     this.adminFamiliesBRPLayoutPanel.Visible = false;
                     this.adminFamiliesBRPButton.Checked = false;
-                    break;
-
-                case ReferencedSwitchCaseIds.adminTemplatesPM:
-                    this.adminTemplatePMLayoutPanel.Visible = true;
-                    this.adminTemplatePMButton.Checked = true;
                     break;
                 default:
                     break;
@@ -2883,96 +2866,7 @@ namespace BARevitTools
             else { MessageBox.Show("Something unaccounted for created an error."); }
         }
         #endregion adminDataGBDV
-
-        #region adminDataGPF
-        public DataTable adminDataGPFExportTable = null;
-        private void AdminDataGPFButton_Click(object sender, EventArgs e)
-        {
-            MainUI uiForm = Application.thisApp.newMainUi;
-            if (Directory.Exists(@"\\boulderassociates.com\projects"))
-            {                
-                foreach (int i in uiForm.adminDataGPFSelectDataDrivesListBox.CheckedIndices)
-                {
-                    string drivePath = "";
-                    string driveName = uiForm.adminDataGPFSelectDataDrivesListBox.Items[i].ToString();
-                    switch (driveName)
-                    {
-                        case "Boulder Projects":
-                            drivePath = Properties.Settings.Default.BABoulderProjects;
-                            break;
-                        case "Dallas Projects":
-                            drivePath = Properties.Settings.Default.BADallasProjects;
-                            break;
-                        case "OC Projects":
-                            drivePath = Properties.Settings.Default.BAOcProjects;
-                            break;
-                        case "SAC Projects":
-                            drivePath = Properties.Settings.Default.BASacProjects;
-                            break;
-                        case "SF Projects":
-                            drivePath = Properties.Settings.Default.BASfProjects;
-                            break;
-                        default:
-                            break;
-                    }
-                    if (!Directory.Exists(drivePath))
-                    {
-                        MessageBox.Show(String.Format("Could not connect to {0}", drivePath));
-                    }
-                    uiForm.adminDataGPFSelectDataDrivesListBox.SetItemCheckState(i, CheckState.Unchecked);
-                }                
-                uiForm.adminDataGPFSelectDataDateCheckBox.CheckState = CheckState.Unchecked;
-                uiForm.adminDataGPFResultsTextBox.Text = "";
-                uiForm.adminDataGPFCollectDataProgressBar.Visible = false;
-                uiForm.adminDataGPFCollectDataProgressBar.Value = 0;
-                uiForm.adminDataGPFSelectDataDatePicker.Value = DateTime.Today;
-                uiForm.adminDataGPFCollectDataWaitLabel.Visible = false;
-                uiForm.adminDataGPFExportCSVDirectoryTextBox.Text = "<Save Directory>";
-                uiForm.adminDataGPFExportCSVFileNameTextBox.Text = "<File Export Name>";
-
-                SqlConnection newConnection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
-                if (newConnection != null)
-                {
-                    List<string> dtNames = DatabaseOperations.SqlGetTableNames(newConnection);
-                    foreach (string name in dtNames)
-                    {
-                        uiForm.adminDataGPFExportDbSelectDbComboBox.Items.Add(name);
-                        uiForm.adminDataGPFExportDbSelectDbComboBox.Text = BARevitTools.Properties.Settings.Default.SqlBARevitProjectFilesTable;
-                    }
-                }
-                else
-                {
-                    uiForm.adminDataGPFExportDbSelectDbComboBox.Text = "SQL Database Connection Failed";
-                }
-            }   
-            else
-            {
-                DisableUIFeatures.DisableControls(uiForm.adminDataGPFLayoutPanel.Controls, @"\\boulderassociates.com\projects");
-            }            
-
-            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminDataGPFguid, adminDataGPFButton.Text, Environment.UserName.ToString(), DateTime.Now);
-            this.SwitchActivePanel(ReferencedSwitchCaseIds.adminDataGPF);
-        }
-        private void AdminDataGPFExportDbRunButton_Click(object sender, EventArgs e)
-        {
-            bool confirmation = VerifySelectionDialog.VerifyDataTable(BARevitTools.Application.thisApp.newMainUi.adminDataGPFExportDbSelectDbComboBox.Text);
-        }
-        private void AdminDataGPFExportCSVRunButton_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void AdminDataGPFExportCSVDirectoryButton_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void AdminDataGPFCollectDataButton_Click(object sender, EventArgs e)
-        {
-            BARevitTools.Application.thisApp.newMainUi.adminDataGPFCollectDataWaitLabel.Visible = true;
-            m_ExEvent.Raise();
-            MakeRequest(RequestId.adminDataGPF);
-        }
-        #endregion adminDataGPF
-
+        
         #region adminFamiliesUF
         private void AdminFamiliesUFButton_Click(object sender, EventArgs e)
         {
@@ -3507,179 +3401,10 @@ namespace BARevitTools
             MakeRequest(RequestId.adminFamiliesUFVP);
         }
         #endregion adminFamiliesUFVP
-
-        //In Development
-        #region adminTemplatesPM
-        private void AdminTemplatePMButton_Click(object sender, EventArgs e)
-        {
-            //Open a SQL connection and get the tables from the database
-            SqlConnection sqlConnection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
-            
-            //If a connection was able to be made, continue
-            if (sqlConnection != null)
-            {
-                DataTable sqlTables = sqlConnection.GetSchema("Tables");
-                DataTable dt = new DataTable();
-
-                //List the existing tables
-                List<string> existingTables = new List<string>();
-                foreach (DataRow row in sqlTables.Rows)
-                {
-                    string tableName = (string)row[2];
-                    existingTables.Add(tableName);
-                }
-
-                try
-                {
-                    //If the table for the packages already exists, get it
-                    if (existingTables.Contains(BARevitTools.Properties.Settings.Default.SqlBAPackagesDataTable))
-                    {
-                        //Get everything from the SQL table and fill a DataTable
-                        using (SqlCommand command = new SqlCommand("SELECT * FROM " + BARevitTools.Properties.Settings.Default.SqlBAPackagesDataTable, sqlConnection))
-                        {
-                            SqlDataAdapter da = new SqlDataAdapter(command);
-                            da.Fill(dt);
-                            da.Dispose();
-                        }
-
-                        //Find the unique package names from the DataTable's Packages column
-                        var uniquePackagesQuery =
-                            from row in dt.AsEnumerable()
-                            group row["Packages"] by row["Packages"] into packageGroup
-                            select packageGroup;
-
-                        //Make a list of the packages
-                        List<string> allNames = new List<string>();
-                        foreach (var name in uniquePackagesQuery)
-                        {
-                            allNames.Add(Convert.ToString(name));
-                        }
-
-                        //Find unique package names to add to the list
-                        List<string> packageNames = allNames.Distinct().ToList();
-
-                        //Assuming there were package names...
-                        if (packageNames.Count > 0)
-                        {
-                            //Add the package names to the combo box dropdown
-                            foreach (string packageName in packageNames)
-                            {
-                                BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Items.Add(packageName);
-                                BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Enabled = true;
-                            }
-                        }
-                    }
-
-                    //If the table for packages does not exist, go forward with filling out the tree view
-                    else
-                    {
-                        BARevitTools.Application.thisApp.newMainUi.adminTemplatePMPickPackageComboBox.Enabled = false;
-                        //Get both tables by calling the adminTemplateGetFamiliesAndDetails method
-                        List<DataTable> treeViewData = this.AdminTemplateGetFamiliesAndDetails(sqlConnection);
-                        DataTable familiesTable = treeViewData[0]; //Index 0 is the families table
-                        DataTable detailsTable = treeViewData[1]; //Index 1 is the details table
-
-                        //Fill the tree view with the two tables
-                        this.AdminTemplateFillTreeView(familiesTable, detailsTable);
-                    }
-                }
-                catch (Exception f)
-                {
-                    MessageBox.Show(f.ToString(), "SQL Connection Error");
-                    sqlConnection.Close();
-                }
-
-                sqlConnection.Close();
-            } 
-            //If the connection to the SQL database could not be made, report it.
-            else
-            {
-                MessageBox.Show(String.Format("Could not connect to {0}", BARevitTools.Properties.Settings.Default.SqlServerName));
-            }
-        }
-        private List<DataTable> AdminTemplateGetFamiliesAndDetails(SqlConnection sqlConnection)
-        {
-            //Creating datatables from the SQL databases for the families and details
-            List<DataTable> output = new List<DataTable>();
-            DataTable familyTable = new DataTable();
-            DataTable detailsTable = new DataTable();
-            using (SqlCommand sqlCommand = new SqlCommand(
-                "SELECT DISTINCT FamilyName, FamilyCategory " +
-                "FROM " + BARevitTools.Properties.Settings.Default.SqlBARevitFamiliesDataTable+" " +
-                "ORDER BY FamilyName", sqlConnection))
-            {
-                SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
-                da.Fill(familyTable);
-                da.Dispose();
-            }
-            using (SqlCommand sqlCommand = new SqlCommand("SELECT * FROM " + BARevitTools.Properties.Settings.Default.SqlBADetailsDataTable, sqlConnection))
-            {
-                SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
-                da.Fill(detailsTable);
-                da.Dispose();
-            }
-            //Return the list containing both tables
-            output.Add(familyTable);
-            output.Add(detailsTable);            
-            return output;
-        }
-        private void AdminTemplatePMPickPackageComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //
-            //
-            //Come back to filling out the tree view based on the package selected
-            //
-            //
-        }
-        private void AdminTemplateFillTreeView(DataTable familiesTable, DataTable detailsTable)
-        {
-            //Get all families in the BA Families so those in the SQL database can be verified as existing
-            List<string> currentFamilyPaths = GeneralOperations.GetAllRvtFamilies(Properties.Settings.Default.RevitBAFamilyLibraryPath);
-            List<string> currentFamilyNames = new List<string>();
-            foreach (string path in currentFamilyPaths)
-            {
-                currentFamilyNames.Add(Path.GetFileNameWithoutExtension(path));
-            }
-            //Add a column to check if the family still exists
-            familiesTable.Columns.Add("Exists", typeof(Boolean));
-
-            foreach (DataRow row in familiesTable.Rows)
-            {
-                if (currentFamilyNames.Contains(row["FamilyName"]))
-                {
-                    row["Exists"] = true;
-                }
-                else
-                {
-                    row["Exists"] = false;
-                }
-            }
-
-
-        }
-        #endregion adminTemplatesPM
-        //In Development
-
-        #region sandBoxTools
-        public System.Windows.Forms.Integration.ElementHost PreviewHost
-        {
-            get
-            {
-                return sandBoxElementHost;
-            }
-        }
-        private void SandBoxTestButton1_Click(object sender, EventArgs e)
-        {
-            m_ExEvent.Raise();
-            MakeRequest(RequestId.testApp);
-        }
-        #endregion sandBoxTools
-
+                
         private void OptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Need something for the options when they are done.
         }
-
-        
     }
 }
