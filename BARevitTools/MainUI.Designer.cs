@@ -968,8 +968,8 @@ namespace BARevitTools
             // 
             // adminDataToolsPanel
             // 
-            this.adminDataToolsPanel.Controls.Add(this.adminDataGFFLayoutPanel);
             this.adminDataToolsPanel.Controls.Add(this.adminDataGBDVLayoutPanel);
+            this.adminDataToolsPanel.Controls.Add(this.adminDataGFFLayoutPanel);
             this.adminDataToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adminDataToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.adminDataToolsPanel.Margin = new System.Windows.Forms.Padding(0);

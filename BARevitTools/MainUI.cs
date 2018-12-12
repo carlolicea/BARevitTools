@@ -2647,7 +2647,10 @@ namespace BARevitTools
             }
             else
             {
+                uiForm.adminDataGFFSqlExportComboBox.Enabled = false;
+                uiForm.adminDataGFFSqlExportRunButton.Enabled = false;
                 uiForm.adminDataGFFSqlExportComboBox.Text = "SQL Database Connection Failed";
+                uiForm.Update();
             }            
             SwitchActivePanel(ReferencedSwitchCaseIds.adminDataGFF);
         }
@@ -2811,6 +2814,16 @@ namespace BARevitTools
             uiForm.adminDataGBDVWaitLabel.Visible = false;
             uiForm.adminDataGBDVExportCsvDirectoryTextBox.Text = "<Save Directory>";
             uiForm.adminDataGBDVExportCsvTextBox.Text = "<File Export Name>";
+            SqlConnection connection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
+            if (connection == null)
+            {
+                uiForm.adminDataGBDVExportDbRunButton.Enabled = false;
+                uiForm.Update();
+            }
+            else
+            {
+                DatabaseOperations.SqlCloseConnection(connection);
+            }
             DatabaseOperations.CollectUserInputData(ReferencedGuids.adminDataGBDVguid, adminDataGBDVButton.Text, Environment.UserName.ToString(), DateTime.Now);
             SwitchActivePanel(ReferencedSwitchCaseIds.adminDataGBDV);
         }
