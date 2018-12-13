@@ -16,14 +16,17 @@ namespace BARevitTools.ToolRequests
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             RVTDocument doc = uiApp.ActiveUIDocument.Document;
 
+            List<string> backupFamilies = GeneralOperations.GetAllRvtBackupFamilies(uiForm.adminFamiliesUFVPDirectoryTextBox.Text);
+            GeneralOperations.CleanRfaBackups(backupFamilies);
+
             List<string> familyFiles = new List<string>();
             if (uiForm.adminFamiliesUFVPCheckBox.Checked)
             {
-                familyFiles = GeneralOperations.GetAllRvtFamilies(BARevitTools.Properties.Settings.Default.RevitBAFamilyLibraryPath, uiForm.adminFamiliesUFVPDatePicker.Value, true);
+                familyFiles = GeneralOperations.GetAllRvtFamilies(uiForm.adminFamiliesUFVPDirectoryTextBox.Text, uiForm.adminFamiliesUFVPDatePicker.Value, true);
             }
             else
             {
-                familyFiles = GeneralOperations.GetAllRvtFamilies(BARevitTools.Properties.Settings.Default.RevitBAFamilyLibraryPath);
+                familyFiles = GeneralOperations.GetAllRvtFamilies(uiForm.adminFamiliesUFVPDirectoryTextBox.Text);
             }
            
 
@@ -64,8 +67,7 @@ namespace BARevitTools.ToolRequests
                             SetParameters(uiApp, familyFile, sharedParameterDefinitions[Properties.Settings.Default.RevitUFVPParameter]);
                             uiForm.adminFamiliesUFVPProgressBar.PerformStep();
                         }
-                        List<string> backupFamilies = GeneralOperations.GetAllRvtBackupFamilies(Properties.Settings.Default.RevitBAFamilyLibraryPath);
-                        GeneralOperations.CleanRfaBackups(backupFamilies);
+                        
                     }
                     else if (sharedParametersIsAccessible && !sharedParameterDefinitions.Keys.Contains(BARevitTools.Properties.Settings.Default.RevitUFVPParameter))
                     {                        
@@ -76,7 +78,12 @@ namespace BARevitTools.ToolRequests
                 catch (Exception e)
                 {
                     MessageBox.Show(e.ToString());
-                }                
+                }   
+                finally
+                {
+                    List<string> backupFamilies2 = GeneralOperations.GetAllRvtBackupFamilies(uiForm.adminFamiliesUFVPDirectoryTextBox.Text);
+                    GeneralOperations.CleanRfaBackups(backupFamilies2);
+                }
             }
         }
 

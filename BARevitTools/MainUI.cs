@@ -3098,6 +3098,15 @@ namespace BARevitTools
                 }
             }
         }
+        private void adminFamiliesBAPParametersDGV_MouseUp(object sender, MouseEventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            if (e.Button == MouseButtons.Right)
+            {
+                uiForm.dataFamiliesBAPParametersContextMenu.Show(uiForm.adminFamiliesBAPFamiliesDGV, e.Location);
+                uiForm.dataFamiliesBAPParametersContextMenu.Show(Cursor.Position);
+            }
+        }
         private void AdminFamiliesBAPSelectAllButton_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in BARevitTools.Application.thisApp.newMainUi.adminFamiliesBAPFamiliesDGV.Rows)
@@ -3384,6 +3393,7 @@ namespace BARevitTools
                 }
             }
             GeneralOperations.DeleteFiles(filesToDelete);
+            uiForm.adminFamiliesDFBFamiliesDGV.Rows.Clear();
         }
         #endregion adminFamiliesDFB
 
@@ -3398,6 +3408,7 @@ namespace BARevitTools
             uiForm.adminFamiliesUFVPProgressBar.Visible = false;
             uiForm.adminFamiliesUFVPProgressBar.Value = 0;
             uiForm.adminFamiliesUFVPDatePicker.Value = DateTime.Today;
+            uiForm.adminFamiliesUFVPDirectoryTextBox.Text = Properties.Settings.Default.RevitBAFamilyLibraryPath;
 
             SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesUFVP);
             DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesUFVPguid, bulkUpdatePublishVersionToolStripMenuItem.Text, Environment.UserName.ToString(), DateTime.Now);
@@ -3405,14 +3416,35 @@ namespace BARevitTools
         }
         private void AdminFamiliesUFVPRunButton_Click(object sender, EventArgs e)
         {
-            m_ExEvent.Raise();
-            MakeRequest(RequestId.adminFamiliesUFVP);
+            MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
+            if (uiForm.adminFamiliesUFVPDirectoryTextBox.Text!= "No Directory Set")
+            {
+                m_ExEvent.Raise();
+                MakeRequest(RequestId.adminFamiliesUFVP);
+            }
+            else
+            {
+                MessageBox.Show("No directory to search was set");
+            }
+        }
+        private void adminFamiliesUFVPDirectoryButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            string directory = GeneralOperations.GetDirectory();
+            if (directory != "")
+            {
+                uiForm.adminFamiliesUFVPDirectoryTextBox.Text = directory;
+            }
+            else
+            {
+                uiForm.adminFamiliesUFVPDirectoryTextBox.Text = "No Directory Set";
+            }
         }
         #endregion adminFamiliesUFVP
-                
+
         private void OptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Need something for the options when they are done.
-        }
+        }        
     }
 }

@@ -51,6 +51,19 @@ namespace BARevitTools
             this.adminDataGBDVButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.adminDataToolsPanel = new System.Windows.Forms.Panel();
+            this.adminDataGBDVLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminDataGBDVCollectPanel = new System.Windows.Forms.Panel();
+            this.adminDataGBDVWaitLabel = new System.Windows.Forms.Label();
+            this.adminDataGBDVCollectButton = new System.Windows.Forms.Button();
+            this.adminDataGBDVExportDbPanel = new System.Windows.Forms.Panel();
+            this.adminDataGBDVExportDbRunButton = new System.Windows.Forms.Button();
+            this.adminDataGBDVExportDbLabel = new System.Windows.Forms.Label();
+            this.adminDataGBDVExportCsvPanel = new System.Windows.Forms.Panel();
+            this.adminDataGBDVExportCsvDirectoryTextBox = new System.Windows.Forms.TextBox();
+            this.adminDataGBDVExportCsvSelectDirectoryButton = new System.Windows.Forms.Button();
+            this.adminDataGBDVExportCsvRunButton = new System.Windows.Forms.Button();
+            this.adminDataGBDVExportCsvTextBox = new System.Windows.Forms.TextBox();
+            this.adminDataGBDVExportCsvLabel = new System.Windows.Forms.Label();
             this.adminDataGFFLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminDataGFFCollectDataPanel = new System.Windows.Forms.Panel();
             this.adminDataGFFCollectDataWaitLabel = new System.Windows.Forms.Label();
@@ -90,19 +103,6 @@ namespace BARevitTools
             this.adminDataGFFDatePanel = new System.Windows.Forms.Panel();
             this.adminDataGFFDatePicker = new System.Windows.Forms.DateTimePicker();
             this.adminDataGFFDateCheckBox = new System.Windows.Forms.CheckBox();
-            this.adminDataGBDVLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.adminDataGBDVCollectPanel = new System.Windows.Forms.Panel();
-            this.adminDataGBDVWaitLabel = new System.Windows.Forms.Label();
-            this.adminDataGBDVCollectButton = new System.Windows.Forms.Button();
-            this.adminDataGBDVExportDbPanel = new System.Windows.Forms.Panel();
-            this.adminDataGBDVExportDbRunButton = new System.Windows.Forms.Button();
-            this.adminDataGBDVExportDbLabel = new System.Windows.Forms.Label();
-            this.adminDataGBDVExportCsvPanel = new System.Windows.Forms.Panel();
-            this.adminDataGBDVExportCsvDirectoryTextBox = new System.Windows.Forms.TextBox();
-            this.adminDataGBDVExportCsvSelectDirectoryButton = new System.Windows.Forms.Button();
-            this.adminDataGBDVExportCsvRunButton = new System.Windows.Forms.Button();
-            this.adminDataGBDVExportCsvTextBox = new System.Windows.Forms.TextBox();
-            this.adminDataGBDVExportCsvLabel = new System.Windows.Forms.Label();
             this.adminFamiliesTab = new System.Windows.Forms.TabPage();
             this.adminFamiliesLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesToolStrip = new System.Windows.Forms.ToolStrip();
@@ -116,13 +116,6 @@ namespace BARevitTools
             this.bulkUpdatePublishVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesUFVPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.adminFamiliesUFVPControlsPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesUFVPCheckBox = new System.Windows.Forms.CheckBox();
-            this.adminFamiliesUFVPDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.adminFamiliesUFVPProgressBar = new System.Windows.Forms.ProgressBar();
-            this.adminFamiliesUFVPRunButton = new System.Windows.Forms.Button();
-            this.adminFamiliesUFVPInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.adminFamiliesBAPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesBAPRunPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBAPDoneLabel = new System.Windows.Forms.Label();
@@ -141,6 +134,13 @@ namespace BARevitTools
             this.adminFamiliesBAPFamiliesDGV = new System.Windows.Forms.DataGridView();
             this.adminFamiliesBAPFamiliesDirectoryPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBAPDirectorySelectButton = new System.Windows.Forms.Button();
+            this.adminFamiliesUFVPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesUFVPControlsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFVPCheckBox = new System.Windows.Forms.CheckBox();
+            this.adminFamiliesUFVPDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.adminFamiliesUFVPProgressBar = new System.Windows.Forms.ProgressBar();
+            this.adminFamiliesUFVPRunButton = new System.Windows.Forms.Button();
+            this.adminFamiliesUFVPInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.adminFamiliesUFLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesUFFullSyncPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesUFFullSyncCheckbox = new System.Windows.Forms.CheckBox();
@@ -527,6 +527,18 @@ namespace BARevitTools
             this.setupSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.setupUPButton = new System.Windows.Forms.ToolStripButton();
             this.setupToolsPanel = new System.Windows.Forms.Panel();
+            this.setupCWSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.setupCWSDefinedLabel = new System.Windows.Forms.Label();
+            this.setupCWSExtendedListBox = new System.Windows.Forms.CheckedListBox();
+            this.setupCWSExtendedLabel = new System.Windows.Forms.Label();
+            this.setupCWSInstructionsPanel = new System.Windows.Forms.Panel();
+            this.setupCWSInstructionsTextBox = new System.Windows.Forms.TextBox();
+            this.setupCWSDefaultLabel = new System.Windows.Forms.Label();
+            this.setupCWSDefaultListBox = new System.Windows.Forms.ListBox();
+            this.setupCWSUserDataGridView = new System.Windows.Forms.DataGridView();
+            this.WorksetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.setupCWSRunPanel = new System.Windows.Forms.Panel();
+            this.setupCWSRunButton = new System.Windows.Forms.Button();
             this.setupUPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.setupUPInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.setupUPDataGridView = new System.Windows.Forms.DataGridView();
@@ -550,18 +562,6 @@ namespace BARevitTools
             this.setupUPUpgradingToRevitLabel = new System.Windows.Forms.Label();
             this.setupUPUpgradingFromRevitLabel = new System.Windows.Forms.Label();
             this.setupUPUpgradingFromLabel = new System.Windows.Forms.Label();
-            this.setupCWSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.setupCWSDefinedLabel = new System.Windows.Forms.Label();
-            this.setupCWSExtendedListBox = new System.Windows.Forms.CheckedListBox();
-            this.setupCWSExtendedLabel = new System.Windows.Forms.Label();
-            this.setupCWSInstructionsPanel = new System.Windows.Forms.Panel();
-            this.setupCWSInstructionsTextBox = new System.Windows.Forms.TextBox();
-            this.setupCWSDefaultLabel = new System.Windows.Forms.Label();
-            this.setupCWSDefaultListBox = new System.Windows.Forms.ListBox();
-            this.setupCWSUserDataGridView = new System.Windows.Forms.DataGridView();
-            this.WorksetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.setupCWSRunPanel = new System.Windows.Forms.Panel();
-            this.setupCWSRunButton = new System.Windows.Forms.Button();
             this.UIFormMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -569,6 +569,8 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminFamiliesUFVPDirectoryButton = new System.Windows.Forms.Button();
+            this.adminFamiliesUFVPDirectoryTextBox = new System.Windows.Forms.TextBox();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -578,6 +580,10 @@ namespace BARevitTools
             this.adminDataTabLayoutPanel.SuspendLayout();
             this.adminDataToolStrip.SuspendLayout();
             this.adminDataToolsPanel.SuspendLayout();
+            this.adminDataGBDVLayoutPanel.SuspendLayout();
+            this.adminDataGBDVCollectPanel.SuspendLayout();
+            this.adminDataGBDVExportDbPanel.SuspendLayout();
+            this.adminDataGBDVExportCsvPanel.SuspendLayout();
             this.adminDataGFFLayoutPanel.SuspendLayout();
             this.adminDataGFFCollectDataPanel.SuspendLayout();
             this.adminDataGFFSqlExportPanel.SuspendLayout();
@@ -592,16 +598,10 @@ namespace BARevitTools
             this.adminDataGFFCollectionsSlowestCheckedListPanel.SuspendLayout();
             this.adminDataGFFSearchDirectoryPanel.SuspendLayout();
             this.adminDataGFFDatePanel.SuspendLayout();
-            this.adminDataGBDVLayoutPanel.SuspendLayout();
-            this.adminDataGBDVCollectPanel.SuspendLayout();
-            this.adminDataGBDVExportDbPanel.SuspendLayout();
-            this.adminDataGBDVExportCsvPanel.SuspendLayout();
             this.adminFamiliesTab.SuspendLayout();
             this.adminFamiliesLayoutPanel.SuspendLayout();
             this.adminFamiliesToolStrip.SuspendLayout();
             this.adminFamiliesToolsPanel.SuspendLayout();
-            this.adminFamiliesUFVPLayoutPanel.SuspendLayout();
-            this.adminFamiliesUFVPControlsPanel.SuspendLayout();
             this.adminFamiliesBAPLayoutPanel.SuspendLayout();
             this.adminFamiliesBAPRunPanel.SuspendLayout();
             this.adminFamiliesBAPSplitPanel.SuspendLayout();
@@ -616,6 +616,8 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBAPFamiliesDGV)).BeginInit();
             this.adminFamiliesBAPFamiliesDirectoryPanel.SuspendLayout();
+            this.adminFamiliesUFVPLayoutPanel.SuspendLayout();
+            this.adminFamiliesUFVPControlsPanel.SuspendLayout();
             this.adminFamiliesUFLayoutPanel.SuspendLayout();
             this.adminFamiliesUFFullSyncPanel.SuspendLayout();
             this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.SuspendLayout();
@@ -804,16 +806,16 @@ namespace BARevitTools
             this.setupLayoutPanel.SuspendLayout();
             this.setupToolStrip.SuspendLayout();
             this.setupToolsPanel.SuspendLayout();
+            this.setupCWSLayoutPanel.SuspendLayout();
+            this.setupCWSInstructionsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.setupCWSUserDataGridView)).BeginInit();
+            this.setupCWSRunPanel.SuspendLayout();
             this.setupUPLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.setupUPDataGridView)).BeginInit();
             this.setupUPControlsPanel1.SuspendLayout();
             this.setupUPRunPanel.SuspendLayout();
             this.setupUPControlsPanel2.SuspendLayout();
             this.setupUPControlsPanel3.SuspendLayout();
-            this.setupCWSLayoutPanel.SuspendLayout();
-            this.setupCWSInstructionsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.setupCWSUserDataGridView)).BeginInit();
-            this.setupCWSRunPanel.SuspendLayout();
             this.UIFormMenuStrip.SuspendLayout();
             this.dataFamiliesBAPParametersContextMenu.SuspendLayout();
             this.dataFamiliesBRPParametersContextMenu.SuspendLayout();
@@ -974,6 +976,167 @@ namespace BARevitTools
             this.adminDataToolsPanel.Name = "adminDataToolsPanel";
             this.adminDataToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminDataToolsPanel.TabIndex = 2;
+            // 
+            // adminDataGBDVLayoutPanel
+            // 
+            this.adminDataGBDVLayoutPanel.ColumnCount = 2;
+            this.adminDataGBDVLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.adminDataGBDVLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.adminDataGBDVLayoutPanel.Controls.Add(this.adminDataGBDVCollectPanel, 0, 0);
+            this.adminDataGBDVLayoutPanel.Controls.Add(this.adminDataGBDVExportDbPanel, 0, 1);
+            this.adminDataGBDVLayoutPanel.Controls.Add(this.adminDataGBDVExportCsvPanel, 1, 1);
+            this.adminDataGBDVLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDataGBDVLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminDataGBDVLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.adminDataGBDVLayoutPanel.Name = "adminDataGBDVLayoutPanel";
+            this.adminDataGBDVLayoutPanel.RowCount = 2;
+            this.adminDataGBDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.adminDataGBDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminDataGBDVLayoutPanel.Size = new System.Drawing.Size(710, 339);
+            this.adminDataGBDVLayoutPanel.TabIndex = 7;
+            this.adminDataGBDVLayoutPanel.Visible = false;
+            // 
+            // adminDataGBDVCollectPanel
+            // 
+            this.adminDataGBDVCollectPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminDataGBDVLayoutPanel.SetColumnSpan(this.adminDataGBDVCollectPanel, 2);
+            this.adminDataGBDVCollectPanel.Controls.Add(this.adminDataGBDVWaitLabel);
+            this.adminDataGBDVCollectPanel.Controls.Add(this.adminDataGBDVCollectButton);
+            this.adminDataGBDVCollectPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDataGBDVCollectPanel.Location = new System.Drawing.Point(2, 2);
+            this.adminDataGBDVCollectPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.adminDataGBDVCollectPanel.Name = "adminDataGBDVCollectPanel";
+            this.adminDataGBDVCollectPanel.Size = new System.Drawing.Size(706, 32);
+            this.adminDataGBDVCollectPanel.TabIndex = 0;
+            // 
+            // adminDataGBDVWaitLabel
+            // 
+            this.adminDataGBDVWaitLabel.AutoSize = true;
+            this.adminDataGBDVWaitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminDataGBDVWaitLabel.Location = new System.Drawing.Point(104, 9);
+            this.adminDataGBDVWaitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.adminDataGBDVWaitLabel.Name = "adminDataGBDVWaitLabel";
+            this.adminDataGBDVWaitLabel.Size = new System.Drawing.Size(87, 13);
+            this.adminDataGBDVWaitLabel.TabIndex = 1;
+            this.adminDataGBDVWaitLabel.Text = "Please Wait...";
+            this.adminDataGBDVWaitLabel.Visible = false;
+            // 
+            // adminDataGBDVCollectButton
+            // 
+            this.adminDataGBDVCollectButton.AutoSize = true;
+            this.adminDataGBDVCollectButton.Location = new System.Drawing.Point(3, 5);
+            this.adminDataGBDVCollectButton.Margin = new System.Windows.Forms.Padding(2);
+            this.adminDataGBDVCollectButton.Name = "adminDataGBDVCollectButton";
+            this.adminDataGBDVCollectButton.Size = new System.Drawing.Size(97, 23);
+            this.adminDataGBDVCollectButton.TabIndex = 0;
+            this.adminDataGBDVCollectButton.Text = "COLLECT DATA";
+            this.adminDataGBDVCollectButton.UseVisualStyleBackColor = true;
+            this.adminDataGBDVCollectButton.Click += new System.EventHandler(this.AdminDataGBDVCollectButton_Click);
+            // 
+            // adminDataGBDVExportDbPanel
+            // 
+            this.adminDataGBDVExportDbPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminDataGBDVExportDbPanel.Controls.Add(this.adminDataGBDVExportDbRunButton);
+            this.adminDataGBDVExportDbPanel.Controls.Add(this.adminDataGBDVExportDbLabel);
+            this.adminDataGBDVExportDbPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDataGBDVExportDbPanel.Location = new System.Drawing.Point(2, 38);
+            this.adminDataGBDVExportDbPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.adminDataGBDVExportDbPanel.Name = "adminDataGBDVExportDbPanel";
+            this.adminDataGBDVExportDbPanel.Size = new System.Drawing.Size(351, 299);
+            this.adminDataGBDVExportDbPanel.TabIndex = 1;
+            // 
+            // adminDataGBDVExportDbRunButton
+            // 
+            this.adminDataGBDVExportDbRunButton.Location = new System.Drawing.Point(3, 23);
+            this.adminDataGBDVExportDbRunButton.Name = "adminDataGBDVExportDbRunButton";
+            this.adminDataGBDVExportDbRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminDataGBDVExportDbRunButton.TabIndex = 2;
+            this.adminDataGBDVExportDbRunButton.Text = "RUN";
+            this.adminDataGBDVExportDbRunButton.UseVisualStyleBackColor = true;
+            this.adminDataGBDVExportDbRunButton.Click += new System.EventHandler(this.AdminDataGBDVExportDbRunButton_Click);
+            // 
+            // adminDataGBDVExportDbLabel
+            // 
+            this.adminDataGBDVExportDbLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminDataGBDVExportDbLabel.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.adminDataGBDVExportDbLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminDataGBDVExportDbLabel.Location = new System.Drawing.Point(3, 0);
+            this.adminDataGBDVExportDbLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.adminDataGBDVExportDbLabel.Name = "adminDataGBDVExportDbLabel";
+            this.adminDataGBDVExportDbLabel.Size = new System.Drawing.Size(342, 20);
+            this.adminDataGBDVExportDbLabel.TabIndex = 0;
+            this.adminDataGBDVExportDbLabel.Text = "EXPORT TO DATABASE";
+            this.adminDataGBDVExportDbLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // adminDataGBDVExportCsvPanel
+            // 
+            this.adminDataGBDVExportCsvPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminDataGBDVExportCsvPanel.Controls.Add(this.adminDataGBDVExportCsvDirectoryTextBox);
+            this.adminDataGBDVExportCsvPanel.Controls.Add(this.adminDataGBDVExportCsvSelectDirectoryButton);
+            this.adminDataGBDVExportCsvPanel.Controls.Add(this.adminDataGBDVExportCsvRunButton);
+            this.adminDataGBDVExportCsvPanel.Controls.Add(this.adminDataGBDVExportCsvTextBox);
+            this.adminDataGBDVExportCsvPanel.Controls.Add(this.adminDataGBDVExportCsvLabel);
+            this.adminDataGBDVExportCsvPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDataGBDVExportCsvPanel.Location = new System.Drawing.Point(357, 38);
+            this.adminDataGBDVExportCsvPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.adminDataGBDVExportCsvPanel.Name = "adminDataGBDVExportCsvPanel";
+            this.adminDataGBDVExportCsvPanel.Size = new System.Drawing.Size(351, 299);
+            this.adminDataGBDVExportCsvPanel.TabIndex = 2;
+            // 
+            // adminDataGBDVExportCsvDirectoryTextBox
+            // 
+            this.adminDataGBDVExportCsvDirectoryTextBox.Location = new System.Drawing.Point(141, 49);
+            this.adminDataGBDVExportCsvDirectoryTextBox.Name = "adminDataGBDVExportCsvDirectoryTextBox";
+            this.adminDataGBDVExportCsvDirectoryTextBox.ReadOnly = true;
+            this.adminDataGBDVExportCsvDirectoryTextBox.Size = new System.Drawing.Size(205, 20);
+            this.adminDataGBDVExportCsvDirectoryTextBox.TabIndex = 4;
+            this.adminDataGBDVExportCsvDirectoryTextBox.Text = "<Save Directory>";
+            // 
+            // adminDataGBDVExportCsvSelectDirectoryButton
+            // 
+            this.adminDataGBDVExportCsvSelectDirectoryButton.Location = new System.Drawing.Point(3, 47);
+            this.adminDataGBDVExportCsvSelectDirectoryButton.Name = "adminDataGBDVExportCsvSelectDirectoryButton";
+            this.adminDataGBDVExportCsvSelectDirectoryButton.Size = new System.Drawing.Size(132, 23);
+            this.adminDataGBDVExportCsvSelectDirectoryButton.TabIndex = 3;
+            this.adminDataGBDVExportCsvSelectDirectoryButton.Text = "Select Export Location";
+            this.adminDataGBDVExportCsvSelectDirectoryButton.UseVisualStyleBackColor = true;
+            this.adminDataGBDVExportCsvSelectDirectoryButton.Click += new System.EventHandler(this.AdminDataGBDVExportCsvSelectDirectoryButton_Click);
+            // 
+            // adminDataGBDVExportCsvRunButton
+            // 
+            this.adminDataGBDVExportCsvRunButton.Location = new System.Drawing.Point(3, 76);
+            this.adminDataGBDVExportCsvRunButton.Name = "adminDataGBDVExportCsvRunButton";
+            this.adminDataGBDVExportCsvRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminDataGBDVExportCsvRunButton.TabIndex = 2;
+            this.adminDataGBDVExportCsvRunButton.Text = "RUN";
+            this.adminDataGBDVExportCsvRunButton.UseVisualStyleBackColor = true;
+            this.adminDataGBDVExportCsvRunButton.Click += new System.EventHandler(this.AdminDataGBDVExportCsvRunButton_Click);
+            // 
+            // adminDataGBDVExportCsvTextBox
+            // 
+            this.adminDataGBDVExportCsvTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminDataGBDVExportCsvTextBox.Location = new System.Drawing.Point(3, 22);
+            this.adminDataGBDVExportCsvTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.adminDataGBDVExportCsvTextBox.Name = "adminDataGBDVExportCsvTextBox";
+            this.adminDataGBDVExportCsvTextBox.Size = new System.Drawing.Size(342, 20);
+            this.adminDataGBDVExportCsvTextBox.TabIndex = 1;
+            this.adminDataGBDVExportCsvTextBox.Text = "<File Export Name>";
+            // 
+            // adminDataGBDVExportCsvLabel
+            // 
+            this.adminDataGBDVExportCsvLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminDataGBDVExportCsvLabel.BackColor = System.Drawing.Color.YellowGreen;
+            this.adminDataGBDVExportCsvLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminDataGBDVExportCsvLabel.Location = new System.Drawing.Point(3, 0);
+            this.adminDataGBDVExportCsvLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.adminDataGBDVExportCsvLabel.Name = "adminDataGBDVExportCsvLabel";
+            this.adminDataGBDVExportCsvLabel.Size = new System.Drawing.Size(342, 20);
+            this.adminDataGBDVExportCsvLabel.TabIndex = 0;
+            this.adminDataGBDVExportCsvLabel.Text = "EXPORT TO CSV";
+            this.adminDataGBDVExportCsvLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // adminDataGFFLayoutPanel
             // 
@@ -1467,167 +1630,6 @@ namespace BARevitTools
             this.adminDataGFFDateCheckBox.Text = "Use Date Range";
             this.adminDataGFFDateCheckBox.UseVisualStyleBackColor = true;
             // 
-            // adminDataGBDVLayoutPanel
-            // 
-            this.adminDataGBDVLayoutPanel.ColumnCount = 2;
-            this.adminDataGBDVLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.adminDataGBDVLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.adminDataGBDVLayoutPanel.Controls.Add(this.adminDataGBDVCollectPanel, 0, 0);
-            this.adminDataGBDVLayoutPanel.Controls.Add(this.adminDataGBDVExportDbPanel, 0, 1);
-            this.adminDataGBDVLayoutPanel.Controls.Add(this.adminDataGBDVExportCsvPanel, 1, 1);
-            this.adminDataGBDVLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminDataGBDVLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminDataGBDVLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.adminDataGBDVLayoutPanel.Name = "adminDataGBDVLayoutPanel";
-            this.adminDataGBDVLayoutPanel.RowCount = 2;
-            this.adminDataGBDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.adminDataGBDVLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminDataGBDVLayoutPanel.Size = new System.Drawing.Size(710, 339);
-            this.adminDataGBDVLayoutPanel.TabIndex = 7;
-            this.adminDataGBDVLayoutPanel.Visible = false;
-            // 
-            // adminDataGBDVCollectPanel
-            // 
-            this.adminDataGBDVCollectPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminDataGBDVLayoutPanel.SetColumnSpan(this.adminDataGBDVCollectPanel, 2);
-            this.adminDataGBDVCollectPanel.Controls.Add(this.adminDataGBDVWaitLabel);
-            this.adminDataGBDVCollectPanel.Controls.Add(this.adminDataGBDVCollectButton);
-            this.adminDataGBDVCollectPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminDataGBDVCollectPanel.Location = new System.Drawing.Point(2, 2);
-            this.adminDataGBDVCollectPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.adminDataGBDVCollectPanel.Name = "adminDataGBDVCollectPanel";
-            this.adminDataGBDVCollectPanel.Size = new System.Drawing.Size(706, 32);
-            this.adminDataGBDVCollectPanel.TabIndex = 0;
-            // 
-            // adminDataGBDVWaitLabel
-            // 
-            this.adminDataGBDVWaitLabel.AutoSize = true;
-            this.adminDataGBDVWaitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminDataGBDVWaitLabel.Location = new System.Drawing.Point(104, 9);
-            this.adminDataGBDVWaitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.adminDataGBDVWaitLabel.Name = "adminDataGBDVWaitLabel";
-            this.adminDataGBDVWaitLabel.Size = new System.Drawing.Size(87, 13);
-            this.adminDataGBDVWaitLabel.TabIndex = 1;
-            this.adminDataGBDVWaitLabel.Text = "Please Wait...";
-            this.adminDataGBDVWaitLabel.Visible = false;
-            // 
-            // adminDataGBDVCollectButton
-            // 
-            this.adminDataGBDVCollectButton.AutoSize = true;
-            this.adminDataGBDVCollectButton.Location = new System.Drawing.Point(3, 5);
-            this.adminDataGBDVCollectButton.Margin = new System.Windows.Forms.Padding(2);
-            this.adminDataGBDVCollectButton.Name = "adminDataGBDVCollectButton";
-            this.adminDataGBDVCollectButton.Size = new System.Drawing.Size(97, 23);
-            this.adminDataGBDVCollectButton.TabIndex = 0;
-            this.adminDataGBDVCollectButton.Text = "COLLECT DATA";
-            this.adminDataGBDVCollectButton.UseVisualStyleBackColor = true;
-            this.adminDataGBDVCollectButton.Click += new System.EventHandler(this.AdminDataGBDVCollectButton_Click);
-            // 
-            // adminDataGBDVExportDbPanel
-            // 
-            this.adminDataGBDVExportDbPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminDataGBDVExportDbPanel.Controls.Add(this.adminDataGBDVExportDbRunButton);
-            this.adminDataGBDVExportDbPanel.Controls.Add(this.adminDataGBDVExportDbLabel);
-            this.adminDataGBDVExportDbPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminDataGBDVExportDbPanel.Location = new System.Drawing.Point(2, 38);
-            this.adminDataGBDVExportDbPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.adminDataGBDVExportDbPanel.Name = "adminDataGBDVExportDbPanel";
-            this.adminDataGBDVExportDbPanel.Size = new System.Drawing.Size(351, 299);
-            this.adminDataGBDVExportDbPanel.TabIndex = 1;
-            // 
-            // adminDataGBDVExportDbRunButton
-            // 
-            this.adminDataGBDVExportDbRunButton.Location = new System.Drawing.Point(3, 23);
-            this.adminDataGBDVExportDbRunButton.Name = "adminDataGBDVExportDbRunButton";
-            this.adminDataGBDVExportDbRunButton.Size = new System.Drawing.Size(75, 23);
-            this.adminDataGBDVExportDbRunButton.TabIndex = 2;
-            this.adminDataGBDVExportDbRunButton.Text = "RUN";
-            this.adminDataGBDVExportDbRunButton.UseVisualStyleBackColor = true;
-            this.adminDataGBDVExportDbRunButton.Click += new System.EventHandler(this.AdminDataGBDVExportDbRunButton_Click);
-            // 
-            // adminDataGBDVExportDbLabel
-            // 
-            this.adminDataGBDVExportDbLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminDataGBDVExportDbLabel.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.adminDataGBDVExportDbLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminDataGBDVExportDbLabel.Location = new System.Drawing.Point(3, 0);
-            this.adminDataGBDVExportDbLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.adminDataGBDVExportDbLabel.Name = "adminDataGBDVExportDbLabel";
-            this.adminDataGBDVExportDbLabel.Size = new System.Drawing.Size(342, 20);
-            this.adminDataGBDVExportDbLabel.TabIndex = 0;
-            this.adminDataGBDVExportDbLabel.Text = "EXPORT TO DATABASE";
-            this.adminDataGBDVExportDbLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // adminDataGBDVExportCsvPanel
-            // 
-            this.adminDataGBDVExportCsvPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminDataGBDVExportCsvPanel.Controls.Add(this.adminDataGBDVExportCsvDirectoryTextBox);
-            this.adminDataGBDVExportCsvPanel.Controls.Add(this.adminDataGBDVExportCsvSelectDirectoryButton);
-            this.adminDataGBDVExportCsvPanel.Controls.Add(this.adminDataGBDVExportCsvRunButton);
-            this.adminDataGBDVExportCsvPanel.Controls.Add(this.adminDataGBDVExportCsvTextBox);
-            this.adminDataGBDVExportCsvPanel.Controls.Add(this.adminDataGBDVExportCsvLabel);
-            this.adminDataGBDVExportCsvPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminDataGBDVExportCsvPanel.Location = new System.Drawing.Point(357, 38);
-            this.adminDataGBDVExportCsvPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.adminDataGBDVExportCsvPanel.Name = "adminDataGBDVExportCsvPanel";
-            this.adminDataGBDVExportCsvPanel.Size = new System.Drawing.Size(351, 299);
-            this.adminDataGBDVExportCsvPanel.TabIndex = 2;
-            // 
-            // adminDataGBDVExportCsvDirectoryTextBox
-            // 
-            this.adminDataGBDVExportCsvDirectoryTextBox.Location = new System.Drawing.Point(141, 49);
-            this.adminDataGBDVExportCsvDirectoryTextBox.Name = "adminDataGBDVExportCsvDirectoryTextBox";
-            this.adminDataGBDVExportCsvDirectoryTextBox.ReadOnly = true;
-            this.adminDataGBDVExportCsvDirectoryTextBox.Size = new System.Drawing.Size(205, 20);
-            this.adminDataGBDVExportCsvDirectoryTextBox.TabIndex = 4;
-            this.adminDataGBDVExportCsvDirectoryTextBox.Text = "<Save Directory>";
-            // 
-            // adminDataGBDVExportCsvSelectDirectoryButton
-            // 
-            this.adminDataGBDVExportCsvSelectDirectoryButton.Location = new System.Drawing.Point(3, 47);
-            this.adminDataGBDVExportCsvSelectDirectoryButton.Name = "adminDataGBDVExportCsvSelectDirectoryButton";
-            this.adminDataGBDVExportCsvSelectDirectoryButton.Size = new System.Drawing.Size(132, 23);
-            this.adminDataGBDVExportCsvSelectDirectoryButton.TabIndex = 3;
-            this.adminDataGBDVExportCsvSelectDirectoryButton.Text = "Select Export Location";
-            this.adminDataGBDVExportCsvSelectDirectoryButton.UseVisualStyleBackColor = true;
-            this.adminDataGBDVExportCsvSelectDirectoryButton.Click += new System.EventHandler(this.AdminDataGBDVExportCsvSelectDirectoryButton_Click);
-            // 
-            // adminDataGBDVExportCsvRunButton
-            // 
-            this.adminDataGBDVExportCsvRunButton.Location = new System.Drawing.Point(3, 76);
-            this.adminDataGBDVExportCsvRunButton.Name = "adminDataGBDVExportCsvRunButton";
-            this.adminDataGBDVExportCsvRunButton.Size = new System.Drawing.Size(75, 23);
-            this.adminDataGBDVExportCsvRunButton.TabIndex = 2;
-            this.adminDataGBDVExportCsvRunButton.Text = "RUN";
-            this.adminDataGBDVExportCsvRunButton.UseVisualStyleBackColor = true;
-            this.adminDataGBDVExportCsvRunButton.Click += new System.EventHandler(this.AdminDataGBDVExportCsvRunButton_Click);
-            // 
-            // adminDataGBDVExportCsvTextBox
-            // 
-            this.adminDataGBDVExportCsvTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminDataGBDVExportCsvTextBox.Location = new System.Drawing.Point(3, 22);
-            this.adminDataGBDVExportCsvTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.adminDataGBDVExportCsvTextBox.Name = "adminDataGBDVExportCsvTextBox";
-            this.adminDataGBDVExportCsvTextBox.Size = new System.Drawing.Size(342, 20);
-            this.adminDataGBDVExportCsvTextBox.TabIndex = 1;
-            this.adminDataGBDVExportCsvTextBox.Text = "<File Export Name>";
-            // 
-            // adminDataGBDVExportCsvLabel
-            // 
-            this.adminDataGBDVExportCsvLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminDataGBDVExportCsvLabel.BackColor = System.Drawing.Color.YellowGreen;
-            this.adminDataGBDVExportCsvLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminDataGBDVExportCsvLabel.Location = new System.Drawing.Point(3, 0);
-            this.adminDataGBDVExportCsvLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.adminDataGBDVExportCsvLabel.Name = "adminDataGBDVExportCsvLabel";
-            this.adminDataGBDVExportCsvLabel.Size = new System.Drawing.Size(342, 20);
-            this.adminDataGBDVExportCsvLabel.TabIndex = 0;
-            this.adminDataGBDVExportCsvLabel.Text = "EXPORT TO CSV";
-            this.adminDataGBDVExportCsvLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // adminFamiliesTab
             // 
             this.adminFamiliesTab.BackColor = System.Drawing.SystemColors.Control;
@@ -1769,83 +1771,6 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesToolsPanel.TabIndex = 1;
             // 
-            // adminFamiliesUFVPLayoutPanel
-            // 
-            this.adminFamiliesUFVPLayoutPanel.ColumnCount = 1;
-            this.adminFamiliesUFVPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPControlsPanel, 0, 1);
-            this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPInstructionsTextBox, 0, 0);
-            this.adminFamiliesUFVPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFVPLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesUFVPLayoutPanel.Name = "adminFamiliesUFVPLayoutPanel";
-            this.adminFamiliesUFVPLayoutPanel.RowCount = 2;
-            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
-            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesUFVPLayoutPanel.Size = new System.Drawing.Size(710, 339);
-            this.adminFamiliesUFVPLayoutPanel.TabIndex = 1;
-            this.adminFamiliesUFVPLayoutPanel.Visible = false;
-            // 
-            // adminFamiliesUFVPControlsPanel
-            // 
-            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPCheckBox);
-            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDatePicker);
-            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPProgressBar);
-            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPRunButton);
-            this.adminFamiliesUFVPControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFVPControlsPanel.Location = new System.Drawing.Point(0, 75);
-            this.adminFamiliesUFVPControlsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesUFVPControlsPanel.Name = "adminFamiliesUFVPControlsPanel";
-            this.adminFamiliesUFVPControlsPanel.Size = new System.Drawing.Size(710, 264);
-            this.adminFamiliesUFVPControlsPanel.TabIndex = 1;
-            // 
-            // adminFamiliesUFVPCheckBox
-            // 
-            this.adminFamiliesUFVPCheckBox.AutoSize = true;
-            this.adminFamiliesUFVPCheckBox.Location = new System.Drawing.Point(3, 7);
-            this.adminFamiliesUFVPCheckBox.Name = "adminFamiliesUFVPCheckBox";
-            this.adminFamiliesUFVPCheckBox.Size = new System.Drawing.Size(71, 17);
-            this.adminFamiliesUFVPCheckBox.TabIndex = 3;
-            this.adminFamiliesUFVPCheckBox.Text = "Use Date";
-            this.adminFamiliesUFVPCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // adminFamiliesUFVPDatePicker
-            // 
-            this.adminFamiliesUFVPDatePicker.Location = new System.Drawing.Point(84, 6);
-            this.adminFamiliesUFVPDatePicker.Name = "adminFamiliesUFVPDatePicker";
-            this.adminFamiliesUFVPDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.adminFamiliesUFVPDatePicker.TabIndex = 2;
-            // 
-            // adminFamiliesUFVPProgressBar
-            // 
-            this.adminFamiliesUFVPProgressBar.Location = new System.Drawing.Point(84, 33);
-            this.adminFamiliesUFVPProgressBar.Name = "adminFamiliesUFVPProgressBar";
-            this.adminFamiliesUFVPProgressBar.Size = new System.Drawing.Size(620, 23);
-            this.adminFamiliesUFVPProgressBar.TabIndex = 1;
-            this.adminFamiliesUFVPProgressBar.Visible = false;
-            // 
-            // adminFamiliesUFVPRunButton
-            // 
-            this.adminFamiliesUFVPRunButton.Location = new System.Drawing.Point(3, 33);
-            this.adminFamiliesUFVPRunButton.Name = "adminFamiliesUFVPRunButton";
-            this.adminFamiliesUFVPRunButton.Size = new System.Drawing.Size(75, 23);
-            this.adminFamiliesUFVPRunButton.TabIndex = 0;
-            this.adminFamiliesUFVPRunButton.Text = "RUN";
-            this.adminFamiliesUFVPRunButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesUFVPRunButton.Click += new System.EventHandler(this.AdminFamiliesUFVPRunButton_Click);
-            // 
-            // adminFamiliesUFVPInstructionsTextBox
-            // 
-            this.adminFamiliesUFVPInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.adminFamiliesUFVPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFVPInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesUFVPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesUFVPInstructionsTextBox.Multiline = true;
-            this.adminFamiliesUFVPInstructionsTextBox.Name = "adminFamiliesUFVPInstructionsTextBox";
-            this.adminFamiliesUFVPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.adminFamiliesUFVPInstructionsTextBox.Size = new System.Drawing.Size(710, 75);
-            this.adminFamiliesUFVPInstructionsTextBox.TabIndex = 2;
-            this.adminFamiliesUFVPInstructionsTextBox.Text = resources.GetString("adminFamiliesUFVPInstructionsTextBox.Text");
-            // 
             // adminFamiliesBAPLayoutPanel
             // 
             this.adminFamiliesBAPLayoutPanel.ColumnCount = 2;
@@ -1967,6 +1892,8 @@ namespace BARevitTools
             this.adminFamiliesBAPParametersDGV.RowHeadersWidth = 15;
             this.adminFamiliesBAPParametersDGV.Size = new System.Drawing.Size(364, 228);
             this.adminFamiliesBAPParametersDGV.TabIndex = 0;
+            this.adminFamiliesBAPParametersDGV.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AdminFamiliesBAPParametersDGV_CellMouseUp);
+            this.adminFamiliesBAPParametersDGV.MouseUp += new System.Windows.Forms.MouseEventHandler(this.adminFamiliesBAPParametersDGV_MouseUp);
             // 
             // adminFamiliesBAPSharedParametersPanel
             // 
@@ -2077,6 +2004,85 @@ namespace BARevitTools
             this.adminFamiliesBAPDirectorySelectButton.Text = "Select Directory";
             this.adminFamiliesBAPDirectorySelectButton.UseVisualStyleBackColor = true;
             this.adminFamiliesBAPDirectorySelectButton.Click += new System.EventHandler(this.AdminFamiliesBAPSelectDirectoryButton_Click);
+            // 
+            // adminFamiliesUFVPLayoutPanel
+            // 
+            this.adminFamiliesUFVPLayoutPanel.ColumnCount = 1;
+            this.adminFamiliesUFVPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPControlsPanel, 0, 1);
+            this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPInstructionsTextBox, 0, 0);
+            this.adminFamiliesUFVPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFVPLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesUFVPLayoutPanel.Name = "adminFamiliesUFVPLayoutPanel";
+            this.adminFamiliesUFVPLayoutPanel.RowCount = 2;
+            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesUFVPLayoutPanel.Size = new System.Drawing.Size(710, 339);
+            this.adminFamiliesUFVPLayoutPanel.TabIndex = 1;
+            this.adminFamiliesUFVPLayoutPanel.Visible = false;
+            // 
+            // adminFamiliesUFVPControlsPanel
+            // 
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDirectoryTextBox);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDirectoryButton);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPCheckBox);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDatePicker);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPProgressBar);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPRunButton);
+            this.adminFamiliesUFVPControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFVPControlsPanel.Location = new System.Drawing.Point(0, 75);
+            this.adminFamiliesUFVPControlsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFVPControlsPanel.Name = "adminFamiliesUFVPControlsPanel";
+            this.adminFamiliesUFVPControlsPanel.Size = new System.Drawing.Size(710, 264);
+            this.adminFamiliesUFVPControlsPanel.TabIndex = 1;
+            // 
+            // adminFamiliesUFVPCheckBox
+            // 
+            this.adminFamiliesUFVPCheckBox.AutoSize = true;
+            this.adminFamiliesUFVPCheckBox.Location = new System.Drawing.Point(3, 32);
+            this.adminFamiliesUFVPCheckBox.Name = "adminFamiliesUFVPCheckBox";
+            this.adminFamiliesUFVPCheckBox.Size = new System.Drawing.Size(71, 17);
+            this.adminFamiliesUFVPCheckBox.TabIndex = 3;
+            this.adminFamiliesUFVPCheckBox.Text = "Use Date";
+            this.adminFamiliesUFVPCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // adminFamiliesUFVPDatePicker
+            // 
+            this.adminFamiliesUFVPDatePicker.Location = new System.Drawing.Point(118, 32);
+            this.adminFamiliesUFVPDatePicker.Name = "adminFamiliesUFVPDatePicker";
+            this.adminFamiliesUFVPDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.adminFamiliesUFVPDatePicker.TabIndex = 2;
+            // 
+            // adminFamiliesUFVPProgressBar
+            // 
+            this.adminFamiliesUFVPProgressBar.Location = new System.Drawing.Point(118, 58);
+            this.adminFamiliesUFVPProgressBar.Name = "adminFamiliesUFVPProgressBar";
+            this.adminFamiliesUFVPProgressBar.Size = new System.Drawing.Size(586, 23);
+            this.adminFamiliesUFVPProgressBar.TabIndex = 1;
+            this.adminFamiliesUFVPProgressBar.Visible = false;
+            // 
+            // adminFamiliesUFVPRunButton
+            // 
+            this.adminFamiliesUFVPRunButton.Location = new System.Drawing.Point(3, 58);
+            this.adminFamiliesUFVPRunButton.Name = "adminFamiliesUFVPRunButton";
+            this.adminFamiliesUFVPRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesUFVPRunButton.TabIndex = 0;
+            this.adminFamiliesUFVPRunButton.Text = "RUN";
+            this.adminFamiliesUFVPRunButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesUFVPRunButton.Click += new System.EventHandler(this.AdminFamiliesUFVPRunButton_Click);
+            // 
+            // adminFamiliesUFVPInstructionsTextBox
+            // 
+            this.adminFamiliesUFVPInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesUFVPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFVPInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesUFVPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFVPInstructionsTextBox.Multiline = true;
+            this.adminFamiliesUFVPInstructionsTextBox.Name = "adminFamiliesUFVPInstructionsTextBox";
+            this.adminFamiliesUFVPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.adminFamiliesUFVPInstructionsTextBox.Size = new System.Drawing.Size(710, 75);
+            this.adminFamiliesUFVPInstructionsTextBox.TabIndex = 2;
+            this.adminFamiliesUFVPInstructionsTextBox.Text = resources.GetString("adminFamiliesUFVPInstructionsTextBox.Text");
             // 
             // adminFamiliesUFLayoutPanel
             // 
@@ -6874,14 +6880,191 @@ namespace BARevitTools
             // 
             // setupToolsPanel
             // 
-            this.setupToolsPanel.Controls.Add(this.setupUPLayoutPanel);
             this.setupToolsPanel.Controls.Add(this.setupCWSLayoutPanel);
+            this.setupToolsPanel.Controls.Add(this.setupUPLayoutPanel);
             this.setupToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setupToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.setupToolsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.setupToolsPanel.Name = "setupToolsPanel";
             this.setupToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.setupToolsPanel.TabIndex = 1;
+            // 
+            // setupCWSLayoutPanel
+            // 
+            this.setupCWSLayoutPanel.AutoSize = true;
+            this.setupCWSLayoutPanel.ColumnCount = 3;
+            this.setupCWSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.3F));
+            this.setupCWSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.3F));
+            this.setupCWSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.4F));
+            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSDefinedLabel, 2, 1);
+            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSExtendedListBox, 1, 2);
+            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSExtendedLabel, 1, 1);
+            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSInstructionsPanel, 0, 0);
+            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSDefaultLabel, 0, 1);
+            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSDefaultListBox, 0, 2);
+            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSUserDataGridView, 2, 2);
+            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSRunPanel, 0, 3);
+            this.setupCWSLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setupCWSLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.setupCWSLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.setupCWSLayoutPanel.Name = "setupCWSLayoutPanel";
+            this.setupCWSLayoutPanel.RowCount = 4;
+            this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.setupCWSLayoutPanel.Size = new System.Drawing.Size(716, 345);
+            this.setupCWSLayoutPanel.TabIndex = 1;
+            this.setupCWSLayoutPanel.Visible = false;
+            // 
+            // setupCWSDefinedLabel
+            // 
+            this.setupCWSDefinedLabel.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.setupCWSDefinedLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.setupCWSDefinedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setupCWSDefinedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setupCWSDefinedLabel.Location = new System.Drawing.Point(476, 100);
+            this.setupCWSDefinedLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.setupCWSDefinedLabel.Name = "setupCWSDefinedLabel";
+            this.setupCWSDefinedLabel.Size = new System.Drawing.Size(240, 35);
+            this.setupCWSDefinedLabel.TabIndex = 1;
+            this.setupCWSDefinedLabel.Text = "User Defined";
+            this.setupCWSDefinedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // setupCWSExtendedListBox
+            // 
+            this.setupCWSExtendedListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.setupCWSExtendedListBox.CheckOnClick = true;
+            this.setupCWSExtendedListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setupCWSExtendedListBox.FormattingEnabled = true;
+            this.setupCWSExtendedListBox.IntegralHeight = false;
+            this.setupCWSExtendedListBox.Items.AddRange(new object[] {
+            "LINK RVT A Site Control",
+            "LINK RVT S Structural",
+            "LINK RVT MEP Electrical",
+            "LINK RVT MEP Mechanical",
+            "LINK RVT MEP Plumbing"});
+            this.setupCWSExtendedListBox.Location = new System.Drawing.Point(238, 135);
+            this.setupCWSExtendedListBox.Margin = new System.Windows.Forms.Padding(0);
+            this.setupCWSExtendedListBox.Name = "setupCWSExtendedListBox";
+            this.setupCWSExtendedListBox.Size = new System.Drawing.Size(238, 175);
+            this.setupCWSExtendedListBox.TabIndex = 1;
+            // 
+            // setupCWSExtendedLabel
+            // 
+            this.setupCWSExtendedLabel.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.setupCWSExtendedLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.setupCWSExtendedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setupCWSExtendedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setupCWSExtendedLabel.Location = new System.Drawing.Point(238, 100);
+            this.setupCWSExtendedLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.setupCWSExtendedLabel.Name = "setupCWSExtendedLabel";
+            this.setupCWSExtendedLabel.Size = new System.Drawing.Size(238, 35);
+            this.setupCWSExtendedLabel.TabIndex = 1;
+            this.setupCWSExtendedLabel.Text = "BA Extended";
+            this.setupCWSExtendedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // setupCWSInstructionsPanel
+            // 
+            this.setupCWSLayoutPanel.SetColumnSpan(this.setupCWSInstructionsPanel, 3);
+            this.setupCWSInstructionsPanel.Controls.Add(this.setupCWSInstructionsTextBox);
+            this.setupCWSInstructionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setupCWSInstructionsPanel.Location = new System.Drawing.Point(0, 0);
+            this.setupCWSInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.setupCWSInstructionsPanel.Name = "setupCWSInstructionsPanel";
+            this.setupCWSInstructionsPanel.Size = new System.Drawing.Size(716, 100);
+            this.setupCWSInstructionsPanel.TabIndex = 0;
+            // 
+            // setupCWSInstructionsTextBox
+            // 
+            this.setupCWSInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.setupCWSInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setupCWSInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
+            this.setupCWSInstructionsTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.setupCWSInstructionsTextBox.Multiline = true;
+            this.setupCWSInstructionsTextBox.Name = "setupCWSInstructionsTextBox";
+            this.setupCWSInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.setupCWSInstructionsTextBox.Size = new System.Drawing.Size(716, 100);
+            this.setupCWSInstructionsTextBox.TabIndex = 0;
+            this.setupCWSInstructionsTextBox.Text = resources.GetString("setupCWSInstructionsTextBox.Text");
+            // 
+            // setupCWSDefaultLabel
+            // 
+            this.setupCWSDefaultLabel.BackColor = System.Drawing.Color.GreenYellow;
+            this.setupCWSDefaultLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.setupCWSDefaultLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setupCWSDefaultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setupCWSDefaultLabel.Location = new System.Drawing.Point(0, 100);
+            this.setupCWSDefaultLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.setupCWSDefaultLabel.Name = "setupCWSDefaultLabel";
+            this.setupCWSDefaultLabel.Size = new System.Drawing.Size(238, 35);
+            this.setupCWSDefaultLabel.TabIndex = 0;
+            this.setupCWSDefaultLabel.Text = "BA Default";
+            this.setupCWSDefaultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // setupCWSDefaultListBox
+            // 
+            this.setupCWSDefaultListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.setupCWSDefaultListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setupCWSDefaultListBox.FormattingEnabled = true;
+            this.setupCWSDefaultListBox.IntegralHeight = false;
+            this.setupCWSDefaultListBox.Items.AddRange(new object[] {
+            "Arch",
+            "Shared Levels and Grids",
+            "ID",
+            "Life Safety"});
+            this.setupCWSDefaultListBox.Location = new System.Drawing.Point(0, 135);
+            this.setupCWSDefaultListBox.Margin = new System.Windows.Forms.Padding(0);
+            this.setupCWSDefaultListBox.Name = "setupCWSDefaultListBox";
+            this.setupCWSDefaultListBox.Size = new System.Drawing.Size(238, 175);
+            this.setupCWSDefaultListBox.TabIndex = 0;
+            // 
+            // setupCWSUserDataGridView
+            // 
+            this.setupCWSUserDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.setupCWSUserDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.setupCWSUserDataGridView.ColumnHeadersVisible = false;
+            this.setupCWSUserDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.WorksetName});
+            this.setupCWSUserDataGridView.ContextMenuStrip = this.mgmtSetupCWSUserContextMenu;
+            this.setupCWSUserDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setupCWSUserDataGridView.Location = new System.Drawing.Point(476, 135);
+            this.setupCWSUserDataGridView.Margin = new System.Windows.Forms.Padding(0);
+            this.setupCWSUserDataGridView.Name = "setupCWSUserDataGridView";
+            this.setupCWSUserDataGridView.RowHeadersVisible = false;
+            this.setupCWSUserDataGridView.RowHeadersWidth = 250;
+            this.setupCWSUserDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.setupCWSUserDataGridView.Size = new System.Drawing.Size(240, 175);
+            this.setupCWSUserDataGridView.TabIndex = 2;
+            this.setupCWSUserDataGridView.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SetupCWSUserDataGridView_CellMouseUp);
+            // 
+            // WorksetName
+            // 
+            this.WorksetName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WorksetName.HeaderText = "Workset Name";
+            this.WorksetName.Name = "WorksetName";
+            this.WorksetName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // setupCWSRunPanel
+            // 
+            this.setupCWSLayoutPanel.SetColumnSpan(this.setupCWSRunPanel, 3);
+            this.setupCWSRunPanel.Controls.Add(this.setupCWSRunButton);
+            this.setupCWSRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setupCWSRunPanel.Location = new System.Drawing.Point(0, 310);
+            this.setupCWSRunPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.setupCWSRunPanel.Name = "setupCWSRunPanel";
+            this.setupCWSRunPanel.Size = new System.Drawing.Size(716, 35);
+            this.setupCWSRunPanel.TabIndex = 6;
+            // 
+            // setupCWSRunButton
+            // 
+            this.setupCWSRunButton.Location = new System.Drawing.Point(2, 6);
+            this.setupCWSRunButton.Name = "setupCWSRunButton";
+            this.setupCWSRunButton.Size = new System.Drawing.Size(75, 23);
+            this.setupCWSRunButton.TabIndex = 0;
+            this.setupCWSRunButton.Text = "RUN";
+            this.setupCWSRunButton.UseVisualStyleBackColor = true;
+            this.setupCWSRunButton.Click += new System.EventHandler(this.SetupCWSRunButton_Click);
             // 
             // setupUPLayoutPanel
             // 
@@ -7172,183 +7355,6 @@ namespace BARevitTools
             this.setupUPUpgradingFromLabel.TabIndex = 3;
             this.setupUPUpgradingFromLabel.Text = "Upgrading From:";
             // 
-            // setupCWSLayoutPanel
-            // 
-            this.setupCWSLayoutPanel.AutoSize = true;
-            this.setupCWSLayoutPanel.ColumnCount = 3;
-            this.setupCWSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.3F));
-            this.setupCWSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.3F));
-            this.setupCWSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.4F));
-            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSDefinedLabel, 2, 1);
-            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSExtendedListBox, 1, 2);
-            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSExtendedLabel, 1, 1);
-            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSInstructionsPanel, 0, 0);
-            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSDefaultLabel, 0, 1);
-            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSDefaultListBox, 0, 2);
-            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSUserDataGridView, 2, 2);
-            this.setupCWSLayoutPanel.Controls.Add(this.setupCWSRunPanel, 0, 3);
-            this.setupCWSLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.setupCWSLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.setupCWSLayoutPanel.Name = "setupCWSLayoutPanel";
-            this.setupCWSLayoutPanel.RowCount = 4;
-            this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.setupCWSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.setupCWSLayoutPanel.Size = new System.Drawing.Size(716, 345);
-            this.setupCWSLayoutPanel.TabIndex = 1;
-            this.setupCWSLayoutPanel.Visible = false;
-            // 
-            // setupCWSDefinedLabel
-            // 
-            this.setupCWSDefinedLabel.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.setupCWSDefinedLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.setupCWSDefinedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSDefinedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setupCWSDefinedLabel.Location = new System.Drawing.Point(476, 100);
-            this.setupCWSDefinedLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.setupCWSDefinedLabel.Name = "setupCWSDefinedLabel";
-            this.setupCWSDefinedLabel.Size = new System.Drawing.Size(240, 35);
-            this.setupCWSDefinedLabel.TabIndex = 1;
-            this.setupCWSDefinedLabel.Text = "User Defined";
-            this.setupCWSDefinedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // setupCWSExtendedListBox
-            // 
-            this.setupCWSExtendedListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.setupCWSExtendedListBox.CheckOnClick = true;
-            this.setupCWSExtendedListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSExtendedListBox.FormattingEnabled = true;
-            this.setupCWSExtendedListBox.IntegralHeight = false;
-            this.setupCWSExtendedListBox.Items.AddRange(new object[] {
-            "LINK RVT A Site Control",
-            "LINK RVT S Structural",
-            "LINK RVT MEP Electrical",
-            "LINK RVT MEP Mechanical",
-            "LINK RVT MEP Plumbing"});
-            this.setupCWSExtendedListBox.Location = new System.Drawing.Point(238, 135);
-            this.setupCWSExtendedListBox.Margin = new System.Windows.Forms.Padding(0);
-            this.setupCWSExtendedListBox.Name = "setupCWSExtendedListBox";
-            this.setupCWSExtendedListBox.Size = new System.Drawing.Size(238, 175);
-            this.setupCWSExtendedListBox.TabIndex = 1;
-            // 
-            // setupCWSExtendedLabel
-            // 
-            this.setupCWSExtendedLabel.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.setupCWSExtendedLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.setupCWSExtendedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSExtendedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setupCWSExtendedLabel.Location = new System.Drawing.Point(238, 100);
-            this.setupCWSExtendedLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.setupCWSExtendedLabel.Name = "setupCWSExtendedLabel";
-            this.setupCWSExtendedLabel.Size = new System.Drawing.Size(238, 35);
-            this.setupCWSExtendedLabel.TabIndex = 1;
-            this.setupCWSExtendedLabel.Text = "BA Extended";
-            this.setupCWSExtendedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // setupCWSInstructionsPanel
-            // 
-            this.setupCWSLayoutPanel.SetColumnSpan(this.setupCWSInstructionsPanel, 3);
-            this.setupCWSInstructionsPanel.Controls.Add(this.setupCWSInstructionsTextBox);
-            this.setupCWSInstructionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSInstructionsPanel.Location = new System.Drawing.Point(0, 0);
-            this.setupCWSInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.setupCWSInstructionsPanel.Name = "setupCWSInstructionsPanel";
-            this.setupCWSInstructionsPanel.Size = new System.Drawing.Size(716, 100);
-            this.setupCWSInstructionsPanel.TabIndex = 0;
-            // 
-            // setupCWSInstructionsTextBox
-            // 
-            this.setupCWSInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.setupCWSInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
-            this.setupCWSInstructionsTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.setupCWSInstructionsTextBox.Multiline = true;
-            this.setupCWSInstructionsTextBox.Name = "setupCWSInstructionsTextBox";
-            this.setupCWSInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.setupCWSInstructionsTextBox.Size = new System.Drawing.Size(716, 100);
-            this.setupCWSInstructionsTextBox.TabIndex = 0;
-            this.setupCWSInstructionsTextBox.Text = resources.GetString("setupCWSInstructionsTextBox.Text");
-            // 
-            // setupCWSDefaultLabel
-            // 
-            this.setupCWSDefaultLabel.BackColor = System.Drawing.Color.GreenYellow;
-            this.setupCWSDefaultLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.setupCWSDefaultLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSDefaultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setupCWSDefaultLabel.Location = new System.Drawing.Point(0, 100);
-            this.setupCWSDefaultLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.setupCWSDefaultLabel.Name = "setupCWSDefaultLabel";
-            this.setupCWSDefaultLabel.Size = new System.Drawing.Size(238, 35);
-            this.setupCWSDefaultLabel.TabIndex = 0;
-            this.setupCWSDefaultLabel.Text = "BA Default";
-            this.setupCWSDefaultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // setupCWSDefaultListBox
-            // 
-            this.setupCWSDefaultListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.setupCWSDefaultListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSDefaultListBox.FormattingEnabled = true;
-            this.setupCWSDefaultListBox.IntegralHeight = false;
-            this.setupCWSDefaultListBox.Items.AddRange(new object[] {
-            "Arch",
-            "Shared Levels and Grids",
-            "ID",
-            "Life Safety"});
-            this.setupCWSDefaultListBox.Location = new System.Drawing.Point(0, 135);
-            this.setupCWSDefaultListBox.Margin = new System.Windows.Forms.Padding(0);
-            this.setupCWSDefaultListBox.Name = "setupCWSDefaultListBox";
-            this.setupCWSDefaultListBox.Size = new System.Drawing.Size(238, 175);
-            this.setupCWSDefaultListBox.TabIndex = 0;
-            // 
-            // setupCWSUserDataGridView
-            // 
-            this.setupCWSUserDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.setupCWSUserDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.setupCWSUserDataGridView.ColumnHeadersVisible = false;
-            this.setupCWSUserDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.WorksetName});
-            this.setupCWSUserDataGridView.ContextMenuStrip = this.mgmtSetupCWSUserContextMenu;
-            this.setupCWSUserDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSUserDataGridView.Location = new System.Drawing.Point(476, 135);
-            this.setupCWSUserDataGridView.Margin = new System.Windows.Forms.Padding(0);
-            this.setupCWSUserDataGridView.Name = "setupCWSUserDataGridView";
-            this.setupCWSUserDataGridView.RowHeadersVisible = false;
-            this.setupCWSUserDataGridView.RowHeadersWidth = 250;
-            this.setupCWSUserDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.setupCWSUserDataGridView.Size = new System.Drawing.Size(240, 175);
-            this.setupCWSUserDataGridView.TabIndex = 2;
-            this.setupCWSUserDataGridView.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SetupCWSUserDataGridView_CellMouseUp);
-            // 
-            // WorksetName
-            // 
-            this.WorksetName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WorksetName.HeaderText = "Workset Name";
-            this.WorksetName.Name = "WorksetName";
-            this.WorksetName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // setupCWSRunPanel
-            // 
-            this.setupCWSLayoutPanel.SetColumnSpan(this.setupCWSRunPanel, 3);
-            this.setupCWSRunPanel.Controls.Add(this.setupCWSRunButton);
-            this.setupCWSRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setupCWSRunPanel.Location = new System.Drawing.Point(0, 310);
-            this.setupCWSRunPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.setupCWSRunPanel.Name = "setupCWSRunPanel";
-            this.setupCWSRunPanel.Size = new System.Drawing.Size(716, 35);
-            this.setupCWSRunPanel.TabIndex = 6;
-            // 
-            // setupCWSRunButton
-            // 
-            this.setupCWSRunButton.Location = new System.Drawing.Point(2, 6);
-            this.setupCWSRunButton.Name = "setupCWSRunButton";
-            this.setupCWSRunButton.Size = new System.Drawing.Size(75, 23);
-            this.setupCWSRunButton.TabIndex = 0;
-            this.setupCWSRunButton.Text = "RUN";
-            this.setupCWSRunButton.UseVisualStyleBackColor = true;
-            this.setupCWSRunButton.Click += new System.EventHandler(this.SetupCWSRunButton_Click);
-            // 
             // UIFormMenuStrip
             // 
             this.UIFormMenuStrip.AutoSize = false;
@@ -7411,6 +7417,28 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
             // 
+            // adminFamiliesUFVPDirectoryButton
+            // 
+            this.adminFamiliesUFVPDirectoryButton.Location = new System.Drawing.Point(0, 3);
+            this.adminFamiliesUFVPDirectoryButton.Name = "adminFamiliesUFVPDirectoryButton";
+            this.adminFamiliesUFVPDirectoryButton.Size = new System.Drawing.Size(112, 23);
+            this.adminFamiliesUFVPDirectoryButton.TabIndex = 4;
+            this.adminFamiliesUFVPDirectoryButton.Text = "Select Directory";
+            this.adminFamiliesUFVPDirectoryButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesUFVPDirectoryButton.Click += new System.EventHandler(this.adminFamiliesUFVPDirectoryButton_Click);
+            // 
+            // adminFamiliesUFVPDirectoryTextBox
+            // 
+            this.adminFamiliesUFVPDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesUFVPDirectoryTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesUFVPDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminFamiliesUFVPDirectoryTextBox.Location = new System.Drawing.Point(118, 8);
+            this.adminFamiliesUFVPDirectoryTextBox.Name = "adminFamiliesUFVPDirectoryTextBox";
+            this.adminFamiliesUFVPDirectoryTextBox.ReadOnly = true;
+            this.adminFamiliesUFVPDirectoryTextBox.Size = new System.Drawing.Size(586, 13);
+            this.adminFamiliesUFVPDirectoryTextBox.TabIndex = 5;
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7434,6 +7462,12 @@ namespace BARevitTools
             this.adminDataToolStrip.ResumeLayout(false);
             this.adminDataToolStrip.PerformLayout();
             this.adminDataToolsPanel.ResumeLayout(false);
+            this.adminDataGBDVLayoutPanel.ResumeLayout(false);
+            this.adminDataGBDVCollectPanel.ResumeLayout(false);
+            this.adminDataGBDVCollectPanel.PerformLayout();
+            this.adminDataGBDVExportDbPanel.ResumeLayout(false);
+            this.adminDataGBDVExportCsvPanel.ResumeLayout(false);
+            this.adminDataGBDVExportCsvPanel.PerformLayout();
             this.adminDataGFFLayoutPanel.ResumeLayout(false);
             this.adminDataGFFCollectDataPanel.ResumeLayout(false);
             this.adminDataGFFSqlExportPanel.ResumeLayout(false);
@@ -7455,21 +7489,11 @@ namespace BARevitTools
             this.adminDataGFFSearchDirectoryPanel.PerformLayout();
             this.adminDataGFFDatePanel.ResumeLayout(false);
             this.adminDataGFFDatePanel.PerformLayout();
-            this.adminDataGBDVLayoutPanel.ResumeLayout(false);
-            this.adminDataGBDVCollectPanel.ResumeLayout(false);
-            this.adminDataGBDVCollectPanel.PerformLayout();
-            this.adminDataGBDVExportDbPanel.ResumeLayout(false);
-            this.adminDataGBDVExportCsvPanel.ResumeLayout(false);
-            this.adminDataGBDVExportCsvPanel.PerformLayout();
             this.adminFamiliesTab.ResumeLayout(false);
             this.adminFamiliesLayoutPanel.ResumeLayout(false);
             this.adminFamiliesToolStrip.ResumeLayout(false);
             this.adminFamiliesToolStrip.PerformLayout();
             this.adminFamiliesToolsPanel.ResumeLayout(false);
-            this.adminFamiliesUFVPLayoutPanel.ResumeLayout(false);
-            this.adminFamiliesUFVPLayoutPanel.PerformLayout();
-            this.adminFamiliesUFVPControlsPanel.ResumeLayout(false);
-            this.adminFamiliesUFVPControlsPanel.PerformLayout();
             this.adminFamiliesBAPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.PerformLayout();
@@ -7486,6 +7510,10 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBAPFamiliesDGV)).EndInit();
             this.adminFamiliesBAPFamiliesDirectoryPanel.ResumeLayout(false);
+            this.adminFamiliesUFVPLayoutPanel.ResumeLayout(false);
+            this.adminFamiliesUFVPLayoutPanel.PerformLayout();
+            this.adminFamiliesUFVPControlsPanel.ResumeLayout(false);
+            this.adminFamiliesUFVPControlsPanel.PerformLayout();
             this.adminFamiliesUFLayoutPanel.ResumeLayout(false);
             this.adminFamiliesUFFullSyncPanel.ResumeLayout(false);
             this.adminFamiliesUFFullSyncPanel.PerformLayout();
@@ -7735,6 +7763,11 @@ namespace BARevitTools
             this.setupToolStrip.PerformLayout();
             this.setupToolsPanel.ResumeLayout(false);
             this.setupToolsPanel.PerformLayout();
+            this.setupCWSLayoutPanel.ResumeLayout(false);
+            this.setupCWSInstructionsPanel.ResumeLayout(false);
+            this.setupCWSInstructionsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.setupCWSUserDataGridView)).EndInit();
+            this.setupCWSRunPanel.ResumeLayout(false);
             this.setupUPLayoutPanel.ResumeLayout(false);
             this.setupUPLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.setupUPDataGridView)).EndInit();
@@ -7745,11 +7778,6 @@ namespace BARevitTools
             this.setupUPControlsPanel2.PerformLayout();
             this.setupUPControlsPanel3.ResumeLayout(false);
             this.setupUPControlsPanel3.PerformLayout();
-            this.setupCWSLayoutPanel.ResumeLayout(false);
-            this.setupCWSInstructionsPanel.ResumeLayout(false);
-            this.setupCWSInstructionsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.setupCWSUserDataGridView)).EndInit();
-            this.setupCWSRunPanel.ResumeLayout(false);
             this.UIFormMenuStrip.ResumeLayout(false);
             this.UIFormMenuStrip.PerformLayout();
             this.dataFamiliesBAPParametersContextMenu.ResumeLayout(false);
@@ -8288,6 +8316,8 @@ namespace BARevitTools
         public TableLayoutPanel adminFamiliesUFLayoutPanel;
         public TableLayoutPanel adminFamiliesUFVPLayoutPanel;
         private ToolStripSeparator toolStripSeparator4;
+        private Button adminFamiliesUFVPDirectoryButton;
+        public TextBox adminFamiliesUFVPDirectoryTextBox;
     }
 }
 
