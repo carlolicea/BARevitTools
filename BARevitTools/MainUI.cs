@@ -361,17 +361,12 @@ namespace BARevitTools
         //
 
         //When a user clicks on the hyperlink on the main page of the BART UI, it will launch a web browser and the website with these events
-        private void AboutTabDevelopmentLinkURLLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
-            System.Diagnostics.Process.Start(BARevitTools.Properties.Settings.Default.BARTDevelopmentUrl);
-        }
         private void AboutTabLearningLinkURLLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(BARevitTools.Properties.Settings.Default.UrlBARTLearning);
         }
         
-        
+        //
         // MODELING TAB TOOLS
 
         //Create Families From Excel
@@ -1224,7 +1219,7 @@ namespace BARevitTools
         }
         #endregion wallsDP
 
-
+        //
         // Documentation Tab
         #region sheetsCSL
         public void SheetsCSLButton_Click(object sender, EventArgs e)

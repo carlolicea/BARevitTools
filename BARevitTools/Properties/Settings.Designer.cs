@@ -70,15 +70,6 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://trello.com/b/AwuKWC3E/bart-development")]
-        public string BARTDevelopmentUrl {
-            get {
-                return ((string)(this["BARTDevelopmentUrl"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://bimhaus.boulderassociates.com/bart")]
         public string UrlBARTLearning {
             get {
@@ -230,60 +221,6 @@ namespace BARevitTools.Properties {
         public string RevitCadDrive {
             get {
                 return ((string)(this["RevitCadDrive"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Projects\\Boulder")]
-        public string BABoulderProjects {
-            get {
-                return ((string)(this["BABoulderProjects"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Projects\\Dallas")]
-        public string BADallasProjects {
-            get {
-                return ((string)(this["BADallasProjects"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Projects\\OC")]
-        public string BAOcProjects {
-            get {
-                return ((string)(this["BAOcProjects"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Projects\\Sac")]
-        public string BASacProjects {
-            get {
-                return ((string)(this["BASacProjects"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\boulderassociates.com\\Projects\\SF")]
-        public string BASfProjects {
-            get {
-                return ((string)(this["BASfProjects"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("BAProjectFilesData")]
-        public string SqlBARevitProjectFilesTable {
-            get {
-                return ((string)(this["SqlBARevitProjectFilesTable"]));
             }
         }
         

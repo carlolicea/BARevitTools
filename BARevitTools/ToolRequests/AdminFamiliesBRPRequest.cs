@@ -35,59 +35,62 @@ namespace BARevitTools.ToolRequests
 
             uiForm.adminFamiliesBAPParametersDGV.EndEdit();
             foreach (DataGridViewRow row in uiForm.adminFamiliesBRPFamiliesDGV.Rows)
-            {
-                string filePath = row.Cells[2].Value.ToString();
-                Dictionary<string, FamilyParameter> famParams = new Dictionary<string, FamilyParameter>();
-                string rvtVersion = RVTOperations.GetRevitVersion(filePath);
-                string rvtNumber = rvtVersion.Substring(rvtVersion.Length - 4);
-                if (row.Cells[0].Value.ToString() == "True" && Convert.ToDouble(uiApp.Application.VersionNumber) >= Convert.ToDouble(rvtNumber))
+            {                
+                if (row.Cells[0].Value!= null)
                 {
-                    RVTDocument famDoc = RVTOperations.OpenRevitFile(uiApp, filePath);
-                    if (famDoc.IsFamilyDocument)
+                    string filePath = row.Cells[2].Value.ToString();
+                    Dictionary<string, FamilyParameter> famParams = new Dictionary<string, FamilyParameter>();
+                    string rvtVersion = RVTOperations.GetRevitVersion(filePath);
+                    string rvtNumber = rvtVersion.Substring(rvtVersion.Length - 4);
+                    if (row.Cells[0].Value.ToString() == "True" && Convert.ToDouble(uiApp.Application.VersionNumber) >= Convert.ToDouble(rvtNumber))
                     {
-                        bool saveFamily = false;
-                        FamilyManager familyManager = famDoc.FamilyManager;
-                        foreach (FamilyParameter famParam in familyManager.Parameters)
+                        RVTDocument famDoc = RVTOperations.OpenRevitFile(uiApp, filePath);
+                        if (famDoc.IsFamilyDocument)
                         {
-                            if (!famParams.Keys.Contains(famParam.Definition.Name))
+                            bool saveFamily = false;
+                            FamilyManager familyManager = famDoc.FamilyManager;
+                            foreach (FamilyParameter famParam in familyManager.Parameters)
                             {
-                                famParams.Add(famParam.Definition.Name, famParam);
-                            }
-                            else { continue; }
+                                if (!famParams.Keys.Contains(famParam.Definition.Name))
+                                {
+                                    famParams.Add(famParam.Definition.Name, famParam);
+                                }
+                                else { continue; }
 
-                        }
-                        foreach (DataGridViewRow paramRow in uiForm.adminFamiliesBRPParametersDGV.Rows)
-                        {
-                            try
+                            }
+                            foreach (DataGridViewRow paramRow in uiForm.adminFamiliesBRPParametersDGV.Rows)
                             {
-                                string name = paramRow.Cells[0].Value.ToString();
                                 try
                                 {
-                                    if (famParams.Keys.Contains(name))
+                                    string name = paramRow.Cells[0].Value.ToString();
+                                    try
                                     {
-                                        using (Transaction t = new Transaction(famDoc, "Remove Parameter"))
+                                        if (famParams.Keys.Contains(name))
                                         {
-                                            t.Start();
-                                            familyManager.RemoveParameter(famParams[name]);
-                                            t.Commit();
-                                            saveFamily = true;
+                                            using (Transaction t = new Transaction(famDoc, "Remove Parameter"))
+                                            {
+                                                t.Start();
+                                                familyManager.RemoveParameter(famParams[name]);
+                                                t.Commit();
+                                                saveFamily = true;
+                                            }
                                         }
                                     }
+                                    catch { continue; }
                                 }
                                 catch { continue; }
                             }
-                            catch { continue; }
+                            if (saveFamily == true)
+                            {
+                                ModelPath modelPath = ModelPathUtils.ConvertUserVisiblePathToModelPath(filePath);
+                                famDoc.SaveAs(filePath, saveAsOptions);
+                            }
                         }
-                        if (saveFamily == true)
-                        {
-                            ModelPath modelPath = ModelPathUtils.ConvertUserVisiblePathToModelPath(filePath);
-                            famDoc.SaveAs(filePath, saveAsOptions);
-                        }
+                        famDoc.Close(false);
                     }
-                    famDoc.Close(false);
-                }
-                else { continue; }
-                uiForm.adminFamiliesBRPProgressBar.PerformStep();
+                    else { continue; }
+                    uiForm.adminFamiliesBRPProgressBar.PerformStep();
+                }                
             }
             uiForm.adminFamiliesBRPProgressBar.Visible = false;
         }

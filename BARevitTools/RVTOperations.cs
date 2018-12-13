@@ -364,8 +364,7 @@ namespace BARevitTools
             return file;
         }
         public static string GetRevitVersion(string filePath)
-        {
-            
+        {            
             if (filePath != null && filePath != "")
             {
                 try

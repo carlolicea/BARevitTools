@@ -318,46 +318,6 @@
   <metadata name="mgmtSetupCWSUserContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1097, 133</value>
   </metadata>
-  <data name="aboutTabUpdatesTextBox.Text" xml:space="preserve">
-    <value>V 1.0.6 Changes:
-- Removed extraneous tabs
-- Added checks to verify network drive access. Tools that rely on network access will have their buttons deactivated if a drive cannot be reached
-- Added checks to verify database access. Tools that rely on access to the SQL database will have database export buttons disabled if they cannot make a connection
-
-V 1.0.5 Changes :
-- Added(Modeling&gt;Rooms) Create Demo Room Tags
-- Added (Modeling&gt;Materials) Accent Material Lines tool
-- Changed the Create Worksets default open worksets to All instead of Specify upon opening a local
-- Various fixes
-
-V1.0.4 Changes:
-- Various fixes
-- Fixed Create Elevations By Room tool
- 
-V 1.0.3 Changes:
-- Added (Modeling &gt; Electrical) Correct Electrical Fixture Elevation tool
-- Added (Management&gt;QA/QC) Remove Family Shared Parameters tool
-- Added (Management&gt;QA/QC) Replace Line Styles tool
-- Added (Management&gt;Setup) Upgrade Projects tool 
-- Added (Modeling&gt;Walls) Delete Parts tool
-- Added (Modeling&gt;Materials) Create Material Symbols tool
-- Added filtering functionality to (Documentation&gt;Sheets) Copy Sheet Legends tool
-- Added wildcard * functionality to the filters. Search must begin with something other than *. Example: A*5
-- Changed All Categories tab to MultiCategory
-- Changed the window behavior so it no longer stays on top of everything else
-
-V 1.0.2 Changes:
-- Fixed Unhandled Exception for Insert Sheets From Link tool.
-- Added URL for Create Elevations for explaination of how to use it relative to the Dynamo version.
-- Added URL for Swap Room Name / Number for explaination of how  to use it with Bluebeam
-
-V 1.0.1 Changes:
-- Added (Modeling&gt;All Categories) Create Families From Excel tool
-- Fixed some UI issues</value>
-  </data>
-  <metadata name="UIFormMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1272, 17</value>
-  </metadata>
   <data name="aboutTabLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAgEBLAEsAAD/7gAOQWRvYmUAZAAAAAAB/+ET9EV4aWYAAE1NACoAAAAIAAcBEgAD
@@ -2165,6 +2125,46 @@ V 1.0.1 Changes:
         fuvdf//Z
 </value>
   </data>
+  <data name="aboutTabUpdatesTextBox.Text" xml:space="preserve">
+    <value>V 1.0.6 Changes:
+- Removed extraneous tabs
+- Added checks to verify network drive access. Tools that rely on network access will have their buttons deactivated if a drive cannot be reached
+- Added checks to verify database access. Tools that rely on access to the SQL database will have database export buttons disabled if they cannot make a connection
+
+V 1.0.5 Changes :
+- Added(Modeling&gt;Rooms) Create Demo Room Tags
+- Added (Modeling&gt;Materials) Accent Material Lines tool
+- Changed the Create Worksets default open worksets to All instead of Specify upon opening a local
+- Various fixes
+
+V1.0.4 Changes:
+- Various fixes
+- Fixed Create Elevations By Room tool
+ 
+V 1.0.3 Changes:
+- Added (Modeling &gt; Electrical) Correct Electrical Fixture Elevation tool
+- Added (Management&gt;QA/QC) Remove Family Shared Parameters tool
+- Added (Management&gt;QA/QC) Replace Line Styles tool
+- Added (Management&gt;Setup) Upgrade Projects tool 
+- Added (Modeling&gt;Walls) Delete Parts tool
+- Added (Modeling&gt;Materials) Create Material Symbols tool
+- Added filtering functionality to (Documentation&gt;Sheets) Copy Sheet Legends tool
+- Added wildcard * functionality to the filters. Search must begin with something other than *. Example: A*5
+- Changed All Categories tab to MultiCategory
+- Changed the window behavior so it no longer stays on top of everything else
+
+V 1.0.2 Changes:
+- Fixed Unhandled Exception for Insert Sheets From Link tool.
+- Added URL for Create Elevations for explaination of how to use it relative to the Dynamo version.
+- Added URL for Swap Room Name / Number for explaination of how  to use it with Bluebeam
+
+V 1.0.1 Changes:
+- Added (Modeling&gt;All Categories) Create Families From Excel tool
+- Fixed some UI issues</value>
+  </data>
+  <metadata name="UIFormMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1272, 17</value>
+  </metadata>
   <metadata name="multiCatToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>591, 172</value>
   </metadata>

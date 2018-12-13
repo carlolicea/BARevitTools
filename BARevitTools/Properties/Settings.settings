@@ -17,9 +17,6 @@
     <Setting Name="BARTBAAdminUsers" Type="System.String" Scope="Application">
       <Value Profile="(Default)">clicea,mzabritski,administrator</Value>
     </Setting>
-    <Setting Name="BARTDevelopmentUrl" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://trello.com/b/AwuKWC3E/bart-development</Value>
-    </Setting>
     <Setting Name="UrlBARTLearning" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://bimhaus.boulderassociates.com/bart</Value>
     </Setting>
@@ -70,24 +67,6 @@
     </Setting>
     <Setting Name="RevitCadDrive" Type="System.String" Scope="Application">
       <Value Profile="(Default)">\\boulderassociates.com\corp\cad</Value>
-    </Setting>
-    <Setting Name="BABoulderProjects" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">\\boulderassociates.com\Projects\Boulder</Value>
-    </Setting>
-    <Setting Name="BADallasProjects" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">\\boulderassociates.com\Projects\Dallas</Value>
-    </Setting>
-    <Setting Name="BAOcProjects" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">\\boulderassociates.com\Projects\OC</Value>
-    </Setting>
-    <Setting Name="BASacProjects" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">\\boulderassociates.com\Projects\Sac</Value>
-    </Setting>
-    <Setting Name="BASfProjects" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">\\boulderassociates.com\Projects\SF</Value>
-    </Setting>
-    <Setting Name="SqlBARevitProjectFilesTable" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">BAProjectFilesData</Value>
     </Setting>
     <Setting Name="BAProjectCentralFolder" Type="System.String" Scope="Application">
       <Value Profile="(Default)">E1 Revit</Value>

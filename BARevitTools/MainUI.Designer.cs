@@ -186,8 +186,6 @@ namespace BARevitTools
             this.aboutTab = new System.Windows.Forms.TabPage();
             this.aboutTabLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.aboutTabHeaderPanel = new System.Windows.Forms.Panel();
-            this.aboutTabDevelopmentLinkURLLabel = new System.Windows.Forms.LinkLabel();
-            this.aboutTabDevelopmentLinkLabel = new System.Windows.Forms.Label();
             this.aboutTabLearningLinkURLLabel = new System.Windows.Forms.LinkLabel();
             this.aboutTabLearningLinkLabel = new System.Windows.Forms.Label();
             this.aboutTabLogo = new System.Windows.Forms.PictureBox();
@@ -2661,8 +2659,6 @@ namespace BARevitTools
             // 
             // aboutTabHeaderPanel
             // 
-            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabDevelopmentLinkURLLabel);
-            this.aboutTabHeaderPanel.Controls.Add(this.aboutTabDevelopmentLinkLabel);
             this.aboutTabHeaderPanel.Controls.Add(this.aboutTabLearningLinkURLLabel);
             this.aboutTabHeaderPanel.Controls.Add(this.aboutTabLearningLinkLabel);
             this.aboutTabHeaderPanel.Controls.Add(this.aboutTabLogo);
@@ -2675,29 +2671,6 @@ namespace BARevitTools
             this.aboutTabHeaderPanel.Name = "aboutTabHeaderPanel";
             this.aboutTabHeaderPanel.Size = new System.Drawing.Size(734, 120);
             this.aboutTabHeaderPanel.TabIndex = 0;
-            // 
-            // aboutTabDevelopmentLinkURLLabel
-            // 
-            this.aboutTabDevelopmentLinkURLLabel.AutoSize = true;
-            this.aboutTabDevelopmentLinkURLLabel.Location = new System.Drawing.Point(370, 84);
-            this.aboutTabDevelopmentLinkURLLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTabDevelopmentLinkURLLabel.Name = "aboutTabDevelopmentLinkURLLabel";
-            this.aboutTabDevelopmentLinkURLLabel.Size = new System.Drawing.Size(101, 13);
-            this.aboutTabDevelopmentLinkURLLabel.TabIndex = 6;
-            this.aboutTabDevelopmentLinkURLLabel.TabStop = true;
-            this.aboutTabDevelopmentLinkURLLabel.Text = "Development Board\r\n";
-            this.aboutTabDevelopmentLinkURLLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AboutTabDevelopmentLinkURLLabel_LinkClicked);
-            // 
-            // aboutTabDevelopmentLinkLabel
-            // 
-            this.aboutTabDevelopmentLinkLabel.AutoSize = true;
-            this.aboutTabDevelopmentLinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.aboutTabDevelopmentLinkLabel.Location = new System.Drawing.Point(130, 84);
-            this.aboutTabDevelopmentLinkLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.aboutTabDevelopmentLinkLabel.Name = "aboutTabDevelopmentLinkLabel";
-            this.aboutTabDevelopmentLinkLabel.Size = new System.Drawing.Size(231, 13);
-            this.aboutTabDevelopmentLinkLabel.TabIndex = 7;
-            this.aboutTabDevelopmentLinkLabel.Text = "Track development and make tool suggestions:";
             // 
             // aboutTabLearningLinkURLLabel
             // 
@@ -2743,7 +2716,7 @@ namespace BARevitTools
             this.aboutPublishLabel.Name = "aboutPublishLabel";
             this.aboutPublishLabel.Size = new System.Drawing.Size(65, 13);
             this.aboutPublishLabel.TabIndex = 5;
-            this.aboutPublishLabel.Text = "11/16/2018";
+            this.aboutPublishLabel.Text = "12/21/2018";
             // 
             // aboutTabVersionLabel
             // 
@@ -2755,7 +2728,7 @@ namespace BARevitTools
             this.aboutTabVersionLabel.Name = "aboutTabVersionLabel";
             this.aboutTabVersionLabel.Size = new System.Drawing.Size(102, 20);
             this.aboutTabVersionLabel.TabIndex = 0;
-            this.aboutTabVersionLabel.Text = "Version 1.0.5";
+            this.aboutTabVersionLabel.Text = "Version 1.0.6";
             // 
             // aboutTabTitleLabel
             // 
@@ -7796,8 +7769,6 @@ namespace BARevitTools
         private TabPage aboutTab;
         private TableLayoutPanel aboutTabLayoutPanel;
         private Panel aboutTabHeaderPanel;
-        private LinkLabel aboutTabDevelopmentLinkURLLabel;
-        private Label aboutTabDevelopmentLinkLabel;
         private LinkLabel aboutTabLearningLinkURLLabel;
         private Label aboutTabLearningLinkLabel;
         private PictureBox aboutTabLogo;
