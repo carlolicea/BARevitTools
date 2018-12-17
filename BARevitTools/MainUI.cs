@@ -686,7 +686,7 @@ namespace BARevitTools
                 {
                     DataTable dt = new DataTable();
                     DataColumn familyTypeNameColumn = dt.Columns.Add("FamilyTypeName", typeof(String));
-                    worksheet.Unprotect("T3kZ!lla");
+                    worksheet.Unprotect(BARevitTools.Properties.Settings.Default.ExcelWorksheetPwd);
                     Excel.Range last = worksheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell, Type.Missing);
                     Excel.Range range = worksheet.get_Range("A1", last);
 
@@ -2900,6 +2900,7 @@ namespace BARevitTools
             uiForm.adminFamiliesBAPFamiliesDGV.Columns.Clear();
             uiForm.adminFamiliesBAPParametersDGV.Columns.Clear();
             uiForm.adminFamiliesBAPDoneLabel.Visible = false;
+            uiForm.adminFamiliesBAPProgressBar.Visible = false;
 
             RVTDocument doc = uiApp.ActiveUIDocument.Document;
             DataGridView pdgv = uiForm.adminFamiliesBAPParametersDGV;
@@ -2999,11 +3000,9 @@ namespace BARevitTools
                         dgv.Rows.Add(false, Path.GetFileNameWithoutExtension(filePath), filePath);
                         dgv.Sort(dgv.Columns["Family Name"], ListSortDirection.Ascending);
                     }
-                }
+                }                
                 dgv.Update();
-                dgv.Refresh();
             }
-
         }
         private void AdminFamiliesBAPFamiliesDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

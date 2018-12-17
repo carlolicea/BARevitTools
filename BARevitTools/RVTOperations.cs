@@ -349,50 +349,6 @@ namespace BARevitTools
             }
             return file;
         }
-        public static string GetProjectFile()
-        {
-            string file = "";
-            OpenFileDialog fileDialog = new OpenFileDialog
-            {
-                Filter = "RVT Project (*.rvt)|*rvt"
-            };
-            fileDialog.ShowDialog();
-            if (fileDialog.FileName.ToString() != "")
-            {
-                file = fileDialog.FileName;
-            }
-            return file;
-        }
-        public static string GetRevitVersion(string filePath)
-        {            
-            if (filePath != null && filePath != "")
-            {
-                try
-                {
-                    BasicFileInfo rvtInfo = BasicFileInfo.Extract(filePath);
-                    string rvtVersion = rvtInfo.SavedInVersion.ToString();
-                    return rvtVersion;
-                }
-                catch
-                {
-                    string fileName = GeneralOperations.GetFileName(filePath);
-                    return string.Empty;
-                }
-            }
-            else { return string.Empty; }
-        }
-        public static int GetRevitNumber(string filePath)
-        {
-            int rvtNumber = 0;
-            try
-            {
-                string rvtVersion = RVTOperations.GetRevitVersion(filePath);
-                rvtNumber = Convert.ToInt32(rvtVersion.Substring(rvtVersion.Length - 4));
-                return rvtNumber;
-
-            }
-            catch { return rvtNumber; }
-        }
         public static Dictionary<string, FamilyType> GetFamilyTypeNames(FamilyManager famMan)
         {
             Dictionary<string, FamilyType> types = new Dictionary<string, FamilyType>();
@@ -600,7 +556,20 @@ namespace BARevitTools
             }
             return type;
         }
-        
+        public static string GetProjectFile()
+        {
+            string file = "";
+            OpenFileDialog fileDialog = new OpenFileDialog
+            {
+                Filter = "RVT Project (*.rvt)|*rvt"
+            };
+            fileDialog.ShowDialog();
+            if (fileDialog.FileName.ToString() != "")
+            {
+                file = fileDialog.FileName;
+            }
+            return file;
+        }
         public static string GetRevitFamilyCategory(RVTDocument doc)
         {
             string familyCategory = null;
@@ -619,6 +588,36 @@ namespace BARevitTools
                 }
             }
             return familyCategory;
+        }
+        public static int GetRevitNumber(string filePath)
+        {
+            int rvtNumber = 0;
+            try
+            {
+                string rvtVersion = RVTOperations.GetRevitVersion(filePath);
+                rvtNumber = Convert.ToInt32(rvtVersion.Substring(rvtVersion.Length - 4));
+                return rvtNumber;
+
+            }
+            catch { return rvtNumber; }
+        }
+        public static string GetRevitVersion(string filePath)
+        {            
+            if (filePath != null && filePath != "")
+            {
+                try
+                {
+                    BasicFileInfo rvtInfo = BasicFileInfo.Extract(filePath);
+                    string rvtVersion = rvtInfo.SavedInVersion.ToString();
+                    return rvtVersion;
+                }
+                catch
+                {
+                    string fileName = GeneralOperations.GetFileName(filePath);
+                    return string.Empty;
+                }
+            }
+            else { return string.Empty; }
         }
         public static string GetVersionedFamilyFilePath(UIApplication uiApp, string familyFileToUse)
         {
@@ -741,8 +740,8 @@ namespace BARevitTools
         public static bool RevitVersionUpgradeCheck(UIApplication uiApp, string filePath)
         {
             bool result = false;
-            int projectRevitNumber = RVTOperations.GetRevitNumber(filePath);
-            if (projectRevitNumber < Convert.ToInt32(uiApp.Application.VersionNumber))
+            int fileRevitNumber = RVTOperations.GetRevitNumber(filePath);
+            if (fileRevitNumber < Convert.ToInt32(uiApp.Application.VersionNumber))
             {
                 result = true;
             }
@@ -755,8 +754,8 @@ namespace BARevitTools
         public static bool RevitVersionUpgradeCheck(UIApplication uiApp, string filePath, bool equalVersion)
         {
             bool result = false;
-            int projectRevitNumber = RVTOperations.GetRevitNumber(filePath);
-            if (projectRevitNumber <= Convert.ToInt32(uiApp.Application.VersionNumber))
+            int fileRevitNumber = RVTOperations.GetRevitNumber(filePath);
+            if (fileRevitNumber <= Convert.ToInt32(uiApp.Application.VersionNumber))
             {
                 result = true;
             }

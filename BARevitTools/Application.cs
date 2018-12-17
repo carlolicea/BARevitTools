@@ -14,19 +14,24 @@ namespace BARevitTools
     //Derive a class from IExternalApplication in the Revit API
     class Application : IExternalApplication
     {
+        //
         //Create a DataTable object for collecting button presses
         public DataTable appUseDataTable = null;
+        //
         //Create an object for the Revit API Application class
         internal static Application thisApp = null;
+        //
         //Create an object for the Revit API UIControlled Application
         public static UIControlledApplication _cachedUiCtrApp;
+        //
         //Create an object for the MainUI interface to be assigned to a new UI when it is created
         public MainUI newMainUi = null;
+        //
         //Create an object for the additional shared parameters UI to be assigned with it is created
         public SharedParametersUI newSPUi = null;   
         
         public bool CadDriveIsAccessible = false;
-
+        //
         //When Revit starts, IExternalApplication implements OnStartup
         public Result OnStartup(UIControlledApplication application)
         {
@@ -47,7 +52,7 @@ namespace BARevitTools
                 return Result.Failed;
             }
         }
-
+        //
         //When Revit shuts down, close the open MainUI if it is visible. Return the result.
         public Result OnShutdown(UIControlledApplication application)
         {
@@ -57,7 +62,7 @@ namespace BARevitTools
             }            
             return Result.Succeeded;
         } 
-
+        //
         //When this method is used, it will show the MainUI
         public void ShowForm(UIApplication uiApp)
         {
@@ -84,7 +89,7 @@ namespace BARevitTools
             //Show the MainUI
             newMainUi.Show();
         }
-
+        //
         //This is used to activate MainUI's buttons
         public void WakeFormUp()
         {
@@ -94,7 +99,7 @@ namespace BARevitTools
                 newMainUi.WakeUp();
             }
         }
-
+        //
         //This creates a new Revit UI Ribbon Panel for launching BART's MainUI
         private RibbonPanel CreateExtAppRibbonPanel()
         {
@@ -116,7 +121,7 @@ namespace BARevitTools
 
             return ribbonPanel;
         }
-
+        //
         //This creates the ImageSource for the button associated with the ribbon panel
         private System.Windows.Media.ImageSource BmpImageSource(System.Drawing.Bitmap bitmap)
         {

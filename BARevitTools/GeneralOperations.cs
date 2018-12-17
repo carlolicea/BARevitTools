@@ -59,11 +59,19 @@ namespace BARevitTools
                 }
             }
         }
+        //
+        //This method will clean up strings to be able to be used as file paths by removing everything that is not acceptable in a path string
         public static string CleanFileName(string originalName)
         {
             try
             {
-                return Regex.Replace(originalName, @"[^\w\.@-]", "", RegexOptions.None, TimeSpan.FromSeconds(1.5));
+                //Replace using the regular expression looking for anything that is not (^) a part of the set ([]). The set includes:
+                // words (\w)
+                // escape characters (\.)
+                // @ signs (@)
+                // dashes (-)
+                // whitespace (\s)
+                return Regex.Replace(originalName, @"[^\w\.@-\s]", "", RegexOptions.None, TimeSpan.FromSeconds(1.5));
             }
             catch (RegexMatchTimeoutException)
             {

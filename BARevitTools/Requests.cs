@@ -19,6 +19,7 @@ using RVTDocument = Autodesk.Revit.DB.Document;
 
 namespace BARevitTools
 {
+    //
     //This is where the requests for the RequestHandler are stored. Because they use integers in the RequestId enumerator, each request is assigned an integer stored in the ReferencedSwitchCaseIds class
     public enum RequestId : int
     {
@@ -64,17 +65,18 @@ namespace BARevitTools
         adminFamiliesBRP = ReferencedSwitchCaseIds.adminFamiliesBRP,
         adminFamiliesUFVP = ReferencedSwitchCaseIds.adminFamiliesUFVP,
     }
-    
+    //
     //This class makes the request to the thread running Revit so the RequestHandler can slip in an operation
     public class Requests
     {
         private int m_request = (int)RequestId.None;
+        //
         //The request is taken here
         public RequestId Take()
         {
             return (RequestId)Interlocked.Exchange(ref m_request, (int)RequestId.None);
         }
-
+        //
         //The request is then made here
         public void Make(RequestId request)
         {

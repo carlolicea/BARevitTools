@@ -8,14 +8,14 @@ using System.Windows.Forms;
 
 namespace BARevitTools
 {
-    //Set the TransactionMode to manual so transactions must be made as needed
-    [Transaction(TransactionMode.Manual)]
-    //Set the RegenerationOption to manual so the document only regenerates as needed
+    //
+    //Set the TransactionMode to manual so transactions must be made as needed, and set the document regeneration to manual since it is usually not necessary and should be manually invoked
+    [Transaction(TransactionMode.Manual)]          
     [Regeneration(RegenerationOption.Manual)]
-
     //Deriving an ExternalCommand from the IExternalCommand interface
     public class Launcher : IExternalCommand
     {
+        //
         //Implements the required Execute method.
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elementSet)
         {

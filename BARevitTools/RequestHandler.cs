@@ -9,27 +9,28 @@ namespace BARevitTools
     public partial class RequestHandler : IExternalEventHandler    {       
 
         UIControlledApplication uiApp = null;
+        //
         //When called, the request handler will assign the UIControlledApplication
         public RequestHandler(UIControlledApplication newUIApp)
         {
             uiApp = newUIApp;
         }
-
+        //
         //Preparing a new Request object to retrieve
         public Requests m_request = new Requests();
-        
+        //
         //When a Request is made, the associated request is retrieved from the Requests class
         public Requests Request
         {
             get { return m_request; }
         }        
-
+        //
         //This is required as part of the IExternalEventHandler. Doesn't have a functional purpose for this application.
         public String GetName()
         {
             return "BARevitTools External Event";
         }
-
+        //
         //When the request is made, the following Switch Case will create a new instance of the class to be used for the tool operation.
         public void Execute(UIApplication uiApp)
         {
