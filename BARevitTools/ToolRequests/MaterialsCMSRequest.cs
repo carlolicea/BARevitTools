@@ -9,6 +9,9 @@ using RVTDocument = Autodesk.Revit.DB.Document;
 
 namespace BARevitTools.ToolRequests
 {
+    //
+    //This class is used by the Create Material Symbols tool. It will take the rows of the DataGridView and make symbol family types for each row,
+    //group them by ID Use, sort by Mark, then place them in a drafting view
     class MaterialsCMSRequest
     {
         public MaterialsCMSRequest(UIApplication uiApp, String text)

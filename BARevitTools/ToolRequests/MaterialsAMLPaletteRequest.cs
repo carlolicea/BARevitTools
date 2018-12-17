@@ -86,6 +86,7 @@ namespace BARevitTools.ToolRequests
                 {
                     try
                     {
+                        //Have the user begin picking points. The number of clicks to start the UI color change is 1 because the first click is usually to activate the window.
                         XYZ point = uiApp.ActiveUIDocument.Selection.PickPoint(Autodesk.Revit.UI.Selection.ObjectSnapTypes.Endpoints, "Click points for the line to follow. Then click once to the side where the lines should be drawn. Hit ESC to finish");
                         pickedPoints.Add(point);
 
@@ -99,6 +100,7 @@ namespace BARevitTools.ToolRequests
                         }
                         else if (pickCount > 2)
                         {
+                            //After three clicks in the window, the user has made the minimum point selection to generate the lines from the start, end, and positive side points.
                             materialsPalette.BackColor = System.Drawing.Color.GreenYellow;
                         }
                         else {; }
@@ -144,7 +146,7 @@ namespace BARevitTools.ToolRequests
                             guideLines.Add(Line.CreateBound(polyLinePoints[i], polyLinePoints[i + 1]));
                         }
 
-                        //Get the direction of the line offset by measuring the first offset for positive and negative values and comparing their distances the room point
+                        //Get the direction of the line offset by measuring the first offset for positive and negative values and comparing their distances with the room point
                         bool positiveZ = false;
 
                         List<Line> offsetLines = new List<Line>();
@@ -156,6 +158,7 @@ namespace BARevitTools.ToolRequests
                         Double positiveOffsetDistance = positiveOffsetMidPoint.DistanceTo(roomPoint);
                         Double negativeOffsetDistance = negativeOffsetMidPoint.DistanceTo(roomPoint);
 
+                        //If the positive offset side resulted in a shorter distance to the point inside the room, then the offset should have a positive Z normal.
                         if (positiveOffsetDistance < negativeOffsetDistance)
                         {
                             positiveZ = true;
@@ -341,15 +344,15 @@ namespace BARevitTools.ToolRequests
                     }
                     catch (Exception e)
                     {
+                        //Suppose the user closed the palette too soon. This will remind them to keep it open.
                         if (BARevitTools.Application.thisApp.newMainUi.materialsAMLPalette == null)
                         {
                             MessageBox.Show("AML Picker was closed prematurely. Please keep the picker open until the lines are drawn.");
                         }
                         else
                         {
-                            var st = new StackTrace(e, true);
-                            var LineNumber = st.GetFrame(st.FrameCount - 1).GetFileLineNumber();
-                            MessageBox.Show("Exception \"" + e.ToString() + "\" was thrown at line: " + LineNumber.ToString());
+                            //Otherwise, if some other error occurred, show the exception
+                            MessageBox.Show(e.ToString());
                         }
                         createLinesTransaction.RollBack();
                     }

@@ -3097,7 +3097,7 @@ namespace BARevitTools
                 }
             }
         }
-        private void adminFamiliesBAPParametersDGV_MouseUp(object sender, MouseEventArgs e)
+        private void AdminFamiliesBAPParametersDGV_MouseUp(object sender, MouseEventArgs e)
         {
             MainUI uiForm = Application.thisApp.newMainUi;
             if (e.Button == MouseButtons.Right)
@@ -3426,7 +3426,7 @@ namespace BARevitTools
                 MessageBox.Show("No directory to search was set");
             }
         }
-        private void adminFamiliesUFVPDirectoryButton_Click(object sender, EventArgs e)
+        private void AdminFamiliesUFVPDirectoryButton_Click(object sender, EventArgs e)
         {
             MainUI uiForm = Application.thisApp.newMainUi;
             string directory = GeneralOperations.GetDirectory();

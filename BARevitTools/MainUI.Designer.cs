@@ -1822,7 +1822,7 @@ namespace BARevitTools
             this.adminFamiliesUFVPDirectoryButton.TabIndex = 4;
             this.adminFamiliesUFVPDirectoryButton.Text = "Select Directory";
             this.adminFamiliesUFVPDirectoryButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesUFVPDirectoryButton.Click += new System.EventHandler(this.adminFamiliesUFVPDirectoryButton_Click);
+            this.adminFamiliesUFVPDirectoryButton.Click += new System.EventHandler(this.AdminFamiliesUFVPDirectoryButton_Click);
             // 
             // adminFamiliesUFVPCheckBox
             // 
@@ -1994,7 +1994,7 @@ namespace BARevitTools
             this.adminFamiliesBAPParametersDGV.Size = new System.Drawing.Size(364, 228);
             this.adminFamiliesBAPParametersDGV.TabIndex = 0;
             this.adminFamiliesBAPParametersDGV.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AdminFamiliesBAPParametersDGV_CellMouseUp);
-            this.adminFamiliesBAPParametersDGV.MouseUp += new System.Windows.Forms.MouseEventHandler(this.adminFamiliesBAPParametersDGV_MouseUp);
+            this.adminFamiliesBAPParametersDGV.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminFamiliesBAPParametersDGV_MouseUp);
             // 
             // adminFamiliesBAPSharedParametersPanel
             // 
