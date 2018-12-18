@@ -118,18 +118,23 @@ namespace BARevitTools.ToolRequests
         {
             try
             {
+                // Make new load options from the RVTFamilyLoadOptions class in the RVTOperations file                
                 IFamilyLoadOptions loadOptions = new RVTFamilyLoadOptions();
                 RVTDocument doc = uiApp.ActiveUIDocument.Document;
+                //Load the family file opened in the above constructor
                 famDoc.LoadFamily(doc, loadOptions);
 
+                //Start a transaction
                 Transaction t = new Transaction(doc, "LoadMaterialSymbolsFamily");
-                t.Start();
+                t.Start();  
 
-                placementView.Scale = 1;
-                Dictionary<Element, string> familyTypesDict = new Dictionary<Element, string>();
-                List<Element> familyTypesList = new List<Element>();
+                //Get the family loaded into the project by its name, then close the family document in the background
                 Family refFamily = new FilteredElementCollector(doc).OfClass(typeof(Family)).WhereElementIsNotElementType().Cast<Family>().Where(elem => elem.Name == famDoc.Title.Replace(".rfa", "")).First();
                 famDoc.Close(false);
+
+                //Add each family symbol (type) to a list of symbols and a dictionary of grouping values indexed by symbol
+                Dictionary<Element, string> familyTypesDict = new Dictionary<Element, string>();
+                List<Element> familyTypesList = new List<Element>();                
                 foreach (ElementId symbId in refFamily.GetFamilySymbolIds())
                 {
                     FamilySymbol familySymbol = doc.GetElement(symbId) as FamilySymbol;
@@ -137,6 +142,7 @@ namespace BARevitTools.ToolRequests
                     familyTypesList.Add(familySymbol);
                     familyTypesDict.Add(familySymbol, paramValue);
                 }
+                //Next, use Linq to group the family types by ID Use, then sort each group by Mark
                 var familyTypesGroupedQuery =
                      from elemSymbol in familyTypesList
                      orderby elemSymbol.GetParameters(subgroupingParameter).First().AsString() ascending
@@ -144,11 +150,14 @@ namespace BARevitTools.ToolRequests
                      orderby mainGroup.First().GetParameters(groupingParameter).First().AsString() descending
                      select mainGroup;
 
+                //The spacing is the distance between each symbol when it is placed in fractional feet. 0.08333 is about 1" which works well for the scale used in making the drafting view
                 double spacing = 0.08333;
                 int rowNum = 0;
+                //Cycle through each group ID Use grouping
                 foreach (var mainGroup in familyTypesGroupedQuery)
                 {
                     int columnNum = 0;
+                    //Then for each family symbol in the ID Use grouping, place them in the view, incrementing the X distance by (spacing x the column number) each time. They will be in order of their Mark value
                     foreach (FamilySymbol symbol in mainGroup)
                     {
                         doc.Create.NewFamilyInstance(new XYZ(Convert.ToDouble(columnNum) * spacing, Convert.ToDouble(rowNum) * spacing, 0), symbol, placementView);
@@ -162,7 +171,6 @@ namespace BARevitTools.ToolRequests
             {
                 MessageBox.Show(e.ToString());
             }
-
         }
     }
 

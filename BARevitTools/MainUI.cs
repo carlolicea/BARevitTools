@@ -1506,14 +1506,6 @@ namespace BARevitTools
             dataGridView.RowHeadersVisible = false;
             #endregion Update DataGridView
         }
-        private void SheetsISFLButton_CheckStateChanged(object sender, EventArgs e)
-        {
-            MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
-            if (uiForm.sheetsISFLButton.Checked == true && uiForm.Width < 1025)
-            {
-                uiForm.Width = 1025;
-            }
-        }
         public void SheetsISFLComboBox_TextChanged(object sender, EventArgs e)
         {
             RVTDocument linkDoc = SheetsISFLGetLinkDoc();
@@ -2012,7 +2004,6 @@ namespace BARevitTools
         #endregion dataEPI        
 
         #region miscEDV
-        DataTable miscEDVDataTable = null;
         private void MiscEDVButton_Click(object sender, EventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
@@ -2029,8 +2020,7 @@ namespace BARevitTools
 
             DataColumn viewElementColumn = dt.Columns.Add("View Element", typeof(Object));
             viewElementColumn.ReadOnly = true;
-
-            miscEDVDataTable = dt;
+            
 
             DataGridView dgv = uiForm.miscEDVDataGridView;
 
@@ -2053,6 +2043,7 @@ namespace BARevitTools
             bindingSource.DataSource = dt;
             dgv.DataSource = bindingSource;
             dgv.Columns["Select"].Width = 45;
+            dgv.Columns["Select"].Name = "Select";
             dgv.Columns["View Name"].Width = dgv.Width - 45;
             dgv.Columns["View Element"].Visible = false;
             dgv.Sort(dgv.Columns["View Name"], ListSortDirection.Ascending);

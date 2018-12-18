@@ -6,51 +6,57 @@ using RVTDocument = Autodesk.Revit.DB.Document;
 
 namespace BARevitTools.ToolRequests
 {
+    //
+    //This class is used in the Capitalize Sheet and View Names tool, which capitalizes the names of all sheets and views on sheets. Views not on sheets are skipped.
     class QaqcCSVNRequest
     {
         public QaqcCSVNRequest(UIApplication uiApp, String text)
         {
-            #region Collectors, Lists, Objects
-            UIDocument uidoc = uiApp.ActiveUIDocument;
-            FilteredElementCollector sheetsCollector = new FilteredElementCollector(uidoc.Document);
-            FilteredElementCollector viewportsCollector = new FilteredElementCollector(uidoc.Document);
-            ICollection<Element> sheets = sheetsCollector.OfClass(typeof(ViewSheet)).WhereElementIsNotElementType().ToElements();
-            ICollection<Element> viewports = viewportsCollector.OfClass(typeof(Viewport)).WhereElementIsNotElementType().ToElements();
-            #endregion Collectors, Lists, Objects
+            RVTDocument doc = uiApp.ActiveUIDocument.Document;
+            //Collect the sheets and viewports
+            ICollection<Element> sheets = new FilteredElementCollector(doc).OfClass(typeof(ViewSheet)).WhereElementIsNotElementType().ToElements();
+            ICollection<Element> viewports = new FilteredElementCollector(doc).OfClass(typeof(Viewport)).WhereElementIsNotElementType().ToElements();
 
-            #region Transaction
-            Transaction t1 = new Transaction(uidoc.Document, "Capitalize Sheet and View Names");
-            t1.Start();
-            foreach (ViewSheet sheet in sheets)
+            //Start a transaction. All actions are encapislated in this transaction so USING was used here for tidiness
+            using (Transaction t1 = new Transaction(doc, "CapitalizeSheetAndViewNames"))
             {
-                try
+                t1.Start();
+
+                //Cycle through each sheet
+                foreach (ViewSheet sheet in sheets)
                 {
-                    sheet.Name = sheet.Name.ToString().ToUpper();
-                }
-                catch
-                {
-                    continue;
-                }
-            }
-            foreach (Viewport viewport in viewports)
-            {
-                try
-                {
-                    if (viewport.SheetId.ToString() != "InvalidElementId")
+                    try
                     {
-                        ElementId viewId = viewport.ViewId;
-                        Autodesk.Revit.DB.View viewportView = uidoc.Document.GetElement(viewId) as Autodesk.Revit.DB.View;
-                        viewportView.Name = viewportView.Name.ToString().ToUpper();
+                        //Set the name of the sheet to an all capitalized name
+                        sheet.Name = sheet.Name.ToString().ToUpper();
+                    }
+                    catch
+                    {
+                        continue;
                     }
                 }
-                catch
+
+                //Cycle through each viewport
+                foreach (Viewport viewport in viewports)
                 {
-                    continue;
+                    try
+                    {
+                        //Assuming the viewport is on a sheet, continue
+                        if (viewport.SheetId.ToString() != "InvalidElementId")
+                        {
+                            //Get the viewport as a view, then set the view name to all caps
+                            ElementId viewId = viewport.ViewId;
+                            Autodesk.Revit.DB.View viewportView = doc.GetElement(viewId) as Autodesk.Revit.DB.View;
+                            viewportView.Name = viewportView.Name.ToString().ToUpper();
+                        }
+                    }
+                    catch
+                    {
+                        continue;
+                    }
                 }
+                t1.Commit();
             }
-            t1.Commit();
-            t1.Dispose();
-            #endregion Transaction
         }
     }
 }
