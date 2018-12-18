@@ -129,7 +129,35 @@ namespace BARevitTools.ToolRequests
                                                         //Try to assign the parameter value if one is to be assigned
                                                         if (newParamRow.Cells["Parameter Value"].Value != null)
                                                         {
-                                                            RVTOperations.SetFamilyParameterValue(familyManager, newParam, RVTOperations.SetParameterValueFromString(newParamRow.Cells["Parameter Type"].Value.ToString(), newParamRow.Cells["Parameter Value"].Value));
+                                                            //If the number of types is greater than 0, cycle through them
+                                                            if (familyManager.Types.Size > 0)
+                                                            { 
+                                                                foreach (FamilyType familyType in familyManager.Types)
+                                                                {
+                                                                    //For each type, make a subtransaction
+                                                                    SubTransaction s1 = new SubTransaction(famDoc);
+                                                                    s1.Start();
+                                                                    try
+                                                                    {
+                                                                        //Then set the family type as current
+                                                                        familyManager.CurrentType = familyType;
+                                                                        //Attempt to set the parameter value
+                                                                        RVTOperations.SetFamilyParameterValue(familyManager, newParam, RVTOperations.SetParameterValueFromString(newParamRow.Cells["Parameter Type"].Value.ToString(), newParamRow.Cells["Parameter Value"].Value));
+                                                                        s1.Commit();
+                                                                    }
+                                                                    catch
+                                                                    {
+                                                                        //If that fails, let the user know and break out of the loop
+                                                                        MessageBox.Show(String.Format("Could not assign value {0} to parameter {1} for type {2} in family {3}.", newParamRow.Cells["Parameter Value"], newParamRow.Cells["Parameter Name"], familyType.Name, row.Cells["Family Name"]));
+                                                                        break;
+                                                                    }
+                                                                }                                                                
+                                                            }
+                                                            else
+                                                            {
+                                                                //If there was was no family types in the family, just set it for the default one
+                                                                RVTOperations.SetFamilyParameterValue(familyManager, newParam, RVTOperations.SetParameterValueFromString(newParamRow.Cells["Parameter Type"].Value.ToString(), newParamRow.Cells["Parameter Value"].Value));
+                                                            }
                                                         }
                                                     }
                                                     catch
@@ -193,17 +221,17 @@ namespace BARevitTools.ToolRequests
                     catch(Exception e)
                     {
                         MessageBox.Show(e.ToString());
-                    }
-                    finally
-                    {
-                        //Clean up the backups when done
-                        GeneralOperations.CleanRfaBackups(row.Cells["Family Path"].Value.ToString());
-                    }                    
+                    }                   
                 }
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+            }
+            finally
+            {
+                //Clean up the backups when done
+                GeneralOperations.CleanRfaBackups(uiForm.adminFamiliesBAPFamilyDirectory);
             }
             uiForm.adminFamiliesBAPProgressBar.Visible = false;
             uiForm.adminFamiliesBAPDoneLabel.Visible = true;

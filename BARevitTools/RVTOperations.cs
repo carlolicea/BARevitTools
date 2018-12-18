@@ -659,56 +659,6 @@ namespace BARevitTools
             }
             return doc;
         }
-        public static void PlaceSymbolsInView(UIApplication uiApp, RVTDocument famDoc, string groupingParameter, string subgroupingParameter, Autodesk.Revit.DB.View placementView)
-        {            
-            try
-            {
-                IFamilyLoadOptions loadOptions = new RVTFamilyLoadOptions();
-                RVTDocument doc = uiApp.ActiveUIDocument.Document;
-                famDoc.LoadFamily(doc,loadOptions);
-
-                Transaction t = new Transaction(doc, "LoadMaterialSymbolsFamily");
-                t.Start();
-
-                placementView.Scale = 1;                
-                Dictionary<Element, string> familyTypesDict = new Dictionary<Element, string>();
-                List<Element> familyTypesList = new List<Element>();
-                Family refFamily = new FilteredElementCollector(doc).OfClass(typeof(Family)).WhereElementIsNotElementType().Cast<Family>().Where(elem => elem.Name == famDoc.Title.Replace(".rfa","")).First();
-                famDoc.Close(false);
-                foreach (ElementId symbId in refFamily.GetFamilySymbolIds())
-                {
-                    FamilySymbol familySymbol = doc.GetElement(symbId) as FamilySymbol;
-                    string paramValue = familySymbol.GetParameters(groupingParameter).First().AsString();
-                    familyTypesList.Add(familySymbol);
-                    familyTypesDict.Add(familySymbol, paramValue);
-                }
-                var familyTypesGroupedQuery =
-                     from elemSymbol in familyTypesList
-                     orderby elemSymbol.GetParameters(subgroupingParameter).First().AsString() ascending
-                     group elemSymbol by elemSymbol.GetParameters(groupingParameter).First().AsString() into mainGroup
-                     orderby mainGroup.First().GetParameters(groupingParameter).First().AsString() descending
-                     select mainGroup;
-
-                double spacing = 0.08333;
-                int rowNum = 0;
-                foreach (var mainGroup in familyTypesGroupedQuery)
-                {
-                    int columnNum = 0;
-                    foreach (FamilySymbol symbol in mainGroup)
-                    {
-                        doc.Create.NewFamilyInstance(new XYZ(Convert.ToDouble(columnNum) * spacing, Convert.ToDouble(rowNum) * spacing, 0), symbol, placementView);
-                        columnNum++;
-                    }
-                    rowNum++;
-                }
-                t.Commit();
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show(e.ToString());
-            }
-            
-        }
         public static TransmissionData ReloadLinks(string filePath)
         {
 

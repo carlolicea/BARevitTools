@@ -15,7 +15,7 @@
       <Value Profile="(Default)">Boulder4747</Value>
     </Setting>
     <Setting Name="BARTBAAdminUsers" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">clicea,mzabritski,administrator</Value>
+      <Value Profile="(Default)">clicea,mzabritski,administrator,kfronczak,enightingale,mwhitcomb</Value>
     </Setting>
     <Setting Name="UrlBARTLearning" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://bimhaus.boulderassociates.com/bart</Value>
@@ -70,6 +70,12 @@
     </Setting>
     <Setting Name="BAProjectCentralFolder" Type="System.String" Scope="Application">
       <Value Profile="(Default)">E1 Revit</Value>
+    </Setting>
+    <Setting Name="BAViewSort1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BA View Sort 1 Division</Value>
+    </Setting>
+    <Setting Name="BAViewSort2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BA View Sort 2 Type</Value>
     </Setting>
   </Settings>
 </SettingsFile>

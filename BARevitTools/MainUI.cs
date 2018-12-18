@@ -952,11 +952,19 @@ namespace BARevitTools
         }
         private void MaterialsCMSExcelCreateSymbolsButton_Click(object sender, EventArgs e)
         {
-            if (BARevitTools.Application.thisApp.newMainUi.materialsCMSExcelDataGridView.Rows.Count > 0)
+            if (uiApp.ActiveUIDocument.Document.ActiveView.Name != "ID Material View" && uiApp.ActiveUIDocument.Document.ActiveView.Name != Application.thisApp.newMainUi.materialsCMSSetViewNameTextBox.Text)
             {
-                m_ExEvent.Raise();
-                MakeRequest(RequestId.materialsCMS);
+                if (BARevitTools.Application.thisApp.newMainUi.materialsCMSExcelDataGridView.Rows.Count > 0)
+                {
+                    m_ExEvent.Raise();
+                    MakeRequest(RequestId.materialsCMS);
+                }
             }
+            else
+            {
+                MessageBox.Show(String.Format("This cannot be ran from the '{0}' view. Please switch to a different view temporarily.", uiApp.ActiveUIDocument.ActiveView.Name));
+            }
+            
         }
         #endregion materialsCMS
 
@@ -2893,7 +2901,7 @@ namespace BARevitTools
         #endregion adminFamiliesUF
 
         #region adminFamiliesBAP
-        public string adminFamiliesBAPFamiliesDirectory = null;
+        public string adminFamiliesBAPFamilyDirectory = "";
         private void AdminFamiliesBAPButton_Click(object sender, EventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
@@ -2989,8 +2997,8 @@ namespace BARevitTools
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             DataGridView dgv = uiForm.adminFamiliesBAPFamiliesDGV;
             dgv.Rows.Clear();
-            string adminFamiliesBAPFamilyDirectory = GeneralOperations.GetDirectory();
-            if (adminFamiliesBAPFamilyDirectory != null)
+            adminFamiliesBAPFamilyDirectory = GeneralOperations.GetDirectory();
+            if (adminFamiliesBAPFamilyDirectory != "")
             {
                 List<string> files = GeneralOperations.GetAllRvtFamilies(adminFamiliesBAPFamilyDirectory, new DateTime(1, 1, 1, 0, 0, 0), false);
                 if (files.Count != 0)
@@ -3073,20 +3081,6 @@ namespace BARevitTools
             else { MessageBox.Show("Please first set the shared parameter file for this document"); }
 
         }
-        private void AdminFamiliesBAPParametersDGV_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
-            DataGridView dgv = uiForm.adminFamiliesBAPParametersDGV;
-            if (e.Exception.Message == "DataGridViewComboBoxCell value is not valid.")
-            {
-                object value = dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                if (!((DataGridViewComboBoxColumn)dgv.Columns[e.ColumnIndex]).Items.Contains(value))
-                {
-                    ((DataGridViewComboBoxColumn)dgv.Columns[e.ColumnIndex]).Items.Add(value);
-                    e.ThrowException = false;
-                }
-            }
-        }
         private void AdminFamiliesBAPParametersRowDeleteTool_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in BARevitTools.Application.thisApp.newMainUi.adminFamiliesBAPParametersDGV.SelectedRows)
@@ -3128,6 +3122,7 @@ namespace BARevitTools
         #endregion adminFamiliesBAP
 
         #region adminFamiliesBRP
+        public string adminFamiliesBRPFamilyDirectory = "";
         private void AdminFamiliesBRPButton_Click(object sender, EventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
@@ -3194,8 +3189,8 @@ namespace BARevitTools
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             DataGridView dgv = uiForm.adminFamiliesBRPFamiliesDGV;
             dgv.Rows.Clear();
-            string adminFamiliesBRPFamilyDirectory = GeneralOperations.GetDirectory();
-            if (adminFamiliesBRPFamilyDirectory != null)
+            adminFamiliesBRPFamilyDirectory = GeneralOperations.GetDirectory();
+            if (adminFamiliesBRPFamilyDirectory != "")
             {
                 List<string> files = GeneralOperations.GetAllRvtFamilies(adminFamiliesBRPFamilyDirectory, new DateTime(1, 1, 1, 0, 0, 0), false);
                 if (files.Count != 0)

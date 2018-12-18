@@ -120,6 +120,7 @@ namespace BARevitTools.ToolRequests
                     else { continue; }                    
                 }                
             }
+            GeneralOperations.CleanRfaBackups(uiForm.adminFamiliesBRPFamilyDirectory);
             uiForm.adminFamiliesBRPProgressBar.Visible = false;
         }
     }

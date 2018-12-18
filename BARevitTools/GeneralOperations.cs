@@ -30,15 +30,40 @@ namespace BARevitTools
         {
             if (file != "")
             {
-                Match match1 = Regex.Match(file, @".00\d\d.rfa", RegexOptions.IgnoreCase);
-                if (match1.Success)
+                bool isDirectory = false;
+                FileAttributes fileAttributes = File.GetAttributes(file);
+                if ((fileAttributes & FileAttributes.Directory) == FileAttributes.Directory)
                 {
-                    try
-                    {
-                        File.Delete(file);
-                    }
-                    catch { MessageBox.Show(String.Format("Could not delete {0}", file)); }
+                    isDirectory = true;
                 }
+
+                if (isDirectory)
+                {
+                    foreach (string filePath in GeneralOperations.GetAllRvtFamilies(file,true))
+                    {
+                        Match match1 = Regex.Match(filePath, @".00\d\d.rfa", RegexOptions.IgnoreCase);
+                        if (match1.Success)
+                        {
+                            try
+                            {
+                                File.Delete(filePath);
+                            }
+                            catch { MessageBox.Show(String.Format("Could not delete {0}", filePath)); }
+                        }
+                    }
+                }
+                else
+                {
+                    Match match1 = Regex.Match(file, @".00\d\d.rfa", RegexOptions.IgnoreCase);
+                    if (match1.Success)
+                    {
+                        try
+                        {
+                            File.Delete(file);
+                        }
+                        catch { MessageBox.Show(String.Format("Could not delete {0}", file)); }
+                    }
+                }                
             }
         }
         public static void CleanRfaBackups(List<string> files)
@@ -85,22 +110,42 @@ namespace BARevitTools
                 File.Delete(path);
             }
         }
-        public static List<string> GetAllRvtFamilies(string directoryPath)
+        public static List<string> GetAllRvtFamilies(string directoryPath, bool includeBackups)
         {
             List<string> filePaths = new List<string>();
-            if (directoryPath != "")
+            if (includeBackups)
             {
-                foreach (string filePath in Directory.GetFiles(directoryPath, "*.rfa", SearchOption.AllDirectories))
+                if (directoryPath != "")
                 {
-                    Match match1 = Regex.Match(filePath, @".00\d\d.rfa", RegexOptions.IgnoreCase);
-                    if (!filePath.Contains("Archive") && !filePath.Contains("Parts") && !match1.Success)
+                    foreach (string filePath in Directory.GetFiles(directoryPath, "*.rfa", SearchOption.AllDirectories))
                     {
-                        FileInfo fileInfo = new FileInfo(filePath);
-                        filePaths.Add(filePath);
+                        if (!filePath.Contains("Archive") && !filePath.Contains("Parts"))
+                        {
+                            FileInfo fileInfo = new FileInfo(filePath);
+                            filePaths.Add(filePath);
+                        }
                     }
                 }
+                return filePaths;
             }
-            return filePaths;
+            else
+            {
+                if (directoryPath != "")
+                {
+                    foreach (string filePath in Directory.GetFiles(directoryPath, "*.rfa", SearchOption.AllDirectories))
+                    {
+                        Match match1 = Regex.Match(filePath, @".00\d\d.rfa", RegexOptions.IgnoreCase);
+                        if (!filePath.Contains("Archive") && !filePath.Contains("Parts") && !match1.Success)
+                        {
+                            FileInfo fileInfo = new FileInfo(filePath);
+                            filePaths.Add(filePath);
+                        }
+                    }
+                }
+                return filePaths;
+            }
+            
+            
         }
         public static List<string> GetAllRvtFamilies(string directoryPath, DateTime date, bool useDate)
         {

@@ -116,15 +116,6 @@ namespace BARevitTools
             this.bulkUpdatePublishVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesUFVPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.adminFamiliesUFVPControlsPanel = new System.Windows.Forms.Panel();
-            this.adminFamiliesUFVPDirectoryTextBox = new System.Windows.Forms.TextBox();
-            this.adminFamiliesUFVPDirectoryButton = new System.Windows.Forms.Button();
-            this.adminFamiliesUFVPCheckBox = new System.Windows.Forms.CheckBox();
-            this.adminFamiliesUFVPDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.adminFamiliesUFVPProgressBar = new System.Windows.Forms.ProgressBar();
-            this.adminFamiliesUFVPRunButton = new System.Windows.Forms.Button();
-            this.adminFamiliesUFVPInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.adminFamiliesBAPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesBAPRunPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBAPDoneLabel = new System.Windows.Forms.Label();
@@ -143,6 +134,15 @@ namespace BARevitTools
             this.adminFamiliesBAPFamiliesDGV = new System.Windows.Forms.DataGridView();
             this.adminFamiliesBAPFamiliesDirectoryPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBAPDirectorySelectButton = new System.Windows.Forms.Button();
+            this.adminFamiliesUFVPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesUFVPControlsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesUFVPDirectoryTextBox = new System.Windows.Forms.TextBox();
+            this.adminFamiliesUFVPDirectoryButton = new System.Windows.Forms.Button();
+            this.adminFamiliesUFVPCheckBox = new System.Windows.Forms.CheckBox();
+            this.adminFamiliesUFVPDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.adminFamiliesUFVPProgressBar = new System.Windows.Forms.ProgressBar();
+            this.adminFamiliesUFVPRunButton = new System.Windows.Forms.Button();
+            this.adminFamiliesUFVPInstructionsTextBox = new System.Windows.Forms.TextBox();
             this.adminFamiliesUFLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesUFFullSyncPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesUFFullSyncCheckbox = new System.Windows.Forms.CheckBox();
@@ -602,8 +602,6 @@ namespace BARevitTools
             this.adminFamiliesLayoutPanel.SuspendLayout();
             this.adminFamiliesToolStrip.SuspendLayout();
             this.adminFamiliesToolsPanel.SuspendLayout();
-            this.adminFamiliesUFVPLayoutPanel.SuspendLayout();
-            this.adminFamiliesUFVPControlsPanel.SuspendLayout();
             this.adminFamiliesBAPLayoutPanel.SuspendLayout();
             this.adminFamiliesBAPRunPanel.SuspendLayout();
             this.adminFamiliesBAPSplitPanel.SuspendLayout();
@@ -618,6 +616,8 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBAPFamiliesDGV)).BeginInit();
             this.adminFamiliesBAPFamiliesDirectoryPanel.SuspendLayout();
+            this.adminFamiliesUFVPLayoutPanel.SuspendLayout();
+            this.adminFamiliesUFVPControlsPanel.SuspendLayout();
             this.adminFamiliesUFLayoutPanel.SuspendLayout();
             this.adminFamiliesUFFullSyncPanel.SuspendLayout();
             this.adminFamiliesUFUpgradedFamiliesTextBoxPanel.SuspendLayout();
@@ -1732,7 +1732,7 @@ namespace BARevitTools
             // 
             this.adminFamiliesBAPButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesBAPIcon;
             this.adminFamiliesBAPButton.Name = "adminFamiliesBAPButton";
-            this.adminFamiliesBAPButton.Size = new System.Drawing.Size(221, 22);
+            this.adminFamiliesBAPButton.Size = new System.Drawing.Size(237, 38);
             this.adminFamiliesBAPButton.Text = "Bulk Add Parameters";
             this.adminFamiliesBAPButton.Click += new System.EventHandler(this.AdminFamiliesBAPButton_Click);
             // 
@@ -1740,7 +1740,7 @@ namespace BARevitTools
             // 
             this.adminFamiliesBRPButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesBRPIcon;
             this.adminFamiliesBRPButton.Name = "adminFamiliesBRPButton";
-            this.adminFamiliesBRPButton.Size = new System.Drawing.Size(221, 22);
+            this.adminFamiliesBRPButton.Size = new System.Drawing.Size(237, 38);
             this.adminFamiliesBRPButton.Text = "Bulk Remove Parameters";
             this.adminFamiliesBRPButton.Click += new System.EventHandler(this.AdminFamiliesBRPButton_Click);
             // 
@@ -1748,7 +1748,7 @@ namespace BARevitTools
             // 
             this.bulkUpdatePublishVersionToolStripMenuItem.Image = global::BARevitTools.Properties.Resources.bimFamiliesUFVPIcon;
             this.bulkUpdatePublishVersionToolStripMenuItem.Name = "bulkUpdatePublishVersionToolStripMenuItem";
-            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(237, 38);
             this.bulkUpdatePublishVersionToolStripMenuItem.Text = "Bulk Update Publish Version";
             this.bulkUpdatePublishVersionToolStripMenuItem.Click += new System.EventHandler(this.AdminFamiliesUFVPButton_Click);
             // 
@@ -1759,10 +1759,10 @@ namespace BARevitTools
             // 
             // adminFamiliesToolsPanel
             // 
+            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBRPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBAPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesUFVPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesUFLayoutPanel);
-            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBRPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesDFBLayoutPanel);
             this.adminFamiliesToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adminFamiliesToolsPanel.Location = new System.Drawing.Point(0, 53);
@@ -1770,107 +1770,6 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel.Name = "adminFamiliesToolsPanel";
             this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesToolsPanel.TabIndex = 1;
-            // 
-            // adminFamiliesUFVPLayoutPanel
-            // 
-            this.adminFamiliesUFVPLayoutPanel.ColumnCount = 1;
-            this.adminFamiliesUFVPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPControlsPanel, 0, 1);
-            this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPInstructionsTextBox, 0, 0);
-            this.adminFamiliesUFVPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFVPLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesUFVPLayoutPanel.Name = "adminFamiliesUFVPLayoutPanel";
-            this.adminFamiliesUFVPLayoutPanel.RowCount = 2;
-            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
-            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.adminFamiliesUFVPLayoutPanel.Size = new System.Drawing.Size(710, 339);
-            this.adminFamiliesUFVPLayoutPanel.TabIndex = 1;
-            this.adminFamiliesUFVPLayoutPanel.Visible = false;
-            // 
-            // adminFamiliesUFVPControlsPanel
-            // 
-            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDirectoryTextBox);
-            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDirectoryButton);
-            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPCheckBox);
-            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDatePicker);
-            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPProgressBar);
-            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPRunButton);
-            this.adminFamiliesUFVPControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFVPControlsPanel.Location = new System.Drawing.Point(0, 75);
-            this.adminFamiliesUFVPControlsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesUFVPControlsPanel.Name = "adminFamiliesUFVPControlsPanel";
-            this.adminFamiliesUFVPControlsPanel.Size = new System.Drawing.Size(710, 264);
-            this.adminFamiliesUFVPControlsPanel.TabIndex = 1;
-            // 
-            // adminFamiliesUFVPDirectoryTextBox
-            // 
-            this.adminFamiliesUFVPDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminFamiliesUFVPDirectoryTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.adminFamiliesUFVPDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.adminFamiliesUFVPDirectoryTextBox.Location = new System.Drawing.Point(118, 8);
-            this.adminFamiliesUFVPDirectoryTextBox.Name = "adminFamiliesUFVPDirectoryTextBox";
-            this.adminFamiliesUFVPDirectoryTextBox.ReadOnly = true;
-            this.adminFamiliesUFVPDirectoryTextBox.Size = new System.Drawing.Size(586, 13);
-            this.adminFamiliesUFVPDirectoryTextBox.TabIndex = 5;
-            // 
-            // adminFamiliesUFVPDirectoryButton
-            // 
-            this.adminFamiliesUFVPDirectoryButton.Location = new System.Drawing.Point(0, 3);
-            this.adminFamiliesUFVPDirectoryButton.Name = "adminFamiliesUFVPDirectoryButton";
-            this.adminFamiliesUFVPDirectoryButton.Size = new System.Drawing.Size(112, 23);
-            this.adminFamiliesUFVPDirectoryButton.TabIndex = 4;
-            this.adminFamiliesUFVPDirectoryButton.Text = "Select Directory";
-            this.adminFamiliesUFVPDirectoryButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesUFVPDirectoryButton.Click += new System.EventHandler(this.AdminFamiliesUFVPDirectoryButton_Click);
-            // 
-            // adminFamiliesUFVPCheckBox
-            // 
-            this.adminFamiliesUFVPCheckBox.AutoSize = true;
-            this.adminFamiliesUFVPCheckBox.Location = new System.Drawing.Point(3, 32);
-            this.adminFamiliesUFVPCheckBox.Name = "adminFamiliesUFVPCheckBox";
-            this.adminFamiliesUFVPCheckBox.Size = new System.Drawing.Size(71, 17);
-            this.adminFamiliesUFVPCheckBox.TabIndex = 3;
-            this.adminFamiliesUFVPCheckBox.Text = "Use Date";
-            this.adminFamiliesUFVPCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // adminFamiliesUFVPDatePicker
-            // 
-            this.adminFamiliesUFVPDatePicker.Location = new System.Drawing.Point(118, 32);
-            this.adminFamiliesUFVPDatePicker.Name = "adminFamiliesUFVPDatePicker";
-            this.adminFamiliesUFVPDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.adminFamiliesUFVPDatePicker.TabIndex = 2;
-            // 
-            // adminFamiliesUFVPProgressBar
-            // 
-            this.adminFamiliesUFVPProgressBar.Location = new System.Drawing.Point(118, 58);
-            this.adminFamiliesUFVPProgressBar.Name = "adminFamiliesUFVPProgressBar";
-            this.adminFamiliesUFVPProgressBar.Size = new System.Drawing.Size(586, 23);
-            this.adminFamiliesUFVPProgressBar.TabIndex = 1;
-            this.adminFamiliesUFVPProgressBar.Visible = false;
-            // 
-            // adminFamiliesUFVPRunButton
-            // 
-            this.adminFamiliesUFVPRunButton.Location = new System.Drawing.Point(3, 58);
-            this.adminFamiliesUFVPRunButton.Name = "adminFamiliesUFVPRunButton";
-            this.adminFamiliesUFVPRunButton.Size = new System.Drawing.Size(75, 23);
-            this.adminFamiliesUFVPRunButton.TabIndex = 0;
-            this.adminFamiliesUFVPRunButton.Text = "RUN";
-            this.adminFamiliesUFVPRunButton.UseVisualStyleBackColor = true;
-            this.adminFamiliesUFVPRunButton.Click += new System.EventHandler(this.AdminFamiliesUFVPRunButton_Click);
-            // 
-            // adminFamiliesUFVPInstructionsTextBox
-            // 
-            this.adminFamiliesUFVPInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.adminFamiliesUFVPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminFamiliesUFVPInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
-            this.adminFamiliesUFVPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.adminFamiliesUFVPInstructionsTextBox.Multiline = true;
-            this.adminFamiliesUFVPInstructionsTextBox.Name = "adminFamiliesUFVPInstructionsTextBox";
-            this.adminFamiliesUFVPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.adminFamiliesUFVPInstructionsTextBox.Size = new System.Drawing.Size(710, 75);
-            this.adminFamiliesUFVPInstructionsTextBox.TabIndex = 2;
-            this.adminFamiliesUFVPInstructionsTextBox.Text = resources.GetString("adminFamiliesUFVPInstructionsTextBox.Text");
             // 
             // adminFamiliesBAPLayoutPanel
             // 
@@ -2105,6 +2004,107 @@ namespace BARevitTools
             this.adminFamiliesBAPDirectorySelectButton.Text = "Select Directory";
             this.adminFamiliesBAPDirectorySelectButton.UseVisualStyleBackColor = true;
             this.adminFamiliesBAPDirectorySelectButton.Click += new System.EventHandler(this.AdminFamiliesBAPSelectDirectoryButton_Click);
+            // 
+            // adminFamiliesUFVPLayoutPanel
+            // 
+            this.adminFamiliesUFVPLayoutPanel.ColumnCount = 1;
+            this.adminFamiliesUFVPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPControlsPanel, 0, 1);
+            this.adminFamiliesUFVPLayoutPanel.Controls.Add(this.adminFamiliesUFVPInstructionsTextBox, 0, 0);
+            this.adminFamiliesUFVPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFVPLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesUFVPLayoutPanel.Name = "adminFamiliesUFVPLayoutPanel";
+            this.adminFamiliesUFVPLayoutPanel.RowCount = 2;
+            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.adminFamiliesUFVPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesUFVPLayoutPanel.Size = new System.Drawing.Size(710, 339);
+            this.adminFamiliesUFVPLayoutPanel.TabIndex = 1;
+            this.adminFamiliesUFVPLayoutPanel.Visible = false;
+            // 
+            // adminFamiliesUFVPControlsPanel
+            // 
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDirectoryTextBox);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDirectoryButton);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPCheckBox);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPDatePicker);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPProgressBar);
+            this.adminFamiliesUFVPControlsPanel.Controls.Add(this.adminFamiliesUFVPRunButton);
+            this.adminFamiliesUFVPControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFVPControlsPanel.Location = new System.Drawing.Point(0, 75);
+            this.adminFamiliesUFVPControlsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFVPControlsPanel.Name = "adminFamiliesUFVPControlsPanel";
+            this.adminFamiliesUFVPControlsPanel.Size = new System.Drawing.Size(710, 264);
+            this.adminFamiliesUFVPControlsPanel.TabIndex = 1;
+            // 
+            // adminFamiliesUFVPDirectoryTextBox
+            // 
+            this.adminFamiliesUFVPDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesUFVPDirectoryTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesUFVPDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminFamiliesUFVPDirectoryTextBox.Location = new System.Drawing.Point(118, 8);
+            this.adminFamiliesUFVPDirectoryTextBox.Name = "adminFamiliesUFVPDirectoryTextBox";
+            this.adminFamiliesUFVPDirectoryTextBox.ReadOnly = true;
+            this.adminFamiliesUFVPDirectoryTextBox.Size = new System.Drawing.Size(586, 13);
+            this.adminFamiliesUFVPDirectoryTextBox.TabIndex = 5;
+            // 
+            // adminFamiliesUFVPDirectoryButton
+            // 
+            this.adminFamiliesUFVPDirectoryButton.Location = new System.Drawing.Point(0, 3);
+            this.adminFamiliesUFVPDirectoryButton.Name = "adminFamiliesUFVPDirectoryButton";
+            this.adminFamiliesUFVPDirectoryButton.Size = new System.Drawing.Size(112, 23);
+            this.adminFamiliesUFVPDirectoryButton.TabIndex = 4;
+            this.adminFamiliesUFVPDirectoryButton.Text = "Select Directory";
+            this.adminFamiliesUFVPDirectoryButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesUFVPDirectoryButton.Click += new System.EventHandler(this.AdminFamiliesUFVPDirectoryButton_Click);
+            // 
+            // adminFamiliesUFVPCheckBox
+            // 
+            this.adminFamiliesUFVPCheckBox.AutoSize = true;
+            this.adminFamiliesUFVPCheckBox.Location = new System.Drawing.Point(3, 32);
+            this.adminFamiliesUFVPCheckBox.Name = "adminFamiliesUFVPCheckBox";
+            this.adminFamiliesUFVPCheckBox.Size = new System.Drawing.Size(71, 17);
+            this.adminFamiliesUFVPCheckBox.TabIndex = 3;
+            this.adminFamiliesUFVPCheckBox.Text = "Use Date";
+            this.adminFamiliesUFVPCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // adminFamiliesUFVPDatePicker
+            // 
+            this.adminFamiliesUFVPDatePicker.Location = new System.Drawing.Point(118, 32);
+            this.adminFamiliesUFVPDatePicker.Name = "adminFamiliesUFVPDatePicker";
+            this.adminFamiliesUFVPDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.adminFamiliesUFVPDatePicker.TabIndex = 2;
+            // 
+            // adminFamiliesUFVPProgressBar
+            // 
+            this.adminFamiliesUFVPProgressBar.Location = new System.Drawing.Point(118, 58);
+            this.adminFamiliesUFVPProgressBar.Name = "adminFamiliesUFVPProgressBar";
+            this.adminFamiliesUFVPProgressBar.Size = new System.Drawing.Size(586, 23);
+            this.adminFamiliesUFVPProgressBar.TabIndex = 1;
+            this.adminFamiliesUFVPProgressBar.Visible = false;
+            // 
+            // adminFamiliesUFVPRunButton
+            // 
+            this.adminFamiliesUFVPRunButton.Location = new System.Drawing.Point(3, 58);
+            this.adminFamiliesUFVPRunButton.Name = "adminFamiliesUFVPRunButton";
+            this.adminFamiliesUFVPRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesUFVPRunButton.TabIndex = 0;
+            this.adminFamiliesUFVPRunButton.Text = "RUN";
+            this.adminFamiliesUFVPRunButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesUFVPRunButton.Click += new System.EventHandler(this.AdminFamiliesUFVPRunButton_Click);
+            // 
+            // adminFamiliesUFVPInstructionsTextBox
+            // 
+            this.adminFamiliesUFVPInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesUFVPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesUFVPInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesUFVPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesUFVPInstructionsTextBox.Multiline = true;
+            this.adminFamiliesUFVPInstructionsTextBox.Name = "adminFamiliesUFVPInstructionsTextBox";
+            this.adminFamiliesUFVPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.adminFamiliesUFVPInstructionsTextBox.Size = new System.Drawing.Size(710, 75);
+            this.adminFamiliesUFVPInstructionsTextBox.TabIndex = 2;
+            this.adminFamiliesUFVPInstructionsTextBox.Text = resources.GetString("adminFamiliesUFVPInstructionsTextBox.Text");
             // 
             // adminFamiliesUFLayoutPanel
             // 
@@ -7494,10 +7494,6 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.ResumeLayout(false);
             this.adminFamiliesToolStrip.PerformLayout();
             this.adminFamiliesToolsPanel.ResumeLayout(false);
-            this.adminFamiliesUFVPLayoutPanel.ResumeLayout(false);
-            this.adminFamiliesUFVPLayoutPanel.PerformLayout();
-            this.adminFamiliesUFVPControlsPanel.ResumeLayout(false);
-            this.adminFamiliesUFVPControlsPanel.PerformLayout();
             this.adminFamiliesBAPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.ResumeLayout(false);
             this.adminFamiliesBAPRunPanel.PerformLayout();
@@ -7514,6 +7510,10 @@ namespace BARevitTools
             this.adminFamiliesBAPSelectPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.adminFamiliesBAPFamiliesDGV)).EndInit();
             this.adminFamiliesBAPFamiliesDirectoryPanel.ResumeLayout(false);
+            this.adminFamiliesUFVPLayoutPanel.ResumeLayout(false);
+            this.adminFamiliesUFVPLayoutPanel.PerformLayout();
+            this.adminFamiliesUFVPControlsPanel.ResumeLayout(false);
+            this.adminFamiliesUFVPControlsPanel.PerformLayout();
             this.adminFamiliesUFLayoutPanel.ResumeLayout(false);
             this.adminFamiliesUFFullSyncPanel.ResumeLayout(false);
             this.adminFamiliesUFFullSyncPanel.PerformLayout();

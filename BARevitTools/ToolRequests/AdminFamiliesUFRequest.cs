@@ -31,10 +31,10 @@ namespace BARevitTools.ToolRequests
                 GeneralOperations.CleanRfaBackups(upgradedLibraryPath);
 
                 //Create a list of family paths in the current library, and a list of family paths in the new library.
-                List<string> familiesInCurrentLibrary = GeneralOperations.GetAllRvtFamilies(currentLibraryPath);
+                List<string> familiesInCurrentLibrary = GeneralOperations.GetAllRvtFamilies(currentLibraryPath,false);
                 //Also, make a dictionary because while the family paths will be evaluated, the paths themselves will need to be retrieved later by family name.
                 Dictionary<string, string> currentLibraryDict = new Dictionary<string, string>();
-                List<string> familiesInUpgradedLibrary = GeneralOperations.GetAllRvtFamilies(upgradedLibraryPath);
+                List<string> familiesInUpgradedLibrary = GeneralOperations.GetAllRvtFamilies(upgradedLibraryPath,false);
                 Dictionary<string, string> upgradedLibraryDict = new Dictionary<string, string>();
                 List<string> familiesToUpgrade = new List<string>();
                 List<string> familiesToDelete = new List<string>();

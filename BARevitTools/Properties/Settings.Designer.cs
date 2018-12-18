@@ -12,7 +12,7 @@ namespace BARevitTools.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -61,7 +61,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("clicea,mzabritski,administrator")]
+        [global::System.Configuration.DefaultSettingValueAttribute("clicea,mzabritski,administrator,kfronczak,enightingale,mwhitcomb")]
         public string BARTBAAdminUsers {
             get {
                 return ((string)(this["BARTBAAdminUsers"]));
@@ -230,6 +230,24 @@ namespace BARevitTools.Properties {
         public string BAProjectCentralFolder {
             get {
                 return ((string)(this["BAProjectCentralFolder"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BA View Sort 1 Division")]
+        public string BAViewSort1 {
+            get {
+                return ((string)(this["BAViewSort1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BA View Sort 2 Type")]
+        public string BAViewSort2 {
+            get {
+                return ((string)(this["BAViewSort2"]));
             }
         }
     }

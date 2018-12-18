@@ -30,7 +30,7 @@ namespace BARevitTools.ToolRequests
             }
             else
             {
-                familyFiles = GeneralOperations.GetAllRvtFamilies(uiForm.adminFamiliesUFVPDirectoryTextBox.Text);
+                familyFiles = GeneralOperations.GetAllRvtFamilies(uiForm.adminFamiliesUFVPDirectoryTextBox.Text,false);
             }
            
             //Verify the number of families collected is more than 0
@@ -148,10 +148,21 @@ namespace BARevitTools.ToolRequests
                     {
                         famParameter = famParamDict[BARevitTools.Properties.Settings.Default.RevitUFVPParameter];
                     }
-                    //Set the formula of the version parameter to the quote encapsulated date, just like it would appear in Revit, commit it, then save.
-                    famMan.SetFormula(famParameter, "\""+lastModified+"\"");                      
-                    t1.Commit();
-                    RVTOperations.SaveRevitFile(uiApp, famDoc, true);
+
+                    //Check to see if the value for the parameter is equal to the date last modified
+                    if (famMan.CurrentType.AsString(famParameter) == lastModified)
+                    {
+                        //If so, roll back the transaction and just close the file.
+                        t1.RollBack();
+                        famDoc.Close(false);
+                    }
+                    else
+                    {
+                        //Otherwise set the formula of the version parameter to the quote encapsulated date, just like it would appear in Revit, commit it, then save.
+                        famMan.SetFormula(famParameter, "\"" + lastModified + "\"");
+                        t1.Commit();
+                        RVTOperations.SaveRevitFile(uiApp, famDoc, true);
+                    }                    
                 }
                 else
                 {

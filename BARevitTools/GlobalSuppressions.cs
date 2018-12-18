@@ -8,3 +8,5 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0017:Simplify object initialization", Justification = "<Pending>", Scope = "namespace")]
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0028:Simplify collection initialization", Justification = "<Pending>", Scope = "member", Target = "~M:BARevitTools.RequestHandler.MaterialsAMLPaletteRun(Autodesk.Revit.UI.UIApplication,System.String)")]
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "RE0001:Regex issue: {0}", Justification = "<Pending>", Scope = "member", Target = "~M:BARevitTools.GeneralOperations.CleanFileName(System.String)~System.String")]
