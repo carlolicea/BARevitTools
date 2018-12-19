@@ -1917,6 +1917,7 @@ namespace BARevitTools
             this.viewsCEPRElevationComboBox.Items.Clear();
             this.viewsCEPRCropCheckBox.CheckState = CheckState.Unchecked;
             this.viewsCEPROverrideCheckBox.CheckState = CheckState.Unchecked;
+            this.viewsCEPRCropMethodComboBox.SelectedIndex = 0;
             this.SwitchActivePanel(ReferencedSwitchCaseIds.viewsCEPR);
             DatabaseOperations.CollectUserInputData(ReferencedGuids.viewsCEPRguid, viewsCEPRButton.Text, Environment.UserName.ToString(), DateTime.Now);
 
@@ -1940,6 +1941,18 @@ namespace BARevitTools
             this.Update();
             this.Refresh();
 
+        }
+        private void ViewsCEPRCropCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            if (uiForm.viewsCEPRCropCheckBox.Checked)
+            {
+                viewsCEPRCropMethodComboBox.Visible = true;
+            }
+            else
+            {
+                viewsCEPRCropMethodComboBox.Visible = false;
+            }
         }
         private void ViewsCEPRUrlLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -3430,6 +3443,8 @@ namespace BARevitTools
         private void OptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Need something for the options when they are done.
-        }        
+        }
+
+        
     }
 }
