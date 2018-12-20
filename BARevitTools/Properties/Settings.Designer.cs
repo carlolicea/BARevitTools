@@ -259,5 +259,14 @@ namespace BARevitTools.Properties {
                 return ((string)(this["RevitRoomTagSymbolType"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BA Sheet Discipline")]
+        public string BASheetDisciplineParameter {
+            get {
+                return ((string)(this["BASheetDisciplineParameter"]));
+            }
+        }
     }
 }

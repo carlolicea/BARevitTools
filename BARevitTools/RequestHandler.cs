@@ -80,7 +80,7 @@ namespace BARevitTools
                         ToolRequests.SheetsISFLRequest sheetsISFLRequest = new ToolRequests.SheetsISFLRequest(uiApp, "Insert sheets from link");
                         break;
                     case RequestId.sheetsCSSFS:
-                        ToolRequests.SheetsCSSFRequest sheetsCSSFRequest = new ToolRequests.SheetsCSSFRequest(uiApp, "Create Sheet Set from Schedule");
+                        ToolRequests.SheetsCSSFSRequest sheetsCSSFRequest = new ToolRequests.SheetsCSSFSRequest(uiApp, "Create Sheet Set from Schedule");
                         break;
                     case RequestId.sheetsOSS:
                         ToolRequests.SheetsOSSRequest sheetsOSSRequest = new ToolRequests.SheetsOSSRequest(uiApp, "Organize Sheet Set");

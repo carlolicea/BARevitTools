@@ -7162,7 +7162,7 @@ namespace BARevitTools
             this.setupUPDataGridView.TabIndex = 0;
             this.setupUPDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellContentClick);
             this.setupUPDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellEndEdit);
-            this.setupUPDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.setupUPDataGridView_CellValueChanged);
+            this.setupUPDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellValueChanged);
             // 
             // setupUPLinkedModelsLabel
             // 

@@ -2598,7 +2598,7 @@ namespace BARevitTools
                 uiForm.setupUPDataGridView.Refresh();
             }
         }
-        private void setupUPDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void SetupUPDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             DataGridView dgv = uiForm.setupUPDataGridView;
