@@ -2537,6 +2537,7 @@ namespace BARevitTools
                         row["New Path"] = linkPath.Replace(linkName, linkUpgradeName);
                         row["Allow Upgrade"] = linkAllowUpgrade;
                         row["Upgrade Result"] = false;
+
                         dt.Rows.Add(row);
                     }
                 }
@@ -2554,6 +2555,7 @@ namespace BARevitTools
                 {
                     if (row.Cells["Allow Upgrade"].Value.ToString() == "False")
                     {
+                        row.Cells["New Path"].Value = "";
                         row.DefaultCellStyle.BackColor = System.Drawing.Color.Gray;
                         row.ReadOnly = true;
                     }
@@ -2596,6 +2598,23 @@ namespace BARevitTools
                 uiForm.setupUPDataGridView.Refresh();
             }
         }
+        private void setupUPDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
+            DataGridView dgv = uiForm.setupUPDataGridView;
+            DataGridViewCell cell = uiForm.setupUPDataGridView.CurrentCell;
+            DataGridViewColumn column = cell.OwningColumn;
+
+            if (column.Name == "New Name" && dgv.SelectedRows[0].Cells["Allow Upgrade"].Value.ToString() == "True")
+            {
+                if (dgv.SelectedRows[0].Cells["New Name"].Value.ToString() != "")
+                {
+                    dgv.SelectedRows[0].Cells["New Path"].Value = Path.GetDirectoryName(dgv.SelectedRows[0].Cells["New Path"].Value.ToString()) + "\\" + dgv.SelectedRows[0].Cells["New Name"].Value.ToString() + ".rvt";
+                    dgv.Update();
+                    dgv.Refresh();
+                }
+            }
+        }
         private void SetupUPDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
@@ -2605,9 +2624,12 @@ namespace BARevitTools
 
             if (column.Name == "New Name" && dgv.SelectedRows[0].Cells["Allow Upgrade"].Value.ToString() == "True")
             {
-                dgv.SelectedRows[0].Cells["New Path"].Value = Path.GetDirectoryName(dgv.SelectedRows[0].Cells["New Path"].Value.ToString()) + "\\" + dgv.SelectedRows[0].Cells["New Name"].Value.ToString() + ".rvt";
-                dgv.Update();
-                dgv.Refresh();
+                if (dgv.SelectedRows[0].Cells["New Name"].Value.ToString() != "")
+                {
+                    dgv.SelectedRows[0].Cells["New Path"].Value = Path.GetDirectoryName(dgv.SelectedRows[0].Cells["New Path"].Value.ToString()) + "\\" + dgv.SelectedRows[0].Cells["New Name"].Value.ToString() + ".rvt";
+                    dgv.Update();
+                    dgv.Refresh();
+                }                
             }
         }
         private void SetupUPRunButton_Click(object sender, EventArgs e)

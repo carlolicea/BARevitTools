@@ -16,10 +16,12 @@ namespace BARevitTools.ToolRequests
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             DataGridView dgv = uiForm.setupUPDataGridView;
+            dgv.EndEdit();
+
             RVTDocument doc = uiApp.ActiveUIDocument.Document;
             string hostFilePathToUpgrade = uiForm.setupUPOriginalFilePathTextBox.Text;
             string hostFilePathForUpgrade = uiForm.setupUPUpgradedFilePathSetTextBox.Text + "\\" + uiForm.setupUPUpgradedFilePathUserTextBox.Text + ".rvt";
-
+            
             uiForm.setupUPProgressBar.Value = 0;
             uiForm.setupUPProgressBar.Minimum = 0;
             uiForm.setupUPProgressBar.Step = 1;
@@ -27,9 +29,12 @@ namespace BARevitTools.ToolRequests
             int progressBarSteps = 1;
             foreach(DataGridViewRow row in dgv.Rows)
             {
-                if(row.Cells["Upgrade"].Value != null || row.Cells["Upgrade"].Value.ToString() == "True")
+                if (row.Cells["Upgrade"].Value != null)
                 {
-                    progressBarSteps++;
+                    if (row.Cells["Upgrade"].Value.ToString() == "True")
+                    {
+                        progressBarSteps++;
+                    }                    
                 }
             }
             uiForm.setupUPProgressBar.Maximum = progressBarSteps;
@@ -40,7 +45,7 @@ namespace BARevitTools.ToolRequests
             }
             else if (uiForm.setupUPUpgradedFilePathUserTextBox.Text == "")
             {
-                MessageBox.Show("No location for the upgraded of the host Revit project file is set");
+                MessageBox.Show("No location for the upgrade of the host Revit project file is set");
             }
             else
             {
@@ -66,6 +71,8 @@ namespace BARevitTools.ToolRequests
                                     dgv.Rows[i].Cells["Upgrade Result"].Value = false;
                                     dgv.Rows[i].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
                                 }
+                                uiForm.setupUPProgressBar.PerformStep();
+                                uiForm.Update();
                             }
                         }
                         else { continue; }
@@ -74,12 +81,6 @@ namespace BARevitTools.ToolRequests
                     {
                         MessageBox.Show(e.Message);
                     }
-                    finally
-                    {
-                        uiForm.setupUPProgressBar.PerformStep();
-                        uiForm.Update();
-                    }
-
                 }
 
                 bool hostResult = RVTOperations.UpgradeRevitFile(uiApp, hostFilePathToUpgrade, hostFilePathForUpgrade, false);

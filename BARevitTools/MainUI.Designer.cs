@@ -6920,8 +6920,8 @@ namespace BARevitTools
             // 
             // setupToolsPanel
             // 
-            this.setupToolsPanel.Controls.Add(this.setupCWSLayoutPanel);
             this.setupToolsPanel.Controls.Add(this.setupUPLayoutPanel);
+            this.setupToolsPanel.Controls.Add(this.setupCWSLayoutPanel);
             this.setupToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setupToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.setupToolsPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -7162,6 +7162,7 @@ namespace BARevitTools
             this.setupUPDataGridView.TabIndex = 0;
             this.setupUPDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellContentClick);
             this.setupUPDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.SetupUPDataGridView_CellEndEdit);
+            this.setupUPDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.setupUPDataGridView_CellValueChanged);
             // 
             // setupUPLinkedModelsLabel
             // 
