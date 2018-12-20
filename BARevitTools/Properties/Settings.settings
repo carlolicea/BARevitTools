@@ -77,5 +77,8 @@
     <Setting Name="BAViewSort2" Type="System.String" Scope="Application">
       <Value Profile="(Default)">BA View Sort 2 Type</Value>
     </Setting>
+    <Setting Name="RevitRoomTagSymbolType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Name and Number</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
