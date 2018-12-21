@@ -175,7 +175,7 @@ namespace BARevitTools.ToolRequests
                     t3.Commit();
 
                     //Save out the family to the directory and remove the _temp from the name
-                    newFamDoc.SaveAs(saveDirectory + "\\" + String.Format(newFamDoc.Title).Replace("_temp", ""), saveAsOptions);
+                    newFamDoc.SaveAs(saveDirectory + "\\" + String.Format(newFamDoc.Title).Replace("_temp", "")+".rfa", saveAsOptions);
                     newFamDoc.Close();
                 }
 
@@ -196,6 +196,7 @@ namespace BARevitTools.ToolRequests
                         //Create a new type using the name of the type in the first column
                         FamilyType newType = newFamMan.NewType(dgv.Rows[i].Cells[0].Value.ToString());
                         //Clean up the family file name by leaving everything that does not pass the regular expression in CleanFileName
+                        
                         string saveName = GeneralOperations.CleanFileName(newType.Name);
                         if (saveName != "")
                         {
@@ -243,10 +244,7 @@ namespace BARevitTools.ToolRequests
 
                 //Clean up the backup files too
                 List<string> backupFiles = GeneralOperations.GetAllRvtBackupFamilies(uiForm.multiCatCFFEFamilySaveLocation);
-                foreach (string path in backupFiles)
-                {
-                    File.Delete(path);
-                }
+                GeneralOperations.CleanRfaBackups(backupFiles);
             }
             
         }

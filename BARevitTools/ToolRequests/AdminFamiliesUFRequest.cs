@@ -159,6 +159,7 @@ namespace BARevitTools.ToolRequests
                         { MessageBox.Show(e.ToString()); }
                     }
                 }
+
                 //Update the listboxes of the UI showing what families were upgraded and what were deleted
                 uiForm.adminFamiliesUFUpgradedFamiliesListBox.DataSource = upgradedFamilies;
                 uiForm.adminFamiliesUFDeletedFamiliesListBox.DataSource = deletedFamilies;

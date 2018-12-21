@@ -385,6 +385,8 @@ namespace BARevitTools
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEExcelStatusLabel.Visible = false;
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEFamiliesProgressBar.Visible = false;
             BARevitTools.Application.thisApp.newMainUi.allCATCFFEFamiliesSaveDirectoryTextBox.Text = "";
+            GeneralOperations.ResetDataGridView(Application.thisApp.newMainUi.multiCatCFFEExcelDGV);
+            GeneralOperations.ResetDataGridView(Application.thisApp.newMainUi.multiCatCFFEFamiliesDGV);
             DatabaseOperations.CollectUserInputData(BARevitTools.ReferencedGuids.multiCatCFFguid, multiCatCFFEButton.Text, Environment.UserName.ToString(), DateTime.Now);
         }
         //
@@ -652,7 +654,7 @@ namespace BARevitTools
             }
         }
         //
-        //When the user clicks the button for importing dat from the Excel template, this is called
+        //When the user clicks the button for importing data from the Excel template, this is called
         private void AllCatCFFEExcelSelectButton_Click(object sender, EventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
@@ -787,6 +789,7 @@ namespace BARevitTools
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             uiForm.floorsCFBRDoneLabel.Visible = false;
+            uiForm.floorsCFBRSelectFloorTypeComboBox.Items.Clear();
 
             List<string> floorTypeNames = RVTGetElementsByCollection.DocumentFloorTypeNames(uiApp);
             foreach (string floorTypeName in floorTypeNames)
@@ -814,7 +817,6 @@ namespace BARevitTools
         {
             MainUI uiForm = Application.thisApp.newMainUi;
             uiForm.floorsCFBRDoneLabel.Visible = false;
-
             if (floorsCFBRRoomsList == null || floorsCFBRRoomsList.Count==0)
             {
                 MessageBox.Show("Either no rooms have been selected, or if the Revit UI is grayed out, then it is waiting for you to click 'Finish' on the Options Bar below the Ribbon");
@@ -1304,37 +1306,40 @@ namespace BARevitTools
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             DataGridView dataGridView = uiForm.sheetsCSLDataGridView;
-            var rowValue = dataGridView.CurrentCell.Value;
-            if (dataGridView.CurrentCell.ColumnIndex == 0)
+            if (dataGridView.Rows.Count > 0 && dataGridView.CurrentCell != null)
             {
-                if (rowValue == null)
+                var rowValue = dataGridView.CurrentCell.Value;
+                if (dataGridView.CurrentCell.ColumnIndex == 0)
                 {
-                    foreach (DataGridViewRow row in dataGridView.SelectedRows)
+                    if (rowValue == null)
                     {
-                        int rowIndex = row.Index;
-                        dataGridView.Rows[rowIndex].Cells["Select"].Value = true;
-                        row.Cells["Select"].Style.BackColor = System.Drawing.Color.GreenYellow;
+                        foreach (DataGridViewRow row in dataGridView.SelectedRows)
+                        {
+                            int rowIndex = row.Index;
+                            dataGridView.Rows[rowIndex].Cells["Select"].Value = true;
+                            row.Cells["Select"].Style.BackColor = System.Drawing.Color.GreenYellow;
+                        }
+                    }
+                    else if (rowValue.ToString() == "True")
+                    {
+                        foreach (DataGridViewRow row in dataGridView.SelectedRows)
+                        {
+                            int rowIndex = row.Index;
+                            dataGridView.Rows[rowIndex].Cells["Select"].Value = false;
+                            row.Cells["Select"].Style.BackColor = dataGridView.DefaultCellStyle.BackColor;
+                        }
+                    }
+                    else
+                    {
+                        foreach (DataGridViewRow row in dataGridView.SelectedRows)
+                        {
+                            int rowIndex = row.Index;
+                            dataGridView.Rows[rowIndex].Cells["Select"].Value = true;
+                            row.Cells["Select"].Style.BackColor = System.Drawing.Color.GreenYellow;
+                        }
                     }
                 }
-                else if (rowValue.ToString() == "True")
-                {
-                    foreach (DataGridViewRow row in dataGridView.SelectedRows)
-                    {
-                        int rowIndex = row.Index;
-                        dataGridView.Rows[rowIndex].Cells["Select"].Value = false;
-                        row.Cells["Select"].Style.BackColor = dataGridView.DefaultCellStyle.BackColor;
-                    }
-                }
-                else
-                {
-                    foreach (DataGridViewRow row in dataGridView.SelectedRows)
-                    {
-                        int rowIndex = row.Index;
-                        dataGridView.Rows[rowIndex].Cells["Select"].Value = true;
-                        row.Cells["Select"].Style.BackColor = System.Drawing.Color.GreenYellow;
-                    }
-                }
-            }
+            }                
             
             dataGridView.Update();
             dataGridView.Refresh();
@@ -1363,8 +1368,10 @@ namespace BARevitTools
                         foreach (DataGridViewRow row in dgv.Rows)
                         {
                             string sheetNumber = row.Cells["Sheet Number"].Value.ToString();
-                            Match match = Regex.Match(sheetNumber, searchString, RegexOptions.IgnoreCase);
-                            if (match.Success)
+                            string sheetName = row.Cells["Sheet Name"].Value.ToString();
+                            Match matchNumber = Regex.Match(sheetNumber, searchString, RegexOptions.IgnoreCase);
+                            Match matchName = Regex.Match(sheetName, searchString, RegexOptions.IgnoreCase);
+                            if (matchNumber.Success || matchName.Success)
                             {
                                 row.Visible = true;
                             }
@@ -1377,8 +1384,10 @@ namespace BARevitTools
                         foreach (DataGridViewRow row in dgv.Rows)
                         {
                             string sheetNumber = row.Cells["Sheet Number"].Value.ToString();
-                            Match match = Regex.Match(sheetNumber, searchString, RegexOptions.IgnoreCase);
-                            if (!match.Success)
+                            string sheetName = row.Cells["Sheet Name"].Value.ToString();
+                            Match matchNumber = Regex.Match(sheetNumber, searchString, RegexOptions.IgnoreCase);
+                            Match matchName = Regex.Match(sheetName, searchString, RegexOptions.IgnoreCase);
+                            if (!matchNumber.Success && !matchName.Success)
                             {
                                 row.Visible = true;
                             }
@@ -1640,11 +1649,8 @@ namespace BARevitTools
             DataGridView dataGridView = uiForm.sheetsISFLDataGridView;
             foreach (DataGridViewRow row in dataGridView.SelectedRows)
             {
-                if (row.Cells["Pre-exists"].Value == null || row.Cells["Pre-exists"].Value.ToString() == "False")
-                {
-                    int rowIndex = row.Index;
-                    dataGridView.Rows[rowIndex].Cells["Discipline"].Value = uiForm.sheetsISFLDisciplineComboBox.Text;
-                }
+                int rowIndex = row.Index;
+                dataGridView.Rows[rowIndex].Cells["Discipline"].Value = uiForm.sheetsISFLDisciplineComboBox.Text;
             }
             dataGridView.Update();
             dataGridView.Refresh();
@@ -1705,7 +1711,6 @@ namespace BARevitTools
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             uiForm.sheetsOSSFilterConditionComboBox.Text = "<Condition>";
-            uiForm.sheetsOSSFilterFieldComboBox.Text = "<Field>";
             uiForm.sheetsOSSFilterTextBox.Text = "<Search String>";
 
             DataGridView dgv = uiForm.sheetsOSSDataGridView;
@@ -1719,7 +1724,7 @@ namespace BARevitTools
             DataColumn sheetNumberColumn = dt.Columns.Add("Sheet Number");
             sheetNumberColumn.ReadOnly = true;
             DataColumn sheetNameColumn = dt.Columns.Add("Sheet Name");
-            sheetNameColumn.ReadOnly = true;
+            sheetNameColumn.ReadOnly = true;            
             DataColumn sheetIdColumn = dt.Columns.Add("Sheet Id", typeof(Int32));
             sheetIdColumn.ReadOnly = true;
 
@@ -1750,6 +1755,7 @@ namespace BARevitTools
                 bindingSource.DataSource = dt;
                 dgv.DataSource = bindingSource;
                 dgv.Sort(dgv.Columns["Sheet Number"], ListSortDirection.Ascending);
+                dgv.Columns["Sheet Name"].Width = 150;
                 dgv.Columns["Sheet Id"].Visible = false;
                 dgv.Update();
             }
@@ -1778,23 +1784,24 @@ namespace BARevitTools
         private void SheetsOSSFilterRows()
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
-            string field = uiForm.sheetsOSSFilterFieldComboBox.Text;
             string condition = uiForm.sheetsOSSFilterConditionComboBox.Text;
             string searchString = uiForm.sheetsOSSFilterTextBox.Text;
             DataGridView dgv = uiForm.sheetsOSSDataGridView;
-            if (field != "<Field>" && condition != "<Condition>" && searchString != "" && searchString != "<Search String>")
+            if (condition != "<Condition>" && searchString != "" && searchString != "<Search String>")
             {
                 try
                 {
                     CurrencyManager currencyManager = (CurrencyManager)BindingContext[dgv.DataSource];
                     currencyManager.SuspendBinding();
-                    if (field == "NUMBER" && condition == "CONTAINS")
+                    if (condition == "CONTAINS")
                     {
                         foreach (DataGridViewRow row in dgv.Rows)
                         {
                             string sheetNumber = row.Cells[0].Value.ToString();
-                            Match match = Regex.Match(sheetNumber, searchString, RegexOptions.IgnoreCase);
-                            if (match.Success)
+                            string sheetName = row.Cells[1].Value.ToString();
+                            Match matchName = Regex.Match(sheetName, searchString, RegexOptions.IgnoreCase);
+                            Match matchNumber = Regex.Match(sheetNumber, searchString, RegexOptions.IgnoreCase);
+                            if (matchName.Success || matchNumber.Success)
                             {
                                 row.Visible = true;
                             }
@@ -1802,41 +1809,15 @@ namespace BARevitTools
                         }
                         dgv.Update();
                     }
-                    if (field == "NUMBER" && condition == "DOES NOT CONTAIN")
+                    if (condition == "DOES NOT CONTAIN")
                     {
                         foreach (DataGridViewRow row in dgv.Rows)
                         {
                             string sheetNumber = row.Cells[0].Value.ToString();
-                            Match match = Regex.Match(sheetNumber, searchString, RegexOptions.IgnoreCase);
-                            if (!match.Success)
-                            {
-                                row.Visible = true;
-                            }
-                            else { row.Visible = false; }
-                        }
-                        dgv.Update();
-                    }
-                    if (field == "NAME" && condition == "CONTAINS")
-                    {
-                        foreach (DataGridViewRow row in dgv.Rows)
-                        {
-                            string sheetNumber = row.Cells[1].Value.ToString();
-                            Match match = Regex.Match(sheetNumber, searchString, RegexOptions.IgnoreCase);
-                            if (match.Success)
-                            {
-                                row.Visible = true;
-                            }
-                            else { row.Visible = false; }
-                        }
-                        dgv.Update();
-                    }
-                    if (field == "NAME" && condition == "DOES NOT CONTAIN")
-                    {
-                        foreach (DataGridViewRow row in dgv.Rows)
-                        {
-                            string sheetNumber = row.Cells[1].Value.ToString();
-                            Match match = Regex.Match(sheetNumber, searchString, RegexOptions.IgnoreCase);
-                            if (!match.Success)
+                            string sheetName = row.Cells[1].Value.ToString();
+                            Match matchName = Regex.Match(sheetName, searchString, RegexOptions.IgnoreCase);
+                            Match matchNumber = Regex.Match(sheetNumber, searchString, RegexOptions.IgnoreCase);
+                            if (!matchName.Success && !matchNumber.Success)
                             {
                                 row.Visible = true;
                             }
@@ -1860,7 +1841,7 @@ namespace BARevitTools
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
             DataGridView dgv = uiForm.sheetsOSSDataGridView;
-            if (dgv.Rows.Count > 0)
+            if (dgv.Rows.Count > 0 && dgv.CurrentCell != null)
             {
                 var rowValue = dgv.CurrentCell.Value.ToString();
                 int columnIndex = dgv.CurrentCell.ColumnIndex;
@@ -3466,7 +3447,5 @@ namespace BARevitTools
         {
             // Need something for the options when they are done.
         }
-
-        
     }
 }

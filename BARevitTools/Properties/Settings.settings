@@ -83,5 +83,8 @@
     <Setting Name="BASheetDisciplineParameter" Type="System.String" Scope="Application">
       <Value Profile="(Default)">BA Sheet Discipline</Value>
     </Setting>
+    <Setting Name="RevitOverrideInteriorCropWeight" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

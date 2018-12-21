@@ -268,5 +268,14 @@ namespace BARevitTools.Properties {
                 return ((string)(this["BASheetDisciplineParameter"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int RevitOverrideInteriorCropWeight {
+            get {
+                return ((int)(this["RevitOverrideInteriorCropWeight"]));
+            }
+        }
     }
 }

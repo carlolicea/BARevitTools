@@ -218,9 +218,9 @@ namespace BARevitTools.ToolRequests
                             uiForm.adminFamiliesBAPProgressBar.PerformStep();
                         }
                     }
-                    catch(Exception e)
+                    catch
                     {
-                        MessageBox.Show(e.ToString());
+                        MessageBox.Show("The family could not be opened, likely due to being saved in a newer version of Revit");
                     }                   
                 }
             }

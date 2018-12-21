@@ -107,9 +107,9 @@ namespace BARevitTools.ToolRequests
                             //Close the family document
                             famDoc.Close(false);
                         }
-                        catch (Exception e)
+                        catch
                         {
-                            MessageBox.Show(e.ToString());
+                            MessageBox.Show("The family could not be opened, likely due to being a newer version of Revit");
                         }
                         finally
                         {

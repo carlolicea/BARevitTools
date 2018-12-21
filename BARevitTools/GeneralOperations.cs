@@ -96,7 +96,7 @@ namespace BARevitTools
                 // @ signs (@)
                 // dashes (-)
                 // whitespace (\s)
-                return Regex.Replace(originalName, @"[^\w\.@-\s]", "", RegexOptions.None, TimeSpan.FromSeconds(1.5));
+                return Regex.Replace(originalName, @"[^\s\w\.@-]", "", RegexOptions.None, TimeSpan.FromSeconds(1.5));
             }
             catch (RegexMatchTimeoutException)
             {
