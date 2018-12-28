@@ -163,6 +163,7 @@
     <Compile Include="ToolRequests\DocumentsCTSRequest.cs" />
     <Compile Include="ToolRequests\ElectricalCEORequest.cs" />
     <Compile Include="ToolRequests\FloorsCFBRRequest.cs" />
+    <Compile Include="ToolRequests\MaterialsCMSLoadFamilyRequest.cs" />
     <Compile Include="ToolRequests\MaterialsAMLPaletteRequest.cs" />
     <Compile Include="ToolRequests\MaterialsAMLRequest.cs" />
     <Compile Include="ToolRequests\MaterialsCMSRequest.cs" />

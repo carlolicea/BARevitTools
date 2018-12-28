@@ -371,14 +371,10 @@ namespace BARevitTools
 
         //Create Families From Excel
         #region multiCatCFFE
-        //
-        //The following strings are for storing the data obtained by the MainUI
         public string multiCatSelectedFamilyFile = "";
         public string multiCatCFFEExcelFileToUse = "";
         public string multiCatCFFEFamilyFileToUse = "";
         public string multiCatCFFEFamilySaveLocation = "";
-        //
-        //This switches the active MainUI panel of controls and records the user's click of the tool button
         private void AllCatCFFEButton_Click(object sender, EventArgs e)
         {
             SwitchActivePanel(ReferencedSwitchCaseIds.multiCatCFFE1);
@@ -389,16 +385,12 @@ namespace BARevitTools
             GeneralOperations.ResetDataGridView(Application.thisApp.newMainUi.multiCatCFFEFamiliesDGV);
             DatabaseOperations.CollectUserInputData(BARevitTools.ReferencedGuids.multiCatCFFguid, multiCatCFFEButton.Text, Environment.UserName.ToString(), DateTime.Now);
         }
-        //
-        //When the user clicks on the button to select a directory for saving the Excel template, this is called
         private void AllCatCFFEDirectorySelectButton_Click(object sender, EventArgs e)
         {
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEExcelStatusLabel.Visible = false;
             string saveDirectory = GeneralOperations.GetDirectory();
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEDirectoryTextBox.Text = saveDirectory;
         }
-        //
-        //After a user clicks on the button to select a Revit family, this is called
         private void AllCatCFFESelectFamilyButton_Click(object sender, EventArgs e)
         {
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEExcelStatusLabel.Visible = false;
@@ -433,8 +425,6 @@ namespace BARevitTools
             }
 
         }
-        //
-        //When a user has imported their Excel template, the DataGridView will populate. This method controls what happens with the DGV when it is interacted with
         private void AllCatCFFEExcelDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
@@ -486,8 +476,6 @@ namespace BARevitTools
             dgv.Update();
             dgv.Refresh();
         }
-        //
-        //When the user clicks the button for saving the Excel template, this is called
         private void AllCatCFFEExcelRunButton_Click(object sender, EventArgs e)
         {
             BARevitTools.Application.thisApp.newMainUi.multiCatCFFEExcelStatusLabel.Visible = false;
@@ -653,8 +641,6 @@ namespace BARevitTools
                 }
             }
         }
-        //
-        //When the user clicks the button for importing data from the Excel template, this is called
         private void AllCatCFFEExcelSelectButton_Click(object sender, EventArgs e)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
@@ -835,14 +821,18 @@ namespace BARevitTools
 
         #region materialsCMS       
         public string materialsCMSExcelSaveDirectory = "";
+        public Family materialsCMSFamilyToUse = null;
         private void MaterialsCMS_Click(object sender, EventArgs e)
         {
+            //Ensure this tool can run
             if(Application.thisApp.CadDriveIsAccessible == false)
             {
                 DisableUIFeatures.DisableControls(Application.thisApp.newMainUi.materialsCMSExcelLayoutPanel.Controls, Properties.Settings.Default.RevitCadDrive);
             }
 
+            //Reset the MainUI
             materialsCMSExcelSaveDirectory = "";
+            materialsCMSExcelSpreadsheetNameTextBox.Text = "<Excel Spreadsheet Name>";
             materialsCMSExcelDataGridView.DataBindings.Clear();
             materialsCMSExcelDataGridView.Update();
             materialsCMSExcelDataGridView.Refresh();
@@ -850,6 +840,13 @@ namespace BARevitTools
             materialsCMSExcelCreateSymbolsProgressBar.Visible = false;
             SwitchActivePanel(ReferencedSwitchCaseIds.materialsCMS);
             DatabaseOperations.CollectUserInputData(ReferencedGuids.materialsCMSguid, materialsCMSButton.Text, Environment.UserName.ToString(), DateTime.Now);
+
+            //First, try to use the family from the project. If that fails, load the family file
+            materialsCMSFamilyToUse = RVTGetElementsByCollection.FamilyByFamilyName(uiApp, Path.GetFileNameWithoutExtension(Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule));
+            if (materialsCMSFamilyToUse == null && Application.thisApp.CadDriveIsAccessible == true)
+            {
+                MaterialsCMSLoadFamily();
+            }
         }
         private void MaterialsCMSExcelSelectSaveDirectoryButton_Click(object sender, EventArgs e)
         {
@@ -869,50 +866,74 @@ namespace BARevitTools
             {
                 string savePath = materialsCMSExcelSaveDirectory + "\\" + materialsCMSExcelSpreadsheetNameTextBox.Text + ".xlsx";
                 GeneralOperations.WriteResourceToFile("BARevitTools.Resources.SYMB Material List.xlsx", savePath);
-                DataTable existingFamilies = GetExistingMaterialSymbolsData(savePath);
+                DataGridView existingFamilies = GetExistingMaterialSymbolsData();
                 if (existingFamilies != null)
                 {
-                    ExcelOperations.DataTableToExcel(savePath, existingFamilies);
+                    ExcelOperations.DataGridViewToExcel(savePath, existingFamilies);
                 }
                 MessageBox.Show(String.Format("{0} was saved to {1}", materialsCMSExcelSpreadsheetNameTextBox.Text, savePath));
             }
         }
-        private DataTable GetExistingMaterialSymbolsData(string filePath)
+        private void MaterialsCMSLoadFamily()
         {
-            List<FamilySymbol> familySymbols = RVTGetElementsByCollection.FamilyTypesByFamilyName(uiApp, Path.GetFileNameWithoutExtension(BARevitTools.Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule));
-
+            m_ExEvent.Raise();
+            MakeRequest(RequestId.materialsCMSLoadFamily);
+        }
+        private DataGridView GetExistingMaterialSymbolsData()
+        {   
+            List<FamilySymbol> familySymbols = RVTGetElementsByCollection.FamilyTypesByFamilyName(uiApp, Path.GetFileNameWithoutExtension(BARevitTools.Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule));            
             if (familySymbols != null)
             {
                 try
                 {
-                    DataTable excelDataTable = ExcelOperations.ExcelTableToDataTable(filePath, true);
-                    foreach (FamilySymbol familySymbol in familySymbols)
+                    DataGridView tableToExport = new DataGridView();
+                    DataGridViewTextBoxColumn typeColumn = new DataGridViewTextBoxColumn();
+                    typeColumn.HeaderText = "Type";
+                    tableToExport.Columns.Add(typeColumn);
+
+                    RVTDocument famDoc = uiApp.ActiveUIDocument.Document.EditFamily(materialsCMSFamilyToUse);
+                    FamilyManager famMan = famDoc.FamilyManager;
+                    List<string> columnHeadersList = new List<string>();
+
+                    foreach (FamilyParameter parameter in famMan.Parameters)
                     {
-                        DataRow row = excelDataTable.NewRow();
-                        foreach (DataColumn column in excelDataTable.Columns)
+                        if (!columnHeadersList.Contains(parameter.Definition.Name))
                         {
-                            if (column.ColumnName == "Type")
+                            columnHeadersList.Add(parameter.Definition.Name);
+                            DataGridViewTextBoxColumn newColumn = new DataGridViewTextBoxColumn();                            
+                            newColumn.HeaderText = parameter.Definition.Name;
+                            tableToExport.Columns.Add(newColumn);
+                        }                       
+                    }
+                    famDoc.Close(false);
+                    
+                    for(int i = 0; i<familySymbols.Count;i++)
+                    {
+                        FamilySymbol familySymbol = familySymbols[i];
+                        int rowIndex = tableToExport.Rows.Add();
+                        DataGridViewRow row = tableToExport.Rows[i];
+                        foreach (DataGridViewTextBoxColumn column in tableToExport.Columns)
+                        {
+                            if (column.HeaderText == "Type")
                             {
-                                row["Type"] = familySymbol.Name;
+                                row.Cells[column.Index].Value = familySymbol.Name;
                             }
                             else
                             {
                                 try
                                 {
-                                    string value = familySymbol.GetParameters(column.ColumnName)[0].AsString();
-                                    row[column.ColumnName] = value;
+                                    string value = familySymbol.GetParameters(column.HeaderText).First().AsString();
+                                    row.Cells[column.Index].Value = value;
                                 }
-                                catch (Exception f)
+                                catch
                                 {
-                                    MessageBox.Show(f.ToString());
-                                    row[column.ColumnName] = "";
+                                    row.Cells[column.Index].Value = "";
                                     continue;
                                 }
                             }
                         }
-                        excelDataTable.Rows.Add(row);
                     }
-                    return excelDataTable;
+                    return tableToExport;
                 }
                 catch (Exception e)
                 {
@@ -922,6 +943,7 @@ namespace BARevitTools
             }
             else
             {
+                MessageBox.Show(String.Format("Could not find the family '{0}' in the project. Please load it first.", Path.GetFileNameWithoutExtension(Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule)));
                 return null;
             }
         }
@@ -3311,7 +3333,7 @@ namespace BARevitTools
             string adminFamiliesDFBFamilyDirectory = GeneralOperations.GetDirectory();
             if (adminFamiliesDFBFamilyDirectory != null)
             {
-                List<string> files = GeneralOperations.GetAllRvtBackupFamilies(adminFamiliesDFBFamilyDirectory);
+                List<string> files = GeneralOperations.GetAllRvtBackupFamilies(adminFamiliesDFBFamilyDirectory,true);
 
                 if (files.Count != 0)
                 {

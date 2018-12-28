@@ -342,6 +342,21 @@ namespace BARevitTools
             this.sheetsCSSFSButton = new System.Windows.Forms.ToolStripMenuItem();
             this.sheetsOSSButton = new System.Windows.Forms.ToolStripMenuItem();
             this.sheetsToolsPanel = new System.Windows.Forms.Panel();
+            this.sheetsOSSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.sheetsOSSDataGridView = new System.Windows.Forms.DataGridView();
+            this.sheetsOSSInstructionsPanel = new System.Windows.Forms.Panel();
+            this.sheetsOSSInstructionsTextBox = new System.Windows.Forms.TextBox();
+            this.sheetsOSSFilterPanel = new System.Windows.Forms.Panel();
+            this.sheetsOSSFilterTextBox = new System.Windows.Forms.TextBox();
+            this.sheetsOSSFilterConditionComboBox = new System.Windows.Forms.ComboBox();
+            this.sheetsOSSFilterLabel = new System.Windows.Forms.Label();
+            this.sheetsOSSNewSetPanel = new System.Windows.Forms.Panel();
+            this.sheetsOSSNewSetButton = new System.Windows.Forms.Button();
+            this.sheetsOSSNewSetLabel = new System.Windows.Forms.Label();
+            this.sheetsOSSNewSetTextBox = new System.Windows.Forms.TextBox();
+            this.sheetsOSSControlsPanel = new System.Windows.Forms.Panel();
+            this.sheetsOSSRunButton = new System.Windows.Forms.Button();
+            this.sheetsOSSRunLabel = new System.Windows.Forms.Label();
             this.sheetsISFLLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.sheetsISFLInstructionsPanel = new System.Windows.Forms.Panel();
             this.sheetsISFLInstructionsLabel = new System.Windows.Forms.Label();
@@ -368,21 +383,6 @@ namespace BARevitTools
             this.sheetsCSLRunPanel = new System.Windows.Forms.Panel();
             this.sheetsCSLProgressBar = new System.Windows.Forms.ProgressBar();
             this.sheetsCLSRunButton = new System.Windows.Forms.Button();
-            this.sheetsOSSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.sheetsOSSDataGridView = new System.Windows.Forms.DataGridView();
-            this.sheetsOSSInstructionsPanel = new System.Windows.Forms.Panel();
-            this.sheetsOSSInstructionsTextBox = new System.Windows.Forms.TextBox();
-            this.sheetsOSSFilterPanel = new System.Windows.Forms.Panel();
-            this.sheetsOSSFilterTextBox = new System.Windows.Forms.TextBox();
-            this.sheetsOSSFilterConditionComboBox = new System.Windows.Forms.ComboBox();
-            this.sheetsOSSFilterLabel = new System.Windows.Forms.Label();
-            this.sheetsOSSNewSetPanel = new System.Windows.Forms.Panel();
-            this.sheetsOSSNewSetButton = new System.Windows.Forms.Button();
-            this.sheetsOSSNewSetLabel = new System.Windows.Forms.Label();
-            this.sheetsOSSNewSetTextBox = new System.Windows.Forms.TextBox();
-            this.sheetsOSSControlsPanel = new System.Windows.Forms.Panel();
-            this.sheetsOSSRunButton = new System.Windows.Forms.Button();
-            this.sheetsOSSRunLabel = new System.Windows.Forms.Label();
             this.sheetsCSSFSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.sheetsCSSFSInstructionsPanel = new System.Windows.Forms.Panel();
             this.sheetsCSSFSInstructionsTextBox = new System.Windows.Forms.TextBox();
@@ -488,16 +488,6 @@ namespace BARevitTools
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.qaqcRFSPButton = new System.Windows.Forms.ToolStripButton();
             this.qaqcToolsPanel = new System.Windows.Forms.Panel();
-            this.qaqcRFSPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.qaqcRFSPInstructionsTextBox = new System.Windows.Forms.TextBox();
-            this.qaqcRFSPParametersListBox = new System.Windows.Forms.ListBox();
-            this.qaqcRFSPToolsPanel = new System.Windows.Forms.Panel();
-            this.qaqcRFSPRunButton = new System.Windows.Forms.Button();
-            this.qaqcRFSPSelectFamilyLabel = new System.Windows.Forms.Label();
-            this.qaqcRFSPSFamilyLabel = new System.Windows.Forms.Label();
-            this.qaqcRFSPSelectFamilyButton = new System.Windows.Forms.Button();
-            this.qaqcRFSPEvaluatedParametersPanel = new System.Windows.Forms.Panel();
-            this.qaqcRFSPEvaluatedParametersLabel = new System.Windows.Forms.Label();
             this.qaqcRLSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.qaqcRLSRunPanel = new System.Windows.Forms.Panel();
             this.qaqcRLSRunButton = new System.Windows.Forms.Button();
@@ -511,6 +501,16 @@ namespace BARevitTools
             this.qaqcRLSReplaceComboBox = new System.Windows.Forms.ComboBox();
             this.qaqcRLSUnswitchablePanel = new System.Windows.Forms.Panel();
             this.qaqcRLSUnswitchableLabel = new System.Windows.Forms.Label();
+            this.qaqcRFSPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.qaqcRFSPInstructionsTextBox = new System.Windows.Forms.TextBox();
+            this.qaqcRFSPParametersListBox = new System.Windows.Forms.ListBox();
+            this.qaqcRFSPToolsPanel = new System.Windows.Forms.Panel();
+            this.qaqcRFSPRunButton = new System.Windows.Forms.Button();
+            this.qaqcRFSPSelectFamilyLabel = new System.Windows.Forms.Label();
+            this.qaqcRFSPSFamilyLabel = new System.Windows.Forms.Label();
+            this.qaqcRFSPSelectFamilyButton = new System.Windows.Forms.Button();
+            this.qaqcRFSPEvaluatedParametersPanel = new System.Windows.Forms.Panel();
+            this.qaqcRFSPEvaluatedParametersLabel = new System.Windows.Forms.Label();
             this.qaqcCSVNPanel = new System.Windows.Forms.Panel();
             this.qaqcCSVNRun = new System.Windows.Forms.Button();
             this.qaqcCTVNInstructions = new System.Windows.Forms.Label();
@@ -729,6 +729,12 @@ namespace BARevitTools
             this.sheetsTabLayoutPanel.SuspendLayout();
             this.sheetsToolStrip.SuspendLayout();
             this.sheetsToolsPanel.SuspendLayout();
+            this.sheetsOSSLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sheetsOSSDataGridView)).BeginInit();
+            this.sheetsOSSInstructionsPanel.SuspendLayout();
+            this.sheetsOSSFilterPanel.SuspendLayout();
+            this.sheetsOSSNewSetPanel.SuspendLayout();
+            this.sheetsOSSControlsPanel.SuspendLayout();
             this.sheetsISFLLayoutPanel.SuspendLayout();
             this.sheetsISFLInstructionsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sheetsISFLDataGridView)).BeginInit();
@@ -739,12 +745,6 @@ namespace BARevitTools
             this.sheetsCSLControlsPanel.SuspendLayout();
             this.sheetsCSLInstructionsPanel.SuspendLayout();
             this.sheetsCSLRunPanel.SuspendLayout();
-            this.sheetsOSSLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sheetsOSSDataGridView)).BeginInit();
-            this.sheetsOSSInstructionsPanel.SuspendLayout();
-            this.sheetsOSSFilterPanel.SuspendLayout();
-            this.sheetsOSSNewSetPanel.SuspendLayout();
-            this.sheetsOSSControlsPanel.SuspendLayout();
             this.sheetsCSSFSLayoutPanel.SuspendLayout();
             this.sheetsCSSFSInstructionsPanel.SuspendLayout();
             this.sheetsCSSFSControlsPanel.SuspendLayout();
@@ -789,14 +789,14 @@ namespace BARevitTools
             this.qaqcLayoutPanel.SuspendLayout();
             this.qaqcToolStrip.SuspendLayout();
             this.qaqcToolsPanel.SuspendLayout();
-            this.qaqcRFSPLayoutPanel.SuspendLayout();
-            this.qaqcRFSPToolsPanel.SuspendLayout();
-            this.qaqcRFSPEvaluatedParametersPanel.SuspendLayout();
             this.qaqcRLSLayoutPanel.SuspendLayout();
             this.qaqcRLSRunPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qaqcRLSDataGridView)).BeginInit();
             this.qaqcRLSControlsPanel.SuspendLayout();
             this.qaqcRLSUnswitchablePanel.SuspendLayout();
+            this.qaqcRFSPLayoutPanel.SuspendLayout();
+            this.qaqcRFSPToolsPanel.SuspendLayout();
+            this.qaqcRFSPEvaluatedParametersPanel.SuspendLayout();
             this.qaqcCSVNPanel.SuspendLayout();
             this.qaqcCSVLayoutPanel.SuspendLayout();
             this.qaqcCSVControlsPanel.SuspendLayout();
@@ -2744,7 +2744,7 @@ namespace BARevitTools
             this.aboutPublishLabel.Name = "aboutPublishLabel";
             this.aboutPublishLabel.Size = new System.Drawing.Size(65, 13);
             this.aboutPublishLabel.TabIndex = 5;
-            this.aboutPublishLabel.Text = "12/21/2018";
+            this.aboutPublishLabel.Text = "12/28/2018";
             // 
             // aboutTabVersionLabel
             // 
@@ -2756,7 +2756,7 @@ namespace BARevitTools
             this.aboutTabVersionLabel.Name = "aboutTabVersionLabel";
             this.aboutTabVersionLabel.Size = new System.Drawing.Size(102, 20);
             this.aboutTabVersionLabel.TabIndex = 0;
-            this.aboutTabVersionLabel.Text = "Version 1.0.6";
+            this.aboutTabVersionLabel.Text = "Version 1.0.7";
             // 
             // aboutTabTitleLabel
             // 
@@ -3739,8 +3739,8 @@ namespace BARevitTools
             // 
             // materialsToolsPanel
             // 
-            this.materialsToolsPanel.Controls.Add(this.materialsAMLLayoutPanel);
             this.materialsToolsPanel.Controls.Add(this.materialsCMSExcelLayoutPanel);
+            this.materialsToolsPanel.Controls.Add(this.materialsAMLLayoutPanel);
             this.materialsToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialsToolsPanel.Location = new System.Drawing.Point(0, 53);
             this.materialsToolsPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -4646,6 +4646,187 @@ namespace BARevitTools
             this.sheetsToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.sheetsToolsPanel.TabIndex = 0;
             // 
+            // sheetsOSSLayoutPanel
+            // 
+            this.sheetsOSSLayoutPanel.ColumnCount = 2;
+            this.sheetsOSSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.sheetsOSSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
+            this.sheetsOSSLayoutPanel.Controls.Add(this.sheetsOSSDataGridView, 0, 2);
+            this.sheetsOSSLayoutPanel.Controls.Add(this.sheetsOSSInstructionsPanel, 0, 0);
+            this.sheetsOSSLayoutPanel.Controls.Add(this.sheetsOSSFilterPanel, 0, 1);
+            this.sheetsOSSLayoutPanel.Controls.Add(this.sheetsOSSNewSetPanel, 1, 1);
+            this.sheetsOSSLayoutPanel.Controls.Add(this.sheetsOSSControlsPanel, 0, 3);
+            this.sheetsOSSLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsOSSLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.sheetsOSSLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsOSSLayoutPanel.Name = "sheetsOSSLayoutPanel";
+            this.sheetsOSSLayoutPanel.RowCount = 4;
+            this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.sheetsOSSLayoutPanel.Size = new System.Drawing.Size(710, 339);
+            this.sheetsOSSLayoutPanel.TabIndex = 1;
+            this.sheetsOSSLayoutPanel.Visible = false;
+            // 
+            // sheetsOSSDataGridView
+            // 
+            this.sheetsOSSDataGridView.AllowUserToAddRows = false;
+            this.sheetsOSSDataGridView.AllowUserToDeleteRows = false;
+            this.sheetsOSSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sheetsOSSDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsOSSDataGridView.Location = new System.Drawing.Point(0, 114);
+            this.sheetsOSSDataGridView.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsOSSDataGridView.Name = "sheetsOSSDataGridView";
+            this.sheetsOSSDataGridView.RowHeadersVisible = false;
+            this.sheetsOSSDataGridView.Size = new System.Drawing.Size(529, 195);
+            this.sheetsOSSDataGridView.TabIndex = 0;
+            this.sheetsOSSDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SheetsOSSDataGridView_CellContentClick);
+            // 
+            // sheetsOSSInstructionsPanel
+            // 
+            this.sheetsOSSLayoutPanel.SetColumnSpan(this.sheetsOSSInstructionsPanel, 2);
+            this.sheetsOSSInstructionsPanel.Controls.Add(this.sheetsOSSInstructionsTextBox);
+            this.sheetsOSSInstructionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsOSSInstructionsPanel.Location = new System.Drawing.Point(0, 0);
+            this.sheetsOSSInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsOSSInstructionsPanel.Name = "sheetsOSSInstructionsPanel";
+            this.sheetsOSSInstructionsPanel.Size = new System.Drawing.Size(710, 79);
+            this.sheetsOSSInstructionsPanel.TabIndex = 1;
+            // 
+            // sheetsOSSInstructionsTextBox
+            // 
+            this.sheetsOSSInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.sheetsOSSInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsOSSInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
+            this.sheetsOSSInstructionsTextBox.Multiline = true;
+            this.sheetsOSSInstructionsTextBox.Name = "sheetsOSSInstructionsTextBox";
+            this.sheetsOSSInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.sheetsOSSInstructionsTextBox.Size = new System.Drawing.Size(710, 79);
+            this.sheetsOSSInstructionsTextBox.TabIndex = 0;
+            this.sheetsOSSInstructionsTextBox.Text = resources.GetString("sheetsOSSInstructionsTextBox.Text");
+            // 
+            // sheetsOSSFilterPanel
+            // 
+            this.sheetsOSSFilterPanel.Controls.Add(this.sheetsOSSFilterTextBox);
+            this.sheetsOSSFilterPanel.Controls.Add(this.sheetsOSSFilterConditionComboBox);
+            this.sheetsOSSFilterPanel.Controls.Add(this.sheetsOSSFilterLabel);
+            this.sheetsOSSFilterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsOSSFilterPanel.Location = new System.Drawing.Point(0, 79);
+            this.sheetsOSSFilterPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsOSSFilterPanel.Name = "sheetsOSSFilterPanel";
+            this.sheetsOSSFilterPanel.Size = new System.Drawing.Size(529, 35);
+            this.sheetsOSSFilterPanel.TabIndex = 4;
+            // 
+            // sheetsOSSFilterTextBox
+            // 
+            this.sheetsOSSFilterTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sheetsOSSFilterTextBox.Location = new System.Drawing.Point(187, 8);
+            this.sheetsOSSFilterTextBox.Name = "sheetsOSSFilterTextBox";
+            this.sheetsOSSFilterTextBox.Size = new System.Drawing.Size(201, 20);
+            this.sheetsOSSFilterTextBox.TabIndex = 3;
+            this.sheetsOSSFilterTextBox.Text = "<Search String>";
+            this.sheetsOSSFilterTextBox.TextChanged += new System.EventHandler(this.SheetsOSSFilterTextBox_TextChanged);
+            // 
+            // sheetsOSSFilterConditionComboBox
+            // 
+            this.sheetsOSSFilterConditionComboBox.FormattingEnabled = true;
+            this.sheetsOSSFilterConditionComboBox.Items.AddRange(new object[] {
+            "CONTAINS",
+            "DOES NOT CONTAIN"});
+            this.sheetsOSSFilterConditionComboBox.Location = new System.Drawing.Point(48, 7);
+            this.sheetsOSSFilterConditionComboBox.Name = "sheetsOSSFilterConditionComboBox";
+            this.sheetsOSSFilterConditionComboBox.Size = new System.Drawing.Size(133, 21);
+            this.sheetsOSSFilterConditionComboBox.TabIndex = 2;
+            this.sheetsOSSFilterConditionComboBox.Text = "<Condition>";
+            this.sheetsOSSFilterConditionComboBox.SelectedIndexChanged += new System.EventHandler(this.SheetsOSSFilterConditionComboBox_SelectedIndexChanged);
+            // 
+            // sheetsOSSFilterLabel
+            // 
+            this.sheetsOSSFilterLabel.AutoSize = true;
+            this.sheetsOSSFilterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sheetsOSSFilterLabel.Location = new System.Drawing.Point(3, 12);
+            this.sheetsOSSFilterLabel.Name = "sheetsOSSFilterLabel";
+            this.sheetsOSSFilterLabel.Size = new System.Drawing.Size(39, 13);
+            this.sheetsOSSFilterLabel.TabIndex = 1;
+            this.sheetsOSSFilterLabel.Text = "Filter:";
+            // 
+            // sheetsOSSNewSetPanel
+            // 
+            this.sheetsOSSNewSetPanel.Controls.Add(this.sheetsOSSNewSetButton);
+            this.sheetsOSSNewSetPanel.Controls.Add(this.sheetsOSSNewSetLabel);
+            this.sheetsOSSNewSetPanel.Controls.Add(this.sheetsOSSNewSetTextBox);
+            this.sheetsOSSNewSetPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsOSSNewSetPanel.Location = new System.Drawing.Point(529, 79);
+            this.sheetsOSSNewSetPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsOSSNewSetPanel.Name = "sheetsOSSNewSetPanel";
+            this.sheetsOSSLayoutPanel.SetRowSpan(this.sheetsOSSNewSetPanel, 2);
+            this.sheetsOSSNewSetPanel.Size = new System.Drawing.Size(181, 230);
+            this.sheetsOSSNewSetPanel.TabIndex = 3;
+            // 
+            // sheetsOSSNewSetButton
+            // 
+            this.sheetsOSSNewSetButton.Location = new System.Drawing.Point(102, 60);
+            this.sheetsOSSNewSetButton.Name = "sheetsOSSNewSetButton";
+            this.sheetsOSSNewSetButton.Size = new System.Drawing.Size(75, 23);
+            this.sheetsOSSNewSetButton.TabIndex = 2;
+            this.sheetsOSSNewSetButton.Text = "Add Set";
+            this.sheetsOSSNewSetButton.UseVisualStyleBackColor = true;
+            this.sheetsOSSNewSetButton.Click += new System.EventHandler(this.SheetsOSSNewSetButton_Click);
+            // 
+            // sheetsOSSNewSetLabel
+            // 
+            this.sheetsOSSNewSetLabel.AutoSize = true;
+            this.sheetsOSSNewSetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sheetsOSSNewSetLabel.Location = new System.Drawing.Point(5, 12);
+            this.sheetsOSSNewSetLabel.Name = "sheetsOSSNewSetLabel";
+            this.sheetsOSSNewSetLabel.Size = new System.Drawing.Size(85, 13);
+            this.sheetsOSSNewSetLabel.TabIndex = 1;
+            this.sheetsOSSNewSetLabel.Text = "Add New Set:";
+            // 
+            // sheetsOSSNewSetTextBox
+            // 
+            this.sheetsOSSNewSetTextBox.Location = new System.Drawing.Point(5, 34);
+            this.sheetsOSSNewSetTextBox.Name = "sheetsOSSNewSetTextBox";
+            this.sheetsOSSNewSetTextBox.Size = new System.Drawing.Size(173, 20);
+            this.sheetsOSSNewSetTextBox.TabIndex = 0;
+            this.sheetsOSSNewSetTextBox.Text = "<New Set Name>";
+            // 
+            // sheetsOSSControlsPanel
+            // 
+            this.sheetsOSSLayoutPanel.SetColumnSpan(this.sheetsOSSControlsPanel, 2);
+            this.sheetsOSSControlsPanel.Controls.Add(this.sheetsOSSRunButton);
+            this.sheetsOSSControlsPanel.Controls.Add(this.sheetsOSSRunLabel);
+            this.sheetsOSSControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sheetsOSSControlsPanel.Location = new System.Drawing.Point(0, 309);
+            this.sheetsOSSControlsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sheetsOSSControlsPanel.Name = "sheetsOSSControlsPanel";
+            this.sheetsOSSControlsPanel.Size = new System.Drawing.Size(710, 30);
+            this.sheetsOSSControlsPanel.TabIndex = 2;
+            // 
+            // sheetsOSSRunButton
+            // 
+            this.sheetsOSSRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sheetsOSSRunButton.Location = new System.Drawing.Point(631, 4);
+            this.sheetsOSSRunButton.Name = "sheetsOSSRunButton";
+            this.sheetsOSSRunButton.Size = new System.Drawing.Size(75, 23);
+            this.sheetsOSSRunButton.TabIndex = 1;
+            this.sheetsOSSRunButton.Text = "RUN";
+            this.sheetsOSSRunButton.UseVisualStyleBackColor = true;
+            this.sheetsOSSRunButton.Click += new System.EventHandler(this.SheetsOSSRunButton_Click);
+            // 
+            // sheetsOSSRunLabel
+            // 
+            this.sheetsOSSRunLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sheetsOSSRunLabel.AutoSize = true;
+            this.sheetsOSSRunLabel.Location = new System.Drawing.Point(557, 9);
+            this.sheetsOSSRunLabel.Name = "sheetsOSSRunLabel";
+            this.sheetsOSSRunLabel.Size = new System.Drawing.Size(69, 13);
+            this.sheetsOSSRunLabel.TabIndex = 0;
+            this.sheetsOSSRunLabel.Text = "Update Sets:";
+            // 
             // sheetsISFLLayoutPanel
             // 
             this.sheetsISFLLayoutPanel.ColumnCount = 2;
@@ -4953,187 +5134,6 @@ namespace BARevitTools
             this.sheetsCLSRunButton.Text = "RUN";
             this.sheetsCLSRunButton.UseVisualStyleBackColor = true;
             this.sheetsCLSRunButton.Click += new System.EventHandler(this.SheetsCSLRunButton_Click);
-            // 
-            // sheetsOSSLayoutPanel
-            // 
-            this.sheetsOSSLayoutPanel.ColumnCount = 2;
-            this.sheetsOSSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.sheetsOSSLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
-            this.sheetsOSSLayoutPanel.Controls.Add(this.sheetsOSSDataGridView, 0, 2);
-            this.sheetsOSSLayoutPanel.Controls.Add(this.sheetsOSSInstructionsPanel, 0, 0);
-            this.sheetsOSSLayoutPanel.Controls.Add(this.sheetsOSSFilterPanel, 0, 1);
-            this.sheetsOSSLayoutPanel.Controls.Add(this.sheetsOSSNewSetPanel, 1, 1);
-            this.sheetsOSSLayoutPanel.Controls.Add(this.sheetsOSSControlsPanel, 0, 3);
-            this.sheetsOSSLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsOSSLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.sheetsOSSLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsOSSLayoutPanel.Name = "sheetsOSSLayoutPanel";
-            this.sheetsOSSLayoutPanel.RowCount = 4;
-            this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
-            this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.sheetsOSSLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.sheetsOSSLayoutPanel.Size = new System.Drawing.Size(710, 339);
-            this.sheetsOSSLayoutPanel.TabIndex = 1;
-            this.sheetsOSSLayoutPanel.Visible = false;
-            // 
-            // sheetsOSSDataGridView
-            // 
-            this.sheetsOSSDataGridView.AllowUserToAddRows = false;
-            this.sheetsOSSDataGridView.AllowUserToDeleteRows = false;
-            this.sheetsOSSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sheetsOSSDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsOSSDataGridView.Location = new System.Drawing.Point(0, 114);
-            this.sheetsOSSDataGridView.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsOSSDataGridView.Name = "sheetsOSSDataGridView";
-            this.sheetsOSSDataGridView.RowHeadersVisible = false;
-            this.sheetsOSSDataGridView.Size = new System.Drawing.Size(529, 195);
-            this.sheetsOSSDataGridView.TabIndex = 0;
-            this.sheetsOSSDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SheetsOSSDataGridView_CellContentClick);
-            // 
-            // sheetsOSSInstructionsPanel
-            // 
-            this.sheetsOSSLayoutPanel.SetColumnSpan(this.sheetsOSSInstructionsPanel, 2);
-            this.sheetsOSSInstructionsPanel.Controls.Add(this.sheetsOSSInstructionsTextBox);
-            this.sheetsOSSInstructionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsOSSInstructionsPanel.Location = new System.Drawing.Point(0, 0);
-            this.sheetsOSSInstructionsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsOSSInstructionsPanel.Name = "sheetsOSSInstructionsPanel";
-            this.sheetsOSSInstructionsPanel.Size = new System.Drawing.Size(710, 79);
-            this.sheetsOSSInstructionsPanel.TabIndex = 1;
-            // 
-            // sheetsOSSInstructionsTextBox
-            // 
-            this.sheetsOSSInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.sheetsOSSInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsOSSInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
-            this.sheetsOSSInstructionsTextBox.Multiline = true;
-            this.sheetsOSSInstructionsTextBox.Name = "sheetsOSSInstructionsTextBox";
-            this.sheetsOSSInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.sheetsOSSInstructionsTextBox.Size = new System.Drawing.Size(710, 79);
-            this.sheetsOSSInstructionsTextBox.TabIndex = 0;
-            this.sheetsOSSInstructionsTextBox.Text = resources.GetString("sheetsOSSInstructionsTextBox.Text");
-            // 
-            // sheetsOSSFilterPanel
-            // 
-            this.sheetsOSSFilterPanel.Controls.Add(this.sheetsOSSFilterTextBox);
-            this.sheetsOSSFilterPanel.Controls.Add(this.sheetsOSSFilterConditionComboBox);
-            this.sheetsOSSFilterPanel.Controls.Add(this.sheetsOSSFilterLabel);
-            this.sheetsOSSFilterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsOSSFilterPanel.Location = new System.Drawing.Point(0, 79);
-            this.sheetsOSSFilterPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsOSSFilterPanel.Name = "sheetsOSSFilterPanel";
-            this.sheetsOSSFilterPanel.Size = new System.Drawing.Size(529, 35);
-            this.sheetsOSSFilterPanel.TabIndex = 4;
-            // 
-            // sheetsOSSFilterTextBox
-            // 
-            this.sheetsOSSFilterTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sheetsOSSFilterTextBox.Location = new System.Drawing.Point(187, 8);
-            this.sheetsOSSFilterTextBox.Name = "sheetsOSSFilterTextBox";
-            this.sheetsOSSFilterTextBox.Size = new System.Drawing.Size(201, 20);
-            this.sheetsOSSFilterTextBox.TabIndex = 3;
-            this.sheetsOSSFilterTextBox.Text = "<Search String>";
-            this.sheetsOSSFilterTextBox.TextChanged += new System.EventHandler(this.SheetsOSSFilterTextBox_TextChanged);
-            // 
-            // sheetsOSSFilterConditionComboBox
-            // 
-            this.sheetsOSSFilterConditionComboBox.FormattingEnabled = true;
-            this.sheetsOSSFilterConditionComboBox.Items.AddRange(new object[] {
-            "CONTAINS",
-            "DOES NOT CONTAIN"});
-            this.sheetsOSSFilterConditionComboBox.Location = new System.Drawing.Point(48, 7);
-            this.sheetsOSSFilterConditionComboBox.Name = "sheetsOSSFilterConditionComboBox";
-            this.sheetsOSSFilterConditionComboBox.Size = new System.Drawing.Size(133, 21);
-            this.sheetsOSSFilterConditionComboBox.TabIndex = 2;
-            this.sheetsOSSFilterConditionComboBox.Text = "<Condition>";
-            this.sheetsOSSFilterConditionComboBox.SelectedIndexChanged += new System.EventHandler(this.SheetsOSSFilterConditionComboBox_SelectedIndexChanged);
-            // 
-            // sheetsOSSFilterLabel
-            // 
-            this.sheetsOSSFilterLabel.AutoSize = true;
-            this.sheetsOSSFilterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sheetsOSSFilterLabel.Location = new System.Drawing.Point(3, 12);
-            this.sheetsOSSFilterLabel.Name = "sheetsOSSFilterLabel";
-            this.sheetsOSSFilterLabel.Size = new System.Drawing.Size(39, 13);
-            this.sheetsOSSFilterLabel.TabIndex = 1;
-            this.sheetsOSSFilterLabel.Text = "Filter:";
-            // 
-            // sheetsOSSNewSetPanel
-            // 
-            this.sheetsOSSNewSetPanel.Controls.Add(this.sheetsOSSNewSetButton);
-            this.sheetsOSSNewSetPanel.Controls.Add(this.sheetsOSSNewSetLabel);
-            this.sheetsOSSNewSetPanel.Controls.Add(this.sheetsOSSNewSetTextBox);
-            this.sheetsOSSNewSetPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsOSSNewSetPanel.Location = new System.Drawing.Point(529, 79);
-            this.sheetsOSSNewSetPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsOSSNewSetPanel.Name = "sheetsOSSNewSetPanel";
-            this.sheetsOSSLayoutPanel.SetRowSpan(this.sheetsOSSNewSetPanel, 2);
-            this.sheetsOSSNewSetPanel.Size = new System.Drawing.Size(181, 230);
-            this.sheetsOSSNewSetPanel.TabIndex = 3;
-            // 
-            // sheetsOSSNewSetButton
-            // 
-            this.sheetsOSSNewSetButton.Location = new System.Drawing.Point(102, 60);
-            this.sheetsOSSNewSetButton.Name = "sheetsOSSNewSetButton";
-            this.sheetsOSSNewSetButton.Size = new System.Drawing.Size(75, 23);
-            this.sheetsOSSNewSetButton.TabIndex = 2;
-            this.sheetsOSSNewSetButton.Text = "Add Set";
-            this.sheetsOSSNewSetButton.UseVisualStyleBackColor = true;
-            this.sheetsOSSNewSetButton.Click += new System.EventHandler(this.SheetsOSSNewSetButton_Click);
-            // 
-            // sheetsOSSNewSetLabel
-            // 
-            this.sheetsOSSNewSetLabel.AutoSize = true;
-            this.sheetsOSSNewSetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sheetsOSSNewSetLabel.Location = new System.Drawing.Point(5, 12);
-            this.sheetsOSSNewSetLabel.Name = "sheetsOSSNewSetLabel";
-            this.sheetsOSSNewSetLabel.Size = new System.Drawing.Size(85, 13);
-            this.sheetsOSSNewSetLabel.TabIndex = 1;
-            this.sheetsOSSNewSetLabel.Text = "Add New Set:";
-            // 
-            // sheetsOSSNewSetTextBox
-            // 
-            this.sheetsOSSNewSetTextBox.Location = new System.Drawing.Point(5, 34);
-            this.sheetsOSSNewSetTextBox.Name = "sheetsOSSNewSetTextBox";
-            this.sheetsOSSNewSetTextBox.Size = new System.Drawing.Size(173, 20);
-            this.sheetsOSSNewSetTextBox.TabIndex = 0;
-            this.sheetsOSSNewSetTextBox.Text = "<New Set Name>";
-            // 
-            // sheetsOSSControlsPanel
-            // 
-            this.sheetsOSSLayoutPanel.SetColumnSpan(this.sheetsOSSControlsPanel, 2);
-            this.sheetsOSSControlsPanel.Controls.Add(this.sheetsOSSRunButton);
-            this.sheetsOSSControlsPanel.Controls.Add(this.sheetsOSSRunLabel);
-            this.sheetsOSSControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sheetsOSSControlsPanel.Location = new System.Drawing.Point(0, 309);
-            this.sheetsOSSControlsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sheetsOSSControlsPanel.Name = "sheetsOSSControlsPanel";
-            this.sheetsOSSControlsPanel.Size = new System.Drawing.Size(710, 30);
-            this.sheetsOSSControlsPanel.TabIndex = 2;
-            // 
-            // sheetsOSSRunButton
-            // 
-            this.sheetsOSSRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sheetsOSSRunButton.Location = new System.Drawing.Point(631, 4);
-            this.sheetsOSSRunButton.Name = "sheetsOSSRunButton";
-            this.sheetsOSSRunButton.Size = new System.Drawing.Size(75, 23);
-            this.sheetsOSSRunButton.TabIndex = 1;
-            this.sheetsOSSRunButton.Text = "RUN";
-            this.sheetsOSSRunButton.UseVisualStyleBackColor = true;
-            this.sheetsOSSRunButton.Click += new System.EventHandler(this.SheetsOSSRunButton_Click);
-            // 
-            // sheetsOSSRunLabel
-            // 
-            this.sheetsOSSRunLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sheetsOSSRunLabel.AutoSize = true;
-            this.sheetsOSSRunLabel.Location = new System.Drawing.Point(557, 9);
-            this.sheetsOSSRunLabel.Name = "sheetsOSSRunLabel";
-            this.sheetsOSSRunLabel.Size = new System.Drawing.Size(69, 13);
-            this.sheetsOSSRunLabel.TabIndex = 0;
-            this.sheetsOSSRunLabel.Text = "Update Sets:";
             // 
             // sheetsCSSFSLayoutPanel
             // 
@@ -6410,130 +6410,6 @@ namespace BARevitTools
             this.qaqcToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcToolsPanel.TabIndex = 3;
             // 
-            // qaqcRFSPLayoutPanel
-            // 
-            this.qaqcRFSPLayoutPanel.ColumnCount = 2;
-            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
-            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPInstructionsTextBox, 0, 0);
-            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPParametersListBox, 1, 2);
-            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPToolsPanel, 0, 1);
-            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPEvaluatedParametersPanel, 1, 1);
-            this.qaqcRFSPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.qaqcRFSPLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.qaqcRFSPLayoutPanel.Name = "qaqcRFSPLayoutPanel";
-            this.qaqcRFSPLayoutPanel.RowCount = 3;
-            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.qaqcRFSPLayoutPanel.Size = new System.Drawing.Size(716, 345);
-            this.qaqcRFSPLayoutPanel.TabIndex = 4;
-            this.qaqcRFSPLayoutPanel.Visible = false;
-            // 
-            // qaqcRFSPInstructionsTextBox
-            // 
-            this.qaqcRFSPInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.qaqcRFSPLayoutPanel.SetColumnSpan(this.qaqcRFSPInstructionsTextBox, 2);
-            this.qaqcRFSPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
-            this.qaqcRFSPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.qaqcRFSPInstructionsTextBox.Multiline = true;
-            this.qaqcRFSPInstructionsTextBox.Name = "qaqcRFSPInstructionsTextBox";
-            this.qaqcRFSPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.qaqcRFSPInstructionsTextBox.Size = new System.Drawing.Size(716, 60);
-            this.qaqcRFSPInstructionsTextBox.TabIndex = 1;
-            this.qaqcRFSPInstructionsTextBox.Text = resources.GetString("qaqcRFSPInstructionsTextBox.Text");
-            // 
-            // qaqcRFSPParametersListBox
-            // 
-            this.qaqcRFSPParametersListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPParametersListBox.FormattingEnabled = true;
-            this.qaqcRFSPParametersListBox.IntegralHeight = false;
-            this.qaqcRFSPParametersListBox.Location = new System.Drawing.Point(275, 85);
-            this.qaqcRFSPParametersListBox.Margin = new System.Windows.Forms.Padding(0);
-            this.qaqcRFSPParametersListBox.Name = "qaqcRFSPParametersListBox";
-            this.qaqcRFSPParametersListBox.Size = new System.Drawing.Size(441, 260);
-            this.qaqcRFSPParametersListBox.TabIndex = 2;
-            // 
-            // qaqcRFSPToolsPanel
-            // 
-            this.qaqcRFSPToolsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPRunButton);
-            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSelectFamilyLabel);
-            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSFamilyLabel);
-            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSelectFamilyButton);
-            this.qaqcRFSPToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPToolsPanel.Location = new System.Drawing.Point(0, 60);
-            this.qaqcRFSPToolsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.qaqcRFSPToolsPanel.Name = "qaqcRFSPToolsPanel";
-            this.qaqcRFSPLayoutPanel.SetRowSpan(this.qaqcRFSPToolsPanel, 2);
-            this.qaqcRFSPToolsPanel.Size = new System.Drawing.Size(275, 285);
-            this.qaqcRFSPToolsPanel.TabIndex = 0;
-            // 
-            // qaqcRFSPRunButton
-            // 
-            this.qaqcRFSPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.qaqcRFSPRunButton.Location = new System.Drawing.Point(2, 257);
-            this.qaqcRFSPRunButton.Name = "qaqcRFSPRunButton";
-            this.qaqcRFSPRunButton.Size = new System.Drawing.Size(75, 23);
-            this.qaqcRFSPRunButton.TabIndex = 0;
-            this.qaqcRFSPRunButton.Text = "RUN";
-            this.qaqcRFSPRunButton.UseVisualStyleBackColor = true;
-            this.qaqcRFSPRunButton.Click += new System.EventHandler(this.QaqcRFSPRunButton_Click);
-            // 
-            // qaqcRFSPSelectFamilyLabel
-            // 
-            this.qaqcRFSPSelectFamilyLabel.AutoSize = true;
-            this.qaqcRFSPSelectFamilyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qaqcRFSPSelectFamilyLabel.Location = new System.Drawing.Point(4, 7);
-            this.qaqcRFSPSelectFamilyLabel.Name = "qaqcRFSPSelectFamilyLabel";
-            this.qaqcRFSPSelectFamilyLabel.Size = new System.Drawing.Size(86, 13);
-            this.qaqcRFSPSelectFamilyLabel.TabIndex = 2;
-            this.qaqcRFSPSelectFamilyLabel.Text = "Select Family:";
-            // 
-            // qaqcRFSPSFamilyLabel
-            // 
-            this.qaqcRFSPSFamilyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.qaqcRFSPSFamilyLabel.Location = new System.Drawing.Point(85, 27);
-            this.qaqcRFSPSFamilyLabel.Name = "qaqcRFSPSFamilyLabel";
-            this.qaqcRFSPSFamilyLabel.Size = new System.Drawing.Size(184, 23);
-            this.qaqcRFSPSFamilyLabel.TabIndex = 1;
-            this.qaqcRFSPSFamilyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // qaqcRFSPSelectFamilyButton
-            // 
-            this.qaqcRFSPSelectFamilyButton.Location = new System.Drawing.Point(4, 28);
-            this.qaqcRFSPSelectFamilyButton.Name = "qaqcRFSPSelectFamilyButton";
-            this.qaqcRFSPSelectFamilyButton.Size = new System.Drawing.Size(75, 23);
-            this.qaqcRFSPSelectFamilyButton.TabIndex = 0;
-            this.qaqcRFSPSelectFamilyButton.Text = "Select";
-            this.qaqcRFSPSelectFamilyButton.UseVisualStyleBackColor = true;
-            this.qaqcRFSPSelectFamilyButton.Click += new System.EventHandler(this.QaqcRFSPSelectFamilyButton_Click);
-            // 
-            // qaqcRFSPEvaluatedParametersPanel
-            // 
-            this.qaqcRFSPEvaluatedParametersPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qaqcRFSPEvaluatedParametersPanel.Controls.Add(this.qaqcRFSPEvaluatedParametersLabel);
-            this.qaqcRFSPEvaluatedParametersPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPEvaluatedParametersPanel.Location = new System.Drawing.Point(275, 60);
-            this.qaqcRFSPEvaluatedParametersPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.qaqcRFSPEvaluatedParametersPanel.Name = "qaqcRFSPEvaluatedParametersPanel";
-            this.qaqcRFSPEvaluatedParametersPanel.Size = new System.Drawing.Size(441, 25);
-            this.qaqcRFSPEvaluatedParametersPanel.TabIndex = 3;
-            // 
-            // qaqcRFSPEvaluatedParametersLabel
-            // 
-            this.qaqcRFSPEvaluatedParametersLabel.AutoSize = true;
-            this.qaqcRFSPEvaluatedParametersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qaqcRFSPEvaluatedParametersLabel.Location = new System.Drawing.Point(3, 7);
-            this.qaqcRFSPEvaluatedParametersLabel.Name = "qaqcRFSPEvaluatedParametersLabel";
-            this.qaqcRFSPEvaluatedParametersLabel.Size = new System.Drawing.Size(179, 13);
-            this.qaqcRFSPEvaluatedParametersLabel.TabIndex = 0;
-            this.qaqcRFSPEvaluatedParametersLabel.Text = "Shared Parameters Evaluated:";
-            // 
             // qaqcRLSLayoutPanel
             // 
             this.qaqcRLSLayoutPanel.ColumnCount = 2;
@@ -6702,6 +6578,130 @@ namespace BARevitTools
             this.qaqcRLSUnswitchableLabel.Size = new System.Drawing.Size(308, 13);
             this.qaqcRLSUnswitchableLabel.TabIndex = 0;
             this.qaqcRLSUnswitchableLabel.Text = "The Following Groups Have Lines That Could Not Be Switched:";
+            // 
+            // qaqcRFSPLayoutPanel
+            // 
+            this.qaqcRFSPLayoutPanel.ColumnCount = 2;
+            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
+            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPInstructionsTextBox, 0, 0);
+            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPParametersListBox, 1, 2);
+            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPToolsPanel, 0, 1);
+            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPEvaluatedParametersPanel, 1, 1);
+            this.qaqcRFSPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.qaqcRFSPLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.qaqcRFSPLayoutPanel.Name = "qaqcRFSPLayoutPanel";
+            this.qaqcRFSPLayoutPanel.RowCount = 3;
+            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.qaqcRFSPLayoutPanel.Size = new System.Drawing.Size(716, 345);
+            this.qaqcRFSPLayoutPanel.TabIndex = 4;
+            this.qaqcRFSPLayoutPanel.Visible = false;
+            // 
+            // qaqcRFSPInstructionsTextBox
+            // 
+            this.qaqcRFSPInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.qaqcRFSPLayoutPanel.SetColumnSpan(this.qaqcRFSPInstructionsTextBox, 2);
+            this.qaqcRFSPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
+            this.qaqcRFSPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.qaqcRFSPInstructionsTextBox.Multiline = true;
+            this.qaqcRFSPInstructionsTextBox.Name = "qaqcRFSPInstructionsTextBox";
+            this.qaqcRFSPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.qaqcRFSPInstructionsTextBox.Size = new System.Drawing.Size(716, 60);
+            this.qaqcRFSPInstructionsTextBox.TabIndex = 1;
+            this.qaqcRFSPInstructionsTextBox.Text = resources.GetString("qaqcRFSPInstructionsTextBox.Text");
+            // 
+            // qaqcRFSPParametersListBox
+            // 
+            this.qaqcRFSPParametersListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPParametersListBox.FormattingEnabled = true;
+            this.qaqcRFSPParametersListBox.IntegralHeight = false;
+            this.qaqcRFSPParametersListBox.Location = new System.Drawing.Point(275, 85);
+            this.qaqcRFSPParametersListBox.Margin = new System.Windows.Forms.Padding(0);
+            this.qaqcRFSPParametersListBox.Name = "qaqcRFSPParametersListBox";
+            this.qaqcRFSPParametersListBox.Size = new System.Drawing.Size(441, 260);
+            this.qaqcRFSPParametersListBox.TabIndex = 2;
+            // 
+            // qaqcRFSPToolsPanel
+            // 
+            this.qaqcRFSPToolsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPRunButton);
+            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSelectFamilyLabel);
+            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSFamilyLabel);
+            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSelectFamilyButton);
+            this.qaqcRFSPToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPToolsPanel.Location = new System.Drawing.Point(0, 60);
+            this.qaqcRFSPToolsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.qaqcRFSPToolsPanel.Name = "qaqcRFSPToolsPanel";
+            this.qaqcRFSPLayoutPanel.SetRowSpan(this.qaqcRFSPToolsPanel, 2);
+            this.qaqcRFSPToolsPanel.Size = new System.Drawing.Size(275, 285);
+            this.qaqcRFSPToolsPanel.TabIndex = 0;
+            // 
+            // qaqcRFSPRunButton
+            // 
+            this.qaqcRFSPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.qaqcRFSPRunButton.Location = new System.Drawing.Point(2, 257);
+            this.qaqcRFSPRunButton.Name = "qaqcRFSPRunButton";
+            this.qaqcRFSPRunButton.Size = new System.Drawing.Size(75, 23);
+            this.qaqcRFSPRunButton.TabIndex = 0;
+            this.qaqcRFSPRunButton.Text = "RUN";
+            this.qaqcRFSPRunButton.UseVisualStyleBackColor = true;
+            this.qaqcRFSPRunButton.Click += new System.EventHandler(this.QaqcRFSPRunButton_Click);
+            // 
+            // qaqcRFSPSelectFamilyLabel
+            // 
+            this.qaqcRFSPSelectFamilyLabel.AutoSize = true;
+            this.qaqcRFSPSelectFamilyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qaqcRFSPSelectFamilyLabel.Location = new System.Drawing.Point(4, 7);
+            this.qaqcRFSPSelectFamilyLabel.Name = "qaqcRFSPSelectFamilyLabel";
+            this.qaqcRFSPSelectFamilyLabel.Size = new System.Drawing.Size(86, 13);
+            this.qaqcRFSPSelectFamilyLabel.TabIndex = 2;
+            this.qaqcRFSPSelectFamilyLabel.Text = "Select Family:";
+            // 
+            // qaqcRFSPSFamilyLabel
+            // 
+            this.qaqcRFSPSFamilyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.qaqcRFSPSFamilyLabel.Location = new System.Drawing.Point(85, 27);
+            this.qaqcRFSPSFamilyLabel.Name = "qaqcRFSPSFamilyLabel";
+            this.qaqcRFSPSFamilyLabel.Size = new System.Drawing.Size(184, 23);
+            this.qaqcRFSPSFamilyLabel.TabIndex = 1;
+            this.qaqcRFSPSFamilyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // qaqcRFSPSelectFamilyButton
+            // 
+            this.qaqcRFSPSelectFamilyButton.Location = new System.Drawing.Point(4, 28);
+            this.qaqcRFSPSelectFamilyButton.Name = "qaqcRFSPSelectFamilyButton";
+            this.qaqcRFSPSelectFamilyButton.Size = new System.Drawing.Size(75, 23);
+            this.qaqcRFSPSelectFamilyButton.TabIndex = 0;
+            this.qaqcRFSPSelectFamilyButton.Text = "Select";
+            this.qaqcRFSPSelectFamilyButton.UseVisualStyleBackColor = true;
+            this.qaqcRFSPSelectFamilyButton.Click += new System.EventHandler(this.QaqcRFSPSelectFamilyButton_Click);
+            // 
+            // qaqcRFSPEvaluatedParametersPanel
+            // 
+            this.qaqcRFSPEvaluatedParametersPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qaqcRFSPEvaluatedParametersPanel.Controls.Add(this.qaqcRFSPEvaluatedParametersLabel);
+            this.qaqcRFSPEvaluatedParametersPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPEvaluatedParametersPanel.Location = new System.Drawing.Point(275, 60);
+            this.qaqcRFSPEvaluatedParametersPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.qaqcRFSPEvaluatedParametersPanel.Name = "qaqcRFSPEvaluatedParametersPanel";
+            this.qaqcRFSPEvaluatedParametersPanel.Size = new System.Drawing.Size(441, 25);
+            this.qaqcRFSPEvaluatedParametersPanel.TabIndex = 3;
+            // 
+            // qaqcRFSPEvaluatedParametersLabel
+            // 
+            this.qaqcRFSPEvaluatedParametersLabel.AutoSize = true;
+            this.qaqcRFSPEvaluatedParametersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qaqcRFSPEvaluatedParametersLabel.Location = new System.Drawing.Point(3, 7);
+            this.qaqcRFSPEvaluatedParametersLabel.Name = "qaqcRFSPEvaluatedParametersLabel";
+            this.qaqcRFSPEvaluatedParametersLabel.Size = new System.Drawing.Size(179, 13);
+            this.qaqcRFSPEvaluatedParametersLabel.TabIndex = 0;
+            this.qaqcRFSPEvaluatedParametersLabel.Text = "Shared Parameters Evaluated:";
             // 
             // qaqcCSVNPanel
             // 
@@ -7662,6 +7662,16 @@ namespace BARevitTools
             this.sheetsToolStrip.ResumeLayout(false);
             this.sheetsToolStrip.PerformLayout();
             this.sheetsToolsPanel.ResumeLayout(false);
+            this.sheetsOSSLayoutPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sheetsOSSDataGridView)).EndInit();
+            this.sheetsOSSInstructionsPanel.ResumeLayout(false);
+            this.sheetsOSSInstructionsPanel.PerformLayout();
+            this.sheetsOSSFilterPanel.ResumeLayout(false);
+            this.sheetsOSSFilterPanel.PerformLayout();
+            this.sheetsOSSNewSetPanel.ResumeLayout(false);
+            this.sheetsOSSNewSetPanel.PerformLayout();
+            this.sheetsOSSControlsPanel.ResumeLayout(false);
+            this.sheetsOSSControlsPanel.PerformLayout();
             this.sheetsISFLLayoutPanel.ResumeLayout(false);
             this.sheetsISFLInstructionsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sheetsISFLDataGridView)).EndInit();
@@ -7675,16 +7685,6 @@ namespace BARevitTools
             this.sheetsCSLControlsPanel.PerformLayout();
             this.sheetsCSLInstructionsPanel.ResumeLayout(false);
             this.sheetsCSLRunPanel.ResumeLayout(false);
-            this.sheetsOSSLayoutPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sheetsOSSDataGridView)).EndInit();
-            this.sheetsOSSInstructionsPanel.ResumeLayout(false);
-            this.sheetsOSSInstructionsPanel.PerformLayout();
-            this.sheetsOSSFilterPanel.ResumeLayout(false);
-            this.sheetsOSSFilterPanel.PerformLayout();
-            this.sheetsOSSNewSetPanel.ResumeLayout(false);
-            this.sheetsOSSNewSetPanel.PerformLayout();
-            this.sheetsOSSControlsPanel.ResumeLayout(false);
-            this.sheetsOSSControlsPanel.PerformLayout();
             this.sheetsCSSFSLayoutPanel.ResumeLayout(false);
             this.sheetsCSSFSInstructionsPanel.ResumeLayout(false);
             this.sheetsCSSFSInstructionsPanel.PerformLayout();
@@ -7743,12 +7743,6 @@ namespace BARevitTools
             this.qaqcToolStrip.ResumeLayout(false);
             this.qaqcToolStrip.PerformLayout();
             this.qaqcToolsPanel.ResumeLayout(false);
-            this.qaqcRFSPLayoutPanel.ResumeLayout(false);
-            this.qaqcRFSPLayoutPanel.PerformLayout();
-            this.qaqcRFSPToolsPanel.ResumeLayout(false);
-            this.qaqcRFSPToolsPanel.PerformLayout();
-            this.qaqcRFSPEvaluatedParametersPanel.ResumeLayout(false);
-            this.qaqcRFSPEvaluatedParametersPanel.PerformLayout();
             this.qaqcRLSLayoutPanel.ResumeLayout(false);
             this.qaqcRLSLayoutPanel.PerformLayout();
             this.qaqcRLSRunPanel.ResumeLayout(false);
@@ -7757,6 +7751,12 @@ namespace BARevitTools
             this.qaqcRLSControlsPanel.PerformLayout();
             this.qaqcRLSUnswitchablePanel.ResumeLayout(false);
             this.qaqcRLSUnswitchablePanel.PerformLayout();
+            this.qaqcRFSPLayoutPanel.ResumeLayout(false);
+            this.qaqcRFSPLayoutPanel.PerformLayout();
+            this.qaqcRFSPToolsPanel.ResumeLayout(false);
+            this.qaqcRFSPToolsPanel.PerformLayout();
+            this.qaqcRFSPEvaluatedParametersPanel.ResumeLayout(false);
+            this.qaqcRFSPEvaluatedParametersPanel.PerformLayout();
             this.qaqcCSVNPanel.ResumeLayout(false);
             this.qaqcCSVLayoutPanel.ResumeLayout(false);
             this.qaqcCSVControlsPanel.ResumeLayout(false);

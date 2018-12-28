@@ -169,20 +169,36 @@ namespace BARevitTools
             }
             return filePaths;
         }
-        public static List<string> GetAllRvtBackupFamilies(string directoryPath)
+        public static List<string> GetAllRvtBackupFamilies(string directoryPath, bool searchAllDirectories)
         {
             List<string> filePaths = new List<string>();
             if (directoryPath != "")
             {
-                foreach (string filePath in Directory.GetFiles(directoryPath, "*.rfa", SearchOption.AllDirectories))
+                
+                if (searchAllDirectories)
                 {
-                    Match match1 = Regex.Match(filePath, @".00\d\d.rfa", RegexOptions.IgnoreCase);
-                    if (match1.Success)
+                    foreach (string filePath in Directory.GetFiles(directoryPath, "*.rfa", SearchOption.AllDirectories))
                     {
-                        FileInfo fileInfo = new FileInfo(filePath);
-                        filePaths.Add(filePath);
+                        Match match1 = Regex.Match(filePath, @".00\d\d.rfa", RegexOptions.IgnoreCase);
+                        if (match1.Success)
+                        {
+                            FileInfo fileInfo = new FileInfo(filePath);
+                            filePaths.Add(filePath);
+                        }
                     }
                 }
+                else
+                {
+                    foreach (string filePath in Directory.GetFiles(directoryPath, "*.rfa", SearchOption.TopDirectoryOnly))
+                    {
+                        Match match1 = Regex.Match(filePath, @".00\d\d.rfa", RegexOptions.IgnoreCase);
+                        if (match1.Success)
+                        {
+                            FileInfo fileInfo = new FileInfo(filePath);
+                            filePaths.Add(filePath);
+                        }
+                    }
+                }                
             }
             return filePaths;
         }

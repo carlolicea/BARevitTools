@@ -105,13 +105,13 @@ namespace BARevitTools
             File.Delete(tempFamilyPath.Replace(".rfa", ".0001.rfa"));
             File.Delete(nonTempFamilyPath.Replace(".rfa", ".0001.rfa"));
         }
-        public static RVTDocument CreateFamilyTypesFromTable(UIApplication uiApp, ProgressBar progressBar, DataGridView dgv, string familyFileToUse)
+        public static RVTDocument CreateFamilyTypesFromTable(UIApplication uiApp, ProgressBar progressBar, DataGridView dgv, Family familyToUse)
         {
             MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
-            RVTDocument famDoc = RVTOperations.OpenRevitFile(uiApp, familyFileToUse);
+            RVTDocument famDoc = uiApp.ActiveUIDocument.Document.EditFamily(familyToUse);
 
+            
             FamilyManager famMan = famDoc.FamilyManager;
-            RVTOperations.DeleteFamilyTypes(famDoc, famMan);
 
             FamilyParameterSet parameters = famMan.Parameters;
             Dictionary<string, FamilyParameter> famParamDict = new Dictionary<string, FamilyParameter>();
@@ -154,23 +154,15 @@ namespace BARevitTools
                     {
                         FamilyParameter param = famParamDict[paramName];
                         ParameterType paramType = param.Definition.ParameterType;
-                        RVTOperations.SetFamilyParameterValue(famMan, param, paramType, paramStorageTypeString, paramValue, true);
+                        if (!param.IsDeterminedByFormula)
+                        {
+                            RVTOperations.SetFamilyParameterValue(famMan, param, paramType, paramStorageTypeString, paramValue, true);
+                        }                        
                     }
                     progressBar.PerformStep();
                 }
             }
             t2.Commit();
-            Transaction t3 = new Transaction(famDoc, "DeleteOldTypes");
-            t3.Start();
-            foreach (FamilyType type in famMan.Types)
-            {
-                if (!familyTypesMade.Contains(type.Name))
-                {
-                    famMan.CurrentType = type;
-                    famMan.DeleteCurrentType();
-                }
-            }
-            t3.Commit();
             return famDoc;
         }
         public static void DeleteFamilyTypes(RVTDocument famDoc, FamilyManager famMan)
@@ -780,6 +772,69 @@ namespace BARevitTools
             }
             return result;
         }
+        public static bool SaveRevitFile(UIApplication uiApp, RVTDocument doc, string saveLocation, bool close)
+        {
+            bool result = false;
+            TransactWithCentralOptions TWCOptions = new TransactWithCentralOptions();
+            RelinquishOptions relinquishOptions = new RelinquishOptions(true);
+            SynchronizeWithCentralOptions SWCOptions = new SynchronizeWithCentralOptions();
+            SWCOptions.Compact = true;
+            SWCOptions.SetRelinquishOptions(relinquishOptions);
+            WorksharingSaveAsOptions worksharingSaveOptions = new WorksharingSaveAsOptions();
+            worksharingSaveOptions.SaveAsCentral = true;
+            SaveAsOptions saveAsOptions = new SaveAsOptions();
+            saveAsOptions.Compact = true;
+            saveAsOptions.MaximumBackups = 3;
+            saveAsOptions.OverwriteExistingFile = true;
+
+            try
+            {
+                if (doc.IsFamilyDocument)
+                {
+                    try
+                    {
+                        doc.SaveAs(saveLocation, saveAsOptions);
+                        result = true;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        SetLinksToOverlay(doc);
+                        if (doc.IsWorkshared)
+                        {
+                            doc.SaveAs(saveLocation,saveAsOptions);
+                            doc.SynchronizeWithCentral(TWCOptions, SWCOptions);
+                        }
+                        else
+                        {
+                            doc.EnableWorksharing("Shared Levels and Grids", "Workset1");
+                            doc.SaveAs(saveLocation,saveAsOptions);
+                            doc.SynchronizeWithCentral(TWCOptions, SWCOptions);
+                        }
+                        result = true;
+                    }
+                    catch (Exception e) { MessageBox.Show(e.Message); doc.Close(); }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                if (close == true)
+                {
+                    doc.Close(false);
+                }
+            }
+            return result;
+        }
         public static ElementId SelectElement(UIApplication uiApp)
         {
             ElementId elementId = null;
@@ -880,10 +935,10 @@ namespace BARevitTools
             catch { MessageBox.Show(String.Format("Could not set parameter ({0}) with value ({1}) for type ({2})", param.Definition.Name, paramValue.ToString(), famMan.CurrentType.Name)); }
         }
         public static void SetFamilyParameterValue(FamilyManager famMan, FamilyParameter param, object paramValue)
-        {
-            string paramStorageTypeString = param.StorageType.ToString();
+        {            
             try
             {
+                string paramStorageTypeString = param.StorageType.ToString();
                 if (paramStorageTypeString == "Integer")
                 {
                     famMan.Set(param, Convert.ToInt32(paramValue));
@@ -1201,6 +1256,19 @@ namespace BARevitTools
             {
                 MessageBox.Show(e.ToString());
                 return null;
+            }
+        }
+        public static Family FamilyByFamilyName(UIApplication uiApp, string familyName)
+        {
+            Family family = null;
+            try
+            {
+                family = new FilteredElementCollector(uiApp.ActiveUIDocument.Document).OfClass(typeof(Family)).WhereElementIsNotElementType().Where(f=>f.Name == familyName).First() as Family;
+                return family;
+            }
+            catch
+            {
+                return family;
             }
         }
     }

@@ -55,6 +55,9 @@ namespace BARevitTools
                     case RequestId.materialsCMS:
                         ToolRequests.MaterialsCMSRequest materialsCMSRequest = new ToolRequests.MaterialsCMSRequest(uiApp, "Create Material Symbols");
                         break;
+                    case RequestId.materialsCMSLoadFamily:
+                        ToolRequests.MaterialsCMSLoadFamilyRequest materialsCMSLoadFamilyRequest = new ToolRequests.MaterialsCMSLoadFamilyRequest(uiApp, "General Transactions");
+                        break;
                     case RequestId.materialsAML:
                         ToolRequests.MaterialsAMLRequest materialsAMLRequest = new ToolRequests.MaterialsAMLRequest(uiApp, "Accent Material Lines");
                         break;

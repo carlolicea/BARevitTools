@@ -243,7 +243,7 @@ namespace BARevitTools.ToolRequests
                 File.Delete(tempFamilyPath);
 
                 //Clean up the backup files too
-                List<string> backupFiles = GeneralOperations.GetAllRvtBackupFamilies(uiForm.multiCatCFFEFamilySaveLocation);
+                List<string> backupFiles = GeneralOperations.GetAllRvtBackupFamilies(uiForm.multiCatCFFEFamilySaveLocation,false);
                 GeneralOperations.CleanRfaBackups(backupFiles);
             }
             

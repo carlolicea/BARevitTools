@@ -64,6 +64,8 @@ namespace BARevitTools
         adminFamiliesBAP = ReferencedSwitchCaseIds.adminFamiliesBAP,
         adminFamiliesBRP = ReferencedSwitchCaseIds.adminFamiliesBRP,
         adminFamiliesUFVP = ReferencedSwitchCaseIds.adminFamiliesUFVP,
+
+        materialsCMSLoadFamily = ReferencedSwitchCaseIds.materialsCMSLoadFamily,
     }
     //
     //This class makes the request to the thread running Revit so the RequestHandler can slip in an operation

@@ -103,15 +103,29 @@ namespace BARevitTools
 
                 for (int c = 1; c < dt.Columns.Count; c++)
                 {
-                    worksheet.Cells[1, c] = dt.Columns[c - 1].ColumnName;
+                    try
+                    {
+                        worksheet.Cells[1, c] = dt.Columns[c - 1].ColumnName;
+                    }
+                    catch
+                    {
+                        continue;
+                    }                    
                 }
 
                 for (int c = 1; c <= dt.Columns.Count; c++)
                 {
-                    for (int r = 2; r <= dt.Rows.Count+1; r++)
+                    try
                     {
-                        worksheet.Cells[r, c] = dt.Rows[r - 2][c - 1].ToString();
+                        for (int r = 2; r <= dt.Rows.Count + 1; r++)
+                        {
+                            worksheet.Cells[r, c] = dt.Rows[r - 2][c - 1].ToString();
+                        }
                     }
+                    catch
+                    {
+                        continue;
+                    }                    
                 }
 
                 workbook.Save();
@@ -123,6 +137,61 @@ namespace BARevitTools
                 MessageBox.Show(e.ToString());
             }
             
+        }
+        public static void DataGridViewToExcel(string filePath, DataGridView dgv)
+        {
+            try
+            {
+                Excel.Application excel = new Excel.Application();
+                excel.Visible = false;
+                excel.DisplayAlerts = false;
+
+                Excel.Workbook workbook = null;
+                Excel.Worksheet worksheet = null;
+                try
+                {
+                    workbook = excel.Workbooks.Open(filePath);
+                    worksheet = workbook.ActiveSheet;
+                }
+                catch
+                { MessageBox.Show("Could not open the Excel file. Please verify it is not currently open."); }
+
+                for (int c = 1; c <= dgv.Columns.Count; c++)
+                {
+                    try
+                    {
+                        worksheet.Cells[1, c] = dgv.Columns[c - 1].HeaderText;
+                    }
+                    catch
+                    {
+                        continue;
+                    }
+                }
+
+                for (int c = 1; c <= dgv.Columns.Count; c++)
+                {
+                    try
+                    {
+                        for (int r = 2; r <= dgv.Rows.Count + 1; r++)
+                        {
+                            worksheet.Cells[r, c] = dgv.Rows[r - 2].Cells[c - 1].Value.ToString();
+                        }
+                    }
+                    catch
+                    {
+                        continue;
+                    }
+                }
+
+                workbook.Save();
+                workbook.Close();
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(excel);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
         }
     }
 }

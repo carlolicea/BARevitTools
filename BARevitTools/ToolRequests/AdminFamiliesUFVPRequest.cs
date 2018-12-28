@@ -19,7 +19,7 @@ namespace BARevitTools.ToolRequests
             RVTDocument doc = uiApp.ActiveUIDocument.Document;
 
             //Clear out the backup families from the directory
-            List<string> backupFamilies = GeneralOperations.GetAllRvtBackupFamilies(uiForm.adminFamiliesUFVPDirectoryTextBox.Text);
+            List<string> backupFamilies = GeneralOperations.GetAllRvtBackupFamilies(uiForm.adminFamiliesUFVPDirectoryTextBox.Text,true);
             GeneralOperations.CleanRfaBackups(backupFamilies);
 
             //Get the family files from the directory. If the option to use the date since last modified was checked, use the first method, else use the second method
@@ -94,7 +94,7 @@ namespace BARevitTools.ToolRequests
                 finally
                 {
                     //Go back through the directory where the families are located and clean up the backups made from saving them after the parameter value was set.
-                    List<string> backupFamilies2 = GeneralOperations.GetAllRvtBackupFamilies(uiForm.adminFamiliesUFVPDirectoryTextBox.Text);
+                    List<string> backupFamilies2 = GeneralOperations.GetAllRvtBackupFamilies(uiForm.adminFamiliesUFVPDirectoryTextBox.Text,true);
                     GeneralOperations.CleanRfaBackups(backupFamilies2);
                 }
             }
