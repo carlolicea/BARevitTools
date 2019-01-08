@@ -149,25 +149,39 @@ namespace BARevitTools
         }
         public static List<string> GetAllRvtFamilies(string directoryPath, DateTime date, bool useDate)
         {
-            List<string> filePaths = new List<string>();
+            List<string> returnPaths = new List<string>();
             if (directoryPath != "")
             {
-                foreach (string filePath in Directory.GetFiles(directoryPath, "*.rfa", SearchOption.AllDirectories))
+                string[] directories = Directory.GetDirectories(directoryPath);
+                foreach (string directory in directories)
                 {
-                    Match match1 = Regex.Match(filePath, @".00\d\d.rfa", RegexOptions.IgnoreCase);
-                    if (!filePath.Contains("Archive") && !filePath.Contains("Parts") && !match1.Success)
+                    try
                     {
-                        FileInfo fileInfo = new FileInfo(filePath);
-                        if (useDate == true && fileInfo.LastWriteTime >= date)
-                        { filePaths.Add(filePath); }
-                        else if (useDate == false)
-                        { filePaths.Add(filePath); }
-                        else
-                        { continue; }
+                        List<string> filePaths = Directory.EnumerateFiles(directory, "*.rfa", SearchOption.AllDirectories).ToList();
+                        foreach (string filePath in filePaths)
+                        {
+                            try
+                            {                                
+                                Match match1 = Regex.Match(filePath, @".00\d\d.rfa", RegexOptions.IgnoreCase);
+                                if (!filePath.Contains("Archive") && !filePath.Contains("Parts") && !match1.Success)
+                                {
+                                    FileInfo fileInfo = new FileInfo(filePath);
+                                    if (useDate == true && fileInfo.LastWriteTime >= date)
+                                    { returnPaths.Add(filePath); }
+                                    else if (useDate == false)
+                                    { returnPaths.Add(filePath); }
+                                    else
+                                    { continue; }
+                                }
+                            }
+                            catch { continue; }                            
+                        }
                     }
+                    catch { continue; }
                 }
+                
             }
-            return filePaths;
+            return returnPaths;
         }
         public static List<string> GetAllRvtBackupFamilies(string directoryPath, bool searchAllDirectories)
         {
