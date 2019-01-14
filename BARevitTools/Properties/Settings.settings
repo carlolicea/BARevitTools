@@ -3,16 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="SqlServerName" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">tableau\\sqlexpress,1433</Value>
+      <Value Profile="(Default)">DPM146\SQLEXPRESS</Value>
     </Setting>
     <Setting Name="SqlBARevitToolsDbName" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">db_BARevitTools</Value>
+      <Value Profile="(Default)">DPA_BIM_Data</Value>
     </Setting>
     <Setting Name="SqlServerUser" Type="System.String" Scope="Application">
       <Value Profile="(Default)">sa</Value>
     </Setting>
     <Setting Name="SqlServerPwd" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Boulder4747</Value>
+      <Value Profile="(Default)">T3kZ!lla</Value>
     </Setting>
     <Setting Name="BARTBAAdminUsers" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Carlo Licea,CLicea</Value>
@@ -27,7 +27,7 @@
       <Value Profile="(Default)">BARevitTools_AppUse</Value>
     </Setting>
     <Setting Name="SqlBABimDbName" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">babim</Value>
+      <Value Profile="(Default)">DPA_BIM_Data</Value>
     </Setting>
     <Setting Name="UrlRoomsSRRN" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://www.youtube.com/watch?v=FKj5kopYC4w&amp;feature=youtu.be</Value>
@@ -42,7 +42,7 @@
       <Value Profile="(Default)">2018</Value>
     </Setting>
     <Setting Name="SqlBARevitFamiliesDataTable" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">BARevitFamilies2018</Value>
+      <Value Profile="(Default)">DPARevitFamilies2018</Value>
     </Setting>
     <Setting Name="SqlBADetailsDataTable" Type="System.String" Scope="Application">
       <Value Profile="(Default)">BADetailsViews</Value>

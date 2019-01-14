@@ -107,7 +107,7 @@ namespace BARevitTools
             this.adminFamiliesLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesToolStrip = new System.Windows.Forms.ToolStrip();
             this.adminFamiliesUFButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.adminFamiliesToolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesDFBButton = new System.Windows.Forms.ToolStripButton();
             this.adminFamiliesSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesParametersDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
@@ -115,7 +115,17 @@ namespace BARevitTools
             this.adminFamiliesBRPButton = new System.Windows.Forms.ToolStripMenuItem();
             this.bulkUpdatePublishVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.adminFamiliesSRCPButton = new System.Windows.Forms.ToolStripButton();
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesSRCPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesSRCPControlsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesSRCPRunButton = new System.Windows.Forms.Button();
+            this.adminFamiliesSRCPDirectoryTextBox = new System.Windows.Forms.TextBox();
+            this.adminFamiliesSRCPSelectDirectoryButton = new System.Windows.Forms.Button();
+            this.adminFamiliesSRCPSelectDriectoryTextBox = new System.Windows.Forms.Label();
+            this.adminFamiliesSRCPFamiliesPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesSRCPFamiliesTextBox = new System.Windows.Forms.Label();
+            this.adminFamiliesSRCPListBox = new System.Windows.Forms.ListBox();
             this.adminFamiliesBRPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesBRPRunPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesBRPProgressBar = new System.Windows.Forms.ProgressBar();
@@ -269,13 +279,6 @@ namespace BARevitTools
             this.materialsToolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.materialsAMLButton = new System.Windows.Forms.ToolStripButton();
             this.materialsToolsPanel = new System.Windows.Forms.Panel();
-            this.materialsAMLLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.materialsAMLHeaderPanel = new System.Windows.Forms.Panel();
-            this.materialsAMLHeaderLabel = new System.Windows.Forms.Label();
-            this.materialsAMLInstructionsTextBox = new System.Windows.Forms.TextBox();
-            this.materialsAMLDataGridView = new System.Windows.Forms.DataGridView();
-            this.materialsAMLLaunchPanel = new System.Windows.Forms.Panel();
-            this.materialsAMLLaunchPaletteButton = new System.Windows.Forms.Button();
             this.materialsCMSExcelLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.materialsCMSExcelExportPanel = new System.Windows.Forms.Panel();
             this.materialsCMSExcelCreateSpreadsheetButton = new System.Windows.Forms.Button();
@@ -292,6 +295,13 @@ namespace BARevitTools
             this.materialsCMSExcelSelectImportFileButton = new System.Windows.Forms.Button();
             this.materialsCMSExcelDataGridView = new System.Windows.Forms.DataGridView();
             this.materialsCMSExcelInstructionsTextBox = new System.Windows.Forms.TextBox();
+            this.materialsAMLLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.materialsAMLHeaderPanel = new System.Windows.Forms.Panel();
+            this.materialsAMLHeaderLabel = new System.Windows.Forms.Label();
+            this.materialsAMLInstructionsTextBox = new System.Windows.Forms.TextBox();
+            this.materialsAMLDataGridView = new System.Windows.Forms.DataGridView();
+            this.materialsAMLLaunchPanel = new System.Windows.Forms.Panel();
+            this.materialsAMLLaunchPaletteButton = new System.Windows.Forms.Button();
             this.roomsTab = new System.Windows.Forms.TabPage();
             this.roomsTabLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.roomsToolsPanel = new System.Windows.Forms.Panel();
@@ -488,6 +498,16 @@ namespace BARevitTools
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.qaqcRFSPButton = new System.Windows.Forms.ToolStripButton();
             this.qaqcToolsPanel = new System.Windows.Forms.Panel();
+            this.qaqcRFSPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.qaqcRFSPInstructionsTextBox = new System.Windows.Forms.TextBox();
+            this.qaqcRFSPParametersListBox = new System.Windows.Forms.ListBox();
+            this.qaqcRFSPToolsPanel = new System.Windows.Forms.Panel();
+            this.qaqcRFSPRunButton = new System.Windows.Forms.Button();
+            this.qaqcRFSPSelectFamilyLabel = new System.Windows.Forms.Label();
+            this.qaqcRFSPSFamilyLabel = new System.Windows.Forms.Label();
+            this.qaqcRFSPSelectFamilyButton = new System.Windows.Forms.Button();
+            this.qaqcRFSPEvaluatedParametersPanel = new System.Windows.Forms.Panel();
+            this.qaqcRFSPEvaluatedParametersLabel = new System.Windows.Forms.Label();
             this.qaqcRLSLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.qaqcRLSRunPanel = new System.Windows.Forms.Panel();
             this.qaqcRLSRunButton = new System.Windows.Forms.Button();
@@ -501,16 +521,6 @@ namespace BARevitTools
             this.qaqcRLSReplaceComboBox = new System.Windows.Forms.ComboBox();
             this.qaqcRLSUnswitchablePanel = new System.Windows.Forms.Panel();
             this.qaqcRLSUnswitchableLabel = new System.Windows.Forms.Label();
-            this.qaqcRFSPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.qaqcRFSPInstructionsTextBox = new System.Windows.Forms.TextBox();
-            this.qaqcRFSPParametersListBox = new System.Windows.Forms.ListBox();
-            this.qaqcRFSPToolsPanel = new System.Windows.Forms.Panel();
-            this.qaqcRFSPRunButton = new System.Windows.Forms.Button();
-            this.qaqcRFSPSelectFamilyLabel = new System.Windows.Forms.Label();
-            this.qaqcRFSPSFamilyLabel = new System.Windows.Forms.Label();
-            this.qaqcRFSPSelectFamilyButton = new System.Windows.Forms.Button();
-            this.qaqcRFSPEvaluatedParametersPanel = new System.Windows.Forms.Panel();
-            this.qaqcRFSPEvaluatedParametersLabel = new System.Windows.Forms.Label();
             this.qaqcCSVNPanel = new System.Windows.Forms.Panel();
             this.qaqcCSVNRun = new System.Windows.Forms.Button();
             this.qaqcCTVNInstructions = new System.Windows.Forms.Label();
@@ -571,6 +581,8 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminFamiliesSRCPUseDateCheckBox = new System.Windows.Forms.CheckBox();
+            this.adminFamiliesSRCPDatePicker = new System.Windows.Forms.DateTimePicker();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -602,6 +614,9 @@ namespace BARevitTools
             this.adminFamiliesLayoutPanel.SuspendLayout();
             this.adminFamiliesToolStrip.SuspendLayout();
             this.adminFamiliesToolsPanel.SuspendLayout();
+            this.adminFamiliesSRCPLayoutPanel.SuspendLayout();
+            this.adminFamiliesSRCPControlsPanel.SuspendLayout();
+            this.adminFamiliesSRCPFamiliesPanel.SuspendLayout();
             this.adminFamiliesBRPLayoutPanel.SuspendLayout();
             this.adminFamiliesBRPRunPanel.SuspendLayout();
             this.adminFamiliesBRPSplitPanel.SuspendLayout();
@@ -695,15 +710,15 @@ namespace BARevitTools
             this.materialsLayoutPanel.SuspendLayout();
             this.materialsToolStrip.SuspendLayout();
             this.materialsToolsPanel.SuspendLayout();
-            this.materialsAMLLayoutPanel.SuspendLayout();
-            this.materialsAMLHeaderPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.materialsAMLDataGridView)).BeginInit();
-            this.materialsAMLLaunchPanel.SuspendLayout();
             this.materialsCMSExcelLayoutPanel.SuspendLayout();
             this.materialsCMSExcelExportPanel.SuspendLayout();
             this.materialsCMSExcelRunPanel.SuspendLayout();
             this.materialsCMSExcelImportPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.materialsCMSExcelDataGridView)).BeginInit();
+            this.materialsAMLLayoutPanel.SuspendLayout();
+            this.materialsAMLHeaderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.materialsAMLDataGridView)).BeginInit();
+            this.materialsAMLLaunchPanel.SuspendLayout();
             this.roomsTab.SuspendLayout();
             this.roomsTabLayoutPanel.SuspendLayout();
             this.roomsToolsPanel.SuspendLayout();
@@ -789,14 +804,14 @@ namespace BARevitTools
             this.qaqcLayoutPanel.SuspendLayout();
             this.qaqcToolStrip.SuspendLayout();
             this.qaqcToolsPanel.SuspendLayout();
+            this.qaqcRFSPLayoutPanel.SuspendLayout();
+            this.qaqcRFSPToolsPanel.SuspendLayout();
+            this.qaqcRFSPEvaluatedParametersPanel.SuspendLayout();
             this.qaqcRLSLayoutPanel.SuspendLayout();
             this.qaqcRLSRunPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qaqcRLSDataGridView)).BeginInit();
             this.qaqcRLSControlsPanel.SuspendLayout();
             this.qaqcRLSUnswitchablePanel.SuspendLayout();
-            this.qaqcRFSPLayoutPanel.SuspendLayout();
-            this.qaqcRFSPToolsPanel.SuspendLayout();
-            this.qaqcRFSPEvaluatedParametersPanel.SuspendLayout();
             this.qaqcCSVNPanel.SuspendLayout();
             this.qaqcCSVLayoutPanel.SuspendLayout();
             this.qaqcCSVControlsPanel.SuspendLayout();
@@ -1667,11 +1682,12 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.adminFamiliesToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminFamiliesUFButton,
-            this.toolStripSeparator3,
+            this.adminFamiliesToolStripSeparator,
             this.adminFamiliesDFBButton,
             this.adminFamiliesSeparator1,
             this.adminFamiliesParametersDropDownButton,
-            this.toolStripSeparator1});
+            this.toolStripSeparator1,
+            this.adminFamiliesSRCPButton});
             this.adminFamiliesToolStrip.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesToolStrip.Name = "adminFamiliesToolStrip";
             this.adminFamiliesToolStrip.Size = new System.Drawing.Size(710, 53);
@@ -1690,10 +1706,10 @@ namespace BARevitTools
             this.adminFamiliesUFButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.adminFamiliesUFButton.Click += new System.EventHandler(this.AdminFamiliesUFButton_Click);
             // 
-            // toolStripSeparator3
+            // adminFamiliesToolStripSeparator
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 53);
+            this.adminFamiliesToolStripSeparator.Name = "adminFamiliesToolStripSeparator";
+            this.adminFamiliesToolStripSeparator.Size = new System.Drawing.Size(6, 53);
             // 
             // adminFamiliesDFBButton
             // 
@@ -1732,7 +1748,7 @@ namespace BARevitTools
             // 
             this.adminFamiliesBAPButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesBAPIcon;
             this.adminFamiliesBAPButton.Name = "adminFamiliesBAPButton";
-            this.adminFamiliesBAPButton.Size = new System.Drawing.Size(221, 22);
+            this.adminFamiliesBAPButton.Size = new System.Drawing.Size(237, 38);
             this.adminFamiliesBAPButton.Text = "Bulk Add Parameters";
             this.adminFamiliesBAPButton.Click += new System.EventHandler(this.AdminFamiliesBAPButton_Click);
             // 
@@ -1740,7 +1756,7 @@ namespace BARevitTools
             // 
             this.adminFamiliesBRPButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesBRPIcon;
             this.adminFamiliesBRPButton.Name = "adminFamiliesBRPButton";
-            this.adminFamiliesBRPButton.Size = new System.Drawing.Size(221, 22);
+            this.adminFamiliesBRPButton.Size = new System.Drawing.Size(237, 38);
             this.adminFamiliesBRPButton.Text = "Bulk Remove Parameters";
             this.adminFamiliesBRPButton.Click += new System.EventHandler(this.AdminFamiliesBRPButton_Click);
             // 
@@ -1748,7 +1764,7 @@ namespace BARevitTools
             // 
             this.bulkUpdatePublishVersionToolStripMenuItem.Image = global::BARevitTools.Properties.Resources.bimFamiliesUFVPIcon;
             this.bulkUpdatePublishVersionToolStripMenuItem.Name = "bulkUpdatePublishVersionToolStripMenuItem";
-            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(237, 38);
             this.bulkUpdatePublishVersionToolStripMenuItem.Text = "Bulk Update Publish Version";
             this.bulkUpdatePublishVersionToolStripMenuItem.Click += new System.EventHandler(this.AdminFamiliesUFVPButton_Click);
             // 
@@ -1757,8 +1773,22 @@ namespace BARevitTools
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
             // 
+            // adminFamiliesSRCPButton
+            // 
+            this.adminFamiliesSRCPButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesSRCPButton.Image")));
+            this.adminFamiliesSRCPButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.adminFamiliesSRCPButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.adminFamiliesSRCPButton.Name = "adminFamiliesSRCPButton";
+            this.adminFamiliesSRCPButton.Size = new System.Drawing.Size(80, 50);
+            this.adminFamiliesSRCPButton.Text = "Set Room CP";
+            this.adminFamiliesSRCPButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.adminFamiliesSRCPButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.adminFamiliesSRCPButton.ToolTipText = "Set Room CP: Sets the Room Calculation Point if not set";
+            this.adminFamiliesSRCPButton.Click += new System.EventHandler(this.AdminFamiliesSRCP_Click);
+            // 
             // adminFamiliesToolsPanel
             // 
+            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesSRCPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBRPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBAPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesUFVPLayoutPanel);
@@ -1770,6 +1800,115 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel.Name = "adminFamiliesToolsPanel";
             this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesToolsPanel.TabIndex = 1;
+            // 
+            // adminFamiliesSRCPLayoutPanel
+            // 
+            this.adminFamiliesSRCPLayoutPanel.ColumnCount = 2;
+            this.adminFamiliesSRCPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesSRCPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 329F));
+            this.adminFamiliesSRCPLayoutPanel.Controls.Add(this.adminFamiliesSRCPControlsPanel, 0, 0);
+            this.adminFamiliesSRCPLayoutPanel.Controls.Add(this.adminFamiliesSRCPFamiliesPanel, 1, 0);
+            this.adminFamiliesSRCPLayoutPanel.Controls.Add(this.adminFamiliesSRCPListBox, 1, 1);
+            this.adminFamiliesSRCPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesSRCPLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesSRCPLayoutPanel.Name = "adminFamiliesSRCPLayoutPanel";
+            this.adminFamiliesSRCPLayoutPanel.RowCount = 2;
+            this.adminFamiliesSRCPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.adminFamiliesSRCPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesSRCPLayoutPanel.Size = new System.Drawing.Size(710, 339);
+            this.adminFamiliesSRCPLayoutPanel.TabIndex = 1;
+            this.adminFamiliesSRCPLayoutPanel.Visible = false;
+            // 
+            // adminFamiliesSRCPControlsPanel
+            // 
+            this.adminFamiliesSRCPControlsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesSRCPControlsPanel.Controls.Add(this.adminFamiliesSRCPDatePicker);
+            this.adminFamiliesSRCPControlsPanel.Controls.Add(this.adminFamiliesSRCPUseDateCheckBox);
+            this.adminFamiliesSRCPControlsPanel.Controls.Add(this.adminFamiliesSRCPRunButton);
+            this.adminFamiliesSRCPControlsPanel.Controls.Add(this.adminFamiliesSRCPDirectoryTextBox);
+            this.adminFamiliesSRCPControlsPanel.Controls.Add(this.adminFamiliesSRCPSelectDirectoryButton);
+            this.adminFamiliesSRCPControlsPanel.Controls.Add(this.adminFamiliesSRCPSelectDriectoryTextBox);
+            this.adminFamiliesSRCPControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesSRCPControlsPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesSRCPControlsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesSRCPControlsPanel.Name = "adminFamiliesSRCPControlsPanel";
+            this.adminFamiliesSRCPLayoutPanel.SetRowSpan(this.adminFamiliesSRCPControlsPanel, 2);
+            this.adminFamiliesSRCPControlsPanel.Size = new System.Drawing.Size(381, 339);
+            this.adminFamiliesSRCPControlsPanel.TabIndex = 0;
+            // 
+            // adminFamiliesSRCPRunButton
+            // 
+            this.adminFamiliesSRCPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.adminFamiliesSRCPRunButton.Location = new System.Drawing.Point(3, 311);
+            this.adminFamiliesSRCPRunButton.Name = "adminFamiliesSRCPRunButton";
+            this.adminFamiliesSRCPRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesSRCPRunButton.TabIndex = 3;
+            this.adminFamiliesSRCPRunButton.Text = "RUN";
+            this.adminFamiliesSRCPRunButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesSRCPRunButton.Click += new System.EventHandler(this.AdminFamiliesSRCPRunButton_Click);
+            // 
+            // adminFamiliesSRCPDirectoryTextBox
+            // 
+            this.adminFamiliesSRCPDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesSRCPDirectoryTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesSRCPDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminFamiliesSRCPDirectoryTextBox.Location = new System.Drawing.Point(83, 20);
+            this.adminFamiliesSRCPDirectoryTextBox.Multiline = true;
+            this.adminFamiliesSRCPDirectoryTextBox.Name = "adminFamiliesSRCPDirectoryTextBox";
+            this.adminFamiliesSRCPDirectoryTextBox.ReadOnly = true;
+            this.adminFamiliesSRCPDirectoryTextBox.Size = new System.Drawing.Size(287, 20);
+            this.adminFamiliesSRCPDirectoryTextBox.TabIndex = 2;
+            // 
+            // adminFamiliesSRCPSelectDirectoryButton
+            // 
+            this.adminFamiliesSRCPSelectDirectoryButton.Location = new System.Drawing.Point(2, 19);
+            this.adminFamiliesSRCPSelectDirectoryButton.Name = "adminFamiliesSRCPSelectDirectoryButton";
+            this.adminFamiliesSRCPSelectDirectoryButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesSRCPSelectDirectoryButton.TabIndex = 1;
+            this.adminFamiliesSRCPSelectDirectoryButton.Text = "Select";
+            this.adminFamiliesSRCPSelectDirectoryButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesSRCPSelectDirectoryButton.Click += new System.EventHandler(this.AdminFamiliesSRCPSelectDirectoryButton_Click);
+            // 
+            // adminFamiliesSRCPSelectDriectoryTextBox
+            // 
+            this.adminFamiliesSRCPSelectDriectoryTextBox.AutoSize = true;
+            this.adminFamiliesSRCPSelectDriectoryTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesSRCPSelectDriectoryTextBox.Location = new System.Drawing.Point(6, 3);
+            this.adminFamiliesSRCPSelectDriectoryTextBox.Name = "adminFamiliesSRCPSelectDriectoryTextBox";
+            this.adminFamiliesSRCPSelectDriectoryTextBox.Size = new System.Drawing.Size(102, 13);
+            this.adminFamiliesSRCPSelectDriectoryTextBox.TabIndex = 0;
+            this.adminFamiliesSRCPSelectDriectoryTextBox.Text = "Select Directory:";
+            // 
+            // adminFamiliesSRCPFamiliesPanel
+            // 
+            this.adminFamiliesSRCPFamiliesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesSRCPFamiliesPanel.Controls.Add(this.adminFamiliesSRCPFamiliesTextBox);
+            this.adminFamiliesSRCPFamiliesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesSRCPFamiliesPanel.Location = new System.Drawing.Point(381, 0);
+            this.adminFamiliesSRCPFamiliesPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesSRCPFamiliesPanel.Name = "adminFamiliesSRCPFamiliesPanel";
+            this.adminFamiliesSRCPFamiliesPanel.Size = new System.Drawing.Size(329, 25);
+            this.adminFamiliesSRCPFamiliesPanel.TabIndex = 1;
+            // 
+            // adminFamiliesSRCPFamiliesTextBox
+            // 
+            this.adminFamiliesSRCPFamiliesTextBox.AutoSize = true;
+            this.adminFamiliesSRCPFamiliesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesSRCPFamiliesTextBox.Location = new System.Drawing.Point(3, 5);
+            this.adminFamiliesSRCPFamiliesTextBox.Name = "adminFamiliesSRCPFamiliesTextBox";
+            this.adminFamiliesSRCPFamiliesTextBox.Size = new System.Drawing.Size(119, 13);
+            this.adminFamiliesSRCPFamiliesTextBox.TabIndex = 0;
+            this.adminFamiliesSRCPFamiliesTextBox.Text = "Processed Families:";
+            // 
+            // adminFamiliesSRCPListBox
+            // 
+            this.adminFamiliesSRCPListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesSRCPListBox.FormattingEnabled = true;
+            this.adminFamiliesSRCPListBox.Location = new System.Drawing.Point(384, 28);
+            this.adminFamiliesSRCPListBox.Name = "adminFamiliesSRCPListBox";
+            this.adminFamiliesSRCPListBox.Size = new System.Drawing.Size(323, 308);
+            this.adminFamiliesSRCPListBox.TabIndex = 2;
             // 
             // adminFamiliesBRPLayoutPanel
             // 
@@ -3748,96 +3887,6 @@ namespace BARevitTools
             this.materialsToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.materialsToolsPanel.TabIndex = 1;
             // 
-            // materialsAMLLayoutPanel
-            // 
-            this.materialsAMLLayoutPanel.ColumnCount = 2;
-            this.materialsAMLLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 487F));
-            this.materialsAMLLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.materialsAMLLayoutPanel.Controls.Add(this.materialsAMLHeaderPanel, 0, 0);
-            this.materialsAMLLayoutPanel.Controls.Add(this.materialsAMLInstructionsTextBox, 1, 0);
-            this.materialsAMLLayoutPanel.Controls.Add(this.materialsAMLDataGridView, 0, 1);
-            this.materialsAMLLayoutPanel.Controls.Add(this.materialsAMLLaunchPanel, 0, 2);
-            this.materialsAMLLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsAMLLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.materialsAMLLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsAMLLayoutPanel.Name = "materialsAMLLayoutPanel";
-            this.materialsAMLLayoutPanel.RowCount = 3;
-            this.materialsAMLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.materialsAMLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.materialsAMLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.materialsAMLLayoutPanel.Size = new System.Drawing.Size(716, 345);
-            this.materialsAMLLayoutPanel.TabIndex = 3;
-            this.materialsAMLLayoutPanel.Visible = false;
-            // 
-            // materialsAMLHeaderPanel
-            // 
-            this.materialsAMLHeaderPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsAMLHeaderPanel.Controls.Add(this.materialsAMLHeaderLabel);
-            this.materialsAMLHeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsAMLHeaderPanel.Location = new System.Drawing.Point(0, 0);
-            this.materialsAMLHeaderPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsAMLHeaderPanel.Name = "materialsAMLHeaderPanel";
-            this.materialsAMLHeaderPanel.Size = new System.Drawing.Size(487, 30);
-            this.materialsAMLHeaderPanel.TabIndex = 0;
-            // 
-            // materialsAMLHeaderLabel
-            // 
-            this.materialsAMLHeaderLabel.AutoSize = true;
-            this.materialsAMLHeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialsAMLHeaderLabel.Location = new System.Drawing.Point(4, 9);
-            this.materialsAMLHeaderLabel.Name = "materialsAMLHeaderLabel";
-            this.materialsAMLHeaderLabel.Size = new System.Drawing.Size(150, 13);
-            this.materialsAMLHeaderLabel.TabIndex = 0;
-            this.materialsAMLHeaderLabel.Text = "Materials For Line Types:";
-            // 
-            // materialsAMLInstructionsTextBox
-            // 
-            this.materialsAMLInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.materialsAMLInstructionsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsAMLInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsAMLInstructionsTextBox.Location = new System.Drawing.Point(487, 0);
-            this.materialsAMLInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsAMLInstructionsTextBox.Multiline = true;
-            this.materialsAMLInstructionsTextBox.Name = "materialsAMLInstructionsTextBox";
-            this.materialsAMLLayoutPanel.SetRowSpan(this.materialsAMLInstructionsTextBox, 3);
-            this.materialsAMLInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.materialsAMLInstructionsTextBox.Size = new System.Drawing.Size(229, 345);
-            this.materialsAMLInstructionsTextBox.TabIndex = 1;
-            this.materialsAMLInstructionsTextBox.Text = resources.GetString("materialsAMLInstructionsTextBox.Text");
-            // 
-            // materialsAMLDataGridView
-            // 
-            this.materialsAMLDataGridView.AllowUserToAddRows = false;
-            this.materialsAMLDataGridView.AllowUserToDeleteRows = false;
-            this.materialsAMLDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.materialsAMLDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsAMLDataGridView.Location = new System.Drawing.Point(3, 33);
-            this.materialsAMLDataGridView.Name = "materialsAMLDataGridView";
-            this.materialsAMLDataGridView.Size = new System.Drawing.Size(481, 276);
-            this.materialsAMLDataGridView.TabIndex = 3;
-            this.materialsAMLDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MaterialsAMLDataGridView_CellContentClick);
-            // 
-            // materialsAMLLaunchPanel
-            // 
-            this.materialsAMLLaunchPanel.Controls.Add(this.materialsAMLLaunchPaletteButton);
-            this.materialsAMLLaunchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsAMLLaunchPanel.Location = new System.Drawing.Point(0, 312);
-            this.materialsAMLLaunchPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsAMLLaunchPanel.Name = "materialsAMLLaunchPanel";
-            this.materialsAMLLaunchPanel.Size = new System.Drawing.Size(487, 33);
-            this.materialsAMLLaunchPanel.TabIndex = 4;
-            // 
-            // materialsAMLLaunchPaletteButton
-            // 
-            this.materialsAMLLaunchPaletteButton.AutoSize = true;
-            this.materialsAMLLaunchPaletteButton.Location = new System.Drawing.Point(5, 3);
-            this.materialsAMLLaunchPaletteButton.Name = "materialsAMLLaunchPaletteButton";
-            this.materialsAMLLaunchPaletteButton.Size = new System.Drawing.Size(148, 30);
-            this.materialsAMLLaunchPaletteButton.TabIndex = 2;
-            this.materialsAMLLaunchPaletteButton.Text = "LAUNCH PICKER";
-            this.materialsAMLLaunchPaletteButton.UseVisualStyleBackColor = true;
-            this.materialsAMLLaunchPaletteButton.Click += new System.EventHandler(this.MaterialsAMLLaunchPaletteButton_Click);
-            // 
             // materialsCMSExcelLayoutPanel
             // 
             this.materialsCMSExcelLayoutPanel.ColumnCount = 2;
@@ -4037,6 +4086,96 @@ namespace BARevitTools
             this.materialsCMSExcelInstructionsTextBox.Size = new System.Drawing.Size(163, 343);
             this.materialsCMSExcelInstructionsTextBox.TabIndex = 4;
             this.materialsCMSExcelInstructionsTextBox.Text = resources.GetString("materialsCMSExcelInstructionsTextBox.Text");
+            // 
+            // materialsAMLLayoutPanel
+            // 
+            this.materialsAMLLayoutPanel.ColumnCount = 2;
+            this.materialsAMLLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 487F));
+            this.materialsAMLLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.materialsAMLLayoutPanel.Controls.Add(this.materialsAMLHeaderPanel, 0, 0);
+            this.materialsAMLLayoutPanel.Controls.Add(this.materialsAMLInstructionsTextBox, 1, 0);
+            this.materialsAMLLayoutPanel.Controls.Add(this.materialsAMLDataGridView, 0, 1);
+            this.materialsAMLLayoutPanel.Controls.Add(this.materialsAMLLaunchPanel, 0, 2);
+            this.materialsAMLLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsAMLLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.materialsAMLLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.materialsAMLLayoutPanel.Name = "materialsAMLLayoutPanel";
+            this.materialsAMLLayoutPanel.RowCount = 3;
+            this.materialsAMLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.materialsAMLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.materialsAMLLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.materialsAMLLayoutPanel.Size = new System.Drawing.Size(716, 345);
+            this.materialsAMLLayoutPanel.TabIndex = 3;
+            this.materialsAMLLayoutPanel.Visible = false;
+            // 
+            // materialsAMLHeaderPanel
+            // 
+            this.materialsAMLHeaderPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialsAMLHeaderPanel.Controls.Add(this.materialsAMLHeaderLabel);
+            this.materialsAMLHeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsAMLHeaderPanel.Location = new System.Drawing.Point(0, 0);
+            this.materialsAMLHeaderPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.materialsAMLHeaderPanel.Name = "materialsAMLHeaderPanel";
+            this.materialsAMLHeaderPanel.Size = new System.Drawing.Size(487, 30);
+            this.materialsAMLHeaderPanel.TabIndex = 0;
+            // 
+            // materialsAMLHeaderLabel
+            // 
+            this.materialsAMLHeaderLabel.AutoSize = true;
+            this.materialsAMLHeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialsAMLHeaderLabel.Location = new System.Drawing.Point(4, 9);
+            this.materialsAMLHeaderLabel.Name = "materialsAMLHeaderLabel";
+            this.materialsAMLHeaderLabel.Size = new System.Drawing.Size(150, 13);
+            this.materialsAMLHeaderLabel.TabIndex = 0;
+            this.materialsAMLHeaderLabel.Text = "Materials For Line Types:";
+            // 
+            // materialsAMLInstructionsTextBox
+            // 
+            this.materialsAMLInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.materialsAMLInstructionsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialsAMLInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsAMLInstructionsTextBox.Location = new System.Drawing.Point(487, 0);
+            this.materialsAMLInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.materialsAMLInstructionsTextBox.Multiline = true;
+            this.materialsAMLInstructionsTextBox.Name = "materialsAMLInstructionsTextBox";
+            this.materialsAMLLayoutPanel.SetRowSpan(this.materialsAMLInstructionsTextBox, 3);
+            this.materialsAMLInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.materialsAMLInstructionsTextBox.Size = new System.Drawing.Size(229, 345);
+            this.materialsAMLInstructionsTextBox.TabIndex = 1;
+            this.materialsAMLInstructionsTextBox.Text = resources.GetString("materialsAMLInstructionsTextBox.Text");
+            // 
+            // materialsAMLDataGridView
+            // 
+            this.materialsAMLDataGridView.AllowUserToAddRows = false;
+            this.materialsAMLDataGridView.AllowUserToDeleteRows = false;
+            this.materialsAMLDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.materialsAMLDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsAMLDataGridView.Location = new System.Drawing.Point(3, 33);
+            this.materialsAMLDataGridView.Name = "materialsAMLDataGridView";
+            this.materialsAMLDataGridView.Size = new System.Drawing.Size(481, 276);
+            this.materialsAMLDataGridView.TabIndex = 3;
+            this.materialsAMLDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MaterialsAMLDataGridView_CellContentClick);
+            // 
+            // materialsAMLLaunchPanel
+            // 
+            this.materialsAMLLaunchPanel.Controls.Add(this.materialsAMLLaunchPaletteButton);
+            this.materialsAMLLaunchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsAMLLaunchPanel.Location = new System.Drawing.Point(0, 312);
+            this.materialsAMLLaunchPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.materialsAMLLaunchPanel.Name = "materialsAMLLaunchPanel";
+            this.materialsAMLLaunchPanel.Size = new System.Drawing.Size(487, 33);
+            this.materialsAMLLaunchPanel.TabIndex = 4;
+            // 
+            // materialsAMLLaunchPaletteButton
+            // 
+            this.materialsAMLLaunchPaletteButton.AutoSize = true;
+            this.materialsAMLLaunchPaletteButton.Location = new System.Drawing.Point(5, 3);
+            this.materialsAMLLaunchPaletteButton.Name = "materialsAMLLaunchPaletteButton";
+            this.materialsAMLLaunchPaletteButton.Size = new System.Drawing.Size(148, 30);
+            this.materialsAMLLaunchPaletteButton.TabIndex = 2;
+            this.materialsAMLLaunchPaletteButton.Text = "LAUNCH PICKER";
+            this.materialsAMLLaunchPaletteButton.UseVisualStyleBackColor = true;
+            this.materialsAMLLaunchPaletteButton.Click += new System.EventHandler(this.MaterialsAMLLaunchPaletteButton_Click);
             // 
             // roomsTab
             // 
@@ -6398,8 +6537,8 @@ namespace BARevitTools
             // 
             // qaqcToolsPanel
             // 
-            this.qaqcToolsPanel.Controls.Add(this.qaqcRLSLayoutPanel);
             this.qaqcToolsPanel.Controls.Add(this.qaqcRFSPLayoutPanel);
+            this.qaqcToolsPanel.Controls.Add(this.qaqcRLSLayoutPanel);
             this.qaqcToolsPanel.Controls.Add(this.qaqcCSVNPanel);
             this.qaqcToolsPanel.Controls.Add(this.qaqcCSVLayoutPanel);
             this.qaqcToolsPanel.Controls.Add(this.qaqcDRNPPanel);
@@ -6409,6 +6548,130 @@ namespace BARevitTools
             this.qaqcToolsPanel.Name = "qaqcToolsPanel";
             this.qaqcToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.qaqcToolsPanel.TabIndex = 3;
+            // 
+            // qaqcRFSPLayoutPanel
+            // 
+            this.qaqcRFSPLayoutPanel.ColumnCount = 2;
+            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
+            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPInstructionsTextBox, 0, 0);
+            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPParametersListBox, 1, 2);
+            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPToolsPanel, 0, 1);
+            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPEvaluatedParametersPanel, 1, 1);
+            this.qaqcRFSPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.qaqcRFSPLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.qaqcRFSPLayoutPanel.Name = "qaqcRFSPLayoutPanel";
+            this.qaqcRFSPLayoutPanel.RowCount = 3;
+            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.qaqcRFSPLayoutPanel.Size = new System.Drawing.Size(716, 345);
+            this.qaqcRFSPLayoutPanel.TabIndex = 4;
+            this.qaqcRFSPLayoutPanel.Visible = false;
+            // 
+            // qaqcRFSPInstructionsTextBox
+            // 
+            this.qaqcRFSPInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.qaqcRFSPLayoutPanel.SetColumnSpan(this.qaqcRFSPInstructionsTextBox, 2);
+            this.qaqcRFSPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
+            this.qaqcRFSPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.qaqcRFSPInstructionsTextBox.Multiline = true;
+            this.qaqcRFSPInstructionsTextBox.Name = "qaqcRFSPInstructionsTextBox";
+            this.qaqcRFSPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.qaqcRFSPInstructionsTextBox.Size = new System.Drawing.Size(716, 60);
+            this.qaqcRFSPInstructionsTextBox.TabIndex = 1;
+            this.qaqcRFSPInstructionsTextBox.Text = resources.GetString("qaqcRFSPInstructionsTextBox.Text");
+            // 
+            // qaqcRFSPParametersListBox
+            // 
+            this.qaqcRFSPParametersListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPParametersListBox.FormattingEnabled = true;
+            this.qaqcRFSPParametersListBox.IntegralHeight = false;
+            this.qaqcRFSPParametersListBox.Location = new System.Drawing.Point(275, 85);
+            this.qaqcRFSPParametersListBox.Margin = new System.Windows.Forms.Padding(0);
+            this.qaqcRFSPParametersListBox.Name = "qaqcRFSPParametersListBox";
+            this.qaqcRFSPParametersListBox.Size = new System.Drawing.Size(441, 260);
+            this.qaqcRFSPParametersListBox.TabIndex = 2;
+            // 
+            // qaqcRFSPToolsPanel
+            // 
+            this.qaqcRFSPToolsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPRunButton);
+            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSelectFamilyLabel);
+            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSFamilyLabel);
+            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSelectFamilyButton);
+            this.qaqcRFSPToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPToolsPanel.Location = new System.Drawing.Point(0, 60);
+            this.qaqcRFSPToolsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.qaqcRFSPToolsPanel.Name = "qaqcRFSPToolsPanel";
+            this.qaqcRFSPLayoutPanel.SetRowSpan(this.qaqcRFSPToolsPanel, 2);
+            this.qaqcRFSPToolsPanel.Size = new System.Drawing.Size(275, 285);
+            this.qaqcRFSPToolsPanel.TabIndex = 0;
+            // 
+            // qaqcRFSPRunButton
+            // 
+            this.qaqcRFSPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.qaqcRFSPRunButton.Location = new System.Drawing.Point(2, 257);
+            this.qaqcRFSPRunButton.Name = "qaqcRFSPRunButton";
+            this.qaqcRFSPRunButton.Size = new System.Drawing.Size(75, 23);
+            this.qaqcRFSPRunButton.TabIndex = 0;
+            this.qaqcRFSPRunButton.Text = "RUN";
+            this.qaqcRFSPRunButton.UseVisualStyleBackColor = true;
+            this.qaqcRFSPRunButton.Click += new System.EventHandler(this.QaqcRFSPRunButton_Click);
+            // 
+            // qaqcRFSPSelectFamilyLabel
+            // 
+            this.qaqcRFSPSelectFamilyLabel.AutoSize = true;
+            this.qaqcRFSPSelectFamilyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qaqcRFSPSelectFamilyLabel.Location = new System.Drawing.Point(4, 7);
+            this.qaqcRFSPSelectFamilyLabel.Name = "qaqcRFSPSelectFamilyLabel";
+            this.qaqcRFSPSelectFamilyLabel.Size = new System.Drawing.Size(89, 13);
+            this.qaqcRFSPSelectFamilyLabel.TabIndex = 2;
+            this.qaqcRFSPSelectFamilyLabel.Text = "Select Library:";
+            // 
+            // qaqcRFSPSFamilyLabel
+            // 
+            this.qaqcRFSPSFamilyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.qaqcRFSPSFamilyLabel.Location = new System.Drawing.Point(85, 27);
+            this.qaqcRFSPSFamilyLabel.Name = "qaqcRFSPSFamilyLabel";
+            this.qaqcRFSPSFamilyLabel.Size = new System.Drawing.Size(184, 23);
+            this.qaqcRFSPSFamilyLabel.TabIndex = 1;
+            this.qaqcRFSPSFamilyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // qaqcRFSPSelectFamilyButton
+            // 
+            this.qaqcRFSPSelectFamilyButton.Location = new System.Drawing.Point(4, 28);
+            this.qaqcRFSPSelectFamilyButton.Name = "qaqcRFSPSelectFamilyButton";
+            this.qaqcRFSPSelectFamilyButton.Size = new System.Drawing.Size(75, 23);
+            this.qaqcRFSPSelectFamilyButton.TabIndex = 0;
+            this.qaqcRFSPSelectFamilyButton.Text = "Select";
+            this.qaqcRFSPSelectFamilyButton.UseVisualStyleBackColor = true;
+            this.qaqcRFSPSelectFamilyButton.Click += new System.EventHandler(this.QaqcRFSPSelectFamilyButton_Click);
+            // 
+            // qaqcRFSPEvaluatedParametersPanel
+            // 
+            this.qaqcRFSPEvaluatedParametersPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qaqcRFSPEvaluatedParametersPanel.Controls.Add(this.qaqcRFSPEvaluatedParametersLabel);
+            this.qaqcRFSPEvaluatedParametersPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.qaqcRFSPEvaluatedParametersPanel.Location = new System.Drawing.Point(275, 60);
+            this.qaqcRFSPEvaluatedParametersPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.qaqcRFSPEvaluatedParametersPanel.Name = "qaqcRFSPEvaluatedParametersPanel";
+            this.qaqcRFSPEvaluatedParametersPanel.Size = new System.Drawing.Size(441, 25);
+            this.qaqcRFSPEvaluatedParametersPanel.TabIndex = 3;
+            // 
+            // qaqcRFSPEvaluatedParametersLabel
+            // 
+            this.qaqcRFSPEvaluatedParametersLabel.AutoSize = true;
+            this.qaqcRFSPEvaluatedParametersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qaqcRFSPEvaluatedParametersLabel.Location = new System.Drawing.Point(3, 7);
+            this.qaqcRFSPEvaluatedParametersLabel.Name = "qaqcRFSPEvaluatedParametersLabel";
+            this.qaqcRFSPEvaluatedParametersLabel.Size = new System.Drawing.Size(179, 13);
+            this.qaqcRFSPEvaluatedParametersLabel.TabIndex = 0;
+            this.qaqcRFSPEvaluatedParametersLabel.Text = "Shared Parameters Evaluated:";
             // 
             // qaqcRLSLayoutPanel
             // 
@@ -6578,130 +6841,6 @@ namespace BARevitTools
             this.qaqcRLSUnswitchableLabel.Size = new System.Drawing.Size(308, 13);
             this.qaqcRLSUnswitchableLabel.TabIndex = 0;
             this.qaqcRLSUnswitchableLabel.Text = "The Following Groups Have Lines That Could Not Be Switched:";
-            // 
-            // qaqcRFSPLayoutPanel
-            // 
-            this.qaqcRFSPLayoutPanel.ColumnCount = 2;
-            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
-            this.qaqcRFSPLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPInstructionsTextBox, 0, 0);
-            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPParametersListBox, 1, 2);
-            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPToolsPanel, 0, 1);
-            this.qaqcRFSPLayoutPanel.Controls.Add(this.qaqcRFSPEvaluatedParametersPanel, 1, 1);
-            this.qaqcRFSPLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.qaqcRFSPLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.qaqcRFSPLayoutPanel.Name = "qaqcRFSPLayoutPanel";
-            this.qaqcRFSPLayoutPanel.RowCount = 3;
-            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.qaqcRFSPLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.qaqcRFSPLayoutPanel.Size = new System.Drawing.Size(716, 345);
-            this.qaqcRFSPLayoutPanel.TabIndex = 4;
-            this.qaqcRFSPLayoutPanel.Visible = false;
-            // 
-            // qaqcRFSPInstructionsTextBox
-            // 
-            this.qaqcRFSPInstructionsTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.qaqcRFSPLayoutPanel.SetColumnSpan(this.qaqcRFSPInstructionsTextBox, 2);
-            this.qaqcRFSPInstructionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPInstructionsTextBox.Location = new System.Drawing.Point(0, 0);
-            this.qaqcRFSPInstructionsTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.qaqcRFSPInstructionsTextBox.Multiline = true;
-            this.qaqcRFSPInstructionsTextBox.Name = "qaqcRFSPInstructionsTextBox";
-            this.qaqcRFSPInstructionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.qaqcRFSPInstructionsTextBox.Size = new System.Drawing.Size(716, 60);
-            this.qaqcRFSPInstructionsTextBox.TabIndex = 1;
-            this.qaqcRFSPInstructionsTextBox.Text = resources.GetString("qaqcRFSPInstructionsTextBox.Text");
-            // 
-            // qaqcRFSPParametersListBox
-            // 
-            this.qaqcRFSPParametersListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPParametersListBox.FormattingEnabled = true;
-            this.qaqcRFSPParametersListBox.IntegralHeight = false;
-            this.qaqcRFSPParametersListBox.Location = new System.Drawing.Point(275, 85);
-            this.qaqcRFSPParametersListBox.Margin = new System.Windows.Forms.Padding(0);
-            this.qaqcRFSPParametersListBox.Name = "qaqcRFSPParametersListBox";
-            this.qaqcRFSPParametersListBox.Size = new System.Drawing.Size(441, 260);
-            this.qaqcRFSPParametersListBox.TabIndex = 2;
-            // 
-            // qaqcRFSPToolsPanel
-            // 
-            this.qaqcRFSPToolsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPRunButton);
-            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSelectFamilyLabel);
-            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSFamilyLabel);
-            this.qaqcRFSPToolsPanel.Controls.Add(this.qaqcRFSPSelectFamilyButton);
-            this.qaqcRFSPToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPToolsPanel.Location = new System.Drawing.Point(0, 60);
-            this.qaqcRFSPToolsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.qaqcRFSPToolsPanel.Name = "qaqcRFSPToolsPanel";
-            this.qaqcRFSPLayoutPanel.SetRowSpan(this.qaqcRFSPToolsPanel, 2);
-            this.qaqcRFSPToolsPanel.Size = new System.Drawing.Size(275, 285);
-            this.qaqcRFSPToolsPanel.TabIndex = 0;
-            // 
-            // qaqcRFSPRunButton
-            // 
-            this.qaqcRFSPRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.qaqcRFSPRunButton.Location = new System.Drawing.Point(2, 257);
-            this.qaqcRFSPRunButton.Name = "qaqcRFSPRunButton";
-            this.qaqcRFSPRunButton.Size = new System.Drawing.Size(75, 23);
-            this.qaqcRFSPRunButton.TabIndex = 0;
-            this.qaqcRFSPRunButton.Text = "RUN";
-            this.qaqcRFSPRunButton.UseVisualStyleBackColor = true;
-            this.qaqcRFSPRunButton.Click += new System.EventHandler(this.QaqcRFSPRunButton_Click);
-            // 
-            // qaqcRFSPSelectFamilyLabel
-            // 
-            this.qaqcRFSPSelectFamilyLabel.AutoSize = true;
-            this.qaqcRFSPSelectFamilyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qaqcRFSPSelectFamilyLabel.Location = new System.Drawing.Point(4, 7);
-            this.qaqcRFSPSelectFamilyLabel.Name = "qaqcRFSPSelectFamilyLabel";
-            this.qaqcRFSPSelectFamilyLabel.Size = new System.Drawing.Size(86, 13);
-            this.qaqcRFSPSelectFamilyLabel.TabIndex = 2;
-            this.qaqcRFSPSelectFamilyLabel.Text = "Select Family:";
-            // 
-            // qaqcRFSPSFamilyLabel
-            // 
-            this.qaqcRFSPSFamilyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.qaqcRFSPSFamilyLabel.Location = new System.Drawing.Point(85, 27);
-            this.qaqcRFSPSFamilyLabel.Name = "qaqcRFSPSFamilyLabel";
-            this.qaqcRFSPSFamilyLabel.Size = new System.Drawing.Size(184, 23);
-            this.qaqcRFSPSFamilyLabel.TabIndex = 1;
-            this.qaqcRFSPSFamilyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // qaqcRFSPSelectFamilyButton
-            // 
-            this.qaqcRFSPSelectFamilyButton.Location = new System.Drawing.Point(4, 28);
-            this.qaqcRFSPSelectFamilyButton.Name = "qaqcRFSPSelectFamilyButton";
-            this.qaqcRFSPSelectFamilyButton.Size = new System.Drawing.Size(75, 23);
-            this.qaqcRFSPSelectFamilyButton.TabIndex = 0;
-            this.qaqcRFSPSelectFamilyButton.Text = "Select";
-            this.qaqcRFSPSelectFamilyButton.UseVisualStyleBackColor = true;
-            this.qaqcRFSPSelectFamilyButton.Click += new System.EventHandler(this.QaqcRFSPSelectFamilyButton_Click);
-            // 
-            // qaqcRFSPEvaluatedParametersPanel
-            // 
-            this.qaqcRFSPEvaluatedParametersPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qaqcRFSPEvaluatedParametersPanel.Controls.Add(this.qaqcRFSPEvaluatedParametersLabel);
-            this.qaqcRFSPEvaluatedParametersPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qaqcRFSPEvaluatedParametersPanel.Location = new System.Drawing.Point(275, 60);
-            this.qaqcRFSPEvaluatedParametersPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.qaqcRFSPEvaluatedParametersPanel.Name = "qaqcRFSPEvaluatedParametersPanel";
-            this.qaqcRFSPEvaluatedParametersPanel.Size = new System.Drawing.Size(441, 25);
-            this.qaqcRFSPEvaluatedParametersPanel.TabIndex = 3;
-            // 
-            // qaqcRFSPEvaluatedParametersLabel
-            // 
-            this.qaqcRFSPEvaluatedParametersLabel.AutoSize = true;
-            this.qaqcRFSPEvaluatedParametersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qaqcRFSPEvaluatedParametersLabel.Location = new System.Drawing.Point(3, 7);
-            this.qaqcRFSPEvaluatedParametersLabel.Name = "qaqcRFSPEvaluatedParametersLabel";
-            this.qaqcRFSPEvaluatedParametersLabel.Size = new System.Drawing.Size(179, 13);
-            this.qaqcRFSPEvaluatedParametersLabel.TabIndex = 0;
-            this.qaqcRFSPEvaluatedParametersLabel.Text = "Shared Parameters Evaluated:";
             // 
             // qaqcCSVNPanel
             // 
@@ -7444,6 +7583,23 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
             // 
+            // adminFamiliesSRCPUseDateCheckBox
+            // 
+            this.adminFamiliesSRCPUseDateCheckBox.AutoSize = true;
+            this.adminFamiliesSRCPUseDateCheckBox.Location = new System.Drawing.Point(2, 48);
+            this.adminFamiliesSRCPUseDateCheckBox.Name = "adminFamiliesSRCPUseDateCheckBox";
+            this.adminFamiliesSRCPUseDateCheckBox.Size = new System.Drawing.Size(71, 17);
+            this.adminFamiliesSRCPUseDateCheckBox.TabIndex = 4;
+            this.adminFamiliesSRCPUseDateCheckBox.Text = "Use Date";
+            this.adminFamiliesSRCPUseDateCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // adminFamiliesSRCPDatePicker
+            // 
+            this.adminFamiliesSRCPDatePicker.Location = new System.Drawing.Point(83, 45);
+            this.adminFamiliesSRCPDatePicker.Name = "adminFamiliesSRCPDatePicker";
+            this.adminFamiliesSRCPDatePicker.Size = new System.Drawing.Size(196, 20);
+            this.adminFamiliesSRCPDatePicker.TabIndex = 5;
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7499,6 +7655,11 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.ResumeLayout(false);
             this.adminFamiliesToolStrip.PerformLayout();
             this.adminFamiliesToolsPanel.ResumeLayout(false);
+            this.adminFamiliesSRCPLayoutPanel.ResumeLayout(false);
+            this.adminFamiliesSRCPControlsPanel.ResumeLayout(false);
+            this.adminFamiliesSRCPControlsPanel.PerformLayout();
+            this.adminFamiliesSRCPFamiliesPanel.ResumeLayout(false);
+            this.adminFamiliesSRCPFamiliesPanel.PerformLayout();
             this.adminFamiliesBRPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesBRPRunPanel.ResumeLayout(false);
             this.adminFamiliesBRPSplitPanel.ResumeLayout(false);
@@ -7615,13 +7776,6 @@ namespace BARevitTools
             this.materialsToolStrip.ResumeLayout(false);
             this.materialsToolStrip.PerformLayout();
             this.materialsToolsPanel.ResumeLayout(false);
-            this.materialsAMLLayoutPanel.ResumeLayout(false);
-            this.materialsAMLLayoutPanel.PerformLayout();
-            this.materialsAMLHeaderPanel.ResumeLayout(false);
-            this.materialsAMLHeaderPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.materialsAMLDataGridView)).EndInit();
-            this.materialsAMLLaunchPanel.ResumeLayout(false);
-            this.materialsAMLLaunchPanel.PerformLayout();
             this.materialsCMSExcelLayoutPanel.ResumeLayout(false);
             this.materialsCMSExcelLayoutPanel.PerformLayout();
             this.materialsCMSExcelExportPanel.ResumeLayout(false);
@@ -7630,6 +7784,13 @@ namespace BARevitTools
             this.materialsCMSExcelImportPanel.ResumeLayout(false);
             this.materialsCMSExcelImportPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.materialsCMSExcelDataGridView)).EndInit();
+            this.materialsAMLLayoutPanel.ResumeLayout(false);
+            this.materialsAMLLayoutPanel.PerformLayout();
+            this.materialsAMLHeaderPanel.ResumeLayout(false);
+            this.materialsAMLHeaderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.materialsAMLDataGridView)).EndInit();
+            this.materialsAMLLaunchPanel.ResumeLayout(false);
+            this.materialsAMLLaunchPanel.PerformLayout();
             this.roomsTab.ResumeLayout(false);
             this.roomsTabLayoutPanel.ResumeLayout(false);
             this.roomsToolsPanel.ResumeLayout(false);
@@ -7743,6 +7904,12 @@ namespace BARevitTools
             this.qaqcToolStrip.ResumeLayout(false);
             this.qaqcToolStrip.PerformLayout();
             this.qaqcToolsPanel.ResumeLayout(false);
+            this.qaqcRFSPLayoutPanel.ResumeLayout(false);
+            this.qaqcRFSPLayoutPanel.PerformLayout();
+            this.qaqcRFSPToolsPanel.ResumeLayout(false);
+            this.qaqcRFSPToolsPanel.PerformLayout();
+            this.qaqcRFSPEvaluatedParametersPanel.ResumeLayout(false);
+            this.qaqcRFSPEvaluatedParametersPanel.PerformLayout();
             this.qaqcRLSLayoutPanel.ResumeLayout(false);
             this.qaqcRLSLayoutPanel.PerformLayout();
             this.qaqcRLSRunPanel.ResumeLayout(false);
@@ -7751,12 +7918,6 @@ namespace BARevitTools
             this.qaqcRLSControlsPanel.PerformLayout();
             this.qaqcRLSUnswitchablePanel.ResumeLayout(false);
             this.qaqcRLSUnswitchablePanel.PerformLayout();
-            this.qaqcRFSPLayoutPanel.ResumeLayout(false);
-            this.qaqcRFSPLayoutPanel.PerformLayout();
-            this.qaqcRFSPToolsPanel.ResumeLayout(false);
-            this.qaqcRFSPToolsPanel.PerformLayout();
-            this.qaqcRFSPEvaluatedParametersPanel.ResumeLayout(false);
-            this.qaqcRFSPEvaluatedParametersPanel.PerformLayout();
             this.qaqcCSVNPanel.ResumeLayout(false);
             this.qaqcCSVLayoutPanel.ResumeLayout(false);
             this.qaqcCSVControlsPanel.ResumeLayout(false);
@@ -8099,7 +8260,6 @@ namespace BARevitTools
         private TextBox qaqcRFSPInstructionsTextBox;
         public ListBox qaqcRFSPParametersListBox;
         private Panel qaqcRFSPToolsPanel;
-        public Label qaqcRFSPSFamilyLabel;
         private Button qaqcRFSPRunButton;
         private Button qaqcRFSPSelectFamilyButton;
         private Panel qaqcRFSPEvaluatedParametersPanel;
@@ -8232,7 +8392,7 @@ namespace BARevitTools
         private TableLayoutPanel adminFamiliesLayoutPanel;
         private ToolStrip adminFamiliesToolStrip;
         private ToolStripButton adminFamiliesUFButton;
-        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripSeparator adminFamiliesToolStripSeparator;
         private ToolStripSeparator adminFamiliesSeparator1;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton adminFamiliesDFBButton;
@@ -8323,6 +8483,19 @@ namespace BARevitTools
         private Button adminFamiliesUFVPDirectoryButton;
         public TextBox adminFamiliesUFVPDirectoryTextBox;
         public ComboBox viewsCEPRCropMethodComboBox;
+        public Label qaqcRFSPSFamilyLabel;
+        private ToolStripButton adminFamiliesSRCPButton;
+        private TableLayoutPanel adminFamiliesSRCPLayoutPanel;
+        private Panel adminFamiliesSRCPControlsPanel;
+        private Button adminFamiliesSRCPRunButton;
+        public TextBox adminFamiliesSRCPDirectoryTextBox;
+        private Button adminFamiliesSRCPSelectDirectoryButton;
+        private Label adminFamiliesSRCPSelectDriectoryTextBox;
+        private Panel adminFamiliesSRCPFamiliesPanel;
+        private Label adminFamiliesSRCPFamiliesTextBox;
+        public ListBox adminFamiliesSRCPListBox;
+        public DateTimePicker adminFamiliesSRCPDatePicker;
+        public CheckBox adminFamiliesSRCPUseDateCheckBox;
     }
 }
 

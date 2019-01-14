@@ -185,8 +185,10 @@ namespace BARevitTools
                         sqlsc += " uniqueidentifier ";
                         break;
                     case "System.String":
+                        sqlsc += " nvarchar(MAX) ";
+                        break;
                     default:
-                        sqlsc += string.Format(" nvarchar(255) ");
+                        sqlsc += string.Format(" nvarchar(MAX) ");
                         break;
                 }
                 if (dataTable.Columns[i].AutoIncrement)

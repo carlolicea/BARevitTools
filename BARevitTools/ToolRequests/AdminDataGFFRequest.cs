@@ -90,8 +90,11 @@ namespace BARevitTools.ToolRequests
             {
                 //If the parameter value is to be collected, it could be either an integer, double, or string, so create all three columns anyways
                 DataColumn parameterValueIntegerColumn = dt.Columns.Add("ParameterValueInteger", typeof(Int32));
+                parameterValueIntegerColumn.AllowDBNull = true;
                 DataColumn parameterValueDoubleColumn = dt.Columns.Add("ParameterValueDouble", typeof(Double));
+                parameterValueDoubleColumn.AllowDBNull = true;
                 DataColumn parameterValueStringColumn = dt.Columns.Add("ParameterValueString", typeof(String));
+                parameterValueStringColumn.AllowDBNull = true;
                 selectionGroup = 1;
             }
 
@@ -184,13 +187,17 @@ namespace BARevitTools.ToolRequests
 
                             Transaction t1 = new Transaction(doc, "CycleFamilyTypes");
                             t1.Start();
+                            FailureHandlingOptions failureHandlingOptions = t1.GetFailureHandlingOptions();
+                            failureHandlingOptions.SetFailuresPreprocessor(new RVTFailuresPreprocessor());
+                            t1.SetFailureHandlingOptions(failureHandlingOptions);
 
                             //For each family type...
                             foreach (FamilyType famType in familyTypes)
                             {
                                 //Create a subtransaction to change the current family type in the family manager
                                 SubTransaction s1 = new SubTransaction(doc);
-                                s1.Start();
+                                s1.Start();                                
+
                                 famMan.CurrentType = famType;
                                 s1.Commit();
 
@@ -291,14 +298,15 @@ namespace BARevitTools.ToolRequests
 
                                     if (dt.Columns.Contains("ParameterIsInstance"))
                                     {
+
                                         try { row["ParameterIsInstance"] = param.IsInstance; }
-                                        catch { row["ParameterIsInstance"] = null; }
+                                        catch { row["ParameterIsInstance"] = false; }
                                     }
 
                                     if (dt.Columns.Contains("ParameterIsShared"))
                                     {
                                         try { row["ParameterIsShared"] = param.IsShared; }
-                                        catch { row["ParameterIsShared"] = null; }
+                                        catch { row["ParameterIsShared"] = false; }
                                     }
 
                                     if (dt.Columns.Contains("ParameterGUID"))

@@ -305,6 +305,8 @@ namespace BARevitTools
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
+                    this.adminFamiliesSRCPButton.Checked = false;
+                    this.adminFamiliesSRCPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesBAP:
                     this.adminFamiliesBAPLayoutPanel.Visible = true;
@@ -316,6 +318,8 @@ namespace BARevitTools
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
+                    this.adminFamiliesSRCPButton.Checked = false;
+                    this.adminFamiliesSRCPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesBRP:
                     this.adminFamiliesBRPLayoutPanel.Visible = true;
@@ -327,6 +331,8 @@ namespace BARevitTools
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
+                    this.adminFamiliesSRCPButton.Checked = false;
+                    this.adminFamiliesSRCPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesDFB:
                     this.adminFamiliesDFBLayoutPanel.Visible = true;
@@ -338,9 +344,26 @@ namespace BARevitTools
                     this.adminFamiliesBRPLayoutPanel.Visible = false;
                     this.adminFamiliesBRPButton.Checked = false;
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
+                    this.adminFamiliesSRCPButton.Checked = false;
+                    this.adminFamiliesSRCPLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesUFVP:
                     this.adminFamiliesUFVPLayoutPanel.Visible = true;
+                    this.adminFamiliesDFBLayoutPanel.Visible = false;
+                    this.adminFamiliesDFBButton.Checked = false;
+                    this.adminFamiliesUFLayoutPanel.Visible = false;
+                    this.adminFamiliesUFButton.Checked = false;
+                    this.adminFamiliesBAPLayoutPanel.Visible = false;
+                    this.adminFamiliesBAPButton.Checked = false;
+                    this.adminFamiliesBRPLayoutPanel.Visible = false;
+                    this.adminFamiliesBRPButton.Checked = false;
+                    this.adminFamiliesSRCPButton.Checked = false;
+                    this.adminFamiliesSRCPLayoutPanel.Visible = false;
+                    break;
+                case ReferencedSwitchCaseIds.adminFamiliesSRCP:
+                    this.adminFamiliesSRCPButton.Checked = true;
+                    this.adminFamiliesSRCPLayoutPanel.Visible = true;
+                    this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
                     this.adminFamiliesUFLayoutPanel.Visible = false;
@@ -2352,7 +2375,7 @@ namespace BARevitTools
         #endregion qaqcRLS
 
         #region qaqcRFSP   
-        public string qaqcRFSPFamilyFile = String.Empty;
+        public List<string> qaqcRFSPFamilyFiles = new List<string>();
         private void QaqcRFSPButton_Click(object sender, EventArgs e)
         {
             BARevitTools.Application.thisApp.newMainUi.qaqcRFSPParametersListBox.Items.Clear();
@@ -2360,9 +2383,10 @@ namespace BARevitTools
         }
         private void QaqcRFSPSelectFamilyButton_Click(object sender, EventArgs e)
         {
-            qaqcRFSPFamilyFile = RVTOperations.GetFamilyFile();
+            string directory = GeneralOperations.GetDirectory();
+            qaqcRFSPFamilyFiles = GeneralOperations.GetAllRvtFamilies(directory,false);
             BARevitTools.Application.thisApp.newMainUi.qaqcRFSPParametersListBox.Items.Clear();
-            BARevitTools.Application.thisApp.newMainUi.qaqcRFSPSFamilyLabel.Text = Path.GetFileNameWithoutExtension(qaqcRFSPFamilyFile);
+            BARevitTools.Application.thisApp.newMainUi.qaqcRFSPSFamilyLabel.Text = directory;
         }
         private void QaqcRFSPRunButton_Click(object sender, EventArgs e)
         {
@@ -3465,9 +3489,38 @@ namespace BARevitTools
         }
         #endregion adminFamiliesUFVP
 
+        #region adminFamiliesSRCP
+        private void AdminFamiliesSRCP_Click(object sender, EventArgs e)
+        {
+            adminFamiliesSRCPDirectoryTextBox.Text = "";
+            adminFamiliesSRCPListBox.Items.Clear();
+            SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesSRCP);
+            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesSRCPguid, adminFamiliesSRCPButton.Text, Environment.UserName.ToString(), DateTime.Now);
+            SqlConnection newConnection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
+        }
+
+        private void AdminFamiliesSRCPSelectDirectoryButton_Click(object sender, EventArgs e)
+        {
+            adminFamiliesSRCPDirectoryTextBox.Text = GeneralOperations.GetDirectory();
+        }
+
+        private void AdminFamiliesSRCPRunButton_Click(object sender, EventArgs e)
+        {
+            if (adminFamiliesSRCPDirectoryTextBox.Text == "")
+            {
+                MessageBox.Show("Please select a directory");
+            }
+            else
+            {
+                m_ExEvent.Raise();
+                MakeRequest(RequestId.adminFamiliesSRCP);
+            }
+        }
+        #endregion adminFamiliesSRCP
+
         private void OptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Need something for the options when they are done.
-        }
+        }        
     }
 }

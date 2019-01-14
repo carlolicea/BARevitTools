@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.Events;
 using RVTDocument = Autodesk.Revit.DB.Document;
 using Autodesk.Revit.DB.Architecture;
 using Autodesk.Revit.UI;
@@ -1293,6 +1294,61 @@ namespace BARevitTools
             source = FamilySource.Family;
             overwriteParameterValues = true;
             return true;
+        }
+    }
+
+    public class RVTFailuresProcessor
+    {
+        //
+        //This is the default error/warning message handler for when they occur
+        public static void OnFailuresProcessing(object sender, FailuresProcessingEventArgs e)
+        {
+            //Get the FailuresAccessor
+            FailuresAccessor failuresAccessor = e.GetFailuresAccessor();
+            //Get all messages in the FailuresAccessor
+            IList<FailureMessageAccessor> fmas = failuresAccessor.GetFailureMessages();
+            //If there are no failures, just continue
+            if (fmas.Count == 0)
+            {
+                e.SetProcessingResult(FailureProcessingResult.Continue);
+            }
+            //Otherwwise, evaluate the severity of the failure messages
+            else
+            {
+                //Cycle through each failure message
+                foreach (FailureMessageAccessor fma in fmas)
+                {                    
+                    try
+                    {
+                        failuresAccessor.DeleteWarning(fma);
+                    }
+                    catch
+                    {
+                        failuresAccessor.ResolveFailure(fma);
+                    }                    
+                }
+            }
+        }
+    }
+
+    public class RVTFailuresPreprocessor : IFailuresPreprocessor
+    {
+        public FailureProcessingResult PreprocessFailures(FailuresAccessor fa)
+        {
+            IList<FailureMessageAccessor> fmas = fa.GetFailureMessages();
+            //Cycle through each failure message
+            foreach (FailureMessageAccessor fma in fmas)
+            {
+                try
+                {
+                    fa.DeleteWarning(fma);
+                }
+                catch
+                {
+                    fa.ResolveFailure(fma);
+                }                
+            }
+            return FailureProcessingResult.Continue;
         }
     }
 }

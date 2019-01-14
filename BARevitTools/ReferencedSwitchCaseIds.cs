@@ -10,7 +10,7 @@ namespace BARevitTools
     {
         //
         //The current last number used for switch case IDs
-        private const int currentnumber = 038;
+        private const int currentnumber = 039;
 
         //Multicategory Create Family From Excel
         public const int multiCatCFFE1 = 001;
@@ -114,6 +114,8 @@ namespace BARevitTools
         //Admin Update Family Version Parameter
         public const int adminFamiliesUFVP = 037;
 
+        //Admin Set Room Calculation Point
+        public const int adminFamiliesSRCP = 039;
         
     }
 }

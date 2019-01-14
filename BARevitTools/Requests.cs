@@ -64,6 +64,7 @@ namespace BARevitTools
         adminFamiliesBAP = ReferencedSwitchCaseIds.adminFamiliesBAP,
         adminFamiliesBRP = ReferencedSwitchCaseIds.adminFamiliesBRP,
         adminFamiliesUFVP = ReferencedSwitchCaseIds.adminFamiliesUFVP,
+        adminFamiliesSRCP = ReferencedSwitchCaseIds.adminFamiliesSRCP,
 
         materialsCMSLoadFamily = ReferencedSwitchCaseIds.materialsCMSLoadFamily,
     }

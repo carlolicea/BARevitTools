@@ -25,7 +25,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("tableau\\\\sqlexpress,1433")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DPM146\\SQLEXPRESS")]
         public string SqlServerName {
             get {
                 return ((string)(this["SqlServerName"]));
@@ -34,7 +34,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("db_BARevitTools")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DPA_BIM_Data")]
         public string SqlBARevitToolsDbName {
             get {
                 return ((string)(this["SqlBARevitToolsDbName"]));
@@ -52,7 +52,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Boulder4747")]
+        [global::System.Configuration.DefaultSettingValueAttribute("T3kZ!lla")]
         public string SqlServerPwd {
             get {
                 return ((string)(this["SqlServerPwd"]));
@@ -97,7 +97,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("babim")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DPA_BIM_Data")]
         public string SqlBABimDbName {
             get {
                 return ((string)(this["SqlBABimDbName"]));
@@ -143,7 +143,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("BARevitFamilies2018")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DPARevitFamilies2018")]
         public string SqlBARevitFamiliesDataTable {
             get {
                 return ((string)(this["SqlBARevitFamiliesDataTable"]));

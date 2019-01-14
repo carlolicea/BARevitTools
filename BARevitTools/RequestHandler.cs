@@ -148,6 +148,9 @@ namespace BARevitTools
                     case RequestId.adminFamiliesUFVP:
                         ToolRequests.AdminFamiliesUFVPRequest adminFamiliesUFVPRequest = new ToolRequests.AdminFamiliesUFVPRequest(uiApp, "Update Family Version Parameter");
                         break;
+                    case RequestId.adminFamiliesSRCP:
+                        ToolRequests.AdminFamiliesSRCPRequest adminFamiliesSRCPRequest = new ToolRequests.AdminFamiliesSRCPRequest(uiApp, "Set Room Calculation Point");
+                        break;
                     default:
                         break;
                 }

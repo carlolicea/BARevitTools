@@ -156,6 +156,7 @@
     <Compile Include="ToolRequests\AdminFamiliesBAPRequest.cs" />
     <Compile Include="ToolRequests\AdminFamiliesBRPRequest.cs" />
     <Compile Include="ToolRequests\AdminFamiliesUFRequest.cs" />
+    <Compile Include="ToolRequests\AdminFamiliesSRCPRequest.cs" />
     <Compile Include="ToolRequests\AdminFamiliesUFVPRequest.cs" />
     <Compile Include="ToolRequests\AllCatCFFE1Request.cs" />
     <Compile Include="ToolRequests\AllCatCFFE2Request.cs" />
