@@ -3512,6 +3512,7 @@ namespace BARevitTools
             }
             else
             {
+                adminFamiliesSRCPListBox.Items.Clear();
                 m_ExEvent.Raise();
                 MakeRequest(RequestId.adminFamiliesSRCP);
             }

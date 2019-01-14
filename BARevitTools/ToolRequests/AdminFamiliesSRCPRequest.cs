@@ -45,17 +45,27 @@ namespace BARevitTools.ToolRequests
                     {
                         try
                         {
-                            rcp.Set(1);
+                            using (Transaction t1 = new Transaction(famDoc, "SetRoomCalculationPoint"))
+                            {
+                                t1.Start();
+                                rcp.Set(1);
+                                t1.Commit();
+                            }                                
                             uiForm.adminFamiliesSRCPListBox.Items.Add(famDoc.Title.Replace(".rfa", "") + ": Updated");
                         }
-                        catch
+                        catch(Exception e)
                         {
                             uiForm.adminFamiliesSRCPListBox.Items.Add(famDoc.Title.Replace(".rfa", "") + ": FAILED");
                         }                       
                     }
+                    else
+                    {
+                        uiForm.adminFamiliesSRCPListBox.Items.Add(famDoc.Title.Replace(".rfa", "") + ": Ignored");
+                    }
                     RVTOperations.SaveRevitFile(uiApp, famDoc, true);
                 }                
-            }            
+            }
+            GeneralOperations.CleanRfaBackups(uiForm.adminFamiliesSRCPDirectoryTextBox.Text);
         }
-    }
+    }        
 }
