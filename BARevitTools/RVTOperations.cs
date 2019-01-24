@@ -641,8 +641,9 @@ namespace BARevitTools
                 {
                     doc = uiApp.Application.OpenDocumentFile(filePath);
                 }
-                catch
+                catch (Exception e)
                 {
+                    MessageBox.Show(e.ToString());
                     MessageBox.Show(string.Format("{0} is a Revit file, but could not be opened", fileName));
                 }
             }

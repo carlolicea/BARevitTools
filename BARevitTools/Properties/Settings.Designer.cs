@@ -25,7 +25,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DPM146\\SQLEXPRESS")]
+        [global::System.Configuration.DefaultSettingValueAttribute("tableau\\\\sqlexpress,1433")]
         public string SqlServerName {
             get {
                 return ((string)(this["SqlServerName"]));
@@ -34,7 +34,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DPA_BIM_Data")]
+        [global::System.Configuration.DefaultSettingValueAttribute("db_BARevitTools")]
         public string SqlBARevitToolsDbName {
             get {
                 return ((string)(this["SqlBARevitToolsDbName"]));
@@ -52,7 +52,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("T3kZ!lla")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Boulder4747")]
         public string SqlServerPwd {
             get {
                 return ((string)(this["SqlServerPwd"]));
@@ -61,7 +61,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Carlo Licea,CLicea")]
+        [global::System.Configuration.DefaultSettingValueAttribute("mzabritski,administrator,kfronczak,enightingale,mwhitcomb")]
         public string BARTBAAdminUsers {
             get {
                 return ((string)(this["BARTBAAdminUsers"]));
@@ -97,7 +97,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DPA_BIM_Data")]
+        [global::System.Configuration.DefaultSettingValueAttribute("babim")]
         public string SqlBABimDbName {
             get {
                 return ((string)(this["SqlBABimDbName"]));
@@ -143,7 +143,7 @@ namespace BARevitTools.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DPARevitFamilies2018")]
+        [global::System.Configuration.DefaultSettingValueAttribute("BARevitFamilies2018")]
         public string SqlBARevitFamiliesDataTable {
             get {
                 return ((string)(this["SqlBARevitFamiliesDataTable"]));
