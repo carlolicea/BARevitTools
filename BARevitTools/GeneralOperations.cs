@@ -287,6 +287,20 @@ namespace BARevitTools
             }
             return file;
         }
+        public static string GetCSVFile()
+        {
+            string file = "";
+            OpenFileDialog fileDialog = new OpenFileDialog
+            {
+                Filter = "CSV File (*.csv)|*csv"
+            };
+            fileDialog.ShowDialog();
+            if (fileDialog.FileName.ToString() != "")
+            {
+                file = fileDialog.FileName;
+            }
+            return file;
+        }
         public static string GetFile()
         {
             string file = "";

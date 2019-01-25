@@ -43,7 +43,7 @@ namespace BARevitTools.ToolRequests
             {
                 //Save out the family to use
                 RVTDocument tempFamDoc = doc.EditFamily(familyToUse);
-                RVTOperations.SaveRevitFile(uiApp, tempFamDoc, @"C:\Temp\" + tempFamDoc.Title, true);
+                RVTOperations.SaveRevitFile(uiApp, tempFamDoc, @"C:\Temp\" + Path.GetFileName(Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule), true);
 
                 //Open the family to use and get its FamilyManager
                 RVTDocument famDoc = RVTOperations.OpenRevitFile(uiApp, @"C:\Temp\" + Path.GetFileName(Properties.Settings.Default.RevitFamilyMaterialsCMSSymbIdMaterialSchedule));

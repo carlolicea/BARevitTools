@@ -75,6 +75,7 @@ namespace BARevitTools
             //Set the newSPUi to a new instance of SharedParameterUI, which only needs UIApplication. Do not show until needed
             newSPUi = new SharedParametersUI(uiApp);
 
+
             CadDriveIsAccessible = GeneralOperations.IsCadDriveAccessible();
             if (CadDriveIsAccessible == false)
             {

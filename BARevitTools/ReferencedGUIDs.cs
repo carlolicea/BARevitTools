@@ -18,6 +18,7 @@ namespace BARevitTools
         public static Guid roomsCDRTguid = new Guid("D8D589E5-B33D-4665-8960-6D33C56891E0");
         public static Guid materialsCMSguid = new Guid("6484BAAA-ADA8-4764-A12F-F5655B5D1661");
         public static Guid materialsAMLguid = new Guid("36578F1F-F23B-492E-B6E4-4238125B6FB1");
+        public static Guid materialsCMguid = new Guid("0320D6F7-2349-45BA-BA7D-3C49EDD04AD3");
         public static Guid wallsMPWguid = new Guid("55BF1CF4-9F80-412E-AC6C-B250D987419D");
         public static Guid wallsDPguid = new Guid("AA91C96C-492D-45EF-AA9E-02143FACD9E7");
         public static Guid sheetsCSLguid = new Guid("538221B6-A6ED-4302-9193-54E10863EA10");

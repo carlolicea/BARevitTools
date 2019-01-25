@@ -32,6 +32,7 @@ namespace BARevitTools
         materialsCMS = ReferencedSwitchCaseIds.materialsCMS,
         materialsAML = ReferencedSwitchCaseIds.materialsAML,
         materialsAMLPalette = ReferencedSwitchCaseIds.materialsAMLPalette,
+        materialsCM = ReferencedSwitchCaseIds.materialsCM,
         roomsSRNN = ReferencedSwitchCaseIds.roomsSRNN,
         roomsCDRT = ReferencedSwitchCaseIds.roomsCDRT,
         wallsMPW = ReferencedSwitchCaseIds.wallsMPW,

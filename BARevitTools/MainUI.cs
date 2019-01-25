@@ -125,10 +125,22 @@ namespace BARevitTools
                     this.materialsCMSButton.Checked = true;
                     this.materialsAMLLayoutPanel.Visible = false;
                     this.materialsAMLButton.Checked = false;
+                    this.materialsCMButton.Checked = false;
+                    this.materialsCMLayoutPanel.Visible = false;
                     break;
                 case ReferencedSwitchCaseIds.materialsAML:
                     this.materialsAMLLayoutPanel.Visible = true;
                     this.materialsAMLButton.Checked = true;
+                    this.materialsCMSButton.Checked = false;
+                    this.materialsCMSExcelLayoutPanel.Visible = false;
+                    this.materialsCMButton.Checked = false;
+                    this.materialsCMLayoutPanel.Visible = false;
+                    break;
+                case ReferencedSwitchCaseIds.materialsCM:
+                    this.materialsCMButton.Checked = true;
+                    this.materialsCMLayoutPanel.Visible = true;
+                    this.materialsAMLLayoutPanel.Visible = false;
+                    this.materialsAMLButton.Checked = false;
                     this.materialsCMSButton.Checked = false;
                     this.materialsCMSExcelLayoutPanel.Visible = false;
                     break;
@@ -1192,6 +1204,101 @@ namespace BARevitTools
             MakeRequest(RequestId.materialsAMLPalette);
         }
         #endregion materialsAML
+
+        #region materialsCM
+        public DataTable materialsCMDataTable = null;
+        private void MaterialsCMButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = BARevitTools.Application.thisApp.newMainUi;
+            GeneralOperations.ResetDataGridView(uiForm.materialsCMDataGridView);
+            SwitchActivePanel(ReferencedSwitchCaseIds.materialsCM);
+            DatabaseOperations.CollectUserInputData(ReferencedGuids.materialsCMguid, materialsCMButton.Text, Environment.UserName.ToString(), DateTime.Now);
+        }
+        private void MaterialsCMSaveDirectoryButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            uiForm.materialsCMSaveDirectoryTextBox.Text =  GeneralOperations.GetDirectory();
+            uiForm.Update();            
+
+            if(uiForm.materialsCMSaveDirectoryTextBox.Text !="")
+            {
+                GeneralOperations.ResetDataGridView(uiForm.materialsCMDataGridView);
+                RVTDocument doc = uiApp.ActiveUIDocument.Document;
+
+                materialsCMDataTable = new DataTable();
+                materialsCMDataTable.Columns.Add("Id", typeof(Int32));
+                materialsCMDataTable.Columns.Add("Name", typeof(String));
+                materialsCMDataTable.Columns.Add("Description", typeof(String));
+                materialsCMDataTable.Columns.Add("Class", typeof(String));
+                materialsCMDataTable.Columns.Add("Comments", typeof(String));
+                materialsCMDataTable.Columns.Add("Mark", typeof(String));
+
+                var materials = new FilteredElementCollector(doc).OfClass(typeof(Material)).ToElements();
+                foreach (Material material in materials)
+                {
+                    string materialDescription = "";
+                    try
+                    {
+                        materialDescription = material.get_Parameter(BuiltInParameter.ALL_MODEL_DESCRIPTION).AsString();
+                    }
+                    catch { ; }
+
+                    string materialClass = "";
+                    try
+                    {
+                        materialClass = material.MaterialClass;
+                    }
+                    catch { ; }
+
+                    string materialComments = "";
+                    try
+                    {
+                        materialComments = material.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).AsString();
+                    }
+                    catch { ; }
+
+                    string materialMark = "";
+                    try
+                    {
+                        materialMark = material.get_Parameter(BuiltInParameter.ALL_MODEL_MARK).AsString();
+                    }
+                    catch { ; }
+                    
+                    DataRow row = materialsCMDataTable.NewRow();
+                    row["Id"] = material.Id.IntegerValue;
+                    row["Name"] = material.Name;
+                    row["Description"] = materialDescription;
+                    row["Class"] = materialClass;
+                    row["Comments"] = materialComments;
+                    row["Mark"] = materialMark;
+
+                    materialsCMDataTable.Rows.Add(row);
+                }
+                ExcelOperations.DataTableToExcel(uiForm.materialsCMSaveDirectoryTextBox.Text,materialsCMDataTable);
+                MessageBox.Show(String.Format("Project materials CSV was exported to {0}", uiForm.materialsCMSaveDirectoryTextBox.Text));
+            }
+        }
+        private void MaterialsCMImportButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            string file = GeneralOperations.GetExcelFile();
+            if (file != "")
+            {
+                DataTable dt = ExcelOperations.ExcelTableToDataTable(file, true);                
+                DataGridView dgv = uiForm.materialsCMDataGridView;
+                GeneralOperations.BindDataSourceToDataGridView(dgv, dt);
+                dgv.RowHeadersVisible = false;
+                dgv.AllowUserToAddRows = false;
+                dgv.ReadOnly = true;
+                uiForm.Update();
+            }
+        }
+        private void materialsCMRunButton_Click(object sender, EventArgs e)
+        {
+            m_ExEvent.Raise();
+            MakeRequest(RequestId.materialsCM);
+        }
+        #endregion materialsCM
 
         #region roomsSRNN
         private void RoomsSRNNButton_Click(object sender, EventArgs e)
@@ -3522,6 +3629,8 @@ namespace BARevitTools
         private void OptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Need something for the options when they are done.
-        }        
+        }
+
+        
     }
 }

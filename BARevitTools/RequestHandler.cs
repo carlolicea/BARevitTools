@@ -64,6 +64,9 @@ namespace BARevitTools
                     case RequestId.materialsAMLPalette:
                         ToolRequests.MaterialsAMLPaletteRequest materialsAMLPaletteRequest = new ToolRequests.MaterialsAMLPaletteRequest(uiApp, "Accent Material Lines Palette");
                         break;
+                    case RequestId.materialsCM:
+                        ToolRequests.MaterialsCMRequest materialsCMRequest = new ToolRequests.MaterialsCMRequest(uiApp, "Create Materials");
+                        break;
                     case RequestId.roomsSRNN:
                         ToolRequests.RoomsSRNNRequest roomsSRNNRequest = new ToolRequests.RoomsSRNNRequest(uiApp, "Swap Room Names and Numbers");
                         break;

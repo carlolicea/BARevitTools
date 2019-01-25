@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>BARevitTools</RootNamespace>
     <AssemblyName>BARevitTools</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -167,6 +167,7 @@
     <Compile Include="ToolRequests\MaterialsCMSLoadFamilyRequest.cs" />
     <Compile Include="ToolRequests\MaterialsAMLPaletteRequest.cs" />
     <Compile Include="ToolRequests\MaterialsAMLRequest.cs" />
+    <Compile Include="ToolRequests\MaterialsCMRequest.cs" />
     <Compile Include="ToolRequests\MaterialsCMSRequest.cs" />
     <Compile Include="ToolRequests\MiscEDVRequest.cs" />
     <Compile Include="ToolRequests\QaqcCSVNRequest.cs" />

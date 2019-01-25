@@ -119,6 +119,8 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesSRCPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesSRCPControlsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesSRCPDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.adminFamiliesSRCPUseDateCheckBox = new System.Windows.Forms.CheckBox();
             this.adminFamiliesSRCPRunButton = new System.Windows.Forms.Button();
             this.adminFamiliesSRCPDirectoryTextBox = new System.Windows.Forms.TextBox();
             this.adminFamiliesSRCPSelectDirectoryButton = new System.Windows.Forms.Button();
@@ -278,7 +280,21 @@ namespace BARevitTools
             this.materialsCMSButton = new System.Windows.Forms.ToolStripButton();
             this.materialsToolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.materialsAMLButton = new System.Windows.Forms.ToolStripButton();
+            this.materialsToolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.materialsCMButton = new System.Windows.Forms.ToolStripButton();
             this.materialsToolsPanel = new System.Windows.Forms.Panel();
+            this.materialsCMLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.materialsCMSaveTemplatePanel = new System.Windows.Forms.Panel();
+            this.materialsCMSaveDirectoryTextBox = new System.Windows.Forms.TextBox();
+            this.materialsCMSaveDirectoryButton = new System.Windows.Forms.Button();
+            this.materialsCMSaveDirectoryLabel = new System.Windows.Forms.Label();
+            this.materialsCMImportPanel = new System.Windows.Forms.Panel();
+            this.materialsCMImportButton = new System.Windows.Forms.Button();
+            this.materialsCMImportLabel = new System.Windows.Forms.Label();
+            this.materialsCMRunPanel = new System.Windows.Forms.Panel();
+            this.materialsCMProgressBar = new System.Windows.Forms.ProgressBar();
+            this.materialsCMRunButton = new System.Windows.Forms.Button();
+            this.materialsCMDataGridView = new System.Windows.Forms.DataGridView();
             this.materialsCMSExcelLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.materialsCMSExcelExportPanel = new System.Windows.Forms.Panel();
             this.materialsCMSExcelCreateSpreadsheetButton = new System.Windows.Forms.Button();
@@ -581,8 +597,6 @@ namespace BARevitTools
             this.familiesBAPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
             this.dataFamiliesBRPParametersContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataFamiliesBRPParametersRowDeleteTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminFamiliesSRCPUseDateCheckBox = new System.Windows.Forms.CheckBox();
-            this.adminFamiliesSRCPDatePicker = new System.Windows.Forms.DateTimePicker();
             adminTab = new System.Windows.Forms.TabPage();
             roomsToolStrip = new System.Windows.Forms.ToolStrip();
             adminTab.SuspendLayout();
@@ -710,6 +724,11 @@ namespace BARevitTools
             this.materialsLayoutPanel.SuspendLayout();
             this.materialsToolStrip.SuspendLayout();
             this.materialsToolsPanel.SuspendLayout();
+            this.materialsCMLayoutPanel.SuspendLayout();
+            this.materialsCMSaveTemplatePanel.SuspendLayout();
+            this.materialsCMImportPanel.SuspendLayout();
+            this.materialsCMRunPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.materialsCMDataGridView)).BeginInit();
             this.materialsCMSExcelLayoutPanel.SuspendLayout();
             this.materialsCMSExcelExportPanel.SuspendLayout();
             this.materialsCMSExcelRunPanel.SuspendLayout();
@@ -861,7 +880,6 @@ namespace BARevitTools
             this.adminManagementTabControl.SelectedIndex = 0;
             this.adminManagementTabControl.Size = new System.Drawing.Size(728, 431);
             this.adminManagementTabControl.TabIndex = 0;
-            this.adminManagementTabControl.Click += new System.EventHandler(this.AllowBIMManagementTab);
             // 
             // adminAboutTab
             // 
@@ -875,7 +893,6 @@ namespace BARevitTools
             this.adminAboutTab.Size = new System.Drawing.Size(720, 402);
             this.adminAboutTab.TabIndex = 3;
             this.adminAboutTab.Text = "About";
-            this.adminAboutTab.Click += new System.EventHandler(this.AllowBIMManagementTab);
             // 
             // adminAboutReservedLabel
             // 
@@ -1748,7 +1765,7 @@ namespace BARevitTools
             // 
             this.adminFamiliesBAPButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesBAPIcon;
             this.adminFamiliesBAPButton.Name = "adminFamiliesBAPButton";
-            this.adminFamiliesBAPButton.Size = new System.Drawing.Size(237, 38);
+            this.adminFamiliesBAPButton.Size = new System.Drawing.Size(221, 22);
             this.adminFamiliesBAPButton.Text = "Bulk Add Parameters";
             this.adminFamiliesBAPButton.Click += new System.EventHandler(this.AdminFamiliesBAPButton_Click);
             // 
@@ -1756,7 +1773,7 @@ namespace BARevitTools
             // 
             this.adminFamiliesBRPButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesBRPIcon;
             this.adminFamiliesBRPButton.Name = "adminFamiliesBRPButton";
-            this.adminFamiliesBRPButton.Size = new System.Drawing.Size(237, 38);
+            this.adminFamiliesBRPButton.Size = new System.Drawing.Size(221, 22);
             this.adminFamiliesBRPButton.Text = "Bulk Remove Parameters";
             this.adminFamiliesBRPButton.Click += new System.EventHandler(this.AdminFamiliesBRPButton_Click);
             // 
@@ -1764,7 +1781,7 @@ namespace BARevitTools
             // 
             this.bulkUpdatePublishVersionToolStripMenuItem.Image = global::BARevitTools.Properties.Resources.bimFamiliesUFVPIcon;
             this.bulkUpdatePublishVersionToolStripMenuItem.Name = "bulkUpdatePublishVersionToolStripMenuItem";
-            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(237, 38);
+            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.bulkUpdatePublishVersionToolStripMenuItem.Text = "Bulk Update Publish Version";
             this.bulkUpdatePublishVersionToolStripMenuItem.Click += new System.EventHandler(this.AdminFamiliesUFVPButton_Click);
             // 
@@ -1835,6 +1852,23 @@ namespace BARevitTools
             this.adminFamiliesSRCPLayoutPanel.SetRowSpan(this.adminFamiliesSRCPControlsPanel, 2);
             this.adminFamiliesSRCPControlsPanel.Size = new System.Drawing.Size(381, 339);
             this.adminFamiliesSRCPControlsPanel.TabIndex = 0;
+            // 
+            // adminFamiliesSRCPDatePicker
+            // 
+            this.adminFamiliesSRCPDatePicker.Location = new System.Drawing.Point(83, 45);
+            this.adminFamiliesSRCPDatePicker.Name = "adminFamiliesSRCPDatePicker";
+            this.adminFamiliesSRCPDatePicker.Size = new System.Drawing.Size(196, 20);
+            this.adminFamiliesSRCPDatePicker.TabIndex = 5;
+            // 
+            // adminFamiliesSRCPUseDateCheckBox
+            // 
+            this.adminFamiliesSRCPUseDateCheckBox.AutoSize = true;
+            this.adminFamiliesSRCPUseDateCheckBox.Location = new System.Drawing.Point(2, 48);
+            this.adminFamiliesSRCPUseDateCheckBox.Name = "adminFamiliesSRCPUseDateCheckBox";
+            this.adminFamiliesSRCPUseDateCheckBox.Size = new System.Drawing.Size(71, 17);
+            this.adminFamiliesSRCPUseDateCheckBox.TabIndex = 4;
+            this.adminFamiliesSRCPUseDateCheckBox.Text = "Use Date";
+            this.adminFamiliesSRCPUseDateCheckBox.UseVisualStyleBackColor = true;
             // 
             // adminFamiliesSRCPRunButton
             // 
@@ -2794,7 +2828,6 @@ namespace BARevitTools
             this.mainTabControl.SelectedIndex = 0;
             this.mainTabControl.Size = new System.Drawing.Size(763, 445);
             this.mainTabControl.TabIndex = 1;
-            this.mainTabControl.Click += new System.EventHandler(this.AllowBIMManagementTab);
             // 
             // aboutTab
             // 
@@ -3835,7 +3868,9 @@ namespace BARevitTools
             this.materialsToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.materialsCMSButton,
             this.materialsToolStripSeparator1,
-            this.materialsAMLButton});
+            this.materialsAMLButton,
+            this.materialsToolStripSeparator2,
+            this.materialsCMButton});
             this.materialsToolStrip.Location = new System.Drawing.Point(0, 0);
             this.materialsToolStrip.Name = "materialsToolStrip";
             this.materialsToolStrip.Size = new System.Drawing.Size(716, 53);
@@ -3876,8 +3911,25 @@ namespace BARevitTools
     "ls.";
             this.materialsAMLButton.Click += new System.EventHandler(this.MaterialsAMLButton_Click);
             // 
+            // materialsToolStripSeparator2
+            // 
+            this.materialsToolStripSeparator2.Name = "materialsToolStripSeparator2";
+            this.materialsToolStripSeparator2.Size = new System.Drawing.Size(6, 53);
+            // 
+            // materialsCMButton
+            // 
+            this.materialsCMButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.materialsCMButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.materialsCMButton.Name = "materialsCMButton";
+            this.materialsCMButton.Size = new System.Drawing.Size(96, 50);
+            this.materialsCMButton.Text = "Create Materials";
+            this.materialsCMButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.materialsCMButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.materialsCMButton.Click += new System.EventHandler(this.MaterialsCMButton_Click);
+            // 
             // materialsToolsPanel
             // 
+            this.materialsToolsPanel.Controls.Add(this.materialsCMLayoutPanel);
             this.materialsToolsPanel.Controls.Add(this.materialsCMSExcelLayoutPanel);
             this.materialsToolsPanel.Controls.Add(this.materialsAMLLayoutPanel);
             this.materialsToolsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3886,6 +3938,147 @@ namespace BARevitTools
             this.materialsToolsPanel.Name = "materialsToolsPanel";
             this.materialsToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.materialsToolsPanel.TabIndex = 1;
+            // 
+            // materialsCMLayoutPanel
+            // 
+            this.materialsCMLayoutPanel.ColumnCount = 1;
+            this.materialsCMLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.materialsCMLayoutPanel.Controls.Add(this.materialsCMSaveTemplatePanel, 0, 0);
+            this.materialsCMLayoutPanel.Controls.Add(this.materialsCMImportPanel, 0, 1);
+            this.materialsCMLayoutPanel.Controls.Add(this.materialsCMRunPanel, 0, 3);
+            this.materialsCMLayoutPanel.Controls.Add(this.materialsCMDataGridView, 0, 2);
+            this.materialsCMLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsCMLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.materialsCMLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.materialsCMLayoutPanel.Name = "materialsCMLayoutPanel";
+            this.materialsCMLayoutPanel.RowCount = 4;
+            this.materialsCMLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.materialsCMLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.materialsCMLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.materialsCMLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.materialsCMLayoutPanel.Size = new System.Drawing.Size(716, 345);
+            this.materialsCMLayoutPanel.TabIndex = 3;
+            this.materialsCMLayoutPanel.Visible = false;
+            // 
+            // materialsCMSaveTemplatePanel
+            // 
+            this.materialsCMSaveTemplatePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialsCMSaveTemplatePanel.Controls.Add(this.materialsCMSaveDirectoryTextBox);
+            this.materialsCMSaveTemplatePanel.Controls.Add(this.materialsCMSaveDirectoryButton);
+            this.materialsCMSaveTemplatePanel.Controls.Add(this.materialsCMSaveDirectoryLabel);
+            this.materialsCMSaveTemplatePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsCMSaveTemplatePanel.Location = new System.Drawing.Point(0, 0);
+            this.materialsCMSaveTemplatePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.materialsCMSaveTemplatePanel.Name = "materialsCMSaveTemplatePanel";
+            this.materialsCMSaveTemplatePanel.Size = new System.Drawing.Size(716, 30);
+            this.materialsCMSaveTemplatePanel.TabIndex = 0;
+            // 
+            // materialsCMSaveDirectoryTextBox
+            // 
+            this.materialsCMSaveDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialsCMSaveDirectoryTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.materialsCMSaveDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialsCMSaveDirectoryTextBox.Location = new System.Drawing.Point(185, 6);
+            this.materialsCMSaveDirectoryTextBox.Multiline = true;
+            this.materialsCMSaveDirectoryTextBox.Name = "materialsCMSaveDirectoryTextBox";
+            this.materialsCMSaveDirectoryTextBox.Size = new System.Drawing.Size(526, 20);
+            this.materialsCMSaveDirectoryTextBox.TabIndex = 2;
+            // 
+            // materialsCMSaveDirectoryButton
+            // 
+            this.materialsCMSaveDirectoryButton.Location = new System.Drawing.Point(104, 4);
+            this.materialsCMSaveDirectoryButton.Name = "materialsCMSaveDirectoryButton";
+            this.materialsCMSaveDirectoryButton.Size = new System.Drawing.Size(75, 23);
+            this.materialsCMSaveDirectoryButton.TabIndex = 1;
+            this.materialsCMSaveDirectoryButton.Text = "Select";
+            this.materialsCMSaveDirectoryButton.UseVisualStyleBackColor = true;
+            this.materialsCMSaveDirectoryButton.Click += new System.EventHandler(this.MaterialsCMSaveDirectoryButton_Click);
+            // 
+            // materialsCMSaveDirectoryLabel
+            // 
+            this.materialsCMSaveDirectoryLabel.AutoSize = true;
+            this.materialsCMSaveDirectoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialsCMSaveDirectoryLabel.Location = new System.Drawing.Point(3, 8);
+            this.materialsCMSaveDirectoryLabel.Name = "materialsCMSaveDirectoryLabel";
+            this.materialsCMSaveDirectoryLabel.Size = new System.Drawing.Size(95, 13);
+            this.materialsCMSaveDirectoryLabel.TabIndex = 0;
+            this.materialsCMSaveDirectoryLabel.Text = "Save Directory:";
+            // 
+            // materialsCMImportPanel
+            // 
+            this.materialsCMImportPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialsCMImportPanel.Controls.Add(this.materialsCMImportButton);
+            this.materialsCMImportPanel.Controls.Add(this.materialsCMImportLabel);
+            this.materialsCMImportPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsCMImportPanel.Location = new System.Drawing.Point(0, 30);
+            this.materialsCMImportPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.materialsCMImportPanel.Name = "materialsCMImportPanel";
+            this.materialsCMImportPanel.Size = new System.Drawing.Size(716, 30);
+            this.materialsCMImportPanel.TabIndex = 1;
+            // 
+            // materialsCMImportButton
+            // 
+            this.materialsCMImportButton.Location = new System.Drawing.Point(104, 3);
+            this.materialsCMImportButton.Name = "materialsCMImportButton";
+            this.materialsCMImportButton.Size = new System.Drawing.Size(75, 23);
+            this.materialsCMImportButton.TabIndex = 1;
+            this.materialsCMImportButton.Text = "Select";
+            this.materialsCMImportButton.UseVisualStyleBackColor = true;
+            this.materialsCMImportButton.Click += new System.EventHandler(this.MaterialsCMImportButton_Click);
+            // 
+            // materialsCMImportLabel
+            // 
+            this.materialsCMImportLabel.AutoSize = true;
+            this.materialsCMImportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialsCMImportLabel.Location = new System.Drawing.Point(3, 7);
+            this.materialsCMImportLabel.Name = "materialsCMImportLabel";
+            this.materialsCMImportLabel.Size = new System.Drawing.Size(77, 13);
+            this.materialsCMImportLabel.TabIndex = 0;
+            this.materialsCMImportLabel.Text = "Import From:";
+            // 
+            // materialsCMRunPanel
+            // 
+            this.materialsCMRunPanel.Controls.Add(this.materialsCMProgressBar);
+            this.materialsCMRunPanel.Controls.Add(this.materialsCMRunButton);
+            this.materialsCMRunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsCMRunPanel.Location = new System.Drawing.Point(0, 315);
+            this.materialsCMRunPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.materialsCMRunPanel.Name = "materialsCMRunPanel";
+            this.materialsCMRunPanel.Size = new System.Drawing.Size(716, 30);
+            this.materialsCMRunPanel.TabIndex = 2;
+            // 
+            // materialsCMProgressBar
+            // 
+            this.materialsCMProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialsCMProgressBar.Location = new System.Drawing.Point(84, 4);
+            this.materialsCMProgressBar.Name = "materialsCMProgressBar";
+            this.materialsCMProgressBar.Size = new System.Drawing.Size(629, 23);
+            this.materialsCMProgressBar.TabIndex = 2;
+            this.materialsCMProgressBar.Visible = false;
+            // 
+            // materialsCMRunButton
+            // 
+            this.materialsCMRunButton.Location = new System.Drawing.Point(3, 4);
+            this.materialsCMRunButton.Name = "materialsCMRunButton";
+            this.materialsCMRunButton.Size = new System.Drawing.Size(75, 23);
+            this.materialsCMRunButton.TabIndex = 1;
+            this.materialsCMRunButton.Text = "Run";
+            this.materialsCMRunButton.UseVisualStyleBackColor = true;
+            this.materialsCMRunButton.Click += new System.EventHandler(this.materialsCMRunButton_Click);
+            // 
+            // materialsCMDataGridView
+            // 
+            this.materialsCMDataGridView.AllowUserToAddRows = false;
+            this.materialsCMDataGridView.AllowUserToDeleteRows = false;
+            this.materialsCMDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.materialsCMDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsCMDataGridView.Location = new System.Drawing.Point(3, 63);
+            this.materialsCMDataGridView.Name = "materialsCMDataGridView";
+            this.materialsCMDataGridView.ReadOnly = true;
+            this.materialsCMDataGridView.Size = new System.Drawing.Size(710, 249);
+            this.materialsCMDataGridView.TabIndex = 3;
             // 
             // materialsCMSExcelLayoutPanel
             // 
@@ -7583,23 +7776,6 @@ namespace BARevitTools
             this.dataFamiliesBRPParametersRowDeleteTool.Text = "Delete";
             this.dataFamiliesBRPParametersRowDeleteTool.Click += new System.EventHandler(this.AdminFamiliesBRPParametersRowDeleteTool_Click);
             // 
-            // adminFamiliesSRCPUseDateCheckBox
-            // 
-            this.adminFamiliesSRCPUseDateCheckBox.AutoSize = true;
-            this.adminFamiliesSRCPUseDateCheckBox.Location = new System.Drawing.Point(2, 48);
-            this.adminFamiliesSRCPUseDateCheckBox.Name = "adminFamiliesSRCPUseDateCheckBox";
-            this.adminFamiliesSRCPUseDateCheckBox.Size = new System.Drawing.Size(71, 17);
-            this.adminFamiliesSRCPUseDateCheckBox.TabIndex = 4;
-            this.adminFamiliesSRCPUseDateCheckBox.Text = "Use Date";
-            this.adminFamiliesSRCPUseDateCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // adminFamiliesSRCPDatePicker
-            // 
-            this.adminFamiliesSRCPDatePicker.Location = new System.Drawing.Point(83, 45);
-            this.adminFamiliesSRCPDatePicker.Name = "adminFamiliesSRCPDatePicker";
-            this.adminFamiliesSRCPDatePicker.Size = new System.Drawing.Size(196, 20);
-            this.adminFamiliesSRCPDatePicker.TabIndex = 5;
-            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7776,6 +7952,13 @@ namespace BARevitTools
             this.materialsToolStrip.ResumeLayout(false);
             this.materialsToolStrip.PerformLayout();
             this.materialsToolsPanel.ResumeLayout(false);
+            this.materialsCMLayoutPanel.ResumeLayout(false);
+            this.materialsCMSaveTemplatePanel.ResumeLayout(false);
+            this.materialsCMSaveTemplatePanel.PerformLayout();
+            this.materialsCMImportPanel.ResumeLayout(false);
+            this.materialsCMImportPanel.PerformLayout();
+            this.materialsCMRunPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.materialsCMDataGridView)).EndInit();
             this.materialsCMSExcelLayoutPanel.ResumeLayout(false);
             this.materialsCMSExcelLayoutPanel.PerformLayout();
             this.materialsCMSExcelExportPanel.ResumeLayout(false);
@@ -8496,6 +8679,20 @@ namespace BARevitTools
         public ListBox adminFamiliesSRCPListBox;
         public DateTimePicker adminFamiliesSRCPDatePicker;
         public CheckBox adminFamiliesSRCPUseDateCheckBox;
+        private ToolStripSeparator materialsToolStripSeparator2;
+        private ToolStripButton materialsCMButton;
+        private TableLayoutPanel materialsCMLayoutPanel;
+        private Panel materialsCMSaveTemplatePanel;
+        public TextBox materialsCMSaveDirectoryTextBox;
+        private Button materialsCMSaveDirectoryButton;
+        private Label materialsCMSaveDirectoryLabel;
+        private Panel materialsCMImportPanel;
+        private Button materialsCMImportButton;
+        private Label materialsCMImportLabel;
+        private Panel materialsCMRunPanel;
+        public ProgressBar materialsCMProgressBar;
+        private Button materialsCMRunButton;
+        public DataGridView materialsCMDataGridView;
     }
 }
 
