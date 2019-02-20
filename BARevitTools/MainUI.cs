@@ -319,6 +319,8 @@ namespace BARevitTools
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     this.adminFamiliesSRCPButton.Checked = false;
                     this.adminFamiliesSRCPLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCButton.Checked = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesBAP:
                     this.adminFamiliesBAPLayoutPanel.Visible = true;
@@ -332,6 +334,8 @@ namespace BARevitTools
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     this.adminFamiliesSRCPButton.Checked = false;
                     this.adminFamiliesSRCPLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCButton.Checked = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesBRP:
                     this.adminFamiliesBRPLayoutPanel.Visible = true;
@@ -345,6 +349,8 @@ namespace BARevitTools
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     this.adminFamiliesSRCPButton.Checked = false;
                     this.adminFamiliesSRCPLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCButton.Checked = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesDFB:
                     this.adminFamiliesDFBLayoutPanel.Visible = true;
@@ -358,6 +364,8 @@ namespace BARevitTools
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     this.adminFamiliesSRCPButton.Checked = false;
                     this.adminFamiliesSRCPLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCButton.Checked = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesUFVP:
                     this.adminFamiliesUFVPLayoutPanel.Visible = true;
@@ -371,10 +379,29 @@ namespace BARevitTools
                     this.adminFamiliesBRPButton.Checked = false;
                     this.adminFamiliesSRCPButton.Checked = false;
                     this.adminFamiliesSRCPLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCButton.Checked = false;
                     break;
                 case ReferencedSwitchCaseIds.adminFamiliesSRCP:
                     this.adminFamiliesSRCPButton.Checked = true;
                     this.adminFamiliesSRCPLayoutPanel.Visible = true;
+                    this.adminFamiliesUFVPLayoutPanel.Visible = false;
+                    this.adminFamiliesDFBLayoutPanel.Visible = false;
+                    this.adminFamiliesDFBButton.Checked = false;
+                    this.adminFamiliesUFLayoutPanel.Visible = false;
+                    this.adminFamiliesUFButton.Checked = false;
+                    this.adminFamiliesBAPLayoutPanel.Visible = false;
+                    this.adminFamiliesBAPButton.Checked = false;
+                    this.adminFamiliesBRPLayoutPanel.Visible = false;
+                    this.adminFamiliesBRPButton.Checked = false;
+                    this.adminFamiliesLBCLayoutPanel.Visible = false;
+                    this.adminFamiliesLBCButton.Checked = false;
+                    break;
+                case ReferencedSwitchCaseIds.adminFamiliesLBC:
+                    this.adminFamiliesLBCLayoutPanel.Visible = true;
+                    this.adminFamiliesLBCButton.Checked = true;
+                    this.adminFamiliesSRCPButton.Checked = false;
+                    this.adminFamiliesSRCPLayoutPanel.Visible = false;
                     this.adminFamiliesUFVPLayoutPanel.Visible = false;
                     this.adminFamiliesDFBLayoutPanel.Visible = false;
                     this.adminFamiliesDFBButton.Checked = false;
@@ -390,7 +417,6 @@ namespace BARevitTools
             }
             #endregion Switch Cases for Panels
         }
-
         //
         // ABOUT TAB TOOLS
         //
@@ -1293,12 +1319,49 @@ namespace BARevitTools
                 uiForm.Update();
             }
         }
-        private void materialsCMRunButton_Click(object sender, EventArgs e)
+        private void MaterialsCMRunButton_Click(object sender, EventArgs e)
         {
             m_ExEvent.Raise();
             MakeRequest(RequestId.materialsCM);
         }
         #endregion materialsCM
+
+        #region materialsHPG
+        public List<Curve> materialsHPGCurves = null;
+        private void MaterialsHPGSelectDirectoryButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            string saveLocation = GeneralOperations.GetDirectory();
+            uiForm.materialsHPGSaveTextBox.Text = saveLocation;
+        }
+        private void MaterialsHPGSelectLinesButton_Click(object sender, EventArgs e)
+        {
+            materialsHPGCurves = RVTOperations.SelectLineElements(uiApp);            
+        }
+        private void MaterialsHPGRunButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            bool proceed = false;
+
+            if (uiForm.materialsHPGSaveTextBox.Text != "")
+            {proceed = true;}
+            else { MessageBox.Show("No save directory was selected"); proceed = false; }
+
+            if (uiForm.materialsHPGFileNameLabel.Text != "" && uiForm.materialsHPGFileNameLabel.Text != "<File Name>")
+            {proceed = true;}
+            else{ MessageBox.Show("No file name was set"); proceed = false; }
+
+            if (materialsHPGCurves.Count > 0)
+            {proceed = true;}
+            else{ MessageBox.Show("No lines have been selected"); proceed = false; }
+            
+            if(proceed == true)
+            { 
+                m_ExEvent.Raise();
+                MakeRequest(RequestId.materialsHPG);
+            }          
+        }
+        #endregion materialsHPG
 
         #region roomsSRNN
         private void RoomsSRNNButton_Click(object sender, EventArgs e)
@@ -3565,7 +3628,7 @@ namespace BARevitTools
             uiForm.adminFamiliesUFVPDirectoryTextBox.Text = Properties.Settings.Default.RevitBAFamilyLibraryPath;
 
             SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesUFVP);
-            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesUFVPguid, bulkUpdatePublishVersionToolStripMenuItem.Text, Environment.UserName.ToString(), DateTime.Now);
+            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesUFVPguid, adminFamilieBUPFButton.Text, Environment.UserName.ToString(), DateTime.Now);
 
         }
         private void AdminFamiliesUFVPRunButton_Click(object sender, EventArgs e)
@@ -3605,12 +3668,10 @@ namespace BARevitTools
             DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesSRCPguid, adminFamiliesSRCPButton.Text, Environment.UserName.ToString(), DateTime.Now);
             SqlConnection newConnection = DatabaseOperations.SqlOpenConnection(DatabaseOperations.adminDataSqlConnectionString);
         }
-
         private void AdminFamiliesSRCPSelectDirectoryButton_Click(object sender, EventArgs e)
         {
             adminFamiliesSRCPDirectoryTextBox.Text = GeneralOperations.GetDirectory();
         }
-
         private void AdminFamiliesSRCPRunButton_Click(object sender, EventArgs e)
         {
             if (adminFamiliesSRCPDirectoryTextBox.Text == "")
@@ -3626,11 +3687,47 @@ namespace BARevitTools
         }
         #endregion adminFamiliesSRCP
 
+        #region adminFamiliesLBC
+        private void AdminFamiliesLBCButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            SwitchActivePanel(ReferencedSwitchCaseIds.adminFamiliesLBC);
+            DatabaseOperations.CollectUserInputData(ReferencedGuids.adminFamiliesLBCguid, adminFamiliesLBCButton.Text, Environment.UserName.ToString(), DateTime.Now);
+        }
+        private void AdminFamiliesLBCSelectDirectoryButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            uiForm.adminFamiliesLBCDirectoryTextBox.Text = GeneralOperations.GetDirectory();
+            uiForm.Update();
+        }
+        private void AdminFamiliesLBCSaveDirectoryButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            uiForm.adminFamiliesLBCSaveDirectoryTextBox.Text = GeneralOperations.GetDirectory();
+            uiForm.Update();
+        }
+        private void AdminFamiliesLBCRunButton_Click(object sender, EventArgs e)
+        {
+            MainUI uiForm = Application.thisApp.newMainUi;
+            if(uiForm.adminFamiliesLBCDirectoryTextBox.Text == "")
+            {
+                MessageBox.Show("No directory of families was selected. Please select the directory that holds the families to sort.");
+            }
+            else if (uiForm.adminFamiliesLBCSaveDirectoryTextBox.Text == "")
+            {
+                MessageBox.Show("No directory for where to move the families was selected. Please select the directory where families will be sorted.");
+            }
+            else
+            {
+                m_ExEvent.Raise();
+                MakeRequest(RequestId.adminFamiliesLBC);
+            }            
+        }
+        #endregion adminFamiliesLBC
+
         private void OptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Need something for the options when they are done.
-        }
-
-        
+        }        
     }
 }

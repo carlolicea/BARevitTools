@@ -53,7 +53,7 @@ namespace BARevitTools.ToolRequests
                             }                                
                             uiForm.adminFamiliesSRCPListBox.Items.Add(famDoc.Title.Replace(".rfa", "") + ": Updated");
                         }
-                        catch(Exception e)
+                        catch
                         {
                             uiForm.adminFamiliesSRCPListBox.Items.Add(famDoc.Title.Replace(".rfa", "") + ": FAILED");
                         }                       

@@ -601,13 +601,24 @@ namespace BARevitTools
                 try
                 {
                     BasicFileInfo rvtInfo = BasicFileInfo.Extract(filePath);
-                    string rvtVersion = rvtInfo.SavedInVersion.ToString();
+                    string rvtVersion = rvtInfo.Format.ToString();
                     return rvtVersion;
                 }
                 catch
                 {
-                    string fileName = GeneralOperations.GetFileName(filePath);
-                    return string.Empty;
+                    try
+                    {
+                        BasicFileInfo rvtInfo = BasicFileInfo.Extract(filePath);
+#pragma warning disable CS0618 // Type or member is obsolete
+                        string rvtVersion = rvtInfo.SavedInVersion.ToString();
+#pragma warning restore CS0618 // Type or member is obsolete
+                        return rvtVersion;
+                    }
+                    catch
+                    {
+                        string fileName = GeneralOperations.GetFileName(filePath);
+                        return string.Empty;
+                    }                    
                 }
             }
             else { return string.Empty; }
@@ -641,10 +652,11 @@ namespace BARevitTools
                 {
                     doc = uiApp.Application.OpenDocumentFile(filePath);
                 }
-                catch (Exception e)
+                catch //(Exception e)
                 {
-                    MessageBox.Show(e.ToString());
-                    MessageBox.Show(string.Format("{0} is a Revit file, but could not be opened", fileName));
+                    ;
+                    //MessageBox.Show(e.ToString());
+                    //MessageBox.Show(string.Format("{0} is a Revit file, but could not be opened", fileName));                    
                 }
             }
             else
@@ -901,6 +913,14 @@ namespace BARevitTools
             {
                 return null;
             }
+        }
+        public static List<Curve> SelectLineElements(UIApplication uiApp)
+        {
+            UIDocument uidoc = uiApp.ActiveUIDocument;
+            List<Curve> selectedElements = new List<Curve>();
+            ISelectionFilter selectionFilter = new CurveSelectionFilter();
+            List <Curve> curveList = uidoc.Selection.PickElementsByRectangle(selectionFilter,"Select Line Elements") as List<Curve>;
+            return curveList;
         }
         public static void SetFamilyParameterValue(FamilyManager famMan, FamilyParameter param, ParameterType paramType, string paramStorageTypeString, object paramValue, bool convertInchestoFeet)
         {
@@ -1272,6 +1292,22 @@ namespace BARevitTools
             {
                 return family;
             }
+        }
+    }
+
+    public class CurveSelectionFilter : ISelectionFilter
+    {
+        public bool AllowElement(Element element)
+        {
+            if (element.Category.Name == "Curve")
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool AllowReference(Reference reference, XYZ point)
+        {
+            return false;
         }
     }
 

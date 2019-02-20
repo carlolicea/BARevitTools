@@ -33,6 +33,7 @@ namespace BARevitTools
         materialsAML = ReferencedSwitchCaseIds.materialsAML,
         materialsAMLPalette = ReferencedSwitchCaseIds.materialsAMLPalette,
         materialsCM = ReferencedSwitchCaseIds.materialsCM,
+        materialsHPG = ReferencedSwitchCaseIds.materialsHPG,
         roomsSRNN = ReferencedSwitchCaseIds.roomsSRNN,
         roomsCDRT = ReferencedSwitchCaseIds.roomsCDRT,
         wallsMPW = ReferencedSwitchCaseIds.wallsMPW,
@@ -66,6 +67,7 @@ namespace BARevitTools
         adminFamiliesBRP = ReferencedSwitchCaseIds.adminFamiliesBRP,
         adminFamiliesUFVP = ReferencedSwitchCaseIds.adminFamiliesUFVP,
         adminFamiliesSRCP = ReferencedSwitchCaseIds.adminFamiliesSRCP,
+        adminFamiliesLBC = ReferencedSwitchCaseIds.adminFamiliesLBC,
 
         materialsCMSLoadFamily = ReferencedSwitchCaseIds.materialsCMSLoadFamily,
     }

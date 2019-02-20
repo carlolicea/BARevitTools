@@ -67,6 +67,9 @@ namespace BARevitTools
                     case RequestId.materialsCM:
                         ToolRequests.MaterialsCMRequest materialsCMRequest = new ToolRequests.MaterialsCMRequest(uiApp, "Create Materials");
                         break;
+                    case RequestId.materialsHPG:
+                        ToolRequests.MaterialsHPGRequest materialsHPG = new ToolRequests.MaterialsHPGRequest(uiApp, "Hatch Pattern Generator");
+                        break;
                     case RequestId.roomsSRNN:
                         ToolRequests.RoomsSRNNRequest roomsSRNNRequest = new ToolRequests.RoomsSRNNRequest(uiApp, "Swap Room Names and Numbers");
                         break;
@@ -153,6 +156,9 @@ namespace BARevitTools
                         break;
                     case RequestId.adminFamiliesSRCP:
                         ToolRequests.AdminFamiliesSRCPRequest adminFamiliesSRCPRequest = new ToolRequests.AdminFamiliesSRCPRequest(uiApp, "Set Room Calculation Point");
+                        break;
+                    case RequestId.adminFamiliesLBC:
+                        ToolRequests.AdminFamiliesLBCRequest adminFamiliesLBCRequest = new ToolRequests.AdminFamiliesLBCRequest(uiApp, "Library By Category");
                         break;
                     default:
                         break;

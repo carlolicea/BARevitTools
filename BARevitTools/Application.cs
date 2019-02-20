@@ -76,11 +76,11 @@ namespace BARevitTools
             newSPUi = new SharedParametersUI(uiApp);
 
 
-            CadDriveIsAccessible = GeneralOperations.IsCadDriveAccessible();
-            if (CadDriveIsAccessible == false)
-            {
-                MessageBox.Show("Cannot access the K Drive. Some tools will not be functional.");
-            }
+            //CadDriveIsAccessible = GeneralOperations.IsCadDriveAccessible();
+            //if (CadDriveIsAccessible == false)
+            //{
+            //    MessageBox.Show("Cannot access the K Drive. Some tools will not be functional.");
+            //}
 
             //Generate a new DataTable for collecting data
             appUseDataTable = new DataTable();

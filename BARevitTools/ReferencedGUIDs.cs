@@ -19,6 +19,7 @@ namespace BARevitTools
         public static Guid materialsCMSguid = new Guid("6484BAAA-ADA8-4764-A12F-F5655B5D1661");
         public static Guid materialsAMLguid = new Guid("36578F1F-F23B-492E-B6E4-4238125B6FB1");
         public static Guid materialsCMguid = new Guid("0320D6F7-2349-45BA-BA7D-3C49EDD04AD3");
+        public static Guid materialsHPGguid = new Guid("E6D9829B-A6A4-4A9A-A401-89488D980514");
         public static Guid wallsMPWguid = new Guid("55BF1CF4-9F80-412E-AC6C-B250D987419D");
         public static Guid wallsDPguid = new Guid("AA91C96C-492D-45EF-AA9E-02143FACD9E7");
         public static Guid sheetsCSLguid = new Guid("538221B6-A6ED-4302-9193-54E10863EA10");
@@ -47,6 +48,7 @@ namespace BARevitTools
         public static Guid adminFamiliesDFBguid = new Guid("3010A8D9-D4FD-4BCE-BE29-60C8B5EBD4B9");
         public static Guid adminFamiliesUFVPguid = new Guid("7149252A-2B34-4E6E-B800-3D318AB4C7CF");
         public static Guid adminFamiliesSRCPguid = new Guid("8F9A595D-9887-40A2-9430-3F25FA706A9A");
+        public static Guid adminFamiliesLBCguid = new Guid("07A8C7EA-D58F-46EF-A19E-F6CDE6E6875A");
         #endregion guids
     }
 }

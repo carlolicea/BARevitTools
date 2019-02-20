@@ -10,7 +10,7 @@ namespace BARevitTools
     {
         //
         //The current last number used for switch case IDs
-        private const int currentnumber = 040;
+        private const int currentnumber = 042;
 
         //Multicategory Create Family From Excel
         public const int multiCatCFFE1 = 001;
@@ -29,6 +29,9 @@ namespace BARevitTools
         //Materials Accent Material Lines
         public const int materialsAML = 005;
         public const int materialsAMLPalette = 030;
+
+        //Materials Hatch Pattern Generator
+        public const int materialsHPG = 042;
 
         //Materials Create Materials
         public const int materialsCM = 040;
@@ -120,6 +123,9 @@ namespace BARevitTools
 
         //Admin Set Room Calculation Point
         public const int adminFamiliesSRCP = 039;
+
+        //Admin Library By Category
+        public const int adminFamiliesLBC = 041;
         
     }
 }

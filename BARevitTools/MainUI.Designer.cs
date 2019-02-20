@@ -113,10 +113,26 @@ namespace BARevitTools
             this.adminFamiliesParametersDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.adminFamiliesBAPButton = new System.Windows.Forms.ToolStripMenuItem();
             this.adminFamiliesBRPButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.bulkUpdatePublishVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.adminFamilieBUPFButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminFamiliesSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.adminFamiliesSRCPButton = new System.Windows.Forms.ToolStripButton();
+            this.adminFamiliesSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.adminFamiliesLBCButton = new System.Windows.Forms.ToolStripButton();
             this.adminFamiliesToolsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesLBCLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.adminFamiliesLBCControlsPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesLBCDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.adminFamiliesLBCUseDateCheckBox = new System.Windows.Forms.CheckBox();
+            this.adminFamiliesLBCRunButton = new System.Windows.Forms.Button();
+            this.adminFamiliesLBCSaveDirectoryTextBox = new System.Windows.Forms.TextBox();
+            this.adminFamiliesLBCDirectoryTextBox = new System.Windows.Forms.TextBox();
+            this.adminFamiliesLBCSaveDirectoryButton = new System.Windows.Forms.Button();
+            this.adminFamiliesLBCSelectDirectoryButton = new System.Windows.Forms.Button();
+            this.adminFamiliesLBCSaveDirectoryLabel = new System.Windows.Forms.Label();
+            this.adminFamiliesLBCDirectoryLabel = new System.Windows.Forms.Label();
+            this.adminFamiliesLBCFamiliesPanel = new System.Windows.Forms.Panel();
+            this.adminFamiliesLBCFamiliesLabel = new System.Windows.Forms.Label();
+            this.adminFamiliesLBCFamiliesListBox = new System.Windows.Forms.ListBox();
             this.adminFamiliesSRCPLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adminFamiliesSRCPControlsPanel = new System.Windows.Forms.Panel();
             this.adminFamiliesSRCPDatePicker = new System.Windows.Forms.DateTimePicker();
@@ -282,7 +298,21 @@ namespace BARevitTools
             this.materialsAMLButton = new System.Windows.Forms.ToolStripButton();
             this.materialsToolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.materialsCMButton = new System.Windows.Forms.ToolStripButton();
+            this.materialsToolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.materialsHPGButton = new System.Windows.Forms.ToolStripButton();
             this.materialsToolsPanel = new System.Windows.Forms.Panel();
+            this.materialsHPGLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.materialsHPGControlsPanel = new System.Windows.Forms.Panel();
+            this.materialsHPGSaveTextBox = new System.Windows.Forms.TextBox();
+            this.materialsHPGFileNameTextBox = new System.Windows.Forms.TextBox();
+            this.materialsHPGDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.materialsHPGRunButton = new System.Windows.Forms.Button();
+            this.materialsHPGSelectLinesButton = new System.Windows.Forms.Button();
+            this.materialsHPGSelectDirectoryButton = new System.Windows.Forms.Button();
+            this.materialsHPGSelectLinesLabel = new System.Windows.Forms.Label();
+            this.materialsHPGDescriptionLabel = new System.Windows.Forms.Label();
+            this.materialsHPGFileNameLabel = new System.Windows.Forms.Label();
+            this.materialsHPGSaveLabel = new System.Windows.Forms.Label();
             this.materialsCMLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.materialsCMSaveTemplatePanel = new System.Windows.Forms.Panel();
             this.materialsCMSaveDirectoryTextBox = new System.Windows.Forms.TextBox();
@@ -628,6 +658,9 @@ namespace BARevitTools
             this.adminFamiliesLayoutPanel.SuspendLayout();
             this.adminFamiliesToolStrip.SuspendLayout();
             this.adminFamiliesToolsPanel.SuspendLayout();
+            this.adminFamiliesLBCLayoutPanel.SuspendLayout();
+            this.adminFamiliesLBCControlsPanel.SuspendLayout();
+            this.adminFamiliesLBCFamiliesPanel.SuspendLayout();
             this.adminFamiliesSRCPLayoutPanel.SuspendLayout();
             this.adminFamiliesSRCPControlsPanel.SuspendLayout();
             this.adminFamiliesSRCPFamiliesPanel.SuspendLayout();
@@ -724,6 +757,8 @@ namespace BARevitTools
             this.materialsLayoutPanel.SuspendLayout();
             this.materialsToolStrip.SuspendLayout();
             this.materialsToolsPanel.SuspendLayout();
+            this.materialsHPGLayoutPanel.SuspendLayout();
+            this.materialsHPGControlsPanel.SuspendLayout();
             this.materialsCMLayoutPanel.SuspendLayout();
             this.materialsCMSaveTemplatePanel.SuspendLayout();
             this.materialsCMImportPanel.SuspendLayout();
@@ -1703,8 +1738,10 @@ namespace BARevitTools
             this.adminFamiliesDFBButton,
             this.adminFamiliesSeparator1,
             this.adminFamiliesParametersDropDownButton,
-            this.toolStripSeparator1,
-            this.adminFamiliesSRCPButton});
+            this.adminFamiliesSeparator2,
+            this.adminFamiliesSRCPButton,
+            this.adminFamiliesSeparator3,
+            this.adminFamiliesLBCButton});
             this.adminFamiliesToolStrip.Location = new System.Drawing.Point(0, 0);
             this.adminFamiliesToolStrip.Name = "adminFamiliesToolStrip";
             this.adminFamiliesToolStrip.Size = new System.Drawing.Size(710, 53);
@@ -1751,7 +1788,7 @@ namespace BARevitTools
             this.adminFamiliesParametersDropDownButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminFamiliesBAPButton,
             this.adminFamiliesBRPButton,
-            this.bulkUpdatePublishVersionToolStripMenuItem});
+            this.adminFamilieBUPFButton});
             this.adminFamiliesParametersDropDownButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesParametersDropDownButton.Image")));
             this.adminFamiliesParametersDropDownButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.adminFamiliesParametersDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -1777,18 +1814,18 @@ namespace BARevitTools
             this.adminFamiliesBRPButton.Text = "Bulk Remove Parameters";
             this.adminFamiliesBRPButton.Click += new System.EventHandler(this.AdminFamiliesBRPButton_Click);
             // 
-            // bulkUpdatePublishVersionToolStripMenuItem
+            // adminFamilieBUPFButton
             // 
-            this.bulkUpdatePublishVersionToolStripMenuItem.Image = global::BARevitTools.Properties.Resources.bimFamiliesUFVPIcon;
-            this.bulkUpdatePublishVersionToolStripMenuItem.Name = "bulkUpdatePublishVersionToolStripMenuItem";
-            this.bulkUpdatePublishVersionToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
-            this.bulkUpdatePublishVersionToolStripMenuItem.Text = "Bulk Update Publish Version";
-            this.bulkUpdatePublishVersionToolStripMenuItem.Click += new System.EventHandler(this.AdminFamiliesUFVPButton_Click);
+            this.adminFamilieBUPFButton.Image = global::BARevitTools.Properties.Resources.bimFamiliesUFVPIcon;
+            this.adminFamilieBUPFButton.Name = "adminFamilieBUPFButton";
+            this.adminFamilieBUPFButton.Size = new System.Drawing.Size(221, 22);
+            this.adminFamilieBUPFButton.Text = "Bulk Update Publish Version";
+            this.adminFamilieBUPFButton.Click += new System.EventHandler(this.AdminFamiliesUFVPButton_Click);
             // 
-            // toolStripSeparator1
+            // adminFamiliesSeparator2
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
+            this.adminFamiliesSeparator2.Name = "adminFamiliesSeparator2";
+            this.adminFamiliesSeparator2.Size = new System.Drawing.Size(6, 53);
             // 
             // adminFamiliesSRCPButton
             // 
@@ -1803,8 +1840,25 @@ namespace BARevitTools
             this.adminFamiliesSRCPButton.ToolTipText = "Set Room CP: Sets the Room Calculation Point if not set";
             this.adminFamiliesSRCPButton.Click += new System.EventHandler(this.AdminFamiliesSRCP_Click);
             // 
+            // adminFamiliesSeparator3
+            // 
+            this.adminFamiliesSeparator3.Name = "adminFamiliesSeparator3";
+            this.adminFamiliesSeparator3.Size = new System.Drawing.Size(6, 53);
+            // 
+            // adminFamiliesLBCButton
+            // 
+            this.adminFamiliesLBCButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFamiliesLBCButton.Image")));
+            this.adminFamiliesLBCButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.adminFamiliesLBCButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.adminFamiliesLBCButton.Name = "adminFamiliesLBCButton";
+            this.adminFamiliesLBCButton.Size = new System.Drawing.Size(114, 50);
+            this.adminFamiliesLBCButton.Text = "Library by Category";
+            this.adminFamiliesLBCButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.adminFamiliesLBCButton.Click += new System.EventHandler(this.AdminFamiliesLBCButton_Click);
+            // 
             // adminFamiliesToolsPanel
             // 
+            this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesLBCLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesSRCPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBRPLayoutPanel);
             this.adminFamiliesToolsPanel.Controls.Add(this.adminFamiliesBAPLayoutPanel);
@@ -1817,6 +1871,169 @@ namespace BARevitTools
             this.adminFamiliesToolsPanel.Name = "adminFamiliesToolsPanel";
             this.adminFamiliesToolsPanel.Size = new System.Drawing.Size(710, 339);
             this.adminFamiliesToolsPanel.TabIndex = 1;
+            // 
+            // adminFamiliesLBCLayoutPanel
+            // 
+            this.adminFamiliesLBCLayoutPanel.ColumnCount = 2;
+            this.adminFamiliesLBCLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 325F));
+            this.adminFamiliesLBCLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesLBCLayoutPanel.Controls.Add(this.adminFamiliesLBCControlsPanel, 0, 0);
+            this.adminFamiliesLBCLayoutPanel.Controls.Add(this.adminFamiliesLBCFamiliesPanel, 1, 0);
+            this.adminFamiliesLBCLayoutPanel.Controls.Add(this.adminFamiliesLBCFamiliesListBox, 1, 1);
+            this.adminFamiliesLBCLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesLBCLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesLBCLayoutPanel.Name = "adminFamiliesLBCLayoutPanel";
+            this.adminFamiliesLBCLayoutPanel.RowCount = 2;
+            this.adminFamiliesLBCLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.adminFamiliesLBCLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.adminFamiliesLBCLayoutPanel.Size = new System.Drawing.Size(710, 339);
+            this.adminFamiliesLBCLayoutPanel.TabIndex = 6;
+            this.adminFamiliesLBCLayoutPanel.Visible = false;
+            // 
+            // adminFamiliesLBCControlsPanel
+            // 
+            this.adminFamiliesLBCControlsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesLBCControlsPanel.Controls.Add(this.adminFamiliesLBCDatePicker);
+            this.adminFamiliesLBCControlsPanel.Controls.Add(this.adminFamiliesLBCUseDateCheckBox);
+            this.adminFamiliesLBCControlsPanel.Controls.Add(this.adminFamiliesLBCRunButton);
+            this.adminFamiliesLBCControlsPanel.Controls.Add(this.adminFamiliesLBCSaveDirectoryTextBox);
+            this.adminFamiliesLBCControlsPanel.Controls.Add(this.adminFamiliesLBCDirectoryTextBox);
+            this.adminFamiliesLBCControlsPanel.Controls.Add(this.adminFamiliesLBCSaveDirectoryButton);
+            this.adminFamiliesLBCControlsPanel.Controls.Add(this.adminFamiliesLBCSelectDirectoryButton);
+            this.adminFamiliesLBCControlsPanel.Controls.Add(this.adminFamiliesLBCSaveDirectoryLabel);
+            this.adminFamiliesLBCControlsPanel.Controls.Add(this.adminFamiliesLBCDirectoryLabel);
+            this.adminFamiliesLBCControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesLBCControlsPanel.Location = new System.Drawing.Point(0, 0);
+            this.adminFamiliesLBCControlsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesLBCControlsPanel.Name = "adminFamiliesLBCControlsPanel";
+            this.adminFamiliesLBCLayoutPanel.SetRowSpan(this.adminFamiliesLBCControlsPanel, 2);
+            this.adminFamiliesLBCControlsPanel.Size = new System.Drawing.Size(325, 339);
+            this.adminFamiliesLBCControlsPanel.TabIndex = 0;
+            // 
+            // adminFamiliesLBCDatePicker
+            // 
+            this.adminFamiliesLBCDatePicker.Location = new System.Drawing.Point(83, 45);
+            this.adminFamiliesLBCDatePicker.Name = "adminFamiliesLBCDatePicker";
+            this.adminFamiliesLBCDatePicker.Size = new System.Drawing.Size(196, 20);
+            this.adminFamiliesLBCDatePicker.TabIndex = 5;
+            // 
+            // adminFamiliesLBCUseDateCheckBox
+            // 
+            this.adminFamiliesLBCUseDateCheckBox.AutoSize = true;
+            this.adminFamiliesLBCUseDateCheckBox.Location = new System.Drawing.Point(2, 48);
+            this.adminFamiliesLBCUseDateCheckBox.Name = "adminFamiliesLBCUseDateCheckBox";
+            this.adminFamiliesLBCUseDateCheckBox.Size = new System.Drawing.Size(71, 17);
+            this.adminFamiliesLBCUseDateCheckBox.TabIndex = 4;
+            this.adminFamiliesLBCUseDateCheckBox.Text = "Use Date";
+            this.adminFamiliesLBCUseDateCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // adminFamiliesLBCRunButton
+            // 
+            this.adminFamiliesLBCRunButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.adminFamiliesLBCRunButton.Location = new System.Drawing.Point(3, 311);
+            this.adminFamiliesLBCRunButton.Name = "adminFamiliesLBCRunButton";
+            this.adminFamiliesLBCRunButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesLBCRunButton.TabIndex = 3;
+            this.adminFamiliesLBCRunButton.Text = "RUN";
+            this.adminFamiliesLBCRunButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesLBCRunButton.Click += new System.EventHandler(this.AdminFamiliesLBCRunButton_Click);
+            // 
+            // adminFamiliesLBCSaveDirectoryTextBox
+            // 
+            this.adminFamiliesLBCSaveDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesLBCSaveDirectoryTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesLBCSaveDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminFamiliesLBCSaveDirectoryTextBox.Location = new System.Drawing.Point(83, 115);
+            this.adminFamiliesLBCSaveDirectoryTextBox.Multiline = true;
+            this.adminFamiliesLBCSaveDirectoryTextBox.Name = "adminFamiliesLBCSaveDirectoryTextBox";
+            this.adminFamiliesLBCSaveDirectoryTextBox.ReadOnly = true;
+            this.adminFamiliesLBCSaveDirectoryTextBox.Size = new System.Drawing.Size(231, 20);
+            this.adminFamiliesLBCSaveDirectoryTextBox.TabIndex = 2;
+            // 
+            // adminFamiliesLBCDirectoryTextBox
+            // 
+            this.adminFamiliesLBCDirectoryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminFamiliesLBCDirectoryTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.adminFamiliesLBCDirectoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminFamiliesLBCDirectoryTextBox.Location = new System.Drawing.Point(83, 20);
+            this.adminFamiliesLBCDirectoryTextBox.Multiline = true;
+            this.adminFamiliesLBCDirectoryTextBox.Name = "adminFamiliesLBCDirectoryTextBox";
+            this.adminFamiliesLBCDirectoryTextBox.ReadOnly = true;
+            this.adminFamiliesLBCDirectoryTextBox.Size = new System.Drawing.Size(231, 20);
+            this.adminFamiliesLBCDirectoryTextBox.TabIndex = 2;
+            // 
+            // adminFamiliesLBCSaveDirectoryButton
+            // 
+            this.adminFamiliesLBCSaveDirectoryButton.Location = new System.Drawing.Point(2, 114);
+            this.adminFamiliesLBCSaveDirectoryButton.Name = "adminFamiliesLBCSaveDirectoryButton";
+            this.adminFamiliesLBCSaveDirectoryButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesLBCSaveDirectoryButton.TabIndex = 1;
+            this.adminFamiliesLBCSaveDirectoryButton.Text = "Select";
+            this.adminFamiliesLBCSaveDirectoryButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesLBCSaveDirectoryButton.Click += new System.EventHandler(this.AdminFamiliesLBCSaveDirectoryButton_Click);
+            // 
+            // adminFamiliesLBCSelectDirectoryButton
+            // 
+            this.adminFamiliesLBCSelectDirectoryButton.Location = new System.Drawing.Point(2, 19);
+            this.adminFamiliesLBCSelectDirectoryButton.Name = "adminFamiliesLBCSelectDirectoryButton";
+            this.adminFamiliesLBCSelectDirectoryButton.Size = new System.Drawing.Size(75, 23);
+            this.adminFamiliesLBCSelectDirectoryButton.TabIndex = 1;
+            this.adminFamiliesLBCSelectDirectoryButton.Text = "Select";
+            this.adminFamiliesLBCSelectDirectoryButton.UseVisualStyleBackColor = true;
+            this.adminFamiliesLBCSelectDirectoryButton.Click += new System.EventHandler(this.AdminFamiliesLBCSelectDirectoryButton_Click);
+            // 
+            // adminFamiliesLBCSaveDirectoryLabel
+            // 
+            this.adminFamiliesLBCSaveDirectoryLabel.AutoSize = true;
+            this.adminFamiliesLBCSaveDirectoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesLBCSaveDirectoryLabel.Location = new System.Drawing.Point(6, 98);
+            this.adminFamiliesLBCSaveDirectoryLabel.Name = "adminFamiliesLBCSaveDirectoryLabel";
+            this.adminFamiliesLBCSaveDirectoryLabel.Size = new System.Drawing.Size(185, 13);
+            this.adminFamiliesLBCSaveDirectoryLabel.TabIndex = 0;
+            this.adminFamiliesLBCSaveDirectoryLabel.Text = "Select Where to Save Families:";
+            // 
+            // adminFamiliesLBCDirectoryLabel
+            // 
+            this.adminFamiliesLBCDirectoryLabel.AutoSize = true;
+            this.adminFamiliesLBCDirectoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesLBCDirectoryLabel.Location = new System.Drawing.Point(6, 3);
+            this.adminFamiliesLBCDirectoryLabel.Name = "adminFamiliesLBCDirectoryLabel";
+            this.adminFamiliesLBCDirectoryLabel.Size = new System.Drawing.Size(166, 13);
+            this.adminFamiliesLBCDirectoryLabel.TabIndex = 0;
+            this.adminFamiliesLBCDirectoryLabel.Text = "Select Directory of Families:";
+            // 
+            // adminFamiliesLBCFamiliesPanel
+            // 
+            this.adminFamiliesLBCFamiliesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adminFamiliesLBCFamiliesPanel.Controls.Add(this.adminFamiliesLBCFamiliesLabel);
+            this.adminFamiliesLBCFamiliesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesLBCFamiliesPanel.Location = new System.Drawing.Point(325, 0);
+            this.adminFamiliesLBCFamiliesPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.adminFamiliesLBCFamiliesPanel.Name = "adminFamiliesLBCFamiliesPanel";
+            this.adminFamiliesLBCFamiliesPanel.Size = new System.Drawing.Size(385, 25);
+            this.adminFamiliesLBCFamiliesPanel.TabIndex = 1;
+            // 
+            // adminFamiliesLBCFamiliesLabel
+            // 
+            this.adminFamiliesLBCFamiliesLabel.AutoSize = true;
+            this.adminFamiliesLBCFamiliesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFamiliesLBCFamiliesLabel.Location = new System.Drawing.Point(3, 5);
+            this.adminFamiliesLBCFamiliesLabel.Name = "adminFamiliesLBCFamiliesLabel";
+            this.adminFamiliesLBCFamiliesLabel.Size = new System.Drawing.Size(119, 13);
+            this.adminFamiliesLBCFamiliesLabel.TabIndex = 0;
+            this.adminFamiliesLBCFamiliesLabel.Text = "Processed Families:";
+            // 
+            // adminFamiliesLBCFamiliesListBox
+            // 
+            this.adminFamiliesLBCFamiliesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminFamiliesLBCFamiliesListBox.FormattingEnabled = true;
+            this.adminFamiliesLBCFamiliesListBox.HorizontalScrollbar = true;
+            this.adminFamiliesLBCFamiliesListBox.Location = new System.Drawing.Point(328, 28);
+            this.adminFamiliesLBCFamiliesListBox.Name = "adminFamiliesLBCFamiliesListBox";
+            this.adminFamiliesLBCFamiliesListBox.Size = new System.Drawing.Size(379, 308);
+            this.adminFamiliesLBCFamiliesListBox.TabIndex = 2;
             // 
             // adminFamiliesSRCPLayoutPanel
             // 
@@ -3870,7 +4087,9 @@ namespace BARevitTools
             this.materialsToolStripSeparator1,
             this.materialsAMLButton,
             this.materialsToolStripSeparator2,
-            this.materialsCMButton});
+            this.materialsCMButton,
+            this.materialsToolStripSeparator3,
+            this.materialsHPGButton});
             this.materialsToolStrip.Location = new System.Drawing.Point(0, 0);
             this.materialsToolStrip.Name = "materialsToolStrip";
             this.materialsToolStrip.Size = new System.Drawing.Size(716, 53);
@@ -3927,8 +4146,26 @@ namespace BARevitTools
             this.materialsCMButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.materialsCMButton.Click += new System.EventHandler(this.MaterialsCMButton_Click);
             // 
+            // materialsToolStripSeparator3
+            // 
+            this.materialsToolStripSeparator3.Name = "materialsToolStripSeparator3";
+            this.materialsToolStripSeparator3.Size = new System.Drawing.Size(6, 53);
+            // 
+            // materialsHPGButton
+            // 
+            this.materialsHPGButton.Image = ((System.Drawing.Image)(resources.GetObject("materialsHPGButton.Image")));
+            this.materialsHPGButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.materialsHPGButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.materialsHPGButton.Name = "materialsHPGButton";
+            this.materialsHPGButton.Size = new System.Drawing.Size(139, 50);
+            this.materialsHPGButton.Text = "Hatch Pattern Generator";
+            this.materialsHPGButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.materialsHPGButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.materialsHPGButton.ToolTipText = "Hatch Pattern Generator: Allows creation of hatch patterns from detail lines";
+            // 
             // materialsToolsPanel
             // 
+            this.materialsToolsPanel.Controls.Add(this.materialsHPGLayoutPanel);
             this.materialsToolsPanel.Controls.Add(this.materialsCMLayoutPanel);
             this.materialsToolsPanel.Controls.Add(this.materialsCMSExcelLayoutPanel);
             this.materialsToolsPanel.Controls.Add(this.materialsAMLLayoutPanel);
@@ -3938,6 +4175,137 @@ namespace BARevitTools
             this.materialsToolsPanel.Name = "materialsToolsPanel";
             this.materialsToolsPanel.Size = new System.Drawing.Size(716, 345);
             this.materialsToolsPanel.TabIndex = 1;
+            // 
+            // materialsHPGLayoutPanel
+            // 
+            this.materialsHPGLayoutPanel.ColumnCount = 1;
+            this.materialsHPGLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.materialsHPGLayoutPanel.Controls.Add(this.materialsHPGControlsPanel, 0, 0);
+            this.materialsHPGLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsHPGLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.materialsHPGLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.materialsHPGLayoutPanel.Name = "materialsHPGLayoutPanel";
+            this.materialsHPGLayoutPanel.RowCount = 1;
+            this.materialsHPGLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.materialsHPGLayoutPanel.Size = new System.Drawing.Size(716, 345);
+            this.materialsHPGLayoutPanel.TabIndex = 2;
+            // 
+            // materialsHPGControlsPanel
+            // 
+            this.materialsHPGControlsPanel.Controls.Add(this.materialsHPGSaveTextBox);
+            this.materialsHPGControlsPanel.Controls.Add(this.materialsHPGFileNameTextBox);
+            this.materialsHPGControlsPanel.Controls.Add(this.materialsHPGDescriptionTextBox);
+            this.materialsHPGControlsPanel.Controls.Add(this.materialsHPGRunButton);
+            this.materialsHPGControlsPanel.Controls.Add(this.materialsHPGSelectLinesButton);
+            this.materialsHPGControlsPanel.Controls.Add(this.materialsHPGSelectDirectoryButton);
+            this.materialsHPGControlsPanel.Controls.Add(this.materialsHPGSelectLinesLabel);
+            this.materialsHPGControlsPanel.Controls.Add(this.materialsHPGDescriptionLabel);
+            this.materialsHPGControlsPanel.Controls.Add(this.materialsHPGFileNameLabel);
+            this.materialsHPGControlsPanel.Controls.Add(this.materialsHPGSaveLabel);
+            this.materialsHPGControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialsHPGControlsPanel.Location = new System.Drawing.Point(0, 0);
+            this.materialsHPGControlsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.materialsHPGControlsPanel.Name = "materialsHPGControlsPanel";
+            this.materialsHPGControlsPanel.Size = new System.Drawing.Size(716, 345);
+            this.materialsHPGControlsPanel.TabIndex = 0;
+            // 
+            // materialsHPGSaveTextBox
+            // 
+            this.materialsHPGSaveTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialsHPGSaveTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.materialsHPGSaveTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialsHPGSaveTextBox.Location = new System.Drawing.Point(213, 12);
+            this.materialsHPGSaveTextBox.Multiline = true;
+            this.materialsHPGSaveTextBox.Name = "materialsHPGSaveTextBox";
+            this.materialsHPGSaveTextBox.Size = new System.Drawing.Size(496, 20);
+            this.materialsHPGSaveTextBox.TabIndex = 4;
+            // 
+            // materialsHPGFileNameTextBox
+            // 
+            this.materialsHPGFileNameTextBox.Location = new System.Drawing.Point(132, 48);
+            this.materialsHPGFileNameTextBox.Name = "materialsHPGFileNameTextBox";
+            this.materialsHPGFileNameTextBox.Size = new System.Drawing.Size(184, 20);
+            this.materialsHPGFileNameTextBox.TabIndex = 3;
+            this.materialsHPGFileNameTextBox.Text = "<File Name>";
+            // 
+            // materialsHPGDescriptionTextBox
+            // 
+            this.materialsHPGDescriptionTextBox.Location = new System.Drawing.Point(132, 86);
+            this.materialsHPGDescriptionTextBox.Name = "materialsHPGDescriptionTextBox";
+            this.materialsHPGDescriptionTextBox.Size = new System.Drawing.Size(184, 20);
+            this.materialsHPGDescriptionTextBox.TabIndex = 3;
+            this.materialsHPGDescriptionTextBox.Text = "<Pattern Description (Optional)>";
+            // 
+            // materialsHPGRunButton
+            // 
+            this.materialsHPGRunButton.Location = new System.Drawing.Point(3, 317);
+            this.materialsHPGRunButton.Name = "materialsHPGRunButton";
+            this.materialsHPGRunButton.Size = new System.Drawing.Size(75, 23);
+            this.materialsHPGRunButton.TabIndex = 2;
+            this.materialsHPGRunButton.Text = "RUN";
+            this.materialsHPGRunButton.UseVisualStyleBackColor = true;
+            this.materialsHPGRunButton.Click += new System.EventHandler(this.MaterialsHPGRunButton_Click);
+            // 
+            // materialsHPGSelectLinesButton
+            // 
+            this.materialsHPGSelectLinesButton.Location = new System.Drawing.Point(132, 128);
+            this.materialsHPGSelectLinesButton.Name = "materialsHPGSelectLinesButton";
+            this.materialsHPGSelectLinesButton.Size = new System.Drawing.Size(75, 23);
+            this.materialsHPGSelectLinesButton.TabIndex = 1;
+            this.materialsHPGSelectLinesButton.Text = "Select";
+            this.materialsHPGSelectLinesButton.UseVisualStyleBackColor = true;
+            this.materialsHPGSelectLinesButton.Click += new System.EventHandler(this.MaterialsHPGSelectLinesButton_Click);
+            // 
+            // materialsHPGSelectDirectoryButton
+            // 
+            this.materialsHPGSelectDirectoryButton.Location = new System.Drawing.Point(132, 9);
+            this.materialsHPGSelectDirectoryButton.Name = "materialsHPGSelectDirectoryButton";
+            this.materialsHPGSelectDirectoryButton.Size = new System.Drawing.Size(75, 23);
+            this.materialsHPGSelectDirectoryButton.TabIndex = 1;
+            this.materialsHPGSelectDirectoryButton.Text = "Select";
+            this.materialsHPGSelectDirectoryButton.UseVisualStyleBackColor = true;
+            this.materialsHPGSelectDirectoryButton.Click += new System.EventHandler(this.MaterialsHPGSelectDirectoryButton_Click);
+            // 
+            // materialsHPGSelectLinesLabel
+            // 
+            this.materialsHPGSelectLinesLabel.AutoSize = true;
+            this.materialsHPGSelectLinesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialsHPGSelectLinesLabel.Location = new System.Drawing.Point(6, 128);
+            this.materialsHPGSelectLinesLabel.Name = "materialsHPGSelectLinesLabel";
+            this.materialsHPGSelectLinesLabel.Size = new System.Drawing.Size(81, 13);
+            this.materialsHPGSelectLinesLabel.TabIndex = 0;
+            this.materialsHPGSelectLinesLabel.Text = "Select Lines:";
+            // 
+            // materialsHPGDescriptionLabel
+            // 
+            this.materialsHPGDescriptionLabel.AutoSize = true;
+            this.materialsHPGDescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialsHPGDescriptionLabel.Location = new System.Drawing.Point(6, 89);
+            this.materialsHPGDescriptionLabel.Name = "materialsHPGDescriptionLabel";
+            this.materialsHPGDescriptionLabel.Size = new System.Drawing.Size(120, 13);
+            this.materialsHPGDescriptionLabel.TabIndex = 0;
+            this.materialsHPGDescriptionLabel.Text = "Pattern Description:";
+            // 
+            // materialsHPGFileNameLabel
+            // 
+            this.materialsHPGFileNameLabel.AutoSize = true;
+            this.materialsHPGFileNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialsHPGFileNameLabel.Location = new System.Drawing.Point(6, 51);
+            this.materialsHPGFileNameLabel.Name = "materialsHPGFileNameLabel";
+            this.materialsHPGFileNameLabel.Size = new System.Drawing.Size(67, 13);
+            this.materialsHPGFileNameLabel.TabIndex = 0;
+            this.materialsHPGFileNameLabel.Text = "File Name:";
+            // 
+            // materialsHPGSaveLabel
+            // 
+            this.materialsHPGSaveLabel.AutoSize = true;
+            this.materialsHPGSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialsHPGSaveLabel.Location = new System.Drawing.Point(6, 14);
+            this.materialsHPGSaveLabel.Name = "materialsHPGSaveLabel";
+            this.materialsHPGSaveLabel.Size = new System.Drawing.Size(93, 13);
+            this.materialsHPGSaveLabel.TabIndex = 0;
+            this.materialsHPGSaveLabel.Text = "Save Location:";
             // 
             // materialsCMLayoutPanel
             // 
@@ -4066,7 +4434,7 @@ namespace BARevitTools
             this.materialsCMRunButton.TabIndex = 1;
             this.materialsCMRunButton.Text = "Run";
             this.materialsCMRunButton.UseVisualStyleBackColor = true;
-            this.materialsCMRunButton.Click += new System.EventHandler(this.materialsCMRunButton_Click);
+            this.materialsCMRunButton.Click += new System.EventHandler(this.MaterialsCMRunButton_Click);
             // 
             // materialsCMDataGridView
             // 
@@ -7831,6 +8199,11 @@ namespace BARevitTools
             this.adminFamiliesToolStrip.ResumeLayout(false);
             this.adminFamiliesToolStrip.PerformLayout();
             this.adminFamiliesToolsPanel.ResumeLayout(false);
+            this.adminFamiliesLBCLayoutPanel.ResumeLayout(false);
+            this.adminFamiliesLBCControlsPanel.ResumeLayout(false);
+            this.adminFamiliesLBCControlsPanel.PerformLayout();
+            this.adminFamiliesLBCFamiliesPanel.ResumeLayout(false);
+            this.adminFamiliesLBCFamiliesPanel.PerformLayout();
             this.adminFamiliesSRCPLayoutPanel.ResumeLayout(false);
             this.adminFamiliesSRCPControlsPanel.ResumeLayout(false);
             this.adminFamiliesSRCPControlsPanel.PerformLayout();
@@ -7952,6 +8325,9 @@ namespace BARevitTools
             this.materialsToolStrip.ResumeLayout(false);
             this.materialsToolStrip.PerformLayout();
             this.materialsToolsPanel.ResumeLayout(false);
+            this.materialsHPGLayoutPanel.ResumeLayout(false);
+            this.materialsHPGControlsPanel.ResumeLayout(false);
+            this.materialsHPGControlsPanel.PerformLayout();
             this.materialsCMLayoutPanel.ResumeLayout(false);
             this.materialsCMSaveTemplatePanel.ResumeLayout(false);
             this.materialsCMSaveTemplatePanel.PerformLayout();
@@ -8577,7 +8953,7 @@ namespace BARevitTools
         private ToolStripButton adminFamiliesUFButton;
         private ToolStripSeparator adminFamiliesToolStripSeparator;
         private ToolStripSeparator adminFamiliesSeparator1;
-        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripSeparator adminFamiliesSeparator2;
         private ToolStripButton adminFamiliesDFBButton;
         private Panel adminFamiliesToolsPanel;
         private Panel adminFamiliesUFFullSyncPanel;
@@ -8637,7 +9013,7 @@ namespace BARevitTools
         private ToolStripDropDownButton adminFamiliesParametersDropDownButton;
         private ToolStripMenuItem adminFamiliesBAPButton;
         private ToolStripMenuItem adminFamiliesBRPButton;
-        private ToolStripMenuItem bulkUpdatePublishVersionToolStripMenuItem;
+        private ToolStripMenuItem adminFamilieBUPFButton;
         public Panel multiCatToolsPanel;
         public Label adminFamiliesBAPDoneLabel;
         private Panel adminFamiliesUFVPControlsPanel;
@@ -8693,6 +9069,36 @@ namespace BARevitTools
         public ProgressBar materialsCMProgressBar;
         private Button materialsCMRunButton;
         public DataGridView materialsCMDataGridView;
+        private ToolStripSeparator adminFamiliesSeparator3;
+        private ToolStripButton adminFamiliesLBCButton;
+        private TableLayoutPanel adminFamiliesLBCLayoutPanel;
+        private Panel adminFamiliesLBCControlsPanel;
+        public DateTimePicker adminFamiliesLBCDatePicker;
+        public CheckBox adminFamiliesLBCUseDateCheckBox;
+        private Button adminFamiliesLBCRunButton;
+        public TextBox adminFamiliesLBCDirectoryTextBox;
+        private Button adminFamiliesLBCSelectDirectoryButton;
+        private Label adminFamiliesLBCDirectoryLabel;
+        private Panel adminFamiliesLBCFamiliesPanel;
+        private Label adminFamiliesLBCFamiliesLabel;
+        public ListBox adminFamiliesLBCFamiliesListBox;
+        public TextBox adminFamiliesLBCSaveDirectoryTextBox;
+        private Button adminFamiliesLBCSaveDirectoryButton;
+        private Label adminFamiliesLBCSaveDirectoryLabel;
+        private ToolStripSeparator materialsToolStripSeparator3;
+        private ToolStripButton materialsHPGButton;
+        private TableLayoutPanel materialsHPGLayoutPanel;
+        private Panel materialsHPGControlsPanel;
+        private TextBox materialsHPGFileNameTextBox;
+        private TextBox materialsHPGDescriptionTextBox;
+        private Button materialsHPGRunButton;
+        private Button materialsHPGSelectDirectoryButton;
+        private Label materialsHPGSelectLinesLabel;
+        private Label materialsHPGDescriptionLabel;
+        private Label materialsHPGFileNameLabel;
+        private Label materialsHPGSaveLabel;
+        public TextBox materialsHPGSaveTextBox;
+        private Button materialsHPGSelectLinesButton;
     }
 }
 
